@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-import { ProjectFilter } from "@/components/projects/project-filter";
+import { ButtonLink } from "@/components/ui/button-link";
 import { Container } from "@/components/ui/container";
 import { PageHero } from "@/components/ui/page-hero";
 import { getDictionary, isLocale } from "@/lib/i18n";
@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     locale,
     path: "projects",
     title: projects.pageTitle,
-    description: projects.pageDescription,
+    description: projects.availabilityDescription,
   });
 }
 
@@ -34,18 +34,19 @@ export default async function ProjectsPage({ params }: Props) {
           { label: dictionary.common.home, href: `/${locale}` },
           { label: dictionary.projects.pageTitle },
         ]}
-        description={dictionary.projects.pageDescription}
+        description={dictionary.projects.availabilityDescription}
         eyebrow={dictionary.projects.eyebrow}
-        title={dictionary.projects.pageTitle}
+        title={dictionary.projects.availabilityTitle}
       />
-      <Container className="py-16 sm:py-20 lg:py-24">
-        <ProjectFilter
-          ariaLabel={dictionary.projects.pageTitle}
-          labels={dictionary.projects.filters}
-          locale={locale}
-          projects={dictionary.projects.items}
-          statusLabels={dictionary.projects.statusLabels}
-        />
+      <Container className="py-12 sm:py-16 lg:py-20">
+        <div className="rounded-[28px] border border-[var(--border)] bg-[var(--background-soft)] p-8 sm:p-12">
+          <p className="max-w-2xl text-lg leading-8 text-[var(--text-secondary)]">
+            {dictionary.projects.availabilityDescription}
+          </p>
+          <ButtonLink className="mt-8" href={`/${locale}/contacts#estimate`}>
+            {dictionary.projects.availabilityAction}
+          </ButtonLink>
+        </div>
       </Container>
     </>
   );

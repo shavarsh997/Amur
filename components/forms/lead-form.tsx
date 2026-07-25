@@ -6,6 +6,7 @@ import {
   submitLeadAction,
   type LeadActionState,
 } from "@/app/actions";
+import { calculatorConfig } from "@/config/calculator.config";
 import type { Dictionary, Locale } from "@/types";
 
 const initialState: LeadActionState = {
@@ -15,7 +16,7 @@ const initialState: LeadActionState = {
 };
 
 const fieldClass =
-  "min-h-12 w-full rounded-xl border border-zinc-300 bg-white px-4 py-3 text-zinc-950 outline-none transition placeholder:text-zinc-400 focus:border-blue-600 focus:ring-2 focus:ring-blue-600/20 disabled:cursor-not-allowed disabled:opacity-60";
+  "min-h-12 w-full rounded-xl border border-[var(--border)] bg-white px-4 py-3 text-[var(--text-primary)] outline-none transition placeholder:text-[var(--text-muted)] focus:border-[var(--text-primary)] focus:ring-2 focus:ring-black/5 disabled:cursor-not-allowed disabled:opacity-60";
 
 export function LeadForm({
   locale,
@@ -54,7 +55,7 @@ export function LeadForm({
       <div>
         <label className="mb-2 block text-sm font-semibold" htmlFor={fieldId("objectType")}>
           {copy.fields.objectType}
-          <span className="ml-1 text-blue-700" aria-hidden="true">*</span>
+          <span className="ml-1 text-[var(--text-secondary)]" aria-hidden="true">*</span>
         </label>
         <select
           aria-describedby={state.errors.objectType ? errorId("objectType") : undefined}
@@ -69,10 +70,11 @@ export function LeadForm({
           <option disabled value="">
             {copy.placeholders.objectType}
           </option>
-          <option value="private-house">{copy.choices.objectType.privateHouse}</option>
-          <option value="commercial">{copy.choices.objectType.commercial}</option>
-          <option value="apartment">{copy.choices.objectType.apartment}</option>
-          <option value="other">{copy.choices.objectType.other}</option>
+          {calculatorConfig.objectTypes.map((option) => (
+            <option key={option.value} value={option.value}>
+              {copy.choices.objectType[option.labelKey]}
+            </option>
+          ))}
         </select>
         {state.errors.objectType ? (
           <p className="mt-2 text-sm text-red-700" id={errorId("objectType")}>
@@ -84,7 +86,7 @@ export function LeadForm({
       <div>
         <label className="mb-2 block text-sm font-semibold" htmlFor={fieldId("area")}>
           {copy.fields.area}
-          <span className="ml-1 text-blue-700" aria-hidden="true">*</span>
+          <span className="ml-1 text-[var(--text-secondary)]" aria-hidden="true">*</span>
         </label>
         <input
           aria-describedby={state.errors.area ? errorId("area") : undefined}
@@ -110,7 +112,7 @@ export function LeadForm({
       <div>
         <label className="mb-2 block text-sm font-semibold" htmlFor={fieldId("region")}>
           {copy.fields.region}
-          <span className="ml-1 text-blue-700" aria-hidden="true">*</span>
+          <span className="ml-1 text-[var(--text-secondary)]" aria-hidden="true">*</span>
         </label>
         <input
           aria-describedby={state.errors.region ? errorId("region") : undefined}
@@ -135,7 +137,7 @@ export function LeadForm({
       <div>
         <label className="mb-2 block text-sm font-semibold" htmlFor={fieldId("workType")}>
           {copy.fields.workType}
-          <span className="ml-1 text-blue-700" aria-hidden="true">*</span>
+          <span className="ml-1 text-[var(--text-secondary)]" aria-hidden="true">*</span>
         </label>
         <select
           aria-describedby={state.errors.workType ? errorId("workType") : undefined}
@@ -150,10 +152,11 @@ export function LeadForm({
           <option disabled value="">
             {copy.placeholders.workType}
           </option>
-          <option value="turnkey">{copy.choices.workType.turnkey}</option>
-          <option value="design">{copy.choices.workType.design}</option>
-          <option value="renovation">{copy.choices.workType.renovation}</option>
-          <option value="separate-works">{copy.choices.workType.separateWorks}</option>
+          {calculatorConfig.workTypes.map((option) => (
+            <option key={option.value} value={option.value}>
+              {copy.choices.workType[option.labelKey]}
+            </option>
+          ))}
         </select>
         {state.errors.workType ? (
           <p className="mt-2 text-sm text-red-700" id={errorId("workType")}>
@@ -165,7 +168,7 @@ export function LeadForm({
       <div>
         <label className="mb-2 block text-sm font-semibold" htmlFor={fieldId("name")}>
           {copy.fields.name}
-          <span className="ml-1 text-blue-700" aria-hidden="true">*</span>
+          <span className="ml-1 text-[var(--text-secondary)]" aria-hidden="true">*</span>
         </label>
         <input
           aria-describedby={state.errors.name ? errorId("name") : undefined}
@@ -190,7 +193,7 @@ export function LeadForm({
       <div>
         <label className="mb-2 block text-sm font-semibold" htmlFor={fieldId("phone")}>
           {copy.fields.phone}
-          <span className="ml-1 text-blue-700" aria-hidden="true">*</span>
+          <span className="ml-1 text-[var(--text-secondary)]" aria-hidden="true">*</span>
         </label>
         <input
           aria-describedby={state.errors.phone ? errorId("phone") : undefined}
@@ -233,7 +236,7 @@ export function LeadForm({
 
       <div className="flex flex-col items-start gap-3 md:col-span-2">
         <button
-          className="inline-flex min-h-12 items-center justify-center rounded-full bg-blue-600 px-7 py-3 text-sm font-semibold text-zinc-950 transition hover:bg-blue-500 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-600 disabled:cursor-wait disabled:opacity-65"
+          className="inline-flex min-h-12 items-center justify-center rounded-xl bg-[var(--button-primary)] px-7 py-3 text-sm font-semibold text-white transition hover:bg-[var(--button-primary-hover)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--button-primary)] disabled:cursor-wait disabled:opacity-65"
           disabled={pending}
           type="submit"
         >

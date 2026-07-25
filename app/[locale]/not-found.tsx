@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import { Container } from "@/components/ui/container";
+import { defaultLocale } from "@/lib/i18n";
 
 export default function LocaleNotFound() {
   return (
@@ -13,7 +14,7 @@ export default function LocaleNotFound() {
         <p className="mt-4 text-zinc-600">The requested page is unavailable.</p>
         <Link
           className="mt-8 inline-flex min-h-12 items-center rounded-full bg-zinc-950 px-6 py-3 text-sm font-semibold text-white"
-          href="/hy"
+          href={`/${defaultLocale}`}
         >
           Amur Build
         </Link>

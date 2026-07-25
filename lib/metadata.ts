@@ -1,14 +1,9 @@
 import type { Metadata } from "next";
 
+import { seoConfig } from "@/config/seo.config";
+import { siteConfig } from "@/config/site.config";
 import { locales } from "@/lib/i18n";
-import { siteConfig } from "@/lib/site-config";
 import type { Locale } from "@/types";
-
-const localeOg: Record<Locale, "hy_AM" | "ru_RU" | "en_US"> = {
-  hy: "hy_AM",
-  ru: "ru_RU",
-  en: "en_US",
-};
 
 export function buildMetadata({
   locale,
@@ -36,17 +31,17 @@ export function buildMetadata({
       canonical,
       languages: {
         ...languages,
-        "x-default": `/hy${normalizedPath}`,
+        "x-default": `/${siteConfig.defaultLocale}${normalizedPath}`,
       },
     },
     openGraph: {
       type: "website",
-      locale: localeOg[locale],
+      locale: seoConfig.openGraphLocale[locale],
       alternateLocale: locales
         .filter((language) => language !== locale)
-        .map((language) => localeOg[language]),
+        .map((language) => seoConfig.openGraphLocale[language]),
       url: canonical,
-      siteName: siteConfig.brand,
+      siteName: siteConfig.companyName,
       title,
       description,
       images: image ? [{ url: image, alt: title }] : undefined,

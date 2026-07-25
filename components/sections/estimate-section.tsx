@@ -1,4 +1,4 @@
-import { LeadForm } from "@/components/forms/lead-form";
+import { CostCalculator } from "@/components/calculator/cost-calculator";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import type { Dictionary, Locale } from "@/types";
@@ -11,16 +11,18 @@ export function EstimateSection({
   dictionary: Dictionary;
 }) {
   return (
-    <section className="bg-zinc-100 py-20 sm:py-24 lg:py-28" id="estimate">
+    <section className="bg-[var(--background-soft)] py-12 sm:py-16 lg:py-20" id="estimate">
       <Container>
-        <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
-          <SectionHeading
-            description={dictionary.estimate.description}
-            eyebrow={dictionary.estimate.eyebrow}
-            title={dictionary.estimate.title}
-          />
-          <div className="rounded-3xl border border-zinc-200 bg-white p-6 shadow-sm sm:p-8">
-            <LeadForm dictionary={dictionary} locale={locale} />
+        <div className="rounded-[28px] border border-[var(--border)] bg-white p-5 sm:p-7 lg:p-9">
+          <div className="grid gap-7 lg:grid-cols-[0.74fr_1.26fr] lg:gap-10">
+            <div>
+              <SectionHeading
+                description={dictionary.calculator.description}
+                eyebrow={dictionary.calculator.eyebrow}
+                title={dictionary.calculator.title}
+              />
+            </div>
+            <CostCalculator dictionary={dictionary} locale={locale} />
           </div>
         </div>
       </Container>

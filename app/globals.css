@@ -1,15 +1,28 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f8fafc;
-  --foreground: #18181b;
+  --background: #ffffff;
+  --background-soft: #faf9f7;
+  --background-warm: #f6f3ef;
   --surface: #ffffff;
-  --muted: #f1f5f9;
-  --accent: #2563eb;
-  --accent-strong: #1d4ed8;
-  --radius-card: 1.5rem;
-  --radius-control: 0.75rem;
-  --shadow-card: 0 18px 50px -28px rgb(15 23 42 / 0.28);
+  --surface-muted: #f7f7f7;
+  --text-primary: #151719;
+  --text-secondary: #60646c;
+  --text-muted: #8a8f98;
+  --border: #e6e7e9;
+  --border-strong: #d7d9dd;
+  --button-primary: #17191c;
+  --button-primary-hover: #2a2d31;
+  --button-text: #ffffff;
+  --warm-accent: #ebe4db;
+  --success: #2f7d4a;
+  --error: #b42318;
+  --foreground: var(--text-primary);
+  --surface: #ffffff;
+  --muted: var(--surface-muted);
+  --radius-card: 1.25rem;
+  --radius-control: 0.875rem;
+  --shadow-card: 0 20px 45px -32px rgb(24 24 27 / 0.2);
   --container-width: 80rem;
   --container-gutter: clamp(1rem, 3vw, 2rem);
 }
@@ -24,7 +37,7 @@
 }
 
 * {
-  border-color: rgb(228 228 231);
+  border-color: var(--border);
 }
 
 html {
@@ -39,8 +52,8 @@ body {
 }
 
 ::selection {
-  background: rgb(191 219 254);
-  color: rgb(23 37 84);
+  background: var(--warm-accent);
+  color: var(--text-primary);
 }
 
 a,

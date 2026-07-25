@@ -5,20 +5,6 @@ export interface LocalizedText {
   description: string;
 }
 
-export interface Service {
-  slug: string;
-  icon: string;
-  image: string;
-  category: string;
-  title: string;
-  shortDescription: string;
-  description: string;
-  included: string[];
-  stages: string[];
-  audience: string[];
-  cta: string;
-}
-
 export interface Project {
   slug: string;
   image: string;
@@ -61,28 +47,6 @@ export interface TeamMember {
   isPlaceholder: boolean;
 }
 
-export interface SocialLink {
-  label: string;
-  url: string;
-}
-
-export interface ContactConfig {
-  phone: string;
-  phoneHref: string;
-  email: string;
-  address: string;
-  hours: string;
-  telegramUrl: string;
-  whatsappUrl: string;
-  socials: readonly SocialLink[];
-}
-
-export interface SiteConfig {
-  siteUrl: string;
-  brand: string;
-  contacts: ContactConfig;
-}
-
 export interface Dictionary {
   localeName: string;
   metadata: {
@@ -122,10 +86,11 @@ export interface Dictionary {
       included: string;
       stages: string;
       audience: string;
+      priceFactors: string;
+      faq: string;
       requestEstimate: string;
       relatedProjects: string;
     };
-    items: [Service, Service, Service, Service, Service, Service];
   };
   projects: {
     eyebrow: string;
@@ -134,6 +99,9 @@ export interface Dictionary {
     viewAll: string;
     pageTitle: string;
     pageDescription: string;
+    availabilityTitle: string;
+    availabilityDescription: string;
+    availabilityAction: string;
     filters: {
       all: string;
       privateHouses: string;
@@ -230,6 +198,96 @@ export interface Dictionary {
     submitting: string;
     success: string;
     error: string;
+  };
+  calculator: {
+    eyebrow: string;
+    title: string;
+    description: string;
+    steps: {
+      objectType: string;
+      workType: string;
+      area: string;
+      location: string;
+      options: string;
+      contact: string;
+      result: string;
+    };
+    objectType: {
+      title: string;
+      description: string;
+      choices: {
+        privateHouse: string;
+        commercial: string;
+        apartment: string;
+        other: string;
+      };
+    };
+    workType: {
+      title: string;
+      description: string;
+      choices: {
+        turnkey: string;
+        design: string;
+        renovation: string;
+        separateWorks: string;
+      };
+    };
+    area: {
+      title: string;
+      description: string;
+      label: string;
+      placeholder: string;
+    };
+    location: {
+      title: string;
+      description: string;
+      label: string;
+      placeholder: string;
+    };
+    options: {
+      title: string;
+      description: string;
+      choices: {
+        designDocumentation: string;
+        materials: string;
+        siteConditions: string;
+      };
+    };
+    contact: {
+      title: string;
+      description: string;
+      nameLabel: string;
+      phoneLabel: string;
+      commentLabel: string;
+      namePlaceholder: string;
+      phonePlaceholder: string;
+      commentPlaceholder: string;
+    };
+    result: {
+      title: string;
+      rangeLabel: string;
+      preliminaryNotice: string;
+      pricingUnavailable: string;
+      sendRequest: string;
+      sending: string;
+      success: string;
+      error: string;
+    };
+    navigation: {
+      back: string;
+      next: string;
+      calculate: string;
+    };
+    errors: {
+      objectTypeRequired: string;
+      workTypeRequired: string;
+      areaRequired: string;
+      areaInvalid: string;
+      regionRequired: string;
+      nameRequired: string;
+      phoneRequired: string;
+      phoneInvalid: string;
+    };
   };
   testimonials: {
     eyebrow: string;

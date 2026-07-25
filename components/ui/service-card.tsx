@@ -11,7 +11,8 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 
-import type { Locale, Service } from "@/types";
+import type { Locale } from "@/types";
+import type { ServiceConfig, ServiceContent } from "@/types/service";
 
 const serviceIcons: Record<string, LucideIcon> = {
   blocks: Blocks,
@@ -23,7 +24,8 @@ const serviceIcons: Record<string, LucideIcon> = {
 };
 
 type ServiceCardProps = {
-  service: Service;
+  service: ServiceConfig;
+  content: ServiceContent;
   locale: Locale;
   learnMore: string;
   href?: string;
@@ -31,6 +33,7 @@ type ServiceCardProps = {
 
 export function ServiceCard({
   service,
+  content,
   locale,
   learnMore,
   href = `/${locale}/services/${service.slug}`,
@@ -38,26 +41,26 @@ export function ServiceCard({
   const Icon = serviceIcons[service.icon] ?? Blocks;
 
   return (
-    <article className="group overflow-hidden rounded-3xl border border-zinc-200 bg-white shadow-sm">
-      <div className="relative aspect-[16/10] overflow-hidden bg-zinc-100">
+    <article className="group grid overflow-hidden rounded-2xl border border-[var(--border)] bg-white transition-shadow hover:shadow-[0_18px_38px_-30px_rgb(24_24_27/0.28)] sm:grid-cols-[1fr_0.9fr]">
+      <div className="order-2 relative min-h-52 overflow-hidden bg-[var(--background-warm)] sm:order-none">
         <Image
-          alt={service.title}
+          alt={content.title}
           className="object-cover transition duration-500 group-hover:scale-105"
           fill
-          sizes="(max-width: 767px) 100vw, (max-width: 1199px) 50vw, 33vw"
+          sizes="(max-width: 639px) 100vw, (max-width: 1199px) 42vw, 27vw"
           src={service.image}
         />
       </div>
-      <div className="flex h-[calc(100%-auto)] flex-col items-start gap-4 p-6">
-        <span className="grid size-11 place-items-center rounded-2xl bg-blue-100 text-blue-700">
-          <Icon aria-hidden="true" className="size-5" />
+      <div className="order-1 flex flex-col items-start p-5 sm:order-none sm:p-6">
+        <span className="grid size-9 place-items-center rounded-xl bg-[var(--background-warm)] text-[var(--text-primary)]">
+          <Icon aria-hidden="true" className="size-[18px] stroke-[1.4]" />
         </span>
-        <h3 className="text-xl font-semibold tracking-tight text-zinc-950">
-          {service.title}
+        <h3 className="mt-5 text-lg font-semibold tracking-[-0.03em] text-[var(--text-primary)]">
+          {content.title}
         </h3>
-        <p className="flex-1 leading-7 text-zinc-600">{service.shortDescription}</p>
+        <p className="mt-2 flex-1 text-sm leading-6 text-[var(--text-secondary)]">{content.shortDescription}</p>
         <Link
-          className="inline-flex items-center gap-2 rounded-sm text-sm font-semibold text-zinc-950 transition-colors hover:text-blue-700 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-600"
+          className="mt-5 inline-flex items-center gap-2 rounded-sm text-sm font-semibold text-[var(--text-primary)] transition-colors hover:text-[var(--text-secondary)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--button-primary)]"
           href={href}
         >
           {learnMore}

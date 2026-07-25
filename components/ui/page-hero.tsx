@@ -19,22 +19,22 @@ export function PageHero({
   actions,
 }: PageHeroProps) {
   return (
-    <section className="border-b border-zinc-200 bg-zinc-50 py-16 sm:py-20 lg:py-24">
+    <section className="border-b border-[var(--border)] bg-[var(--background-soft)] py-10 sm:py-12 lg:py-16">
       <Container>
         {breadcrumbs?.length ? (
-          <Breadcrumbs className="mb-10" items={breadcrumbs} />
+          <Breadcrumbs className="mb-7" items={breadcrumbs} />
         ) : null}
         <div className="max-w-4xl">
           {eyebrow ? (
-            <p className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-blue-700">
+            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.16em] text-[var(--text-muted)]">
               {eyebrow}
             </p>
           ) : null}
-          <h1 className="text-pretty text-4xl font-semibold tracking-tight text-zinc-950 sm:text-5xl lg:text-6xl">
+          <h1 className="text-pretty text-4xl font-semibold tracking-[-0.05em] text-[var(--text-primary)] sm:text-5xl lg:text-6xl">
             {title}
           </h1>
           {description ? (
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-zinc-600">
+            <p className="mt-5 max-w-2xl text-lg leading-8 text-[var(--text-secondary)]">
               {description}
             </p>
           ) : null}

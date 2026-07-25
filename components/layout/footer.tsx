@@ -1,14 +1,17 @@
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Building2, Mail, MapPin, Phone } from "lucide-react";
 import Link from "next/link";
 
+import { navigationConfig } from "@/config/navigation.config";
+import { siteConfig } from "@/config/site.config";
+import { getActiveServices } from "@/config/services.config";
 import { Container } from "@/components/ui/container";
-import { siteConfig } from "@/lib/site-config";
-import type { Dictionary, Locale, SiteConfig } from "@/types";
+import type { Dictionary, Locale } from "@/types";
+import type { SiteConfiguration } from "@/types/config";
 
 type FooterProps = {
   locale: Locale;
   dictionary: Dictionary;
-  config?: SiteConfig;
+  config?: SiteConfiguration;
 };
 
 export function Footer({
@@ -17,38 +20,36 @@ export function Footer({
   config = siteConfig,
 }: FooterProps) {
   const prefix = `/${locale}`;
-  const navigation = [
-    { href: prefix, label: dictionary.nav.home },
-    { href: `${prefix}/services`, label: dictionary.nav.services },
-    { href: `${prefix}/projects`, label: dictionary.nav.projects },
-    { href: `${prefix}/about`, label: dictionary.nav.about },
-    { href: `${prefix}/contacts`, label: dictionary.nav.contacts },
-  ];
+  const navigation = navigationConfig.map((item) => ({
+    href: item.path ? `${prefix}/${item.path}` : prefix,
+    label: dictionary.nav[item.key],
+  }));
   const socialLinks = config.contacts.socials.filter((social) => social.url);
 
   return (
-    <footer className="mt-auto bg-zinc-950 py-14 text-zinc-300 sm:py-16">
+    <footer className="mt-auto border-t border-[var(--border)] bg-white py-12 text-[var(--text-secondary)] sm:py-14">
       <Container>
-        <div className="grid gap-10 border-b border-white/10 pb-12 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-10 border-b border-[var(--border)] pb-12 sm:grid-cols-2 lg:grid-cols-4">
           <div>
             <Link
-              className="rounded-sm text-lg font-bold uppercase tracking-[0.12em] text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-600"
+              className="inline-flex items-center gap-2 rounded-sm text-[15px] font-bold uppercase tracking-[0.06em] text-[var(--text-primary)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--button-primary)]"
               href={prefix}
             >
-              {config.brand}
+              <Building2 aria-hidden="true" className="size-5 stroke-[1.35]" />
+              {config.shortCompanyName}
             </Link>
-            <p className="mt-5 max-w-xs leading-7 text-zinc-400">
+            <p className="mt-5 max-w-xs text-sm leading-6 text-[var(--text-secondary)]">
               {dictionary.footer.description}
             </p>
           </div>
 
           <div>
-            <h2 className="font-semibold text-white">{dictionary.footer.navigation}</h2>
+            <h2 className="font-semibold text-[var(--text-primary)]">{dictionary.footer.navigation}</h2>
             <ul className="mt-5 space-y-3 text-sm">
               {navigation.map((item) => (
                 <li key={item.href}>
                   <Link
-                    className="rounded-sm transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                    className="rounded-sm transition-colors hover:text-[var(--text-primary)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--button-primary)]"
                     href={item.href}
                   >
                     {item.label}
@@ -59,15 +60,15 @@ export function Footer({
           </div>
 
           <div>
-            <h2 className="font-semibold text-white">{dictionary.footer.services}</h2>
+            <h2 className="font-semibold text-[var(--text-primary)]">{dictionary.footer.services}</h2>
             <ul className="mt-5 space-y-3 text-sm">
-              {dictionary.services.items.slice(0, 4).map((service) => (
-                <li key={service.slug}>
+              {getActiveServices(locale).slice(0, 4).map(({ content, slug }) => (
+                <li key={slug}>
                   <Link
-                    className="rounded-sm transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
-                    href={`${prefix}/services/${service.slug}`}
+                    className="rounded-sm transition-colors hover:text-[var(--text-primary)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--button-primary)]"
+                    href={`${prefix}/services/${slug}`}
                   >
-                    {service.title}
+                    {content.title}
                   </Link>
                 </li>
               ))}
@@ -75,15 +76,15 @@ export function Footer({
           </div>
 
           <div>
-            <h2 className="font-semibold text-white">{dictionary.footer.contacts}</h2>
+            <h2 className="font-semibold text-[var(--text-primary)]">{dictionary.footer.contacts}</h2>
             <ul className="mt-5 space-y-4 text-sm">
               {config.contacts.phoneHref ? (
                 <li>
                   <a
-                    className="inline-flex items-center gap-2 rounded-sm hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                    className="inline-flex items-center gap-2 rounded-sm hover:text-[var(--text-primary)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--button-primary)]"
                     href={config.contacts.phoneHref}
                   >
-                    <Phone aria-hidden="true" className="size-4 text-blue-400" />
+                    <Phone aria-hidden="true" className="size-4 text-[var(--text-muted)]" />
                     {config.contacts.phone}
                   </a>
                 </li>
@@ -91,10 +92,10 @@ export function Footer({
               {config.contacts.email ? (
                 <li>
                   <a
-                    className="inline-flex items-center gap-2 rounded-sm hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                    className="inline-flex items-center gap-2 rounded-sm hover:text-[var(--text-primary)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--button-primary)]"
                     href={`mailto:${config.contacts.email}`}
                   >
-                    <Mail aria-hidden="true" className="size-4 text-blue-400" />
+                    <Mail aria-hidden="true" className="size-4 text-[var(--text-muted)]" />
                     {config.contacts.email}
                   </a>
                 </li>
@@ -103,7 +104,7 @@ export function Footer({
                 <li className="flex items-start gap-2">
                   <MapPin
                     aria-hidden="true"
-                    className="mt-0.5 size-4 shrink-0 text-blue-400"
+                    className="mt-0.5 size-4 shrink-0 text-[var(--text-muted)]"
                   />
                   {config.contacts.address}
                 </li>
@@ -114,7 +115,7 @@ export function Footer({
                 {socialLinks.map((social) => (
                   <li key={social.label}>
                     <a
-                      className="rounded-sm font-semibold text-white hover:text-blue-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                      className="rounded-sm font-semibold text-[var(--text-primary)] hover:text-[var(--text-secondary)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--button-primary)]"
                       href={social.url}
                       rel="noreferrer"
                       target="_blank"
@@ -128,12 +129,12 @@ export function Footer({
           </div>
         </div>
 
-        <div className="flex flex-col gap-4 pt-7 text-sm text-zinc-500 sm:flex-row sm:items-center sm:justify-between">
+        <div className="flex flex-col gap-4 pt-7 text-sm text-[var(--text-muted)] sm:flex-row sm:items-center sm:justify-between">
           <p>
-            © {new Date().getFullYear()} {config.brand}. {dictionary.footer.rights}
+            © {new Date().getFullYear()} {config.companyName}. {dictionary.footer.rights}
           </p>
           <Link
-            className="rounded-sm hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+            className="rounded-sm hover:text-[var(--text-primary)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--button-primary)]"
             href={`${prefix}/privacy`}
           >
             {dictionary.footer.privacy}

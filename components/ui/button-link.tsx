@@ -7,11 +7,11 @@ type ButtonLinkProps = ComponentProps<typeof Link> & {
 
 const variants = {
   primary:
-    "bg-blue-600 text-zinc-950 hover:bg-blue-500 focus-visible:outline-blue-600",
+    "bg-[var(--button-primary)] text-[var(--button-text)] hover:bg-[var(--button-primary-hover)] focus-visible:outline-[var(--button-primary)]",
   secondary:
-    "border border-zinc-300 bg-white text-zinc-950 hover:border-zinc-950 focus-visible:outline-zinc-950",
+    "border border-[var(--border)] bg-white text-[var(--text-primary)] hover:border-[var(--border-strong)] hover:bg-[var(--surface-muted)] focus-visible:outline-[var(--button-primary)]",
   light:
-    "border border-white/35 bg-white/10 text-white backdrop-blur-sm hover:bg-white hover:text-zinc-950 focus-visible:outline-white",
+    "border border-[var(--border)] bg-white text-[var(--text-primary)] hover:bg-[var(--surface-muted)] focus-visible:outline-[var(--button-primary)]",
 } as const;
 
 export function ButtonLink({
@@ -22,7 +22,7 @@ export function ButtonLink({
 }: ButtonLinkProps) {
   return (
     <Link
-      className={`inline-flex min-h-12 items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 ${variants[variant]} ${className}`}
+      className={`inline-flex min-h-12 items-center justify-center rounded-xl px-6 py-3 text-sm font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 ${variants[variant]} ${className}`}
       {...props}
     >
       {children}

@@ -1,10 +1,11 @@
 "use server";
 
-import { getDictionary, isLocale } from "@/lib/i18n";
+import { calculatorConfig } from "@/config/calculator.config";
+import { defaultLocale, getDictionary, isLocale } from "@/lib/i18n";
 import { submitLead, type LeadInput } from "@/lib/leads/service";
 import type { Locale } from "@/types";
 
-type LeadField = keyof Omit<LeadInput, "area"> | "area";
+type LeadField = keyof Omit<LeadInput, "area" | "options"> | "area";
 
 export type LeadActionState = {
   status: "idle" | "success" | "error";
@@ -12,8 +13,9 @@ export type LeadActionState = {
   errors: Partial<Record<LeadField, string>>;
 };
 
-const objectTypes = new Set(["private-house", "commercial", "apartment", "other"]);
-const workTypes = new Set(["turnkey", "design", "renovation", "separate-works"]);
+const objectTypes = new Set<string>(calculatorConfig.objectTypes.map(({ value }) => value));
+const workTypes = new Set<string>(calculatorConfig.workTypes.map(({ value }) => value));
+const calculatorOptions = new Set<string>(calculatorConfig.options.map(({ value }) => value));
 
 function readString(formData: FormData, key: LeadField, maxLength: number): string {
   const value = formData.get(key);
@@ -31,7 +33,7 @@ export async function submitLeadAction(
   _previousState: LeadActionState,
   formData: FormData,
 ): Promise<LeadActionState> {
-  const locale: Locale = isLocale(requestedLocale) ? requestedLocale : "hy";
+  const locale: Locale = isLocale(requestedLocale) ? requestedLocale : defaultLocale;
   const dictionary = await getDictionary(locale);
   const copy = dictionary.estimate;
 
@@ -39,6 +41,11 @@ export async function submitLeadAction(
   const areaValue = readString(formData, "area", 20).replace(",", ".");
   const region = readString(formData, "region", 120);
   const workType = readString(formData, "workType", 40);
+  const options = formData
+    .getAll("options")
+    .filter((value): value is string => typeof value === "string")
+    .map((value) => value.slice(0, 80))
+    .filter((value) => calculatorOptions.has(value));
   const name = readString(formData, "name", 120);
   const phone = readString(formData, "phone", 40);
   const comment = readString(formData, "comment", 2000);
@@ -74,6 +81,7 @@ export async function submitLeadAction(
       area,
       region,
       workType,
+      options,
       name,
       phone,
       comment,

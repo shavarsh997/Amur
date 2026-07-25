@@ -5,6 +5,7 @@ export type LeadInput = {
   area: number;
   region: string;
   workType: string;
+  options: string[];
   name: string;
   phone: string;
   comment: string;

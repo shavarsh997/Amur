@@ -1,16 +1,14 @@
 import type { MetadataRoute } from "next";
 
-import { projectCatalog } from "@/data/projects";
-import { serviceCatalog } from "@/data/services";
-import { locales } from "@/lib/i18n";
-import { siteConfig } from "@/lib/site-config";
+import { staticRouteConfig } from "@/config/navigation.config";
+import { getActiveServices } from "@/config/services.config";
+import { siteConfig } from "@/config/site.config";
+import { defaultLocale, locales } from "@/lib/i18n";
 
-const staticPaths = ["", "services", "projects", "about", "contacts", "privacy"];
-const servicePaths = serviceCatalog.map(({ slug }) => `services/${slug}`);
-const projectPaths = projectCatalog.map(({ slug }) => `projects/${slug}`);
+const servicePaths = getActiveServices(defaultLocale).map(({ slug }) => `services/${slug}`);
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const paths = [...staticPaths, ...servicePaths, ...projectPaths];
+  const paths = [...staticRouteConfig, ...servicePaths];
   const lastModified = new Date();
 
   return paths.flatMap((path) => {
@@ -18,13 +16,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const languages = Object.fromEntries([
       ...locales.map((locale) => [
         locale,
-        `${siteConfig.siteUrl}/${locale}${suffix}`,
+        `${siteConfig.domain}/${locale}${suffix}`,
       ]),
-      ["x-default", `${siteConfig.siteUrl}/hy${suffix}`],
+      ["x-default", `${siteConfig.domain}/${siteConfig.defaultLocale}${suffix}`],
     ]);
 
     return locales.map((locale) => ({
-      url: `${siteConfig.siteUrl}/${locale}${suffix}`,
+      url: `${siteConfig.domain}/${locale}${suffix}`,
       lastModified,
       changeFrequency: path ? ("monthly" as const) : ("weekly" as const),
       priority: path === "" ? 1 : path.includes("/") ? 0.7 : 0.8,

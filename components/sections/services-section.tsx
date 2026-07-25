@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { ServiceCard } from "@/components/ui/service-card";
+import { getActiveServices } from "@/config/services.config";
 import type { Dictionary, Locale } from "@/types";
 
 export function ServicesSection({
@@ -14,7 +15,7 @@ export function ServicesSection({
   dictionary: Dictionary;
 }) {
   return (
-    <section className="bg-white py-20 sm:py-24 lg:py-28">
+    <section className="bg-white py-12 sm:py-16 lg:py-20">
       <Container>
         <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           <SectionHeading
@@ -23,16 +24,17 @@ export function ServicesSection({
             title={dictionary.services.title}
           />
           <Link
-            className="inline-flex items-center gap-2 self-start rounded-sm font-semibold text-zinc-950 hover:text-blue-700 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-600"
+            className="inline-flex items-center gap-2 self-start rounded-sm font-semibold text-[var(--text-primary)] hover:text-[var(--text-secondary)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--button-primary)]"
             href={`/${locale}/services`}
           >
             {dictionary.services.viewAll}
             <ArrowRight aria-hidden="true" className="size-4" />
           </Link>
         </div>
-        <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {dictionary.services.items.map((service) => (
+        <div className="mt-8 grid gap-4 md:grid-cols-2">
+          {getActiveServices(locale).map(({ content, ...service }) => (
             <ServiceCard
+              content={content}
               key={service.slug}
               learnMore={dictionary.services.learnMore}
               locale={locale}

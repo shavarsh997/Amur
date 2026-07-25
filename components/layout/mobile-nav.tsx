@@ -23,7 +23,6 @@ type MobileNavProps = {
   };
   openLabel: string;
   closeLabel: string;
-  inverted?: boolean;
 };
 
 export function MobileNav({
@@ -34,7 +33,6 @@ export function MobileNav({
   phone,
   openLabel,
   closeLabel,
-  inverted = false,
 }: MobileNavProps) {
   const [open, setOpen] = useState(false);
   const panelId = useId();
@@ -62,16 +60,14 @@ export function MobileNav({
   }
 
   return (
-    <div className="lg:hidden">
+    <div className="xl:hidden">
       <button
         ref={toggleRef}
         aria-controls={panelId}
         aria-expanded={open}
         aria-label={open ? closeLabel : openLabel}
-        className={`grid size-11 place-items-center rounded-full border transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 ${
-          inverted
-            ? "border-white/30 text-white hover:bg-white/10"
-            : "border-zinc-300 text-zinc-950 hover:bg-zinc-100"
+        className={`grid size-11 place-items-center rounded-xl border transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--button-primary)] ${
+          "border-[var(--border)] text-[var(--text-primary)] hover:bg-[var(--surface-muted)]"
         }`}
         onClick={() => setOpen((value) => !value)}
         type="button"
@@ -81,7 +77,7 @@ export function MobileNav({
 
       {open ? (
         <div
-          className="absolute inset-x-0 top-full border-y border-zinc-200 bg-white p-5 text-zinc-950 shadow-2xl"
+          className="absolute inset-x-0 top-full max-h-[calc(100dvh-4rem)] overflow-y-auto border-y border-[var(--border)] bg-white p-4 text-[var(--text-primary)] shadow-[0_18px_38px_-30px_rgb(24_24_27/0.55)] sm:px-8"
           id={panelId}
         >
           <nav aria-label={openLabel}>
@@ -90,7 +86,7 @@ export function MobileNav({
                 <li key={item.href}>
                   <Link
                     ref={index === 0 ? firstLinkRef : undefined}
-                    className="block rounded-xl px-4 py-3 font-medium hover:bg-zinc-100 focus-visible:outline-2 focus-visible:outline-blue-600"
+                    className="block rounded-xl px-4 py-3 font-medium hover:bg-[var(--surface-muted)] focus-visible:outline-2 focus-visible:outline-[var(--button-primary)]"
                     href={item.href}
                     onClick={closeMenu}
                   >
@@ -100,9 +96,9 @@ export function MobileNav({
               ))}
             </ul>
           </nav>
-          <div className="mt-5 flex flex-wrap items-center gap-3 border-t border-zinc-200 pt-5">
+          <div className="mt-4 flex flex-wrap items-center gap-3 border-t border-[var(--border)] pt-4">
             <Link
-              className="inline-flex min-h-11 flex-1 items-center justify-center rounded-full bg-blue-600 px-5 text-sm font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+              className="inline-flex min-h-11 flex-1 items-center justify-center rounded-xl bg-[var(--button-primary)] px-5 text-sm font-semibold text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--button-primary)]"
               href={cta.href}
               onClick={closeMenu}
             >
@@ -111,7 +107,7 @@ export function MobileNav({
             {phone ? (
               <a
                 aria-label={phone.label}
-                className="grid size-11 place-items-center rounded-full border border-zinc-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                className="grid size-11 place-items-center rounded-xl border border-[var(--border)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--button-primary)]"
                 href={phone.href}
               >
                 <Phone aria-hidden="true" className="size-4" />

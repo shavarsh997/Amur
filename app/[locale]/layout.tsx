@@ -3,24 +3,20 @@ import { notFound } from "next/navigation";
 
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
+import { isPlaceholder, siteConfig } from "@/config/site.config";
 import { getDictionary, isLocale, locales } from "@/lib/i18n";
-import { siteConfig } from "@/lib/site-config";
-import type { SiteConfig } from "@/types";
-
-function hidePlaceholder(value: string) {
-  return value.includes("TODO_REPLACE") ? "" : value;
-}
+import type { SiteConfiguration } from "@/types/config";
 
 const publicSiteConfig = {
   ...siteConfig,
   contacts: {
     ...siteConfig.contacts,
-    phone: hidePlaceholder(siteConfig.contacts.phone),
-    email: hidePlaceholder(siteConfig.contacts.email),
-    address: hidePlaceholder(siteConfig.contacts.address),
-    hours: hidePlaceholder(siteConfig.contacts.hours),
+    phone: isPlaceholder(siteConfig.contacts.phone) ? "" : siteConfig.contacts.phone,
+    email: isPlaceholder(siteConfig.contacts.email) ? "" : siteConfig.contacts.email,
+    address: isPlaceholder(siteConfig.contacts.address) ? "" : siteConfig.contacts.address,
+    hours: isPlaceholder(siteConfig.contacts.hours) ? "" : siteConfig.contacts.hours,
   },
-} satisfies SiteConfig;
+} satisfies SiteConfiguration;
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -40,11 +36,11 @@ export default async function LocaleLayout({
   const organizationJsonLd = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: siteConfig.brand,
-    url: `${siteConfig.siteUrl}/${locale}`,
+    name: siteConfig.companyName,
+    url: `${siteConfig.domain}/${locale}`,
     areaServed: {
       "@type": "Country",
-      name: "Armenia",
+      name: siteConfig.country,
     },
     telephone: publicSiteConfig.contacts.phone || undefined,
     email: publicSiteConfig.contacts.email || undefined,
@@ -72,7 +68,6 @@ export default async function LocaleLayout({
         config={publicSiteConfig}
         dictionary={dictionary}
         locale={locale}
-        transparent={false}
       />
       <main className="flex-1">{children}</main>
       <Footer config={publicSiteConfig} dictionary={dictionary} locale={locale} />

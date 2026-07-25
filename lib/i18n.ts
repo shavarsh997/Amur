@@ -1,7 +1,8 @@
+import { siteConfig } from "@/config/site.config";
 import type { Dictionary, Locale } from "@/types";
 
-export const locales = ["hy", "ru", "en"] as const satisfies readonly Locale[];
-export const defaultLocale: Locale = "hy";
+export const locales = siteConfig.locales;
+export const defaultLocale = siteConfig.defaultLocale;
 
 const dictionaries: Record<Locale, () => Promise<Dictionary>> = {
   hy: async () => (await import("@/messages/hy")).default,
@@ -31,7 +32,6 @@ export async function getDictionary(locale: unknown): Promise<Dictionary> {
     typeof dictionary !== "object" ||
     dictionary === null ||
     typeof dictionary.localeName !== "string" ||
-    !Array.isArray(dictionary.services.items) ||
     !Array.isArray(dictionary.projects.items)
   ) {
     throw new TypeError(`Invalid dictionary for locale: ${locale}`);

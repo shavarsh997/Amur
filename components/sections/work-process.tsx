@@ -1,31 +1,37 @@
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
+import { operationsConfig } from "@/config/operations.config";
 import type { Dictionary } from "@/types";
 
 export function WorkProcess({ dictionary }: { dictionary: Dictionary }) {
   return (
-    <section className="bg-white py-20 sm:py-24 lg:py-28">
+    <section className="bg-white py-12 sm:py-16 lg:py-20">
       <Container>
         <SectionHeading
           description={dictionary.process.description}
           eyebrow={dictionary.process.eyebrow}
           title={dictionary.process.title}
         />
-        <ol className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {dictionary.process.steps.map((step) => (
-            <li
-              className="relative border-t border-zinc-300 pt-7"
-              key={step.number}
-            >
-              <span className="text-sm font-bold tracking-[0.18em] text-blue-700">
-                {step.number}
-              </span>
-              <h3 className="mt-4 text-xl font-semibold text-zinc-950">
-                {step.title}
-              </h3>
-              <p className="mt-3 leading-7 text-zinc-600">{step.description}</p>
-            </li>
-          ))}
+        <ol className="mt-8 grid gap-x-0 gap-y-7 md:grid-cols-2 lg:grid-cols-3">
+          {operationsConfig.workflow.map((workflowKey, index) => {
+            const step = dictionary.process.steps[index];
+            if (!step) return null;
+
+            return (
+              <li
+                className="relative border-t border-[var(--border)] pt-5 lg:pr-8"
+                key={workflowKey}
+              >
+                <span className="inline-flex size-8 items-center justify-center rounded-full bg-[var(--background-warm)] text-xs font-semibold text-[var(--text-secondary)]">
+                  {step.number}
+                </span>
+                <h3 className="mt-4 text-lg font-semibold tracking-[-0.02em] text-[var(--text-primary)]">
+                  {step.title}
+                </h3>
+                <p className="mt-2 leading-7 text-[var(--text-secondary)]">{step.description}</p>
+              </li>
+            );
+          })}
         </ol>
       </Container>
     </section>

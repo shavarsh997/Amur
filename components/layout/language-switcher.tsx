@@ -34,10 +34,10 @@ export function LanguageSwitcher({
 
   return (
     <label
-      className={`inline-flex min-h-10 items-center gap-2 rounded-full border px-3 text-sm font-semibold focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-blue-600 ${
+      className={`inline-flex min-h-10 items-center gap-2 rounded-lg border px-3 text-sm font-semibold focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-[var(--button-primary)] ${
         inverted
           ? "border-white/30 text-white"
-          : "border-zinc-300 text-zinc-800"
+          : "border-[var(--border)] text-[var(--text-primary)]"
       }`}
     >
       <Languages aria-hidden="true" className="size-4" />

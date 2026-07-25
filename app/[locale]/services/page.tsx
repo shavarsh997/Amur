@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { ButtonLink } from "@/components/ui/button-link";
 import { Container } from "@/components/ui/container";
 import { PageHero } from "@/components/ui/page-hero";
+import { getActiveServices } from "@/config/services.config";
 import { getDictionary, isLocale } from "@/lib/i18n";
 import { buildMetadata } from "@/lib/metadata";
 
@@ -40,15 +41,15 @@ export default async function ServicesPage({ params }: Props) {
         eyebrow={services.eyebrow}
         title={services.pageTitle}
       />
-      <Container className="space-y-10 py-16 sm:py-20 lg:py-24">
-        {services.items.map((service, index) => (
+      <Container className="space-y-5 py-12 sm:py-16 lg:py-20">
+        {getActiveServices(locale).map(({ content, ...service }, index) => (
           <article
-            className="grid overflow-hidden rounded-3xl border border-zinc-200 bg-white shadow-sm lg:grid-cols-2"
+            className="grid overflow-hidden rounded-[24px] border border-[var(--border)] bg-white lg:grid-cols-2"
             key={service.slug}
           >
-            <div className={`relative min-h-72 bg-zinc-100 ${index % 2 ? "lg:order-2" : ""}`}>
+            <div className={`relative min-h-72 bg-[var(--background-warm)] ${index % 2 ? "lg:order-2" : ""}`}>
               <Image
-                alt={service.title}
+                alt={content.title}
                 className="object-cover"
                 fill
                 sizes="(max-width: 1023px) 100vw, 50vw"
@@ -56,32 +57,32 @@ export default async function ServicesPage({ params }: Props) {
               />
             </div>
             <div className="p-6 sm:p-9 lg:p-12">
-              <h2 className="text-2xl font-semibold tracking-tight text-zinc-950 sm:text-3xl">
-                {service.title}
+              <h2 className="text-2xl font-semibold tracking-[-0.04em] text-[var(--text-primary)] sm:text-3xl">
+                {content.title}
               </h2>
-              <p className="mt-4 leading-7 text-zinc-600">{service.description}</p>
+              <p className="mt-4 leading-7 text-[var(--text-secondary)]">{content.fullDescription}</p>
               <div className="mt-7 grid gap-6 sm:grid-cols-2">
                 <div>
-                  <h3 className="font-semibold text-zinc-950">{services.detail.included}</h3>
-                  <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-6 text-zinc-600">
-                    {service.included.map((item) => <li key={item}>{item}</li>)}
+                  <h3 className="font-semibold text-[var(--text-primary)]">{services.detail.included}</h3>
+                  <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-6 text-[var(--text-secondary)]">
+                    {content.includedWorks.map((item) => <li key={item}>{item}</li>)}
                   </ul>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-zinc-950">{services.detail.stages}</h3>
-                  <ol className="mt-3 list-decimal space-y-2 pl-5 text-sm leading-6 text-zinc-600">
-                    {service.stages.map((stage) => <li key={stage}>{stage}</li>)}
+                  <h3 className="font-semibold text-[var(--text-primary)]">{services.detail.stages}</h3>
+                  <ol className="mt-3 list-decimal space-y-2 pl-5 text-sm leading-6 text-[var(--text-secondary)]">
+                    {content.workflow.map((step) => <li key={step.title}>{step.title}</li>)}
                   </ol>
                 </div>
               </div>
               <div className="mt-6">
-                <h3 className="font-semibold text-zinc-950">{services.detail.audience}</h3>
-                <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-6 text-zinc-600">
-                  {service.audience.map((item) => <li key={item}>{item}</li>)}
+                <h3 className="font-semibold text-[var(--text-primary)]">{services.detail.audience}</h3>
+                <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-6 text-[var(--text-secondary)]">
+                  {content.suitableFor.map((item) => <li key={item}>{item}</li>)}
                 </ul>
               </div>
               <ButtonLink className="mt-8" href={`/${locale}/services/${service.slug}`}>
-                {service.cta}
+                {services.detail.requestEstimate}
               </ButtonLink>
             </div>
           </article>

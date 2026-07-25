@@ -1,7 +1,9 @@
 import type { Metadata, Viewport } from "next";
 import { Manrope, Noto_Sans_Armenian } from "next/font/google";
 
-import { siteConfig } from "@/lib/site-config";
+import { seoConfig } from "@/config/seo.config";
+import { siteConfig } from "@/config/site.config";
+import { defaultLocale } from "@/lib/i18n";
 
 import "./globals.css";
 
@@ -16,21 +18,18 @@ const notoArmenian = Noto_Sans_Armenian({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteConfig.siteUrl),
+  metadataBase: new URL(siteConfig.domain),
   title: {
-    default: siteConfig.brand,
-    template: `%s — ${siteConfig.brand}`,
+    default: siteConfig.companyName,
+    template: `%s — ${siteConfig.companyName}`,
   },
-  applicationName: siteConfig.brand,
-  category: "construction",
-  robots: {
-    index: true,
-    follow: true,
-  },
+  applicationName: siteConfig.companyName,
+  category: seoConfig.category,
+  robots: seoConfig.robots,
 };
 
 export const viewport: Viewport = {
-  themeColor: "#0f172a",
+  themeColor: "#ffffff",
   colorScheme: "light",
 };
 
@@ -40,7 +39,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="hy" className={`${manrope.variable} ${notoArmenian.variable} h-full antialiased`}>
+    <html lang={defaultLocale} className={`${manrope.variable} ${notoArmenian.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col">{children}</body>
     </html>
   );

@@ -10,6 +10,7 @@ import {
 
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
+import { operationsConfig } from "@/config/operations.config";
 import type { Dictionary } from "@/types";
 
 const icons: LucideIcon[] = [
@@ -23,24 +24,27 @@ const icons: LucideIcon[] = [
 
 export function WhyUs({ dictionary }: { dictionary: Dictionary }) {
   return (
-    <section className="bg-zinc-950 py-20 text-white sm:py-24 lg:py-28">
+    <section className="bg-[var(--background-warm)] py-12 sm:py-16 lg:py-20">
       <Container>
         <SectionHeading
-          align="center"
+          align="left"
           description={dictionary.whyUs.description}
           eyebrow={dictionary.whyUs.eyebrow}
-          inverted
           title={dictionary.whyUs.title}
         />
-        <div className="mt-12 grid gap-px overflow-hidden rounded-3xl bg-white/10 sm:grid-cols-2 lg:grid-cols-3">
-          {dictionary.whyUs.items.map((item, index) => {
+        <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {operationsConfig.benefits.map((benefitKey, index) => {
+            const item = dictionary.whyUs.items[index];
+            if (!item) return null;
             const Icon = icons[index] ?? BadgeCheck;
 
             return (
-              <article className="bg-zinc-950 p-7 sm:p-8" key={item.title}>
-                <Icon aria-hidden="true" className="size-7 text-blue-400" />
-                <h3 className="mt-5 text-lg font-semibold">{item.title}</h3>
-                <p className="mt-3 leading-7 text-zinc-400">{item.description}</p>
+              <article className="rounded-2xl border border-white bg-white/70 p-5 sm:p-6" key={benefitKey}>
+                <span className="grid size-10 place-items-center rounded-xl bg-white text-[var(--text-primary)] shadow-sm">
+                  <Icon aria-hidden="true" className="size-5 stroke-[1.35]" />
+                </span>
+                <h3 className="mt-4 text-lg font-semibold tracking-[-0.02em] text-[var(--text-primary)]">{item.title}</h3>
+                <p className="mt-2 text-sm leading-6 text-[var(--text-secondary)]">{item.description}</p>
               </article>
             );
           })}

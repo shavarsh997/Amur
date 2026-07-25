@@ -1,4 +1,4 @@
-import { Check } from "lucide-react";
+import { ArrowRight, Check, Compass } from "lucide-react";
 import Image from "next/image";
 
 import { ButtonLink } from "@/components/ui/button-link";
@@ -6,7 +6,7 @@ import { Container } from "@/components/ui/container";
 import type { Dictionary, Locale } from "@/types";
 
 const heroImage =
-  "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=2400&q=90";
+  "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=90";
 
 export function Hero({
   locale,
@@ -16,49 +16,52 @@ export function Hero({
   dictionary: Dictionary;
 }) {
   return (
-    <section className="relative isolate min-h-[760px] overflow-hidden bg-zinc-950 text-white">
-      <Image
-        alt={dictionary.hero.title}
-        className="object-cover opacity-55"
-        fill
-        preload
-        sizes="100vw"
-        src={heroImage}
-      />
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 bg-gradient-to-r from-zinc-950 via-zinc-950/80 to-zinc-950/20"
-      />
-      <Container className="relative flex min-h-[760px] items-center pb-20 pt-36">
-        <div className="max-w-3xl">
-          <p className="text-xs font-bold uppercase tracking-[0.22em] text-blue-400">
-            {dictionary.hero.eyebrow}
-          </p>
-          <h1 className="mt-5 text-pretty text-4xl font-semibold tracking-tight sm:text-6xl lg:text-7xl">
-            {dictionary.hero.title}
-          </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-zinc-200 sm:text-xl">
-            {dictionary.hero.description}
-          </p>
-          <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-            <ButtonLink href={`/${locale}/contacts#estimate`}>
-              {dictionary.hero.primaryAction}
-            </ButtonLink>
-            <ButtonLink href={`/${locale}/projects`} variant="light">
-              {dictionary.hero.secondaryAction}
-            </ButtonLink>
+    <section className="overflow-hidden bg-[var(--background-soft)]">
+      <Container className="py-5 sm:py-7 lg:py-8">
+        <div className="relative overflow-hidden rounded-[28px] border border-white bg-white shadow-[0_22px_60px_-44px_rgb(24_24_27/0.38)]">
+          <div className="grid min-h-[560px] lg:grid-cols-[0.92fr_1.08fr]">
+            <div className="relative z-10 flex flex-col justify-center px-6 py-10 sm:px-8 sm:py-12 lg:px-10 lg:py-14">
+              <p className="inline-flex w-fit items-center gap-2 rounded-full bg-[var(--background-warm)] px-3 py-1.5 text-xs font-semibold text-[var(--text-secondary)]">
+                <Compass aria-hidden="true" className="size-3.5" />
+                {dictionary.hero.eyebrow}
+              </p>
+              <h1 className="mt-5 max-w-xl text-pretty text-4xl font-semibold tracking-[-0.055em] text-[var(--text-primary)] sm:text-5xl lg:text-6xl">
+                {dictionary.hero.title}
+              </h1>
+              <p className="mt-5 max-w-lg text-base leading-7 text-[var(--text-secondary)] sm:text-lg">
+                {dictionary.hero.description}
+              </p>
+              <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+                <ButtonLink href={`/${locale}/calculator`}>
+                  {dictionary.hero.primaryAction}
+                  <ArrowRight aria-hidden="true" className="ml-2 size-4" />
+                </ButtonLink>
+                <ButtonLink href={`/${locale}/services`} variant="secondary">
+                  {dictionary.hero.secondaryAction}
+                </ButtonLink>
+              </div>
+              <ul className="mt-8 grid max-w-xl gap-x-6 gap-y-3 border-t border-[var(--border)] pt-5 text-sm text-[var(--text-secondary)] sm:grid-cols-2">
+                {dictionary.hero.trustPoints.map((point) => (
+                  <li className="flex items-start gap-2.5" key={point}>
+                    <Check aria-hidden="true" className="mt-0.5 size-4 shrink-0 text-[var(--text-primary)]" />
+                    {point}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="relative min-h-[340px] overflow-hidden bg-[var(--warm-accent)] lg:min-h-full">
+              <Image
+                alt={dictionary.hero.title}
+                className="object-cover object-center"
+                fill
+                preload
+                sizes="(max-width: 1023px) 100vw, 56vw"
+                src={heroImage}
+              />
+              <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-white/25 via-transparent to-white/10" />
+              <div aria-hidden="true" className="absolute -bottom-16 -left-24 size-64 rounded-full bg-white/50 blur-3xl" />
+            </div>
           </div>
-          <ul className="mt-12 grid gap-4 border-t border-white/20 pt-7 text-sm text-zinc-200 sm:grid-cols-2 lg:grid-cols-4">
-            {dictionary.hero.trustPoints.map((point) => (
-              <li className="flex items-start gap-2.5" key={point}>
-                <Check
-                  aria-hidden="true"
-                  className="mt-0.5 size-4 shrink-0 text-blue-400"
-                />
-                {point}
-              </li>
-            ))}
-          </ul>
         </div>
       </Container>
     </section>

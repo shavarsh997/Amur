@@ -1,65 +1,57 @@
-import { Phone } from "lucide-react";
+import { Building2, Phone } from "lucide-react";
 import Link from "next/link";
 
+import { navigationConfig } from "@/config/navigation.config";
+import { siteConfig } from "@/config/site.config";
 import { LanguageSwitcher } from "@/components/layout/language-switcher";
 import {
   MobileNav,
   type NavigationItem,
 } from "@/components/layout/mobile-nav";
 import { Container } from "@/components/ui/container";
-import { siteConfig } from "@/lib/site-config";
-import type { Dictionary, Locale, SiteConfig } from "@/types";
+import type { Dictionary, Locale } from "@/types";
+import type { SiteConfiguration } from "@/types/config";
 
 type HeaderProps = {
   locale: Locale;
   dictionary: Dictionary;
-  config?: SiteConfig;
-  transparent?: boolean;
+  config?: SiteConfiguration;
 };
 
 export function Header({
   locale,
   dictionary,
   config = siteConfig,
-  transparent = true,
 }: HeaderProps) {
   const prefix = `/${locale}`;
-  const navigation: NavigationItem[] = [
-    { href: prefix, label: dictionary.nav.home },
-    { href: `${prefix}/services`, label: dictionary.nav.services },
-    { href: `${prefix}/projects`, label: dictionary.nav.projects },
-    { href: `${prefix}/about`, label: dictionary.nav.about },
-    { href: `${prefix}/contacts`, label: dictionary.nav.contacts },
-  ];
+  const navigation: NavigationItem[] = navigationConfig.map((item) => ({
+    href: item.path ? `${prefix}/${item.path}` : prefix,
+    label: dictionary.nav[item.key],
+  }));
   const cta = {
     href: `${prefix}/contacts#estimate`,
     label: dictionary.nav.consultation,
   };
-  const inverted = transparent;
-
   return (
     <header
-      className={`relative z-50 w-full ${
-        transparent
-          ? "absolute inset-x-0 top-0 border-b border-white/15 bg-zinc-950/10 text-white backdrop-blur-sm"
-          : "border-b border-zinc-200 bg-white/95 text-zinc-950 backdrop-blur"
-      }`}
+      className="sticky top-0 z-50 w-full border-b border-[var(--border)] bg-white/95 text-[var(--text-primary)] backdrop-blur-md"
     >
-      <Container className="flex min-h-20 items-center justify-between gap-6">
+      <Container className="flex min-h-16 items-center justify-between gap-4 sm:min-h-[68px]">
         <Link
-          className="rounded-sm text-lg font-bold uppercase tracking-[0.12em] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-600"
+          className="inline-flex shrink-0 items-center gap-2 rounded-sm text-sm font-bold uppercase tracking-[0.06em] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--button-primary)] sm:text-[15px]"
           href={prefix}
         >
-          {config.brand}
+          <Building2 aria-hidden="true" className="size-5 stroke-[1.35]" />
+          {config.shortCompanyName}
         </Link>
 
-        <nav aria-label={dictionary.footer.navigation} className="hidden lg:block">
-          <ul className="flex items-center gap-7">
+        <nav aria-label={dictionary.footer.navigation} className="hidden xl:block">
+          <ul className="flex items-center gap-5 xl:gap-6">
             {navigation.map((item) => (
               <li key={item.href}>
                 <Link
-                  className={`rounded-sm text-sm font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-600 ${
-                    inverted ? "hover:text-blue-300" : "hover:text-blue-700"
+                  className={`rounded-sm text-sm font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--button-primary)] ${
+                    "hover:text-[var(--text-secondary)]"
                   }`}
                   href={item.href}
                 >
@@ -70,23 +62,23 @@ export function Header({
           </ul>
         </nav>
 
-        <div className="hidden items-center gap-3 lg:flex">
+        <div className="hidden items-center gap-2 xl:flex">
           {config.contacts.phoneHref ? (
             <a
               aria-label={config.contacts.phone}
-              className="grid size-10 place-items-center rounded-full transition-colors hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+              className="grid size-10 place-items-center rounded-full transition-colors hover:bg-[var(--surface-muted)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--button-primary)]"
               href={config.contacts.phoneHref}
             >
               <Phone aria-hidden="true" className="size-4" />
             </a>
           ) : null}
           <LanguageSwitcher
-            inverted={inverted}
+            inverted={false}
             label={dictionary.nav.language}
             locale={locale}
           />
           <Link
-            className="inline-flex min-h-11 items-center justify-center rounded-full bg-blue-600 px-5 text-sm font-semibold text-zinc-950 transition-colors hover:bg-blue-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+            className="inline-flex min-h-10 items-center justify-center rounded-lg bg-[var(--button-primary)] px-4 text-sm font-semibold text-white transition-colors hover:bg-[var(--button-primary-hover)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--button-primary)]"
             href={cta.href}
           >
             {cta.label}
@@ -96,7 +88,6 @@ export function Header({
         <MobileNav
           closeLabel={dictionary.nav.closeMenu}
           cta={cta}
-          inverted={inverted}
           items={navigation}
           languageLabel={dictionary.nav.language}
           locale={locale}

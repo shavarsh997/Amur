@@ -37,7 +37,7 @@ export default async function PrivacyPage({ params }: Props) {
         description={privacy.intro}
         title={privacy.title}
       />
-      <Container className="py-16 sm:py-20 lg:py-24">
+      <Container className="py-12 sm:py-16 lg:py-20">
         <article className="mx-auto max-w-4xl">
           <p className="text-sm font-semibold text-blue-700">{privacy.updated}</p>
           <div className="mt-10 space-y-12">
