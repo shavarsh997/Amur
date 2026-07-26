@@ -15,7 +15,7 @@ export function Breadcrumbs({
 }) {
   return (
     <nav aria-label="Breadcrumb" className={className}>
-      <ol className="flex flex-wrap items-center gap-2 text-sm text-zinc-500">
+      <ol className="flex flex-wrap items-center gap-2 text-sm text-[var(--text-muted)]">
         {items.map((item, index) => {
           const current = index === items.length - 1;
 
@@ -26,7 +26,7 @@ export function Breadcrumbs({
               ) : null}
               {item.href && !current ? (
                 <Link
-                  className="rounded-sm transition-colors hover:text-zinc-950 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                  className="rounded-sm transition-colors hover:text-[var(--text-primary)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--button-primary)]"
                   href={item.href}
                 >
                   {item.label}

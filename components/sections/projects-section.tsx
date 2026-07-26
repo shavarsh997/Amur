@@ -23,7 +23,7 @@ export function ProjectsSection({
             title={dictionary.projects.title}
           />
           <Link
-            className="inline-flex items-center gap-2 self-start rounded-sm font-semibold text-zinc-950 hover:text-blue-700 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-600"
+            className="inline-flex items-center gap-2 self-start rounded-sm font-semibold text-[var(--text-primary)] hover:text-[var(--brand-accent)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--button-primary)]"
             href={`/${locale}/projects`}
           >
             {dictionary.projects.viewAll}

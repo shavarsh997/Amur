@@ -2,19 +2,20 @@
 
 :root {
   --background: #ffffff;
-  --background-soft: #faf9f7;
-  --background-warm: #f6f3ef;
+  --background-soft: #fcfaf8;
+  --background-warm: #f3ebe4;
   --surface: #ffffff;
-  --surface-muted: #f7f7f7;
-  --text-primary: #151719;
-  --text-secondary: #60646c;
-  --text-muted: #8a8f98;
-  --border: #e6e7e9;
-  --border-strong: #d7d9dd;
-  --button-primary: #17191c;
-  --button-primary-hover: #2a2d31;
+  --surface-muted: #f9f6f3;
+  --text-primary: #18212a;
+  --text-secondary: #62686e;
+  --text-muted: #8c8985;
+  --border: #e9e2db;
+  --border-strong: #dacbbc;
+  --button-primary: #18212a;
+  --button-primary-hover: #2b3640;
   --button-text: #ffffff;
-  --warm-accent: #ebe4db;
+  --warm-accent: #ead8ca;
+  --brand-accent: #9f7f6a;
   --success: #2f7d4a;
   --error: #b42318;
   --foreground: var(--text-primary);
@@ -22,7 +23,7 @@
   --muted: var(--surface-muted);
   --radius-card: 1.25rem;
   --radius-control: 0.875rem;
-  --shadow-card: 0 20px 45px -32px rgb(24 24 27 / 0.2);
+  --shadow-card: 0 20px 45px -32px rgb(24 33 42 / 0.2);
   --container-width: 80rem;
   --container-gutter: clamp(1rem, 3vw, 2rem);
 }

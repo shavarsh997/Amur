@@ -77,7 +77,7 @@ export function MobileNav({
 
       {open ? (
         <div
-          className="absolute inset-x-0 top-full max-h-[calc(100dvh-4rem)] overflow-y-auto border-y border-[var(--border)] bg-white p-4 text-[var(--text-primary)] shadow-[0_18px_38px_-30px_rgb(24_24_27/0.55)] sm:px-8"
+          className="absolute inset-x-0 top-[calc(100%+0.5rem)] max-h-[calc(100dvh-5.5rem)] overflow-y-auto rounded-[22px] border border-[var(--border)] bg-white p-4 text-[var(--text-primary)] shadow-[0_18px_38px_-30px_rgb(24_24_27/0.55)] sm:px-8"
           id={panelId}
         >
           <nav aria-label={openLabel}>

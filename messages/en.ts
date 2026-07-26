@@ -92,7 +92,7 @@ const dictionary = {
     ],
   },
   whyUs: {
-    eyebrow: "Why AMUR Construction", title: "A predictable process with less uncertainty",
+    eyebrow: "Why Shinex", title: "A predictable process with less uncertainty",
     description: "Every decision is tied to the project's purpose and its agreed scope.",
     items: [
       { title: "Contract-based work", description: "The scope, responsibilities, and working procedure are recorded." },
@@ -183,7 +183,7 @@ const dictionary = {
   },
   about: {
     eyebrow: "About us", title: "Construction with organized accountability",
-    intro: "AMUR Construction brings construction and renovation tasks into one clear, coordinated workflow.",
+    intro: "Shinex brings construction and renovation tasks into one clear, coordinated workflow.",
     storyTitle: "Our approach",
     story: [
       "We begin by understanding the task, the space, and the expected result rather than starting with a pre-made promise.",

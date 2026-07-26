@@ -21,7 +21,7 @@ export function ProjectCard({
     <article className="group overflow-hidden rounded-3xl border border-zinc-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
       <Link
         aria-label={project.title}
-        className="block rounded-3xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-600"
+        className="block rounded-3xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--button-primary)]"
         href={href}
       >
         <div className="relative aspect-[4/3] overflow-hidden bg-zinc-100">
@@ -43,12 +43,12 @@ export function ProjectCard({
             </h3>
             <ArrowUpRight
               aria-hidden="true"
-              className="mt-1 size-5 shrink-0 text-blue-700 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+              className="mt-1 size-5 shrink-0 text-[var(--brand-accent)] transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
             />
           </div>
           <div className="flex flex-wrap gap-x-5 gap-y-2 text-sm text-zinc-600">
             <span className="inline-flex items-center gap-1.5">
-              <MapPin aria-hidden="true" className="size-4 text-blue-700" />
+              <MapPin aria-hidden="true" className="size-4 text-[var(--brand-accent)]" />
               {project.location}
             </span>
             <span>{project.area}</span>

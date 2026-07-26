@@ -1,4 +1,4 @@
-import { Building2, Phone } from "lucide-react";
+import { Phone } from "lucide-react";
 import Link from "next/link";
 
 import { navigationConfig } from "@/config/navigation.config";
@@ -8,6 +8,7 @@ import {
   MobileNav,
   type NavigationItem,
 } from "@/components/layout/mobile-nav";
+import { BrandMark } from "@/components/ui/brand-mark";
 import { Container } from "@/components/ui/container";
 import type { Dictionary, Locale } from "@/types";
 import type { SiteConfiguration } from "@/types/config";
@@ -33,15 +34,13 @@ export function Header({
     label: dictionary.nav.consultation,
   };
   return (
-    <header
-      className="sticky top-0 z-50 w-full border-b border-[var(--border)] bg-white/95 text-[var(--text-primary)] backdrop-blur-md"
-    >
-      <Container className="flex min-h-16 items-center justify-between gap-4 sm:min-h-[68px]">
+    <header className="sticky top-0 z-50 w-full pt-3 px-5 text-[var(--text-primary)]">
+      <Container className="relative flex min-h-16 items-center justify-between gap-4 rounded-[22px] border border-[var(--border)] bg-white/75 shadow-[0_16px_36px_-28px_rgb(24_24_27/0.48)] backdrop-blur-md sm:min-h-[68px]">
         <Link
-          className="inline-flex shrink-0 items-center gap-2 rounded-sm text-sm font-bold uppercase tracking-[0.06em] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--button-primary)] sm:text-[15px]"
+          className="inline-flex shrink-0 items-center gap-2.5 rounded-sm text-sm font-bold tracking-[0.04em] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--button-primary)] sm:text-[15px]"
           href={prefix}
         >
-          <Building2 aria-hidden="true" className="size-5 stroke-[1.35]" />
+          <BrandMark className="h-7 w-auto sm:h-8" preload />
           {config.shortCompanyName}
         </Link>
 

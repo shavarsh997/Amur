@@ -1,9 +1,10 @@
-import { Building2, Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 import Link from "next/link";
 
 import { navigationConfig } from "@/config/navigation.config";
 import { siteConfig } from "@/config/site.config";
 import { getActiveServices } from "@/config/services.config";
+import { BrandMark } from "@/components/ui/brand-mark";
 import { Container } from "@/components/ui/container";
 import type { Dictionary, Locale } from "@/types";
 import type { SiteConfiguration } from "@/types/config";
@@ -32,10 +33,10 @@ export function Footer({
         <div className="grid gap-10 border-b border-[var(--border)] pb-12 sm:grid-cols-2 lg:grid-cols-4">
           <div>
             <Link
-              className="inline-flex items-center gap-2 rounded-sm text-[15px] font-bold uppercase tracking-[0.06em] text-[var(--text-primary)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--button-primary)]"
+              className="inline-flex items-center gap-2.5 rounded-sm text-[15px] font-bold tracking-[0.04em] text-[var(--text-primary)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--button-primary)]"
               href={prefix}
             >
-              <Building2 aria-hidden="true" className="size-5 stroke-[1.35]" />
+              <BrandMark className="h-8 w-auto" />
               {config.shortCompanyName}
             </Link>
             <p className="mt-5 max-w-xs text-sm leading-6 text-[var(--text-secondary)]">

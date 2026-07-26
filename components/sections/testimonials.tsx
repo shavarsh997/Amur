@@ -20,7 +20,7 @@ export function Testimonials({ dictionary }: { dictionary: Dictionary }) {
               className="flex flex-col rounded-3xl border border-zinc-200 bg-zinc-50 p-7"
               key={`${item.name}-${index}`}
             >
-              <Quote aria-hidden="true" className="size-7 text-blue-700" />
+              <Quote aria-hidden="true" className="size-7 text-[var(--brand-accent)]" />
               <blockquote className="mt-5 flex-1 text-lg leading-8 text-zinc-700">
                 “{item.quote}”
               </blockquote>
@@ -28,7 +28,7 @@ export function Testimonials({ dictionary }: { dictionary: Dictionary }) {
                 <p className="font-semibold text-zinc-950">{item.name}</p>
                 <p className="mt-1 text-sm text-zinc-500">{item.role}</p>
                 {item.isPlaceholder ? (
-                  <p className="mt-3 text-xs font-bold uppercase tracking-wide text-blue-700">
+                  <p className="mt-3 text-xs font-bold uppercase tracking-wide text-[var(--brand-accent)]">
                     {dictionary.testimonials.placeholderNotice}
                   </p>
                 ) : null}

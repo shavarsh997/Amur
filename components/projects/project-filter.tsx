@@ -55,7 +55,7 @@ export function ProjectFilter({
           return (
             <button
               aria-pressed={active}
-              className={`min-h-11 rounded-full border px-5 py-2 text-sm font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 ${
+              className={`min-h-11 rounded-full border px-5 py-2 text-sm font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--button-primary)] ${
                 active
                   ? "border-zinc-950 bg-zinc-950 text-white"
                   : "border-zinc-300 bg-white text-zinc-700 hover:border-zinc-950 hover:text-zinc-950"
