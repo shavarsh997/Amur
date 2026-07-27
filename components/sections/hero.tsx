@@ -1,6 +1,7 @@
-import { ArrowRight, Check, Compass } from "lucide-react";
+import { Check, Compass } from "lucide-react";
 import Image from "next/image";
 
+import { CalculatorTrigger } from "@/components/calculator/calculator-dialog";
 import { ButtonLink } from "@/components/ui/button-link";
 import { Container } from "@/components/ui/container";
 import type { Dictionary, Locale } from "@/types";
@@ -32,10 +33,7 @@ export function Hero({
                 {dictionary.hero.description}
               </p>
               <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-                <ButtonLink href={`/${locale}/calculator`}>
-                  {dictionary.hero.primaryAction}
-                  <ArrowRight aria-hidden="true" className="ml-2 size-4" />
-                </ButtonLink>
+                <CalculatorTrigger label={dictionary.hero.primaryAction} />
                 <ButtonLink href={`/${locale}/services`} variant="secondary">
                   {dictionary.hero.secondaryAction}
                 </ButtonLink>

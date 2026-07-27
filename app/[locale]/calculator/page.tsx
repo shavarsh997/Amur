@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-import { CostCalculator } from "@/components/calculator/cost-calculator";
+import { CalculatorTrigger } from "@/components/calculator/calculator-dialog";
 import { Container } from "@/components/ui/container";
-import { PageHero } from "@/components/ui/page-hero";
 import { getDictionary, isLocale } from "@/lib/i18n";
 import { buildMetadata } from "@/lib/metadata";
 
@@ -28,20 +27,5 @@ export default async function CalculatorPage({ params }: Props) {
   const dictionary = await getDictionary(locale);
   const copy = dictionary.calculator;
 
-  return (
-    <>
-      <PageHero
-        breadcrumbs={[
-          { label: dictionary.common.home, href: `/${locale}` },
-          { label: copy.title },
-        ]}
-        description={copy.description}
-        eyebrow={copy.eyebrow}
-        title={copy.title}
-      />
-      <Container className="max-w-4xl py-12 sm:py-16 lg:py-20">
-        <CostCalculator dictionary={dictionary} locale={locale} />
-      </Container>
-    </>
-  );
+  return <Container className="py-10 sm:py-16"><div className="rounded-[28px] border border-[var(--border)] bg-[var(--background-soft)] p-7 text-center sm:p-12"><p className="text-xs font-semibold uppercase tracking-[0.14em] text-[var(--brand-accent)]">{copy.eyebrow}</p><h1 className="mx-auto mt-3 max-w-2xl text-3xl font-semibold tracking-[-0.05em] text-[var(--text-primary)] sm:text-5xl">{copy.title}</h1><p className="mx-auto mt-4 max-w-xl text-base leading-7 text-[var(--text-secondary)]">{copy.description}</p><CalculatorTrigger className="mt-7" label="Открыть калькулятор" /></div></Container>;
 }

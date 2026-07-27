@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
+import { CalculatorDialog } from "@/components/calculator/calculator-dialog";
 import { isPlaceholder, siteConfig } from "@/config/site.config";
 import { getDictionary, isLocale, locales } from "@/lib/i18n";
 import type { SiteConfiguration } from "@/types/config";
@@ -71,6 +72,7 @@ export default async function LocaleLayout({
       />
       <main className="flex-1">{children}</main>
       <Footer config={publicSiteConfig} dictionary={dictionary} locale={locale} />
+      <CalculatorDialog locale={locale} />
     </div>
   );
 }

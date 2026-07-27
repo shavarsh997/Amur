@@ -122,7 +122,7 @@ export default async function ServiceDetailPage({ params }: Props) {
           </div>
         </Container>
       </article>
-      <EstimateSection dictionary={dictionary} locale={locale} />
+      <EstimateSection dictionary={dictionary} />
       <FinalCta dictionary={dictionary} locale={locale} />
     </>
   );
