@@ -30,6 +30,7 @@ export default async function PrivacyPage({ params }: Props) {
   return (
     <>
       <PageHero
+        breadcrumbsLabel={dictionary.common.breadcrumbs}
         breadcrumbs={[
           { label: dictionary.common.home, href: `/${locale}` },
           { label: privacy.title },

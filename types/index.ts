@@ -289,6 +289,45 @@ export interface Dictionary {
       phoneInvalid: string;
     };
   };
+  constructionCalculator: {
+    dialog: { eyebrow: string; title: string; close: string; open: string };
+    steps: {
+      scenario: { title: string; description: string };
+      parameters: { title: string; description: string };
+      construction: { title: string; description: string };
+      constructionExtras: { title: string; description: string };
+      renovationExtras: { title: string; description: string };
+      design: { title: string; description: string };
+    };
+    fields: {
+      area: string; floors: string; rooms: string; bathrooms: string;
+      houseParameters: string; houseShape: string; constructionType: string;
+      basementArea: string; garageArea: string; terraceArea: string;
+      propertyCondition: string; propertyType: string; currentCondition: string;
+      renovationLevel: string; distance: string; distanceHint: string;
+      doorsCount: string; airConditionersCount: string;
+    };
+    calculationTypes: Record<"construction" | "renovation" | "combined", LocalizedText>;
+    construction: {
+      packages: Record<"shell" | "rough" | "turnkey", LocalizedText>;
+      materials: Record<"aeratedConcrete" | "brick" | "monolith" | "frame", string>;
+      houseShapes: Record<"rectangle" | "lShape" | "complex", string>;
+      extras: Record<"basement" | "garage" | "terrace" | "highCeilings" | "difficultSite" | "distance", string>;
+    };
+    renovation: {
+      objectTypes: Record<"apartment" | "privateHouse" | "commercial", string>;
+      conditions: Record<"newWithoutFinish" | "roughFinish" | "oldRenovation" | "partiallyRenovated", string>;
+      levels: Record<"cosmetic" | "standard" | "capital" | "premium", string>;
+      extras: Record<"demolition" | "electrical" | "plumbing" | "heatedFloor" | "soundproofing" | "doors" | "airConditioners" | "furnishing" | "cleaning", string>;
+    };
+    design: Record<"basic" | "full" | "supervision", LocalizedText> & { enabled: string; enabledDescription: string };
+    result: {
+      title: string; range: string; enterArea: string; included: string;
+      empty: string; total: string; notice: string;
+      constructionIncrease: string; distanceNote: string; renovationLine: string;
+    };
+    estimateSectionDescription: string;
+  };
   testimonials: {
     eyebrow: string;
     title: string;
@@ -371,6 +410,7 @@ export interface Dictionary {
     notFoundTitle: string;
     notFoundDescription: string;
     returnHome: string;
+    breadcrumbs: string;
     errors: {
       required: string;
       invalidEmail: string;

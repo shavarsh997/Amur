@@ -48,6 +48,7 @@ export default async function ServiceDetailPage({ params }: Props) {
             {copy.requestEstimate}
           </ButtonLink>
         }
+        breadcrumbsLabel={dictionary.common.breadcrumbs}
         breadcrumbs={[
           { label: dictionary.common.home, href: `/${locale}` },
           { label: dictionary.services.pageTitle, href: `/${locale}/services` },

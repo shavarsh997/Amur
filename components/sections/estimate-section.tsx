@@ -16,7 +16,7 @@ export function EstimateSection({ dictionary }: { dictionary: Dictionary }) {
                 title={dictionary.calculator.title}
               />
             </div>
-            <div className="rounded-2xl bg-[var(--background-warm)] p-6 sm:p-8"><p className="text-sm leading-6 text-[var(--text-secondary)]">Выберите сценарий, укажите несколько ориентировочных параметров и сразу получите диапазон стоимости.</p><CalculatorTrigger className="mt-6" label={dictionary.hero.primaryAction} /></div>
+            <div className="rounded-2xl bg-[var(--background-warm)] p-6 sm:p-8"><p className="text-sm leading-6 text-[var(--text-secondary)]">{dictionary.constructionCalculator.estimateSectionDescription}</p><CalculatorTrigger className="mt-6" label={dictionary.hero.primaryAction} /></div>
           </div>
         </div>
       </Container>

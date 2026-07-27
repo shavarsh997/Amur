@@ -72,7 +72,7 @@ export default async function LocaleLayout({
       />
       <main className="flex-1">{children}</main>
       <Footer config={publicSiteConfig} dictionary={dictionary} locale={locale} />
-      <CalculatorDialog locale={locale} />
+      <CalculatorDialog copy={dictionary.constructionCalculator} locale={locale} />
     </div>
   );
 }

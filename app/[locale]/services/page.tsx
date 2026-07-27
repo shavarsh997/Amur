@@ -33,6 +33,7 @@ export default async function ServicesPage({ params }: Props) {
   return (
     <>
       <PageHero
+        breadcrumbsLabel={common.breadcrumbs}
         breadcrumbs={[
           { label: common.home, href: `/${locale}` },
           { label: services.pageTitle },

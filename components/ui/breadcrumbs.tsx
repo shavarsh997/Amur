@@ -8,13 +8,15 @@ export type BreadcrumbItem = {
 
 export function Breadcrumbs({
   items,
+  ariaLabel,
   className = "",
 }: {
   items: readonly BreadcrumbItem[];
+  ariaLabel: string;
   className?: string;
 }) {
   return (
-    <nav aria-label="Breadcrumb" className={className}>
+    <nav aria-label={ariaLabel} className={className}>
       <ol className="flex flex-wrap items-center gap-2 text-sm text-[var(--text-muted)]">
         {items.map((item, index) => {
           const current = index === items.length - 1;
