@@ -77,6 +77,7 @@ export interface Dictionary {
     eyebrow: string;
     title: string;
     description: string;
+    specializedTitle: string;
     viewAll: string;
     learnMore: string;
     pageTitle: string;
@@ -86,6 +87,9 @@ export interface Dictionary {
       included: string;
       stages: string;
       audience: string;
+      customerTypes: string;
+      workTypes: string;
+      estimateRequirements: string;
       priceFactors: string;
       faq: string;
       requestEstimate: string;
@@ -308,6 +312,7 @@ export interface Dictionary {
       doorsCount: string; airConditionersCount: string;
     };
     calculationTypes: Record<"construction" | "renovation" | "combined", LocalizedText>;
+    quickScenarios: Record<"apartmentRenovation" | "houseRenovation" | "houseConstruction" | "commercial", LocalizedText>;
     construction: {
       packages: Record<"shell" | "rough" | "turnkey", LocalizedText>;
       materials: Record<"aeratedConcrete" | "brick" | "monolith" | "frame", string>;
@@ -323,7 +328,7 @@ export interface Dictionary {
     design: Record<"basic" | "full" | "supervision", LocalizedText> & { enabled: string; enabledDescription: string };
     result: {
       title: string; range: string; enterArea: string; included: string;
-      empty: string; total: string; notice: string;
+      empty: string; pricingUnavailable: string; total: string; notice: string;
       constructionIncrease: string; distanceNote: string; renovationLine: string;
     };
     estimateSectionDescription: string;
@@ -339,7 +344,7 @@ export interface Dictionary {
     eyebrow: string;
     title: string;
     description: string;
-    items: [FAQ, FAQ, FAQ, FAQ, FAQ, FAQ, FAQ];
+    items: FAQ[];
   };
   cta: {
     title: string;

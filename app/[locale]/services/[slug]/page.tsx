@@ -7,6 +7,7 @@ import { FinalCta } from "@/components/sections/final-cta";
 import { ButtonLink } from "@/components/ui/button-link";
 import { Container } from "@/components/ui/container";
 import { PageHero } from "@/components/ui/page-hero";
+import { siteConfig } from "@/config/site.config";
 import { getActiveServices, getServiceBySlug } from "@/config/services.config";
 import { getDictionary, isLocale } from "@/lib/i18n";
 import { buildMetadata } from "@/lib/metadata";
@@ -39,15 +40,25 @@ export default async function ServiceDetailPage({ params }: Props) {
   const service = getServiceBySlug(locale, slug);
   if (!service) notFound();
   const copy = dictionary.services.detail;
+  const calculationType = service.slug === "house-construction" ? "construction" : "renovation";
+  const primaryCta = service.ctaKind === "contact"
+    ? service.content.primaryCta ?? copy.requestEstimate
+    : service.content.secondaryCta ?? copy.requestEstimate;
+  const serviceJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: service.content.title,
+    description: service.content.seoDescription,
+    serviceType: service.content.title,
+    areaServed: { "@type": "Country", name: "Armenia" },
+    provider: { "@type": "Organization", name: siteConfig.companyName },
+  };
 
   return (
     <>
+      <script dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd).replace(/</g, "\\u003c") }} type="application/ld+json" />
       <PageHero
-        actions={
-          <ButtonLink href={`/${locale}/contacts#estimate`}>
-            {copy.requestEstimate}
-          </ButtonLink>
-        }
+        actions={<ButtonLink href={`/${locale}/contacts#estimate`}>{primaryCta}</ButtonLink>}
         breadcrumbsLabel={dictionary.common.breadcrumbs}
         breadcrumbs={[
           { label: dictionary.common.home, href: `/${locale}` },
@@ -56,7 +67,7 @@ export default async function ServiceDetailPage({ params }: Props) {
         ]}
         description={service.content.heroDescription}
         eyebrow={dictionary.services.eyebrow}
-        title={service.content.title}
+        title={service.content.heroTitle ?? service.content.title}
       />
       <article>
         <Container className="py-12 sm:py-16 lg:py-20">
@@ -94,6 +105,13 @@ export default async function ServiceDetailPage({ params }: Props) {
                 </ul>
               </section>
             </div>
+            {service.content.customerTypes?.length || service.content.workTypes?.length || service.content.estimateRequirements?.length ? (
+              <div className="grid gap-5 md:grid-cols-3">
+                {service.content.customerTypes?.length ? <ContentList items={service.content.customerTypes} title={copy.customerTypes} /> : null}
+                {service.content.workTypes?.length ? <ContentList items={service.content.workTypes} title={copy.workTypes} /> : null}
+                {service.content.estimateRequirements?.length ? <ContentList items={service.content.estimateRequirements} title={copy.estimateRequirements} /> : null}
+              </div>
+            ) : null}
             {service.content.priceFactors.length || service.content.faq.length ? (
               <div className="grid gap-8 md:grid-cols-2">
                 {service.content.priceFactors.length ? (
@@ -115,16 +133,25 @@ export default async function ServiceDetailPage({ params }: Props) {
               </div>
             ) : null}
             <div className="rounded-[24px] bg-[var(--background-warm)] p-7 sm:p-10">
-              <h2 className="text-2xl font-semibold tracking-[-0.03em] text-[var(--text-primary)]">{copy.requestEstimate}</h2>
-              <ButtonLink className="mt-6" href={`/${locale}/contacts#estimate`}>
-                {copy.requestEstimate}
-              </ButtonLink>
+              <h2 className="text-2xl font-semibold tracking-[-0.03em] text-[var(--text-primary)]">{primaryCta}</h2>
+              <ButtonLink className="mt-6" href={`/${locale}/contacts#estimate`}>{primaryCta}</ButtonLink>
             </div>
           </div>
         </Container>
       </article>
-      <EstimateSection dictionary={dictionary} />
+      <EstimateSection calculateLabel={primaryCta} defaultCalculationType={calculationType} dictionary={dictionary} />
       <FinalCta dictionary={dictionary} locale={locale} />
     </>
+  );
+}
+
+function ContentList({ title, items }: { title: string; items: readonly string[] }) {
+  return (
+    <section className="rounded-2xl border border-[var(--border)] bg-[var(--background-soft)] p-5">
+      <h2 className="text-lg font-semibold text-[var(--text-primary)]">{title}</h2>
+      <ul className="mt-4 space-y-2 text-sm leading-6 text-[var(--text-secondary)]">
+        {items.map((item) => <li key={item}>{item}</li>)}
+      </ul>
+    </section>
   );
 }

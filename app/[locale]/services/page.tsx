@@ -83,7 +83,7 @@ export default async function ServicesPage({ params }: Props) {
                 </ul>
               </div>
               <ButtonLink className="mt-8" href={`/${locale}/services/${service.slug}`}>
-                {services.detail.requestEstimate}
+                {content.primaryCta ?? services.detail.requestEstimate}
               </ButtonLink>
             </div>
           </article>

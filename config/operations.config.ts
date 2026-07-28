@@ -16,7 +16,7 @@ export const operationsConfig = {
     "estimate",
     "schedule",
     "quality",
-    "warranty",
+    "scope",
     "geography",
   ],
 } as const;

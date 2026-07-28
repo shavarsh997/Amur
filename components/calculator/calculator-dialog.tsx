@@ -4,16 +4,17 @@ import { useEffect, useRef, useState } from "react";
 import { Calculator, X } from "lucide-react";
 
 import { CostCalculator } from "@/components/calculator/cost-calculator";
+import type { CalculationType } from "@/config/construction-calculator.config";
 import type { Dictionary, Locale } from "@/types";
 
 const calculatorOpenEvent = "open-project-calculator";
 
-export function CalculatorTrigger({ label, className = "" }: { label: string; className?: string }) {
+export function CalculatorTrigger({ label, className = "", defaultCalculationType = "renovation" }: { label: string; className?: string; defaultCalculationType?: CalculationType }) {
   return (
     <button
       aria-haspopup="dialog"
       className={`inline-flex min-h-12 items-center justify-center rounded-xl bg-[var(--button-primary)] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[var(--button-primary-hover)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--button-primary)] ${className}`}
-      onClick={() => window.dispatchEvent(new Event(calculatorOpenEvent))}
+      onClick={() => window.dispatchEvent(new CustomEvent<CalculationType>(calculatorOpenEvent, { detail: defaultCalculationType }))}
       type="button"
     >
       <Calculator aria-hidden="true" className="mr-2 size-4" />
@@ -25,10 +26,15 @@ export function CalculatorTrigger({ label, className = "" }: { label: string; cl
 /** Rendered once at the locale-layout level so it always sits above the header. */
 export function CalculatorDialog({ copy, locale }: { copy: Dictionary["constructionCalculator"]; locale: Locale }) {
   const [isOpen, setIsOpen] = useState(false);
+  const [defaultCalculationType, setDefaultCalculationType] = useState<CalculationType>("renovation");
   const dialogRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const openCalculator = () => setIsOpen(true);
+    const openCalculator = (event: Event) => {
+      const calculationType = (event as CustomEvent<CalculationType>).detail;
+      setDefaultCalculationType(calculationType ?? "renovation");
+      setIsOpen(true);
+    };
     window.addEventListener(calculatorOpenEvent, openCalculator);
 
     return () => window.removeEventListener(calculatorOpenEvent, openCalculator);
@@ -73,7 +79,7 @@ export function CalculatorDialog({ copy, locale }: { copy: Dictionary["construct
           </button>
         </div>
         <div className="overflow-y-auto p-4 sm:p-6">
-          <CostCalculator copy={copy} locale={locale} />
+          <CostCalculator copy={copy} defaultCalculationType={defaultCalculationType} key={defaultCalculationType} locale={locale} />
         </div>
       </div>
     </div>

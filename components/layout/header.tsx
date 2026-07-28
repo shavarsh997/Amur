@@ -34,8 +34,8 @@ export function Header({
     label: dictionary.nav.consultation,
   };
   return (
-    <header className="sticky top-0 z-50 w-full pt-3 px-5 text-[var(--text-primary)]">
-      <Container className="relative flex min-h-16 items-center justify-between gap-4 rounded-[22px] border border-[var(--border)] bg-white/75 shadow-[0_16px_36px_-28px_rgb(24_24_27/0.48)] backdrop-blur-md sm:min-h-[68px]">
+    <header className="sticky top-0 z-50 w-full border-b border-[var(--border)] bg-white/90 px-5 text-[var(--text-primary)] backdrop-blur-md sm:border-b-0 sm:bg-transparent sm:pt-3">
+      <Container className="relative flex min-h-15 items-center justify-between gap-4 !px-0 sm:min-h-[68px] sm:rounded-[22px] sm:border sm:border-[var(--border)] sm:bg-white/75 sm:!px-8 sm:shadow-[0_16px_36px_-28px_rgb(24_24_27/0.48)] lg:!px-10">
         <Link
           className="inline-flex shrink-0 items-center gap-2.5 rounded-sm text-sm font-bold tracking-[0.04em] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--button-primary)] sm:text-[15px]"
           href={prefix}

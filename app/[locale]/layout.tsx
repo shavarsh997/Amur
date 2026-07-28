@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
+import { MobileCtaBar } from "@/components/layout/mobile-cta-bar";
 import { CalculatorDialog } from "@/components/calculator/calculator-dialog";
 import { isPlaceholder, siteConfig } from "@/config/site.config";
 import { getDictionary, isLocale, locales } from "@/lib/i18n";
@@ -70,9 +71,13 @@ export default async function LocaleLayout({
         dictionary={dictionary}
         locale={locale}
       />
-      <main className="flex-1">{children}</main>
+      <main className="flex-1 pb-20 sm:pb-0">{children}</main>
       <Footer config={publicSiteConfig} dictionary={dictionary} locale={locale} />
       <CalculatorDialog copy={dictionary.constructionCalculator} locale={locale} />
+      <MobileCtaBar
+        calculateLabel={dictionary.hero.primaryAction}
+        phone={publicSiteConfig.contacts.phoneHref ? { href: publicSiteConfig.contacts.phoneHref, label: publicSiteConfig.contacts.phone } : undefined}
+      />
     </div>
   );
 }

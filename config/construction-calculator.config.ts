@@ -4,12 +4,19 @@
  */
 export const constructionCalculatorConfig = {
   currency: "AMD",
+  publicRates: false,
   estimateRange: { minMultiplier: 0.9, maxMultiplier: 1.15 },
   calculationTypes: {
-    construction: {},
     renovation: {},
+    construction: {},
     combined: {},
   },
+  quickScenarios: [
+    { id: "apartment-renovation", calculationType: "renovation", renovationObjectType: "apartment", labelKey: "apartmentRenovation" },
+    { id: "house-renovation", calculationType: "renovation", renovationObjectType: "privateHouse", labelKey: "houseRenovation" },
+    { id: "house-construction", calculationType: "construction", renovationObjectType: undefined, labelKey: "houseConstruction" },
+    { id: "commercial", calculationType: "renovation", renovationObjectType: "commercial", labelKey: "commercial" },
+  ],
   construction: {
     packages: {
       shell: { pricePerSquareMeter: 150_000 },

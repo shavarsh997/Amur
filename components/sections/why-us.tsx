@@ -32,19 +32,21 @@ export function WhyUs({ dictionary }: { dictionary: Dictionary }) {
           eyebrow={dictionary.whyUs.eyebrow}
           title={dictionary.whyUs.title}
         />
-        <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-7 grid gap-2 sm:mt-8 sm:grid-cols-2 sm:gap-3 lg:grid-cols-3">
           {operationsConfig.benefits.map((benefitKey, index) => {
             const item = dictionary.whyUs.items[index];
             if (!item) return null;
             const Icon = icons[index] ?? BadgeCheck;
 
             return (
-              <article className="rounded-2xl border border-white bg-white/70 p-5 sm:p-6" key={benefitKey}>
-                <span className="grid size-10 place-items-center rounded-xl bg-white text-[var(--text-primary)] shadow-sm">
+              <article className="flex gap-3 rounded-2xl border border-white bg-white/70 p-4 sm:block sm:p-6" key={benefitKey}>
+                <span className="grid size-9 shrink-0 place-items-center rounded-xl bg-white text-[var(--text-primary)] shadow-sm sm:size-10">
                   <Icon aria-hidden="true" className="size-5 stroke-[1.35]" />
                 </span>
-                <h3 className="mt-4 text-lg font-semibold tracking-[-0.02em] text-[var(--text-primary)]">{item.title}</h3>
-                <p className="mt-2 text-sm leading-6 text-[var(--text-secondary)]">{item.description}</p>
+                <div>
+                  <h3 className="text-[15px] font-semibold tracking-[-0.02em] text-[var(--text-primary)] sm:mt-4 sm:text-lg">{item.title}</h3>
+                  <p className="mt-1 text-xs leading-5 text-[var(--text-secondary)] sm:mt-2 sm:text-sm sm:leading-6">{item.description}</p>
+                </div>
               </article>
             );
           })}

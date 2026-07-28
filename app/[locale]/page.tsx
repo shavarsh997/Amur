@@ -5,6 +5,9 @@ import { EstimateSection } from "@/components/sections/estimate-section";
 import { FAQSection } from "@/components/sections/faq";
 import { FinalCta } from "@/components/sections/final-cta";
 import { Hero } from "@/components/sections/hero";
+import { RenovationIncluded } from "@/components/sections/renovation-included";
+import { ServiceArea } from "@/components/sections/service-area";
+import { SpecializedServices } from "@/components/sections/specialized-services";
 import { ServicesSection } from "@/components/sections/services-section";
 import { WhyUs } from "@/components/sections/why-us";
 import { WorkProcess } from "@/components/sections/work-process";
@@ -35,8 +38,11 @@ export default async function LocaleHome({ params }: Props) {
       <Hero dictionary={dictionary} locale={locale} />
       <EstimateSection dictionary={dictionary} />
       <ServicesSection dictionary={dictionary} locale={locale} />
-      <WhyUs dictionary={dictionary} />
+      <RenovationIncluded locale={locale} />
       <WorkProcess dictionary={dictionary} />
+      <WhyUs dictionary={dictionary} />
+      <SpecializedServices dictionary={dictionary} locale={locale} />
+      <ServiceArea locale={locale} />
       <FAQSection dictionary={dictionary} />
       <FinalCta dictionary={dictionary} locale={locale} />
     </>

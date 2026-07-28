@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { Check, Home, Layers3, Paintbrush, Palette, SlidersHorizontal } from "lucide-react";
+import { Building2, Check, Home, Paintbrush, Palette, SlidersHorizontal } from "lucide-react";
 
 import {
   constructionCalculatorConfig as config,
@@ -20,10 +20,10 @@ import { formatPrice } from "@/lib/calculator/format-price";
 import type { Dictionary, Locale } from "@/types";
 
 const initialValues: ConstructionCalculatorValues & { renovationObjectType: RenovationObjectType } = {
-  calculationType: "construction", area: "", floors: "1", rooms: "3", bathrooms: "1",
+  calculationType: "renovation", area: "", floors: "1", rooms: "3", bathrooms: "1",
   constructionPackage: "rough", material: "aeratedConcrete", houseShape: "rectangle",
   basement: false, basementArea: "", garage: false, garageArea: "", terrace: false, terraceArea: "",
-  highCeilings: false, difficultSite: false, distanceKm: "", renovationObjectType: "privateHouse",
+  highCeilings: false, difficultSite: false, distanceKm: "", renovationObjectType: "apartment",
   renovationCondition: "newWithoutFinish", renovationLevel: "standard", renovationExtras: [],
   doorsCount: "0", airConditionersCount: "0", designEnabled: false, designPackage: "full",
 };
@@ -44,23 +44,26 @@ function StepTitle({ number, title, description }: { number: string; title: stri
   return <div><p className="text-xs font-bold uppercase tracking-[0.16em] text-[var(--brand-accent)]">{number}</p><h2 className="mt-2 text-xl font-semibold tracking-[-0.04em] text-[var(--text-primary)] sm:text-2xl">{title}</h2><p className="mt-2 max-w-2xl text-sm leading-6 text-[var(--text-secondary)]">{description}</p></div>;
 }
 
-export function CostCalculator({ copy, locale, className = "" }: { copy: Dictionary["constructionCalculator"]; locale: Locale; className?: string }) {
-  const [values, setValues] = useState(initialValues);
+export function CostCalculator({ copy, locale, defaultCalculationType = "renovation", className = "" }: { copy: Dictionary["constructionCalculator"]; locale: Locale; defaultCalculationType?: CalculationType; className?: string }) {
+  const [values, setValues] = useState(() => ({ ...initialValues, calculationType: defaultCalculationType }));
   const estimate = useMemo(() => calculateConstructionEstimate(values, copy), [values, copy]);
   const hasConstruction = includesConstruction(values.calculationType);
   const hasRenovation = includesRenovation(values.calculationType);
+  const canShowEstimate = config.publicRates && Boolean(values.area) && Boolean(estimate.total);
   const update = (patch: Partial<typeof values>) => setValues((current) => ({ ...current, ...patch }));
   const toggleRenovationExtra = (extra: RenovationExtra) => update({ renovationExtras: values.renovationExtras.includes(extra) ? values.renovationExtras.filter((item) => item !== extra) : [...values.renovationExtras, extra] });
   const money = (value: number) => formatPrice(value, locale, config.currency);
+  const selectedQuickScenario = config.quickScenarios.find((scenario) => scenario.calculationType === values.calculationType && (scenario.renovationObjectType === undefined || scenario.renovationObjectType === values.renovationObjectType))?.id;
 
   return <div className={`grid items-start gap-5 lg:grid-cols-[minmax(0,1fr)_20rem] ${className}`}>
     <div className="space-y-5">
       <section className="rounded-[28px] border border-[var(--border)] bg-white p-5 shadow-[var(--shadow-card)] sm:p-7">
         <StepTitle number="01" {...copy.steps.scenario} />
-        <div className="mt-6 grid gap-3 md:grid-cols-3">{(Object.keys(config.calculationTypes) as CalculationType[]).map((type) => {
-          const Icon = type === "construction" ? Home : type === "renovation" ? Paintbrush : Layers3;
-          const option = copy.calculationTypes[type];
-          return <button aria-pressed={values.calculationType === type} className={`${selectionClass(values.calculationType === type)} min-h-36`} key={type} onClick={() => update({ calculationType: type })} type="button"><Icon aria-hidden="true" className="size-6 stroke-[1.45] text-[var(--brand-accent)]" /><span className="mt-5 block font-semibold text-[var(--text-primary)]">{option.title}</span><span className="mt-1.5 block text-xs leading-5 text-[var(--text-secondary)]">{option.description}</span></button>;
+        <div className="mt-6 grid gap-3 sm:grid-cols-2">{config.quickScenarios.map((scenario) => {
+          const Icon = scenario.id === "house-construction" ? Home : scenario.id === "commercial" ? Building2 : Paintbrush;
+          const option = copy.quickScenarios[scenario.labelKey];
+          const selected = selectedQuickScenario === scenario.id;
+          return <button aria-pressed={selected} className={`${selectionClass(selected)} min-h-28`} key={scenario.id} onClick={() => update({ calculationType: scenario.calculationType, ...(scenario.renovationObjectType ? { renovationObjectType: scenario.renovationObjectType } : {}) })} type="button"><Icon aria-hidden="true" className="size-6 stroke-[1.45] text-[var(--brand-accent)]" /><span className="mt-4 block font-semibold text-[var(--text-primary)]">{option.title}</span><span className="mt-1 block text-xs leading-5 text-[var(--text-secondary)]">{option.description}</span></button>;
         })}</div>
       </section>
 
@@ -76,7 +79,7 @@ export function CostCalculator({ copy, locale, className = "" }: { copy: Diction
       {hasRenovation ? <section className="rounded-[28px] border border-[var(--border)] bg-white p-5 shadow-[var(--shadow-card)] sm:p-7"><StepTitle number={hasConstruction ? "05" : "03"} {...copy.steps.renovationExtras} /><div className="mt-6 grid gap-3 sm:grid-cols-2">{(Object.keys(config.renovation.extras) as RenovationExtra[]).map((extra) => { const selected = values.renovationExtras.includes(extra); const needsCount = extra === "doors" || extra === "airConditioners"; return <div className="space-y-2" key={extra}><SwitchRow checked={selected} label={copy.renovation.extras[extra]} onChange={() => toggleRenovationExtra(extra)} />{selected && needsCount ? <NumberField label={extra === "doors" ? copy.fields.doorsCount : copy.fields.airConditionersCount} onChange={(value) => update(extra === "doors" ? { doorsCount: value } : { airConditionersCount: value })} value={extra === "doors" ? values.doorsCount : values.airConditionersCount} /> : null}</div>; })}</div></section> : null}
       <section className="rounded-[28px] border border-[var(--border)] bg-white p-5 shadow-[var(--shadow-card)] sm:p-7"><StepTitle number={hasConstruction && hasRenovation ? "06" : hasConstruction ? "05" : "04"} {...copy.steps.design} /><div className="mt-6"><SwitchRow checked={values.designEnabled} description={copy.design.enabledDescription} label={copy.design.enabled} onChange={(designEnabled) => update({ designEnabled })} /></div>{values.designEnabled ? <div className="mt-4 grid gap-3 md:grid-cols-3">{(Object.keys(config.design) as DesignPackage[]).map((designPackage) => { const option = copy.design[designPackage]; return <button aria-pressed={values.designPackage === designPackage} className={selectionClass(values.designPackage === designPackage)} key={designPackage} onClick={() => update({ designPackage })} type="button"><Palette aria-hidden="true" className="size-5 stroke-[1.4] text-[var(--brand-accent)]" /><span className="mt-4 block text-sm font-semibold text-[var(--text-primary)]">{option.title}</span><span className="mt-1 block text-xs leading-5 text-[var(--text-secondary)]">{option.description}</span></button>; })}</div> : null}</section>
     </div>
-    <aside className="rounded-[28px] border border-[var(--border)] bg-[var(--text-primary)] p-5 text-white shadow-[var(--shadow-card)] lg:sticky lg:top-6 sm:p-6"><div className="flex items-center gap-2 text-[var(--warm-accent)]"><SlidersHorizontal aria-hidden="true" className="size-4" /><p className="text-xs font-bold uppercase tracking-[0.16em]">{copy.result.title}</p></div><p className="mt-4 text-sm leading-6 text-white/65">{copy.result.range}</p><p className="mt-1 text-2xl font-semibold tracking-[-0.05em] sm:text-3xl">{values.area && estimate.total ? <>{money(estimate.min)}<br />— {money(estimate.max)}</> : copy.result.enterArea}</p><div className="mt-6 border-t border-white/15 pt-5">{estimate.lines.length ? <ul className="space-y-3">{estimate.lines.map((line, index) => <li className="flex justify-between gap-4 text-xs leading-5" key={`${line.label}-${index}`}><span className="text-white/65">{line.label}{line.note ? <span className="block text-white/40">{line.note}</span> : null}</span><span className="shrink-0 text-right font-semibold">{line.amount ? money(line.amount) : copy.result.included}</span></li>)}</ul> : <p className="text-sm leading-6 text-white/65">{copy.result.empty}</p>}</div>{estimate.total ? <div className="mt-5 border-t border-white/15 pt-4"><span className="text-xs text-white/55">{copy.result.total}</span><span className="mt-1 block text-lg font-semibold">{money(estimate.total)}</span></div> : null}<p className="mt-6 text-xs leading-5 text-white/50">{copy.result.notice}</p></aside>
+    <aside className="rounded-[28px] border border-[var(--border)] bg-[var(--text-primary)] p-5 text-white shadow-[var(--shadow-card)] lg:sticky lg:top-6 sm:p-6"><div className="flex items-center gap-2 text-[var(--warm-accent)]"><SlidersHorizontal aria-hidden="true" className="size-4" /><p className="text-xs font-bold uppercase tracking-[0.16em]">{copy.result.title}</p></div><p className="mt-4 text-sm leading-6 text-white/65">{copy.result.range}</p>{canShowEstimate ? <><p className="mt-1 text-2xl font-semibold tracking-[-0.05em] sm:text-3xl">{money(estimate.min)}<br />— {money(estimate.max)}</p><div className="mt-6 border-t border-white/15 pt-5">{estimate.lines.length ? <ul className="space-y-3">{estimate.lines.map((line, index) => <li className="flex justify-between gap-4 text-xs leading-5" key={`${line.label}-${index}`}><span className="text-white/65">{line.label}{line.note ? <span className="block text-white/40">{line.note}</span> : null}</span><span className="shrink-0 text-right font-semibold">{line.amount ? money(line.amount) : copy.result.included}</span></li>)}</ul> : <p className="text-sm leading-6 text-white/65">{copy.result.empty}</p>}</div><div className="mt-5 border-t border-white/15 pt-4"><span className="text-xs text-white/55">{copy.result.total}</span><span className="mt-1 block text-lg font-semibold">{money(estimate.total)}</span></div></> : <p className="mt-4 text-sm leading-6 text-white/75">{values.area ? copy.result.pricingUnavailable : copy.result.empty}</p>}<p className="mt-6 text-xs leading-5 text-white/50">{copy.result.notice}</p></aside>
   </div>;
 }
 
