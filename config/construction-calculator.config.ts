@@ -15,16 +15,10 @@ export const constructionCalculatorConfig = {
   estimateRange: { minMultiplier: 0.9, maxMultiplier: 1.15 },
   quickScenarios: [
     {
-      id: "apartment-renovation",
+      id: "apartment-or-private-house-renovation",
       calculationType: "renovation",
       renovationObjectType: "apartment",
-      labelKey: "apartmentRenovation",
-    },
-    {
-      id: "house-renovation",
-      calculationType: "renovation",
-      renovationObjectType: "privateHouse",
-      labelKey: "houseRenovation",
+      labelKey: "apartmentOrPrivateHouseRenovation",
     },
     {
       id: "house-construction",
@@ -89,11 +83,7 @@ export const constructionCalculatorConfig = {
       electrical: { pricePerSquareMeter: 15_000 },
       plumbing: { pricePerBathroom: 250_000 },
       heatedFloor: { pricePerSquareMeter: 20_000 },
-      soundproofing: { pricePerSquareMeter: 18_000 },
       doors: { pricePerItem: 120_000 },
-      airConditioners: { pricePerItem: 180_000 },
-      furnishing: { pricePerSquareMeter: 70_000 },
-      cleaning: { fixedPrice: 150_000 },
     },
   },
   design: {

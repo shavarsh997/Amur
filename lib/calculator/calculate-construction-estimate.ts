@@ -32,7 +32,6 @@ export type ConstructionCalculatorValues = {
   renovationExtras: RenovationExtra[];
   heatedFloorArea: string;
   doorsCount: string;
-  airConditionersCount: string;
   designPackage: DesignPackage;
 };
 
@@ -168,12 +167,8 @@ export function calculateConstructionEstimate(
           : "pricePerBathroom" in extra
             ? bathrooms * extra.pricePerBathroom
             : "pricePerItem" in extra
-              ? numberValue(
-                  extraKey === "doors"
-                    ? values.doorsCount
-                    : values.airConditionersCount
-                ) * extra.pricePerItem
-              : extra.fixedPrice;
+              ? numberValue(values.doorsCount) * extra.pricePerItem
+              : 0;
       renovationTotal += amount;
       lines.push({ label: copy.renovation.extras[extraKey], amount });
     }

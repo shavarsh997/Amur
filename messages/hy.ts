@@ -483,16 +483,11 @@ const dictionary = {
       distanceHint: "Եթե օբյեկտը քաղաքից դուրս է։",
       heatedFloorArea: "Տաք հատակի մակերեսը, մ²",
       doorsCount: "Դռների քանակ",
-      airConditionersCount: "Օդորակիչների քանակ",
     },
     quickScenarios: {
-      apartmentRenovation: {
-        title: "Բնակարանի վերանորոգում",
-        description: "Գնահատել բնակարանի վերանորոգումը",
-      },
-      houseRenovation: {
-        title: "Առանձնատան վերանորոգում",
-        description: "Գնահատել տան վերանորոգումը",
+      apartmentOrPrivateHouseRenovation: {
+        title: "Բնակարանի կամ առանձնատան վերանորոգում",
+        description: "Գնահատել բնակարանի կամ առանձնատան վերանորոգումը",
       },
       houseConstruction: {
         title: "Տան շինարարություն",
@@ -562,11 +557,7 @@ const dictionary = {
         electrical: "Էլեկտրականության փոխարինում",
         plumbing: "Սանտեխնիկայի փոխարինում",
         heatedFloor: "Տաք հատակ",
-        soundproofing: "Ձայնամեկուսացում",
         doors: "Ներքին դռների տեղադրում",
-        airConditioners: "Օդորակիչների տեղադրում",
-        furnishing: "Հիմնական կահավորում",
-        cleaning: "Մաքրում վերանորոգումից հետո",
       },
     },
     design: {
@@ -613,7 +604,6 @@ const dictionary = {
       heatedFloorAreaRequired:
         "Նշեք տաք հատակի մակերեսը՝ օբյեկտի մակերեսի սահմաններում։",
       doorsCountRequired: "Նշեք դռների քանակը։",
-      airConditionersCountRequired: "Նշեք օդորակիչների քանակը։",
     },
     estimateSectionDescription:
       "Ընտրեք սցենարն ու նշեք հիմնական տվյալները․ դրանք կուղարկենք մասնագետին՝ ճշգրիտ հաշվարկի համար։",

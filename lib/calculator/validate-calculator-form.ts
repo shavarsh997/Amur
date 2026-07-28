@@ -78,12 +78,6 @@ export function validateCalculatorForm(
     ) {
       errors.doorsCount = messages.doorsCountRequired;
     }
-    if (
-      values.renovationExtras.includes("airConditioners") &&
-      !parsePositiveInteger(values.airConditionersCount)
-    ) {
-      errors.airConditionersCount = messages.airConditionersCountRequired;
-    }
     const heatedFloorArea = parsePositiveNumber(values.heatedFloorArea);
     if (
       values.renovationExtras.includes("heatedFloor") &&

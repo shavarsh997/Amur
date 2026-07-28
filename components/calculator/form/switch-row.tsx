@@ -1,5 +1,6 @@
 import { Controller } from "react-hook-form";
 
+import { selectionClass } from "@/components/calculator/constants";
 import {
   splitField,
   type CalculatorControl,
@@ -31,9 +32,9 @@ export function SwitchRowInput({
 }: SwitchRowInputProps) {
   return (
     <label
-      className={`flex cursor-pointer items-center justify-between gap-4 rounded-2xl border p-4 ${value ? "border-[var(--text-primary)] bg-[var(--background-warm)]" : "border-[var(--border)] bg-white"}`}
+      className={`flex cursor-pointer select-none items-center justify-between gap-4 ${selectionClass(value)}`}
     >
-      <span>
+      <span className="min-w-0">
         <span className="block text-sm font-semibold text-[var(--text-primary)]">
           {label}
         </span>
@@ -43,19 +44,29 @@ export function SwitchRowInput({
           </span>
         ) : null}
       </span>
-      <input
-        checked={value}
-        className="peer sr-only"
-        name={name}
-        onBlur={onBlur}
-        onChange={(event) => onChange(event.target.checked)}
-        ref={inputRef}
-        type="checkbox"
-      />
-      <span
-        aria-hidden="true"
-        className="relative h-6 w-11 shrink-0 rounded-full bg-[var(--border-strong)] transition peer-checked:bg-[var(--text-primary)] after:absolute after:left-1 after:top-1 after:size-4 after:rounded-full after:bg-white after:transition peer-checked:after:translate-x-5"
-      />
+      <span className="relative inline-flex shrink-0">
+        <input
+          checked={value}
+          className="peer sr-only"
+          name={name}
+          onBlur={onBlur}
+          onChange={(event) => onChange(event.target.checked)}
+          ref={inputRef}
+          type="checkbox"
+        />
+        <span
+          aria-hidden="true"
+          className={`relative inline-flex h-6 w-11 rounded-full transition-colors duration-200 ease-out peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-[var(--button-primary)] ${
+            value ? "bg-[var(--text-primary)]" : "bg-[var(--border-strong)]"
+          }`}
+        >
+          <span
+            className={`absolute left-0.5 top-0.5 size-5 rounded-full bg-white shadow-[0_1px_3px_rgb(24_33_42/0.2)] transition-transform duration-200 ease-out ${
+              value ? "translate-x-[22px]" : "translate-x-0"
+            }`}
+          />
+        </span>
+      </span>
     </label>
   );
 }

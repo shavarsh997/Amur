@@ -322,11 +322,9 @@ export interface Dictionary {
       distanceHint: string;
       heatedFloorArea: string;
       doorsCount: string;
-      airConditionersCount: string;
     };
     quickScenarios: Record<
-      | "apartmentRenovation"
-      | "houseRenovation"
+      | "apartmentOrPrivateHouseRenovation"
       | "houseConstruction"
       | "interiorDesign"
       | "commercial",
@@ -359,15 +357,7 @@ export interface Dictionary {
       >;
       levels: Record<"cosmetic" | "standard" | "capital" | "premium", string>;
       extras: Record<
-        | "demolition"
-        | "electrical"
-        | "plumbing"
-        | "heatedFloor"
-        | "soundproofing"
-        | "doors"
-        | "airConditioners"
-        | "furnishing"
-        | "cleaning",
+        "demolition" | "electrical" | "plumbing" | "heatedFloor" | "doors",
         string
       >;
     };
@@ -398,7 +388,6 @@ export interface Dictionary {
       bathroomsRequired: string;
       heatedFloorAreaRequired: string;
       doorsCountRequired: string;
-      airConditionersCountRequired: string;
     };
     estimateSectionDescription: string;
   };

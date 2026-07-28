@@ -13,8 +13,7 @@ export type CalculatorFieldId =
   | "distanceKm"
   | "bathrooms"
   | "heatedFloorArea"
-  | "doorsCount"
-  | "airConditionersCount";
+  | "doorsCount";
 
 export type CalculatorValidationErrors = Partial<
   Record<CalculatorFieldId, string>
@@ -29,7 +28,6 @@ export const CALCULATOR_FIELD_ORDER: CalculatorFieldId[] = [
   "bathrooms",
   "heatedFloorArea",
   "doorsCount",
-  "airConditionersCount",
 ];
 
 export function calculatorFieldDomId(field: CalculatorFieldId) {

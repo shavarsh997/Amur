@@ -22,7 +22,6 @@ export const initialValues: CalculatorFormValues = {
   renovationExtras: [],
   heatedFloorArea: "",
   doorsCount: "0",
-  airConditionersCount: "0",
   designPackage: "full",
 };
 

@@ -23,7 +23,7 @@ function RenovationExtraItem({
   onBlur: () => void;
   onToggle: () => void;
 }) {
-  const needsCount = extra === "doors" || extra === "airConditioners";
+  const needsCount = extra === "doors";
   const needsBathrooms = extra === "plumbing";
   const needsArea = extra === "heatedFloor";
 
@@ -40,16 +40,10 @@ function RenovationExtraItem({
       {selected && needsCount ? (
         <NumberField
           control={control}
-          fieldId={calculatorFieldDomId(
-            extra === "doors" ? "doorsCount" : "airConditionersCount"
-          )}
-          label={
-            extra === "doors"
-              ? copy.fields.doorsCount
-              : copy.fields.airConditionersCount
-          }
+          fieldId={calculatorFieldDomId("doorsCount")}
+          label={copy.fields.doorsCount}
           min={1}
-          name={extra === "doors" ? "doorsCount" : "airConditionersCount"}
+          name="doorsCount"
         />
       ) : null}
       {selected && needsBathrooms ? (

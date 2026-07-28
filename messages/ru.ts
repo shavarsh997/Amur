@@ -471,16 +471,11 @@ const dictionary = {
       distanceHint: "Если объект находится за пределами города.",
       heatedFloorArea: "Площадь тёплого пола, м²",
       doorsCount: "Количество дверей",
-      airConditionersCount: "Количество кондиционеров",
     },
     quickScenarios: {
-      apartmentRenovation: {
+      apartmentOrPrivateHouseRenovation: {
         title: "Ремонт квартиры",
         description: "Оценить ремонт квартиры",
-      },
-      houseRenovation: {
-        title: "Ремонт частного дома",
-        description: "Оценить ремонт дома",
       },
       houseConstruction: {
         title: "Строительство дома",
@@ -548,11 +543,7 @@ const dictionary = {
         electrical: "Замена электрики",
         plumbing: "Замена сантехники",
         heatedFloor: "Тёплый пол",
-        soundproofing: "Шумоизоляция",
         doors: "Установка межкомнатных дверей",
-        airConditioners: "Установка кондиционеров",
-        furnishing: "Базовая меблировка",
-        cleaning: "Уборка после ремонта",
       },
     },
     design: {
@@ -600,7 +591,6 @@ const dictionary = {
       heatedFloorAreaRequired:
         "Укажите площадь тёплого пола в пределах площади объекта.",
       doorsCountRequired: "Укажите количество дверей.",
-      airConditionersCountRequired: "Укажите количество кондиционеров.",
     },
     estimateSectionDescription:
       "Выберите сценарий и укажите основные параметры — передадим вводные специалисту для точного расчёта.",

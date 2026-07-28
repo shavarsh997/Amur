@@ -478,16 +478,11 @@ const dictionary = {
       distanceHint: "If the property is outside the city.",
       heatedFloorArea: "Underfloor-heating area, m²",
       doorsCount: "Number of doors",
-      airConditionersCount: "Number of air conditioners",
     },
     quickScenarios: {
-      apartmentRenovation: {
+      apartmentOrPrivateHouseRenovation: {
         title: "Apartment renovation",
         description: "Assess an apartment renovation",
-      },
-      houseRenovation: {
-        title: "Private house renovation",
-        description: "Assess a house renovation",
       },
       houseConstruction: {
         title: "House construction",
@@ -557,11 +552,7 @@ const dictionary = {
         electrical: "Electrical replacement",
         plumbing: "Plumbing replacement",
         heatedFloor: "Underfloor heating",
-        soundproofing: "Soundproofing",
         doors: "Internal door installation",
-        airConditioners: "Air-conditioner installation",
-        furnishing: "Basic furnishing",
-        cleaning: "Post-renovation cleaning",
       },
     },
     design: {
@@ -609,7 +600,6 @@ const dictionary = {
       heatedFloorAreaRequired:
         "Enter an underfloor-heating area no larger than the property area.",
       doorsCountRequired: "Enter the number of doors.",
-      airConditionersCountRequired: "Enter the number of air conditioners.",
     },
     estimateSectionDescription:
       "Choose a scenario and enter the key details — we will send them to a specialist for an accurate estimate.",
