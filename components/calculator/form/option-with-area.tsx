@@ -1,42 +1,65 @@
-import { NumberField } from "@/components/calculator/form/number-field";
-import { SwitchRow } from "@/components/calculator/form/switch-row";
+import { Controller } from "react-hook-form";
+
+import {
+  splitField,
+  type CalculatorControl,
+} from "@/components/calculator/form/field-types";
+import { NumberFieldInput } from "@/components/calculator/form/number-field";
+import { SwitchRowInput } from "@/components/calculator/form/switch-row";
 import {
   calculatorFieldDomId,
   type CalculatorFieldId,
+  type CalculatorFormValues,
 } from "@/components/calculator/types";
 
+type OptionWithAreaNames = {
+  toggleName: keyof Pick<
+    CalculatorFormValues,
+    "basement" | "garage" | "terrace"
+  >;
+  areaName: keyof Pick<
+    CalculatorFormValues,
+    "basementArea" | "garageArea" | "terraceArea"
+  >;
+};
+
 export function OptionWithArea({
-  checked,
+  control,
+  toggleName,
+  areaName,
+  areaField,
   fieldLabel,
   label,
-  onCheckedChange,
-  onValueChange,
-  value,
-  areaField,
-  areaError,
-}: {
-  checked: boolean;
+}: OptionWithAreaNames & {
+  control: CalculatorControl;
+  areaField: CalculatorFieldId;
   fieldLabel: string;
   label: string;
-  value: string;
-  onCheckedChange: (checked: boolean) => void;
-  onValueChange: (value: string) => void;
-  areaField: CalculatorFieldId;
-  areaError?: string;
 }) {
   return (
-    <div className="space-y-2">
-      <SwitchRow checked={checked} label={label} onChange={onCheckedChange} />
-      {checked ? (
-        <NumberField
-          error={areaError}
-          fieldId={calculatorFieldDomId(areaField)}
-          label={fieldLabel}
-          min={1}
-          onChange={onValueChange}
-          value={value}
+    <Controller
+      control={control}
+      name={toggleName}
+      render={({ field: toggleField }) => (
+        <Controller
+          control={control}
+          name={areaName}
+          render={({ field: areaFieldProps, fieldState }) => (
+            <div className="space-y-2">
+              <SwitchRowInput {...splitField<boolean>(toggleField)} label={label} />
+              {toggleField.value ? (
+                <NumberFieldInput
+                  {...splitField<string>(areaFieldProps)}
+                  error={fieldState.error?.message}
+                  fieldId={calculatorFieldDomId(areaField)}
+                  label={fieldLabel}
+                  min={1}
+                />
+              ) : null}
+            </div>
+          )}
         />
-      ) : null}
-    </div>
+      )}
+    />
   );
 }

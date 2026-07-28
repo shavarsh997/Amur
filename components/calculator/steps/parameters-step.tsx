@@ -1,112 +1,83 @@
+import { useFormContext } from "react-hook-form";
+
 import { ChoiceCards } from "@/components/calculator/form/choice-cards";
 import { ChoiceGroup } from "@/components/calculator/form/choice-group";
 import { NumberField } from "@/components/calculator/form/number-field";
 import { OptionWithArea } from "@/components/calculator/form/option-with-area";
 import { StepTitle } from "@/components/calculator/form/step-title";
-import type {
-  CalculatorFormValues,
-  CalculatorUpdate,
-  CalculatorValidationErrors,
-} from "@/components/calculator/types";
+import type { CalculatorFormValues } from "@/components/calculator/types";
 import { calculatorFieldDomId } from "@/components/calculator/types";
-import type {
-  ConstructionMaterial,
-  ConstructionPackage,
-  DesignPackage,
-  HouseShape,
-  RenovationCondition,
-  RenovationLevel,
-} from "@/config/construction-calculator.config";
 import type { Dictionary } from "@/types";
 
 export function ParametersStep({
   copy,
-  values,
-  update,
-  errors = {},
 }: {
   copy: Dictionary["constructionCalculator"];
-  values: CalculatorFormValues;
-  update: CalculatorUpdate;
-  errors?: CalculatorValidationErrors;
 }) {
-  const isConstruction = values.calculationType === "construction";
-  const isRenovation = values.calculationType === "renovation";
-  const isDesign = values.calculationType === "design";
+  const { control, watch } = useFormContext<CalculatorFormValues>();
+  const calculationType = watch("calculationType");
+  const isConstruction = calculationType === "construction";
+  const isRenovation = calculationType === "renovation";
+  const isDesign = calculationType === "design";
 
   return (
     <section className="rounded-[28px] border border-[var(--border)] bg-white p-5 shadow-[var(--shadow-card)] sm:p-7">
       <StepTitle number="02" {...copy.steps.parameters} />
       <div className="mt-6 max-w-xs">
         <NumberField
-          error={errors.area}
+          control={control}
           fieldId={calculatorFieldDomId("area")}
           label={copy.fields.area}
           min={1}
-          onChange={(area) => update({ area })}
-          value={values.area}
+          name="area"
         />
       </div>
 
       {isConstruction ? (
         <div className="mt-8 space-y-7 border-t border-[var(--border)] pt-7">
           <ChoiceCards
+            control={control}
+            name="constructionPackage"
             options={copy.construction.packages}
-            selected={values.constructionPackage}
-            onChange={(constructionPackage) =>
-              update({
-                constructionPackage: constructionPackage as ConstructionPackage,
-              })
-            }
           />
           <div className="grid gap-5 lg:grid-cols-2">
             <ChoiceGroup
+              control={control}
               label={copy.fields.houseShape}
+              name="houseShape"
               options={copy.construction.houseShapes}
-              selected={values.houseShape}
-              onChange={(houseShape) =>
-                update({ houseShape: houseShape as HouseShape })
-              }
             />
             <ChoiceGroup
+              control={control}
               label={copy.fields.constructionType}
+              name="material"
               options={copy.construction.materials}
-              selected={values.material}
-              onChange={(material) =>
-                update({ material: material as ConstructionMaterial })
-              }
             />
           </div>
           <div className="grid gap-3 sm:grid-cols-2">
             <OptionWithArea
-              areaError={errors.basementArea}
               areaField="basementArea"
-              checked={values.basement}
+              areaName="basementArea"
+              control={control}
               fieldLabel={copy.fields.basementArea}
               label={copy.construction.extras.basement}
-              value={values.basementArea}
-              onCheckedChange={(basement) => update({ basement })}
-              onValueChange={(basementArea) => update({ basementArea })}
+              toggleName="basement"
             />
             <OptionWithArea
-              areaError={errors.garageArea}
               areaField="garageArea"
-              checked={values.garage}
+              areaName="garageArea"
+              control={control}
               fieldLabel={copy.fields.garageArea}
               label={copy.construction.extras.garage}
-              value={values.garageArea}
-              onCheckedChange={(garage) => update({ garage })}
-              onValueChange={(garageArea) => update({ garageArea })}
+              toggleName="garage"
             />
             <OptionWithArea
-              areaError={errors.terraceArea}
               areaField="terraceArea"
-              checked={values.terrace}
+              areaName="terraceArea"
+              control={control}
               fieldLabel={copy.fields.terraceArea}
               label={copy.construction.extras.terrace}
-              value={values.terraceArea}
-              onCheckedChange={(terrace) => update({ terrace })}
-              onValueChange={(terraceArea) => update({ terraceArea })}
+              toggleName="terrace"
             />
           </div>
         </div>
@@ -115,24 +86,16 @@ export function ParametersStep({
       {isRenovation ? (
         <div className="mt-8 grid gap-5 border-t border-[var(--border)] pt-7 lg:grid-cols-2">
           <ChoiceGroup
+            control={control}
             label={copy.fields.currentCondition}
+            name="renovationCondition"
             options={copy.renovation.conditions}
-            selected={values.renovationCondition}
-            onChange={(renovationCondition) =>
-              update({
-                renovationCondition: renovationCondition as RenovationCondition,
-              })
-            }
           />
           <ChoiceGroup
+            control={control}
             label={copy.fields.renovationLevel}
+            name="renovationLevel"
             options={copy.renovation.levels}
-            selected={values.renovationLevel}
-            onChange={(renovationLevel) =>
-              update({
-                renovationLevel: renovationLevel as RenovationLevel,
-              })
-            }
           />
         </div>
       ) : null}
@@ -140,15 +103,13 @@ export function ParametersStep({
       {isDesign ? (
         <div className="mt-8 border-t border-[var(--border)] pt-7">
           <ChoiceCards
+            control={control}
+            name="designPackage"
             options={{
               basic: copy.design.basic,
               full: copy.design.full,
               supervision: copy.design.supervision,
             }}
-            selected={values.designPackage}
-            onChange={(designPackage) =>
-              update({ designPackage: designPackage as DesignPackage })
-            }
           />
         </div>
       ) : null}

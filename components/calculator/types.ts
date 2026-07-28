@@ -5,8 +5,6 @@ export type CalculatorFormValues = ConstructionCalculatorValues & {
   renovationObjectType: RenovationObjectType;
 };
 
-export type CalculatorUpdate = (patch: Partial<CalculatorFormValues>) => void;
-
 export type CalculatorFieldId =
   | "area"
   | "basementArea"

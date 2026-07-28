@@ -158,7 +158,7 @@ export function calculateConstructionEstimate(
       amount: renovationTotal,
       note: copy.renovation.conditions[values.renovationCondition],
     });
-    for (const extraKey of new Set(values.renovationExtras)) {
+    for (const extraKey of new Set(values.renovationExtras ?? [])) {
       const extra = config.renovation.extras[extraKey];
       const amount =
         "pricePerSquareMeter" in extra

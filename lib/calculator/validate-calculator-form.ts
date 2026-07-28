@@ -101,28 +101,3 @@ export function getFirstValidationError(
 ): CalculatorFieldId | null {
   return CALCULATOR_FIELD_ORDER.find((field) => errors[field]) ?? null;
 }
-
-export function clearErrorsForPatch(
-  errors: CalculatorValidationErrors,
-  patch: Partial<CalculatorFormValues>
-): CalculatorValidationErrors {
-  const next = { ...errors };
-
-  for (const field of Object.keys(patch) as CalculatorFieldId[]) {
-    delete next[field];
-  }
-
-  if ("basement" in patch && !patch.basement) delete next.basementArea;
-  if ("garage" in patch && !patch.garage) delete next.garageArea;
-  if ("terrace" in patch && !patch.terrace) delete next.terraceArea;
-
-  if ("renovationExtras" in patch) {
-    if (!patch.renovationExtras?.includes("plumbing")) delete next.bathrooms;
-    if (!patch.renovationExtras?.includes("doors")) delete next.doorsCount;
-    if (!patch.renovationExtras?.includes("airConditioners")) {
-      delete next.airConditionersCount;
-    }
-  }
-
-  return next;
-}

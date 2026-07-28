@@ -11,51 +11,31 @@ import type { Dictionary, Locale } from "@/types";
 export function ConstructionEstimateDialog({
   copy,
   estimate,
-  isOpen,
   locale,
   onClose,
 }: {
   copy: Dictionary["constructionCalculator"];
   estimate: ConstructionEstimate;
-  isOpen: boolean;
   locale: Locale;
   onClose: () => void;
 }) {
-  const [loadingSessionId, setLoadingSessionId] = useState(0);
-  const [readySessionId, setReadySessionId] = useState(-1);
-  const [prevIsOpen, setPrevIsOpen] = useState(isOpen);
-
-  if (isOpen !== prevIsOpen) {
-    setPrevIsOpen(isOpen);
-    if (isOpen) {
-      setLoadingSessionId((sessionId) => sessionId + 1);
-    }
-  }
-
-  const isLoading = isOpen && readySessionId !== loadingSessionId;
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    if (!isOpen) return;
-
-    const session = loadingSessionId;
     const timer = window.setTimeout(() => {
-      setReadySessionId(session);
+      setIsLoading(false);
     }, 2000);
 
     return () => window.clearTimeout(timer);
-  }, [isOpen, loadingSessionId]);
+  }, []);
 
   useEffect(() => {
-    if (!isOpen) return;
-
     const closeOnEscape = (event: KeyboardEvent) => {
       if (event.key === "Escape") onClose();
     };
     window.addEventListener("keydown", closeOnEscape);
     return () => window.removeEventListener("keydown", closeOnEscape);
-  }, [isOpen, onClose]);
-
-  if (!isOpen) return null;
+  }, [onClose]);
 
   const money = (value: number) => formatPrice(value, locale, config.currency);
 

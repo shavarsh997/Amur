@@ -1,6 +1,14 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import {
+  FormProvider,
+  useForm,
+  useWatch,
+  type FieldErrors,
+  type SubmitErrorHandler,
+  type SubmitHandler,
+} from "react-hook-form";
 
 import { ConstructionEstimateDialog } from "@/components/calculator/construction-estimate-dialog";
 import { CalculateButton } from "@/components/calculator/steps/calculate-button";
@@ -9,9 +17,10 @@ import { ParametersStep } from "@/components/calculator/steps/parameters-step";
 import { RenovationExtrasStep } from "@/components/calculator/steps/renovation-extras-step";
 import { ScenarioStep } from "@/components/calculator/steps/scenario-step";
 import type {
+  CalculatorFieldId,
   CalculatorFormValues,
-  CalculatorValidationErrors,
 } from "@/components/calculator/types";
+import { CALCULATOR_FIELD_ORDER } from "@/components/calculator/types";
 import {
   scrollToCalculatorField,
   valuesForScenario,
@@ -20,14 +29,9 @@ import {
   constructionCalculatorConfig as config,
   type CalculatorScenarioId,
   type CalculationType,
-  type RenovationExtra,
 } from "@/config/construction-calculator.config";
+import { createCalculatorResolver } from "@/lib/calculator/calculator-form-resolver";
 import { calculateConstructionEstimate } from "@/lib/calculator/calculate-construction-estimate";
-import {
-  clearErrorsForPatch,
-  getFirstValidationError,
-  validateCalculatorForm,
-} from "@/lib/calculator/validate-calculator-form";
 import type { Dictionary, Locale } from "@/types";
 
 export function CostCalculator({
@@ -43,53 +47,34 @@ export function CostCalculator({
   defaultScenarioId?: CalculatorScenarioId;
   className?: string;
 }) {
-  const [values, setValues] = useState(() =>
-    valuesForScenario(defaultCalculationType, defaultScenarioId)
-  );
-  const [errors, setErrors] = useState<CalculatorValidationErrors>({});
   const [isEstimateOpen, setIsEstimateOpen] = useState(false);
+  const form = useForm<CalculatorFormValues>({
+    defaultValues: valuesForScenario(defaultCalculationType, defaultScenarioId),
+    resolver: createCalculatorResolver(copy),
+  });
+  const watchedValues = useWatch({ control: form.control });
+  const calculationType = useWatch({
+    control: form.control,
+    name: "calculationType",
+    defaultValue: defaultCalculationType,
+  });
   const estimate = useMemo(
-    () => calculateConstructionEstimate(values, copy),
-    [values, copy]
+    () =>
+      calculateConstructionEstimate(
+        { ...form.getValues(), ...watchedValues } as CalculatorFormValues,
+        copy
+      ),
+    [watchedValues, copy, form]
   );
-  const isConstruction = values.calculationType === "construction";
-  const isRenovation = values.calculationType === "renovation";
-
-  const update = (patch: Partial<CalculatorFormValues>) => {
-    setValues((current) => ({ ...current, ...patch }));
-    setErrors((current) => clearErrorsForPatch(current, patch));
-  };
-
-  const toggleRenovationExtra = (extra: RenovationExtra) => {
-    setValues((current) => {
-      const renovationExtras = current.renovationExtras.includes(extra)
-        ? current.renovationExtras.filter((item) => item !== extra)
-        : [...current.renovationExtras, extra];
-
-      return { ...current, renovationExtras };
-    });
-    setErrors((current) => {
-      const fieldByExtra = {
-        plumbing: "bathrooms",
-        heatedFloor: "heatedFloorArea",
-        doors: "doorsCount",
-        airConditioners: "airConditionersCount",
-      } as const;
-      const field = fieldByExtra[extra as keyof typeof fieldByExtra];
-
-      if (!field) return current;
-
-      const next = { ...current };
-      delete next[field];
-      return next;
-    });
-  };
+  const isConstruction = calculationType === "construction";
+  const isRenovation = calculationType === "renovation";
 
   const selectedQuickScenario = config.quickScenarios.find(
     (scenario) =>
-      scenario.calculationType === values.calculationType &&
+      scenario.calculationType === calculationType &&
       (scenario.renovationObjectType === undefined ||
-        scenario.renovationObjectType === values.renovationObjectType)
+        scenario.renovationObjectType ===
+          form.getValues("renovationObjectType"))
   )?.id;
 
   const selectScenario = (scenarioId: CalculatorScenarioId) => {
@@ -98,73 +83,64 @@ export function CostCalculator({
     );
     if (!scenario) return;
 
-    setErrors({});
-    setValues((current) =>
-      valuesForScenario(scenario.calculationType, scenario.id, current.area)
+    form.reset(
+      valuesForScenario(
+        scenario.calculationType,
+        scenario.id,
+        form.getValues("area")
+      )
     );
   };
 
-  const handleCalculate = () => {
-    const validationErrors = validateCalculatorForm(values, copy);
-    const firstInvalidField = getFirstValidationError(validationErrors);
+  const scrollToFirstError = (
+    errors: FieldErrors<CalculatorFormValues>
+  ): CalculatorFieldId | null =>
+    CALCULATOR_FIELD_ORDER.find((field) => errors[field]) ?? null;
 
-    if (firstInvalidField) {
-      setErrors(validationErrors);
-      requestAnimationFrame(() => scrollToCalculatorField(firstInvalidField));
-      return;
-    }
-
-    setErrors({});
+  const onSubmit: SubmitHandler<CalculatorFormValues> = () => {
     setIsEstimateOpen(true);
   };
 
+  const onInvalid: SubmitErrorHandler<CalculatorFormValues> = (errors) => {
+    const firstInvalidField = scrollToFirstError(errors);
+    if (firstInvalidField) {
+      requestAnimationFrame(() => scrollToCalculatorField(firstInvalidField));
+    }
+  };
+
   return (
-    <div
-      className={`grid items-start gap-5 lg:grid-cols-[minmax(0,1fr)_20rem] ${className}`}
-    >
-      <div className="space-y-5">
-        <ScenarioStep
-          copy={copy}
-          onSelectScenario={selectScenario}
-          selectedQuickScenario={selectedQuickScenario}
-        />
-
-        <ParametersStep
-          copy={copy}
-          errors={errors}
-          update={update}
-          values={values}
-        />
-
-        {isConstruction ? (
-          <ConstructionExtrasStep
+    <FormProvider {...form}>
+      <div
+        className={`grid items-start gap-5 lg:grid-cols-[minmax(0,1fr)_20rem] ${className}`}
+      >
+        <div className="space-y-5">
+          <ScenarioStep
             copy={copy}
-            errors={errors}
-            update={update}
-            values={values}
+            onSelectScenario={selectScenario}
+            selectedQuickScenario={selectedQuickScenario}
+          />
+
+          <ParametersStep copy={copy} />
+
+          {isConstruction ? <ConstructionExtrasStep copy={copy} /> : null}
+
+          {isRenovation ? <RenovationExtrasStep copy={copy} /> : null}
+
+          <CalculateButton
+            copy={copy}
+            onClick={form.handleSubmit(onSubmit, onInvalid)}
+          />
+        </div>
+
+        {isEstimateOpen ? (
+          <ConstructionEstimateDialog
+            copy={copy}
+            estimate={estimate}
+            locale={locale}
+            onClose={() => setIsEstimateOpen(false)}
           />
         ) : null}
-
-        {isRenovation ? (
-          <RenovationExtrasStep
-            copy={copy}
-            errors={errors}
-            onToggleExtra={toggleRenovationExtra}
-            update={update}
-            values={values}
-          />
-        ) : null}
-
-        <CalculateButton copy={copy} onClick={handleCalculate} />
       </div>
-
-      <ConstructionEstimateDialog
-        copy={copy}
-        estimate={estimate}
-        isOpen={isEstimateOpen}
-        locale={locale}
-        onClose={() => setIsEstimateOpen(false)}
-      />
-    </div>
+    </FormProvider>
   );
 }
