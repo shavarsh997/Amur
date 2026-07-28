@@ -17,7 +17,10 @@ export function EstimateSection({ dictionary, calculateLabel = dictionary.hero.p
                 title={dictionary.calculator.title}
               />
             </div>
-            <div className="rounded-2xl bg-[var(--background-warm)] p-6 sm:p-8"><p className="text-sm leading-6 text-[var(--text-secondary)]">{dictionary.constructionCalculator.estimateSectionDescription}</p><CalculatorTrigger className="mt-6" defaultCalculationType={defaultCalculationType} label={calculateLabel} /></div>
+            <div className="rounded-2xl bg-[var(--background-warm)] p-6 sm:p-8">
+              <p className="text-sm leading-6 text-[var(--text-secondary)]">{dictionary.constructionCalculator.estimateSectionDescription}</p>
+              <CalculatorTrigger className="mt-6 w-full" defaultCalculationType={defaultCalculationType} label={calculateLabel} />
+            </div>
           </div>
         </div>
       </Container>
