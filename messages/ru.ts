@@ -586,6 +586,16 @@ const dictionary = {
       constructionIncrease: "+{percentage}% к строительной части",
       distanceNote: "{distance} км",
       renovationLine: "Ремонт: {level}",
+      loading: "Рассчитываем стоимость…",
+    },
+    validation: {
+      areaRequired: "Укажите площадь.",
+      basementAreaRequired: "Укажите площадь подвала.",
+      garageAreaRequired: "Укажите площадь гаража.",
+      terraceAreaRequired: "Укажите площадь террасы.",
+      bathroomsRequired: "Укажите количество санузлов.",
+      doorsCountRequired: "Укажите количество дверей.",
+      airConditionersCountRequired: "Укажите количество кондиционеров.",
     },
     estimateSectionDescription:
       "Выберите сценарий и укажите основные параметры — передадим вводные специалисту для точного расчёта.",

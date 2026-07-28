@@ -385,6 +385,16 @@ export interface Dictionary {
       constructionIncrease: string;
       distanceNote: string;
       renovationLine: string;
+      loading: string;
+    };
+    validation: {
+      areaRequired: string;
+      basementAreaRequired: string;
+      garageAreaRequired: string;
+      terraceAreaRequired: string;
+      bathroomsRequired: string;
+      doorsCountRequired: string;
+      airConditionersCountRequired: string;
     };
     estimateSectionDescription: string;
   };

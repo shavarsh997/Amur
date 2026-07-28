@@ -6,7 +6,9 @@ import { StepTitle } from "@/components/calculator/form/step-title";
 import type {
   CalculatorFormValues,
   CalculatorUpdate,
+  CalculatorValidationErrors,
 } from "@/components/calculator/types";
+import { calculatorFieldDomId } from "@/components/calculator/types";
 import type {
   ConstructionMaterial,
   ConstructionPackage,
@@ -21,10 +23,12 @@ export function ParametersStep({
   copy,
   values,
   update,
+  errors = {},
 }: {
   copy: Dictionary["constructionCalculator"];
   values: CalculatorFormValues;
   update: CalculatorUpdate;
+  errors?: CalculatorValidationErrors;
 }) {
   const isConstruction = values.calculationType === "construction";
   const isRenovation = values.calculationType === "renovation";
@@ -35,6 +39,8 @@ export function ParametersStep({
       <StepTitle number="02" {...copy.steps.parameters} />
       <div className="mt-6 max-w-xs">
         <NumberField
+          error={errors.area}
+          fieldId={calculatorFieldDomId("area")}
           label={copy.fields.area}
           min={1}
           onChange={(area) => update({ area })}
@@ -73,6 +79,8 @@ export function ParametersStep({
           </div>
           <div className="grid gap-3 sm:grid-cols-2">
             <OptionWithArea
+              areaError={errors.basementArea}
+              areaField="basementArea"
               checked={values.basement}
               fieldLabel={copy.fields.basementArea}
               label={copy.construction.extras.basement}
@@ -81,6 +89,8 @@ export function ParametersStep({
               onValueChange={(basementArea) => update({ basementArea })}
             />
             <OptionWithArea
+              areaError={errors.garageArea}
+              areaField="garageArea"
               checked={values.garage}
               fieldLabel={copy.fields.garageArea}
               label={copy.construction.extras.garage}
@@ -89,6 +99,8 @@ export function ParametersStep({
               onValueChange={(garageArea) => update({ garageArea })}
             />
             <OptionWithArea
+              areaError={errors.terraceArea}
+              areaField="terraceArea"
               checked={values.terrace}
               fieldLabel={copy.fields.terraceArea}
               label={copy.construction.extras.terrace}

@@ -8,8 +8,11 @@ import { ConstructionExtrasStep } from "@/components/calculator/steps/constructi
 import { ParametersStep } from "@/components/calculator/steps/parameters-step";
 import { RenovationExtrasStep } from "@/components/calculator/steps/renovation-extras-step";
 import { ScenarioStep } from "@/components/calculator/steps/scenario-step";
-import type { CalculatorFormValues } from "@/components/calculator/types";
-import { valuesForScenario } from "@/components/calculator/utils";
+import type {
+  CalculatorFormValues,
+  CalculatorValidationErrors,
+} from "@/components/calculator/types";
+import { scrollToCalculatorField, valuesForScenario } from "@/components/calculator/utils";
 import {
   constructionCalculatorConfig as config,
   type CalculatorScenarioId,
@@ -17,6 +20,11 @@ import {
   type RenovationExtra,
 } from "@/config/construction-calculator.config";
 import { calculateConstructionEstimate } from "@/lib/calculator/calculate-construction-estimate";
+import {
+  clearErrorsForPatch,
+  getFirstValidationError,
+  validateCalculatorForm,
+} from "@/lib/calculator/validate-calculator-form";
 import type { Dictionary, Locale } from "@/types";
 
 export function CostCalculator({
@@ -35,6 +43,7 @@ export function CostCalculator({
   const [values, setValues] = useState(() =>
     valuesForScenario(defaultCalculationType, defaultScenarioId)
   );
+  const [errors, setErrors] = useState<CalculatorValidationErrors>({});
   const [isEstimateOpen, setIsEstimateOpen] = useState(false);
   const estimate = useMemo(
     () => calculateConstructionEstimate(values, copy),
@@ -43,15 +52,18 @@ export function CostCalculator({
   const isConstruction = values.calculationType === "construction";
   const isRenovation = values.calculationType === "renovation";
 
-  const update = (patch: Partial<CalculatorFormValues>) =>
+  const update = (patch: Partial<CalculatorFormValues>) => {
     setValues((current) => ({ ...current, ...patch }));
+    setErrors((current) => clearErrorsForPatch(current, patch));
+  };
 
-  const toggleRenovationExtra = (extra: RenovationExtra) =>
-    update({
-      renovationExtras: values.renovationExtras.includes(extra)
-        ? values.renovationExtras.filter((item) => item !== extra)
-        : [...values.renovationExtras, extra],
-    });
+  const toggleRenovationExtra = (extra: RenovationExtra) => {
+    const renovationExtras = values.renovationExtras.includes(extra)
+      ? values.renovationExtras.filter((item) => item !== extra)
+      : [...values.renovationExtras, extra];
+
+    update({ renovationExtras });
+  };
 
   const selectedQuickScenario = config.quickScenarios.find(
     (scenario) =>
@@ -64,9 +76,24 @@ export function CostCalculator({
     const scenario = config.quickScenarios.find((item) => item.id === scenarioId);
     if (!scenario) return;
 
+    setErrors({});
     setValues((current) =>
       valuesForScenario(scenario.calculationType, scenario.id, current.area)
     );
+  };
+
+  const handleCalculate = () => {
+    const validationErrors = validateCalculatorForm(values, copy);
+    const firstInvalidField = getFirstValidationError(validationErrors);
+
+    if (firstInvalidField) {
+      setErrors(validationErrors);
+      requestAnimationFrame(() => scrollToCalculatorField(firstInvalidField));
+      return;
+    }
+
+    setErrors({});
+    setIsEstimateOpen(true);
   };
 
   return (
@@ -80,7 +107,12 @@ export function CostCalculator({
           selectedQuickScenario={selectedQuickScenario}
         />
 
-        <ParametersStep copy={copy} update={update} values={values} />
+        <ParametersStep
+          copy={copy}
+          errors={errors}
+          update={update}
+          values={values}
+        />
 
         {isConstruction ? (
           <ConstructionExtrasStep copy={copy} update={update} values={values} />
@@ -89,16 +121,14 @@ export function CostCalculator({
         {isRenovation ? (
           <RenovationExtrasStep
             copy={copy}
+            errors={errors}
             onToggleExtra={toggleRenovationExtra}
             update={update}
             values={values}
           />
         ) : null}
 
-        <CalculateButton
-          copy={copy}
-          onClick={() => setIsEstimateOpen(true)}
-        />
+        <CalculateButton copy={copy} onClick={handleCalculate} />
       </div>
 
       <ConstructionEstimateDialog

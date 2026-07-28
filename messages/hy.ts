@@ -599,6 +599,16 @@ const dictionary = {
       constructionIncrease: "+{percentage}% շինարարական մասի համար",
       distanceNote: "{distance} կմ",
       renovationLine: "Վերանորոգում՝ {level}",
+      loading: "Հաշվարկում ենք արժեքը…",
+    },
+    validation: {
+      areaRequired: "Նշեք մակերեսը։",
+      basementAreaRequired: "Նշեք նկուղի մակերեսը։",
+      garageAreaRequired: "Նշեք ավտոտնակի մակերեսը։",
+      terraceAreaRequired: "Նշեք տեռասայի մակերեսը։",
+      bathroomsRequired: "Նշեք սանհանգույցների քանակը։",
+      doorsCountRequired: "Նշեք դռների քանակը։",
+      airConditionersCountRequired: "Նշեք օդորակիչների քանակը։",
     },
     estimateSectionDescription:
       "Ընտրեք սցենարն ու նշեք հիմնական տվյալները․ դրանք կուղարկենք մասնագետին՝ ճշգրիտ հաշվարկի համար։",

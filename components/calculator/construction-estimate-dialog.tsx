@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 import { constructionCalculatorConfig as config } from "@/config/construction-calculator.config";
 import type { ConstructionEstimate } from "@/lib/calculator/calculate-construction-estimate";
@@ -20,6 +20,30 @@ export function ConstructionEstimateDialog({
   locale: Locale;
   onClose: () => void;
 }) {
+  const [loadingSessionId, setLoadingSessionId] = useState(0);
+  const [readySessionId, setReadySessionId] = useState(-1);
+  const [prevIsOpen, setPrevIsOpen] = useState(isOpen);
+
+  if (isOpen !== prevIsOpen) {
+    setPrevIsOpen(isOpen);
+    if (isOpen) {
+      setLoadingSessionId((sessionId) => sessionId + 1);
+    }
+  }
+
+  const isLoading = isOpen && readySessionId !== loadingSessionId;
+
+  useEffect(() => {
+    if (!isOpen) return;
+
+    const session = loadingSessionId;
+    const timer = window.setTimeout(() => {
+      setReadySessionId(session);
+    }, 2000);
+
+    return () => window.clearTimeout(timer);
+  }, [isOpen, loadingSessionId]);
+
   useEffect(() => {
     if (!isOpen) return;
 
@@ -69,7 +93,21 @@ export function ConstructionEstimateDialog({
             ×
           </button>
         </div>
-        {estimate.total ? (
+        {isLoading ? (
+          <div
+            aria-busy="true"
+            aria-live="polite"
+            className="flex min-h-56 flex-col items-center justify-center gap-4 py-8"
+          >
+            <span
+              aria-hidden="true"
+              className="size-11 animate-spin rounded-full border-[3px] border-[var(--border)] border-t-[var(--brand-accent)]"
+            />
+            <p className="text-sm font-medium text-[var(--text-secondary)]">
+              {copy.result.loading}
+            </p>
+          </div>
+        ) : estimate.total ? (
           <>
             <p className="mt-7 text-3xl font-semibold tracking-[-0.05em] text-[var(--text-primary)] sm:text-4xl">
               {money(estimate.total)}
@@ -102,9 +140,11 @@ export function ConstructionEstimateDialog({
             {copy.result.empty}
           </p>
         )}
-        <p className="mt-6 text-sm leading-6 text-[var(--text-secondary)]">
-          {copy.result.notice}
-        </p>
+        {!isLoading ? (
+          <p className="mt-6 text-sm leading-6 text-[var(--text-secondary)]">
+            {copy.result.notice}
+          </p>
+        ) : null}
       </div>
     </div>
   );

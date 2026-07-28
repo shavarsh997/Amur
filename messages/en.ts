@@ -594,6 +594,16 @@ const dictionary = {
       constructionIncrease: "+{percentage}% of the construction cost",
       distanceNote: "{distance} km",
       renovationLine: "Renovation: {level}",
+      loading: "Calculating estimate…",
+    },
+    validation: {
+      areaRequired: "Enter the area.",
+      basementAreaRequired: "Enter the basement area.",
+      garageAreaRequired: "Enter the garage area.",
+      terraceAreaRequired: "Enter the terrace area.",
+      bathroomsRequired: "Enter the number of bathrooms.",
+      doorsCountRequired: "Enter the number of doors.",
+      airConditionersCountRequired: "Enter the number of air conditioners.",
     },
     estimateSectionDescription:
       "Choose a scenario and enter the key details — we will send them to a specialist for an accurate estimate.",

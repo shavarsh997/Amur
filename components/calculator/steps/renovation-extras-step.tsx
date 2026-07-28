@@ -4,7 +4,9 @@ import { SwitchRow } from "@/components/calculator/form/switch-row";
 import type {
   CalculatorFormValues,
   CalculatorUpdate,
+  CalculatorValidationErrors,
 } from "@/components/calculator/types";
+import { calculatorFieldDomId } from "@/components/calculator/types";
 import { constructionCalculatorConfig as config } from "@/config/construction-calculator.config";
 import type { RenovationExtra } from "@/config/construction-calculator.config";
 import type { Dictionary } from "@/types";
@@ -14,11 +16,13 @@ export function RenovationExtrasStep({
   values,
   update,
   onToggleExtra,
+  errors = {},
 }: {
   copy: Dictionary["constructionCalculator"];
   values: CalculatorFormValues;
   update: CalculatorUpdate;
   onToggleExtra: (extra: RenovationExtra) => void;
+  errors?: CalculatorValidationErrors;
 }) {
   return (
     <section className="rounded-[28px] border border-[var(--border)] bg-white p-5 shadow-[var(--shadow-card)] sm:p-7">
@@ -40,12 +44,20 @@ export function RenovationExtrasStep({
                 />
                 {selected && needsCount ? (
                   <NumberField
+                    error={
+                      extra === "doors"
+                        ? errors.doorsCount
+                        : errors.airConditionersCount
+                    }
+                    fieldId={calculatorFieldDomId(
+                      extra === "doors" ? "doorsCount" : "airConditionersCount"
+                    )}
                     label={
                       extra === "doors"
                         ? copy.fields.doorsCount
                         : copy.fields.airConditionersCount
                     }
-                    min={0}
+                    min={1}
                     onChange={(value) =>
                       update(
                         extra === "doors"
@@ -62,6 +74,8 @@ export function RenovationExtrasStep({
                 ) : null}
                 {selected && needsBathrooms ? (
                   <NumberField
+                    error={errors.bathrooms}
+                    fieldId={calculatorFieldDomId("bathrooms")}
                     label={copy.fields.bathrooms}
                     min={1}
                     onChange={(bathrooms) => update({ bathrooms })}
