@@ -20,6 +20,7 @@ export const initialValues: CalculatorFormValues = {
   renovationCondition: "newWithoutFinish",
   renovationLevel: "standard",
   renovationExtras: [],
+  heatedFloorArea: "",
   doorsCount: "0",
   airConditionersCount: "0",
   designPackage: "full",

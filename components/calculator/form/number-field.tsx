@@ -33,8 +33,10 @@ export function NumberField({
         inputMode="decimal"
         min={min}
         onChange={(event) => onChange(event.target.value)}
-        step="any"
-        type="number"
+        pattern="[0-9]*[.,]?[0-9]*"
+        // This accepts both comma and period decimal separators. Native number
+        // inputs silently discard comma decimals in several browsers.
+        type="text"
         value={value}
       />
       {error ? (

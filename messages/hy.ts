@@ -481,6 +481,7 @@ const dictionary = {
       renovationLevel: "Վերանորոգման մակարդակ",
       distance: "Քաղաքից հեռավորություն, կմ",
       distanceHint: "Եթե օբյեկտը քաղաքից դուրս է։",
+      heatedFloorArea: "Տաք հատակի մակերեսը, մ²",
       doorsCount: "Դռների քանակ",
       airConditionersCount: "Օդորակիչների քանակ",
     },
@@ -603,10 +604,14 @@ const dictionary = {
     },
     validation: {
       areaRequired: "Նշեք մակերեսը։",
+      areaOutOfRange: "Նշեք 1-ից 100 000 մ² մակերես։",
       basementAreaRequired: "Նշեք նկուղի մակերեսը։",
       garageAreaRequired: "Նշեք ավտոտնակի մակերեսը։",
       terraceAreaRequired: "Նշեք տեռասայի մակերեսը։",
+      distanceInvalid: "Նշեք քաղաքից հեռավորությունը՝ զրոյից ոչ փոքր թվով։",
       bathroomsRequired: "Նշեք սանհանգույցների քանակը։",
+      heatedFloorAreaRequired:
+        "Նշեք տաք հատակի մակերեսը՝ օբյեկտի մակերեսի սահմաններում։",
       doorsCountRequired: "Նշեք դռների քանակը։",
       airConditionersCountRequired: "Նշեք օդորակիչների քանակը։",
     },

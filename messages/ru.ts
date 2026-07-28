@@ -469,6 +469,7 @@ const dictionary = {
       renovationLevel: "Уровень ремонта",
       distance: "Удалённость от города, км",
       distanceHint: "Если объект находится за пределами города.",
+      heatedFloorArea: "Площадь тёплого пола, м²",
       doorsCount: "Количество дверей",
       airConditionersCount: "Количество кондиционеров",
     },
@@ -590,10 +591,14 @@ const dictionary = {
     },
     validation: {
       areaRequired: "Укажите площадь.",
+      areaOutOfRange: "Укажите площадь от 1 до 100 000 м².",
       basementAreaRequired: "Укажите площадь подвала.",
       garageAreaRequired: "Укажите площадь гаража.",
       terraceAreaRequired: "Укажите площадь террасы.",
+      distanceInvalid: "Укажите расстояние от города числом от нуля.",
       bathroomsRequired: "Укажите количество санузлов.",
+      heatedFloorAreaRequired:
+        "Укажите площадь тёплого пола в пределах площади объекта.",
       doorsCountRequired: "Укажите количество дверей.",
       airConditionersCountRequired: "Укажите количество кондиционеров.",
     },

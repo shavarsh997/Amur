@@ -320,6 +320,7 @@ export interface Dictionary {
       renovationLevel: string;
       distance: string;
       distanceHint: string;
+      heatedFloorArea: string;
       doorsCount: string;
       airConditionersCount: string;
     };
@@ -389,10 +390,13 @@ export interface Dictionary {
     };
     validation: {
       areaRequired: string;
+      areaOutOfRange: string;
       basementAreaRequired: string;
       garageAreaRequired: string;
       terraceAreaRequired: string;
+      distanceInvalid: string;
       bathroomsRequired: string;
+      heatedFloorAreaRequired: string;
       doorsCountRequired: string;
       airConditionersCountRequired: string;
     };

@@ -12,7 +12,9 @@ export type CalculatorFieldId =
   | "basementArea"
   | "garageArea"
   | "terraceArea"
+  | "distanceKm"
   | "bathrooms"
+  | "heatedFloorArea"
   | "doorsCount"
   | "airConditionersCount";
 
@@ -25,7 +27,9 @@ export const CALCULATOR_FIELD_ORDER: CalculatorFieldId[] = [
   "basementArea",
   "garageArea",
   "terraceArea",
+  "distanceKm",
   "bathrooms",
+  "heatedFloorArea",
   "doorsCount",
   "airConditionersCount",
 ];

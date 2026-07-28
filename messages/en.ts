@@ -476,6 +476,7 @@ const dictionary = {
       renovationLevel: "Renovation level",
       distance: "Distance from the city, km",
       distanceHint: "If the property is outside the city.",
+      heatedFloorArea: "Underfloor-heating area, m²",
       doorsCount: "Number of doors",
       airConditionersCount: "Number of air conditioners",
     },
@@ -598,10 +599,15 @@ const dictionary = {
     },
     validation: {
       areaRequired: "Enter the area.",
+      areaOutOfRange: "Enter an area from 1 to 100,000 m².",
       basementAreaRequired: "Enter the basement area.",
       garageAreaRequired: "Enter the garage area.",
       terraceAreaRequired: "Enter the terrace area.",
+      distanceInvalid:
+        "Enter a distance from the city as a non-negative number.",
       bathroomsRequired: "Enter the number of bathrooms.",
+      heatedFloorAreaRequired:
+        "Enter an underfloor-heating area no larger than the property area.",
       doorsCountRequired: "Enter the number of doors.",
       airConditionersCountRequired: "Enter the number of air conditioners.",
     },

@@ -31,9 +31,9 @@ export function RenovationExtrasStep({
         {(Object.keys(config.renovation.extras) as RenovationExtra[]).map(
           (extra) => {
             const selected = values.renovationExtras.includes(extra);
-            const needsCount =
-              extra === "doors" || extra === "airConditioners";
+            const needsCount = extra === "doors" || extra === "airConditioners";
             const needsBathrooms = extra === "plumbing";
+            const needsArea = extra === "heatedFloor";
 
             return (
               <div className="space-y-2" key={extra}>
@@ -80,6 +80,16 @@ export function RenovationExtrasStep({
                     min={1}
                     onChange={(bathrooms) => update({ bathrooms })}
                     value={values.bathrooms}
+                  />
+                ) : null}
+                {selected && needsArea ? (
+                  <NumberField
+                    error={errors.heatedFloorArea}
+                    fieldId={calculatorFieldDomId("heatedFloorArea")}
+                    label={copy.fields.heatedFloorArea}
+                    min={1}
+                    onChange={(heatedFloorArea) => update({ heatedFloorArea })}
+                    value={values.heatedFloorArea}
                   />
                 ) : null}
               </div>

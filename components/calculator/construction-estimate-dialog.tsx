@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 
+import { EstimateLoadingState } from "@/components/calculator/estimate-loading-state";
 import { constructionCalculatorConfig as config } from "@/config/construction-calculator.config";
 import type { ConstructionEstimate } from "@/lib/calculator/calculate-construction-estimate";
 import { formatPrice } from "@/lib/calculator/format-price";
@@ -94,19 +95,7 @@ export function ConstructionEstimateDialog({
           </button>
         </div>
         {isLoading ? (
-          <div
-            aria-busy="true"
-            aria-live="polite"
-            className="flex min-h-56 flex-col items-center justify-center gap-4 py-8"
-          >
-            <span
-              aria-hidden="true"
-              className="size-11 animate-spin rounded-full border-[3px] border-[var(--border)] border-t-[var(--brand-accent)]"
-            />
-            <p className="text-sm font-medium text-[var(--text-secondary)]">
-              {copy.result.loading}
-            </p>
-          </div>
+          <EstimateLoadingState message={copy.result.loading} />
         ) : estimate.total ? (
           <>
             <p className="mt-7 text-3xl font-semibold tracking-[-0.05em] text-[var(--text-primary)] sm:text-4xl">

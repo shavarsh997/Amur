@@ -4,17 +4,21 @@ import { SwitchRow } from "@/components/calculator/form/switch-row";
 import type {
   CalculatorFormValues,
   CalculatorUpdate,
+  CalculatorValidationErrors,
 } from "@/components/calculator/types";
+import { calculatorFieldDomId } from "@/components/calculator/types";
 import type { Dictionary } from "@/types";
 
 export function ConstructionExtrasStep({
   copy,
   values,
   update,
+  errors = {},
 }: {
   copy: Dictionary["constructionCalculator"];
   values: CalculatorFormValues;
   update: CalculatorUpdate;
+  errors?: CalculatorValidationErrors;
 }) {
   return (
     <section className="rounded-[28px] border border-[var(--border)] bg-white p-5 shadow-[var(--shadow-card)] sm:p-7">
@@ -33,6 +37,8 @@ export function ConstructionExtrasStep({
       </div>
       <div className="mt-4 max-w-xs">
         <NumberField
+          error={errors.distanceKm}
+          fieldId={calculatorFieldDomId("distanceKm")}
           hint={copy.fields.distanceHint}
           label={copy.fields.distance}
           onChange={(distanceKm) => update({ distanceKm })}

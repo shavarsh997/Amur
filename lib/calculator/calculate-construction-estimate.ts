@@ -30,6 +30,7 @@ export type ConstructionCalculatorValues = {
   renovationCondition: RenovationCondition;
   renovationLevel: RenovationLevel;
   renovationExtras: RenovationExtra[];
+  heatedFloorArea: string;
   doorsCount: string;
   airConditionersCount: string;
   designPackage: DesignPackage;
@@ -157,11 +158,13 @@ export function calculateConstructionEstimate(
       amount: renovationTotal,
       note: copy.renovation.conditions[values.renovationCondition],
     });
-    for (const extraKey of values.renovationExtras) {
+    for (const extraKey of new Set(values.renovationExtras)) {
       const extra = config.renovation.extras[extraKey];
       const amount =
         "pricePerSquareMeter" in extra
-          ? area * extra.pricePerSquareMeter
+          ? (extraKey === "heatedFloor"
+              ? numberValue(values.heatedFloorArea)
+              : area) * extra.pricePerSquareMeter
           : "pricePerBathroom" in extra
             ? bathrooms * extra.pricePerBathroom
             : "pricePerItem" in extra

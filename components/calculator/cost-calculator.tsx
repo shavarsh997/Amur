@@ -12,7 +12,10 @@ import type {
   CalculatorFormValues,
   CalculatorValidationErrors,
 } from "@/components/calculator/types";
-import { scrollToCalculatorField, valuesForScenario } from "@/components/calculator/utils";
+import {
+  scrollToCalculatorField,
+  valuesForScenario,
+} from "@/components/calculator/utils";
 import {
   constructionCalculatorConfig as config,
   type CalculatorScenarioId,
@@ -58,11 +61,28 @@ export function CostCalculator({
   };
 
   const toggleRenovationExtra = (extra: RenovationExtra) => {
-    const renovationExtras = values.renovationExtras.includes(extra)
-      ? values.renovationExtras.filter((item) => item !== extra)
-      : [...values.renovationExtras, extra];
+    setValues((current) => {
+      const renovationExtras = current.renovationExtras.includes(extra)
+        ? current.renovationExtras.filter((item) => item !== extra)
+        : [...current.renovationExtras, extra];
 
-    update({ renovationExtras });
+      return { ...current, renovationExtras };
+    });
+    setErrors((current) => {
+      const fieldByExtra = {
+        plumbing: "bathrooms",
+        heatedFloor: "heatedFloorArea",
+        doors: "doorsCount",
+        airConditioners: "airConditionersCount",
+      } as const;
+      const field = fieldByExtra[extra as keyof typeof fieldByExtra];
+
+      if (!field) return current;
+
+      const next = { ...current };
+      delete next[field];
+      return next;
+    });
   };
 
   const selectedQuickScenario = config.quickScenarios.find(
@@ -73,7 +93,9 @@ export function CostCalculator({
   )?.id;
 
   const selectScenario = (scenarioId: CalculatorScenarioId) => {
-    const scenario = config.quickScenarios.find((item) => item.id === scenarioId);
+    const scenario = config.quickScenarios.find(
+      (item) => item.id === scenarioId
+    );
     if (!scenario) return;
 
     setErrors({});
@@ -115,7 +137,12 @@ export function CostCalculator({
         />
 
         {isConstruction ? (
-          <ConstructionExtrasStep copy={copy} update={update} values={values} />
+          <ConstructionExtrasStep
+            copy={copy}
+            errors={errors}
+            update={update}
+            values={values}
+          />
         ) : null}
 
         {isRenovation ? (
