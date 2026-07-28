@@ -3,7 +3,7 @@
 import { useActionState, useEffect, useId, useRef } from "react";
 
 import { submitLeadAction, type LeadActionState } from "@/app/actions";
-import { calculatorConfig } from "@/config/calculator.config";
+import { leadFormConfig } from "@/config/lead-form.config";
 import type { Dictionary, Locale } from "@/types";
 
 const initialState: LeadActionState = {
@@ -77,7 +77,7 @@ export function LeadForm({
           <option disabled value="">
             {copy.placeholders.objectType}
           </option>
-          {calculatorConfig.objectTypes.map((option) => (
+          {leadFormConfig.objectTypes.map((option) => (
             <option key={option.value} value={option.value}>
               {copy.choices.objectType[option.labelKey]}
             </option>
@@ -185,7 +185,7 @@ export function LeadForm({
           <option disabled value="">
             {copy.placeholders.workType}
           </option>
-          {calculatorConfig.workTypes.map((option) => (
+          {leadFormConfig.workTypes.map((option) => (
             <option key={option.value} value={option.value}>
               {copy.choices.workType[option.labelKey]}
             </option>

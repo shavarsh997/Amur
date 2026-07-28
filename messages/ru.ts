@@ -448,10 +448,6 @@ const dictionary = {
         description:
           "Достаточно приблизительных данных — вы сможете уточнить их позднее.",
       },
-      construction: {
-        title: "Уровень строительства",
-        description: "Выберите степень готовности будущего дома.",
-      },
       constructionExtras: {
         title: "Дополнительные условия строительства",
         description: "Отметьте только то, что уже известно о проекте.",
@@ -460,47 +456,21 @@ const dictionary = {
         title: "Дополнительные работы",
         description: "Стоимость выбранных работ сразу учитывается в ориентире.",
       },
-      design: {
-        title: "Дизайн-проект",
-        description:
-          "Можно добавить к любому сценарию — стоимость считается по площади.",
-      },
     },
     fields: {
       area: "Площадь, м²",
-      floors: "Этажей",
-      rooms: "Комнат",
       bathrooms: "Санузлов",
-      houseParameters: "Параметры дома",
       houseShape: "Форма дома",
       constructionType: "Тип конструкции",
       basementArea: "Площадь подвала, м²",
       garageArea: "Площадь гаража, м²",
       terraceArea: "Площадь террасы, м²",
-      propertyCondition: "Состояние объекта",
-      propertyType: "Тип объекта",
       currentCondition: "Текущее состояние",
       renovationLevel: "Уровень ремонта",
       distance: "Удалённость от города, км",
       distanceHint: "Если объект находится за пределами города.",
       doorsCount: "Количество дверей",
       airConditionersCount: "Количество кондиционеров",
-    },
-    calculationTypes: {
-      renovation: {
-        title: "Ремонт под ключ",
-        description:
-          "Ремонт квартиры или частного дома с подбором нужных этапов.",
-      },
-      construction: {
-        title: "Строительство дома",
-        description:
-          "Частный дом от подготовки до выбранной степени готовности.",
-      },
-      combined: {
-        title: "Строительство + ремонт",
-        description: "Строительство дома и последующая внутренняя отделка.",
-      },
     },
     quickScenarios: {
       apartmentRenovation: {
@@ -560,11 +530,6 @@ const dictionary = {
       },
     },
     renovation: {
-      objectTypes: {
-        apartment: "Квартира",
-        privateHouse: "Частный дом",
-        commercial: "Коммерческое помещение",
-      },
       conditions: {
         newWithoutFinish: "Новостройка без отделки",
         roughFinish: "Черновая отделка",
@@ -602,14 +567,23 @@ const dictionary = {
         title: "С авторским надзором",
         description: "Дизайн-проект и сопровождение реализации.",
       },
-      enabled: "Нужен дизайн-проект",
-      enabledDescription:
-        "Планировки, чертежи и сопровождение — в зависимости от выбранного пакета.",
+    },
+    contact: {
+      title: "Получить расчёт по вашему проекту",
+      description:
+        "Проверьте выбранные параметры и оставьте контакты — сформируем заявку для точного расчёта.",
+      nameLabel: "Ваше имя",
+      phoneLabel: "Телефон",
+      commentLabel: "Комментарий",
+      namePlaceholder: "Как к вам обращаться",
+      phonePlaceholder: "+374 …",
+      commentPlaceholder: "Уточнения по объекту — по желанию",
+      submit: "Отправить заявку",
+      submitting: "Отправляем…",
     },
     result: {
       title: "Предварительная оценка",
       range: "Следующий шаг",
-      enterArea: "Укажите площадь",
       included: "Учтено",
       empty:
         "Укажите ориентировочные данные, чтобы подготовиться к обсуждению проекта.",
@@ -623,7 +597,7 @@ const dictionary = {
       renovationLine: "Ремонт: {level}",
     },
     estimateSectionDescription:
-      "Начните с ремонта: выберите сценарий, укажите несколько ориентировочных параметров и получите предварительный диапазон стоимости.",
+      "Выберите сценарий и укажите основные параметры — передадим вводные специалисту для точного расчёта.",
   },
   testimonials: {
     eyebrow: "Отзывы",

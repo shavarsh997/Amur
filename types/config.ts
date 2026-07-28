@@ -5,10 +5,10 @@ export type ConfiguredLocale = Locale;
 export type NavigationKey =
   "home" | "services" | "about" | "contacts" | "privacy";
 
-export type CalculatorObjectType =
+export type LeadObjectType =
   "private-house" | "commercial" | "apartment" | "other";
 
-export type CalculatorWorkType =
+export type LeadWorkType =
   "turnkey" | "design" | "renovation" | "separate-works";
 
 export type ServiceIcon =

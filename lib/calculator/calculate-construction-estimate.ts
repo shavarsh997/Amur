@@ -14,8 +14,6 @@ import type { Dictionary } from "@/types";
 export type ConstructionCalculatorValues = {
   calculationType: CalculationType;
   area: string;
-  floors: string;
-  rooms: string;
   bathrooms: string;
   constructionPackage: ConstructionPackage;
   material: ConstructionMaterial;
@@ -34,7 +32,6 @@ export type ConstructionCalculatorValues = {
   renovationExtras: RenovationExtra[];
   doorsCount: string;
   airConditionersCount: string;
-  designEnabled: boolean;
   designPackage: DesignPackage;
 };
 
@@ -50,11 +47,14 @@ export type ConstructionEstimate = {
 };
 
 const numberValue = (value: string) =>
-  Math.max(0, Number(value.replace(",", ".")) || 0);
-const includesConstruction = (type: CalculationType) =>
-  type === "construction" || type === "combined";
-const includesRenovation = (type: CalculationType) =>
-  type === "renovation" || type === "combined";
+  Math.max(
+    0,
+    Number.isFinite(Number(value.replace(",", ".")))
+      ? Number(value.replace(",", "."))
+      : 0
+  );
+const includesConstruction = (type: CalculationType) => type === "construction";
+const includesRenovation = (type: CalculationType) => type === "renovation";
 
 export function calculateConstructionEstimate(
   values: ConstructionCalculatorValues,
@@ -176,7 +176,7 @@ export function calculateConstructionEstimate(
     }
   }
 
-  if (area && values.designEnabled) {
+  if (area && values.calculationType === "design") {
     const design = config.design[values.designPackage];
     designTotal = area * design.pricePerSquareMeter;
     lines.push({

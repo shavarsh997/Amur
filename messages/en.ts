@@ -453,10 +453,6 @@ const dictionary = {
         description:
           "Approximate information is enough; you can refine it later.",
       },
-      construction: {
-        title: "Construction level",
-        description: "Choose the desired completion level for the future home.",
-      },
       constructionExtras: {
         title: "Additional construction conditions",
         description:
@@ -467,47 +463,21 @@ const dictionary = {
         description:
           "The selected work is immediately included in the indicative cost.",
       },
-      design: {
-        title: "Design project",
-        description:
-          "You can add this to any scenario; the cost is calculated by area.",
-      },
     },
     fields: {
       area: "Area, m²",
-      floors: "Floors",
-      rooms: "Rooms",
       bathrooms: "Bathrooms",
-      houseParameters: "House parameters",
       houseShape: "House shape",
       constructionType: "Construction type",
       basementArea: "Basement area, m²",
       garageArea: "Garage area, m²",
       terraceArea: "Terrace area, m²",
-      propertyCondition: "Property condition",
-      propertyType: "Property type",
       currentCondition: "Current condition",
       renovationLevel: "Renovation level",
       distance: "Distance from the city, km",
       distanceHint: "If the property is outside the city.",
       doorsCount: "Number of doors",
       airConditionersCount: "Number of air conditioners",
-    },
-    calculationTypes: {
-      renovation: {
-        title: "Turnkey renovation",
-        description:
-          "Apartment or private house renovation with the stages that fit your project.",
-      },
-      construction: {
-        title: "House construction",
-        description:
-          "A private home from preparation to the selected completion level.",
-      },
-      combined: {
-        title: "Construction + renovation",
-        description: "Home construction followed by interior finishing.",
-      },
     },
     quickScenarios: {
       apartmentRenovation: {
@@ -569,11 +539,6 @@ const dictionary = {
       },
     },
     renovation: {
-      objectTypes: {
-        apartment: "Apartment",
-        privateHouse: "Private house",
-        commercial: "Commercial property",
-      },
       conditions: {
         newWithoutFinish: "New build without finishes",
         roughFinish: "Rough finish",
@@ -611,14 +576,23 @@ const dictionary = {
         title: "With design supervision",
         description: "A design project with implementation support.",
       },
-      enabled: "I need a design project",
-      enabledDescription:
-        "Layouts, drawings, and support vary by the selected package.",
+    },
+    contact: {
+      title: "Request an estimate for your project",
+      description:
+        "Review the selected details and leave your contacts to prepare a request for an accurate estimate.",
+      nameLabel: "Your name",
+      phoneLabel: "Phone",
+      commentLabel: "Comment",
+      namePlaceholder: "How should we address you?",
+      phonePlaceholder: "+374 …",
+      commentPlaceholder: "Project details, if any",
+      submit: "Send request",
+      submitting: "Sending…",
     },
     result: {
       title: "Initial assessment",
       range: "Next step",
-      enterArea: "Enter the area",
       included: "Included",
       empty: "Enter approximate details to prepare for a project discussion.",
       pricingUnavailable:
@@ -631,7 +605,7 @@ const dictionary = {
       renovationLine: "Renovation: {level}",
     },
     estimateSectionDescription:
-      "Start with renovation: choose a scenario, enter a few approximate details, and see an initial cost range.",
+      "Choose a scenario and enter the key details — we will send them to a specialist for an accurate estimate.",
   },
   testimonials: {
     eyebrow: "Testimonials",

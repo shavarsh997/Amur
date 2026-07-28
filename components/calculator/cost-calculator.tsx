@@ -1,12 +1,11 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useActionState, useEffect, useMemo, useRef, useState } from "react";
 import {
   Building2,
   Check,
   Home,
   Paintbrush,
-  Palette,
   PenTool,
   SlidersHorizontal,
 } from "lucide-react";
@@ -29,15 +28,19 @@ import {
   type ConstructionCalculatorValues,
 } from "@/lib/calculator/calculate-construction-estimate";
 import { formatPrice } from "@/lib/calculator/format-price";
+import {
+  submitCalculatorLeadAction,
+  type CalculatorLeadActionState,
+} from "@/app/actions";
 import type { Dictionary, Locale } from "@/types";
 
-const initialValues: ConstructionCalculatorValues & {
+type CalculatorFormValues = ConstructionCalculatorValues & {
   renovationObjectType: RenovationObjectType;
-} = {
+};
+
+const initialValues: CalculatorFormValues = {
   calculationType: "renovation",
   area: "",
-  floors: "1",
-  rooms: "3",
   bathrooms: "1",
   constructionPackage: "rough",
   material: "aeratedConcrete",
@@ -57,12 +60,15 @@ const initialValues: ConstructionCalculatorValues & {
   renovationExtras: [],
   doorsCount: "0",
   airConditionersCount: "0",
-  designEnabled: false,
   designPackage: "full",
 };
 
-const includesConstruction = (type: CalculationType) => type !== "renovation";
-const includesRenovation = (type: CalculationType) => type !== "construction";
+const initialLeadState: CalculatorLeadActionState = {
+  status: "idle",
+  message: "",
+  errors: {},
+};
+
 const selectionClass = (selected: boolean) =>
   `rounded-2xl border p-4 text-left transition ${selected ? "border-[var(--text-primary)] bg-[var(--background-warm)] shadow-[0_10px_24px_-22px_rgb(24_33_42/0.55)]" : "border-[var(--border)] bg-white hover:border-[var(--border-strong)] hover:bg-[var(--surface-muted)]"}`;
 
@@ -87,6 +93,7 @@ function NumberField({
         inputMode="decimal"
         min={min}
         onChange={(event) => onChange(event.target.value)}
+        step="any"
         type="number"
         value={value}
       />
@@ -162,6 +169,22 @@ function StepTitle({
   );
 }
 
+function valuesForScenario(
+  calculationType: CalculationType,
+  scenarioId?: CalculatorScenarioId,
+  area = ""
+): CalculatorFormValues {
+  const scenario = config.quickScenarios.find((item) => item.id === scenarioId);
+
+  return {
+    ...initialValues,
+    area,
+    calculationType,
+    renovationObjectType:
+      scenario?.renovationObjectType ?? initialValues.renovationObjectType,
+  };
+}
+
 export function CostCalculator({
   copy,
   locale,
@@ -175,31 +198,19 @@ export function CostCalculator({
   defaultScenarioId?: CalculatorScenarioId;
   className?: string;
 }) {
-  const [values, setValues] = useState(() => {
-    const initialScenario = config.quickScenarios.find(
-      (scenario) => scenario.id === defaultScenarioId
-    );
-
-    return {
-      ...initialValues,
-      calculationType:
-        initialScenario?.calculationType ?? defaultCalculationType,
-      ...(initialScenario?.renovationObjectType
-        ? { renovationObjectType: initialScenario.renovationObjectType }
-        : {}),
-      designEnabled:
-        initialScenario?.designEnabled ?? initialValues.designEnabled,
-    };
-  });
+  const [values, setValues] = useState(() =>
+    valuesForScenario(defaultCalculationType, defaultScenarioId)
+  );
   const estimate = useMemo(
     () => calculateConstructionEstimate(values, copy),
     [values, copy]
   );
-  const hasConstruction = includesConstruction(values.calculationType);
-  const hasRenovation = includesRenovation(values.calculationType);
+  const isConstruction = values.calculationType === "construction";
+  const isRenovation = values.calculationType === "renovation";
+  const isDesign = values.calculationType === "design";
   const canShowEstimate =
     config.publicRates && Boolean(values.area) && Boolean(estimate.total);
-  const update = (patch: Partial<typeof values>) =>
+  const update = (patch: Partial<CalculatorFormValues>) =>
     setValues((current) => ({ ...current, ...patch }));
   const toggleRenovationExtra = (extra: RenovationExtra) =>
     update({
@@ -211,7 +222,6 @@ export function CostCalculator({
   const selectedQuickScenario = config.quickScenarios.find(
     (scenario) =>
       scenario.calculationType === values.calculationType &&
-      scenario.designEnabled === values.designEnabled &&
       (scenario.renovationObjectType === undefined ||
         scenario.renovationObjectType === values.renovationObjectType)
   )?.id;
@@ -235,21 +245,20 @@ export function CostCalculator({
                       : Paintbrush;
               const option = copy.quickScenarios[scenario.labelKey];
               const selected = selectedQuickScenario === scenario.id;
+
               return (
                 <button
                   aria-pressed={selected}
                   className={`${selectionClass(selected)} min-h-28`}
                   key={scenario.id}
                   onClick={() =>
-                    update({
-                      calculationType: scenario.calculationType,
-                      ...(scenario.renovationObjectType
-                        ? {
-                            renovationObjectType: scenario.renovationObjectType,
-                          }
-                        : {}),
-                      designEnabled: scenario.designEnabled,
-                    })
+                    setValues((current) =>
+                      valuesForScenario(
+                        scenario.calculationType,
+                        scenario.id,
+                        current.area
+                      )
+                    )
                   }
                   type="button"
                 >
@@ -271,38 +280,28 @@ export function CostCalculator({
 
         <section className="rounded-[28px] border border-[var(--border)] bg-white p-5 shadow-[var(--shadow-card)] sm:p-7">
           <StepTitle number="02" {...copy.steps.parameters} />
-          <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-6 max-w-xs">
             <NumberField
               label={copy.fields.area}
               min={1}
               onChange={(area) => update({ area })}
               value={values.area}
             />
-            <NumberField
-              label={copy.fields.floors}
-              min={1}
-              onChange={(floors) => update({ floors })}
-              value={values.floors}
-            />
-            <NumberField
-              label={copy.fields.rooms}
-              min={0}
-              onChange={(rooms) => update({ rooms })}
-              value={values.rooms}
-            />
-            <NumberField
-              label={copy.fields.bathrooms}
-              min={0}
-              onChange={(bathrooms) => update({ bathrooms })}
-              value={values.bathrooms}
-            />
           </div>
-          {hasConstruction ? (
-            <div className="mt-8 border-t border-[var(--border)] pt-7">
-              <h3 className="text-base font-semibold text-[var(--text-primary)]">
-                {copy.fields.houseParameters}
-              </h3>
-              <div className="mt-5 grid gap-5 lg:grid-cols-3">
+
+          {isConstruction ? (
+            <div className="mt-8 space-y-7 border-t border-[var(--border)] pt-7">
+              <ChoiceCards
+                options={copy.construction.packages}
+                selected={values.constructionPackage}
+                onChange={(constructionPackage) =>
+                  update({
+                    constructionPackage:
+                      constructionPackage as ConstructionPackage,
+                  })
+                }
+              />
+              <div className="grid gap-5 lg:grid-cols-2">
                 <ChoiceGroup
                   label={copy.fields.houseShape}
                   options={copy.construction.houseShapes}
@@ -319,22 +318,16 @@ export function CostCalculator({
                     update({ material: material as ConstructionMaterial })
                   }
                 />
-                <div className="space-y-3">
-                  <SwitchRow
-                    checked={values.basement}
-                    label={copy.construction.extras.basement}
-                    onChange={(basement) => update({ basement })}
-                  />
-                  {values.basement ? (
-                    <NumberField
-                      label={copy.fields.basementArea}
-                      onChange={(basementArea) => update({ basementArea })}
-                      value={values.basementArea}
-                    />
-                  ) : null}
-                </div>
               </div>
-              <div className="mt-5 grid gap-3 sm:grid-cols-2">
+              <div className="grid gap-3 sm:grid-cols-2">
+                <OptionWithArea
+                  checked={values.basement}
+                  fieldLabel={copy.fields.basementArea}
+                  label={copy.construction.extras.basement}
+                  value={values.basementArea}
+                  onCheckedChange={(basement) => update({ basement })}
+                  onValueChange={(basementArea) => update({ basementArea })}
+                />
                 <OptionWithArea
                   checked={values.garage}
                   fieldLabel={copy.fields.garageArea}
@@ -354,82 +347,53 @@ export function CostCalculator({
               </div>
             </div>
           ) : null}
-          {hasRenovation ? (
+
+          {isRenovation ? (
+            <div className="mt-8 grid gap-5 border-t border-[var(--border)] pt-7 lg:grid-cols-2">
+              <ChoiceGroup
+                label={copy.fields.currentCondition}
+                options={copy.renovation.conditions}
+                selected={values.renovationCondition}
+                onChange={(renovationCondition) =>
+                  update({
+                    renovationCondition:
+                      renovationCondition as RenovationCondition,
+                  })
+                }
+              />
+              <ChoiceGroup
+                label={copy.fields.renovationLevel}
+                options={copy.renovation.levels}
+                selected={values.renovationLevel}
+                onChange={(renovationLevel) =>
+                  update({
+                    renovationLevel: renovationLevel as RenovationLevel,
+                  })
+                }
+              />
+            </div>
+          ) : null}
+
+          {isDesign ? (
             <div className="mt-8 border-t border-[var(--border)] pt-7">
-              <h3 className="text-base font-semibold text-[var(--text-primary)]">
-                {copy.fields.propertyCondition}
-              </h3>
-              <div className="mt-5 grid gap-5 lg:grid-cols-3">
-                <ChoiceGroup
-                  label={copy.fields.propertyType}
-                  options={copy.renovation.objectTypes}
-                  selected={values.renovationObjectType}
-                  onChange={(renovationObjectType) =>
-                    update({
-                      renovationObjectType:
-                        renovationObjectType as RenovationObjectType,
-                    })
-                  }
-                />
-                <ChoiceGroup
-                  label={copy.fields.currentCondition}
-                  options={copy.renovation.conditions}
-                  selected={values.renovationCondition}
-                  onChange={(renovationCondition) =>
-                    update({
-                      renovationCondition:
-                        renovationCondition as RenovationCondition,
-                    })
-                  }
-                />
-                <ChoiceGroup
-                  label={copy.fields.renovationLevel}
-                  options={copy.renovation.levels}
-                  selected={values.renovationLevel}
-                  onChange={(renovationLevel) =>
-                    update({
-                      renovationLevel: renovationLevel as RenovationLevel,
-                    })
-                  }
-                />
-              </div>
+              <ChoiceCards
+                options={{
+                  basic: copy.design.basic,
+                  full: copy.design.full,
+                  supervision: copy.design.supervision,
+                }}
+                selected={values.designPackage}
+                onChange={(designPackage) =>
+                  update({ designPackage: designPackage as DesignPackage })
+                }
+              />
             </div>
           ) : null}
         </section>
 
-        {hasConstruction ? (
+        {isConstruction ? (
           <section className="rounded-[28px] border border-[var(--border)] bg-white p-5 shadow-[var(--shadow-card)] sm:p-7">
-            <StepTitle number="03" {...copy.steps.construction} />
-            <div className="mt-6 grid gap-3 md:grid-cols-3">
-              {(
-                Object.keys(
-                  config.construction.packages
-                ) as ConstructionPackage[]
-              ).map((packageKey) => {
-                const option = copy.construction.packages[packageKey];
-                return (
-                  <button
-                    aria-pressed={values.constructionPackage === packageKey}
-                    className={`${selectionClass(values.constructionPackage === packageKey)} min-h-32`}
-                    key={packageKey}
-                    onClick={() => update({ constructionPackage: packageKey })}
-                    type="button"
-                  >
-                    <span className="font-semibold text-[var(--text-primary)]">
-                      {option.title}
-                    </span>
-                    <span className="mt-2 block text-xs leading-5 text-[var(--text-secondary)]">
-                      {option.description}
-                    </span>
-                  </button>
-                );
-              })}
-            </div>
-          </section>
-        ) : null}
-        {hasConstruction ? (
-          <section className="rounded-[28px] border border-[var(--border)] bg-white p-5 shadow-[var(--shadow-card)] sm:p-7">
-            <StepTitle number="04" {...copy.steps.constructionExtras} />
+            <StepTitle number="03" {...copy.steps.constructionExtras} />
             <div className="mt-6 grid gap-3 sm:grid-cols-2">
               <SwitchRow
                 checked={values.highCeilings}
@@ -452,18 +416,18 @@ export function CostCalculator({
             </div>
           </section>
         ) : null}
-        {hasRenovation ? (
+
+        {isRenovation ? (
           <section className="rounded-[28px] border border-[var(--border)] bg-white p-5 shadow-[var(--shadow-card)] sm:p-7">
-            <StepTitle
-              number={hasConstruction ? "05" : "03"}
-              {...copy.steps.renovationExtras}
-            />
+            <StepTitle number="03" {...copy.steps.renovationExtras} />
             <div className="mt-6 grid gap-3 sm:grid-cols-2">
               {(Object.keys(config.renovation.extras) as RenovationExtra[]).map(
                 (extra) => {
                   const selected = values.renovationExtras.includes(extra);
                   const needsCount =
                     extra === "doors" || extra === "airConditioners";
+                  const needsBathrooms = extra === "plumbing";
+
                   return (
                     <div className="space-y-2" key={extra}>
                       <SwitchRow
@@ -478,6 +442,7 @@ export function CostCalculator({
                               ? copy.fields.doorsCount
                               : copy.fields.airConditionersCount
                           }
+                          min={0}
                           onChange={(value) =>
                             update(
                               extra === "doors"
@@ -492,6 +457,14 @@ export function CostCalculator({
                           }
                         />
                       ) : null}
+                      {selected && needsBathrooms ? (
+                        <NumberField
+                          label={copy.fields.bathrooms}
+                          min={1}
+                          onChange={(bathrooms) => update({ bathrooms })}
+                          value={values.bathrooms}
+                        />
+                      ) : null}
                     </div>
                   );
                 }
@@ -499,58 +472,10 @@ export function CostCalculator({
             </div>
           </section>
         ) : null}
-        <section className="rounded-[28px] border border-[var(--border)] bg-white p-5 shadow-[var(--shadow-card)] sm:p-7">
-          <StepTitle
-            number={
-              hasConstruction && hasRenovation
-                ? "06"
-                : hasConstruction
-                  ? "05"
-                  : "04"
-            }
-            {...copy.steps.design}
-          />
-          <div className="mt-6">
-            <SwitchRow
-              checked={values.designEnabled}
-              description={copy.design.enabledDescription}
-              label={copy.design.enabled}
-              onChange={(designEnabled) => update({ designEnabled })}
-            />
-          </div>
-          {values.designEnabled ? (
-            <div className="mt-4 grid gap-3 md:grid-cols-3">
-              {(Object.keys(config.design) as DesignPackage[]).map(
-                (designPackage) => {
-                  const option = copy.design[designPackage];
-                  return (
-                    <button
-                      aria-pressed={values.designPackage === designPackage}
-                      className={selectionClass(
-                        values.designPackage === designPackage
-                      )}
-                      key={designPackage}
-                      onClick={() => update({ designPackage })}
-                      type="button"
-                    >
-                      <Palette
-                        aria-hidden="true"
-                        className="size-5 stroke-[1.4] text-[var(--brand-accent)]"
-                      />
-                      <span className="mt-4 block text-sm font-semibold text-[var(--text-primary)]">
-                        {option.title}
-                      </span>
-                      <span className="mt-1 block text-xs leading-5 text-[var(--text-secondary)]">
-                        {option.description}
-                      </span>
-                    </button>
-                  );
-                }
-              )}
-            </div>
-          ) : null}
-        </section>
+
+        <CalculatorLeadForm copy={copy} locale={locale} values={values} />
       </div>
+
       <aside className="rounded-[28px] border border-[var(--border)] bg-[var(--text-primary)] p-5 text-white shadow-[var(--shadow-card)] lg:sticky lg:top-6 sm:p-6">
         <div className="flex items-center gap-2 text-[var(--warm-accent)]">
           <SlidersHorizontal aria-hidden="true" className="size-4" />
@@ -567,42 +492,7 @@ export function CostCalculator({
               {money(estimate.min)}
               <br />— {money(estimate.max)}
             </p>
-            <div className="mt-6 border-t border-white/15 pt-5">
-              {estimate.lines.length ? (
-                <ul className="space-y-3">
-                  {estimate.lines.map((line, index) => (
-                    <li
-                      className="flex justify-between gap-4 text-xs leading-5"
-                      key={`${line.label}-${index}`}
-                    >
-                      <span className="text-white/65">
-                        {line.label}
-                        {line.note ? (
-                          <span className="block text-white/40">
-                            {line.note}
-                          </span>
-                        ) : null}
-                      </span>
-                      <span className="shrink-0 text-right font-semibold">
-                        {line.amount
-                          ? money(line.amount)
-                          : copy.result.included}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-              ) : (
-                <p className="text-sm leading-6 text-white/65">
-                  {copy.result.empty}
-                </p>
-              )}
-            </div>
-            <div className="mt-5 border-t border-white/15 pt-4">
-              <span className="text-xs text-white/55">{copy.result.total}</span>
-              <span className="mt-1 block text-lg font-semibold">
-                {money(estimate.total)}
-              </span>
-            </div>
+            <EstimateLines copy={copy} estimate={estimate} money={money} />
           </>
         ) : (
           <p className="mt-4 text-sm leading-6 text-white/75">
@@ -613,6 +503,145 @@ export function CostCalculator({
           {copy.result.notice}
         </p>
       </aside>
+    </div>
+  );
+}
+
+function CalculatorLeadForm({
+  copy,
+  locale,
+  values,
+}: {
+  copy: Dictionary["constructionCalculator"];
+  locale: Locale;
+  values: CalculatorFormValues;
+}) {
+  const action = submitCalculatorLeadAction.bind(null, locale);
+  const [state, formAction, pending] = useActionState(action, initialLeadState);
+  const formRef = useRef<HTMLFormElement>(null);
+  const details = useMemo(() => JSON.stringify(values), [values]);
+
+  useEffect(() => {
+    if (state.status === "success") formRef.current?.reset();
+  }, [state.status]);
+
+  return (
+    <section className="rounded-[28px] border border-[var(--border)] bg-white p-5 shadow-[var(--shadow-card)] sm:p-7">
+      <StepTitle number="04" {...copy.contact} />
+      <form
+        action={formAction}
+        className="mt-6 grid gap-4 sm:grid-cols-2"
+        noValidate
+        ref={formRef}
+      >
+        <input
+          name="calculationType"
+          type="hidden"
+          value={values.calculationType}
+        />
+        <input name="area" type="hidden" value={values.area} />
+        <input name="details" type="hidden" value={details} />
+        <label className="block text-sm font-semibold text-[var(--text-primary)]">
+          {copy.contact.nameLabel}
+          <input
+            className="mt-2 min-h-12 w-full rounded-xl border border-[var(--border)] bg-white px-3 text-base font-medium outline-none transition focus:border-[var(--text-primary)]"
+            disabled={pending}
+            maxLength={120}
+            name="name"
+            placeholder={copy.contact.namePlaceholder}
+            required
+            type="text"
+          />
+          {state.errors.name ? (
+            <span className="mt-2 block text-xs font-normal text-red-700">
+              {state.errors.name}
+            </span>
+          ) : null}
+        </label>
+        <label className="block text-sm font-semibold text-[var(--text-primary)]">
+          {copy.contact.phoneLabel}
+          <input
+            className="mt-2 min-h-12 w-full rounded-xl border border-[var(--border)] bg-white px-3 text-base font-medium outline-none transition focus:border-[var(--text-primary)]"
+            disabled={pending}
+            inputMode="tel"
+            maxLength={40}
+            name="phone"
+            placeholder={copy.contact.phonePlaceholder}
+            required
+            type="tel"
+          />
+          {state.errors.phone ? (
+            <span className="mt-2 block text-xs font-normal text-red-700">
+              {state.errors.phone}
+            </span>
+          ) : null}
+        </label>
+        <label className="block text-sm font-semibold text-[var(--text-primary)] sm:col-span-2">
+          {copy.contact.commentLabel}
+          <textarea
+            className="mt-2 min-h-28 w-full rounded-xl border border-[var(--border)] bg-white px-3 py-3 text-base font-medium outline-none transition focus:border-[var(--text-primary)]"
+            disabled={pending}
+            maxLength={2000}
+            name="comment"
+            placeholder={copy.contact.commentPlaceholder}
+            rows={4}
+          />
+        </label>
+        {state.errors.area ? (
+          <p className="text-sm text-red-700 sm:col-span-2">
+            {state.errors.area}
+          </p>
+        ) : null}
+        <div className="sm:col-span-2">
+          <button
+            className="inline-flex min-h-12 items-center justify-center rounded-xl bg-[var(--button-primary)] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[var(--button-primary-hover)] disabled:cursor-wait disabled:opacity-65"
+            disabled={pending}
+            type="submit"
+          >
+            {pending ? copy.contact.submitting : copy.contact.submit}
+          </button>
+          {state.message ? (
+            <p
+              aria-live="polite"
+              className={`mt-3 text-sm ${state.status === "success" ? "text-emerald-700" : "text-red-700"}`}
+              role={state.status === "error" ? "alert" : "status"}
+            >
+              {state.message}
+            </p>
+          ) : null}
+        </div>
+      </form>
+    </section>
+  );
+}
+
+function ChoiceCards({
+  options,
+  selected,
+  onChange,
+}: {
+  options: Record<string, { title: string; description: string }>;
+  selected: string;
+  onChange: (value: string) => void;
+}) {
+  return (
+    <div className="grid gap-3 md:grid-cols-3">
+      {Object.entries(options).map(([value, option]) => (
+        <button
+          aria-pressed={selected === value}
+          className={`${selectionClass(selected === value)} min-h-28`}
+          key={value}
+          onClick={() => onChange(value)}
+          type="button"
+        >
+          <span className="font-semibold text-[var(--text-primary)]">
+            {option.title}
+          </span>
+          <span className="mt-2 block text-xs leading-5 text-[var(--text-secondary)]">
+            {option.description}
+          </span>
+        </button>
+      ))}
     </div>
   );
 }
@@ -674,10 +703,52 @@ function OptionWithArea({
       {checked ? (
         <NumberField
           label={fieldLabel}
+          min={1}
           onChange={onValueChange}
           value={value}
         />
       ) : null}
     </div>
+  );
+}
+
+function EstimateLines({
+  copy,
+  estimate,
+  money,
+}: {
+  copy: Dictionary["constructionCalculator"];
+  estimate: ReturnType<typeof calculateConstructionEstimate>;
+  money: (value: number) => string;
+}) {
+  return (
+    <>
+      <div className="mt-6 border-t border-white/15 pt-5">
+        <ul className="space-y-3">
+          {estimate.lines.map((line, index) => (
+            <li
+              className="flex justify-between gap-4 text-xs leading-5"
+              key={`${line.label}-${index}`}
+            >
+              <span className="text-white/65">
+                {line.label}
+                {line.note ? (
+                  <span className="block text-white/40">{line.note}</span>
+                ) : null}
+              </span>
+              <span className="shrink-0 text-right font-semibold">
+                {line.amount ? money(line.amount) : copy.result.included}
+              </span>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div className="mt-5 border-t border-white/15 pt-4">
+        <span className="text-xs text-white/55">{copy.result.total}</span>
+        <span className="mt-1 block text-lg font-semibold">
+          {money(estimate.total)}
+        </span>
+      </div>
+    </>
   );
 }

@@ -2,49 +2,46 @@
  * All editable calculator assumptions live here. Amounts are in AMD and are
  * intentionally indicative — update them when commercial rates are approved.
  */
+export const calculationTypes = [
+  "renovation",
+  "construction",
+  "design",
+] as const;
+
 export const constructionCalculatorConfig = {
   currency: "AMD",
   publicRates: false,
+  limits: { minArea: 1, maxArea: 100_000 },
   estimateRange: { minMultiplier: 0.9, maxMultiplier: 1.15 },
-  calculationTypes: {
-    renovation: {},
-    construction: {},
-    combined: {},
-  },
   quickScenarios: [
     {
       id: "apartment-renovation",
       calculationType: "renovation",
       renovationObjectType: "apartment",
-      designEnabled: false,
       labelKey: "apartmentRenovation",
     },
     {
       id: "house-renovation",
       calculationType: "renovation",
       renovationObjectType: "privateHouse",
-      designEnabled: false,
       labelKey: "houseRenovation",
     },
     {
       id: "house-construction",
       calculationType: "construction",
       renovationObjectType: undefined,
-      designEnabled: false,
       labelKey: "houseConstruction",
     },
     {
       id: "interior-design",
-      calculationType: "renovation",
+      calculationType: "design",
       renovationObjectType: "apartment",
-      designEnabled: true,
       labelKey: "interiorDesign",
     },
     {
       id: "commercial",
       calculationType: "renovation",
       renovationObjectType: "commercial",
-      designEnabled: false,
       labelKey: "commercial",
     },
   ],
@@ -75,11 +72,6 @@ export const constructionCalculatorConfig = {
     },
   },
   renovation: {
-    objectTypes: {
-      apartment: {},
-      privateHouse: {},
-      commercial: {},
-    },
     conditions: {
       newWithoutFinish: { multiplier: 1 },
       roughFinish: { multiplier: 0.9 },
@@ -111,8 +103,7 @@ export const constructionCalculatorConfig = {
   },
 } as const;
 
-export type CalculationType =
-  keyof typeof constructionCalculatorConfig.calculationTypes;
+export type CalculationType = (typeof calculationTypes)[number];
 export type CalculatorScenarioId =
   (typeof constructionCalculatorConfig.quickScenarios)[number]["id"];
 export type ConstructionPackage =
@@ -121,8 +112,7 @@ export type ConstructionMaterial =
   keyof typeof constructionCalculatorConfig.construction.materials;
 export type HouseShape =
   keyof typeof constructionCalculatorConfig.construction.houseShapes;
-export type RenovationObjectType =
-  keyof typeof constructionCalculatorConfig.renovation.objectTypes;
+export type RenovationObjectType = "apartment" | "privateHouse" | "commercial";
 export type RenovationCondition =
   keyof typeof constructionCalculatorConfig.renovation.conditions;
 export type RenovationLevel =

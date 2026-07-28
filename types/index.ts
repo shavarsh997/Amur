@@ -305,24 +305,17 @@ export interface Dictionary {
     steps: {
       scenario: { title: string; description: string };
       parameters: { title: string; description: string };
-      construction: { title: string; description: string };
       constructionExtras: { title: string; description: string };
       renovationExtras: { title: string; description: string };
-      design: { title: string; description: string };
     };
     fields: {
       area: string;
-      floors: string;
-      rooms: string;
       bathrooms: string;
-      houseParameters: string;
       houseShape: string;
       constructionType: string;
       basementArea: string;
       garageArea: string;
       terraceArea: string;
-      propertyCondition: string;
-      propertyType: string;
       currentCondition: string;
       renovationLevel: string;
       distance: string;
@@ -330,10 +323,6 @@ export interface Dictionary {
       doorsCount: string;
       airConditionersCount: string;
     };
-    calculationTypes: Record<
-      "construction" | "renovation" | "combined",
-      LocalizedText
-    >;
     quickScenarios: Record<
       | "apartmentRenovation"
       | "houseRenovation"
@@ -360,7 +349,6 @@ export interface Dictionary {
       >;
     };
     renovation: {
-      objectTypes: Record<"apartment" | "privateHouse" | "commercial", string>;
       conditions: Record<
         | "newWithoutFinish"
         | "roughFinish"
@@ -382,14 +370,22 @@ export interface Dictionary {
         string
       >;
     };
-    design: Record<"basic" | "full" | "supervision", LocalizedText> & {
-      enabled: string;
-      enabledDescription: string;
+    design: Record<"basic" | "full" | "supervision", LocalizedText>;
+    contact: {
+      title: string;
+      description: string;
+      nameLabel: string;
+      phoneLabel: string;
+      commentLabel: string;
+      namePlaceholder: string;
+      phonePlaceholder: string;
+      commentPlaceholder: string;
+      submit: string;
+      submitting: string;
     };
     result: {
       title: string;
       range: string;
-      enterArea: string;
       included: string;
       empty: string;
       pricingUnavailable: string;
