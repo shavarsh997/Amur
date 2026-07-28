@@ -48,7 +48,9 @@ export default async function ServicesPage({ params }: Props) {
             className="grid overflow-hidden rounded-[24px] border border-[var(--border)] bg-white lg:grid-cols-2"
             key={service.slug}
           >
-            <div className={`relative min-h-72 bg-[var(--background-warm)] ${index % 2 ? "lg:order-2" : ""}`}>
+            <div
+              className={`relative min-h-72 bg-[var(--background-warm)] ${index % 2 ? "lg:order-2" : ""}`}
+            >
               <Image
                 alt={content.title}
                 className="object-cover"
@@ -61,28 +63,45 @@ export default async function ServicesPage({ params }: Props) {
               <h2 className="text-2xl font-semibold tracking-[-0.04em] text-[var(--text-primary)] sm:text-3xl">
                 {content.title}
               </h2>
-              <p className="mt-4 leading-7 text-[var(--text-secondary)]">{content.fullDescription}</p>
+              <p className="mt-4 leading-7 text-[var(--text-secondary)]">
+                {content.fullDescription}
+              </p>
               <div className="mt-7 grid gap-6 sm:grid-cols-2">
                 <div>
-                  <h3 className="font-semibold text-[var(--text-primary)]">{services.detail.included}</h3>
+                  <h3 className="font-semibold text-[var(--text-primary)]">
+                    {services.detail.included}
+                  </h3>
                   <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-6 text-[var(--text-secondary)]">
-                    {content.includedWorks.map((item) => <li key={item}>{item}</li>)}
+                    {content.includedWorks.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
                   </ul>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-[var(--text-primary)]">{services.detail.stages}</h3>
+                  <h3 className="font-semibold text-[var(--text-primary)]">
+                    {services.detail.stages}
+                  </h3>
                   <ol className="mt-3 list-decimal space-y-2 pl-5 text-sm leading-6 text-[var(--text-secondary)]">
-                    {content.workflow.map((step) => <li key={step.title}>{step.title}</li>)}
+                    {content.workflow.map((step) => (
+                      <li key={step.title}>{step.title}</li>
+                    ))}
                   </ol>
                 </div>
               </div>
               <div className="mt-6">
-                <h3 className="font-semibold text-[var(--text-primary)]">{services.detail.audience}</h3>
+                <h3 className="font-semibold text-[var(--text-primary)]">
+                  {services.detail.audience}
+                </h3>
                 <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-6 text-[var(--text-secondary)]">
-                  {content.suitableFor.map((item) => <li key={item}>{item}</li>)}
+                  {content.suitableFor.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
                 </ul>
               </div>
-              <ButtonLink className="mt-8" href={`/${locale}/services/${service.slug}`}>
+              <ButtonLink
+                className="mt-8"
+                href={`/${locale}/services/${service.slug}`}
+              >
                 {content.primaryCta ?? services.detail.requestEstimate}
               </ButtonLink>
             </div>

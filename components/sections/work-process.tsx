@@ -29,7 +29,9 @@ export function WorkProcess({ dictionary }: { dictionary: Dictionary }) {
                   <h3 className="text-base font-semibold tracking-[-0.02em] text-[var(--text-primary)] md:mt-4 md:text-lg">
                     {step.title}
                   </h3>
-                  <p className="mt-1 text-sm leading-6 text-[var(--text-secondary)] md:mt-2 md:text-base md:leading-7">{step.description}</p>
+                  <p className="mt-1 text-sm leading-6 text-[var(--text-secondary)] md:mt-2 md:text-base md:leading-7">
+                    {step.description}
+                  </p>
                 </div>
               </li>
             );

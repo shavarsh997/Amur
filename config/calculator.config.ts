@@ -6,7 +6,15 @@ import type { CalculatorObjectType, CalculatorWorkType } from "@/types/config";
  * never invent a price when this array is empty.
  */
 export const calculatorConfig = {
-  steps: ["objectType", "workType", "area", "location", "options", "contact", "result"],
+  steps: [
+    "objectType",
+    "workType",
+    "area",
+    "location",
+    "options",
+    "contact",
+    "result",
+  ],
   objectTypes: [
     { value: "private-house", labelKey: "privateHouse" },
     { value: "commercial", labelKey: "commercial" },
@@ -41,9 +49,18 @@ export const calculatorConfig = {
   },
 } as const satisfies {
   steps: readonly string[];
-  objectTypes: readonly { value: CalculatorObjectType; labelKey: "privateHouse" | "commercial" | "apartment" | "other" }[];
-  workTypes: readonly { value: CalculatorWorkType; labelKey: "turnkey" | "design" | "renovation" | "separateWorks" }[];
-  options: readonly { value: CalculatorOption; labelKey: "designDocumentation" | "materials" | "siteConditions" }[];
+  objectTypes: readonly {
+    value: CalculatorObjectType;
+    labelKey: "privateHouse" | "commercial" | "apartment" | "other";
+  }[];
+  workTypes: readonly {
+    value: CalculatorWorkType;
+    labelKey: "turnkey" | "design" | "renovation" | "separateWorks";
+  }[];
+  options: readonly {
+    value: CalculatorOption;
+    labelKey: "designDocumentation" | "materials" | "siteConditions";
+  }[];
   limits: { minArea: number; maxArea: number };
   pricing: {
     currency: string;

@@ -4,10 +4,7 @@ import Link from "next/link";
 import { navigationConfig } from "@/config/navigation.config";
 import { siteConfig } from "@/config/site.config";
 import { LanguageSwitcher } from "@/components/layout/language-switcher";
-import {
-  MobileNav,
-  type NavigationItem,
-} from "@/components/layout/mobile-nav";
+import { MobileNav, type NavigationItem } from "@/components/layout/mobile-nav";
 import { BrandMark } from "@/components/ui/brand-mark";
 import { Container } from "@/components/ui/container";
 import type { Dictionary, Locale } from "@/types";
@@ -44,14 +41,15 @@ export function Header({
           {config.shortCompanyName}
         </Link>
 
-        <nav aria-label={dictionary.footer.navigation} className="hidden xl:block">
+        <nav
+          aria-label={dictionary.footer.navigation}
+          className="hidden xl:block"
+        >
           <ul className="flex items-center gap-5 xl:gap-6">
             {navigation.map((item) => (
               <li key={item.href}>
                 <Link
-                  className={`rounded-sm text-sm font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--button-primary)] ${
-                    "hover:text-[var(--text-secondary)]"
-                  }`}
+                  className={`rounded-sm text-sm font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--button-primary)] ${"hover:text-[var(--text-secondary)]"}`}
                   href={item.href}
                 >
                   {item.label}

@@ -2,10 +2,7 @@
 
 import { useActionState, useEffect, useId, useRef } from "react";
 
-import {
-  submitLeadAction,
-  type LeadActionState,
-} from "@/app/actions";
+import { submitLeadAction, type LeadActionState } from "@/app/actions";
 import { calculatorConfig } from "@/config/calculator.config";
 import type { Dictionary, Locale } from "@/types";
 
@@ -53,12 +50,22 @@ export function LeadForm({
       noValidate
     >
       <div>
-        <label className="mb-2 block text-sm font-semibold" htmlFor={fieldId("objectType")}>
+        <label
+          className="mb-2 block text-sm font-semibold"
+          htmlFor={fieldId("objectType")}
+        >
           {copy.fields.objectType}
-          <span className="ml-1 text-[var(--text-secondary)]" aria-hidden="true">*</span>
+          <span
+            className="ml-1 text-[var(--text-secondary)]"
+            aria-hidden="true"
+          >
+            *
+          </span>
         </label>
         <select
-          aria-describedby={state.errors.objectType ? errorId("objectType") : undefined}
+          aria-describedby={
+            state.errors.objectType ? errorId("objectType") : undefined
+          }
           aria-invalid={Boolean(state.errors.objectType)}
           className={fieldClass}
           defaultValue=""
@@ -84,9 +91,17 @@ export function LeadForm({
       </div>
 
       <div>
-        <label className="mb-2 block text-sm font-semibold" htmlFor={fieldId("area")}>
+        <label
+          className="mb-2 block text-sm font-semibold"
+          htmlFor={fieldId("area")}
+        >
           {copy.fields.area}
-          <span className="ml-1 text-[var(--text-secondary)]" aria-hidden="true">*</span>
+          <span
+            className="ml-1 text-[var(--text-secondary)]"
+            aria-hidden="true"
+          >
+            *
+          </span>
         </label>
         <input
           aria-describedby={state.errors.area ? errorId("area") : undefined}
@@ -110,9 +125,17 @@ export function LeadForm({
       </div>
 
       <div>
-        <label className="mb-2 block text-sm font-semibold" htmlFor={fieldId("region")}>
+        <label
+          className="mb-2 block text-sm font-semibold"
+          htmlFor={fieldId("region")}
+        >
           {copy.fields.region}
-          <span className="ml-1 text-[var(--text-secondary)]" aria-hidden="true">*</span>
+          <span
+            className="ml-1 text-[var(--text-secondary)]"
+            aria-hidden="true"
+          >
+            *
+          </span>
         </label>
         <input
           aria-describedby={state.errors.region ? errorId("region") : undefined}
@@ -135,12 +158,22 @@ export function LeadForm({
       </div>
 
       <div>
-        <label className="mb-2 block text-sm font-semibold" htmlFor={fieldId("workType")}>
+        <label
+          className="mb-2 block text-sm font-semibold"
+          htmlFor={fieldId("workType")}
+        >
           {copy.fields.workType}
-          <span className="ml-1 text-[var(--text-secondary)]" aria-hidden="true">*</span>
+          <span
+            className="ml-1 text-[var(--text-secondary)]"
+            aria-hidden="true"
+          >
+            *
+          </span>
         </label>
         <select
-          aria-describedby={state.errors.workType ? errorId("workType") : undefined}
+          aria-describedby={
+            state.errors.workType ? errorId("workType") : undefined
+          }
           aria-invalid={Boolean(state.errors.workType)}
           className={fieldClass}
           defaultValue=""
@@ -166,9 +199,17 @@ export function LeadForm({
       </div>
 
       <div>
-        <label className="mb-2 block text-sm font-semibold" htmlFor={fieldId("name")}>
+        <label
+          className="mb-2 block text-sm font-semibold"
+          htmlFor={fieldId("name")}
+        >
           {copy.fields.name}
-          <span className="ml-1 text-[var(--text-secondary)]" aria-hidden="true">*</span>
+          <span
+            className="ml-1 text-[var(--text-secondary)]"
+            aria-hidden="true"
+          >
+            *
+          </span>
         </label>
         <input
           aria-describedby={state.errors.name ? errorId("name") : undefined}
@@ -191,9 +232,17 @@ export function LeadForm({
       </div>
 
       <div>
-        <label className="mb-2 block text-sm font-semibold" htmlFor={fieldId("phone")}>
+        <label
+          className="mb-2 block text-sm font-semibold"
+          htmlFor={fieldId("phone")}
+        >
           {copy.fields.phone}
-          <span className="ml-1 text-[var(--text-secondary)]" aria-hidden="true">*</span>
+          <span
+            className="ml-1 text-[var(--text-secondary)]"
+            aria-hidden="true"
+          >
+            *
+          </span>
         </label>
         <input
           aria-describedby={state.errors.phone ? errorId("phone") : undefined}
@@ -217,7 +266,10 @@ export function LeadForm({
       </div>
 
       <div className="md:col-span-2">
-        <label className="mb-2 block text-sm font-semibold" htmlFor={fieldId("comment")}>
+        <label
+          className="mb-2 block text-sm font-semibold"
+          htmlFor={fieldId("comment")}
+        >
           {copy.fields.comment}
           <span className="ml-2 text-xs font-normal text-zinc-500">
             {dictionary.common.optional}

@@ -16,13 +16,21 @@ export function RenovationIncluded({ locale }: { locale: Locale }) {
           <div>
             <ul className="grid gap-2 sm:grid-cols-2 sm:gap-3">
               {content.items.map((item) => (
-                <li className="flex items-center gap-3 rounded-xl border border-[var(--border)] bg-white px-4 py-3 text-sm font-medium text-[var(--text-primary)]" key={item}>
-                  <Check aria-hidden="true" className="size-4 shrink-0 stroke-[1.7]" />
+                <li
+                  className="flex items-center gap-3 rounded-xl border border-[var(--border)] bg-white px-4 py-3 text-sm font-medium text-[var(--text-primary)]"
+                  key={item}
+                >
+                  <Check
+                    aria-hidden="true"
+                    className="size-4 shrink-0 stroke-[1.7]"
+                  />
                   {item}
                 </li>
               ))}
             </ul>
-            <p className="mt-5 text-sm leading-6 text-[var(--text-secondary)]">{content.notice}</p>
+            <p className="mt-5 text-sm leading-6 text-[var(--text-secondary)]">
+              {content.notice}
+            </p>
           </div>
         </div>
       </Container>

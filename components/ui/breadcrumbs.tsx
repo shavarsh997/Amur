@@ -22,7 +22,10 @@ export function Breadcrumbs({
           const current = index === items.length - 1;
 
           return (
-            <li className="flex items-center gap-2" key={`${item.label}-${index}`}>
+            <li
+              className="flex items-center gap-2"
+              key={`${item.label}-${index}`}
+            >
               {index > 0 ? (
                 <ChevronRight aria-hidden="true" className="size-4" />
               ) : null}
@@ -34,7 +37,9 @@ export function Breadcrumbs({
                   {item.label}
                 </Link>
               ) : (
-                <span aria-current={current ? "page" : undefined}>{item.label}</span>
+                <span aria-current={current ? "page" : undefined}>
+                  {item.label}
+                </span>
               )}
             </li>
           );

@@ -49,7 +49,11 @@ export function LanguageSwitcher({
         value={locale}
       >
         {locales.map((item) => (
-          <option className="text-[var(--text-primary)]" key={item} value={item}>
+          <option
+            className="text-[var(--text-primary)]"
+            key={item}
+            value={item}
+          >
             {item}
           </option>
         ))}

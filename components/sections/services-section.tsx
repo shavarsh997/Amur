@@ -32,15 +32,17 @@ export function ServicesSection({
           </Link>
         </div>
         <div className="mt-8 grid gap-4 lg:grid-cols-3">
-          {getActiveServices(locale).filter((service) => service.category === "primary").map(({ content, ...service }) => (
-            <ServiceCard
-              content={content}
-              key={service.slug}
-              learnMore={dictionary.services.learnMore}
-              locale={locale}
-              service={service}
-            />
-          ))}
+          {getActiveServices(locale)
+            .filter((service) => service.category === "primary")
+            .map(({ content, ...service }) => (
+              <ServiceCard
+                content={content}
+                key={service.slug}
+                learnMore={dictionary.services.learnMore}
+                locale={locale}
+                service={service}
+              />
+            ))}
         </div>
       </Container>
     </section>

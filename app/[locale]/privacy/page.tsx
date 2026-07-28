@@ -40,13 +40,19 @@ export default async function PrivacyPage({ params }: Props) {
       />
       <Container className="py-12 sm:py-16 lg:py-20">
         <article className="mx-auto max-w-4xl">
-          <p className="text-sm font-semibold text-[var(--brand-accent)]">{privacy.updated}</p>
+          <p className="text-sm font-semibold text-[var(--brand-accent)]">
+            {privacy.updated}
+          </p>
           <div className="mt-10 space-y-12">
             {privacy.sections.map((section) => (
               <section key={section.title}>
-                <h2 className="text-2xl font-semibold text-[var(--text-primary)]">{section.title}</h2>
+                <h2 className="text-2xl font-semibold text-[var(--text-primary)]">
+                  {section.title}
+                </h2>
                 <div className="mt-4 space-y-4 leading-7 text-[var(--text-secondary)]">
-                  {section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+                  {section.paragraphs.map((paragraph) => (
+                    <p key={paragraph}>{paragraph}</p>
+                  ))}
                 </div>
               </section>
             ))}

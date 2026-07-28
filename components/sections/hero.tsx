@@ -34,14 +34,24 @@ export function Hero({
               <ul className="mt-5 grid max-w-xl grid-cols-2 gap-x-4 gap-y-2 text-xs font-medium leading-5 text-[var(--text-secondary)] sm:mt-6 sm:flex sm:flex-wrap sm:gap-x-5 sm:gap-y-2 sm:text-sm">
                 {content.heroDirections.map((direction) => (
                   <li className="flex items-center gap-1.5" key={direction}>
-                    <Check aria-hidden="true" className="size-3.5 shrink-0 text-[var(--text-primary)]" />
+                    <Check
+                      aria-hidden="true"
+                      className="size-3.5 shrink-0 text-[var(--text-primary)]"
+                    />
                     {direction}
                   </li>
                 ))}
               </ul>
               <div className="mt-6 flex flex-col gap-2.5 sm:mt-7 sm:flex-row sm:gap-3">
-                <CalculatorTrigger className="w-full sm:w-auto" label={dictionary.hero.primaryAction} />
-                <ButtonLink className="w-full gap-2 sm:w-auto" href={`/${locale}/services`} variant="secondary">
+                <CalculatorTrigger
+                  className="w-full sm:w-auto"
+                  label={dictionary.hero.primaryAction}
+                />
+                <ButtonLink
+                  className="w-full gap-2 sm:w-auto"
+                  href={`/${locale}/services`}
+                  variant="secondary"
+                >
                   {dictionary.hero.secondaryAction}
                   <ArrowRight aria-hidden="true" className="size-4" />
                 </ButtonLink>
@@ -56,8 +66,14 @@ export function Hero({
                 sizes="(max-width: 1023px) 100vw, 56vw"
                 src={content.heroVisual.image}
               />
-              <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-white/25 via-transparent to-white/10" />
-              <div aria-hidden="true" className="absolute -bottom-16 -left-24 size-64 rounded-full bg-white/50 blur-3xl" />
+              <div
+                aria-hidden="true"
+                className="absolute inset-0 bg-gradient-to-t from-white/25 via-transparent to-white/10"
+              />
+              <div
+                aria-hidden="true"
+                className="absolute -bottom-16 -left-24 size-64 rounded-full bg-white/50 blur-3xl"
+              />
             </div>
           </div>
         </div>

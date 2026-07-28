@@ -5,7 +5,9 @@ import { getActiveServices } from "@/config/services.config";
 import { siteConfig } from "@/config/site.config";
 import { defaultLocale, locales } from "@/lib/i18n";
 
-const servicePaths = getActiveServices(defaultLocale).map(({ slug }) => `services/${slug}`);
+const servicePaths = getActiveServices(defaultLocale).map(
+  ({ slug }) => `services/${slug}`
+);
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const paths = [...staticRouteConfig, ...servicePaths];
@@ -18,7 +20,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
         locale,
         `${siteConfig.domain}/${locale}${suffix}`,
       ]),
-      ["x-default", `${siteConfig.domain}/${siteConfig.defaultLocale}${suffix}`],
+      [
+        "x-default",
+        `${siteConfig.domain}/${siteConfig.defaultLocale}${suffix}`,
+      ],
     ]);
 
     return locales.map((locale) => ({

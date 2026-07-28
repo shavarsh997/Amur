@@ -45,7 +45,9 @@ export function Footer({
           </div>
 
           <div>
-            <h2 className="font-semibold text-[var(--text-primary)]">{dictionary.footer.navigation}</h2>
+            <h2 className="font-semibold text-[var(--text-primary)]">
+              {dictionary.footer.navigation}
+            </h2>
             <ul className="mt-5 space-y-3 text-sm">
               {navigation.map((item) => (
                 <li key={item.href}>
@@ -61,23 +63,29 @@ export function Footer({
           </div>
 
           <div>
-            <h2 className="font-semibold text-[var(--text-primary)]">{dictionary.footer.services}</h2>
+            <h2 className="font-semibold text-[var(--text-primary)]">
+              {dictionary.footer.services}
+            </h2>
             <ul className="mt-5 space-y-3 text-sm">
-              {getActiveServices(locale).slice(0, 4).map(({ content, slug }) => (
-                <li key={slug}>
-                  <Link
-                    className="rounded-sm transition-colors hover:text-[var(--text-primary)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--button-primary)]"
-                    href={`${prefix}/services/${slug}`}
-                  >
-                    {content.title}
-                  </Link>
-                </li>
-              ))}
+              {getActiveServices(locale)
+                .slice(0, 4)
+                .map(({ content, slug }) => (
+                  <li key={slug}>
+                    <Link
+                      className="rounded-sm transition-colors hover:text-[var(--text-primary)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--button-primary)]"
+                      href={`${prefix}/services/${slug}`}
+                    >
+                      {content.title}
+                    </Link>
+                  </li>
+                ))}
             </ul>
           </div>
 
           <div>
-            <h2 className="font-semibold text-[var(--text-primary)]">{dictionary.footer.contacts}</h2>
+            <h2 className="font-semibold text-[var(--text-primary)]">
+              {dictionary.footer.contacts}
+            </h2>
             <ul className="mt-5 space-y-4 text-sm">
               {config.contacts.phoneHref ? (
                 <li>
@@ -85,7 +93,10 @@ export function Footer({
                     className="inline-flex items-center gap-2 rounded-sm hover:text-[var(--text-primary)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--button-primary)]"
                     href={config.contacts.phoneHref}
                   >
-                    <Phone aria-hidden="true" className="size-4 text-[var(--text-muted)]" />
+                    <Phone
+                      aria-hidden="true"
+                      className="size-4 text-[var(--text-muted)]"
+                    />
                     {config.contacts.phone}
                   </a>
                 </li>
@@ -96,7 +107,10 @@ export function Footer({
                     className="inline-flex items-center gap-2 rounded-sm hover:text-[var(--text-primary)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--button-primary)]"
                     href={`mailto:${config.contacts.email}`}
                   >
-                    <Mail aria-hidden="true" className="size-4 text-[var(--text-muted)]" />
+                    <Mail
+                      aria-hidden="true"
+                      className="size-4 text-[var(--text-muted)]"
+                    />
                     {config.contacts.email}
                   </a>
                 </li>
@@ -132,7 +146,8 @@ export function Footer({
 
         <div className="flex flex-col gap-4 pt-7 text-sm text-[var(--text-muted)] sm:flex-row sm:items-center sm:justify-between">
           <p>
-            © {new Date().getFullYear()} {config.companyName}. {dictionary.footer.rights}
+            © {new Date().getFullYear()} {config.companyName}.{" "}
+            {dictionary.footer.rights}
           </p>
           <Link
             className="rounded-sm hover:text-[var(--text-primary)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--button-primary)]"

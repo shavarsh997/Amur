@@ -12,10 +12,30 @@ export const constructionCalculatorConfig = {
     combined: {},
   },
   quickScenarios: [
-    { id: "apartment-renovation", calculationType: "renovation", renovationObjectType: "apartment", labelKey: "apartmentRenovation" },
-    { id: "house-renovation", calculationType: "renovation", renovationObjectType: "privateHouse", labelKey: "houseRenovation" },
-    { id: "house-construction", calculationType: "construction", renovationObjectType: undefined, labelKey: "houseConstruction" },
-    { id: "commercial", calculationType: "renovation", renovationObjectType: "commercial", labelKey: "commercial" },
+    {
+      id: "apartment-renovation",
+      calculationType: "renovation",
+      renovationObjectType: "apartment",
+      labelKey: "apartmentRenovation",
+    },
+    {
+      id: "house-renovation",
+      calculationType: "renovation",
+      renovationObjectType: "privateHouse",
+      labelKey: "houseRenovation",
+    },
+    {
+      id: "house-construction",
+      calculationType: "construction",
+      renovationObjectType: undefined,
+      labelKey: "houseConstruction",
+    },
+    {
+      id: "commercial",
+      calculationType: "renovation",
+      renovationObjectType: "commercial",
+      labelKey: "commercial",
+    },
   ],
   construction: {
     packages: {
@@ -80,12 +100,20 @@ export const constructionCalculatorConfig = {
   },
 } as const;
 
-export type CalculationType = keyof typeof constructionCalculatorConfig.calculationTypes;
-export type ConstructionPackage = keyof typeof constructionCalculatorConfig.construction.packages;
-export type ConstructionMaterial = keyof typeof constructionCalculatorConfig.construction.materials;
-export type HouseShape = keyof typeof constructionCalculatorConfig.construction.houseShapes;
-export type RenovationObjectType = keyof typeof constructionCalculatorConfig.renovation.objectTypes;
-export type RenovationCondition = keyof typeof constructionCalculatorConfig.renovation.conditions;
-export type RenovationLevel = keyof typeof constructionCalculatorConfig.renovation.levels;
+export type CalculationType =
+  keyof typeof constructionCalculatorConfig.calculationTypes;
+export type ConstructionPackage =
+  keyof typeof constructionCalculatorConfig.construction.packages;
+export type ConstructionMaterial =
+  keyof typeof constructionCalculatorConfig.construction.materials;
+export type HouseShape =
+  keyof typeof constructionCalculatorConfig.construction.houseShapes;
+export type RenovationObjectType =
+  keyof typeof constructionCalculatorConfig.renovation.objectTypes;
+export type RenovationCondition =
+  keyof typeof constructionCalculatorConfig.renovation.conditions;
+export type RenovationLevel =
+  keyof typeof constructionCalculatorConfig.renovation.levels;
 export type DesignPackage = keyof typeof constructionCalculatorConfig.design;
-export type RenovationExtra = keyof typeof constructionCalculatorConfig.renovation.extras;
+export type RenovationExtra =
+  keyof typeof constructionCalculatorConfig.renovation.extras;

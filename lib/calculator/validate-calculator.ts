@@ -1,5 +1,9 @@
 import { calculatorConfig } from "@/config/calculator.config";
-import type { CalculatorErrors, CalculatorStep, CalculatorValues } from "@/types/calculator";
+import type {
+  CalculatorErrors,
+  CalculatorStep,
+  CalculatorValues,
+} from "@/types/calculator";
 
 type ValidationMessages = {
   objectTypeRequired: string;
@@ -14,19 +18,23 @@ type ValidationMessages = {
 
 function isValidPhone(value: string): boolean {
   const digits = value.replace(/\D/g, "");
-  return /^\+?[\d\s().-]+$/.test(value) && digits.length >= 7 && digits.length <= 15;
+  return (
+    /^\+?[\d\s().-]+$/.test(value) && digits.length >= 7 && digits.length <= 15
+  );
 }
 
 export function validateCalculatorStep(
   step: CalculatorStep,
   values: CalculatorValues,
-  messages: ValidationMessages,
+  messages: ValidationMessages
 ): CalculatorErrors {
   const errors: CalculatorErrors = {};
   const area = Number(values.area.replace(",", "."));
 
-  if (step === "objectType" && !values.objectType) errors.objectType = messages.objectTypeRequired;
-  if (step === "workType" && !values.workType) errors.workType = messages.workTypeRequired;
+  if (step === "objectType" && !values.objectType)
+    errors.objectType = messages.objectTypeRequired;
+  if (step === "workType" && !values.workType)
+    errors.workType = messages.workTypeRequired;
   if (step === "area") {
     if (!values.area) {
       errors.area = messages.areaRequired;
@@ -38,7 +46,8 @@ export function validateCalculatorStep(
       errors.area = messages.areaInvalid;
     }
   }
-  if (step === "location" && !values.region.trim()) errors.location = messages.regionRequired;
+  if (step === "location" && !values.region.trim())
+    errors.location = messages.regionRequired;
   if (step === "contact") {
     if (!values.name.trim()) errors.name = messages.nameRequired;
     if (!values.phone.trim()) {

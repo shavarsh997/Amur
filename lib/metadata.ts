@@ -21,7 +21,7 @@ export function buildMetadata({
   const normalizedPath = path ? `/${path.replace(/^\/|\/$/g, "")}` : "";
   const canonical = `/${locale}${normalizedPath}`;
   const languages = Object.fromEntries(
-    locales.map((language) => [language, `/${language}${normalizedPath}`]),
+    locales.map((language) => [language, `/${language}${normalizedPath}`])
   );
 
   return {

@@ -1,6 +1,7 @@
 import type { CalculatorObjectType, CalculatorWorkType } from "@/types/config";
 
-export type CalculatorOption = "design-documentation" | "materials" | "site-conditions";
+export type CalculatorOption =
+  "design-documentation" | "materials" | "site-conditions";
 
 export type CalculatorValues = {
   objectType: CalculatorObjectType | "";
@@ -13,9 +14,17 @@ export type CalculatorValues = {
   comment: string;
 };
 
-export type CalculatorStep = "objectType" | "workType" | "area" | "location" | "options" | "contact" | "result";
+export type CalculatorStep =
+  | "objectType"
+  | "workType"
+  | "area"
+  | "location"
+  | "options"
+  | "contact"
+  | "result";
 
-export type CalculatorField = Exclude<CalculatorStep, "result"> | "name" | "phone";
+export type CalculatorField =
+  Exclude<CalculatorStep, "result"> | "name" | "phone";
 
 export type CalculatorErrors = Partial<Record<CalculatorField, string>>;
 

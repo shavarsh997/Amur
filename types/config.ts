@@ -2,19 +2,14 @@ import type { Locale } from "@/types";
 
 export type ConfiguredLocale = Locale;
 
-export type NavigationKey = "home" | "services" | "about" | "contacts" | "privacy";
+export type NavigationKey =
+  "home" | "services" | "about" | "contacts" | "privacy";
 
 export type CalculatorObjectType =
-  | "private-house"
-  | "commercial"
-  | "apartment"
-  | "other";
+  "private-house" | "commercial" | "apartment" | "other";
 
 export type CalculatorWorkType =
-  | "turnkey"
-  | "design"
-  | "renovation"
-  | "separate-works";
+  "turnkey" | "design" | "renovation" | "separate-works";
 
 export type ServiceIcon =
   | "blocks"

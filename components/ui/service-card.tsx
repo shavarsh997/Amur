@@ -41,7 +41,10 @@ export function ServiceCard({
 }: ServiceCardProps) {
   const Icon = serviceIcons[service.icon] ?? Blocks;
   const ctaLabel = content.primaryCta ?? learnMore;
-  const calculationType = service.calculatorCategory === "private-house" ? "construction" : "renovation";
+  const calculationType =
+    service.calculatorCategory === "private-house"
+      ? "construction"
+      : "renovation";
 
   return (
     <article className="group grid grid-cols-[1fr_7.75rem] overflow-hidden rounded-2xl border border-[var(--border)] bg-white transition-shadow hover:shadow-[0_18px_38px_-30px_rgb(24_24_27/0.28)] sm:grid-cols-[1fr_0.9fr]">
@@ -61,16 +64,29 @@ export function ServiceCard({
         <h3 className="mt-3 text-[15px] font-semibold leading-5 tracking-[-0.03em] text-[var(--text-primary)] sm:mt-5 sm:text-lg">
           {content.title}
         </h3>
-        <p className="mt-1.5 flex-1 text-xs leading-5 text-[var(--text-secondary)] sm:mt-2 sm:text-sm sm:leading-6">{content.shortDescription}</p>
+        <p className="mt-1.5 flex-1 text-xs leading-5 text-[var(--text-secondary)] sm:mt-2 sm:text-sm sm:leading-6">
+          {content.shortDescription}
+        </p>
         {service.ctaKind === "calculator" ? (
-          <CalculatorTrigger className="mt-3 min-h-9 rounded-lg px-3 text-xs sm:mt-5 sm:min-h-10 sm:text-sm" defaultCalculationType={calculationType} label={ctaLabel} />
+          <CalculatorTrigger
+            className="mt-3 min-h-9 rounded-lg px-3 text-xs sm:mt-5 sm:min-h-10 sm:text-sm"
+            defaultCalculationType={calculationType}
+            label={ctaLabel}
+          />
         ) : (
           <Link
             className="mt-3 inline-flex items-center gap-2 rounded-sm text-xs font-semibold text-[var(--text-primary)] transition-colors hover:text-[var(--text-secondary)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--button-primary)] sm:mt-5 sm:text-sm"
-            href={service.ctaKind === "contact" ? `/${locale}/contacts#estimate` : href}
+            href={
+              service.ctaKind === "contact"
+                ? `/${locale}/contacts#estimate`
+                : href
+            }
           >
             {ctaLabel}
-            <ArrowRight aria-hidden="true" className="size-4 transition-transform group-hover:translate-x-1" />
+            <ArrowRight
+              aria-hidden="true"
+              className="size-4 transition-transform group-hover:translate-x-1"
+            />
           </Link>
         )}
       </div>

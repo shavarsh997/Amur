@@ -39,7 +39,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang={defaultLocale} className={`${manrope.variable} ${notoArmenian.variable} h-full antialiased`}>
+    <html
+      lang={defaultLocale}
+      className={`${manrope.variable} ${notoArmenian.variable} h-full antialiased`}
+    >
       <body suppressHydrationWarning className="flex min-h-full flex-col">
         {children}
       </body>

@@ -49,13 +49,16 @@ export type ConstructionEstimate = {
   max: number;
 };
 
-const numberValue = (value: string) => Math.max(0, Number(value.replace(",", ".")) || 0);
-const includesConstruction = (type: CalculationType) => type === "construction" || type === "combined";
-const includesRenovation = (type: CalculationType) => type === "renovation" || type === "combined";
+const numberValue = (value: string) =>
+  Math.max(0, Number(value.replace(",", ".")) || 0);
+const includesConstruction = (type: CalculationType) =>
+  type === "construction" || type === "combined";
+const includesRenovation = (type: CalculationType) =>
+  type === "renovation" || type === "combined";
 
 export function calculateConstructionEstimate(
   values: ConstructionCalculatorValues,
-  copy: Dictionary["constructionCalculator"],
+  copy: Dictionary["constructionCalculator"]
 ): ConstructionEstimate {
   const area = numberValue(values.area);
   const bathrooms = numberValue(values.bathrooms);
@@ -65,17 +68,25 @@ export function calculateConstructionEstimate(
   let designTotal = 0;
 
   if (area && includesConstruction(values.calculationType)) {
-    const packageOption = config.construction.packages[values.constructionPackage];
+    const packageOption =
+      config.construction.packages[values.constructionPackage];
     const material = config.construction.materials[values.material];
     const shape = config.construction.houseShapes[values.houseShape];
-    let mainConstruction = area * packageOption.pricePerSquareMeter * material.multiplier * shape.multiplier;
+    let mainConstruction =
+      area *
+      packageOption.pricePerSquareMeter *
+      material.multiplier *
+      shape.multiplier;
 
     if (values.highCeilings) {
       mainConstruction *= config.construction.extras.highCeilings.multiplier;
       lines.push({
         label: copy.construction.extras.highCeilings,
         amount: 0,
-        note: copy.result.constructionIncrease.replace("{percentage}", String((config.construction.extras.highCeilings.multiplier - 1) * 100)),
+        note: copy.result.constructionIncrease.replace(
+          "{percentage}",
+          String((config.construction.extras.highCeilings.multiplier - 1) * 100)
+        ),
       });
     }
     if (values.difficultSite) {
@@ -83,7 +94,12 @@ export function calculateConstructionEstimate(
       lines.push({
         label: copy.construction.extras.difficultSite,
         amount: 0,
-        note: copy.result.constructionIncrease.replace("{percentage}", String((config.construction.extras.difficultSite.multiplier - 1) * 100)),
+        note: copy.result.constructionIncrease.replace(
+          "{percentage}",
+          String(
+            (config.construction.extras.difficultSite.multiplier - 1) * 100
+          )
+        ),
       });
     }
     constructionTotal = mainConstruction;
@@ -93,27 +109,38 @@ export function calculateConstructionEstimate(
       note: `${copy.construction.materials[values.material]}, ${copy.construction.houseShapes[values.houseShape]}`,
     });
     if (values.basement) {
-      const amount = numberValue(values.basementArea) * config.construction.extras.basement.pricePerSquareMeter;
+      const amount =
+        numberValue(values.basementArea) *
+        config.construction.extras.basement.pricePerSquareMeter;
       constructionTotal += amount;
       lines.push({ label: copy.construction.extras.basement, amount });
     }
     if (values.garage) {
-      const amount = numberValue(values.garageArea) * config.construction.extras.garage.pricePerSquareMeter;
+      const amount =
+        numberValue(values.garageArea) *
+        config.construction.extras.garage.pricePerSquareMeter;
       constructionTotal += amount;
       lines.push({ label: copy.construction.extras.garage, amount });
     }
     if (values.terrace) {
-      const amount = numberValue(values.terraceArea) * config.construction.extras.terrace.pricePerSquareMeter;
+      const amount =
+        numberValue(values.terraceArea) *
+        config.construction.extras.terrace.pricePerSquareMeter;
       constructionTotal += amount;
       lines.push({ label: copy.construction.extras.terrace, amount });
     }
-    const distanceCost = numberValue(values.distanceKm) * config.construction.extras.distance.pricePerKm;
+    const distanceCost =
+      numberValue(values.distanceKm) *
+      config.construction.extras.distance.pricePerKm;
     if (distanceCost) {
       constructionTotal += distanceCost;
       lines.push({
         label: copy.construction.extras.distance,
         amount: distanceCost,
-        note: copy.result.distanceNote.replace("{distance}", String(numberValue(values.distanceKm))),
+        note: copy.result.distanceNote.replace(
+          "{distance}",
+          String(numberValue(values.distanceKm))
+        ),
       });
     }
   }
@@ -123,16 +150,27 @@ export function calculateConstructionEstimate(
     const condition = config.renovation.conditions[values.renovationCondition];
     renovationTotal = area * level.pricePerSquareMeter * condition.multiplier;
     lines.push({
-      label: copy.result.renovationLine.replace("{level}", copy.renovation.levels[values.renovationLevel]),
+      label: copy.result.renovationLine.replace(
+        "{level}",
+        copy.renovation.levels[values.renovationLevel]
+      ),
       amount: renovationTotal,
       note: copy.renovation.conditions[values.renovationCondition],
     });
     for (const extraKey of values.renovationExtras) {
       const extra = config.renovation.extras[extraKey];
-      const amount = "pricePerSquareMeter" in extra ? area * extra.pricePerSquareMeter
-        : "pricePerBathroom" in extra ? bathrooms * extra.pricePerBathroom
-          : "pricePerItem" in extra ? numberValue(extraKey === "doors" ? values.doorsCount : values.airConditionersCount) * extra.pricePerItem
-            : extra.fixedPrice;
+      const amount =
+        "pricePerSquareMeter" in extra
+          ? area * extra.pricePerSquareMeter
+          : "pricePerBathroom" in extra
+            ? bathrooms * extra.pricePerBathroom
+            : "pricePerItem" in extra
+              ? numberValue(
+                  extraKey === "doors"
+                    ? values.doorsCount
+                    : values.airConditionersCount
+                ) * extra.pricePerItem
+              : extra.fixedPrice;
       renovationTotal += amount;
       lines.push({ label: copy.renovation.extras[extraKey], amount });
     }
@@ -141,7 +179,10 @@ export function calculateConstructionEstimate(
   if (area && values.designEnabled) {
     const design = config.design[values.designPackage];
     designTotal = area * design.pricePerSquareMeter;
-    lines.push({ label: copy.design[values.designPackage].title, amount: designTotal });
+    lines.push({
+      label: copy.design[values.designPackage].title,
+      amount: designTotal,
+    });
   }
 
   const total = Math.round(constructionTotal + renovationTotal + designTotal);

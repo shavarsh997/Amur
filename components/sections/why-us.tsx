@@ -39,13 +39,20 @@ export function WhyUs({ dictionary }: { dictionary: Dictionary }) {
             const Icon = icons[index] ?? BadgeCheck;
 
             return (
-              <article className="flex gap-3 rounded-2xl border border-white bg-white/70 p-4 sm:block sm:p-6" key={benefitKey}>
+              <article
+                className="flex gap-3 rounded-2xl border border-white bg-white/70 p-4 sm:block sm:p-6"
+                key={benefitKey}
+              >
                 <span className="grid size-9 shrink-0 place-items-center rounded-xl bg-white text-[var(--text-primary)] shadow-sm sm:size-10">
                   <Icon aria-hidden="true" className="size-5 stroke-[1.35]" />
                 </span>
                 <div>
-                  <h3 className="text-[15px] font-semibold tracking-[-0.02em] text-[var(--text-primary)] sm:mt-4 sm:text-lg">{item.title}</h3>
-                  <p className="mt-1 text-xs leading-5 text-[var(--text-secondary)] sm:mt-2 sm:text-sm sm:leading-6">{item.description}</p>
+                  <h3 className="text-[15px] font-semibold tracking-[-0.02em] text-[var(--text-primary)] sm:mt-4 sm:text-lg">
+                    {item.title}
+                  </h3>
+                  <p className="mt-1 text-xs leading-5 text-[var(--text-secondary)] sm:mt-2 sm:text-sm sm:leading-6">
+                    {item.description}
+                  </p>
                 </div>
               </article>
             );

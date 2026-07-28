@@ -40,10 +40,12 @@ export default async function ServiceDetailPage({ params }: Props) {
   const service = getServiceBySlug(locale, slug);
   if (!service) notFound();
   const copy = dictionary.services.detail;
-  const calculationType = service.slug === "house-construction" ? "construction" : "renovation";
-  const primaryCta = service.ctaKind === "contact"
-    ? service.content.primaryCta ?? copy.requestEstimate
-    : service.content.secondaryCta ?? copy.requestEstimate;
+  const calculationType =
+    service.slug === "house-construction" ? "construction" : "renovation";
+  const primaryCta =
+    service.ctaKind === "contact"
+      ? (service.content.primaryCta ?? copy.requestEstimate)
+      : (service.content.secondaryCta ?? copy.requestEstimate);
   const serviceJsonLd = {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -56,9 +58,18 @@ export default async function ServiceDetailPage({ params }: Props) {
 
   return (
     <>
-      <script dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd).replace(/</g, "\\u003c") }} type="application/ld+json" />
+      <script
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(serviceJsonLd).replace(/</g, "\\u003c"),
+        }}
+        type="application/ld+json"
+      />
       <PageHero
-        actions={<ButtonLink href={`/${locale}/contacts#estimate`}>{primaryCta}</ButtonLink>}
+        actions={
+          <ButtonLink href={`/${locale}/contacts#estimate`}>
+            {primaryCta}
+          </ButtonLink>
+        }
         breadcrumbsLabel={dictionary.common.breadcrumbs}
         breadcrumbs={[
           { label: dictionary.common.home, href: `/${locale}` },
@@ -82,75 +93,152 @@ export default async function ServiceDetailPage({ params }: Props) {
           </div>
           <div className="mx-auto mt-14 max-w-5xl space-y-14">
             <section>
-              <h2 className="text-3xl font-semibold tracking-[-0.04em] text-[var(--text-primary)]">{copy.overview}</h2>
-              <p className="mt-5 text-lg leading-8 text-[var(--text-secondary)]">{service.content.fullDescription}</p>
+              <h2 className="text-3xl font-semibold tracking-[-0.04em] text-[var(--text-primary)]">
+                {copy.overview}
+              </h2>
+              <p className="mt-5 text-lg leading-8 text-[var(--text-secondary)]">
+                {service.content.fullDescription}
+              </p>
             </section>
             <div className="grid gap-10 md:grid-cols-3">
               <section>
-                <h2 className="text-xl font-semibold text-[var(--text-primary)]">{copy.included}</h2>
+                <h2 className="text-xl font-semibold text-[var(--text-primary)]">
+                  {copy.included}
+                </h2>
                 <ul className="mt-4 list-disc space-y-3 pl-5 leading-7 text-[var(--text-secondary)]">
-                  {service.content.includedWorks.map((item) => <li key={item}>{item}</li>)}
+                  {service.content.includedWorks.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
                 </ul>
               </section>
               <section>
-                <h2 className="text-xl font-semibold text-[var(--text-primary)]">{copy.stages}</h2>
+                <h2 className="text-xl font-semibold text-[var(--text-primary)]">
+                  {copy.stages}
+                </h2>
                 <ol className="mt-4 list-decimal space-y-3 pl-5 leading-7 text-[var(--text-secondary)]">
-                  {service.content.workflow.map((step) => <li key={step.title}><span className="font-medium text-[var(--text-primary)]">{step.title}</span>{step.description ? <span className="block mt-1">{step.description}</span> : null}</li>)}
+                  {service.content.workflow.map((step) => (
+                    <li key={step.title}>
+                      <span className="font-medium text-[var(--text-primary)]">
+                        {step.title}
+                      </span>
+                      {step.description ? (
+                        <span className="block mt-1">{step.description}</span>
+                      ) : null}
+                    </li>
+                  ))}
                 </ol>
               </section>
               <section>
-                <h2 className="text-xl font-semibold text-[var(--text-primary)]">{copy.audience}</h2>
+                <h2 className="text-xl font-semibold text-[var(--text-primary)]">
+                  {copy.audience}
+                </h2>
                 <ul className="mt-4 list-disc space-y-3 pl-5 leading-7 text-[var(--text-secondary)]">
-                  {service.content.suitableFor.map((item) => <li key={item}>{item}</li>)}
+                  {service.content.suitableFor.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
                 </ul>
               </section>
             </div>
-            {service.content.customerTypes?.length || service.content.workTypes?.length || service.content.estimateRequirements?.length ? (
+            {service.content.customerTypes?.length ||
+            service.content.workTypes?.length ||
+            service.content.estimateRequirements?.length ? (
               <div className="grid gap-5 md:grid-cols-3">
-                {service.content.customerTypes?.length ? <ContentList items={service.content.customerTypes} title={copy.customerTypes} /> : null}
-                {service.content.workTypes?.length ? <ContentList items={service.content.workTypes} title={copy.workTypes} /> : null}
-                {service.content.estimateRequirements?.length ? <ContentList items={service.content.estimateRequirements} title={copy.estimateRequirements} /> : null}
+                {service.content.customerTypes?.length ? (
+                  <ContentList
+                    items={service.content.customerTypes}
+                    title={copy.customerTypes}
+                  />
+                ) : null}
+                {service.content.workTypes?.length ? (
+                  <ContentList
+                    items={service.content.workTypes}
+                    title={copy.workTypes}
+                  />
+                ) : null}
+                {service.content.estimateRequirements?.length ? (
+                  <ContentList
+                    items={service.content.estimateRequirements}
+                    title={copy.estimateRequirements}
+                  />
+                ) : null}
               </div>
             ) : null}
-            {service.content.priceFactors.length || service.content.faq.length ? (
+            {service.content.priceFactors.length ||
+            service.content.faq.length ? (
               <div className="grid gap-8 md:grid-cols-2">
                 {service.content.priceFactors.length ? (
                   <section className="rounded-2xl border border-[var(--border)] bg-[var(--background-soft)] p-6">
-                    <h2 className="text-xl font-semibold text-[var(--text-primary)]">{copy.priceFactors}</h2>
+                    <h2 className="text-xl font-semibold text-[var(--text-primary)]">
+                      {copy.priceFactors}
+                    </h2>
                     <ul className="mt-4 list-disc space-y-3 pl-5 leading-7 text-[var(--text-secondary)]">
-                      {service.content.priceFactors.map((factor) => <li key={factor}>{factor}</li>)}
+                      {service.content.priceFactors.map((factor) => (
+                        <li key={factor}>{factor}</li>
+                      ))}
                     </ul>
                   </section>
                 ) : null}
                 {service.content.faq.length ? (
                   <section className="rounded-2xl border border-[var(--border)] bg-white p-6">
-                    <h2 className="text-xl font-semibold text-[var(--text-primary)]">{copy.faq}</h2>
+                    <h2 className="text-xl font-semibold text-[var(--text-primary)]">
+                      {copy.faq}
+                    </h2>
                     <div className="mt-4 space-y-5">
-                      {service.content.faq.map((item) => <div key={item.question}><h3 className="font-semibold text-[var(--text-primary)]">{item.question}</h3><p className="mt-2 leading-7 text-[var(--text-secondary)]">{item.answer}</p></div>)}
+                      {service.content.faq.map((item) => (
+                        <div key={item.question}>
+                          <h3 className="font-semibold text-[var(--text-primary)]">
+                            {item.question}
+                          </h3>
+                          <p className="mt-2 leading-7 text-[var(--text-secondary)]">
+                            {item.answer}
+                          </p>
+                        </div>
+                      ))}
                     </div>
                   </section>
                 ) : null}
               </div>
             ) : null}
             <div className="rounded-[24px] bg-[var(--background-warm)] p-7 sm:p-10">
-              <h2 className="text-2xl font-semibold tracking-[-0.03em] text-[var(--text-primary)]">{primaryCta}</h2>
-              <ButtonLink className="mt-6" href={`/${locale}/contacts#estimate`}>{primaryCta}</ButtonLink>
+              <h2 className="text-2xl font-semibold tracking-[-0.03em] text-[var(--text-primary)]">
+                {primaryCta}
+              </h2>
+              <ButtonLink
+                className="mt-6"
+                href={`/${locale}/contacts#estimate`}
+              >
+                {primaryCta}
+              </ButtonLink>
             </div>
           </div>
         </Container>
       </article>
-      <EstimateSection calculateLabel={primaryCta} defaultCalculationType={calculationType} dictionary={dictionary} />
+      <EstimateSection
+        calculateLabel={primaryCta}
+        defaultCalculationType={calculationType}
+        dictionary={dictionary}
+      />
       <FinalCta dictionary={dictionary} locale={locale} />
     </>
   );
 }
 
-function ContentList({ title, items }: { title: string; items: readonly string[] }) {
+function ContentList({
+  title,
+  items,
+}: {
+  title: string;
+  items: readonly string[];
+}) {
   return (
     <section className="rounded-2xl border border-[var(--border)] bg-[var(--background-soft)] p-5">
-      <h2 className="text-lg font-semibold text-[var(--text-primary)]">{title}</h2>
+      <h2 className="text-lg font-semibold text-[var(--text-primary)]">
+        {title}
+      </h2>
       <ul className="mt-4 space-y-2 text-sm leading-6 text-[var(--text-secondary)]">
-        {items.map((item) => <li key={item}>{item}</li>)}
+        {items.map((item) => (
+          <li key={item}>{item}</li>
+        ))}
       </ul>
     </section>
   );

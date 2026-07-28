@@ -20,7 +20,10 @@ export function Testimonials({ dictionary }: { dictionary: Dictionary }) {
               className="flex flex-col rounded-3xl border border-zinc-200 bg-zinc-50 p-7"
               key={`${item.name}-${index}`}
             >
-              <Quote aria-hidden="true" className="size-7 text-[var(--brand-accent)]" />
+              <Quote
+                aria-hidden="true"
+                className="size-7 text-[var(--brand-accent)]"
+              />
               <blockquote className="mt-5 flex-1 text-lg leading-8 text-zinc-700">
                 “{item.quote}”
               </blockquote>

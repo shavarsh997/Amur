@@ -59,17 +59,25 @@ export default async function ContactsPage({ params }: Props) {
                 <dl className="space-y-6">
                   {contactItems.map((item) => (
                     <div key={item.label}>
-                      <dt className="text-sm font-semibold text-[var(--text-muted)]">{item.label}</dt>
-                      <dd className="mt-1 text-lg text-[var(--text-primary)]">{item.value}</dd>
+                      <dt className="text-sm font-semibold text-[var(--text-muted)]">
+                        {item.label}
+                      </dt>
+                      <dd className="mt-1 text-lg text-[var(--text-primary)]">
+                        {item.value}
+                      </dd>
                     </div>
                   ))}
                 </dl>
               ) : (
-                <p className="leading-7 text-[var(--text-secondary)]">{copy.mapPlaceholder}</p>
+                <p className="leading-7 text-[var(--text-secondary)]">
+                  {copy.mapPlaceholder}
+                </p>
               )}
               {messengers.length ? (
                 <div className="mt-8 border-t border-[var(--border)] pt-6">
-                  <h2 className="font-semibold text-[var(--text-primary)]">{copy.messengers}</h2>
+                  <h2 className="font-semibold text-[var(--text-primary)]">
+                    {copy.messengers}
+                  </h2>
                   <div className="mt-4 flex flex-wrap gap-3">
                     {messengers.map((messenger) => (
                       <a
@@ -94,10 +102,21 @@ export default async function ContactsPage({ params }: Props) {
               {copy.mapPlaceholder}
             </div>
           </aside>
-          <section className="rounded-2xl border border-[var(--border)] bg-white p-6 sm:p-9" id="estimate">
-            <h2 className="text-3xl font-semibold tracking-[-0.04em] text-[var(--text-primary)]">{copy.formTitle}</h2>
-            <p className="mt-4 leading-7 text-[var(--text-secondary)]">{copy.formDescription}</p>
-            <LeadForm className="mt-8" dictionary={dictionary} locale={locale} />
+          <section
+            className="rounded-2xl border border-[var(--border)] bg-white p-6 sm:p-9"
+            id="estimate"
+          >
+            <h2 className="text-3xl font-semibold tracking-[-0.04em] text-[var(--text-primary)]">
+              {copy.formTitle}
+            </h2>
+            <p className="mt-4 leading-7 text-[var(--text-secondary)]">
+              {copy.formDescription}
+            </p>
+            <LeadForm
+              className="mt-8"
+              dictionary={dictionary}
+              locale={locale}
+            />
           </section>
         </div>
       </Container>

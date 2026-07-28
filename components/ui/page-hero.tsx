@@ -24,7 +24,11 @@ export function PageHero({
     <section className="border-b border-[var(--border)] bg-[var(--background-soft)] py-10 sm:py-12 lg:py-16">
       <Container>
         {breadcrumbs?.length && breadcrumbsLabel ? (
-          <Breadcrumbs ariaLabel={breadcrumbsLabel} className="mb-7" items={breadcrumbs} />
+          <Breadcrumbs
+            ariaLabel={breadcrumbsLabel}
+            className="mb-7"
+            items={breadcrumbs}
+          />
         ) : null}
         <div className="max-w-4xl">
           {eyebrow ? (
@@ -40,7 +44,9 @@ export function PageHero({
               {description}
             </p>
           ) : null}
-          {actions ? <div className="mt-8 flex flex-wrap gap-3">{actions}</div> : null}
+          {actions ? (
+            <div className="mt-8 flex flex-wrap gap-3">{actions}</div>
+          ) : null}
         </div>
       </Container>
     </section>

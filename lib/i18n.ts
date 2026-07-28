@@ -11,7 +11,9 @@ const dictionaries: Record<Locale, () => Promise<Dictionary>> = {
 };
 
 export function isLocale(value: unknown): value is Locale {
-  return typeof value === "string" && (locales as readonly string[]).includes(value);
+  return (
+    typeof value === "string" && (locales as readonly string[]).includes(value)
+  );
 }
 
 export function assertLocale(value: unknown): asserts value is Locale {

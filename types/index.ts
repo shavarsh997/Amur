@@ -135,7 +135,14 @@ export interface Dictionary {
     eyebrow: string;
     title: string;
     description: string;
-    items: [LocalizedText, LocalizedText, LocalizedText, LocalizedText, LocalizedText, LocalizedText];
+    items: [
+      LocalizedText,
+      LocalizedText,
+      LocalizedText,
+      LocalizedText,
+      LocalizedText,
+      LocalizedText,
+    ];
   };
   process: {
     eyebrow: string;
@@ -304,32 +311,92 @@ export interface Dictionary {
       design: { title: string; description: string };
     };
     fields: {
-      area: string; floors: string; rooms: string; bathrooms: string;
-      houseParameters: string; houseShape: string; constructionType: string;
-      basementArea: string; garageArea: string; terraceArea: string;
-      propertyCondition: string; propertyType: string; currentCondition: string;
-      renovationLevel: string; distance: string; distanceHint: string;
-      doorsCount: string; airConditionersCount: string;
+      area: string;
+      floors: string;
+      rooms: string;
+      bathrooms: string;
+      houseParameters: string;
+      houseShape: string;
+      constructionType: string;
+      basementArea: string;
+      garageArea: string;
+      terraceArea: string;
+      propertyCondition: string;
+      propertyType: string;
+      currentCondition: string;
+      renovationLevel: string;
+      distance: string;
+      distanceHint: string;
+      doorsCount: string;
+      airConditionersCount: string;
     };
-    calculationTypes: Record<"construction" | "renovation" | "combined", LocalizedText>;
-    quickScenarios: Record<"apartmentRenovation" | "houseRenovation" | "houseConstruction" | "commercial", LocalizedText>;
+    calculationTypes: Record<
+      "construction" | "renovation" | "combined",
+      LocalizedText
+    >;
+    quickScenarios: Record<
+      | "apartmentRenovation"
+      | "houseRenovation"
+      | "houseConstruction"
+      | "commercial",
+      LocalizedText
+    >;
     construction: {
       packages: Record<"shell" | "rough" | "turnkey", LocalizedText>;
-      materials: Record<"aeratedConcrete" | "brick" | "monolith" | "frame", string>;
+      materials: Record<
+        "aeratedConcrete" | "brick" | "monolith" | "frame",
+        string
+      >;
       houseShapes: Record<"rectangle" | "lShape" | "complex", string>;
-      extras: Record<"basement" | "garage" | "terrace" | "highCeilings" | "difficultSite" | "distance", string>;
+      extras: Record<
+        | "basement"
+        | "garage"
+        | "terrace"
+        | "highCeilings"
+        | "difficultSite"
+        | "distance",
+        string
+      >;
     };
     renovation: {
       objectTypes: Record<"apartment" | "privateHouse" | "commercial", string>;
-      conditions: Record<"newWithoutFinish" | "roughFinish" | "oldRenovation" | "partiallyRenovated", string>;
+      conditions: Record<
+        | "newWithoutFinish"
+        | "roughFinish"
+        | "oldRenovation"
+        | "partiallyRenovated",
+        string
+      >;
       levels: Record<"cosmetic" | "standard" | "capital" | "premium", string>;
-      extras: Record<"demolition" | "electrical" | "plumbing" | "heatedFloor" | "soundproofing" | "doors" | "airConditioners" | "furnishing" | "cleaning", string>;
+      extras: Record<
+        | "demolition"
+        | "electrical"
+        | "plumbing"
+        | "heatedFloor"
+        | "soundproofing"
+        | "doors"
+        | "airConditioners"
+        | "furnishing"
+        | "cleaning",
+        string
+      >;
     };
-    design: Record<"basic" | "full" | "supervision", LocalizedText> & { enabled: string; enabledDescription: string };
+    design: Record<"basic" | "full" | "supervision", LocalizedText> & {
+      enabled: string;
+      enabledDescription: string;
+    };
     result: {
-      title: string; range: string; enterArea: string; included: string;
-      empty: string; pricingUnavailable: string; total: string; notice: string;
-      constructionIncrease: string; distanceNote: string; renovationLine: string;
+      title: string;
+      range: string;
+      enterArea: string;
+      included: string;
+      empty: string;
+      pricingUnavailable: string;
+      total: string;
+      notice: string;
+      constructionIncrease: string;
+      distanceNote: string;
+      renovationLine: string;
     };
     estimateSectionDescription: string;
   };

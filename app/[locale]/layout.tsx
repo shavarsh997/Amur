@@ -13,10 +13,18 @@ const publicSiteConfig = {
   ...siteConfig,
   contacts: {
     ...siteConfig.contacts,
-    phone: isPlaceholder(siteConfig.contacts.phone) ? "" : siteConfig.contacts.phone,
-    email: isPlaceholder(siteConfig.contacts.email) ? "" : siteConfig.contacts.email,
-    address: isPlaceholder(siteConfig.contacts.address) ? "" : siteConfig.contacts.address,
-    hours: isPlaceholder(siteConfig.contacts.hours) ? "" : siteConfig.contacts.hours,
+    phone: isPlaceholder(siteConfig.contacts.phone)
+      ? ""
+      : siteConfig.contacts.phone,
+    email: isPlaceholder(siteConfig.contacts.email)
+      ? ""
+      : siteConfig.contacts.email,
+    address: isPlaceholder(siteConfig.contacts.address)
+      ? ""
+      : siteConfig.contacts.address,
+    hours: isPlaceholder(siteConfig.contacts.hours)
+      ? ""
+      : siteConfig.contacts.hours,
   },
 } satisfies SiteConfiguration;
 
@@ -72,11 +80,25 @@ export default async function LocaleLayout({
         locale={locale}
       />
       <main className="flex-1 pb-20 sm:pb-0">{children}</main>
-      <Footer config={publicSiteConfig} dictionary={dictionary} locale={locale} />
-      <CalculatorDialog copy={dictionary.constructionCalculator} locale={locale} />
+      <Footer
+        config={publicSiteConfig}
+        dictionary={dictionary}
+        locale={locale}
+      />
+      <CalculatorDialog
+        copy={dictionary.constructionCalculator}
+        locale={locale}
+      />
       <MobileCtaBar
         calculateLabel={dictionary.hero.primaryAction}
-        phone={publicSiteConfig.contacts.phoneHref ? { href: publicSiteConfig.contacts.phoneHref, label: publicSiteConfig.contacts.phone } : undefined}
+        phone={
+          publicSiteConfig.contacts.phoneHref
+            ? {
+                href: publicSiteConfig.contacts.phoneHref,
+                label: publicSiteConfig.contacts.phone,
+              }
+            : undefined
+        }
       />
     </div>
   );

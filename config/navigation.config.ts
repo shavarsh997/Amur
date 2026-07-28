@@ -5,7 +5,10 @@ export const navigationConfig = [
   { key: "services", path: "services" },
   { key: "about", path: "about" },
   { key: "contacts", path: "contacts" },
-] as const satisfies readonly { key: Exclude<NavigationKey, "privacy">; path: string }[];
+] as const satisfies readonly {
+  key: Exclude<NavigationKey, "privacy">;
+  path: string;
+}[];
 
 export const staticRouteConfig = [
   "",

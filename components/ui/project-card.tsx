@@ -48,7 +48,10 @@ export function ProjectCard({
           </div>
           <div className="flex flex-wrap gap-x-5 gap-y-2 text-sm text-zinc-600">
             <span className="inline-flex items-center gap-1.5">
-              <MapPin aria-hidden="true" className="size-4 text-[var(--brand-accent)]" />
+              <MapPin
+                aria-hidden="true"
+                className="size-4 text-[var(--brand-accent)]"
+              />
               {project.location}
             </span>
             <span>{project.area}</span>

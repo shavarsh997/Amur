@@ -13,11 +13,21 @@ export type LeadActionState = {
   errors: Partial<Record<LeadField, string>>;
 };
 
-const objectTypes = new Set<string>(calculatorConfig.objectTypes.map(({ value }) => value));
-const workTypes = new Set<string>(calculatorConfig.workTypes.map(({ value }) => value));
-const calculatorOptions = new Set<string>(calculatorConfig.options.map(({ value }) => value));
+const objectTypes = new Set<string>(
+  calculatorConfig.objectTypes.map(({ value }) => value)
+);
+const workTypes = new Set<string>(
+  calculatorConfig.workTypes.map(({ value }) => value)
+);
+const calculatorOptions = new Set<string>(
+  calculatorConfig.options.map(({ value }) => value)
+);
 
-function readString(formData: FormData, key: LeadField, maxLength: number): string {
+function readString(
+  formData: FormData,
+  key: LeadField,
+  maxLength: number
+): string {
   const value = formData.get(key);
   return typeof value === "string" ? value.trim().slice(0, maxLength) : "";
 }
@@ -31,9 +41,11 @@ function isValidPhone(value: string): boolean {
 export async function submitLeadAction(
   requestedLocale: Locale,
   _previousState: LeadActionState,
-  formData: FormData,
+  formData: FormData
 ): Promise<LeadActionState> {
-  const locale: Locale = isLocale(requestedLocale) ? requestedLocale : defaultLocale;
+  const locale: Locale = isLocale(requestedLocale)
+    ? requestedLocale
+    : defaultLocale;
   const dictionary = await getDictionary(locale);
   const copy = dictionary.estimate;
 
@@ -52,7 +64,8 @@ export async function submitLeadAction(
   const area = Number(areaValue);
   const errors: LeadActionState["errors"] = {};
 
-  if (!objectTypes.has(objectType)) errors.objectType = copy.errors.objectTypeRequired;
+  if (!objectTypes.has(objectType))
+    errors.objectType = copy.errors.objectTypeRequired;
   if (!areaValue) {
     errors.area = copy.errors.areaRequired;
   } else if (!Number.isFinite(area) || area <= 0) {

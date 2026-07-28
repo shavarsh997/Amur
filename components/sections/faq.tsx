@@ -16,7 +16,10 @@ export function FAQSection({ dictionary }: { dictionary: Dictionary }) {
           />
           <div className="space-y-2 sm:space-y-0 sm:divide-y sm:divide-[var(--border)] sm:rounded-2xl sm:border sm:border-[var(--border)] sm:bg-white sm:px-7">
             {dictionary.faq.items.map((item) => (
-              <details className="group rounded-xl border border-[var(--border)] bg-white px-4 sm:rounded-none sm:border-0 sm:px-0" key={item.question}>
+              <details
+                className="group rounded-xl border border-[var(--border)] bg-white px-4 sm:rounded-none sm:border-0 sm:px-0"
+                key={item.question}
+              >
                 <summary className="flex cursor-pointer list-none items-center justify-between gap-5 py-4 text-sm font-semibold text-[var(--text-primary)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--button-primary)] sm:py-6 sm:text-base [&::-webkit-details-marker]:hidden">
                   {item.question}
                   <ChevronDown
