@@ -31,7 +31,7 @@ export function ServicesSection({
             <ArrowRight aria-hidden="true" className="size-4" />
           </Link>
         </div>
-        <div className="mt-8 grid gap-4 lg:grid-cols-3">
+        <div className="mt-8 grid gap-4 lg:grid-cols-2">
           {getActiveServices(locale)
             .filter((service) => service.category === "primary")
             .map(({ content, ...service }) => (

@@ -1,3 +1,4 @@
+import type { CalculatorScenarioId } from "@/config/construction-calculator.config";
 import type { Locale } from "@/types";
 import type { ServiceIcon } from "@/types/config";
 
@@ -38,6 +39,7 @@ export type ServiceConfig = {
   icon: ServiceIcon;
   image: string;
   calculatorCategory?: string;
+  calculatorScenario?: CalculatorScenarioId;
   ctaKind?: "calculator" | "contact";
   translations: Record<Locale, ServiceContent>;
 };

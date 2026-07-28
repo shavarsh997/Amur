@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import { navigationConfig } from "@/config/navigation.config";
 import { siteConfig } from "@/config/site.config";
+import { getActiveServices } from "@/config/services.config";
 import { LanguageSwitcher } from "@/components/layout/language-switcher";
 import { MobileNav, type NavigationItem } from "@/components/layout/mobile-nav";
 import { BrandMark } from "@/components/ui/brand-mark";
@@ -26,6 +27,12 @@ export function Header({
     href: item.path ? `${prefix}/${item.path}` : prefix,
     label: dictionary.nav[item.key],
   }));
+  const services: NavigationItem[] = getActiveServices(locale).map(
+    ({ content, slug }) => ({
+      href: `${prefix}/services/${slug}`,
+      label: content.title,
+    })
+  );
   const cta = {
     href: `${prefix}/contacts#estimate`,
     label: dictionary.nav.consultation,
@@ -97,6 +104,8 @@ export function Header({
                 }
               : undefined
           }
+          services={services}
+          servicesLabel={dictionary.footer.services}
         />
       </Container>
     </header>

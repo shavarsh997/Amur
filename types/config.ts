@@ -16,6 +16,7 @@ export type ServiceIcon =
   | "building-2"
   | "house"
   | "paint-roller"
+  | "pen-tool"
   | "panels-top-left"
   | "ruler";
 

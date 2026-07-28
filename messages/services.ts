@@ -200,6 +200,11 @@ export const serviceTranslations = {
       ],
     }),
   },
+  interiorDesign: {
+    ru: serviceContent({ title: "Дизайн интерьера", shortDescription: "Создаем интерьерные решения для квартир, частных домов и коммерческих пространств с учетом образа жизни, функций помещения и планируемого ремонта.", fullDescription: "Помогаем определить планировку, стиль, материалы и ключевые решения интерьера до начала работ. Состав дизайн-проекта зависит от задачи и согласуется отдельно.", includedWorks: ["Обсуждение задачи и образа жизни", "Планировочные решения", "Концепция интерьера и подбор материалов", "Чертежи и сопровождение в согласованном составе"], suitableFor: ["Квартирам и частным домам перед ремонтом", "Коммерческим пространствам, которым нужен продуманный интерьер"], workTypes: ["Планировочное решение", "Концепция интерьера", "Полный дизайн-проект", "Сопровождение реализации"], estimateRequirements: ["Тип и площадь помещения", "Краткое описание задачи", "Адрес объекта и удобный способ связи"], primaryCta: "Подробнее о дизайне интерьера", secondaryCta: "Обсудить дизайн интерьера", seoTitle: "Дизайн интерьера в Армении — Shinex", seoDescription: "Дизайн интерьера квартир, частных домов и коммерческих пространств в Армении: планировка, концепция и подготовка к ремонту.", workflow: ["Обсуждение задачи", "Планировка", "Концепция и материалы", "Подготовка согласованных материалов"] }),
+    en: serviceContent({ title: "Interior design", shortDescription: "We create interior solutions for apartments, private homes, and commercial spaces around daily life, room function, and the planned renovation.", fullDescription: "We help define the layout, style, materials, and key interior decisions before work begins. The design-project scope depends on the brief and is agreed separately.", includedWorks: ["Discussing the brief and daily use", "Layout solutions", "Interior concept and material selection", "Drawings and implementation support in the agreed scope"], suitableFor: ["Apartments and private homes before renovation", "Commercial spaces that need a considered interior"], workTypes: ["Layout solution", "Interior concept", "Full design project", "Implementation support"], estimateRequirements: ["Property type and area", "A short description of the brief", "Property address and preferred contact method"], primaryCta: "Learn about interior design", secondaryCta: "Discuss interior design", seoTitle: "Interior design in Armenia — Shinex", seoDescription: "Interior design for apartments, private homes, and commercial spaces in Armenia: layouts, concepts, and preparation for renovation.", workflow: ["Discuss the brief", "Layout", "Concept and materials", "Prepare agreed materials"] }),
+    hy: serviceContent({ title: "Ինտերիերի դիզայն", shortDescription: "Մշակում ենք բնակարանների, առանձնատների և առևտրային տարածքների ինտերիերային լուծումներ՝ հաշվի առնելով առօրյան, տարածքի գործառույթը և նախատեսվող վերանորոգումը։", fullDescription: "Օգնում ենք մինչև աշխատանքների մեկնարկը որոշել հատակագիծը, ոճը, նյութերը և ինտերիերի հիմնական լուծումները։ Դիզայն-նախագծի կազմը կախված է խնդրից և համաձայնեցվում է առանձին։", includedWorks: ["Խնդրի և առօրյա օգտագործման քննարկում", "Հատակագծային լուծումներ", "Ինտերիերի հայեցակարգ և նյութերի ընտրություն", "Գծագրեր և ուղեկցում՝ համաձայնեցված ծավալով"], suitableFor: ["Բնակարանների և առանձնատների համար՝ վերանորոգումից առաջ", "Առևտրային տարածքների համար, որոնց անհրաժեշտ է մտածված ինտերիեր"], workTypes: ["Հատակագծային լուծում", "Ինտերիերի հայեցակարգ", "Ամբողջական դիզայն-նախագիծ", "Իրականացման ուղեկցում"], estimateRequirements: ["Տարածքի տեսակ և մակերես", "Խնդրի կարճ նկարագրություն", "Օբյեկտի հասցեն և կապի հարմար եղանակը"], primaryCta: "Մանրամասն՝ ինտերիերի դիզայնի մասին", secondaryCta: "Քննարկել ինտերիերի դիզայնը", seoTitle: "Ինտերիերի դիզայն Հայաստանում — Shinex", seoDescription: "Բնակարանների, առանձնատների և առևտրային տարածքների ինտերիերի դիզայն Հայաստանում՝ հատակագիծ, հայեցակարգ և նախապատրաստում վերանորոգմանը։", workflow: ["Խնդրի քննարկում", "Հատակագիծ", "Հայեցակարգ և նյութեր", "Համաձայնեցված նյութերի պատրաստում"] }),
+  },
   commercialConstruction: {
     ru: serviceContent({
       title: "Ремонт и строительство коммерческих помещений",
@@ -280,9 +285,9 @@ export const serviceTranslations = {
   },
   design: {
     ru: serviceContent({
-      title: "Проектирование",
+      title: "Архитектурное проектирование",
       shortDescription:
-        "Архитектурная и рабочая подготовка будущего строительства.",
+        "Архитектурные решения, планировка здания и рабочая документация для подготовки к строительству.",
       fullDescription:
         "Формируем решения с учётом задачи, участка, норм и последующей реализации, чтобы строительство опиралось на согласованную документацию.",
       includedWorks: [
@@ -301,9 +306,9 @@ export const serviceTranslations = {
       ],
     }),
     en: serviceContent({
-      title: "Design",
+      title: "Architectural design",
       shortDescription:
-        "Architectural and technical preparation for future construction.",
+        "Architectural solutions, building layouts, and working documentation to prepare for construction.",
       fullDescription:
         "We develop solutions around the brief, site, applicable requirements, and practical delivery so construction starts from agreed documentation.",
       includedWorks: [
@@ -322,9 +327,9 @@ export const serviceTranslations = {
       ],
     }),
     hy: serviceContent({
-      title: "Նախագծում",
+      title: "Ճարտարապետական նախագծում",
       shortDescription:
-        "Ապագա շինարարության ճարտարապետական և աշխատանքային նախապատրաստում։",
+        "Ճարտարապետական լուծումներ, շենքի հատակագիծ և աշխատանքային փաստաթղթեր՝ շինարարությանը նախապատրաստվելու համար։",
       fullDescription:
         "Մշակում ենք լուծումներ՝ հաշվի առնելով խնդիրը, հողամասը, նորմերը և հետագա իրականացումը։",
       includedWorks: [

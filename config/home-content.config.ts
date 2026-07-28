@@ -24,9 +24,9 @@ export const homeContent: Record<Locale, HomeContent> = {
       alt: "Светлый современный интерьер как иллюстрация услуги ремонта",
     },
     heroDirections: [
-      "Ремонт квартир",
-      "Ремонт домов",
+      "Ремонт квартир и домов",
       "Строительство домов",
+      "Дизайн интерьера",
       "Коммерческие помещения",
     ],
     renovationIncluded: {
@@ -63,9 +63,9 @@ export const homeContent: Record<Locale, HomeContent> = {
       alt: "Bright modern interior illustrating a renovation service",
     },
     heroDirections: [
-      "Apartment renovation",
-      "House renovation",
+      "Apartment and house renovation",
       "House construction",
+      "Interior design",
       "Commercial spaces",
     ],
     renovationIncluded: {
@@ -102,9 +102,9 @@ export const homeContent: Record<Locale, HomeContent> = {
       alt: "Լուսավոր ժամանակակից ինտերիեր՝ որպես վերանորոգման ծառայության պատկերացում",
     },
     heroDirections: [
-      "Բնակարանների վերանորոգում",
-      "Տների վերանորոգում",
+      "Բնակարանների և տների վերանորոգում",
       "Տների կառուցում",
+      "Ինտերիերի դիզայն",
       "Առևտրային տարածքներ",
     ],
     renovationIncluded: {

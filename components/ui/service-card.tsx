@@ -5,6 +5,7 @@ import {
   House,
   PaintRoller,
   PanelsTopLeft,
+  PenTool,
   Ruler,
   type LucideIcon,
 } from "lucide-react";
@@ -20,6 +21,7 @@ const serviceIcons: Record<string, LucideIcon> = {
   "building-2": Building2,
   house: House,
   "paint-roller": PaintRoller,
+  "pen-tool": PenTool,
   "panels-top-left": PanelsTopLeft,
   ruler: Ruler,
 };

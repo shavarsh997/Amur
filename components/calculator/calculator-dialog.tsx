@@ -4,19 +4,29 @@ import { useEffect, useRef, useState } from "react";
 import { Calculator, X } from "lucide-react";
 
 import { CostCalculator } from "@/components/calculator/cost-calculator";
-import type { CalculationType } from "@/config/construction-calculator.config";
+import type {
+  CalculatorScenarioId,
+  CalculationType,
+} from "@/config/construction-calculator.config";
 import type { Dictionary, Locale } from "@/types";
 
 const calculatorOpenEvent = "open-project-calculator";
+
+type CalculatorLaunch = {
+  calculationType: CalculationType;
+  scenarioId?: CalculatorScenarioId;
+};
 
 export function CalculatorTrigger({
   label,
   className = "",
   defaultCalculationType = "renovation",
+  defaultScenarioId,
 }: {
   label: string;
   className?: string;
   defaultCalculationType?: CalculationType;
+  defaultScenarioId?: CalculatorScenarioId;
 }) {
   return (
     <button
@@ -24,8 +34,11 @@ export function CalculatorTrigger({
       className={`inline-flex min-h-12 items-center justify-center rounded-xl bg-[var(--button-primary)] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[var(--button-primary-hover)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--button-primary)] ${className}`}
       onClick={() =>
         window.dispatchEvent(
-          new CustomEvent<CalculationType>(calculatorOpenEvent, {
-            detail: defaultCalculationType,
+          new CustomEvent<CalculatorLaunch>(calculatorOpenEvent, {
+            detail: {
+              calculationType: defaultCalculationType,
+              scenarioId: defaultScenarioId,
+            },
           })
         )
       }
@@ -48,12 +61,16 @@ export function CalculatorDialog({
   const [isOpen, setIsOpen] = useState(false);
   const [defaultCalculationType, setDefaultCalculationType] =
     useState<CalculationType>("renovation");
+  const [defaultScenarioId, setDefaultScenarioId] = useState<
+    CalculatorScenarioId | undefined
+  >();
   const dialogRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const openCalculator = (event: Event) => {
-      const calculationType = (event as CustomEvent<CalculationType>).detail;
-      setDefaultCalculationType(calculationType ?? "renovation");
+      const launch = (event as CustomEvent<CalculatorLaunch>).detail;
+      setDefaultCalculationType(launch?.calculationType ?? "renovation");
+      setDefaultScenarioId(launch?.scenarioId);
       setIsOpen(true);
     };
     window.addEventListener(calculatorOpenEvent, openCalculator);
@@ -125,7 +142,8 @@ export function CalculatorDialog({
           <CostCalculator
             copy={copy}
             defaultCalculationType={defaultCalculationType}
-            key={defaultCalculationType}
+            defaultScenarioId={defaultScenarioId}
+            key={`${defaultCalculationType}-${defaultScenarioId ?? "default"}`}
             locale={locale}
           />
         </div>

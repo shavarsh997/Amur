@@ -25,7 +25,7 @@ export function Hero({
                 <Compass aria-hidden="true" className="size-3.5" />
                 {dictionary.hero.eyebrow}
               </p>
-              <h1 className="mt-4 max-w-xl text-pretty text-[2.25rem] font-semibold leading-[1.06] tracking-[-0.055em] text-[var(--text-primary)] sm:mt-5 sm:text-5xl lg:text-6xl">
+              <h1 className="mt-4 max-w-xl text-pretty text-[2rem] font-semibold leading-[1.06] tracking-[-0.055em] text-[var(--text-primary)] sm:mt-5 sm:text-5xl lg:text-6xl">
                 {dictionary.hero.title}
               </h1>
               <p className="mt-4 max-w-lg text-[15px] leading-6 text-[var(--text-secondary)] sm:mt-5 sm:text-lg sm:leading-7">

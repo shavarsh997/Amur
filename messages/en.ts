@@ -4,9 +4,9 @@ import type { Dictionary } from "@/types";
 const dictionary = {
   localeName: "English",
   metadata: {
-    title: "Turnkey renovation and construction in Armenia — Shinex",
+    title: "Renovation, interior design, and construction in Armenia — Shinex",
     description:
-      "Apartment and private house renovation, house construction, and commercial-space work in Yerevan and across Armenia.",
+      "Apartment and private house renovation, interior design, house construction, and commercial-space work in Yerevan and across Armenia.",
   },
   nav: {
     home: "Home",
@@ -21,10 +21,10 @@ const dictionary = {
     language: "Language",
   },
   hero: {
-    eyebrow: "Renovation and construction in Armenia",
-    title: "Turnkey renovation and construction in Armenia",
+    eyebrow: "Renovation, design, and construction in Armenia",
+    title: "Renovation, interior design, and construction in Armenia",
     description:
-      "We renovate apartments and private homes, build houses and commercial spaces, and help guide the process from an initial discussion and estimate through delivery and handover.",
+      "We renovate apartments and private homes, create interior design, and build houses and commercial spaces. We help guide the process from the initial idea and estimate through delivery and handover.",
     primaryAction: "Calculate the cost",
     secondaryAction: "View services",
     trustPoints: [
@@ -42,9 +42,9 @@ const dictionary = {
     specializedTitle: "Additional construction services",
     viewAll: "All services",
     learnMore: "Learn more",
-    pageTitle: "Construction and renovation services",
+    pageTitle: "Renovation, interior design, and construction services",
     pageDescription:
-      "We deliver residential, commercial, and outdoor work through coordinated stages and documented decisions.",
+      "Renovation, interior design, construction, and specialist building work for residential and commercial spaces.",
     detail: {
       overview: "Service overview",
       included: "What may be included",
@@ -522,6 +522,10 @@ const dictionary = {
         title: "House construction",
         description: "Assess construction",
       },
+      interiorDesign: {
+        title: "Interior design",
+        description: "Layouts and interior solutions",
+      },
       commercial: {
         title: "Commercial property",
         description: "Office, retail, or service space",
@@ -715,7 +719,7 @@ const dictionary = {
     secondaryAction: "Call",
   },
   footer: {
-    description: "Construction, renovation, and landscaping in Armenia.",
+    description: "Renovation, interior design, and construction in Armenia.",
     navigation: "Navigation",
     services: "Services",
     contacts: "Contacts",

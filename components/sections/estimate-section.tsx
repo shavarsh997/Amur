@@ -1,5 +1,8 @@
 import { CalculatorTrigger } from "@/components/calculator/calculator-dialog";
-import type { CalculationType } from "@/config/construction-calculator.config";
+import type {
+  CalculatorScenarioId,
+  CalculationType,
+} from "@/config/construction-calculator.config";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import type { Dictionary } from "@/types";
@@ -8,10 +11,12 @@ export function EstimateSection({
   dictionary,
   calculateLabel = dictionary.hero.primaryAction,
   defaultCalculationType = "renovation",
+  defaultScenarioId,
 }: {
   dictionary: Dictionary;
   calculateLabel?: string;
   defaultCalculationType?: CalculationType;
+  defaultScenarioId?: CalculatorScenarioId;
 }) {
   return (
     <section
@@ -35,6 +40,7 @@ export function EstimateSection({
               <CalculatorTrigger
                 className="mt-6 w-full"
                 defaultCalculationType={defaultCalculationType}
+                defaultScenarioId={defaultScenarioId}
                 label={calculateLabel}
               />
             </div>

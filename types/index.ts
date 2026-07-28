@@ -338,6 +338,7 @@ export interface Dictionary {
       | "apartmentRenovation"
       | "houseRenovation"
       | "houseConstruction"
+      | "interiorDesign"
       | "commercial",
       LocalizedText
     >;

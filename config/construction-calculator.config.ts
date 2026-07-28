@@ -16,24 +16,35 @@ export const constructionCalculatorConfig = {
       id: "apartment-renovation",
       calculationType: "renovation",
       renovationObjectType: "apartment",
+      designEnabled: false,
       labelKey: "apartmentRenovation",
     },
     {
       id: "house-renovation",
       calculationType: "renovation",
       renovationObjectType: "privateHouse",
+      designEnabled: false,
       labelKey: "houseRenovation",
     },
     {
       id: "house-construction",
       calculationType: "construction",
       renovationObjectType: undefined,
+      designEnabled: false,
       labelKey: "houseConstruction",
+    },
+    {
+      id: "interior-design",
+      calculationType: "renovation",
+      renovationObjectType: "apartment",
+      designEnabled: true,
+      labelKey: "interiorDesign",
     },
     {
       id: "commercial",
       calculationType: "renovation",
       renovationObjectType: "commercial",
+      designEnabled: false,
       labelKey: "commercial",
     },
   ],
@@ -102,6 +113,8 @@ export const constructionCalculatorConfig = {
 
 export type CalculationType =
   keyof typeof constructionCalculatorConfig.calculationTypes;
+export type CalculatorScenarioId =
+  (typeof constructionCalculatorConfig.quickScenarios)[number]["id"];
 export type ConstructionPackage =
   keyof typeof constructionCalculatorConfig.construction.packages;
 export type ConstructionMaterial =

@@ -16,6 +16,8 @@ type MobileNavProps = {
   locale: Locale;
   languageLabel: string;
   items: readonly NavigationItem[];
+  services: readonly NavigationItem[];
+  servicesLabel: string;
   cta: NavigationItem;
   phone?: {
     href: string;
@@ -29,6 +31,8 @@ export function MobileNav({
   locale,
   languageLabel,
   items,
+  services,
+  servicesLabel,
   cta,
   phone,
   openLabel,
@@ -94,6 +98,24 @@ export function MobileNav({
               ))}
             </ul>
           </nav>
+          <div className="mt-4 border-t border-[var(--border)] pt-4">
+            <p className="px-4 text-xs font-semibold uppercase tracking-[0.12em] text-[var(--text-muted)]">
+              {servicesLabel}
+            </p>
+            <ul className="mt-2 grid gap-1 sm:grid-cols-2">
+              {services.map((service) => (
+                <li key={service.href}>
+                  <Link
+                    className="block rounded-xl px-4 py-2.5 text-sm font-medium hover:bg-[var(--surface-muted)] focus-visible:outline-2 focus-visible:outline-[var(--button-primary)]"
+                    href={service.href}
+                    onClick={closeMenu}
+                  >
+                    {service.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
           <div className="mt-4 flex flex-wrap items-center gap-3 border-t border-[var(--border)] pt-4">
             <Link
               className="inline-flex min-h-11 flex-1 items-center justify-center rounded-xl bg-[var(--button-primary)] px-5 text-sm font-semibold text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--button-primary)]"

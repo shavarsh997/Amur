@@ -68,7 +68,6 @@ export function Footer({
             </h2>
             <ul className="mt-5 space-y-3 text-sm">
               {getActiveServices(locale)
-                .slice(0, 4)
                 .map(({ content, slug }) => (
                   <li key={slug}>
                     <Link

@@ -216,6 +216,7 @@ export default async function ServiceDetailPage({ params }: Props) {
       <EstimateSection
         calculateLabel={primaryCta}
         defaultCalculationType={calculationType}
+        defaultScenarioId={service.calculatorScenario}
         dictionary={dictionary}
       />
       <FinalCta dictionary={dictionary} locale={locale} />

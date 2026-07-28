@@ -7,11 +7,13 @@ import {
   Home,
   Paintbrush,
   Palette,
+  PenTool,
   SlidersHorizontal,
 } from "lucide-react";
 
 import {
   constructionCalculatorConfig as config,
+  type CalculatorScenarioId,
   type CalculationType,
   type ConstructionMaterial,
   type ConstructionPackage,
@@ -164,17 +166,31 @@ export function CostCalculator({
   copy,
   locale,
   defaultCalculationType = "renovation",
+  defaultScenarioId,
   className = "",
 }: {
   copy: Dictionary["constructionCalculator"];
   locale: Locale;
   defaultCalculationType?: CalculationType;
+  defaultScenarioId?: CalculatorScenarioId;
   className?: string;
 }) {
-  const [values, setValues] = useState(() => ({
-    ...initialValues,
-    calculationType: defaultCalculationType,
-  }));
+  const [values, setValues] = useState(() => {
+    const initialScenario = config.quickScenarios.find(
+      (scenario) => scenario.id === defaultScenarioId
+    );
+
+    return {
+      ...initialValues,
+      calculationType:
+        initialScenario?.calculationType ?? defaultCalculationType,
+      ...(initialScenario?.renovationObjectType
+        ? { renovationObjectType: initialScenario.renovationObjectType }
+        : {}),
+      designEnabled:
+        initialScenario?.designEnabled ?? initialValues.designEnabled,
+    };
+  });
   const estimate = useMemo(
     () => calculateConstructionEstimate(values, copy),
     [values, copy]
@@ -195,6 +211,7 @@ export function CostCalculator({
   const selectedQuickScenario = config.quickScenarios.find(
     (scenario) =>
       scenario.calculationType === values.calculationType &&
+      scenario.designEnabled === values.designEnabled &&
       (scenario.renovationObjectType === undefined ||
         scenario.renovationObjectType === values.renovationObjectType)
   )?.id;
@@ -213,7 +230,9 @@ export function CostCalculator({
                   ? Home
                   : scenario.id === "commercial"
                     ? Building2
-                    : Paintbrush;
+                    : scenario.id === "interior-design"
+                      ? PenTool
+                      : Paintbrush;
               const option = copy.quickScenarios[scenario.labelKey];
               const selected = selectedQuickScenario === scenario.id;
               return (
@@ -229,6 +248,7 @@ export function CostCalculator({
                             renovationObjectType: scenario.renovationObjectType,
                           }
                         : {}),
+                      designEnabled: scenario.designEnabled,
                     })
                   }
                   type="button"
