@@ -371,24 +371,15 @@ export interface Dictionary {
       >;
     };
     design: Record<"basic" | "full" | "supervision", LocalizedText>;
-    contact: {
-      title: string;
-      description: string;
-      nameLabel: string;
-      phoneLabel: string;
-      commentLabel: string;
-      namePlaceholder: string;
-      phonePlaceholder: string;
-      commentPlaceholder: string;
-      submit: string;
-      submitting: string;
-    };
     result: {
       title: string;
       range: string;
       included: string;
       empty: string;
       pricingUnavailable: string;
+      calculate: string;
+      calculateDescription: string;
+      ready: string;
       total: string;
       notice: string;
       constructionIncrease: string;

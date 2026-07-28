@@ -577,19 +577,6 @@ const dictionary = {
         description: "A design project with implementation support.",
       },
     },
-    contact: {
-      title: "Request an estimate for your project",
-      description:
-        "Review the selected details and leave your contacts to prepare a request for an accurate estimate.",
-      nameLabel: "Your name",
-      phoneLabel: "Phone",
-      commentLabel: "Comment",
-      namePlaceholder: "How should we address you?",
-      phonePlaceholder: "+374 …",
-      commentPlaceholder: "Project details, if any",
-      submit: "Send request",
-      submitting: "Sending…",
-    },
     result: {
       title: "Initial assessment",
       range: "Next step",
@@ -597,6 +584,10 @@ const dictionary = {
       empty: "Enter approximate details to prepare for a project discussion.",
       pricingUnavailable:
         "Public cost ranges are not published yet. Leave the key details and we will clarify an initial guide after reviewing the brief.",
+      calculate: "Calculate cost",
+      calculateDescription:
+        "See the preliminary total and a breakdown of the selected work.",
+      ready: "Select the button to see the preliminary cost.",
       total: "Estimated total",
       notice:
         "The exact cost is determined after the brief, materials, property conditions, and survey are clarified.",

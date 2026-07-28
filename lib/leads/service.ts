@@ -11,15 +11,6 @@ export type LeadInput = {
   comment: string;
 };
 
-export type CalculatorLeadInput = {
-  calculationType: string;
-  area: number;
-  details: string;
-  name: string;
-  phone: string;
-  comment: string;
-};
-
 export async function submitLead(lead: LeadInput): Promise<void> {
   if (process.env.NODE_ENV === "development") {
     console.info("[lead] Development submission", {
@@ -30,19 +21,5 @@ export async function submitLead(lead: LeadInput): Promise<void> {
 
   // TODO: Add a Telegram delivery adapter.
   // TODO: Add a PostgreSQL persistence adapter.
-  await Promise.resolve();
-}
-
-export async function submitCalculatorLead(
-  lead: CalculatorLeadInput
-): Promise<void> {
-  if (process.env.NODE_ENV === "development") {
-    console.info("[calculator-lead] Development submission", {
-      ...lead,
-      phone: lead.phone.replace(/\d(?=\d{2})/g, "•"),
-    });
-  }
-
-  // TODO: Add a delivery and persistence adapter before production launch.
   await Promise.resolve();
 }
