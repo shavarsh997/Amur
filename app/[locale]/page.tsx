@@ -56,7 +56,7 @@ export default async function LocaleHome({ params }: Props) {
         type="application/ld+json"
       />
       <Hero dictionary={dictionary} locale={locale} />
-      <EstimateSection dictionary={dictionary} locale={locale} />
+      {/* <EstimateSection dictionary={dictionary} locale={locale} /> */}
       <ServicesSection dictionary={dictionary} locale={locale} />
       <RenovationIncluded locale={locale} />
       <WorkProcess dictionary={dictionary} />
