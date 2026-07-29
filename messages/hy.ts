@@ -468,6 +468,11 @@ const dictionary = {
         description:
           "Ընտրված աշխատանքների արժեքն անմիջապես ներառվում է կողմնորոշիչ հաշվարկում։",
       },
+      wallWorks: {
+        title: "Ներքին պատերի աշխատանքներ",
+        description:
+          "Ընտրեք աշխատանքները, և արժեքը կհաշվարկվի պատերի մոտավոր մակերեսով։",
+      },
     },
     fields: {
       area: "Մակերես, մ²",
@@ -483,6 +488,9 @@ const dictionary = {
       distanceHint: "Եթե օբյեկտը քաղաքից դուրս է։",
       heatedFloorArea: "Տաք հատակի մակերեսը, մ²",
       doorsCount: "Դռների քանակ",
+      ceilingHeight: "Առաստաղի բարձրությունը, մ",
+      roomsCount: "Սենյակների քանակը",
+      layoutDensity: "Հատակագծի բարդությունը",
     },
     quickScenarios: {
       apartmentOrPrivateHouseRenovation: {
@@ -521,7 +529,7 @@ const dictionary = {
       },
       materials: {
         aeratedConcrete: "Գազաբլոկ",
-        brick: "Աղյուս",
+        stone: "Քար",
         monolith: "Մոնոլիտ",
         frame: "Կարկաս",
       },
@@ -560,6 +568,29 @@ const dictionary = {
         doors: "Ներքին դռների տեղադրում",
       },
     },
+    wallWorks: {
+      layoutDensity: {
+        open: "Բաց հատակագիծ",
+        standard: "Ստանդարտ հատակագիծ",
+        complex: "Շատ սենյակներ, միջնապատեր և միջանցքներ",
+      },
+      works: {
+        plastering: "Պատերի սվաղում",
+        putty: "Պատերի շպակլյովկա",
+        painting: "Պատերի ներկում",
+        wallpaper: "Պաստառապատում",
+        wallDemolition: "Պատերի ծածկույթի ապամոնտաժում",
+      },
+      resultTitle: "Պատերի նախնական հաշվարկ",
+      wallAreaLabel: "Ներքին պատերի մոտավոր մակերեսը՝ {area} մ²",
+      calculationDetails:
+        "Միջնապատերի երկարությունը՝ {length} մ; մակերեսը մինչև բացվածքների հանումը՝ {grossArea} մ²; բացվածքներ՝ −{openingsArea} մ²։",
+      totalLabel: "Պատերի աշխատանքների ընդհանուր արժեքը",
+      unit: "մ²",
+      noWorksSelected: "Պատերի աշխատանքներ ընտրված չեն։",
+      notice:
+        "Հաշվարկը նախնական է։ Պատերի փաստացի մակերեսը և աշխատանքների արժեքը կախված են հատակագծից, միջնապատերի քանակից, դռների բացվածքներից, մակերեսների վիճակից և ընտրված նյութերից։",
+    },
     design: {
       basic: {
         title: "Հիմնական դիզայն",
@@ -592,6 +623,21 @@ const dictionary = {
       distanceNote: "{distance} կմ",
       renovationLine: "Վերանորոգում՝ {level}",
       loading: "Հաշվարկում ենք արժեքը…",
+      workBreakdownTitle: "Ընտրված աշխատանքների նախահաշիվ",
+      renovationScopeTitle: "Աշխատանքների մոտավոր ծավալներ",
+      floorAreaLabel: "Հատակի և տարածքի մակերես",
+      units: {
+        squareMeter: "մ²",
+        bathroom: "սանհանգույց",
+        item: "հատ",
+        kilometer: "կմ",
+      },
+      surfaceWorks: {
+        floor: "Հատակի նախապատրաստում և հարդարում",
+        ceiling: "Առաստաղի նախապատրաստում և հարդարում",
+        internalWalls: "Ներքին պատեր",
+        exteriorWalls: "Արտաքին պատեր",
+      },
     },
     validation: {
       areaRequired: "Նշեք մակերեսը։",
@@ -604,6 +650,9 @@ const dictionary = {
       heatedFloorAreaRequired:
         "Նշեք տաք հատակի մակերեսը՝ օբյեկտի մակերեսի սահմաններում։",
       doorsCountRequired: "Նշեք դռների քանակը։",
+      renovationAreaOutOfRange: "Նշեք օբյեկտի մակերեսը՝ 10-ից 2 000 մ²։",
+      ceilingHeightOutOfRange: "Նշեք առաստաղի բարձրությունը՝ 2-ից 6 մ։",
+      roomsCountOutOfRange: "Նշեք սենյակների քանակը՝ 1-ից 50։",
     },
     estimateSectionDescription:
       "Ընտրեք սցենարն ու նշեք հիմնական տվյալները․ դրանք կուղարկենք մասնագետին՝ ճշգրիտ հաշվարկի համար։",

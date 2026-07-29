@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-import { ButtonLink } from "@/components/ui/button-link";
+import { ContactTrigger } from "@/components/forms/contact-dialog";
 import { Container } from "@/components/ui/container";
 import { PageHero } from "@/components/ui/page-hero";
 import { getDictionary, isLocale } from "@/lib/i18n";
@@ -44,9 +44,10 @@ export default async function ProjectsPage({ params }: Props) {
           <p className="max-w-2xl text-lg leading-8 text-[var(--text-secondary)]">
             {dictionary.projects.availabilityDescription}
           </p>
-          <ButtonLink className="mt-8" href={`/${locale}/contacts#estimate`}>
-            {dictionary.projects.availabilityAction}
-          </ButtonLink>
+          <ContactTrigger
+            className="mt-8"
+            label={dictionary.projects.availabilityAction}
+          />
         </div>
       </Container>
     </>

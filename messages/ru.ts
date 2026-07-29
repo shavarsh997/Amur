@@ -456,6 +456,11 @@ const dictionary = {
         title: "Дополнительные работы",
         description: "Стоимость выбранных работ сразу учитывается в ориентире.",
       },
+      wallWorks: {
+        title: "Работы по внутренним стенам",
+        description:
+          "Выберите работы — стоимость рассчитаем по примерной площади стен.",
+      },
     },
     fields: {
       area: "Площадь, м²",
@@ -471,6 +476,9 @@ const dictionary = {
       distanceHint: "Если объект находится за пределами города.",
       heatedFloorArea: "Площадь тёплого пола, м²",
       doorsCount: "Количество дверей",
+      ceilingHeight: "Высота потолков, м",
+      roomsCount: "Количество помещений",
+      layoutDensity: "Сложность планировки",
     },
     quickScenarios: {
       apartmentOrPrivateHouseRenovation: {
@@ -507,7 +515,7 @@ const dictionary = {
       },
       materials: {
         aeratedConcrete: "Газоблок",
-        brick: "Кирпич",
+        stone: "Камень",
         monolith: "Монолит",
         frame: "Каркас",
       },
@@ -546,6 +554,29 @@ const dictionary = {
         doors: "Установка межкомнатных дверей",
       },
     },
+    wallWorks: {
+      layoutDensity: {
+        open: "Свободная планировка",
+        standard: "Стандартная планировка",
+        complex: "Много комнат, перегородок и коридоров",
+      },
+      works: {
+        plastering: "Штукатурка стен",
+        putty: "Шпаклёвка стен",
+        painting: "Покраска стен",
+        wallpaper: "Поклейка обоев",
+        wallDemolition: "Демонтаж покрытия стен",
+      },
+      resultTitle: "Предварительный расчёт стен",
+      wallAreaLabel: "Примерная площадь внутренних стен: {area} м²",
+      calculationDetails:
+        "Длина перегородок: {length} м; площадь до вычета проёмов: {grossArea} м²; проёмы: −{openingsArea} м².",
+      totalLabel: "Итого работы по стенам",
+      unit: "м²",
+      noWorksSelected: "Работы по стенам не выбраны.",
+      notice:
+        "Расчёт является предварительным. Фактическая площадь стен и стоимость работ зависят от планировки, количества перегородок, дверных проёмов, состояния поверхностей и выбранных материалов.",
+    },
     design: {
       basic: {
         title: "Базовый дизайн",
@@ -579,6 +610,21 @@ const dictionary = {
       distanceNote: "{distance} км",
       renovationLine: "Ремонт: {level}",
       loading: "Рассчитываем стоимость…",
+      workBreakdownTitle: "Смета выбранных работ",
+      renovationScopeTitle: "Примерные объёмы работ",
+      floorAreaLabel: "Площадь пола и помещений",
+      units: {
+        squareMeter: "м²",
+        bathroom: "санузел",
+        item: "шт.",
+        kilometer: "км",
+      },
+      surfaceWorks: {
+        floor: "Подготовка и отделка пола",
+        ceiling: "Подготовка и отделка потолка",
+        internalWalls: "Внутренние стены",
+        exteriorWalls: "Наружные стены",
+      },
     },
     validation: {
       areaRequired: "Укажите площадь.",
@@ -591,6 +637,9 @@ const dictionary = {
       heatedFloorAreaRequired:
         "Укажите площадь тёплого пола в пределах площади объекта.",
       doorsCountRequired: "Укажите количество дверей.",
+      renovationAreaOutOfRange: "Укажите площадь объекта от 10 до 2 000 м².",
+      ceilingHeightOutOfRange: "Укажите высоту потолков от 2 до 6 м.",
+      roomsCountOutOfRange: "Укажите количество помещений от 1 до 50.",
     },
     estimateSectionDescription:
       "Выберите сценарий и укажите основные параметры — передадим вводные специалисту для точного расчёта.",

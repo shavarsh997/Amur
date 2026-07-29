@@ -47,7 +47,7 @@ export const constructionCalculatorConfig = {
     },
     materials: {
       aeratedConcrete: { multiplier: 1 },
-      brick: { multiplier: 1.18 },
+      stone: { multiplier: 1.18 },
       monolith: { multiplier: 1.3 },
       frame: { multiplier: 0.9 },
     },
@@ -66,6 +66,31 @@ export const constructionCalculatorConfig = {
     },
   },
   renovation: {
+    internalWalls: {
+      layoutCoefficients: {
+        open: 0.9,
+        standard: 1.2,
+        complex: 1.5,
+      },
+      openingsCoefficient: 0.9,
+      works: {
+        plastering: { pricePerSquareMeter: 3_500 },
+        putty: { pricePerSquareMeter: 2_200 },
+        painting: { pricePerSquareMeter: 1_800 },
+        wallpaper: { pricePerSquareMeter: 2_500 },
+        wallDemolition: { pricePerSquareMeter: 1_200 },
+      },
+    },
+    surfaceAllocation: {
+      floor: 0.3,
+      ceiling: 0.15,
+      internalWalls: 0.35,
+      exteriorWalls: 0.2,
+    },
+    exteriorWalls: {
+      perimeterCoefficient: 4,
+      openingsCoefficient: 0.78,
+    },
     conditions: {
       newWithoutFinish: { multiplier: 1 },
       roughFinish: { multiplier: 0.9 },
@@ -110,3 +135,7 @@ export type RenovationLevel =
 export type DesignPackage = keyof typeof constructionCalculatorConfig.design;
 export type RenovationExtra =
   keyof typeof constructionCalculatorConfig.renovation.extras;
+export type LayoutDensity =
+  keyof typeof constructionCalculatorConfig.renovation.internalWalls.layoutCoefficients;
+export type WallWork =
+  keyof typeof constructionCalculatorConfig.renovation.internalWalls.works;

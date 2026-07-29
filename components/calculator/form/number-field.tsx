@@ -11,6 +11,7 @@ type NumberFieldInputProps = ControlledInputProps<string> & {
   label: string;
   hint?: string;
   min?: number;
+  max?: number;
   fieldId?: string;
   error?: string;
 };
@@ -32,6 +33,7 @@ export function NumberFieldInput({
   label,
   hint,
   min = 0,
+  max,
   fieldId,
   error,
 }: NumberFieldInputProps) {
@@ -53,6 +55,7 @@ export function NumberFieldInput({
         className={inputClassName}
         id={fieldId ?? name}
         inputMode="decimal"
+        max={max}
         min={min}
         name={name}
         onBlur={onBlur}
@@ -85,6 +88,7 @@ export function NumberField({
   label,
   hint,
   min,
+  max,
   fieldId,
 }: NumberFieldProps) {
   return (
@@ -98,6 +102,7 @@ export function NumberField({
           fieldId={fieldId}
           hint={hint}
           label={label}
+          max={max}
           min={min}
         />
       )}

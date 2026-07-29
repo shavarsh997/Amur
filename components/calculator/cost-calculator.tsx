@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import {
   FormProvider,
   useForm,
@@ -16,6 +16,7 @@ import { ConstructionExtrasStep } from "@/components/calculator/steps/constructi
 import { ParametersStep } from "@/components/calculator/steps/parameters-step";
 import { RenovationExtrasStep } from "@/components/calculator/steps/renovation-extras-step";
 import { ScenarioStep } from "@/components/calculator/steps/scenario-step";
+import { WallWorksStep } from "@/components/calculator/steps/wall-works-step";
 import type {
   CalculatorFieldId,
   CalculatorFormValues,
@@ -31,7 +32,6 @@ import {
   type CalculationType,
 } from "@/config/construction-calculator.config";
 import { createCalculatorResolver } from "@/lib/calculator/calculator-form-resolver";
-import { calculateConstructionEstimate } from "@/lib/calculator/calculate-construction-estimate";
 import type { Dictionary, Locale } from "@/types";
 
 export function CostCalculator({
@@ -52,20 +52,13 @@ export function CostCalculator({
     defaultValues: valuesForScenario(defaultCalculationType, defaultScenarioId),
     resolver: createCalculatorResolver(copy),
   });
-  const watchedValues = useWatch({ control: form.control });
   const calculationType = useWatch({
     control: form.control,
     name: "calculationType",
     defaultValue: defaultCalculationType,
   });
-  const estimate = useMemo(
-    () =>
-      calculateConstructionEstimate(
-        { ...form.getValues(), ...watchedValues } as CalculatorFormValues,
-        copy
-      ),
-    [watchedValues, copy, form]
-  );
+  const [submittedValues, setSubmittedValues] =
+    useState<CalculatorFormValues | null>(null);
   const isConstruction = calculationType === "construction";
   const isRenovation = calculationType === "renovation";
 
@@ -97,7 +90,8 @@ export function CostCalculator({
   ): CalculatorFieldId | null =>
     CALCULATOR_FIELD_ORDER.find((field) => errors[field]) ?? null;
 
-  const onSubmit: SubmitHandler<CalculatorFormValues> = () => {
+  const onSubmit: SubmitHandler<CalculatorFormValues> = (values) => {
+    setSubmittedValues(values);
     setIsEstimateOpen(true);
   };
 
@@ -111,7 +105,7 @@ export function CostCalculator({
   return (
     <FormProvider {...form}>
       <div
-        className={`grid items-start gap-5 lg:grid-cols-[minmax(0,1fr)_20rem] ${className}`}
+        className={`flex flex-col items-start gap-5 lg:grid-cols-[minmax(0,1fr)_20rem] ${className}`}
       >
         <div className="space-y-5">
           <ScenarioStep
@@ -126,18 +120,20 @@ export function CostCalculator({
 
           {isRenovation ? <RenovationExtrasStep copy={copy} /> : null}
 
+          {isRenovation ? <WallWorksStep copy={copy} /> : null}
+
           <CalculateButton
             copy={copy}
             onClick={form.handleSubmit(onSubmit, onInvalid)}
           />
         </div>
 
-        {isEstimateOpen ? (
+        {isEstimateOpen && submittedValues ? (
           <ConstructionEstimateDialog
             copy={copy}
-            estimate={estimate}
             locale={locale}
             onClose={() => setIsEstimateOpen(false)}
+            values={submittedValues}
           />
         ) : null}
       </div>

@@ -22,6 +22,10 @@ export const initialValues: CalculatorFormValues = {
   renovationExtras: [],
   heatedFloorArea: "",
   doorsCount: "0",
+  ceilingHeight: "2.8",
+  roomsCount: "1",
+  layoutDensity: "standard",
+  selectedWallWorks: [],
   designPackage: "full",
 };
 

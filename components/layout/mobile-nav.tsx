@@ -1,15 +1,17 @@
 "use client";
 
-import { Menu, Phone, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useId, useRef, useState } from "react";
 
 import { LanguageSwitcher } from "@/components/layout/language-switcher";
+import { ContactTrigger } from "@/components/forms/contact-dialog";
 import type { Locale } from "@/types";
 
 export type NavigationItem = {
   href: string;
   label: string;
+  isContact?: boolean;
 };
 
 type MobileNavProps = {
@@ -18,11 +20,7 @@ type MobileNavProps = {
   items: readonly NavigationItem[];
   services: readonly NavigationItem[];
   servicesLabel: string;
-  cta: NavigationItem;
-  phone?: {
-    href: string;
-    label: string;
-  };
+  cta: Pick<NavigationItem, "label">;
   openLabel: string;
   closeLabel: string;
 };
@@ -34,7 +32,6 @@ export function MobileNav({
   services,
   servicesLabel,
   cta,
-  phone,
   openLabel,
   closeLabel,
 }: MobileNavProps) {
@@ -86,14 +83,23 @@ export function MobileNav({
             <ul className="space-y-1">
               {items.map((item, index) => (
                 <li key={item.href}>
-                  <Link
-                    ref={index === 0 ? firstLinkRef : undefined}
-                    className="block rounded-xl px-4 py-3 font-medium hover:bg-[var(--surface-muted)] focus-visible:outline-2 focus-visible:outline-[var(--button-primary)]"
-                    href={item.href}
-                    onClick={closeMenu}
-                  >
-                    {item.label}
-                  </Link>
+                  {item.isContact ? (
+                    <ContactTrigger
+                      className="block w-full rounded-xl px-4 py-3 text-left font-medium hover:bg-[var(--surface-muted)]"
+                      label={item.label}
+                      onClick={closeMenu}
+                      variant="link"
+                    />
+                  ) : (
+                    <Link
+                      ref={index === 0 ? firstLinkRef : undefined}
+                      className="block rounded-xl px-4 py-3 font-medium hover:bg-[var(--surface-muted)] focus-visible:outline-2 focus-visible:outline-[var(--button-primary)]"
+                      href={item.href}
+                      onClick={closeMenu}
+                    >
+                      {item.label}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
@@ -117,22 +123,11 @@ export function MobileNav({
             </ul>
           </div>
           <div className="mt-4 flex flex-wrap items-center gap-3 border-t border-[var(--border)] pt-4">
-            <Link
-              className="inline-flex min-h-11 flex-1 items-center justify-center rounded-xl bg-[var(--button-primary)] px-5 text-sm font-semibold text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--button-primary)]"
-              href={cta.href}
+            <ContactTrigger
+              className="min-h-11 flex-1 px-5"
+              label={cta.label}
               onClick={closeMenu}
-            >
-              {cta.label}
-            </Link>
-            {phone ? (
-              <a
-                aria-label={phone.label}
-                className="grid size-11 place-items-center rounded-xl border border-[var(--border)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--button-primary)]"
-                href={phone.href}
-              >
-                <Phone aria-hidden="true" className="size-4" />
-              </a>
-            ) : null}
+            />
             <LanguageSwitcher label={languageLabel} locale={locale} />
           </div>
         </div>

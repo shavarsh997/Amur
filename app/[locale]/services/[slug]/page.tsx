@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 
 import { EstimateSection } from "@/components/sections/estimate-section";
 import { FinalCta } from "@/components/sections/final-cta";
-import { ButtonLink } from "@/components/ui/button-link";
+import { ContactTrigger } from "@/components/forms/contact-dialog";
 import { Container } from "@/components/ui/container";
 import { PageHero } from "@/components/ui/page-hero";
 import { siteConfig } from "@/config/site.config";
@@ -40,8 +40,6 @@ export default async function ServiceDetailPage({ params }: Props) {
   const service = getServiceBySlug(locale, slug);
   if (!service) notFound();
   const copy = dictionary.services.detail;
-  const calculationType =
-    service.slug === "house-construction" ? "construction" : "renovation";
   const primaryCta =
     service.ctaKind === "contact"
       ? (service.content.primaryCta ?? copy.requestEstimate)
@@ -65,11 +63,7 @@ export default async function ServiceDetailPage({ params }: Props) {
         type="application/ld+json"
       />
       <PageHero
-        actions={
-          <ButtonLink href={`/${locale}/contacts#estimate`}>
-            {primaryCta}
-          </ButtonLink>
-        }
+        actions={<ContactTrigger label={primaryCta} />}
         breadcrumbsLabel={dictionary.common.breadcrumbs}
         breadcrumbs={[
           { label: dictionary.common.home, href: `/${locale}` },
@@ -203,20 +197,13 @@ export default async function ServiceDetailPage({ params }: Props) {
               <h2 className="text-2xl font-semibold tracking-[-0.03em] text-[var(--text-primary)]">
                 {primaryCta}
               </h2>
-              <ButtonLink
-                className="mt-6"
-                href={`/${locale}/contacts#estimate`}
-              >
-                {primaryCta}
-              </ButtonLink>
+              <ContactTrigger className="mt-6" label={primaryCta} />
             </div>
           </div>
         </Container>
       </article>
       <EstimateSection
-        calculateLabel={primaryCta}
-        defaultCalculationType={calculationType}
-        defaultScenarioId={service.calculatorScenario}
+        contactLabel={dictionary.nav.contacts}
         dictionary={dictionary}
       />
       <FinalCta dictionary={dictionary} locale={locale} />

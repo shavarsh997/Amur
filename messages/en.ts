@@ -463,6 +463,11 @@ const dictionary = {
         description:
           "The selected work is immediately included in the indicative cost.",
       },
+      wallWorks: {
+        title: "Internal wall work",
+        description:
+          "Select the work to estimate its cost from the approximate wall area.",
+      },
     },
     fields: {
       area: "Area, m²",
@@ -478,6 +483,9 @@ const dictionary = {
       distanceHint: "If the property is outside the city.",
       heatedFloorArea: "Underfloor-heating area, m²",
       doorsCount: "Number of doors",
+      ceilingHeight: "Ceiling height, m",
+      roomsCount: "Number of rooms",
+      layoutDensity: "Layout complexity",
     },
     quickScenarios: {
       apartmentOrPrivateHouseRenovation: {
@@ -516,7 +524,7 @@ const dictionary = {
       },
       materials: {
         aeratedConcrete: "Aerated concrete",
-        brick: "Brick",
+        stone: "Stone",
         monolith: "Monolithic concrete",
         frame: "Frame construction",
       },
@@ -555,6 +563,29 @@ const dictionary = {
         doors: "Internal door installation",
       },
     },
+    wallWorks: {
+      layoutDensity: {
+        open: "Open layout",
+        standard: "Standard layout",
+        complex: "Many rooms, partitions, and corridors",
+      },
+      works: {
+        plastering: "Wall plastering",
+        putty: "Wall puttying",
+        painting: "Wall painting",
+        wallpaper: "Wallpaper installation",
+        wallDemolition: "Wall-covering removal",
+      },
+      resultTitle: "Preliminary wall calculation",
+      wallAreaLabel: "Approximate internal wall area: {area} m²",
+      calculationDetails:
+        "Partition length: {length} m; area before openings: {grossArea} m²; openings: −{openingsArea} m².",
+      totalLabel: "Total wall work",
+      unit: "m²",
+      noWorksSelected: "No wall work selected.",
+      notice:
+        "This calculation is preliminary. The actual wall area and work cost depend on the layout, number of partitions, door openings, surface condition, and chosen materials.",
+    },
     design: {
       basic: {
         title: "Basic design",
@@ -587,6 +618,21 @@ const dictionary = {
       distanceNote: "{distance} km",
       renovationLine: "Renovation: {level}",
       loading: "Calculating estimate…",
+      workBreakdownTitle: "Selected work estimate",
+      renovationScopeTitle: "Approximate work quantities",
+      floorAreaLabel: "Floor and room area",
+      units: {
+        squareMeter: "m²",
+        bathroom: "bathroom",
+        item: "pcs",
+        kilometer: "km",
+      },
+      surfaceWorks: {
+        floor: "Floor preparation and finishing",
+        ceiling: "Ceiling preparation and finishing",
+        internalWalls: "Internal walls",
+        exteriorWalls: "Exterior walls",
+      },
     },
     validation: {
       areaRequired: "Enter the area.",
@@ -600,6 +646,9 @@ const dictionary = {
       heatedFloorAreaRequired:
         "Enter an underfloor-heating area no larger than the property area.",
       doorsCountRequired: "Enter the number of doors.",
+      renovationAreaOutOfRange: "Enter an area from 10 to 2,000 m².",
+      ceilingHeightOutOfRange: "Enter a ceiling height from 2 to 6 m.",
+      roomsCountOutOfRange: "Enter a number of rooms from 1 to 50.",
     },
     estimateSectionDescription:
       "Choose a scenario and enter the key details — we will send them to a specialist for an accurate estimate.",

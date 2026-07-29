@@ -1,4 +1,3 @@
-import { Phone } from "lucide-react";
 import Link from "next/link";
 
 import { navigationConfig } from "@/config/navigation.config";
@@ -6,6 +5,7 @@ import { siteConfig } from "@/config/site.config";
 import { getActiveServices } from "@/config/services.config";
 import { LanguageSwitcher } from "@/components/layout/language-switcher";
 import { MobileNav, type NavigationItem } from "@/components/layout/mobile-nav";
+import { ContactTrigger } from "@/components/forms/contact-dialog";
 import { BrandMark } from "@/components/ui/brand-mark";
 import { Container } from "@/components/ui/container";
 import type { Dictionary, Locale } from "@/types";
@@ -26,6 +26,7 @@ export function Header({
   const navigation: NavigationItem[] = navigationConfig.map((item) => ({
     href: item.path ? `${prefix}/${item.path}` : prefix,
     label: dictionary.nav[item.key],
+    isContact: item.key === "contacts",
   }));
   const services: NavigationItem[] = getActiveServices(locale).map(
     ({ content, slug }) => ({
@@ -34,7 +35,6 @@ export function Header({
     })
   );
   const cta = {
-    href: `${prefix}/contacts#estimate`,
     label: dictionary.nav.consultation,
   };
   return (
@@ -55,38 +55,31 @@ export function Header({
           <ul className="flex items-center gap-5 xl:gap-6">
             {navigation.map((item) => (
               <li key={item.href}>
-                <Link
-                  className={`rounded-sm text-sm font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--button-primary)] ${"hover:text-[var(--text-secondary)]"}`}
-                  href={item.href}
-                >
-                  {item.label}
-                </Link>
+                {item.isContact ? (
+                  <ContactTrigger label={item.label} variant="link" />
+                ) : (
+                  <Link
+                    className={`rounded-sm text-sm font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--button-primary)] ${"hover:text-[var(--text-secondary)]"}`}
+                    href={item.href}
+                  >
+                    {item.label}
+                  </Link>
+                )}
               </li>
             ))}
           </ul>
         </nav>
 
         <div className="hidden items-center gap-2 xl:flex">
-          {config.contacts.phoneHref ? (
-            <a
-              aria-label={config.contacts.phone}
-              className="grid size-10 place-items-center rounded-full transition-colors hover:bg-[var(--surface-muted)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--button-primary)]"
-              href={config.contacts.phoneHref}
-            >
-              <Phone aria-hidden="true" className="size-4" />
-            </a>
-          ) : null}
           <LanguageSwitcher
             inverted={false}
             label={dictionary.nav.language}
             locale={locale}
           />
-          <Link
-            className="inline-flex min-h-10 items-center justify-center rounded-lg bg-[var(--button-primary)] px-4 text-sm font-semibold text-white transition-colors hover:bg-[var(--button-primary-hover)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--button-primary)]"
-            href={cta.href}
-          >
-            {cta.label}
-          </Link>
+          <ContactTrigger
+            className="min-h-10 rounded-lg px-4"
+            label={cta.label}
+          />
         </div>
 
         <MobileNav
@@ -96,14 +89,6 @@ export function Header({
           languageLabel={dictionary.nav.language}
           locale={locale}
           openLabel={dictionary.nav.openMenu}
-          phone={
-            config.contacts.phoneHref
-              ? {
-                  href: config.contacts.phoneHref,
-                  label: config.contacts.phone,
-                }
-              : undefined
-          }
           services={services}
           servicesLabel={dictionary.footer.services}
         />

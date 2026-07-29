@@ -307,6 +307,7 @@ export interface Dictionary {
       parameters: { title: string; description: string };
       constructionExtras: { title: string; description: string };
       renovationExtras: { title: string; description: string };
+      wallWorks: { title: string; description: string };
     };
     fields: {
       area: string;
@@ -322,6 +323,9 @@ export interface Dictionary {
       distanceHint: string;
       heatedFloorArea: string;
       doorsCount: string;
+      ceilingHeight: string;
+      roomsCount: string;
+      layoutDensity: string;
     };
     quickScenarios: Record<
       | "apartmentOrPrivateHouseRenovation"
@@ -333,7 +337,7 @@ export interface Dictionary {
     construction: {
       packages: Record<"shell" | "rough" | "turnkey", LocalizedText>;
       materials: Record<
-        "aeratedConcrete" | "brick" | "monolith" | "frame",
+        "aeratedConcrete" | "stone" | "monolith" | "frame",
         string
       >;
       houseShapes: Record<"rectangle" | "lShape" | "complex", string>;
@@ -361,6 +365,20 @@ export interface Dictionary {
         string
       >;
     };
+    wallWorks: {
+      layoutDensity: Record<"open" | "standard" | "complex", string>;
+      works: Record<
+        "plastering" | "putty" | "painting" | "wallpaper" | "wallDemolition",
+        string
+      >;
+      resultTitle: string;
+      wallAreaLabel: string;
+      calculationDetails: string;
+      totalLabel: string;
+      unit: string;
+      noWorksSelected: string;
+      notice: string;
+    };
     design: Record<"basic" | "full" | "supervision", LocalizedText>;
     result: {
       title: string;
@@ -377,6 +395,19 @@ export interface Dictionary {
       distanceNote: string;
       renovationLine: string;
       loading: string;
+      workBreakdownTitle: string;
+      renovationScopeTitle: string;
+      floorAreaLabel: string;
+      units: {
+        squareMeter: string;
+        bathroom: string;
+        item: string;
+        kilometer: string;
+      };
+      surfaceWorks: Record<
+        "floor" | "ceiling" | "internalWalls" | "exteriorWalls",
+        string
+      >;
     };
     validation: {
       areaRequired: string;
@@ -388,6 +419,9 @@ export interface Dictionary {
       bathroomsRequired: string;
       heatedFloorAreaRequired: string;
       doorsCountRequired: string;
+      renovationAreaOutOfRange: string;
+      ceilingHeightOutOfRange: string;
+      roomsCountOutOfRange: string;
     };
     estimateSectionDescription: string;
   };

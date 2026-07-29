@@ -45,6 +45,11 @@ export function validateCalculatorForm(
     errors.area = messages.areaRequired;
   } else if (area < config.limits.minArea || area > config.limits.maxArea) {
     errors.area = messages.areaOutOfRange;
+  } else if (
+    values.calculationType === "renovation" &&
+    (area < 10 || area > 2_000)
+  ) {
+    errors.area = messages.renovationAreaOutOfRange;
   }
 
   if (values.calculationType === "construction") {
@@ -66,6 +71,14 @@ export function validateCalculatorForm(
   }
 
   if (values.calculationType === "renovation") {
+    const ceilingHeight = parsePositiveNumber(values.ceilingHeight);
+    if (!ceilingHeight || ceilingHeight < 2 || ceilingHeight > 6) {
+      errors.ceilingHeight = messages.ceilingHeightOutOfRange;
+    }
+    const roomsCount = parsePositiveInteger(values.roomsCount);
+    if (!roomsCount || roomsCount > 50) {
+      errors.roomsCount = messages.roomsCountOutOfRange;
+    }
     if (
       values.renovationExtras.includes("plumbing") &&
       !parsePositiveInteger(values.bathrooms)

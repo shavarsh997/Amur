@@ -36,6 +36,7 @@ export function ServicesSection({
             .filter((service) => service.category === "primary")
             .map(({ content, ...service }) => (
               <ServiceCard
+                contactLabel={dictionary.nav.contacts}
                 content={content}
                 key={service.slug}
                 learnMore={dictionary.services.learnMore}

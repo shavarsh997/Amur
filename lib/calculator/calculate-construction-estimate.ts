@@ -1,43 +1,31 @@
+import type { CalculatorFormValues } from "@/components/calculator/types";
 import { constructionCalculatorConfig as config } from "@/config/construction-calculator.config";
-import type {
-  CalculationType,
-  ConstructionMaterial,
-  ConstructionPackage,
-  DesignPackage,
-  HouseShape,
-  RenovationCondition,
-  RenovationExtra,
-  RenovationLevel,
-} from "@/config/construction-calculator.config";
+import { calculateInternalWallArea } from "@/lib/calculator/calculate-internal-wall-area";
+import { calculateRenovationSurfaces } from "@/lib/calculator/calculate-renovation-surfaces";
+import type { RenovationSurfaceKey } from "@/lib/calculator/calculate-renovation-surfaces";
+import {
+  calculateWallWorksCost,
+  type WallWorkCostLine,
+} from "@/lib/calculator/calculate-wall-works-cost";
 import type { Dictionary } from "@/types";
 
-export type ConstructionCalculatorValues = {
-  calculationType: CalculationType;
-  area: string;
-  bathrooms: string;
-  constructionPackage: ConstructionPackage;
-  material: ConstructionMaterial;
-  houseShape: HouseShape;
-  basement: boolean;
-  basementArea: string;
-  garage: boolean;
-  garageArea: string;
-  terrace: boolean;
-  terraceArea: string;
-  highCeilings: boolean;
-  difficultSite: boolean;
-  distanceKm: string;
-  renovationCondition: RenovationCondition;
-  renovationLevel: RenovationLevel;
-  renovationExtras: RenovationExtra[];
-  heatedFloorArea: string;
-  doorsCount: string;
-  designPackage: DesignPackage;
+export type EstimateUnit = "squareMeter" | "bathroom" | "item" | "kilometer";
+export type EstimateLine = {
+  label: string;
+  amount: number;
+  note?: string;
+  quantity?: number;
+  unit?: EstimateUnit;
+  pricePerUnit?: number;
+  surface?: RenovationSurfaceKey;
 };
-
-export type EstimateLine = { label: string; amount: number; note?: string };
 export type ConstructionEstimate = {
   lines: EstimateLine[];
+  floorArea: number;
+  surfaceCalculation: ReturnType<typeof calculateRenovationSurfaces> | null;
+  wallCalculation: ReturnType<typeof calculateInternalWallArea> | null;
+  wallWorks: WallWorkCostLine[];
+  wallWorksTotal: number;
   constructionTotal: number;
   renovationTotal: number;
   designTotal: number;
@@ -53,11 +41,9 @@ const numberValue = (value: string) =>
       ? Number(value.replace(",", "."))
       : 0
   );
-const includesConstruction = (type: CalculationType) => type === "construction";
-const includesRenovation = (type: CalculationType) => type === "renovation";
 
 export function calculateConstructionEstimate(
-  values: ConstructionCalculatorValues,
+  values: CalculatorFormValues,
   copy: Dictionary["constructionCalculator"]
 ): ConstructionEstimate {
   const area = numberValue(values.area);
@@ -66,8 +52,12 @@ export function calculateConstructionEstimate(
   let constructionTotal = 0;
   let renovationTotal = 0;
   let designTotal = 0;
+  let wallCalculation: ConstructionEstimate["wallCalculation"] = null;
+  let surfaceCalculation: ConstructionEstimate["surfaceCalculation"] = null;
+  let wallWorks: WallWorkCostLine[] = [];
+  let wallWorksTotal = 0;
 
-  if (area && includesConstruction(values.calculationType)) {
+  if (area && values.calculationType === "construction") {
     const packageOption =
       config.construction.packages[values.constructionPackage];
     const material = config.construction.materials[values.material];
@@ -107,27 +97,48 @@ export function calculateConstructionEstimate(
       label: copy.construction.packages[values.constructionPackage].title,
       amount: mainConstruction,
       note: `${copy.construction.materials[values.material]}, ${copy.construction.houseShapes[values.houseShape]}`,
+      quantity: area,
+      unit: "squareMeter",
+      pricePerUnit: mainConstruction / area,
     });
     if (values.basement) {
       const amount =
         numberValue(values.basementArea) *
         config.construction.extras.basement.pricePerSquareMeter;
       constructionTotal += amount;
-      lines.push({ label: copy.construction.extras.basement, amount });
+      lines.push({
+        label: copy.construction.extras.basement,
+        amount,
+        quantity: numberValue(values.basementArea),
+        unit: "squareMeter",
+        pricePerUnit: config.construction.extras.basement.pricePerSquareMeter,
+      });
     }
     if (values.garage) {
       const amount =
         numberValue(values.garageArea) *
         config.construction.extras.garage.pricePerSquareMeter;
       constructionTotal += amount;
-      lines.push({ label: copy.construction.extras.garage, amount });
+      lines.push({
+        label: copy.construction.extras.garage,
+        amount,
+        quantity: numberValue(values.garageArea),
+        unit: "squareMeter",
+        pricePerUnit: config.construction.extras.garage.pricePerSquareMeter,
+      });
     }
     if (values.terrace) {
       const amount =
         numberValue(values.terraceArea) *
         config.construction.extras.terrace.pricePerSquareMeter;
       constructionTotal += amount;
-      lines.push({ label: copy.construction.extras.terrace, amount });
+      lines.push({
+        label: copy.construction.extras.terrace,
+        amount,
+        quantity: numberValue(values.terraceArea),
+        unit: "squareMeter",
+        pricePerUnit: config.construction.extras.terrace.pricePerSquareMeter,
+      });
     }
     const distanceCost =
       numberValue(values.distanceKm) *
@@ -141,22 +152,75 @@ export function calculateConstructionEstimate(
           "{distance}",
           String(numberValue(values.distanceKm))
         ),
+        quantity: numberValue(values.distanceKm),
+        unit: "kilometer",
+        pricePerUnit: config.construction.extras.distance.pricePerKm,
       });
     }
   }
 
-  if (area && includesRenovation(values.calculationType)) {
+  if (area && values.calculationType === "renovation") {
     const level = config.renovation.levels[values.renovationLevel];
     const condition = config.renovation.conditions[values.renovationCondition];
     renovationTotal = area * level.pricePerSquareMeter * condition.multiplier;
-    lines.push({
-      label: copy.result.renovationLine.replace(
-        "{level}",
-        copy.renovation.levels[values.renovationLevel]
-      ),
-      amount: renovationTotal,
-      note: copy.renovation.conditions[values.renovationCondition],
+    wallCalculation = calculateInternalWallArea({
+      floorArea: area,
+      ceilingHeight: numberValue(values.ceilingHeight),
+      roomsCount: numberValue(values.roomsCount),
+      layoutDensity: values.layoutDensity,
     });
+    surfaceCalculation = calculateRenovationSurfaces({
+      floorArea: area,
+      ceilingHeight: numberValue(values.ceilingHeight),
+      roomsCount: numberValue(values.roomsCount),
+      layoutDensity: values.layoutDensity,
+    });
+    const wallWorksResult = calculateWallWorksCost(
+      wallCalculation.netWallArea,
+      values.selectedWallWorks
+    );
+    wallWorks = wallWorksResult.lines;
+    wallWorksTotal = wallWorksResult.total;
+    const baseRenovationTotal = renovationTotal;
+    const selectedWallWorksReplaceBase = wallWorksTotal > 0;
+    if (selectedWallWorksReplaceBase) {
+      renovationTotal +=
+        wallWorksTotal -
+        baseRenovationTotal * config.renovation.surfaceAllocation.internalWalls;
+    }
+    const surfaceQuantities = {
+      floor: surfaceCalculation.floorArea,
+      ceiling: surfaceCalculation.ceilingArea,
+      internalWalls: surfaceCalculation.internalWallArea,
+      exteriorWalls: surfaceCalculation.exteriorWallArea,
+    } as const;
+    for (const [surface, quantity] of Object.entries(surfaceQuantities) as [
+      keyof typeof surfaceQuantities,
+      number,
+    ][]) {
+      if (surface === "internalWalls" && selectedWallWorksReplaceBase) continue;
+      const amount =
+        baseRenovationTotal * config.renovation.surfaceAllocation[surface];
+      lines.push({
+        label: copy.result.surfaceWorks[surface],
+        amount,
+        note: copy.result.renovationLine.replace(
+          "{level}",
+          copy.renovation.levels[values.renovationLevel]
+        ),
+        quantity,
+        unit: "squareMeter",
+        pricePerUnit: quantity ? amount / quantity : 0,
+        surface:
+          surface === "floor"
+            ? "floorArea"
+            : surface === "ceiling"
+              ? "ceilingArea"
+              : surface === "internalWalls"
+                ? "internalWallArea"
+                : "exteriorWallArea",
+      });
+    }
     for (const extraKey of new Set(values.renovationExtras ?? [])) {
       const extra = config.renovation.extras[extraKey];
       const amount =
@@ -170,7 +234,34 @@ export function calculateConstructionEstimate(
               ? numberValue(values.doorsCount) * extra.pricePerItem
               : 0;
       renovationTotal += amount;
-      lines.push({ label: copy.renovation.extras[extraKey], amount });
+      const quantity =
+        extraKey === "plumbing"
+          ? bathrooms
+          : extraKey === "doors"
+            ? numberValue(values.doorsCount)
+            : extraKey === "heatedFloor"
+              ? numberValue(values.heatedFloorArea)
+              : area;
+      const pricePerUnit =
+        "pricePerSquareMeter" in extra
+          ? extra.pricePerSquareMeter
+          : "pricePerBathroom" in extra
+            ? extra.pricePerBathroom
+            : "pricePerItem" in extra
+              ? extra.pricePerItem
+              : 0;
+      lines.push({
+        label: copy.renovation.extras[extraKey],
+        amount,
+        quantity,
+        unit:
+          extraKey === "plumbing"
+            ? "bathroom"
+            : extraKey === "doors"
+              ? "item"
+              : "squareMeter",
+        pricePerUnit,
+      });
     }
   }
 
@@ -180,12 +271,20 @@ export function calculateConstructionEstimate(
     lines.push({
       label: copy.design[values.designPackage].title,
       amount: designTotal,
+      quantity: area,
+      unit: "squareMeter",
+      pricePerUnit: design.pricePerSquareMeter,
     });
   }
 
   const total = Math.round(constructionTotal + renovationTotal + designTotal);
   return {
     lines,
+    floorArea: area,
+    surfaceCalculation,
+    wallCalculation,
+    wallWorks,
+    wallWorksTotal,
     constructionTotal: Math.round(constructionTotal),
     renovationTotal: Math.round(renovationTotal),
     designTotal: Math.round(designTotal),

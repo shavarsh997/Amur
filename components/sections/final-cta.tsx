@@ -1,12 +1,10 @@
-import { ArrowRight, MapPin } from "lucide-react";
+import { MapPin } from "lucide-react";
 
-import { ButtonLink } from "@/components/ui/button-link";
+import { ContactTrigger } from "@/components/forms/contact-dialog";
 import { Container } from "@/components/ui/container";
-import { siteConfig } from "@/config/site.config";
 import type { Dictionary, Locale } from "@/types";
 
 export function FinalCta({
-  locale,
   dictionary,
 }: {
   locale: Locale;
@@ -27,16 +25,11 @@ export function FinalCta({
             {dictionary.cta.description}
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <ButtonLink href={`/${locale}/contacts#estimate`}>
-              {dictionary.cta.primaryAction}
-              <ArrowRight aria-hidden="true" className="ml-2 size-4" />
-            </ButtonLink>
-            <ButtonLink
-              href={siteConfig.contacts.phoneHref || `/${locale}/contacts`}
+            <ContactTrigger label={dictionary.cta.primaryAction} />
+            <ContactTrigger
+              label={dictionary.cta.secondaryAction}
               variant="secondary"
-            >
-              {dictionary.cta.secondaryAction}
-            </ButtonLink>
+            />
           </div>
         </div>
         <div className="relative min-h-64 overflow-hidden rounded-[24px] bg-[var(--surface-muted)] p-6 sm:p-8">

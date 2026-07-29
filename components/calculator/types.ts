@@ -1,5 +1,44 @@
-import type { RenovationObjectType } from "@/config/construction-calculator.config";
-import type { ConstructionCalculatorValues } from "@/lib/calculator/calculate-construction-estimate";
+import type {
+  CalculationType,
+  ConstructionMaterial,
+  ConstructionPackage,
+  DesignPackage,
+  HouseShape,
+  RenovationCondition,
+  RenovationExtra,
+  RenovationLevel,
+  RenovationObjectType,
+  LayoutDensity,
+  WallWork,
+} from "@/config/construction-calculator.config";
+
+export type ConstructionCalculatorValues = {
+  calculationType: CalculationType;
+  area: string;
+  bathrooms: string;
+  constructionPackage: ConstructionPackage;
+  material: ConstructionMaterial;
+  houseShape: HouseShape;
+  basement: boolean;
+  basementArea: string;
+  garage: boolean;
+  garageArea: string;
+  terrace: boolean;
+  terraceArea: string;
+  highCeilings: boolean;
+  difficultSite: boolean;
+  distanceKm: string;
+  renovationCondition: RenovationCondition;
+  renovationLevel: RenovationLevel;
+  renovationExtras: RenovationExtra[];
+  heatedFloorArea: string;
+  doorsCount: string;
+  ceilingHeight: string;
+  roomsCount: string;
+  layoutDensity: LayoutDensity;
+  selectedWallWorks: WallWork[];
+  designPackage: DesignPackage;
+};
 
 export type CalculatorFormValues = ConstructionCalculatorValues & {
   renovationObjectType: RenovationObjectType;
@@ -13,7 +52,9 @@ export type CalculatorFieldId =
   | "distanceKm"
   | "bathrooms"
   | "heatedFloorArea"
-  | "doorsCount";
+  | "doorsCount"
+  | "ceilingHeight"
+  | "roomsCount";
 
 export type CalculatorValidationErrors = Partial<
   Record<CalculatorFieldId, string>
@@ -28,6 +69,8 @@ export const CALCULATOR_FIELD_ORDER: CalculatorFieldId[] = [
   "bathrooms",
   "heatedFloorArea",
   "doorsCount",
+  "ceilingHeight",
+  "roomsCount",
 ];
 
 export function calculatorFieldDomId(field: CalculatorFieldId) {

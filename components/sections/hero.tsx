@@ -1,7 +1,7 @@
 import { ArrowRight, Check, Compass } from "lucide-react";
 import Image from "next/image";
 
-import { CalculatorTrigger } from "@/components/calculator/calculator-dialog";
+import { ContactTrigger } from "@/components/forms/contact-dialog";
 import { ButtonLink } from "@/components/ui/button-link";
 import { Container } from "@/components/ui/container";
 import { homeContent } from "@/config/home-content.config";
@@ -43,9 +43,9 @@ export function Hero({
                 ))}
               </ul>
               <div className="mt-6 flex flex-col gap-2.5 sm:mt-7 sm:flex-row sm:gap-3">
-                <CalculatorTrigger
+                <ContactTrigger
                   className="w-full sm:w-auto"
-                  label={dictionary.hero.primaryAction}
+                  label={dictionary.nav.contacts}
                 />
                 <ButtonLink
                   className="w-full gap-2 sm:w-auto"
