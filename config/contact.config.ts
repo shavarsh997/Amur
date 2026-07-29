@@ -4,7 +4,7 @@ import type { ContactConfigData } from "@/types/config";
 export const contactConfig = {
   phone: "+37455156615",
   phoneHref: "tel:+37455156615",
-  email: "TODO_REPLACE_EMAIL",
+  email: "info@shinex.am",
   address: "TODO_REPLACE_ADDRESS",
   hours: "TODO_REPLACE_HOURS",
   telegramUrl: "https://t.me/Shavarsh_work",
