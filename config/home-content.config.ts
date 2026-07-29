@@ -1,5 +1,29 @@
 import type { Locale } from "@/types";
 
+type ServiceAreaItemIcon = "building-2" | "map" | "store";
+
+export type ServiceAreaSectionConfig = {
+  enabled: boolean;
+  label: string;
+  title: string;
+  description: string;
+  primaryCta: {
+    label: string;
+    href: string;
+  };
+  secondaryCta?: {
+    label: string;
+    href: string;
+  };
+  items: Array<{
+    id: string;
+    icon: ServiceAreaItemIcon;
+    title: string;
+    description: string;
+    enabled: boolean;
+  }>;
+};
+
 export type HomeContent = {
   heroVisual: { image: string; alt: string };
   heroDirections: readonly string[];
@@ -9,11 +33,7 @@ export type HomeContent = {
     notice: string;
     items: readonly string[];
   };
-  serviceArea: {
-    title: string;
-    description: string;
-    details: readonly string[];
-  };
+  serviceArea: ServiceAreaSectionConfig;
 };
 
 export const homeContent: Record<Locale, HomeContent> = {
@@ -46,13 +66,41 @@ export const homeContent: Record<Locale, HomeContent> = {
       ],
     },
     serviceArea: {
-      title: "Работаем в Ереване и регионах Армении",
+      enabled: true,
+      label: "География работ",
+      title: "Работаем по Еревану и всей Армении",
       description:
-        "Обсуждаем ремонт и строительство с учётом расположения объекта, объёма задачи и логистики.",
-      details: [
-        "Квартиры и частные дома",
-        "Коммерческие помещения",
-        "Выезд на объект по согласованию",
+        "Выезжаем на осмотр квартир, частных домов и коммерческих помещений. Возможность выезда и логистику уточняем после обсуждения задачи.",
+      primaryCta: {
+        label: "Обсудить объект",
+        href: "/ru/contacts",
+      },
+      secondaryCta: {
+        label: "Указать регион в калькуляторе",
+        href: "/ru/calculator?step=region",
+      },
+      items: [
+        {
+          id: "homes",
+          icon: "building-2",
+          title: "Квартиры и частные дома",
+          description: "Ремонт, дизайн интерьера и строительные работы.",
+          enabled: true,
+        },
+        {
+          id: "commercial",
+          icon: "store",
+          title: "Коммерческие помещения",
+          description: "Ремонт и строительные работы для бизнеса.",
+          enabled: true,
+        },
+        {
+          id: "armenia",
+          icon: "map",
+          title: "Выезд по Армении",
+          description: "По предварительному согласованию и с учетом логистики.",
+          enabled: true,
+        },
       ],
     },
   },
@@ -85,13 +133,41 @@ export const homeContent: Record<Locale, HomeContent> = {
       ],
     },
     serviceArea: {
+      enabled: true,
+      label: "Service area",
       title: "Working in Yerevan and across Armenia",
       description:
-        "We discuss renovation and construction in view of the property location, project scope, and logistics.",
-      details: [
-        "Apartments and private homes",
-        "Commercial spaces",
-        "Site visit by arrangement",
+        "We visit apartments, private homes, and commercial properties to assess the project. Site visits and logistics are confirmed after we discuss the scope.",
+      primaryCta: {
+        label: "Discuss your property",
+        href: "/en/contacts",
+      },
+      secondaryCta: {
+        label: "Add your region in the calculator",
+        href: "/en/calculator?step=region",
+      },
+      items: [
+        {
+          id: "homes",
+          icon: "building-2",
+          title: "Apartments and private homes",
+          description: "Renovation, interior design, and construction work.",
+          enabled: true,
+        },
+        {
+          id: "commercial",
+          icon: "store",
+          title: "Commercial spaces",
+          description: "Renovation and construction work for businesses.",
+          enabled: true,
+        },
+        {
+          id: "armenia",
+          icon: "map",
+          title: "Visits across Armenia",
+          description: "By prior arrangement and subject to logistics.",
+          enabled: true,
+        },
       ],
     },
   },
@@ -124,13 +200,42 @@ export const homeContent: Record<Locale, HomeContent> = {
       ],
     },
     serviceArea: {
+      enabled: true,
+      label: "Աշխատանքների աշխարհագրություն",
       title: "Աշխատում ենք Երևանում և Հայաստանի մարզերում",
       description:
-        "Վերանորոգումն ու շինարարությունը քննարկում ենք՝ հաշվի առնելով օբյեկտի գտնվելու վայրը, աշխատանքի ծավալը և լոգիստիկան։",
-      details: [
-        "Բնակարաններ և առանձնատներ",
-        "Առևտրային տարածքներ",
-        "Զննում՝ նախնական համաձայնությամբ",
+        "Մեկնում ենք բնակարանների, առանձնատների և առևտրային տարածքների զննության։ Մեկնման հնարավորությունն ու լոգիստիկան ճշտում ենք աշխատանքը քննարկելուց հետո։",
+      primaryCta: {
+        label: "Քննարկել օբյեկտը",
+        href: "/hy/contacts",
+      },
+      secondaryCta: {
+        label: "Նշել մարզը հաշվիչում",
+        href: "/hy/calculator?step=region",
+      },
+      items: [
+        {
+          id: "homes",
+          icon: "building-2",
+          title: "Բնակարաններ և առանձնատներ",
+          description:
+            "Վերանորոգում, ինտերիերի դիզայն և շինարարական աշխատանքներ։",
+          enabled: true,
+        },
+        {
+          id: "commercial",
+          icon: "store",
+          title: "Առևտրային տարածքներ",
+          description: "Բիզնեսի համար վերանորոգման և շինարարական աշխատանքներ։",
+          enabled: true,
+        },
+        {
+          id: "armenia",
+          icon: "map",
+          title: "Մեկնում Հայաստանի մարզեր",
+          description: "Նախնական համաձայնությամբ և լոգիստիկայի հաշվառմամբ։",
+          enabled: true,
+        },
       ],
     },
   },

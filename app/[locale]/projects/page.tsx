@@ -19,6 +19,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     path: "projects",
     title: projects.pageTitle,
     description: projects.availabilityDescription,
+    noIndex: true,
   });
 }
 

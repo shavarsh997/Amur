@@ -1,13 +1,44 @@
+import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
+import { Manrope, Noto_Sans_Armenian } from "next/font/google";
 import { notFound } from "next/navigation";
 
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
 import { MobileCtaBar } from "@/components/layout/mobile-cta-bar";
 import { ContactDialog } from "@/components/forms/contact-dialog";
+import { seoConfig } from "@/config/seo.config";
 import { isPlaceholder, siteConfig } from "@/config/site.config";
 import { getDictionary, isLocale, locales } from "@/lib/i18n";
 import type { SiteConfiguration } from "@/types/config";
+
+import "../globals.css";
+
+const manrope = Manrope({
+  variable: "--font-manrope",
+  subsets: ["cyrillic", "latin"],
+});
+
+const notoArmenian = Noto_Sans_Armenian({
+  variable: "--font-armenian",
+  subsets: ["armenian"],
+});
+
+export const metadata: Metadata = {
+  metadataBase: new URL(siteConfig.domain),
+  title: {
+    default: siteConfig.companyName,
+    template: `%s${seoConfig.titleSeparator}${siteConfig.companyName}`,
+  },
+  applicationName: siteConfig.companyName,
+  category: seoConfig.category,
+  robots: seoConfig.robots,
+};
+
+export const viewport: Viewport = {
+  themeColor: "#fcfaf8",
+  colorScheme: "light",
+};
 
 const publicSiteConfig = {
   ...siteConfig,
@@ -47,7 +78,7 @@ export default async function LocaleLayout({
     "@context": "https://schema.org",
     "@type": "Organization",
     name: siteConfig.companyName,
-    url: `${siteConfig.domain}/${locale}`,
+    url: siteConfig.domain,
     areaServed: {
       "@type": "Country",
       name: siteConfig.country,
@@ -67,30 +98,40 @@ export default async function LocaleLayout({
   };
 
   return (
-    <div className="flex min-h-screen flex-col" lang={locale}>
-      <script
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(organizationJsonLd).replace(/</g, "\\u003c"),
-        }}
-        type="application/ld+json"
-      />
-      <Header
-        config={publicSiteConfig}
-        dictionary={dictionary}
-        locale={locale}
-      />
-      <main className="flex-1 pb-20 sm:pb-0">{children}</main>
-      <Footer
-        config={publicSiteConfig}
-        dictionary={dictionary}
-        locale={locale}
-      />
-      <ContactDialog
-        contacts={publicSiteConfig.contacts}
-        dictionary={dictionary}
-        locale={locale}
-      />
-      <MobileCtaBar contactLabel={dictionary.nav.contacts} />
-    </div>
+    <html
+      className={`${manrope.variable} ${notoArmenian.variable} h-full antialiased`}
+      lang={locale}
+    >
+      <body suppressHydrationWarning className="flex min-h-full flex-col">
+        <div className="flex min-h-screen flex-col">
+          <script
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(organizationJsonLd).replace(
+                /</g,
+                "\\u003c"
+              ),
+            }}
+            type="application/ld+json"
+          />
+          <Header
+            config={publicSiteConfig}
+            dictionary={dictionary}
+            locale={locale}
+          />
+          <main className="flex-1 pb-20 sm:pb-0">{children}</main>
+          <Footer
+            config={publicSiteConfig}
+            dictionary={dictionary}
+            locale={locale}
+          />
+          <ContactDialog
+            contacts={publicSiteConfig.contacts}
+            dictionary={dictionary}
+            locale={locale}
+          />
+          <MobileCtaBar contactLabel={dictionary.nav.contacts} />
+        </div>
+      </body>
+    </html>
   );
 }

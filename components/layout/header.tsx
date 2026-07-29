@@ -26,7 +26,6 @@ export function Header({
   const navigation: NavigationItem[] = navigationConfig.map((item) => ({
     href: item.path ? `${prefix}/${item.path}` : prefix,
     label: dictionary.nav[item.key],
-    isContact: item.key === "contacts",
   }));
   const services: NavigationItem[] = getActiveServices(locale).map(
     ({ content, slug }) => ({
@@ -55,16 +54,12 @@ export function Header({
           <ul className="flex items-center gap-5 xl:gap-6">
             {navigation.map((item) => (
               <li key={item.href}>
-                {item.isContact ? (
-                  <ContactTrigger label={item.label} variant="link" />
-                ) : (
-                  <Link
-                    className={`rounded-sm text-sm font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--button-primary)] ${"hover:text-[var(--text-secondary)]"}`}
-                    href={item.href}
-                  >
-                    {item.label}
-                  </Link>
-                )}
+                <Link
+                  className={`rounded-sm text-sm font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--button-primary)] ${"hover:text-[var(--text-secondary)]"}`}
+                  href={item.href}
+                >
+                  {item.label}
+                </Link>
               </li>
             ))}
           </ul>

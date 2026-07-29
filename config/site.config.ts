@@ -4,7 +4,7 @@ import type { SiteConfiguration } from "@/types/config";
 
 export const siteConfig = {
   ...companyConfig,
-  domain: "https://example.am",
+  domain: "https://www.shinex.am",
   defaultLocale: "hy",
   locales: ["hy", "ru", "en"],
   contacts: contactConfig,

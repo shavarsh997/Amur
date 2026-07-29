@@ -11,7 +11,6 @@ const servicePaths = getActiveServices(defaultLocale).map(
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const paths = [...staticRouteConfig, ...servicePaths];
-  const lastModified = new Date();
 
   return paths.flatMap((path) => {
     const suffix = path ? `/${path}` : "";
@@ -28,7 +27,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     return locales.map((locale) => ({
       url: `${siteConfig.domain}/${locale}${suffix}`,
-      lastModified,
       changeFrequency: path ? ("monthly" as const) : ("weekly" as const),
       priority: path === "" ? 1 : path.includes("/") ? 0.7 : 0.8,
       alternates: { languages },

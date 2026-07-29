@@ -2,6 +2,9 @@ import type { NextConfig } from "next";
 import { fileURLToPath } from "node:url";
 
 const nextConfig: NextConfig = {
+  experimental: {
+    globalNotFound: true,
+  },
   allowedDevOrigins: ["sugarlab-shavarsh.ngrok.app", "127.0.0.1"],
   turbopack: {
     root: fileURLToPath(new URL(".", import.meta.url)),
@@ -15,6 +18,15 @@ const nextConfig: NextConfig = {
       },
     ],
     formats: ["image/avif", "image/webp"],
+  },
+  async redirects() {
+    return [
+      {
+        source: "/",
+        destination: "/hy",
+        permanent: true,
+      },
+    ];
   },
 };
 

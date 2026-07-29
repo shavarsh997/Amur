@@ -30,6 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: service.content.seoTitle,
     description: service.content.seoDescription,
     image: service.image,
+    imageAlt: service.content.shortDescription,
   });
 }
 
@@ -50,8 +51,12 @@ export default async function ServiceDetailPage({ params }: Props) {
     name: service.content.title,
     description: service.content.seoDescription,
     serviceType: service.content.title,
-    areaServed: { "@type": "Country", name: "Armenia" },
-    provider: { "@type": "Organization", name: siteConfig.companyName },
+    areaServed: { "@type": "Country", name: siteConfig.country },
+    provider: {
+      "@type": "Organization",
+      name: siteConfig.companyName,
+      url: siteConfig.domain,
+    },
   };
 
   return (
@@ -78,7 +83,7 @@ export default async function ServiceDetailPage({ params }: Props) {
         <Container className="py-12 sm:py-16 lg:py-20">
           <div className="relative aspect-[16/8] overflow-hidden rounded-[28px] bg-[var(--background-warm)]">
             <Image
-              alt={service.content.title}
+              alt={service.content.shortDescription}
               className="object-cover"
               fill
               sizes="(max-width: 1279px) 100vw, 1200px"

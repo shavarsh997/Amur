@@ -11,22 +11,34 @@ export function buildMetadata({
   title,
   description,
   image,
+  imageAlt,
+  noIndex = false,
 }: {
   locale: Locale;
   path?: string;
   title: string;
   description: string;
   image?: string;
+  imageAlt?: string;
+  noIndex?: boolean;
 }): Metadata {
   const normalizedPath = path ? `/${path.replace(/^\/|\/$/g, "")}` : "";
   const canonical = `/${locale}${normalizedPath}`;
   const languages = Object.fromEntries(
     locales.map((language) => [language, `/${language}${normalizedPath}`])
   );
+  const titleSuffix = `${seoConfig.titleSeparator}${siteConfig.companyName}`;
+  const pageTitle = title.endsWith(titleSuffix)
+    ? title.slice(0, -titleSuffix.length)
+    : title;
+  const brandedTitle = `${pageTitle}${titleSuffix}`;
 
   return {
-    title,
+    // This ignores templates declared in either a parent or the current
+    // locale segment, so every route receives exactly one brand suffix.
+    title: { absolute: brandedTitle },
     description,
+    ...(noIndex ? { robots: { index: false, follow: true } } : {}),
     alternates: {
       canonical,
       languages: {
@@ -42,15 +54,15 @@ export function buildMetadata({
         .map((language) => seoConfig.openGraphLocale[language]),
       url: canonical,
       siteName: siteConfig.companyName,
-      title,
+      title: brandedTitle,
       description,
-      images: image ? [{ url: image, alt: title }] : undefined,
+      images: image ? [{ url: image, alt: imageAlt ?? pageTitle }] : undefined,
     },
     twitter: {
-      card: "summary_large_image",
-      title,
+      card: image ? "summary_large_image" : "summary",
+      title: brandedTitle,
       description,
-      images: image ? [image] : undefined,
+      images: image ? [{ url: image, alt: imageAlt ?? pageTitle }] : undefined,
     },
   };
 }

@@ -24,7 +24,6 @@ export function Footer({
   const navigation = navigationConfig.map((item) => ({
     href: item.path ? `${prefix}/${item.path}` : prefix,
     label: dictionary.nav[item.key],
-    isContact: item.key === "contacts",
   }));
 
   return (
@@ -51,16 +50,12 @@ export function Footer({
             <ul className="mt-5 space-y-3 text-sm">
               {navigation.map((item) => (
                 <li key={item.href}>
-                  {item.isContact ? (
-                    <ContactTrigger label={item.label} variant="link" />
-                  ) : (
-                    <Link
-                      className="rounded-sm transition-colors hover:text-[var(--text-primary)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--button-primary)]"
-                      href={item.href}
-                    >
-                      {item.label}
-                    </Link>
-                  )}
+                  <Link
+                    className="rounded-sm transition-colors hover:text-[var(--text-primary)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--button-primary)]"
+                    href={item.href}
+                  >
+                    {item.label}
+                  </Link>
                 </li>
               ))}
             </ul>

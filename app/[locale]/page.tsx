@@ -10,6 +10,7 @@ import { ServiceArea } from "@/components/sections/service-area";
 import { SpecializedServices } from "@/components/sections/specialized-services";
 import { ServicesSection } from "@/components/sections/services-section";
 import { WhyUs } from "@/components/sections/why-us";
+import { homeContent } from "@/config/home-content.config";
 import { WorkProcess } from "@/components/sections/work-process";
 import { getDictionary, isLocale } from "@/lib/i18n";
 import { buildMetadata } from "@/lib/metadata";
@@ -25,6 +26,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     locale,
     title: dictionary.metadata.title,
     description: dictionary.metadata.description,
+    image: homeContent[locale].heroVisual.image,
+    imageAlt: homeContent[locale].heroVisual.alt,
   });
 }
 
@@ -35,6 +38,23 @@ export default async function LocaleHome({ params }: Props) {
 
   return (
     <>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: dictionary.faq.items.map((item) => ({
+              "@type": "Question",
+              name: item.question,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: item.answer,
+              },
+            })),
+          }).replace(/</g, "\\u003c"),
+        }}
+        type="application/ld+json"
+      />
       <Hero dictionary={dictionary} locale={locale} />
       <EstimateSection dictionary={dictionary} />
       <ServicesSection dictionary={dictionary} locale={locale} />

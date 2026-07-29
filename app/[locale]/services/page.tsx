@@ -52,7 +52,7 @@ export default async function ServicesPage({ params }: Props) {
               className={`relative min-h-72 bg-[var(--background-warm)] ${index % 2 ? "lg:order-2" : ""}`}
             >
               <Image
-                alt={content.title}
+                alt={content.shortDescription}
                 className="object-cover"
                 fill
                 sizes="(max-width: 1023px) 100vw, 50vw"
