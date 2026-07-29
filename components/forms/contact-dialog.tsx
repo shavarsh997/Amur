@@ -57,11 +57,29 @@ export function ContactDialog({
   contacts: ContactConfigData;
 }) {
   const [isOpen, setIsOpen] = useState(false);
+  const [isClosing, setIsClosing] = useState(false);
   const dialogRef = useRef<HTMLDivElement>(null);
   const copy = dictionary.contacts;
 
+  const closeDialog = () => {
+    const isMobile = window.matchMedia("(max-width: 639px)").matches;
+    const reducesMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+
+    if (isMobile && !reducesMotion) {
+      setIsClosing(true);
+      return;
+    }
+
+    setIsOpen(false);
+  };
+
   useEffect(() => {
-    const openContact = () => setIsOpen(true);
+    const openContact = () => {
+      setIsClosing(false);
+      setIsOpen(true);
+    };
     window.addEventListener(contactOpenEvent, openContact);
 
     return () => window.removeEventListener(contactOpenEvent, openContact);
@@ -72,7 +90,7 @@ export function ContactDialog({
 
     const previousOverflow = document.body.style.overflow;
     const closeOnEscape = (event: KeyboardEvent) => {
-      if (event.key === "Escape") setIsOpen(false);
+      if (event.key === "Escape") closeDialog();
     };
 
     document.body.style.overflow = "hidden";
@@ -97,12 +115,22 @@ export function ContactDialog({
       <button
         aria-label={dictionary.nav.closeMenu}
         className="absolute inset-0 cursor-default bg-[rgb(24_33_42/0.52)] backdrop-blur-[2px]"
-        onClick={() => setIsOpen(false)}
+        onClick={closeDialog}
         type="button"
       />
       <div
         ref={dialogRef}
-        className="relative z-10 flex max-h-[94dvh] w-full max-w-3xl flex-col overflow-hidden rounded-t-[28px] bg-[var(--background-soft)] shadow-2xl outline-none sm:rounded-[28px]"
+        className={`relative z-10 flex max-h-[94dvh] w-full max-w-3xl flex-col overflow-hidden rounded-t-[28px] bg-[var(--background-soft)] shadow-2xl outline-none sm:rounded-[28px] ${
+          isClosing
+            ? "motion-safe:animate-[contact-dialog-exit_240ms_ease-in_forwards] sm:motion-safe:animate-none"
+            : "motion-safe:animate-[contact-dialog-enter_320ms_cubic-bezier(0.22,1,0.36,1)] sm:motion-safe:animate-none"
+        }`}
+        onAnimationEnd={(event) => {
+          if (isClosing && event.animationName === "contact-dialog-exit") {
+            setIsClosing(false);
+            setIsOpen(false);
+          }
+        }}
         tabIndex={-1}
       >
         <div className="flex shrink-0 items-center justify-between border-b border-[var(--border)] bg-white px-5 py-4 sm:px-7">
@@ -120,7 +148,7 @@ export function ContactDialog({
           <button
             aria-label={dictionary.nav.closeMenu}
             className="grid size-10 place-items-center rounded-xl border border-[var(--border)] text-[var(--text-primary)] transition hover:bg-[var(--surface-muted)]"
-            onClick={() => setIsOpen(false)}
+            onClick={closeDialog}
             type="button"
           >
             <X aria-hidden="true" className="size-5" />

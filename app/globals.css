@@ -116,6 +116,26 @@ summary {
   }
 }
 
+@keyframes contact-dialog-enter {
+  from {
+    transform: translateY(100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes contact-dialog-exit {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(100%);
+  }
+}
+
 .estimate-loading-progress {
   animation: estimate-loading-progress 2s ease-out forwards;
   transform-origin: left center;
