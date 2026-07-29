@@ -127,15 +127,12 @@ export function ContactDialog({
           </button>
         </div>
         <div className="overflow-y-auto p-5 sm:p-7">
-          <p className="text-sm leading-6 text-[var(--text-secondary)]">
-            {copy.formDescription}
-          </p>
           {contacts.phoneHref ||
           contacts.email ||
           contacts.whatsappUrl ||
           contacts.telegramUrl ||
           contacts.socials.some((social) => social.url) ? (
-            <div className="mt-6 grid gap-3 sm:grid-cols-2">
+            <div className="grid gap-3 sm:grid-cols-2">
               {contacts.phoneHref ? (
                 <a
                   className="group flex items-center gap-3 rounded-2xl border border-[var(--border)] bg-white p-4 text-left shadow-[0_14px_30px_-26px_rgb(24_24_27/0.55)] transition hover:-translate-y-0.5 hover:border-[var(--border-strong)] hover:shadow-[0_18px_36px_-26px_rgb(24_24_27/0.45)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--button-primary)]"
@@ -232,7 +229,7 @@ export function ContactDialog({
                 ))}
             </div>
           ) : null}
-          <LeadForm className="mt-6" dictionary={dictionary} locale={locale} />
+          {/* <LeadForm className="mt-6" dictionary={dictionary} locale={locale} /> */}
         </div>
       </div>
     </div>
