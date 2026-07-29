@@ -1,4 +1,4 @@
-import type { ServiceContent } from "@/types/service";
+import type { ServiceContent, ServiceWorkflowStep } from "@/types/service";
 
 type ServiceTranslationInput = Pick<
   ServiceContent,
@@ -24,7 +24,7 @@ type ServiceTranslationInput = Pick<
       | "seoDescription"
     >
   > & {
-    workflow: readonly string[];
+  workflow: readonly (string | ServiceWorkflowStep)[];
   };
 
 function serviceContent(input: ServiceTranslationInput): ServiceContent {
@@ -32,7 +32,9 @@ function serviceContent(input: ServiceTranslationInput): ServiceContent {
     ...input,
     heroTitle: input.heroTitle ?? input.title,
     heroDescription: input.shortDescription,
-    workflow: input.workflow.map((title) => ({ title, description: "" })),
+    workflow: input.workflow.map((step) =>
+      typeof step === "string" ? { title: step, description: "" } : step
+    ),
     priceFactors: input.priceFactors ?? [],
     faq: input.faq ?? [],
     seoTitle: input.seoTitle ?? input.title,
@@ -45,9 +47,9 @@ export const serviceTranslations = {
     ru: serviceContent({
       title: "Строительство частных домов",
       shortDescription:
-        "Помогаем организовать строительство частного дома: предварительная оценка, подготовительные работы, основные конструкции, инженерные системы и отделка.",
+        "Строим частные дома: от изучения участка и проекта до фундамента, основных конструкций, кровли, инженерных систем и отделки.",
       fullDescription:
-        "Помогаем пройти основные этапы строительства частного дома: оценку участка и проекта, подготовительные работы, конструкции, инженерные решения и отделку.",
+        "Организуем и контролируем этапы строительства дома — от согласованного проекта до проверки и сдачи. Состав работ и стоимость зависят от участка, проекта и выбранной степени готовности.",
       includedWorks: [
         "Изучение участка и проекта",
         "Подготовительные и конструктивные работы",
@@ -80,8 +82,8 @@ export const serviceTranslations = {
             "Предварительный диапазон зависит от площади, участка, конструкции, инженерных решений и выбранной степени готовности. Точная смета формируется после изучения задачи и имеющихся материалов.",
         },
       ],
-      primaryCta: "Подробнее о строительстве",
-      secondaryCta: "Обсудить строительство",
+      primaryCta: "Посмотреть этапы строительства",
+      secondaryCta: "Обсудить строительство дома",
       seoTitle: "Строительство частных домов в Армении — Shinex",
       seoDescription:
         "Строительство частных домов в Ереване и регионах Армении: предварительная оценка, этапы работ и согласование решений.",
@@ -98,9 +100,9 @@ export const serviceTranslations = {
     en: serviceContent({
       title: "Private house construction",
       shortDescription:
-        "We help organize a private home build: initial assessment, preparation, structure, building services, and finishes.",
+        "We build private homes from site and design review through foundations, main structure, roofing, building services, and finishes.",
       fullDescription:
-        "We help organize the key stages of a private home build: site and design review, preparation, structure, building services, and finishes.",
+        "We organise and control each stage of a home build, from the agreed design to inspection and handover. The scope and cost depend on the site, design, and selected level of completion.",
       includedWorks: [
         "Site and design review",
         "Preparation and structural work",
@@ -131,8 +133,8 @@ export const serviceTranslations = {
             "An initial range depends on the area, site, structure, building services, and selected level of completion. A precise estimate is prepared after reviewing the brief and available information.",
         },
       ],
-      primaryCta: "Learn about construction",
-      secondaryCta: "Discuss construction",
+      primaryCta: "View construction stages",
+      secondaryCta: "Discuss a home build",
       seoTitle: "Private house construction in Armenia — Shinex",
       seoDescription:
         "Private house construction in Yerevan and across Armenia: initial assessment, work stages, and coordinated decisions.",
@@ -149,9 +151,9 @@ export const serviceTranslations = {
     hy: serviceContent({
       title: "Առանձնատների կառուցում",
       shortDescription:
-        "Օգնում ենք կազմակերպել առանձնատան շինարարությունը՝ նախնական գնահատում, նախապատրաստական աշխատանքներ, հիմնական կառուցվածքներ, ինժեներական համակարգեր և հարդարում։",
+        "Կառուցում ենք առանձնատներ՝ հողամասի և նախագծի ուսումնասիրությունից մինչև հիմք, հիմնական կառուցվածքներ, տանիք, ինժեներական համակարգեր և հարդարում։",
       fullDescription:
-        "Օգնում ենք անցնել առանձնատան շինարարության հիմնական փուլերը՝ հողամասի և նախագծի գնահատում, նախապատրաստում, կառուցվածքներ, ինժեներական լուծումներ և հարդարում։",
+        "Կազմակերպում և վերահսկում ենք տան կառուցման փուլերը՝ համաձայնեցված նախագծից մինչև ստուգում և հանձնում։ Աշխատանքների կազմն ու արժեքը կախված են հողամասից, նախագծից և ընտրված պատրաստվածության աստիճանից։",
       includedWorks: [
         "Հողամասի և նախագծի ուսումնասիրություն",
         "Նախապատրաստական և կառուցվածքային աշխատանքներ",
@@ -184,102 +186,102 @@ export const serviceTranslations = {
             "Նախնական միջակայքը կախված է մակերեսից, հողամասից, կառուցվածքից, ինժեներական լուծումներից և ընտրված պատրաստվածության աստիճանից։ Ճշգրիտ նախահաշիվը կազմվում է խնդրի և առկա նյութերի ուսումնասիրությունից հետո։",
         },
       ],
-      primaryCta: "Մանրամասն՝ շինարարության մասին",
-      secondaryCta: "Քննարկել շինարարությունը",
+      primaryCta: "Դիտել կառուցման փուլերը",
+      secondaryCta: "Քննարկել տան կառուցումը",
       seoTitle: "Առանձնատների կառուցում Հայաստանում — Shinex",
       seoDescription:
         "Առանձնատների կառուցում Երևանում և Հայաստանի մարզերում՝ նախնական գնահատում, աշխատանքի փուլեր և լուծումների համաձայնեցում։",
       workflow: [
-        "Հողամասի և նախագծի ուսումնասիրություն",
-        "Նախապատրաստում",
-        "Հիմք և կառուցվածք",
-        "Պատեր և տանիք",
-        "Ինժեներական համակարգեր",
-        "Հարդարում",
-        "Ստուգում և հանձնում",
+        { title: "Հողամասի և նախագծի ուսումնասիրություն", description: "Ստուգում ենք առկա տվյալները և հաստատում աշխատանքների մեկնարկային պայմանները։" },
+        { title: "Հողային աշխատանքներ և հիմքի կառուցում", description: "Կատարում ենք նախապատրաստումը և հիմքի աշխատանքները՝ համաձայնեցված նախագծով։" },
+        { title: "Կրող կառուցվածքներ, արտաքին պատեր և միջնապատեր", description: "Կառուցում ենք տան հիմնական ծավալը և ներքին բաժանումները։" },
+        { title: "Տանիք, դռներ և պատուհաններ", description: "Փակում ենք շենքի արտաքին եզրագիծը՝ հաջորդ փուլերի համար։" },
+        { title: "Ինժեներական համակարգեր", description: "Տեղադրում ենք էլեկտրականության, ջրամատակարարման, կոյուղու, ջեռուցման և օդափոխության համաձայնեցված լուծումները։" },
+        { title: "Արտաքին և ներքին հարդարում", description: "Ավարտում ենք նախատեսված հարդարման աշխատանքները։" },
+        { title: "Ստուգում և հանձնում", description: "Ձեզ հետ ստուգում ենք կատարված աշխատանքները և հանձնում պատրաստի օբյեկտը։" },
       ],
     }),
   },
   interiorDesign: {
-    ru: serviceContent({ title: "Дизайн интерьера", shortDescription: "Создаем интерьерные решения для квартир, частных домов и коммерческих пространств с учетом образа жизни, функций помещения и планируемого ремонта.", fullDescription: "Помогаем определить планировку, стиль, материалы и ключевые решения интерьера до начала работ. Состав дизайн-проекта зависит от задачи и согласуется отдельно.", includedWorks: ["Обсуждение задачи и образа жизни", "Планировочные решения", "Концепция интерьера и подбор материалов", "Чертежи и сопровождение в согласованном составе"], suitableFor: ["Квартирам и частным домам перед ремонтом", "Коммерческим пространствам, которым нужен продуманный интерьер"], workTypes: ["Планировочное решение", "Концепция интерьера", "Полный дизайн-проект", "Сопровождение реализации"], estimateRequirements: ["Тип и площадь помещения", "Краткое описание задачи", "Адрес объекта и удобный способ связи"], primaryCta: "Подробнее о дизайне интерьера", secondaryCta: "Обсудить дизайн интерьера", seoTitle: "Дизайн интерьера в Армении — Shinex", seoDescription: "Дизайн интерьера квартир, частных домов и коммерческих пространств в Армении: планировка, концепция и подготовка к ремонту.", workflow: ["Обсуждение задачи", "Планировка", "Концепция и материалы", "Подготовка согласованных материалов"] }),
-    en: serviceContent({ title: "Interior design", shortDescription: "We create interior solutions for apartments, private homes, and commercial spaces around daily life, room function, and the planned renovation.", fullDescription: "We help define the layout, style, materials, and key interior decisions before work begins. The design-project scope depends on the brief and is agreed separately.", includedWorks: ["Discussing the brief and daily use", "Layout solutions", "Interior concept and material selection", "Drawings and implementation support in the agreed scope"], suitableFor: ["Apartments and private homes before renovation", "Commercial spaces that need a considered interior"], workTypes: ["Layout solution", "Interior concept", "Full design project", "Implementation support"], estimateRequirements: ["Property type and area", "A short description of the brief", "Property address and preferred contact method"], primaryCta: "Learn about interior design", secondaryCta: "Discuss interior design", seoTitle: "Interior design in Armenia — Shinex", seoDescription: "Interior design for apartments, private homes, and commercial spaces in Armenia: layouts, concepts, and preparation for renovation.", workflow: ["Discuss the brief", "Layout", "Concept and materials", "Prepare agreed materials"] }),
-    hy: serviceContent({ title: "Ինտերիերի դիզայն", shortDescription: "Մշակում ենք բնակարանների, առանձնատների և առևտրային տարածքների ինտերիերային լուծումներ՝ հաշվի առնելով առօրյան, տարածքի գործառույթը և նախատեսվող վերանորոգումը։", fullDescription: "Օգնում ենք մինչև աշխատանքների մեկնարկը որոշել հատակագիծը, ոճը, նյութերը և ինտերիերի հիմնական լուծումները։ Դիզայն-նախագծի կազմը կախված է խնդրից և համաձայնեցվում է առանձին։", includedWorks: ["Խնդրի և առօրյա օգտագործման քննարկում", "Հատակագծային լուծումներ", "Ինտերիերի հայեցակարգ և նյութերի ընտրություն", "Գծագրեր և ուղեկցում՝ համաձայնեցված ծավալով"], suitableFor: ["Բնակարանների և առանձնատների համար՝ վերանորոգումից առաջ", "Առևտրային տարածքների համար, որոնց անհրաժեշտ է մտածված ինտերիեր"], workTypes: ["Հատակագծային լուծում", "Ինտերիերի հայեցակարգ", "Ամբողջական դիզայն-նախագիծ", "Իրականացման ուղեկցում"], estimateRequirements: ["Տարածքի տեսակ և մակերես", "Խնդրի կարճ նկարագրություն", "Օբյեկտի հասցեն և կապի հարմար եղանակը"], primaryCta: "Մանրամասն՝ ինտերիերի դիզայնի մասին", secondaryCta: "Քննարկել ինտերիերի դիզայնը", seoTitle: "Ինտերիերի դիզայն Հայաստանում — Shinex", seoDescription: "Բնակարանների, առանձնատների և առևտրային տարածքների ինտերիերի դիզայն Հայաստանում՝ հատակագիծ, հայեցակարգ և նախապատրաստում վերանորոգմանը։", workflow: ["Խնդրի քննարկում", "Հատակագիծ", "Հայեցակարգ և նյութեր", "Համաձայնեցված նյութերի պատրաստում"] }),
+    ru: serviceContent({ title: "Дизайн интерьера", shortDescription: "Разрабатываем практичный и целостный интерьер: планировочные решения, концепция, подбор материалов, чертежи и документы для реализации.", fullDescription: "Дизайн-проект помогает начать ремонт с понятными решениями. Планировка организует пространство, концепция определяет стиль и материалы, а рабочие чертежи нужны для реализации. Визуализации, подбор мебели и авторское сопровождение включаются только в согласованный пакет.", includedWorks: ["Планировка с расстановкой мебели и зонированием", "Концепция интерьера и подбор материалов", "3D-визуализация — в согласованном пакете", "Рабочие чертежи и материалы для реализации"], suitableFor: ["Квартир и частных домов перед ремонтом", "Коммерческих пространств, которым нужен функциональный интерьер"], workTypes: ["Планировочное решение", "Концепция интерьера", "Дизайн-проект", "Авторское сопровождение — по согласованию"], estimateRequirements: ["Тип и площадь помещения", "План или существующие обмеры", "Краткое описание задачи и удобный способ связи"], primaryCta: "Посмотреть услугу дизайна", secondaryCta: "Обсудить мой проект", seoTitle: "Дизайн интерьера в Армении — Shinex", seoDescription: "Дизайн интерьера квартир, частных домов и коммерческих пространств в Армении: планировка, концепция, материалы и рабочие чертежи.", workflow: ["Предварительная консультация", "Разработка планировки", "Концепция и материалы", "Подготовка согласованных чертежей"] }),
+    en: serviceContent({ title: "Interior design", shortDescription: "We develop practical, complete interiors with layout solutions, a design concept, material selection, drawings, and documents for delivery.", fullDescription: "A design project helps you start renovation with clear decisions. The layout organises the space, the concept defines the style and materials, and working drawings support delivery. Visualisations, furniture selection, and design supervision are included only in the agreed package.", includedWorks: ["Layout with furniture placement and zoning", "Interior concept and material selection", "3D visualisation in the agreed package", "Working drawings and delivery materials"], suitableFor: ["Apartments and private homes before renovation", "Commercial spaces that need a functional interior"], workTypes: ["Layout solution", "Interior concept", "Design project", "Design supervision by agreement"], estimateRequirements: ["Property type and area", "Floor plan or existing measurements", "A short brief and preferred contact method"], primaryCta: "View the design service", secondaryCta: "Discuss my project", seoTitle: "Interior design in Armenia — Shinex", seoDescription: "Interior design for apartments, private homes, and commercial spaces in Armenia: layouts, concepts, materials, and working drawings.", workflow: ["Initial consultation", "Layout development", "Concept and material selection", "Preparation of agreed drawings"] }),
+    hy: serviceContent({ title: "Ինտերիերի դիզայն", shortDescription: "Մշակում ենք գործնական և ամբողջական ինտերիեր՝ հատակագծային լուծումներով, ոճային կոնցեպտով, նյութերի ընտրությամբ, գծագրերով և իրականացման համար անհրաժեշտ փաստաթղթերով։", fullDescription: "Դիզայն-նախագիծը օգնում է սկսել վերանորոգումը հստակ լուծումներով։ Հատակագծային լուծումը կազմակերպում է տարածքը, ինտերիերի կոնցեպտը սահմանում է ոճն ու նյութերը, իսկ աշխատանքային գծագրերը անհրաժեշտ են իրականացման համար։ 3D վիզուալիզացիան, կահույքի ընտրությունը և հեղինակային ուղեկցումը ներառվում են միայն համաձայնեցված փաթեթում։", includedWorks: ["Հատակագծային լուծում՝ կահույքի և գոտիների տեղադրմամբ", "Ինտերիերի կոնցեպտ և նյութերի ընտրություն", "3D վիզուալիզացիա՝ համաձայնեցված փաթեթի դեպքում", "Աշխատանքային գծագրեր և իրականացման նյութեր"], suitableFor: ["Բնակարանների և առանձնատների համար՝ վերանորոգումից առաջ", "Առևտրային տարածքների համար, որոնց անհրաժեշտ է գործառնական ինտերիեր"], workTypes: ["Հատակագծային լուծում", "Ինտերիերի կոնցեպտ", "Դիզայն-նախագիծ", "Հեղինակային ուղեկցում՝ համաձայնեցված դեպքում"], estimateRequirements: ["Տարածքի տեսակ և մակերես", "Հատակի պլան կամ առկա չափագրումներ", "Խնդրի կարճ նկարագրություն և կապի հարմար եղանակ"], faq: [{ question: "Ի՞նչ է ներառում դիզայն-նախագիծը", answer: "Դիզայն-նախագիծը կարող է ներառել հատակագծային լուծում, ինտերիերի կոնցեպտ, նյութերի ընտրություն, 3D վիզուալիզացիա և աշխատանքային գծագրեր։ Կազմը հաստատում ենք նախքան աշխատանքների մեկնարկը։" }], primaryCta: "Դիտել դիզայնի ծառայությունը", secondaryCta: "Քննարկել իմ նախագիծը", seoTitle: "Ինտերիերի դիզայն Հայաստանում — Shinex", seoDescription: "Բնակարանների, առանձնատների և առևտրային տարածքների ինտերիերի դիզայն Հայաստանում՝ հատակագիծ, կոնցեպտ, նյութեր և աշխատանքային գծագրեր։", workflow: [{ title: "Նախնական խորհրդատվություն և տվյալների հավաքագրում", description: "Ճշտում ենք տարածքի գործառույթը, Ձեր նախընտրությունները և առկա տվյալները։" }, { title: "Հատակագծային լուծման մշակում", description: "Առաջարկում ենք կահույքի, գոտիների և անցումների հարմար դասավորություն։" }, { title: "Ինտերիերի կոնցեպտ և նյութերի ընտրություն", description: "Համաձայնեցնում ենք ոճը, գույները, նյութերն ու հիմնական կահույքի լուծումները։" }, { title: "Աշխատանքային գծագրերի պատրաստում", description: "Պատրաստում ենք համաձայնեցված փաթեթի փաստաթղթերը՝ վերանորոգումը սկսելու համար։" }] }),
   },
   commercialConstruction: {
     ru: serviceContent({
-      title: "Ремонт и строительство коммерческих помещений",
+      title: "Ремонт коммерческих помещений",
       shortDescription:
-        "Работы для офисов, магазинов, сервисных и других коммерческих пространств с учетом назначения, инженерных требований и будущей эксплуатации.",
+        "Ремонтируем и обустраиваем офисы, магазины, салоны, рестораны и сервисные пространства с учётом работы бизнеса, инженерных требований и функции помещения.",
       fullDescription:
-        "Помогаем организовать ремонт или строительство коммерческого помещения с учетом его функций, инженерных требований и дальнейшего использования.",
+        "Организуем ремонт и обустройство коммерческого помещения с учётом рабочих зон, потока клиентов и инженерных требований. До начала согласовываем этапы, чтобы влияние на работу бизнеса было понятным.",
       includedWorks: [
         "Осмотр и подготовка объекта",
         "Строительные, инженерные и отделочные работы",
-        "Согласование этапов с заказчиком",
+        "Предварительное согласование этапов и изменений",
       ],
       suitableFor: [
         "Офисам, магазинам, сервисным и другим коммерческим пространствам",
       ],
       primaryCta: "Обсудить коммерческий объект",
-      secondaryCta: "Получить предварительную оценку",
-      seoTitle: "Ремонт и строительство коммерческих помещений — Shinex",
+      secondaryCta: "Отправить данные проекта",
+      seoTitle: "Ремонт коммерческих помещений в Армении — Shinex",
       seoDescription:
         "Работы для офисов, магазинов и сервисных пространств в Армении.",
       workflow: [
-        "Обсуждение задачи",
-        "Подготовка решения",
-        "Выполнение работ",
+        "Обсуждение функции помещения и рабочего графика",
+        "Осмотр, решения и смета",
+        "Строительные, инженерные и отделочные работы",
         "Проверка и передача",
       ],
     }),
     en: serviceContent({
-      title: "Commercial renovation and construction",
+      title: "Commercial space renovation",
       shortDescription:
-        "Work for offices, retail, service, and other commercial spaces, shaped around their purpose, building-services requirements, and future operation.",
+        "We renovate and fit out offices, shops, salons, restaurants, and service spaces around business operations, building-services requirements, and room function.",
       fullDescription:
-        "We help organize the renovation or construction of a commercial space around its use, building-services requirements, and day-to-day operation.",
+        "We organise commercial renovation and fit-out around work zones, customer flow, and building-services requirements. Before work begins, we agree the stages so the impact on business operations is clear.",
       includedWorks: [
         "Survey and property preparation",
         "Construction, building-services, and finishing work",
-        "Stage coordination with the client",
+        "Stages and changes agreed in advance",
       ],
       suitableFor: ["Offices, retail, service, and other commercial spaces"],
       primaryCta: "Discuss a commercial project",
-      secondaryCta: "Get an initial assessment",
-      seoTitle: "Commercial renovation and construction — Shinex",
+      secondaryCta: "Send project details",
+      seoTitle: "Commercial space renovation in Armenia — Shinex",
       seoDescription:
         "Work for offices, retail, and service spaces in Armenia.",
       workflow: [
-        "Discuss the brief",
-        "Prepare the solution",
-        "Complete the work",
+        "Discuss room function and operating hours",
+        "Survey, solutions, and estimate",
+        "Construction, building-services, and finishing work",
         "Inspect and hand over",
       ],
     }),
     hy: serviceContent({
-      title: "Առևտրային տարածքների վերանորոգում և շինարարություն",
+      title: "Առևտրային տարածքների վերանորոգում",
       shortDescription:
-        "Աշխատանքներ գրասենյակների, խանութների, սպասարկման և այլ առևտրային տարածքների համար՝ հաշվի առնելով նպատակը, ինժեներական պահանջները և հետագա շահագործումը։",
+        "Վերանորոգում և կառուցապատում ենք գրասենյակներ, խանութներ, սրահներ, ռեստորաններ և սպասարկման տարածքներ՝ հաշվի առնելով բիզնեսի աշխատանքը, ինժեներական պահանջներն ու տարածքի գործառույթը։",
       fullDescription:
-        "Օգնում ենք կազմակերպել առևտրային տարածքի վերանորոգումը կամ շինարարությունը՝ հաշվի առնելով դրա գործառույթը, ինժեներական պահանջները և հետագա օգտագործումը։",
+        "Կազմակերպում ենք առևտրային տարածքի վերանորոգումն ու կառուցապատումը՝ աշխատանքային գոտիների, հաճախորդների հոսքի և ինժեներական պահանջների հաշվառմամբ։ Նախքան մեկնարկը համաձայնեցնում ենք փուլերը, որպեսզի բիզնեսի աշխատանքի վրա ազդեցությունը հասկանալի լինի։",
       includedWorks: [
         "Օբյեկտի զննում և նախապատրաստում",
         "Շինարարական, ինժեներական և հարդարման աշխատանքներ",
-        "Փուլերի համաձայնեցում պատվիրատուի հետ",
+        "Փուլերի և փոփոխությունների նախնական համաձայնեցում",
       ],
       suitableFor: [
         "Գրասենյակների, խանութների, սպասարկման և այլ առևտրային տարածքների համար",
       ],
       primaryCta: "Քննարկել առևտրային օբյեկտը",
-      secondaryCta: "Ստանալ նախնական գնահատում",
-      seoTitle: "Առևտրային տարածքների վերանորոգում և շինարարություն — Shinex",
+      secondaryCta: "Ուղարկել նախագծի տվյալները",
+      seoTitle: "Առևտրային տարածքների վերանորոգում Հայաստանում — Shinex",
       seoDescription:
         "Աշխատանքներ գրասենյակների, խանութների և սպասարկման տարածքների համար Հայաստանում։",
       workflow: [
-        "Խնդրի քննարկում",
-        "Լուծման նախապատրաստում",
-        "Աշխատանքների կատարում",
-        "Ստուգում և հանձնում",
+        { title: "Տարածքի գործառույթի և աշխատանքային ժամերի քննարկում", description: "Ճշտում ենք բիզնեսի ընթացքը, հասանելի ժամերը և տարածքի գործառույթը։" },
+        { title: "Զննում, լուծումների և նախահաշվի պատրաստում", description: "Կազմում ենք աշխատանքների հերթականությունն ու նախնական հաշվարկը։" },
+        { title: "Շինարարական, ինժեներական և հարդարման աշխատանքներ", description: "Իրականացնում ենք համաձայնեցված աշխատանքներն ու վերահսկում փուլերը։" },
+        { title: "Ստուգում և հանձնում", description: "Ստուգում ենք արդյունքը և հանձնում ավարտված տարածքը։" },
       ],
     }),
   },
@@ -352,27 +354,25 @@ export const serviceTranslations = {
     ru: serviceContent({
       title: "Ремонт квартир и частных домов",
       shortDescription:
-        "Выполняем комплексный и поэтапный ремонт квартир и домов: от оценки состояния объекта и подготовки сметы до инженерных, черновых и отделочных работ.",
+        "Выполняем косметический, капитальный и ремонт под ключ. Организуем демонтаж, электрику и сантехнику, подготовку стен и пола, чистовую отделку и сдачу объекта.",
       fullDescription:
-        "Начинаем с состояния объекта и ожидаемого результата. После осмотра определяем состав работ, последовательность этапов и предварительный диапазон стоимости.",
+        "Ремонтируем квартиры и частные дома полностью или отдельными этапами. Косметический ремонт обновляет отделку, капитальный затрагивает основные системы и поверхности, а ремонт под ключ охватывает весь процесс до сдачи.",
       includedWorks: [
         "Осмотр и замеры",
         "Планирование и предварительная смета",
         "Демонтаж и подготовка",
-        "Инженерные и отделочные работы",
+        "Электрика, сантехника, черновые и отделочные работы",
         "Финальная проверка и передача",
       ],
       suitableFor: [
         "Владельцам квартир и частных домов",
-        "Тем, кто обновляет существующий интерьер",
-        "Коммерческим помещениям как отдельному случаю",
+        "Тем, кто ремонтирует квартиру в новостройке или на вторичном рынке",
       ],
       customerTypes: [
         "Квартира в новостройке",
         "Квартира на вторичном рынке",
         "Частный дом",
         "Существующий интерьер",
-        "Коммерческое помещение",
       ],
       workTypes: [
         "Косметический ремонт",
@@ -406,8 +406,8 @@ export const serviceTranslations = {
             "Да, состав работ обсуждается для конкретной задачи. После осмотра можно определить, нужен ли комплексный ремонт или отдельные этапы.",
         },
       ],
-      primaryCta: "Подробнее о ремонте",
-      secondaryCta: "Обсудить ремонт",
+      primaryCta: "Посмотреть варианты ремонта",
+      secondaryCta: "Получить предварительный расчёт",
       seoTitle: "Ремонт квартир и домов под ключ в Армении — Shinex",
       seoDescription:
         "Ремонт квартир и частных домов под ключ в Ереване и регионах Армении: осмотр, предварительная оценка и согласование этапов.",
@@ -423,27 +423,25 @@ export const serviceTranslations = {
     en: serviceContent({
       title: "Apartment and private house renovation",
       shortDescription:
-        "We complete full and phased apartment and house renovation, from assessing the property and preparing an estimate through building-services, preparatory, and finishing work.",
+        "We deliver cosmetic, major, and turnkey renovation. We organise demolition, electrical and plumbing work, wall and floor preparation, final finishes, and handover.",
       fullDescription:
-        "We begin with the property’s condition and the expected result. After a survey, we define the scope, sequence of stages, and an initial cost range.",
+        "We renovate apartments and private homes as a complete service or in individual stages. Cosmetic renovation refreshes finishes, major renovation changes key systems and surfaces, and turnkey renovation covers the full process through handover.",
       includedWorks: [
         "Survey and measurements",
         "Planning and an initial estimate",
         "Demolition and preparation",
-        "Building-services and finishing work",
+        "Electrical, plumbing, preparatory, and finishing work",
         "Final inspection and handover",
       ],
       suitableFor: [
         "Apartment and private home owners",
-        "People updating an existing interior",
-        "Commercial spaces as a separate case",
+        "People renovating a new-build or existing apartment",
       ],
       customerTypes: [
         "New-build apartment",
         "Existing apartment",
         "Private house",
         "Existing interior",
-        "Commercial space",
       ],
       workTypes: [
         "Cosmetic renovation",
@@ -477,8 +475,8 @@ export const serviceTranslations = {
             "Yes. The scope is discussed for the particular project, and a survey helps determine whether a full renovation or individual stages are suitable.",
         },
       ],
-      primaryCta: "Learn about renovation",
-      secondaryCta: "Discuss renovation",
+      primaryCta: "View renovation options",
+      secondaryCta: "Get an initial estimate",
       seoTitle: "Turnkey apartment and house renovation in Armenia — Shinex",
       seoDescription:
         "Turnkey apartment and private house renovation in Yerevan and across Armenia: survey, initial assessment, and agreed stages.",
@@ -494,27 +492,25 @@ export const serviceTranslations = {
     hy: serviceContent({
       title: "Բնակարանների և առանձնատների վերանորոգում",
       shortDescription:
-        "Կատարում ենք բնակարանների և տների համալիր ու փուլային վերանորոգում՝ օբյեկտի վիճակի գնահատումից և նախահաշվի պատրաստումից մինչև ինժեներական, սևագործ և հարդարման աշխատանքներ։",
+        "Կատարում ենք կոսմետիկ, կապիտալ և բանալիով վերանորոգում։ Կազմակերպում ենք ապամոնտաժումը, էլեկտրական և սանտեխնիկական աշխատանքները, պատերի ու հատակի պատրաստումը, վերջնական հարդարումը և օբյեկտի հանձնումը։",
       fullDescription:
-        "Սկսում ենք օբյեկտի վիճակից և ակնկալվող արդյունքից։ Զննումից հետո որոշում ենք աշխատանքների կազմը, փուլերի հերթականությունը և արժեքի նախնական միջակայքը։",
+        "Վերանորոգում ենք բնակարաններ և առանձնատներ՝ ամբողջական կամ առանձին փուլերով։ Կոսմետիկ վերանորոգումը թարմացնում է հարդարումը, կապիտալ վերանորոգումը ներառում է հիմնական համակարգերի և մակերեսների փոփոխությունը, իսկ բանալիով տարբերակում կազմակերպում ենք ամբողջ ընթացքը մինչև հանձնումը։",
       includedWorks: [
         "Զննում և չափագրում",
         "Պլանավորում և նախնական նախահաշիվ",
         "Ապամոնտաժում և նախապատրաստում",
-        "Ինժեներական և հարդարման աշխատանքներ",
+        "Էլեկտրական, սանտեխնիկական, սևագործ և հարդարման աշխատանքներ",
         "Վերջնական ստուգում և հանձնում",
       ],
       suitableFor: [
         "Բնակարանների և առանձնատների սեփականատերերին",
-        "Գոյություն ունեցող ինտերիերը թարմացնողներին",
-        "Առևտրային տարածքներին՝ որպես առանձին դեպք",
+        "Նորակառույց կամ երկրորդային բնակարան վերանորոգողներին",
       ],
       customerTypes: [
         "Նորակառույց բնակարան",
         "Երկրորդային շուկայի բնակարան",
         "Առանձնատուն",
         "Գոյություն ունեցող ինտերիեր",
-        "Առևտրային տարածք",
       ],
       workTypes: [
         "Կոսմետիկ վերանորոգում",
@@ -540,27 +536,27 @@ export const serviceTranslations = {
         {
           question: "Ինչի՞ց է կախված վերանորոգման արժեքը",
           answer:
-            "Այն կախված է մակերեսից, տարածքի վիճակից, ապամոնտաժման ծավալից, ինժեներական աշխատանքներից, հարդարման բարդությունից և ընտրված նյութերից։ Նախնական միջակայքը կարելի է դիտարկել հաշվիչով, իսկ ճշգրիտ նախահաշիվը կազմվում է խնդրի ճշտումից և զննումից հետո։",
+            "Վերանորոգման արժեքը կախված է մակերեսից, տարածքի վիճակից, ապամոնտաժման, ինժեներական աշխատանքների, հարդարման բարդության և նյութերի ընտրության ծավալից։ Նախնական արժեքը կարող եք հաշվարկել կայքում, իսկ ճշգրիտ նախահաշիվը կազմում ենք օբյեկտի զննումից հետո։",
         },
         {
           question: "Կարո՞ղ եմ պատվիրել վերանորոգման առանձին փուլեր",
           answer:
-            "Այո, աշխատանքների կազմը քննարկվում է կոնկրետ խնդրի համար։ Զննումից հետո հնարավոր է որոշել՝ անհրաժեշտ է համալիր վերանորոգում, թե առանձին փուլեր։",
+            "Այո, կարող եք պատվիրել միայն անհրաժեշտ փուլերը՝ օրինակ էլեկտրականություն, սանտեխնիկա, սալիկապատում կամ հարդարում։ Ուղարկեք օբյեկտի տվյալները, և կճշտենք հաշվարկի համար անհրաժեշտ մանրամասները։",
         },
       ],
-      primaryCta: "Մանրամասն՝ վերանորոգման մասին",
-      secondaryCta: "Քննարկել վերանորոգումը",
+      primaryCta: "Դիտել վերանորոգման տարբերակները",
+      secondaryCta: "Ստանալ նախնական հաշվարկ",
       seoTitle:
         "Բնակարանների և տների վերանորոգում բանալիով Հայաստանում — Shinex",
       seoDescription:
         "Բնակարանների և առանձնատների բանալիով վերանորոգում Երևանում և Հայաստանի մարզերում՝ զննում, նախնական գնահատում և փուլերի համաձայնեցում։",
       workflow: [
-        "Զննում և խնդրի քննարկում",
-        "Պլանավորում և նախնական նախահաշիվ",
-        "Ապամոնտաժում և նախապատրաստում",
-        "Ինժեներական և սևագործ աշխատանքներ",
-        "Մաքուր հարդարում",
-        "Վերջնական ստուգում և հանձնում",
+        { title: "Օբյեկտի զննում և չափագրում", description: "Չափագրում ենք տարածքը, գնահատում ներկա վիճակը և հավաքում հաշվարկի համար անհրաժեշտ տվյալները։" },
+        { title: "Պլանավորում և նախնական նախահաշիվ", description: "Հաստատում ենք աշխատանքների ցանկը, հերթականությունը և նախնական արժեքը։" },
+        { title: "Ապամոնտաժում և նախապատրաստում", description: "Ազատում և պատրաստում ենք տարածքը հաջորդ աշխատանքների համար։" },
+        { title: "Ինժեներական և սևագործ աշխատանքներ", description: "Կատարում ենք էլեկտրական, սանտեխնիկական և մակերեսների պատրաստման աշխատանքները։" },
+        { title: "Մաքուր հարդարում", description: "Ավարտում ենք սալիկապատումը, պատերի, հատակի և առաստաղի հարդարումը։" },
+        { title: "Վերջնական ստուգում և հանձնում", description: "Ստուգում ենք կատարվածը և հանձնում պատրաստի բնակարանը կամ տունը։" },
       ],
     }),
   },

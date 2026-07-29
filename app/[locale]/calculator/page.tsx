@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-import { ContactTrigger } from "@/components/forms/contact-dialog";
+import { CostCalculator } from "@/components/calculator/cost-calculator";
 import { Container } from "@/components/ui/container";
 import { getDictionary, isLocale } from "@/lib/i18n";
 import { buildMetadata } from "@/lib/metadata";
@@ -39,8 +39,10 @@ export default async function CalculatorPage({ params }: Props) {
         <p className="mx-auto mt-4 max-w-xl text-base leading-7 text-[var(--text-secondary)]">
           {copy.description}
         </p>
-        <ContactTrigger className="mt-7" label={dictionary.nav.contacts} />
       </div>
+      <section className="mx-auto mt-8 max-w-4xl">
+        <CostCalculator copy={dictionary.constructionCalculator} locale={locale} />
+      </section>
     </Container>
   );
 }

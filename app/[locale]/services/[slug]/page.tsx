@@ -41,10 +41,7 @@ export default async function ServiceDetailPage({ params }: Props) {
   const service = getServiceBySlug(locale, slug);
   if (!service) notFound();
   const copy = dictionary.services.detail;
-  const primaryCta =
-    service.ctaKind === "contact"
-      ? (service.content.primaryCta ?? copy.requestEstimate)
-      : (service.content.secondaryCta ?? copy.requestEstimate);
+  const primaryCta = service.content.primaryCta ?? copy.requestEstimate;
   const serviceJsonLd = {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -200,7 +197,7 @@ export default async function ServiceDetailPage({ params }: Props) {
             ) : null}
             <div className="rounded-[24px] bg-[var(--background-warm)] p-7 sm:p-10">
               <h2 className="text-2xl font-semibold tracking-[-0.03em] text-[var(--text-primary)]">
-                {primaryCta}
+                {dictionary.estimate.title}
               </h2>
               <ContactTrigger className="mt-6" label={primaryCta} />
             </div>
@@ -208,8 +205,8 @@ export default async function ServiceDetailPage({ params }: Props) {
         </Container>
       </article>
       <EstimateSection
-        contactLabel={dictionary.nav.contacts}
         dictionary={dictionary}
+        locale={locale}
       />
       <FinalCta dictionary={dictionary} locale={locale} />
     </>

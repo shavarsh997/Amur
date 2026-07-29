@@ -45,7 +45,7 @@ export function Hero({
               <div className="mt-6 flex flex-col gap-2.5 sm:mt-7 sm:flex-row sm:gap-3">
                 <ContactTrigger
                   className="w-full sm:w-auto"
-                  label={dictionary.nav.contacts}
+                  label={dictionary.hero.primaryAction}
                 />
                 <ButtonLink
                   className="w-full gap-2 sm:w-auto"

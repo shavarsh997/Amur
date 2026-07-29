@@ -1,14 +1,14 @@
-import { ContactTrigger } from "@/components/forms/contact-dialog";
+import { ButtonLink } from "@/components/ui/button-link";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import type { Dictionary } from "@/types";
 
 export function EstimateSection({
   dictionary,
-  contactLabel = dictionary.nav.contacts,
+  locale,
 }: {
   dictionary: Dictionary;
-  contactLabel?: string;
+  locale: string;
 }) {
   return (
     <section
@@ -29,7 +29,9 @@ export function EstimateSection({
               <p className="text-sm leading-6 text-[var(--text-secondary)]">
                 {dictionary.constructionCalculator.estimateSectionDescription}
               </p>
-              <ContactTrigger className="mt-6 w-full" label={contactLabel} />
+              <ButtonLink className="mt-6 w-full" href={`/${locale}/calculator`}>
+                {dictionary.hero.primaryAction}
+              </ButtonLink>
             </div>
           </div>
         </div>

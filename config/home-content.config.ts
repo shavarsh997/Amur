@@ -51,32 +51,32 @@ export const homeContent: Record<Locale, HomeContent> = {
     ],
     renovationIncluded: {
       eyebrow: "Ремонт под ключ",
-      title: "Что может входить в ремонт под ключ",
+      title: "Что включает ремонт под ключ",
       notice:
-        "Конкретный состав работ определяется после осмотра объекта и согласования задачи.",
+        "Финальный перечень работ составляется после осмотра объекта и обсуждения ваших требований.",
       items: [
-        "Осмотр и замеры",
-        "Планирование и предварительная смета",
-        "Демонтаж и подготовка",
+        "Осмотр объекта и замеры",
+        "Планировка и смета",
+        "Демонтаж и подготовка помещения",
         "Электрика и сантехника",
-        "Выравнивание и черновая отделка",
-        "Отделка стен, пола и потолка",
-        "Установка дверей, оборудования и освещения",
-        "Финальная проверка и передача",
+        "Подготовка стен, пола и потолка",
+        "Плитка и чистовая отделка",
+        "Установка дверей, освещения и оборудования",
+        "Уборка, проверка и сдача объекта",
       ],
     },
     serviceArea: {
       enabled: true,
       label: "География работ",
-      title: "Работаем по Еревану и всей Армении",
+      title: "Ремонт и строительство в Ереване и регионах",
       description:
-        "Выезжаем на осмотр квартир, частных домов и коммерческих помещений. Возможность выезда и логистику уточняем после обсуждения задачи.",
+        "Принимаем проекты квартир, частных домов и коммерческих помещений в Ереване и регионах Армении. Возможность выезда и условия зависят от объёма работ и расположения объекта.",
       primaryCta: {
-        label: "Обсудить объект",
+        label: "Заказать осмотр объекта",
         href: "/ru/contacts",
       },
       secondaryCta: {
-        label: "Указать регион в калькуляторе",
+        label: "Рассчитать стоимость ремонта",
         href: "/ru/calculator?step=region",
       },
       items: [
@@ -118,32 +118,32 @@ export const homeContent: Record<Locale, HomeContent> = {
     ],
     renovationIncluded: {
       eyebrow: "Turnkey renovation",
-      title: "What a turnkey renovation may include",
+      title: "What a turnkey renovation includes",
       notice:
-        "The exact scope is confirmed after a site visit and discussion of the project.",
+        "The final work list is prepared after a site survey and discussion of your requirements.",
       items: [
-        "Survey and measurements",
-        "Planning and an initial estimate",
-        "Demolition and preparation",
+        "Property survey and measurements",
+        "Layout planning and estimate",
+        "Demolition and space preparation",
         "Electrical and plumbing work",
-        "Levelling and preparatory finishes",
-        "Wall, floor, and ceiling finishes",
-        "Installation of doors, fixtures, and lighting",
-        "Final inspection and handover",
+        "Wall, floor, and ceiling preparation",
+        "Tiling and final finishes",
+        "Installation of doors, lighting, and fixtures",
+        "Cleaning, inspection, and handover",
       ],
     },
     serviceArea: {
       enabled: true,
       label: "Service area",
-      title: "Working in Yerevan and across Armenia",
+      title: "Renovation and construction in Yerevan and the regions",
       description:
-        "We visit apartments, private homes, and commercial properties to assess the project. Site visits and logistics are confirmed after we discuss the scope.",
+        "We accept apartment, private home, and commercial-space projects in Yerevan and across Armenia. Visit availability and terms depend on the scope and property location.",
       primaryCta: {
-        label: "Discuss your property",
+        label: "Request a property survey",
         href: "/en/contacts",
       },
       secondaryCta: {
-        label: "Add your region in the calculator",
+        label: "Calculate renovation cost",
         href: "/en/calculator?step=region",
       },
       items: [
@@ -185,32 +185,32 @@ export const homeContent: Record<Locale, HomeContent> = {
     ],
     renovationIncluded: {
       eyebrow: "Բանալիով վերանորոգում",
-      title: "Ինչ կարող է ներառվել բանալիով վերանորոգման մեջ",
+      title: "Ի՞նչ է ներառում բանալիով վերանորոգումը",
       notice:
-        "Աշխատանքների կոնկրետ կազմը որոշվում է օբյեկտի զննումից և խնդրի համաձայնեցումից հետո։",
+        "Աշխատանքների վերջնական ցանկը կազմվում է օբյեկտի զննումից և Ձեր պահանջների քննարկումից հետո։",
       items: [
-        "Զննում և չափագրում",
-        "Պլանավորում և նախնական նախահաշիվ",
-        "Ապամոնտաժում և նախապատրաստում",
+        "Օբյեկտի զննում և չափագրում",
+        "Հատակագծում և նախահաշիվ",
+        "Ապամոնտաժում և տարածքի նախապատրաստում",
         "Էլեկտրական և սանտեխնիկական աշխատանքներ",
-        "Հարթեցում և սևագործ հարդարում",
-        "Պատերի, հատակի և առաստաղի հարդարում",
-        "Դռների, սարքավորումների և լուսավորության տեղադրում",
-        "Վերջնական ստուգում և հանձնում",
+        "Պատերի, հատակի և առաստաղի պատրաստում",
+        "Սալիկապատում և վերջնական հարդարում",
+        "Դռների, լուսավորության և սարքավորումների տեղադրում",
+        "Մաքրում, ստուգում և օբյեկտի հանձնում",
       ],
     },
     serviceArea: {
       enabled: true,
       label: "Աշխատանքների աշխարհագրություն",
-      title: "Աշխատում ենք Երևանում և Հայաստանի մարզերում",
+      title: "Վերանորոգում և շինարարություն Երևանում ու մարզերում",
       description:
-        "Մեկնում ենք բնակարանների, առանձնատների և առևտրային տարածքների զննության։ Մեկնման հնարավորությունն ու լոգիստիկան ճշտում ենք աշխատանքը քննարկելուց հետո։",
+        "Ընդունում ենք բնակարանների, առանձնատների և առևտրային տարածքների նախագծեր Երևանում և Հայաստանի մարզերում։ Մեկնելու հնարավորությունն ու պայմանները կախված են աշխատանքի ծավալից և օբյեկտի գտնվելու վայրից։",
       primaryCta: {
-        label: "Քննարկել օբյեկտը",
+        label: "Պատվիրել օբյեկտի զննում",
         href: "/hy/contacts",
       },
       secondaryCta: {
-        label: "Նշել մարզը հաշվիչում",
+        label: "Հաշվել վերանորոգման արժեքը",
         href: "/hy/calculator?step=region",
       },
       items: [

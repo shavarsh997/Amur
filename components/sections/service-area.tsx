@@ -1,5 +1,4 @@
 import { Building2, Map, MapPin, Store } from "lucide-react";
-import Link from "next/link";
 
 import { ButtonLink } from "@/components/ui/button-link";
 import { homeContent } from "@/config/home-content.config";
@@ -32,6 +31,19 @@ export function ServiceArea({ locale }: { locale: Locale }) {
             <p className="mt-4 max-w-xl text-[15px] leading-6 text-[var(--text-secondary)] sm:text-base sm:leading-7">
               {content.description}
             </p>
+            <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+              <ButtonLink href={content.primaryCta.href}>
+                {content.primaryCta.label}
+              </ButtonLink>
+              {content.secondaryCta ? (
+                <ButtonLink
+                  href={content.secondaryCta.href}
+                  variant="secondary"
+                >
+                  {content.secondaryCta.label}
+                </ButtonLink>
+              ) : null}
+            </div>
           </div>
           <ul className="grid gap-2.5 min-[769px]:grid-cols-3 lg:grid-cols-1">
             {content.items

@@ -36,7 +36,7 @@ export function FinalCta({
               <p className="mt-5 max-w-xl text-[15px] leading-7 text-[var(--text-secondary)] sm:text-base">
                 {dictionary.cta.description}
               </p>
-              {/* <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
                 <ContactTrigger
                   className="w-full sm:w-auto"
                   label={dictionary.cta.primaryAction}
@@ -46,7 +46,7 @@ export function FinalCta({
                   label={dictionary.cta.secondaryAction}
                   variant="secondary"
                 />
-              </div> */}
+              </div>
             </div>
             <aside className="relative overflow-hidden rounded-[22px] border border-white/10 bg-[var(--text-primary)] p-6 text-white shadow-[0_20px_40px_-28px_rgb(24_33_42/0.7)] sm:p-7 lg:min-h-60">
               <div

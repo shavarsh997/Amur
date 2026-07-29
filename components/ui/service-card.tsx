@@ -70,7 +70,7 @@ export function ServiceCard({
         {service.ctaKind === "calculator" || service.ctaKind === "contact" ? (
           <ContactTrigger
             className="mt-3 min-h-9 rounded-lg px-3 text-xs sm:mt-5 sm:min-h-10 sm:text-sm"
-            label={contactLabel}
+            label={content.primaryCta ?? contactLabel}
           />
         ) : (
           <Link

@@ -4,7 +4,7 @@ import type { Dictionary } from "@/types";
 const dictionary = {
   localeName: "English",
   metadata: {
-    title: "Renovation, interior design, and construction in Armenia — Shinex",
+    title: "Apartment and house renovation in Armenia — Shinex",
     description:
       "Apartment and private house renovation, interior design, house construction, and commercial-space work in Yerevan and across Armenia.",
   },
@@ -13,7 +13,7 @@ const dictionary = {
     services: "Services",
     projects: "Projects",
     about: "About",
-    contacts: "Contacts",
+    contacts: "Get a consultation",
     privacy: "Privacy",
     consultation: "Get a consultation",
     openMenu: "Open menu",
@@ -21,41 +21,41 @@ const dictionary = {
     language: "Language",
   },
   hero: {
-    eyebrow: "Renovation, design, and construction in Armenia",
-    title: "Renovation, interior design, and construction in Armenia",
+    eyebrow: "Renovation and construction services",
+    title: "Apartment and house renovation in Armenia",
     description:
-      "We renovate apartments and private homes, create interior design, and build houses and commercial spaces. We help guide the process from the initial idea and estimate through delivery and handover.",
-    primaryAction: "Calculate the cost",
+      "We complete full and phased renovation for apartments and private homes. We also develop interior design, build homes, and deliver commercial construction work — from an initial estimate to handover of the finished property.",
+    primaryAction: "Get an initial estimate",
     secondaryAction: "View services",
     trustPoints: [
-      "Initial assessment",
-      "Agreed stages",
-      "Practical project discussion",
+      "Initial estimate and detailed cost plan",
+      "Construction and building-services work",
+      "Interior design and material selection",
       "Yerevan and regional projects",
     ],
   },
   services: {
     eyebrow: "Main services",
-    title: "Renovation and construction with a clear next step",
+    title: "Services for apartments, homes, and businesses",
     description:
-      "Start with the right format: comprehensive renovation, private home construction, or work for a commercial property.",
+      "Choose the service you need: renovation, private house construction, interior design, or additional construction work.",
     specializedTitle: "Additional construction services",
     viewAll: "All services",
-    learnMore: "Learn more",
+    learnMore: "View service",
     pageTitle: "Renovation, interior design, and construction services",
     pageDescription:
-      "Renovation, interior design, construction, and specialist building work for residential and commercial spaces.",
+      "Apartment and house renovation, private house construction, interior design, and individual construction work.",
     detail: {
       overview: "Service overview",
-      included: "What may be included",
+      included: "What the service includes",
       stages: "Work stages",
       audience: "Who it is for",
-      customerTypes: "Situations we consider",
+      customerTypes: "When this service is suitable",
       workTypes: "Work formats",
       estimateRequirements: "For an initial assessment",
       priceFactors: "What affects the cost",
       faq: "Frequently asked questions",
-      requestEstimate: "Request an initial assessment",
+      requestEstimate: "Get an initial estimate",
       relatedProjects: "Related projects",
     },
   },
@@ -202,9 +202,9 @@ const dictionary = {
   },
   whyUs: {
     eyebrow: "Why Shinex",
-    title: "A predictable process with less uncertainty",
+    title: "Why trust Shinex with your project",
     description:
-      "Every decision is tied to the project's purpose and its agreed scope.",
+      "We discuss the work terms and changes in advance so every stage remains clear.",
     items: [
       {
         title: "Contract-based work",
@@ -212,14 +212,14 @@ const dictionary = {
           "The scope, responsibilities, and working procedure are recorded.",
       },
       {
-        title: "Transparent estimate",
+        title: "Estimate agreed in advance",
         description:
-          "The work structure is visible and changes are approved before execution.",
+          "We show the work list and cost, and agree changes before they are completed.",
       },
       {
-        title: "Schedule discipline",
+        title: "Work organised in stages",
         description:
-          "We work to the agreed programme and flag factors that could affect it in advance.",
+          "We plan the sequence of work and control the progress of every stage.",
       },
       {
         title: "Quality control",
@@ -227,66 +227,66 @@ const dictionary = {
           "Critical operations and the outcome of each stage are checked.",
       },
       {
-        title: "Scope for the project",
+        title: "Changes agreed in advance",
         description:
-          "The exact scope is clarified after a survey and discussion of the task.",
+          "If the scope or solution needs to change during work, we agree it with you first.",
       },
       {
-        title: "Projects across Armenia",
+        title: "Working in Yerevan and the regions",
         description:
-          "We assess properties in Yerevan and the regions based on scale and logistics.",
+          "We accept projects in Yerevan and across Armenia, taking account of the property location and scope.",
       },
     ],
   },
   process: {
     eyebrow: "Our process",
-    title: "Clear steps from first conversation to handover",
+    title: "Work stages — from the first call to handover",
     description:
-      "The actual sequence and scope are confirmed after the property has been reviewed.",
+      "At every stage, you know what we do, what you confirm, and what happens next.",
     steps: [
       {
         number: "01",
-        title: "Consultation",
+        title: "Initial consultation",
         description:
-          "We clarify the task, property type, region, and expected result.",
+          "We clarify your brief and property type, then propose the next practical step.",
       },
       {
         number: "02",
-        title: "Site visit and survey",
+        title: "Property survey and measurements",
         description:
-          "We inspect the property or site, take required measurements, and record constraints.",
+          "We inspect the property or site, take measurements, and collect the data needed for an estimate.",
       },
       {
         number: "03",
-        title: "Design and estimate",
+        title: "Preparing solutions and an estimate",
         description:
-          "We define solutions, scope, stages, and the structure of the preliminary estimate.",
+          "We prepare the solutions, work stages, and initial estimate for your approval.",
       },
       {
         number: "04",
-        title: "Contract",
+        title: "Signing the contract",
         description:
-          "We agree terms, responsibilities, and the procedure for changes.",
+          "We record the agreed scope, terms, and procedure for changes.",
       },
       {
         number: "05",
-        title: "Construction work",
+        title: "Delivery and control of the work",
         description:
-          "We organize construction or renovation and control the agreed stages.",
+          "We organise and control the work in the agreed sequence.",
       },
       {
         number: "06",
         title: "Inspection and handover",
         description:
-          "We inspect the result, record observations, and hand over completed work.",
+          "We inspect the completed work with you, finish agreed adjustments, and hand over the property.",
       },
     ],
   },
   estimate: {
-    eyebrow: "Initial enquiry",
-    title: "Tell us about your project",
+    eyebrow: "Initial estimate",
+    title: "Send your project details",
     description:
-      "Send the essentials and we will contact you to clarify the scope and a practical next step.",
+      "Provide the key property details. A specialist will review your enquiry and contact you to clarify the project.",
     fields: {
       objectType: "Property type",
       area: "Area, m²",
@@ -294,7 +294,7 @@ const dictionary = {
       workType: "Work type",
       name: "Name",
       phone: "Phone",
-      comment: "Comment",
+      comment: "Project description",
     },
     placeholders: {
       objectType: "Select a property type",
@@ -303,7 +303,7 @@ const dictionary = {
       workType: "Select a work type",
       name: "Your name",
       phone: "+374 …",
-      comment: "Describe the task and the property's current condition",
+      comment: "For example: 85 m² apartment, full renovation needed",
     },
     choices: {
       objectType: {
@@ -338,17 +338,17 @@ const dictionary = {
       phoneRequired: "Enter your phone number.",
       phoneInvalid: "Enter a valid phone number.",
     },
-    submit: "Send enquiry",
+    submit: "Send an initial-estimate enquiry",
     submitting: "Sending…",
-    success: "Thank you. Your enquiry has been received.",
+    success: "Your enquiry has been sent. We will contact you to clarify the details.",
     error:
       "The enquiry could not be sent. Please try again or contact us directly.",
   },
   calculator: {
     eyebrow: "Cost calculator",
-    title: "Estimate your preliminary cost",
+    title: "Calculate your project’s initial cost",
     description:
-      "Answer a few questions to get an initial guide for your project.",
+      "The calculator has four steps and does not require a phone number. Enter the property type, area, and required work to receive an initial cost. A precise estimate is prepared after a survey and clarification of the details.",
     steps: {
       objectType: "Property",
       workType: "Work",
@@ -444,14 +444,14 @@ const dictionary = {
     },
     steps: {
       scenario: {
-        title: "What would you like to estimate?",
+        title: "Choose a service",
         description:
-          "Choose a scenario and we will show only the relevant options.",
+          "Choose renovation, home construction, design, or work for a commercial property.",
       },
       parameters: {
-        title: "Core details",
+        title: "Property details",
         description:
-          "Approximate information is enough; you can refine it later.",
+          "Enter approximate details. Exact measurements can be confirmed after a survey.",
       },
       constructionExtras: {
         title: "Additional construction conditions",
@@ -651,7 +651,7 @@ const dictionary = {
       roomsCountOutOfRange: "Enter a number of rooms from 1 to 50.",
     },
     estimateSectionDescription:
-      "Choose a scenario and enter the key details — we will send them to a specialist for an accurate estimate.",
+      "The calculator shows an initial cost. A precise estimate is prepared after a property survey and clarification of the work.",
   },
   testimonials: {
     eyebrow: "Testimonials",
@@ -685,9 +685,9 @@ const dictionary = {
   },
   faq: {
     eyebrow: "Frequently asked questions",
-    title: "Straightforward answers to important questions",
+    title: "Frequently asked questions about renovation and construction",
     description:
-      "Final terms are always shaped after reviewing the specific property.",
+      "Here is what is useful to know before you request an initial estimate.",
     items: [
       {
         question: "What affects the cost of renovation?",
@@ -729,14 +729,19 @@ const dictionary = {
         answer:
           "We consider properties in Yerevan and the regions of Armenia. Site visits and logistics are confirmed for each project.",
       },
+      {
+        question: "How do I start?",
+        answer:
+          "Send the property type, approximate area, location, and a description of the work you need. We will then arrange an initial consultation or property survey.",
+      },
     ],
   },
   cta: {
-    title: "Planning construction in Armenia?",
+    title: "Planning renovation or construction?",
     description:
-      "Describe what you need so we can identify a realistic next step together.",
-    primaryAction: "Get a consultation",
-    secondaryAction: "Call",
+      "Send the key project details and we will identify the right next step: an estimate or a site survey.",
+    primaryAction: "Send project details",
+    secondaryAction: "Request a property survey",
   },
   footer: {
     description: "Renovation, interior design, and construction in Armenia.",
