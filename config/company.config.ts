@@ -1,4 +1,5 @@
 import type { CompanyConfiguration } from "@/types/config";
+import { SITE_URL } from "@/lib/site-url";
 
 /**
  * The sole source of business facts displayed on the site.
@@ -12,7 +13,7 @@ export const companyConfig = {
     logo: "/brand/shinex-mark.png",
   },
   website: {
-    origin: "https://www.shinex.am",
+    origin: SITE_URL,
     defaultLocale: "hy",
     supportedLocales: ["hy", "ru", "en"],
   },

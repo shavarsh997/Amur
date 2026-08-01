@@ -1,6 +1,5 @@
 import { companyConfig } from "@/config/company.config";
-
-const canonicalOrigin = "https://www.shinex.am";
+import { CANONICAL_SITE_URL, SITE_URL } from "@/lib/site-url";
 
 function isValidExternalUrl(value: string | null): value is string {
   if (!value) return false;
@@ -13,15 +12,11 @@ function isValidExternalUrl(value: string | null): value is string {
 }
 
 export function getSiteOrigin(): string {
-  const configured = process.env.NEXT_PUBLIC_SITE_URL;
-  if (!configured) return companyConfig.website.origin;
   try {
-    const url = new URL(configured);
-    return url.origin === canonicalOrigin
-      ? url.origin
-      : companyConfig.website.origin;
+    const url = new URL(SITE_URL);
+    return url.origin === CANONICAL_SITE_URL ? url.origin : CANONICAL_SITE_URL;
   } catch {
-    return companyConfig.website.origin;
+    return CANONICAL_SITE_URL;
   }
 }
 

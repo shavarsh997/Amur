@@ -36,6 +36,11 @@ export const metadata: Metadata = {
     template: `%s | ${companyConfig.brand.name}`,
   },
   applicationName: companyConfig.brand.name,
+  manifest: "/manifest.webmanifest",
+  icons: {
+    icon: [{ url: "/favicon.ico", sizes: "any" }],
+    apple: [{ url: "/apple-icon.png", sizes: "195x180", type: "image/png" }],
+  },
   category: seoConfig.category,
   robots: seoConfig.robots,
 };
@@ -60,10 +65,11 @@ export default async function LocaleLayout({
   if (!isLocale(locale)) notFound();
 
   const dictionary = await getDictionary(locale);
+  const htmlLang = locale === "hy" ? "hy-AM" : locale === "ru" ? "ru-AM" : "en";
   return (
     <html
       className={`${manrope.variable} ${notoArmenian.variable} h-full antialiased`}
-      lang={locale}
+      lang={htmlLang}
     >
       <body suppressHydrationWarning className="flex min-h-full flex-col">
         <div className="flex min-h-screen flex-col">

@@ -4,10 +4,11 @@ const read = (file) => readFileSync(file, "utf8");
 const checks = [
   [
     "canonical company origin",
-    read("config/company.config.ts").includes(
-      'origin: "https://www.shinex.am"'
-    ),
+    read("lib/site-url.ts").includes(
+      'process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.shinex.am"'
+    ) && read("config/company.config.ts").includes("origin: SITE_URL"),
   ],
+  ["web manifest", existsSync("app/manifest.ts")],
   ["metadata helper", read("lib/metadata.ts").includes("createPageMetadata")],
   ["robots sitemap", read("app/robots.ts").includes('"/sitemap.xml"')],
   [

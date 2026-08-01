@@ -63,7 +63,9 @@ export function getWebsiteJsonLd(): JsonLd {
     "@type": "WebSite",
     "@id": getAbsoluteUrl("/#website"),
     name: companyConfig.brand.name,
+    alternateName: companyConfig.brand.alternateName,
     url: getAbsoluteUrl("/"),
+    inLanguage: "hy-AM",
     publisher: { "@id": getAbsoluteUrl("/#organization") },
   };
 }
