@@ -1,12 +1,44 @@
-import type { CompanyConfig } from "@/types/config";
-import { regionsConfig } from "@/config/regions.config";
+import type { CompanyConfiguration } from "@/types/config";
 
-/** Replace every TODO_REPLACE value before publishing the website. */
+/**
+ * The sole source of business facts displayed on the site.
+ * Keep unknown values null: UI and structured data intentionally omit them.
+ */
 export const companyConfig = {
-  companyName: "Shinex",
-  shortCompanyName: "Shinex",
-  tagline: "TODO_REPLACE_COMPANY_TAGLINE",
-  description: "TODO_REPLACE_COMPANY_DESCRIPTION",
-  country: regionsConfig.country,
-  city: regionsConfig.primaryCity,
-} as const satisfies CompanyConfig;
+  brand: {
+    name: "Shinex",
+    alternateName: "Shinex Armenia",
+    legalName: null,
+    logo: "/brand/shinex-mark.png",
+  },
+  website: {
+    origin: "https://www.shinex.am",
+    defaultLocale: "hy",
+    supportedLocales: ["hy", "ru", "en"],
+  },
+  contact: {
+    phone: "+37455156615",
+    displayPhone: "+374 55 15 66 15",
+    whatsapp: "+37455156615",
+    email: null,
+    address: null,
+    city: "Yerevan",
+    countryCode: "AM",
+    workingHours: null,
+  },
+  social: {
+    instagram: null,
+    facebook: null,
+    youtube: null,
+  },
+  business: {
+    registrationNumber: null,
+    foundedYear: null,
+    warrantyText: null,
+    serviceArea: ["Armenia", "Yerevan"],
+  },
+  privacy: {
+    // TODO: set the real publication/update date before the privacy policy is published.
+    updatedAt: null,
+  },
+} as const satisfies CompanyConfiguration;

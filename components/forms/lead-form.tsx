@@ -4,6 +4,7 @@ import { useActionState, useEffect, useId, useRef } from "react";
 
 import { submitLeadAction, type LeadActionState } from "@/app/actions";
 import { leadFormConfig } from "@/config/lead-form.config";
+import { trackEvent } from "@/lib/analytics";
 import type { Dictionary, Locale } from "@/types";
 
 const initialState: LeadActionState = {
@@ -48,6 +49,7 @@ export function LeadForm({
       action={formAction}
       className={`grid gap-5 md:grid-cols-2 ${className}`}
       noValidate
+      onFocus={() => trackEvent("form_start", { form: "lead" })}
     >
       <div>
         <label
@@ -287,6 +289,16 @@ export function LeadForm({
       </div>
 
       <div className="flex flex-col items-start gap-3 md:col-span-2">
+        <div aria-hidden="true" className="hidden">
+          <label htmlFor={fieldId("website")}>Website</label>
+          <input
+            autoComplete="off"
+            id={fieldId("website")}
+            name="website"
+            tabIndex={-1}
+            type="text"
+          />
+        </div>
         <button
           className="inline-flex min-h-12 items-center justify-center rounded-xl bg-[var(--button-primary)] px-7 py-3 text-sm font-semibold text-white transition hover:bg-[var(--button-primary-hover)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--button-primary)] disabled:cursor-wait disabled:opacity-65"
           disabled={pending}

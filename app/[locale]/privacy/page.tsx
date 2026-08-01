@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 
 import { Container } from "@/components/ui/container";
 import { PageHero } from "@/components/ui/page-hero";
+import { companyConfig } from "@/config/company.config";
 import { getDictionary, isLocale } from "@/lib/i18n";
 import { buildMetadata } from "@/lib/metadata";
 
@@ -40,9 +41,11 @@ export default async function PrivacyPage({ params }: Props) {
       />
       <Container className="py-12 sm:py-16 lg:py-20">
         <article className="mx-auto max-w-4xl">
-          <p className="text-sm font-semibold text-[var(--brand-accent)]">
-            {privacy.updated}
-          </p>
+          {companyConfig.privacy.updatedAt ? (
+            <p className="text-sm font-semibold text-[var(--brand-accent)]">
+              {privacy.updated}: {companyConfig.privacy.updatedAt}
+            </p>
+          ) : null}
           <div className="mt-10 space-y-12">
             {privacy.sections.map((section) => (
               <section key={section.title}>

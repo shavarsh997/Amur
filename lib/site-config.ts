@@ -1,2 +1,9 @@
-/** @deprecated Import from config/site.config instead. */
-export { isPlaceholder, siteConfig } from "@/config/site.config";
+export { companyConfig } from "@/config/company.config";
+export {
+  getAbsoluteUrl,
+  getMailHref,
+  getPhoneHref,
+  getSiteOrigin,
+  getSocialLinks,
+  getWhatsAppHref,
+} from "@/lib/company";

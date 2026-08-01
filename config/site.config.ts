@@ -1,20 +1,12 @@
 import { companyConfig } from "@/config/company.config";
-import { contactConfig } from "@/config/contact.config";
-import type { SiteConfiguration } from "@/types/config";
 
+/** @deprecated Use `companyConfig` and URL helpers from `@/lib/company`. */
 export const siteConfig = {
-  ...companyConfig,
-  domain: "https://www.shinex.am",
-  defaultLocale: "hy",
-  locales: ["hy", "ru", "en"],
-  contacts: contactConfig,
-  legal: {
-    legalEntityName: "TODO_REPLACE_LEGAL_ENTITY_NAME",
-    registrationNumber: "TODO_REPLACE_REGISTRATION_NUMBER",
-    taxNumber: "TODO_REPLACE_TAX_NUMBER",
-  },
-} as const satisfies SiteConfiguration;
-
-export function isPlaceholder(value: string): boolean {
-  return value.startsWith("TODO_REPLACE") || value === "";
-}
+  companyName: companyConfig.brand.name,
+  shortCompanyName: companyConfig.brand.name,
+  domain: companyConfig.website.origin,
+  defaultLocale: companyConfig.website.defaultLocale,
+  locales: companyConfig.website.supportedLocales,
+  country: "Armenia",
+  city: companyConfig.contact.city,
+} as const;

@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-import { EstimateSection } from "@/components/sections/estimate-section";
 import { FAQSection } from "@/components/sections/faq";
 import { FinalCta } from "@/components/sections/final-cta";
 import { Hero } from "@/components/sections/hero";
@@ -38,23 +37,6 @@ export default async function LocaleHome({ params }: Props) {
 
   return (
     <>
-      <script
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            mainEntity: dictionary.faq.items.map((item) => ({
-              "@type": "Question",
-              name: item.question,
-              acceptedAnswer: {
-                "@type": "Answer",
-                text: item.answer,
-              },
-            })),
-          }).replace(/</g, "\\u003c"),
-        }}
-        type="application/ld+json"
-      />
       <Hero dictionary={dictionary} locale={locale} />
       {/* <EstimateSection dictionary={dictionary} locale={locale} /> */}
       <ServicesSection dictionary={dictionary} locale={locale} />

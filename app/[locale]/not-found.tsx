@@ -24,6 +24,12 @@ export default async function LocaleNotFound() {
         >
           {dictionary.common.returnHome}
         </Link>
+        <Link
+          className="ml-3 mt-8 inline-flex min-h-12 items-center rounded-full border border-[var(--border)] px-6 py-3 text-sm font-semibold text-[var(--text-primary)]"
+          href={`/${defaultLocale}/services`}
+        >
+          {dictionary.nav.services}
+        </Link>
       </div>
     </Container>
   );

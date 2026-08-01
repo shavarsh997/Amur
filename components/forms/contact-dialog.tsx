@@ -1,9 +1,16 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { Camera, Mail, MessageCircle, Phone, Send, X } from "lucide-react";
+import { Mail, MessageCircle, Phone, X } from "lucide-react";
 
 import { LeadForm } from "@/components/forms/lead-form";
+import {
+  getMailHref,
+  getPhoneHref,
+  getSocialLinks,
+  getWhatsAppHref,
+} from "@/lib/company";
+import { trackEvent } from "@/lib/analytics";
 import type { Dictionary, Locale } from "@/types";
 import type { ContactConfigData } from "@/types/config";
 
@@ -34,6 +41,7 @@ export function ContactTrigger({
       className={`${variants[variant]} ${className}`}
       onClick={() => {
         onClick?.();
+        trackEvent("cta_click", { cta_label: label });
         window.dispatchEvent(new Event(contactOpenEvent));
       }}
       type="button"
@@ -60,6 +68,10 @@ export function ContactDialog({
   const [isClosing, setIsClosing] = useState(false);
   const dialogRef = useRef<HTMLDivElement>(null);
   const copy = dictionary.contacts;
+  const phoneHref = getPhoneHref();
+  const mailHref = getMailHref();
+  const whatsappHref = getWhatsAppHref();
+  const socialLinks = getSocialLinks();
 
   const closeDialog = () => {
     const isMobile = window.matchMedia("(max-width: 639px)").matches;
@@ -155,16 +167,12 @@ export function ContactDialog({
           </button>
         </div>
         <div className="overflow-y-auto p-5 sm:p-7">
-          {contacts.phoneHref ||
-          contacts.email ||
-          contacts.whatsappUrl ||
-          contacts.telegramUrl ||
-          contacts.socials.some((social) => social.url) ? (
+          {phoneHref || mailHref || whatsappHref || socialLinks.length ? (
             <div className="grid gap-3 sm:grid-cols-2">
-              {contacts.phoneHref ? (
+              {phoneHref && contacts.displayPhone ? (
                 <a
                   className="group flex items-center gap-3 rounded-2xl border border-[var(--border)] bg-white p-4 text-left shadow-[0_14px_30px_-26px_rgb(24_24_27/0.55)] transition hover:-translate-y-0.5 hover:border-[var(--border-strong)] hover:shadow-[0_18px_36px_-26px_rgb(24_24_27/0.45)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--button-primary)]"
-                  href={contacts.phoneHref}
+                  href={phoneHref}
                 >
                   <span className="grid size-10 shrink-0 place-items-center rounded-xl bg-[var(--background-warm)] text-[var(--text-primary)]">
                     <Phone aria-hidden="true" className="size-4" />
@@ -174,15 +182,15 @@ export function ContactDialog({
                       {copy.phone}
                     </span>
                     <span className="mt-1 block text-sm font-semibold text-[var(--text-primary)]">
-                      {contacts.phone}
+                      {contacts.displayPhone}
                     </span>
                   </span>
                 </a>
               ) : null}
-              {contacts.email ? (
+              {mailHref && contacts.email ? (
                 <a
                   className="group flex items-center gap-3 rounded-2xl border border-[var(--border)] bg-white p-4 text-left shadow-[0_14px_30px_-26px_rgb(24_24_27/0.55)] transition hover:-translate-y-0.5 hover:border-[var(--border-strong)] hover:shadow-[0_18px_36px_-26px_rgb(24_24_27/0.45)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--button-primary)]"
-                  href={`mailto:${contacts.email}`}
+                  href={mailHref}
                 >
                   <span className="grid size-10 shrink-0 place-items-center rounded-xl bg-[var(--background-warm)] text-[var(--text-primary)]">
                     <Mail aria-hidden="true" className="size-4" />
@@ -197,10 +205,10 @@ export function ContactDialog({
                   </span>
                 </a>
               ) : null}
-              {contacts.whatsappUrl ? (
+              {whatsappHref ? (
                 <a
                   className="group flex items-center gap-3 rounded-2xl border border-[var(--border)] bg-white p-4 text-left shadow-[0_14px_30px_-26px_rgb(24_24_27/0.55)] transition hover:-translate-y-0.5 hover:border-[var(--border-strong)] hover:shadow-[0_18px_36px_-26px_rgb(24_24_27/0.45)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--button-primary)]"
-                  href={contacts.whatsappUrl}
+                  href={whatsappHref}
                   rel="noreferrer"
                   target="_blank"
                 >
@@ -212,52 +220,30 @@ export function ContactDialog({
                   </span>
                 </a>
               ) : null}
-              {contacts.telegramUrl ? (
+              {socialLinks.map((social) => (
                 <a
                   className="group flex items-center gap-3 rounded-2xl border border-[var(--border)] bg-white p-4 text-left shadow-[0_14px_30px_-26px_rgb(24_24_27/0.55)] transition hover:-translate-y-0.5 hover:border-[var(--border-strong)] hover:shadow-[0_18px_36px_-26px_rgb(24_24_27/0.45)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--button-primary)]"
-                  href={contacts.telegramUrl}
+                  href={social.url}
+                  key={social.name}
                   rel="noreferrer"
                   target="_blank"
                 >
                   <span className="grid size-10 shrink-0 place-items-center rounded-xl bg-[var(--background-warm)] text-[var(--text-primary)]">
-                    <Send aria-hidden="true" className="size-4" />
+                    <MessageCircle aria-hidden="true" className="size-4" />
                   </span>
                   <span>
                     <span className="block text-xs font-semibold uppercase tracking-[0.1em] text-[var(--text-muted)]">
-                      {copy.telegram}
+                      {social.name}
                     </span>
                     <span className="mt-1 block text-sm font-semibold text-[var(--text-primary)]">
-                      {contacts.telegramUrl.replace("https://t.me/", "@")}
+                      {social.name}
                     </span>
                   </span>
                 </a>
-              ) : null}
-              {contacts.socials
-                .filter((social) => social.url)
-                .map((social) => (
-                  <a
-                    className="group flex items-center gap-3 rounded-2xl border border-[var(--border)] bg-white p-4 text-left shadow-[0_14px_30px_-26px_rgb(24_24_27/0.55)] transition hover:-translate-y-0.5 hover:border-[var(--border-strong)] hover:shadow-[0_18px_36px_-26px_rgb(24_24_27/0.45)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--button-primary)]"
-                    href={social.url}
-                    key={social.label}
-                    rel="noreferrer"
-                    target="_blank"
-                  >
-                    <span className="grid size-10 shrink-0 place-items-center rounded-xl bg-[var(--background-warm)] text-[var(--text-primary)]">
-                      <Camera aria-hidden="true" className="size-4" />
-                    </span>
-                    <span>
-                      <span className="block text-xs font-semibold uppercase tracking-[0.1em] text-[var(--text-muted)]">
-                        Instagram
-                      </span>
-                      <span className="mt-1 block text-sm font-semibold text-[var(--text-primary)]">
-                        {social.label.replace("Instagram · ", "")}
-                      </span>
-                    </span>
-                  </a>
-                ))}
+              ))}
             </div>
           ) : null}
-          {/* <LeadForm className="mt-6" dictionary={dictionary} locale={locale} /> */}
+          <LeadForm className="mt-6" dictionary={dictionary} locale={locale} />
         </div>
       </div>
     </div>

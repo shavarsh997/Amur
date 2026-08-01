@@ -1,8 +1,8 @@
-import { siteConfig } from "@/config/site.config";
+import { companyConfig } from "@/config/company.config";
 import type { Dictionary, Locale } from "@/types";
 
-export const locales = siteConfig.locales;
-export const defaultLocale = siteConfig.defaultLocale;
+export const locales = companyConfig.website.supportedLocales;
+export const defaultLocale = companyConfig.website.defaultLocale;
 
 const dictionaries: Record<Locale, () => Promise<Dictionary>> = {
   hy: async () => (await import("@/messages/hy")).default,

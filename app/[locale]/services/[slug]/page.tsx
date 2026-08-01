@@ -2,15 +2,16 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 
-import { EstimateSection } from "@/components/sections/estimate-section";
 import { FinalCta } from "@/components/sections/final-cta";
 import { ContactTrigger } from "@/components/forms/contact-dialog";
 import { Container } from "@/components/ui/container";
 import { PageHero } from "@/components/ui/page-hero";
-import { siteConfig } from "@/config/site.config";
+import { companyConfig } from "@/config/company.config";
 import { getActiveServices, getServiceBySlug } from "@/config/services.config";
 import { getDictionary, isLocale } from "@/lib/i18n";
 import { buildMetadata } from "@/lib/metadata";
+import { getAbsoluteUrl } from "@/lib/company";
+import { getBreadcrumbJsonLd, serializeJsonLd } from "@/lib/json-ld";
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
 
@@ -48,11 +49,13 @@ export default async function ServiceDetailPage({ params }: Props) {
     name: service.content.title,
     description: service.content.seoDescription,
     serviceType: service.content.title,
-    areaServed: { "@type": "Country", name: siteConfig.country },
+    url: getAbsoluteUrl(`/${locale}/services/${service.slug}`),
+    areaServed: companyConfig.business.serviceArea.map((name) => ({
+      "@type": "Place",
+      name,
+    })),
     provider: {
-      "@type": "Organization",
-      name: siteConfig.companyName,
-      url: siteConfig.domain,
+      "@id": getAbsoluteUrl("/#organization"),
     },
   };
 
@@ -60,7 +63,22 @@ export default async function ServiceDetailPage({ params }: Props) {
     <>
       <script
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(serviceJsonLd).replace(/</g, "\\u003c"),
+          __html: serializeJsonLd(serviceJsonLd),
+        }}
+        type="application/ld+json"
+      />
+      <script
+        dangerouslySetInnerHTML={{
+          __html: serializeJsonLd(
+            getBreadcrumbJsonLd([
+              { label: dictionary.common.home, href: `/${locale}` },
+              {
+                label: dictionary.services.pageTitle,
+                href: `/${locale}/services`,
+              },
+              { label: service.content.title },
+            ])
+          ),
         }}
         type="application/ld+json"
       />

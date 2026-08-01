@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import { navigationConfig } from "@/config/navigation.config";
-import { siteConfig } from "@/config/site.config";
+import { companyConfig } from "@/config/company.config";
 import { getActiveServices } from "@/config/services.config";
 import { LanguageSwitcher } from "@/components/layout/language-switcher";
 import { MobileNav, type NavigationItem } from "@/components/layout/mobile-nav";
@@ -9,19 +9,13 @@ import { ContactTrigger } from "@/components/forms/contact-dialog";
 import { BrandMark } from "@/components/ui/brand-mark";
 import { Container } from "@/components/ui/container";
 import type { Dictionary, Locale } from "@/types";
-import type { SiteConfiguration } from "@/types/config";
 
 type HeaderProps = {
   locale: Locale;
   dictionary: Dictionary;
-  config?: SiteConfiguration;
 };
 
-export function Header({
-  locale,
-  dictionary,
-  config = siteConfig,
-}: HeaderProps) {
+export function Header({ locale, dictionary }: HeaderProps) {
   const prefix = `/${locale}`;
   const navigation: NavigationItem[] = navigationConfig.map((item) => ({
     href: item.path ? `${prefix}/${item.path}` : prefix,
@@ -44,7 +38,7 @@ export function Header({
           href={prefix}
         >
           <BrandMark className="h-7 w-auto sm:h-8" preload />
-          {config.shortCompanyName}
+          {companyConfig.brand.name}
         </Link>
 
         <nav

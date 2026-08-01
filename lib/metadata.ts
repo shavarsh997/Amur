@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
 
+import { companyConfig } from "@/config/company.config";
 import { seoConfig } from "@/config/seo.config";
-import { siteConfig } from "@/config/site.config";
+import { getAbsoluteUrl, getSiteOrigin } from "@/lib/company";
 import { locales } from "@/lib/i18n";
 import type { Locale } from "@/types";
 
-export function buildMetadata({
+export function createPageMetadata({
   locale,
-  path = "",
+  pathname,
+  path,
   title,
   description,
   image,
@@ -15,6 +17,8 @@ export function buildMetadata({
   noIndex = false,
 }: {
   locale: Locale;
+  pathname?: string;
+  /** @deprecated Use pathname. */
   path?: string;
   title: string;
   description: string;
@@ -22,28 +26,39 @@ export function buildMetadata({
   imageAlt?: string;
   noIndex?: boolean;
 }): Metadata {
-  const normalizedPath = path ? `/${path.replace(/^\/|\/$/g, "")}` : "";
-  const canonical = `/${locale}${normalizedPath}`;
+  const requestedPath = pathname ?? path ?? "";
+  const normalizedPath = requestedPath
+    ? `/${requestedPath.replace(/^\/|\/$/g, "")}`
+    : "";
+  const canonicalPath = `/${locale}${normalizedPath}`;
+  const canonical = getAbsoluteUrl(canonicalPath);
   const languages = Object.fromEntries(
-    locales.map((language) => [language, `/${language}${normalizedPath}`])
+    locales.map((language) => [
+      language === "hy" ? "hy-AM" : language === "ru" ? "ru-AM" : "en",
+      getAbsoluteUrl(`/${language}${normalizedPath}`),
+    ])
   );
-  const titleSuffix = `${seoConfig.titleSeparator}${siteConfig.companyName}`;
-  const pageTitle = title.endsWith(titleSuffix)
-    ? title.slice(0, -titleSuffix.length)
-    : title;
-  const brandedTitle = `${pageTitle}${titleSuffix}`;
+  const unbrandedTitle = title.replace(
+    new RegExp(`\\s*(?:[|—-]\\s*)?${companyConfig.brand.name}$`, "i"),
+    ""
+  );
+  const brandedTitle = `${unbrandedTitle} | ${companyConfig.brand.name}`;
+  const absoluteImage = image
+    ? image.startsWith("http")
+      ? image
+      : getAbsoluteUrl(image)
+    : undefined;
 
   return {
-    // This ignores templates declared in either a parent or the current
-    // locale segment, so every route receives exactly one brand suffix.
+    metadataBase: new URL(getSiteOrigin()),
     title: { absolute: brandedTitle },
     description,
-    ...(noIndex ? { robots: { index: false, follow: true } } : {}),
+    ...(noIndex ? { robots: { index: false, follow: false } } : {}),
     alternates: {
       canonical,
       languages: {
         ...languages,
-        "x-default": `/${siteConfig.defaultLocale}${normalizedPath}`,
+        "x-default": getAbsoluteUrl(`/hy${normalizedPath}`),
       },
     },
     openGraph: {
@@ -53,16 +68,30 @@ export function buildMetadata({
         .filter((language) => language !== locale)
         .map((language) => seoConfig.openGraphLocale[language]),
       url: canonical,
-      siteName: siteConfig.companyName,
+      siteName: companyConfig.brand.name,
       title: brandedTitle,
       description,
-      images: image ? [{ url: image, alt: imageAlt ?? pageTitle }] : undefined,
+      images: absoluteImage
+        ? [
+            {
+              url: absoluteImage,
+              alt: imageAlt ?? title,
+              width: 1200,
+              height: 630,
+            },
+          ]
+        : undefined,
     },
     twitter: {
-      card: image ? "summary_large_image" : "summary",
+      card: absoluteImage ? "summary_large_image" : "summary",
       title: brandedTitle,
       description,
-      images: image ? [{ url: image, alt: imageAlt ?? pageTitle }] : undefined,
+      images: absoluteImage
+        ? [{ url: absoluteImage, alt: imageAlt ?? title }]
+        : undefined,
     },
   };
 }
+
+/** @deprecated Use createPageMetadata. */
+export const buildMetadata = createPageMetadata;

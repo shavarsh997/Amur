@@ -61,8 +61,12 @@ export async function submitLeadAction(
   const name = readString(formData, "name", 120);
   const phone = readString(formData, "phone", 40);
   const comment = readString(formData, "comment", 2000);
+  const website = readString(formData, "website", 200);
   const area = Number(areaValue);
   const errors: LeadActionState["errors"] = {};
+
+  // Honeypot field: bots get a neutral success response, without creating a lead.
+  if (website) return { status: "success", message: copy.success, errors: {} };
 
   if (!objectTypes.has(objectType))
     errors.objectType = copy.errors.objectTypeRequired;

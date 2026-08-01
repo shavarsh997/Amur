@@ -1,7 +1,5 @@
 import type { Locale } from "@/types";
 
-export type ConfiguredLocale = Locale;
-
 export type NavigationKey =
   "home" | "services" | "about" | "contacts" | "privacy";
 
@@ -20,37 +18,41 @@ export type ServiceIcon =
   | "panels-top-left"
   | "ruler";
 
-export interface CompanyConfig {
-  companyName: string;
-  shortCompanyName: string;
-  tagline: string;
-  description: string;
-  country: string;
-  city: string;
-}
-
-export interface ContactConfigData {
-  phone: string;
-  phoneHref: string;
-  email: string;
-  address: string;
-  hours: string;
-  telegramUrl: string;
-  whatsappUrl: string;
-  socials: readonly {
-    label: string;
-    url: string;
-  }[];
-}
-
-export interface SiteConfiguration extends CompanyConfig {
-  domain: string;
-  defaultLocale: ConfiguredLocale;
-  locales: readonly ConfiguredLocale[];
-  contacts: ContactConfigData;
-  legal: {
-    legalEntityName: string;
-    registrationNumber: string;
-    taxNumber: string;
+export interface CompanyConfiguration {
+  brand: {
+    name: string;
+    alternateName: string;
+    legalName: string | null;
+    logo: string;
   };
+  website: {
+    origin: string;
+    defaultLocale: Locale;
+    supportedLocales: readonly Locale[];
+  };
+  contact: {
+    phone: string | null;
+    displayPhone: string | null;
+    whatsapp: string | null;
+    email: string | null;
+    address: string | null;
+    city: string;
+    countryCode: string;
+    workingHours: string | null;
+  };
+  social: {
+    instagram: string | null;
+    facebook: string | null;
+    youtube: string | null;
+  };
+  business: {
+    registrationNumber: string | null;
+    foundedYear: number | null;
+    warrantyText: string | null;
+    serviceArea: readonly string[];
+  };
+  privacy: { updatedAt: string | null };
 }
+
+/** Kept as aliases for components that consume contact data. */
+export type ContactConfigData = CompanyConfiguration["contact"];

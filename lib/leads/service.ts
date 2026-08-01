@@ -17,9 +17,22 @@ export async function submitLead(lead: LeadInput): Promise<void> {
       ...lead,
       phone: lead.phone.replace(/\d(?=\d{2})/g, "•"),
     });
+    return;
   }
 
-  // TODO: Add a Telegram delivery adapter.
-  // TODO: Add a PostgreSQL persistence adapter.
-  await Promise.resolve();
+  const webhookUrl = process.env.LEAD_WEBHOOK_URL;
+  if (!webhookUrl) {
+    throw new Error("Lead delivery is not configured.");
+  }
+
+  const response = await fetch(webhookUrl, {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify(lead),
+    cache: "no-store",
+  });
+
+  if (!response.ok) {
+    throw new Error(`Lead delivery failed with ${response.status}.`);
+  }
 }

@@ -2,25 +2,28 @@ import Link from "next/link";
 
 import { ContactTrigger } from "@/components/forms/contact-dialog";
 import { navigationConfig } from "@/config/navigation.config";
-import { siteConfig } from "@/config/site.config";
+import { companyConfig } from "@/config/company.config";
+import {
+  getMailHref,
+  getPhoneHref,
+  getSocialLinks,
+  getWhatsAppHref,
+} from "@/lib/company";
 import { getActiveServices } from "@/config/services.config";
 import { BrandMark } from "@/components/ui/brand-mark";
 import { Container } from "@/components/ui/container";
 import type { Dictionary, Locale } from "@/types";
-import type { SiteConfiguration } from "@/types/config";
 
 type FooterProps = {
   locale: Locale;
   dictionary: Dictionary;
-  config?: SiteConfiguration;
 };
 
-export function Footer({
-  locale,
-  dictionary,
-  config = siteConfig,
-}: FooterProps) {
+export function Footer({ locale, dictionary }: FooterProps) {
   const prefix = `/${locale}`;
+  const phoneHref = getPhoneHref();
+  const whatsappHref = getWhatsAppHref();
+  const mailHref = getMailHref();
   const navigation = navigationConfig.map((item) => ({
     href: item.path ? `${prefix}/${item.path}` : prefix,
     label: dictionary.nav[item.key],
@@ -36,7 +39,7 @@ export function Footer({
               href={prefix}
             >
               <BrandMark className="h-8 w-auto" />
-              {config.shortCompanyName}
+              {companyConfig.brand.name}
             </Link>
             <p className="mt-5 max-w-xs text-sm leading-6 text-[var(--text-secondary)]">
               {dictionary.footer.description}
@@ -83,17 +86,63 @@ export function Footer({
             <h2 className="font-semibold text-[var(--text-primary)]">
               {dictionary.footer.contacts}
             </h2>
-            <ContactTrigger
-              className="mt-5"
-              label={dictionary.nav.contacts}
-              variant="secondary"
-            />
+            <div className="mt-5 space-y-3 text-sm">
+              {phoneHref && companyConfig.contact.displayPhone ? (
+                <a
+                  className="block rounded-sm font-semibold text-[var(--text-primary)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--button-primary)]"
+                  href={phoneHref}
+                >
+                  {companyConfig.contact.displayPhone}
+                </a>
+              ) : null}
+              {whatsappHref ? (
+                <a
+                  className="block rounded-sm hover:text-[var(--text-primary)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--button-primary)]"
+                  href={whatsappHref}
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  WhatsApp
+                </a>
+              ) : null}
+              {mailHref && companyConfig.contact.email ? (
+                <a
+                  className="block rounded-sm hover:text-[var(--text-primary)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--button-primary)]"
+                  href={mailHref}
+                >
+                  {companyConfig.contact.email}
+                </a>
+              ) : null}
+              {companyConfig.contact.address ? (
+                <p>{companyConfig.contact.address}</p>
+              ) : null}
+              {companyConfig.contact.workingHours ? (
+                <p>{companyConfig.contact.workingHours}</p>
+              ) : null}
+              {getSocialLinks().map(({ name, url }) => (
+                <a
+                  className="block capitalize hover:text-[var(--text-primary)]"
+                  href={url}
+                  key={name}
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  {name}
+                </a>
+              ))}
+              <ContactTrigger
+                className="mt-2"
+                label={dictionary.nav.contacts}
+                variant="secondary"
+              />
+            </div>
           </div>
         </div>
 
         <div className="flex flex-col gap-4 pt-7 text-sm text-[var(--text-muted)] sm:flex-row sm:items-center sm:justify-between">
           <p>
-            © {new Date().getFullYear()} {config.companyName}.{" "}
+            © {new Date().getFullYear()}{" "}
+            {companyConfig.brand.legalName ?? companyConfig.brand.name}.{" "}
             {dictionary.footer.rights}
           </p>
           <Link
