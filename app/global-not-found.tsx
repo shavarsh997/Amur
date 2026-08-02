@@ -9,7 +9,7 @@ export default async function GlobalNotFound() {
 
   return (
     <html lang={defaultLocale}>
-      <body>
+      <body suppressHydrationWarning>
         <main className="grid min-h-screen place-items-center bg-zinc-50 px-5 text-center">
           <div>
             <p className="text-sm font-bold uppercase tracking-[0.2em] text-[var(--brand-accent)]">

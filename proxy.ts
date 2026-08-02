@@ -3,7 +3,7 @@ import { NextResponse, type NextRequest } from "next/server";
 const canonicalHost = "www.shinex.am";
 const knownHosts = new Set(["shinex.am", canonicalHost]);
 
-/** Enforces the canonical HTTPS host and makes the language root a single-hop 308. */
+/** Enforces the canonical HTTPS host and redirects every host's root to Armenian. */
 export function proxy(request: NextRequest) {
   const forwardedHost = request.headers.get("x-forwarded-host");
   const host = (forwardedHost ?? request.headers.get("host") ?? "")
@@ -21,12 +21,20 @@ export function proxy(request: NextRequest) {
   const needsCanonicalHost =
     isKnownHost && (host !== canonicalHost || protocol !== "https");
 
-  if (needsCanonicalHost || (isKnownHost && request.nextUrl.pathname === "/")) {
+  if (needsCanonicalHost) {
     const destination = request.nextUrl.clone();
     destination.protocol = "https:";
     destination.hostname = canonicalHost;
     destination.port = "";
     if (destination.pathname === "/") destination.pathname = "/hy";
+    return NextResponse.redirect(destination, 308);
+  }
+
+  // Preview URLs (for example, ngrok) are not canonical domains, but still need
+  // a locale because all pages live under the `[locale]` route segment.
+  if (request.nextUrl.pathname === "/") {
+    const destination = request.nextUrl.clone();
+    destination.pathname = "/hy";
     return NextResponse.redirect(destination, 308);
   }
 

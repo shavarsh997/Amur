@@ -21,6 +21,8 @@ export const companyConfig = {
     phone: "+37455156615",
     displayPhone: "+374 55 15 66 15",
     whatsapp: "+37455156615",
+    // Add the full public Telegram URL here to display it as a separate contact option.
+    telegram: null,
     email: null,
     address: null,
     city: "Yerevan",

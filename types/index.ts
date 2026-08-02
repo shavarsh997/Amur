@@ -481,6 +481,8 @@ export interface Dictionary {
     whatsapp: string;
     telegram: string;
     mapPlaceholder: string;
+    methodsTitle: string;
+    methodsDescription: string;
     formTitle: string;
     formDescription: string;
   };

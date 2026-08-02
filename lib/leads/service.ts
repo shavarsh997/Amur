@@ -11,28 +11,66 @@ export type LeadInput = {
   comment: string;
 };
 
+type TelegramResponse = {
+  ok: boolean;
+  description?: string;
+};
+
+function getRequiredEnv(
+  name: "TELEGRAM_BOT_TOKEN" | "TELEGRAM_CHAT_ID"
+): string {
+  const value = process.env[name]?.trim();
+
+  if (!value) {
+    throw new Error(`${name} is not configured.`);
+  }
+
+  return value;
+}
+
+function formatLeadMessage(lead: LeadInput): string {
+  const lines = [
+    "Новая заявка с сайта",
+    "",
+    `Имя: ${lead.name}`,
+    `Телефон: ${lead.phone}`,
+    `Тип объекта: ${lead.objectType}`,
+    `Площадь: ${lead.area} м²`,
+    `Регион: ${lead.region}`,
+    `Вид работ: ${lead.workType}`,
+  ];
+
+  if (lead.options.length > 0) {
+    lines.push(`Дополнительно: ${lead.options.join(", ")}`);
+  }
+
+  if (lead.comment) {
+    lines.push("", `Комментарий: ${lead.comment}`);
+  }
+
+  return lines.join("\n");
+}
+
 export async function submitLead(lead: LeadInput): Promise<void> {
-  if (process.env.NODE_ENV === "development") {
-    console.info("[lead] Development submission", {
-      ...lead,
-      phone: lead.phone.replace(/\d(?=\d{2})/g, "•"),
-    });
-    return;
-  }
+  const token = getRequiredEnv("TELEGRAM_BOT_TOKEN");
+  const chatId = getRequiredEnv("TELEGRAM_CHAT_ID");
+  const response = await fetch(
+    `https://api.telegram.org/bot${token}/sendMessage`,
+    {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({
+        chat_id: chatId,
+        text: formatLeadMessage(lead),
+      }),
+      cache: "no-store",
+    }
+  );
+  const result = (await response
+    .json()
+    .catch(() => null)) as TelegramResponse | null;
 
-  const webhookUrl = process.env.LEAD_WEBHOOK_URL;
-  if (!webhookUrl) {
-    throw new Error("Lead delivery is not configured.");
-  }
-
-  const response = await fetch(webhookUrl, {
-    method: "POST",
-    headers: { "content-type": "application/json" },
-    body: JSON.stringify(lead),
-    cache: "no-store",
-  });
-
-  if (!response.ok) {
-    throw new Error(`Lead delivery failed with ${response.status}.`);
+  if (!response.ok || !result?.ok) {
+    throw new Error(result?.description ?? "Telegram delivery failed.");
   }
 }

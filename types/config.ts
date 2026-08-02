@@ -34,6 +34,7 @@ export interface CompanyConfiguration {
     phone: string | null;
     displayPhone: string | null;
     whatsapp: string | null;
+    telegram: string | null;
     email: string | null;
     address: string | null;
     city: string;

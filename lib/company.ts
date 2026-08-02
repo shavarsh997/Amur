@@ -35,6 +35,12 @@ export function getWhatsAppHref(): string | null {
   return phone ? `https://wa.me/${phone}` : null;
 }
 
+export function getTelegramHref(): string | null {
+  return isValidExternalUrl(companyConfig.contact.telegram)
+    ? companyConfig.contact.telegram
+    : null;
+}
+
 export function getMailHref(): string | null {
   return companyConfig.contact.email
     ? `mailto:${companyConfig.contact.email}`

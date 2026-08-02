@@ -96,11 +96,7 @@ export default async function LocaleLayout({
             {children}
           </main>
           <Footer dictionary={dictionary} locale={locale} />
-          <ContactDialog
-            contacts={companyConfig.contact}
-            dictionary={dictionary}
-            locale={locale}
-          />
+          <ContactDialog dictionary={dictionary} locale={locale} />
           <MobileCtaBar contactLabel={dictionary.nav.contacts} />
         </div>
       </body>

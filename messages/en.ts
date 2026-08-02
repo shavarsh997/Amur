@@ -271,8 +271,7 @@ const dictionary = {
       {
         number: "05",
         title: "Delivery and control of the work",
-        description:
-          "We organise and control the work in the agreed sequence.",
+        description: "We organise and control the work in the agreed sequence.",
       },
       {
         number: "06",
@@ -340,7 +339,8 @@ const dictionary = {
     },
     submit: "Send an initial-estimate enquiry",
     submitting: "Sending…",
-    success: "Your enquiry has been sent. We will contact you to clarify the details.",
+    success:
+      "Your enquiry has been sent. We will contact you to clarify the details.",
     error:
       "The enquiry could not be sent. Please try again or contact us directly.",
   },
@@ -824,6 +824,9 @@ const dictionary = {
     telegram: "Telegram",
     mapPlaceholder:
       "Map placeholder — the exact address will appear after contact details are replaced.",
+    methodsTitle: "Choose a convenient way to contact us",
+    methodsDescription:
+      "Call, write in a messenger, or send us a message through the website.",
     formTitle: "Send a message",
     formDescription:
       "We need your contact details and a short description to respond to your enquiry.",

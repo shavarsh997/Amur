@@ -1,18 +1,15 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { Mail, MessageCircle, Phone, X } from "lucide-react";
+import { ArrowLeft, MessageCircle, X } from "lucide-react";
 
-import { LeadForm } from "@/components/forms/lead-form";
 import {
-  getMailHref,
-  getPhoneHref,
-  getSocialLinks,
-  getWhatsAppHref,
-} from "@/lib/company";
+  ContactMethods,
+  contactMessageEvent,
+} from "@/components/forms/contact-methods";
+import { LeadForm } from "@/components/forms/lead-form";
 import { trackEvent } from "@/lib/analytics";
 import type { Dictionary, Locale } from "@/types";
-import type { ContactConfigData } from "@/types/config";
 
 const contactOpenEvent = "open-project-contact";
 
@@ -58,20 +55,15 @@ export function ContactTrigger({
 export function ContactDialog({
   dictionary,
   locale,
-  contacts,
 }: {
   dictionary: Dictionary;
   locale: Locale;
-  contacts: ContactConfigData;
 }) {
   const [isOpen, setIsOpen] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
+  const [view, setView] = useState<"methods" | "form">("methods");
   const dialogRef = useRef<HTMLDivElement>(null);
   const copy = dictionary.contacts;
-  const phoneHref = getPhoneHref();
-  const mailHref = getMailHref();
-  const whatsappHref = getWhatsAppHref();
-  const socialLinks = getSocialLinks();
 
   const closeDialog = () => {
     const isMobile = window.matchMedia("(max-width: 639px)").matches;
@@ -90,11 +82,21 @@ export function ContactDialog({
   useEffect(() => {
     const openContact = () => {
       setIsClosing(false);
+      setView("methods");
+      setIsOpen(true);
+    };
+    const openMessage = () => {
+      setIsClosing(false);
+      setView("form");
       setIsOpen(true);
     };
     window.addEventListener(contactOpenEvent, openContact);
+    window.addEventListener(contactMessageEvent, openMessage);
 
-    return () => window.removeEventListener(contactOpenEvent, openContact);
+    return () => {
+      window.removeEventListener(contactOpenEvent, openContact);
+      window.removeEventListener(contactMessageEvent, openMessage);
+    };
   }, []);
 
   useEffect(() => {
@@ -154,96 +156,44 @@ export function ContactDialog({
               className="mt-1 text-lg font-semibold tracking-[-0.03em] text-[var(--text-primary)]"
               id="contact-dialog-title"
             >
-              {copy.formTitle}
+              {view === "methods" ? copy.methodsTitle : copy.formTitle}
             </h2>
           </div>
-          <button
-            aria-label={dictionary.nav.closeMenu}
-            className="grid size-10 place-items-center rounded-xl border border-[var(--border)] text-[var(--text-primary)] transition hover:bg-[var(--surface-muted)]"
-            onClick={closeDialog}
-            type="button"
-          >
-            <X aria-hidden="true" className="size-5" />
-          </button>
+          <div className="flex items-center gap-2">
+            {view === "form" ? (
+              <button
+                className="inline-flex h-10 items-center gap-1.5 rounded-xl px-3 text-sm font-semibold text-[var(--text-primary)] transition hover:bg-[var(--surface-muted)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--button-primary)]"
+                onClick={() => setView("methods")}
+                type="button"
+              >
+                <ArrowLeft aria-hidden="true" className="size-4" />
+                {dictionary.common.back}
+              </button>
+            ) : null}
+            <button
+              aria-label={dictionary.nav.closeMenu}
+              className="grid size-10 place-items-center rounded-xl border border-[var(--border)] text-[var(--text-primary)] transition hover:bg-[var(--surface-muted)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--button-primary)]"
+              onClick={closeDialog}
+              type="button"
+            >
+              <X aria-hidden="true" className="size-5" />
+            </button>
+          </div>
         </div>
         <div className="overflow-y-auto p-5 sm:p-7">
-          {phoneHref || mailHref || whatsappHref || socialLinks.length ? (
-            <div className="grid gap-3 sm:grid-cols-2">
-              {phoneHref && contacts.displayPhone ? (
-                <a
-                  className="group flex items-center gap-3 rounded-2xl border border-[var(--border)] bg-white p-4 text-left shadow-[0_14px_30px_-26px_rgb(24_24_27/0.55)] transition hover:-translate-y-0.5 hover:border-[var(--border-strong)] hover:shadow-[0_18px_36px_-26px_rgb(24_24_27/0.45)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--button-primary)]"
-                  href={phoneHref}
-                >
-                  <span className="grid size-10 shrink-0 place-items-center rounded-xl bg-[var(--background-warm)] text-[var(--text-primary)]">
-                    <Phone aria-hidden="true" className="size-4" />
-                  </span>
-                  <span>
-                    <span className="block text-xs font-semibold uppercase tracking-[0.1em] text-[var(--text-muted)]">
-                      {copy.phone}
-                    </span>
-                    <span className="mt-1 block text-sm font-semibold text-[var(--text-primary)]">
-                      {contacts.displayPhone}
-                    </span>
-                  </span>
-                </a>
-              ) : null}
-              {mailHref && contacts.email ? (
-                <a
-                  className="group flex items-center gap-3 rounded-2xl border border-[var(--border)] bg-white p-4 text-left shadow-[0_14px_30px_-26px_rgb(24_24_27/0.55)] transition hover:-translate-y-0.5 hover:border-[var(--border-strong)] hover:shadow-[0_18px_36px_-26px_rgb(24_24_27/0.45)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--button-primary)]"
-                  href={mailHref}
-                >
-                  <span className="grid size-10 shrink-0 place-items-center rounded-xl bg-[var(--background-warm)] text-[var(--text-primary)]">
-                    <Mail aria-hidden="true" className="size-4" />
-                  </span>
-                  <span>
-                    <span className="block text-xs font-semibold uppercase tracking-[0.1em] text-[var(--text-muted)]">
-                      {copy.email}
-                    </span>
-                    <span className="mt-1 block text-sm font-semibold text-[var(--text-primary)]">
-                      {contacts.email}
-                    </span>
-                  </span>
-                </a>
-              ) : null}
-              {whatsappHref ? (
-                <a
-                  className="group flex items-center gap-3 rounded-2xl border border-[var(--border)] bg-white p-4 text-left shadow-[0_14px_30px_-26px_rgb(24_24_27/0.55)] transition hover:-translate-y-0.5 hover:border-[var(--border-strong)] hover:shadow-[0_18px_36px_-26px_rgb(24_24_27/0.45)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--button-primary)]"
-                  href={whatsappHref}
-                  rel="noreferrer"
-                  target="_blank"
-                >
-                  <span className="grid size-10 shrink-0 place-items-center rounded-xl bg-[var(--background-warm)] text-[var(--text-primary)]">
-                    <MessageCircle aria-hidden="true" className="size-4" />
-                  </span>
-                  <span className="text-sm font-semibold text-[var(--text-primary)]">
-                    {copy.whatsapp}
-                  </span>
-                </a>
-              ) : null}
-              {socialLinks.map((social) => (
-                <a
-                  className="group flex items-center gap-3 rounded-2xl border border-[var(--border)] bg-white p-4 text-left shadow-[0_14px_30px_-26px_rgb(24_24_27/0.55)] transition hover:-translate-y-0.5 hover:border-[var(--border-strong)] hover:shadow-[0_18px_36px_-26px_rgb(24_24_27/0.45)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--button-primary)]"
-                  href={social.url}
-                  key={social.name}
-                  rel="noreferrer"
-                  target="_blank"
-                >
-                  <span className="grid size-10 shrink-0 place-items-center rounded-xl bg-[var(--background-warm)] text-[var(--text-primary)]">
-                    <MessageCircle aria-hidden="true" className="size-4" />
-                  </span>
-                  <span>
-                    <span className="block text-xs font-semibold uppercase tracking-[0.1em] text-[var(--text-muted)]">
-                      {social.name}
-                    </span>
-                    <span className="mt-1 block text-sm font-semibold text-[var(--text-primary)]">
-                      {social.name}
-                    </span>
-                  </span>
-                </a>
-              ))}
-            </div>
-          ) : null}
-          <LeadForm className="mt-6" dictionary={dictionary} locale={locale} />
+          {view === "methods" ? (
+            <>
+              <p className="mb-5 leading-7 text-[var(--text-secondary)]">
+                {copy.methodsDescription}
+              </p>
+              <ContactMethods
+                dictionary={dictionary}
+                onMessageClick={() => setView("form")}
+              />
+            </>
+          ) : (
+            <LeadForm dictionary={dictionary} locale={locale} />
+          )}
         </div>
       </div>
     </div>

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-import { LeadForm } from "@/components/forms/lead-form";
+import { ContactMethods } from "@/components/forms/contact-methods";
 import { Container } from "@/components/ui/container";
 import { PageHero } from "@/components/ui/page-hero";
 import { companyConfig } from "@/config/company.config";
@@ -133,12 +133,12 @@ export default async function ContactsPage({ params }: Props) {
         </section>
         <section className="rounded-2xl border border-[var(--border)] bg-white p-6 sm:p-9">
           <h2 className="text-3xl font-semibold tracking-[-0.04em] text-[var(--text-primary)]">
-            {copy.formTitle}
+            {copy.methodsTitle}
           </h2>
           <p className="mt-4 leading-7 text-[var(--text-secondary)]">
-            {copy.formDescription}
+            {copy.methodsDescription}
           </p>
-          <LeadForm className="mt-8" dictionary={dictionary} locale={locale} />
+          <ContactMethods dictionary={dictionary} />
         </section>
       </Container>
     </>
