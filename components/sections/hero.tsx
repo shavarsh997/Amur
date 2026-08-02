@@ -42,7 +42,7 @@ export function Hero({
                   </li>
                 ))}
               </ul>
-              <div className="mt-6 flex flex-col gap-2.5 sm:mt-7 sm:flex-row sm:gap-3">
+              <div className="mt-6 flex flex-col gap-2.5 sm:mt-7 sm:gap-3">
                 <ContactTrigger
                   className="w-full sm:w-auto"
                   label={dictionary.hero.primaryAction}

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { ArrowLeft, MessageCircle, X } from "lucide-react";
+import { ArrowLeft, CheckCircle2, MessageCircle, X } from "lucide-react";
 
 import {
   ContactMethods,
@@ -44,7 +44,7 @@ export function ContactTrigger({
       type="button"
     >
       {variant === "primary" ? (
-        <MessageCircle aria-hidden="true" className="mr-2 size-4" />
+        <MessageCircle aria-hidden="true" className="mr-2 h-5 w-5" />
       ) : null}
       {label}
     </button>
@@ -61,7 +61,7 @@ export function ContactDialog({
 }) {
   const [isOpen, setIsOpen] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
-  const [view, setView] = useState<"methods" | "form">("methods");
+  const [view, setView] = useState<"methods" | "form" | "success">("methods");
   const dialogRef = useRef<HTMLDivElement>(null);
   const copy = dictionary.contacts;
 
@@ -116,6 +116,17 @@ export function ContactDialog({
       window.removeEventListener("keydown", closeOnEscape);
     };
   }, [isOpen]);
+
+  useEffect(() => {
+    if (!isOpen || view !== "success") return;
+
+    const timeout = window.setTimeout(() => {
+      setView("methods");
+      setIsOpen(false);
+    }, 2200);
+
+    return () => window.clearTimeout(timeout);
+  }, [isOpen, view]);
 
   if (!isOpen) return null;
 
@@ -191,8 +202,28 @@ export function ContactDialog({
                 onMessageClick={() => setView("form")}
               />
             </>
+          ) : view === "form" ? (
+            <LeadForm
+              dictionary={dictionary}
+              locale={locale}
+              onSuccess={() => setView("success")}
+            />
           ) : (
-            <LeadForm dictionary={dictionary} locale={locale} />
+            <div
+              aria-live="polite"
+              className="flex min-h-56 flex-col items-center justify-center px-4 text-center"
+              role="status"
+            >
+              <span className="grid size-14 place-items-center rounded-full bg-emerald-50 text-emerald-700">
+                <CheckCircle2 aria-hidden="true" className="size-7" />
+              </span>
+              <p className="mt-5 text-lg font-semibold text-[var(--text-primary)]">
+                {dictionary.estimate.success}
+              </p>
+              <p className="mt-2 text-sm text-[var(--text-secondary)]">
+                {copy.closeAfterSending}
+              </p>
+            </div>
           )}
         </div>
       </div>

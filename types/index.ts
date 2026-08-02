@@ -485,6 +485,7 @@ export interface Dictionary {
     methodsDescription: string;
     formTitle: string;
     formDescription: string;
+    closeAfterSending: string;
   };
   privacy: {
     title: string;

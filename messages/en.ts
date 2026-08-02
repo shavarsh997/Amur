@@ -830,6 +830,7 @@ const dictionary = {
     formTitle: "Send a message",
     formDescription:
       "We need your contact details and a short description to respond to your enquiry.",
+    closeAfterSending: "This window will close automatically.",
   },
   privacy: {
     title: "Privacy policy",
