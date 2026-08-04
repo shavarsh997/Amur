@@ -23,7 +23,7 @@ export const companyConfig = {
     whatsapp: "+37455156615",
     // Add the full public Telegram URL here to display it as a separate contact option.
     telegram: null,
-    email: null,
+    email: "info@shinex.am",
     address: null,
     city: "Yerevan",
     countryCode: "AM",
