@@ -15,7 +15,7 @@ export function ServicesSection({
   dictionary: Dictionary;
 }) {
   return (
-    <section className="bg-white py-12 sm:py-16 lg:py-20">
+    <section className="bg-[var(--brand-background)] py-12 sm:py-16 lg:py-20">
       <Container>
         <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           <SectionHeading

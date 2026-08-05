@@ -1,7 +1,6 @@
 import Link from "next/link";
 
 import { navigationConfig } from "@/config/navigation.config";
-import { companyConfig } from "@/config/company.config";
 import { getActiveServices } from "@/config/services.config";
 import { LanguageSwitcher } from "@/components/layout/language-switcher";
 import { MobileNav, type NavigationItem } from "@/components/layout/mobile-nav";
@@ -31,25 +30,30 @@ export function Header({ locale, dictionary }: HeaderProps) {
     label: dictionary.nav.consultation,
   };
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-[var(--border)] bg-white/90 px-5 text-[var(--text-primary)] backdrop-blur-md sm:border-b-0 sm:bg-transparent sm:pt-3">
-      <Container className="relative flex min-h-15 items-center justify-between gap-4 !px-0 sm:min-h-[68px] sm:rounded-[22px] sm:border sm:border-[var(--border)] sm:bg-white/75 sm:!px-8 sm:shadow-[0_16px_36px_-28px_rgb(24_24_27/0.48)] lg:!px-10">
+    <header className="sticky top-0 z-50 w-full border-b border-[var(--border)] bg-[var(--brand-background)] px-4 text-[var(--text-primary)] sm:px-8">
+      <Container className="relative flex min-h-16 items-center justify-between gap-3 !px-0 sm:min-h-[72px] lg:!px-2">
         <Link
-          className="inline-flex shrink-0 items-center gap-2.5 rounded-sm text-sm font-bold tracking-[0.04em] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--button-primary)] sm:text-[15px]"
+          aria-label="SHINEX"
+          className="inline-flex shrink-0 rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--brand-copper)]"
           href={prefix}
         >
-          <BrandMark className="h-7 w-auto sm:h-8" preload />
-          {companyConfig.brand.name}
+          <BrandMark
+            className="size-9 sm:hidden"
+            preload
+            variant="symbol"
+          />
+          <BrandMark className="hidden h-9 w-auto sm:block" preload />
         </Link>
 
         <nav
           aria-label={dictionary.footer.navigation}
           className="hidden xl:block"
         >
-          <ul className="flex items-center gap-5 xl:gap-6">
+          <ul className="flex items-center gap-4 xl:gap-5">
             {navigation.map((item) => (
               <li key={item.href}>
                 <Link
-                  className={`rounded-sm text-sm font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--button-primary)] ${"hover:text-[var(--text-secondary)]"}`}
+                  className={`rounded-sm text-sm font-medium whitespace-nowrap transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--brand-copper)] ${"hover:text-[var(--brand-copper)]"}`}
                   href={item.href}
                 >
                   {item.label}

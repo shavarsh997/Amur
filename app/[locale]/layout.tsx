@@ -38,8 +38,8 @@ export const metadata: Metadata = {
   applicationName: companyConfig.brand.name,
   manifest: "/manifest.webmanifest",
   icons: {
-    icon: [{ url: "/favicon.ico", sizes: "any" }],
-    apple: [{ url: "/apple-icon.png", sizes: "195x180", type: "image/png" }],
+    icon: [{ url: "/icon.png", sizes: "512x512", type: "image/png" }],
+    apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
   },
   category: seoConfig.category,
   robots: seoConfig.robots,

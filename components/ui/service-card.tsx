@@ -1,30 +1,10 @@
-import {
-  ArrowRight,
-  Blocks,
-  Building2,
-  House,
-  PaintRoller,
-  PanelsTopLeft,
-  PenTool,
-  Ruler,
-  type LucideIcon,
-} from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
 import { ContactTrigger } from "@/components/forms/contact-dialog";
 import type { Locale } from "@/types";
 import type { ServiceConfig, ServiceContent } from "@/types/service";
-
-const serviceIcons: Record<string, LucideIcon> = {
-  blocks: Blocks,
-  "building-2": Building2,
-  house: House,
-  "paint-roller": PaintRoller,
-  "pen-tool": PenTool,
-  "panels-top-left": PanelsTopLeft,
-  ruler: Ruler,
-};
 
 type ServiceCardProps = {
   service: ServiceConfig;
@@ -43,12 +23,11 @@ export function ServiceCard({
   contactLabel,
   href = `/${locale}/services/${service.slug}`,
 }: ServiceCardProps) {
-  const Icon = serviceIcons[service.icon] ?? Blocks;
   const ctaLabel = content.primaryCta ?? learnMore;
 
   return (
-    <article className="group grid grid-cols-[1fr_7.75rem] overflow-hidden rounded-2xl border border-[var(--border)] bg-white transition-shadow hover:shadow-[0_18px_38px_-30px_rgb(24_24_27/0.28)] sm:grid-cols-[1fr_0.9fr]">
-      <div className="order-2 relative min-h-full overflow-hidden bg-[var(--background-warm)] sm:order-none sm:min-h-52">
+    <article className="group grid h-full overflow-hidden rounded-xl border border-[var(--border)] bg-white transition-colors hover:border-[var(--border-strong)] sm:grid-cols-[0.95fr_1.05fr]">
+      <div className="relative min-h-56 overflow-hidden bg-[var(--background-warm)] sm:min-h-[310px]">
         <Image
           alt={content.title}
           className="object-cover transition duration-500 group-hover:scale-105"
@@ -57,24 +36,24 @@ export function ServiceCard({
           src={service.image}
         />
       </div>
-      <div className="order-1 flex flex-col items-start p-4 sm:order-none sm:p-6">
-        <span className="grid size-8 place-items-center rounded-lg bg-[var(--background-warm)] text-[var(--text-primary)] sm:size-9 sm:rounded-xl">
-          <Icon aria-hidden="true" className="size-[18px] stroke-[1.4]" />
+      <div className="flex min-h-56 flex-col items-start p-5 sm:min-h-[310px] sm:p-7">
+        <span className="text-sm font-bold tracking-[0.14em] text-[var(--brand-copper)]">
+          {String(service.order).padStart(2, "0")}
         </span>
-        <h3 className="mt-3 text-[15px] font-semibold leading-5 tracking-[-0.03em] text-[var(--text-primary)] sm:mt-5 sm:text-lg">
+        <h3 className="mt-5 text-xl font-semibold leading-[1.15] tracking-[-0.035em] text-[var(--text-primary)] sm:text-2xl">
           {content.title}
         </h3>
-        <p className="mt-1.5 flex-1 text-xs leading-5 text-[var(--text-secondary)] sm:mt-2 sm:text-sm sm:leading-6">
+        <p className="mt-3 line-clamp-4 flex-1 text-sm leading-6 text-[var(--text-secondary)] sm:text-[15px]">
           {content.shortDescription}
         </p>
         {service.ctaKind === "calculator" || service.ctaKind === "contact" ? (
           <ContactTrigger
-            className="mt-3 min-h-9 rounded-lg px-3 text-xs sm:mt-5 sm:min-h-10 sm:text-sm"
+            className="mt-5 min-h-10 px-4 text-sm"
             label={content.primaryCta ?? contactLabel}
           />
         ) : (
           <Link
-            className="mt-3 inline-flex items-center gap-2 rounded-sm text-xs font-semibold text-[var(--text-primary)] transition-colors hover:text-[var(--text-secondary)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--button-primary)] sm:mt-5 sm:text-sm"
+            className="mt-5 inline-flex items-center gap-2 rounded-sm text-sm font-semibold text-[var(--text-primary)] transition-colors hover:text-[var(--brand-copper)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--brand-copper)]"
             href={href}
           >
             {ctaLabel}

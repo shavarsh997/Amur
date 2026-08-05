@@ -7,10 +7,10 @@ import { SITE_URL } from "@/lib/site-url";
  */
 export const companyConfig = {
   brand: {
-    name: "Shinex",
-    alternateName: "Shinex Armenia",
+    name: "SHINEX",
+    alternateName: "SHINEX Armenia",
     legalName: null,
-    logo: "/brand/shinex-mark.png",
+    logo: "/brand/shinex-logo.png",
   },
   website: {
     origin: SITE_URL,

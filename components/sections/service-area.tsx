@@ -1,4 +1,4 @@
-import { Building2, Map, MapPin, Store } from "lucide-react";
+import { Building2, Map, Store } from "lucide-react";
 
 import { ButtonLink } from "@/components/ui/button-link";
 import { homeContent } from "@/config/home-content.config";
@@ -17,15 +17,15 @@ export function ServiceArea({ locale }: { locale: Locale }) {
   if (!content.enabled) return null;
 
   return (
-    <section className="bg-white py-12 sm:py-14 lg:py-16">
+    <section className="bg-white py-12 sm:py-16 lg:py-20">
       <Container>
-        <div className="grid gap-7 rounded-[24px] bg-[var(--background-warm)] p-5 sm:rounded-[28px] sm:p-7 lg:grid-cols-[1.1fr_0.9fr] lg:gap-10 lg:p-8">
+        <div className="grid gap-8 rounded-2xl bg-[var(--background-warm)] p-6 sm:p-9 lg:grid-cols-[1.1fr_0.9fr] lg:gap-14 lg:p-10">
           <div className="min-w-0">
-            <p className="inline-flex items-center gap-2 rounded-full bg-white/70 px-3 py-1.5 text-xs font-semibold text-[var(--text-secondary)]">
-              <MapPin aria-hidden="true" className="size-3.5 stroke-[1.6]" />
+            <p className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.13em] text-[var(--text-secondary)]">
+              <span aria-hidden="true" className="h-px w-8 bg-[var(--brand-copper)]" />
               {content.label}
             </p>
-            <h2 className="mt-4 max-w-xl text-balance text-3xl font-semibold leading-[1.08] tracking-[-0.04em] text-[var(--text-primary)] sm:text-4xl">
+            <h2 className="mt-5 max-w-xl text-balance text-3xl font-semibold leading-[1.14] tracking-[-0.04em] text-[var(--text-primary)] sm:text-4xl">
               {content.title}
             </h2>
             <p className="mt-4 max-w-xl text-[15px] leading-6 text-[var(--text-secondary)] sm:text-base sm:leading-7">
@@ -45,7 +45,7 @@ export function ServiceArea({ locale }: { locale: Locale }) {
               ) : null}
             </div>
           </div>
-          <ul className="grid gap-2.5 min-[769px]:grid-cols-3 lg:grid-cols-1">
+          <ul className="border-y border-[var(--border)]">
             {content.items
               .filter((item) => item.enabled)
               .map((item) => {
@@ -53,10 +53,10 @@ export function ServiceArea({ locale }: { locale: Locale }) {
 
                 return (
                   <li
-                    className="flex gap-3 rounded-2xl border border-[var(--border)] bg-white/85 p-4 sm:p-[18px]"
+                    className="flex gap-3 border-b border-[var(--border)] py-5 last:border-b-0"
                     key={item.id}
                   >
-                    <span className="grid size-9 shrink-0 place-items-center rounded-xl bg-[var(--surface-muted)] text-[var(--text-primary)]">
+                    <span className="grid size-9 shrink-0 place-items-center text-[var(--brand-copper)]">
                       <Icon
                         aria-hidden="true"
                         className="size-4.5 stroke-[1.45]"

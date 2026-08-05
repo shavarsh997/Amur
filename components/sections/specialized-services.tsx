@@ -38,21 +38,21 @@ export function SpecializedServices({
                 const Icon = specializedIcons[service.icon] ?? Ruler;
                 return (
                   <Link
-                    className="group rounded-2xl border border-[var(--border)] bg-[var(--background-soft)] p-4 transition hover:bg-white"
+                    className="group rounded-xl border border-[var(--border)] bg-[var(--background-soft)] p-5 transition-colors hover:border-[var(--border-strong)] hover:bg-white"
                     href={`/${locale}/services/${service.slug}`}
                     key={service.slug}
                   >
                     <Icon
                       aria-hidden="true"
-                      className="size-5 stroke-[1.4] text-[var(--text-primary)]"
+                      className="size-5 stroke-[1.4] text-[var(--brand-copper)]"
                     />
-                    <h3 className="mt-5 font-semibold text-[var(--text-primary)]">
+                    <h3 className="mt-7 font-semibold text-[var(--text-primary)]">
                       {content.title}
                     </h3>
-                    <p className="mt-2 text-sm leading-6 text-[var(--text-secondary)]">
+                    <p className="mt-2 line-clamp-3 text-sm leading-6 text-[var(--text-secondary)]">
                       {content.shortDescription}
                     </p>
-                    <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--text-primary)]">
+                    <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--text-primary)] transition-colors group-hover:text-[var(--brand-copper)]">
                       {dictionary.services.learnMore}
                       <ArrowRight
                         aria-hidden="true"

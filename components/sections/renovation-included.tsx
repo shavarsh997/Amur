@@ -14,21 +14,21 @@ export function RenovationIncluded({ locale }: { locale: Locale }) {
         <div className="grid gap-8 lg:grid-cols-[0.7fr_1.3fr] lg:gap-14">
           <SectionHeading eyebrow={content.eyebrow} title={content.title} />
           <div>
-            <ul className="grid gap-2 sm:grid-cols-2 sm:gap-3">
+            <ul className="grid border-t border-[var(--border)] sm:grid-cols-2">
               {content.items.map((item) => (
                 <li
-                  className="flex items-center gap-3 rounded-xl border border-[var(--border)] bg-white px-4 py-3 text-sm font-medium text-[var(--text-primary)]"
+                  className="flex items-center gap-3 border-b border-[var(--border)] py-4 pr-4 text-sm font-medium text-[var(--text-primary)] sm:px-4 sm:odd:border-r"
                   key={item}
                 >
                   <Check
                     aria-hidden="true"
-                    className="size-4 shrink-0 stroke-[1.7]"
+                    className="size-4 shrink-0 stroke-[1.7] text-[var(--brand-copper)]"
                   />
                   {item}
                 </li>
               ))}
             </ul>
-            <p className="mt-5 text-sm leading-6 text-[var(--text-secondary)]">
+            <p className="mt-5 max-w-2xl text-sm leading-6 text-[var(--text-secondary)]">
               {content.notice}
             </p>
           </div>

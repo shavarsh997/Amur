@@ -24,7 +24,7 @@ const icons: LucideIcon[] = [
 
 export function WhyUs({ dictionary }: { dictionary: Dictionary }) {
   return (
-    <section className="bg-[var(--background-warm)] py-12 sm:py-16 lg:py-20">
+    <section className="bg-[var(--brand-surface-warm)] py-12 sm:py-16 lg:py-20">
       <Container>
         <SectionHeading
           align="left"
@@ -32,7 +32,7 @@ export function WhyUs({ dictionary }: { dictionary: Dictionary }) {
           eyebrow={dictionary.whyUs.eyebrow}
           title={dictionary.whyUs.title}
         />
-        <div className="mt-7 grid gap-2 sm:mt-8 sm:grid-cols-2 sm:gap-3 lg:grid-cols-3">
+        <div className="mt-8 grid border-t border-[var(--border)] sm:grid-cols-2 lg:grid-cols-3">
           {operationsConfig.benefits.map((benefitKey, index) => {
             const item = dictionary.whyUs.items[index];
             if (!item) return null;
@@ -40,14 +40,14 @@ export function WhyUs({ dictionary }: { dictionary: Dictionary }) {
 
             return (
               <article
-                className="flex gap-3 rounded-2xl border border-white bg-white/70 p-4 sm:block sm:p-6"
+                className="flex gap-3 border-b border-[var(--border)] py-5 sm:block sm:p-6 lg:[&:nth-child(3n+2)]:border-x lg:[&:nth-child(3n+2)]:px-7"
                 key={benefitKey}
               >
-                <span className="grid size-9 shrink-0 place-items-center rounded-xl bg-white text-[var(--text-primary)] shadow-sm sm:size-10">
+                <span className="grid size-9 shrink-0 place-items-center text-[var(--brand-copper)] sm:size-10">
                   <Icon aria-hidden="true" className="size-5 stroke-[1.35]" />
                 </span>
                 <div>
-                  <h3 className="text-[15px] font-semibold tracking-[-0.02em] text-[var(--text-primary)] sm:mt-4 sm:text-lg">
+                  <h3 className="text-[15px] font-semibold tracking-[-0.02em] text-[var(--text-primary)] sm:mt-3 sm:text-lg">
                     {item.title}
                   </h3>
                   <p className="mt-1 text-xs leading-5 text-[var(--text-secondary)] sm:mt-2 sm:text-sm sm:leading-6">

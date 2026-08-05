@@ -84,7 +84,7 @@ export const serviceTranslations = {
       ],
       primaryCta: "Посмотреть этапы строительства",
       secondaryCta: "Обсудить строительство дома",
-      seoTitle: "Строительство частных домов в Армении — Shinex",
+      seoTitle: "Строительство частных домов в Армении — SHINEX",
       seoDescription:
         "Строительство частных домов в Ереване и регионах Армении: предварительная оценка, этапы работ и согласование решений.",
       workflow: [
@@ -135,7 +135,7 @@ export const serviceTranslations = {
       ],
       primaryCta: "View construction stages",
       secondaryCta: "Discuss a home build",
-      seoTitle: "Private house construction in Armenia — Shinex",
+      seoTitle: "Private house construction in Armenia — SHINEX",
       seoDescription:
         "Private house construction in Yerevan and across Armenia: initial assessment, work stages, and coordinated decisions.",
       workflow: [
@@ -188,7 +188,7 @@ export const serviceTranslations = {
       ],
       primaryCta: "Դիտել կառուցման փուլերը",
       secondaryCta: "Քննարկել տան կառուցումը",
-      seoTitle: "Առանձնատների կառուցում Հայաստանում — Shinex",
+      seoTitle: "Առանձնատների կառուցում Հայաստանում — SHINEX",
       seoDescription:
         "Առանձնատների կառուցում Երևանում և Հայաստանի մարզերում՝ նախնական գնահատում, աշխատանքի փուլեր և լուծումների համաձայնեցում։",
       workflow: [
@@ -203,9 +203,9 @@ export const serviceTranslations = {
     }),
   },
   interiorDesign: {
-    ru: serviceContent({ title: "Дизайн интерьера", shortDescription: "Разрабатываем практичный и целостный интерьер: планировочные решения, концепция, подбор материалов, чертежи и документы для реализации.", fullDescription: "Дизайн-проект помогает начать ремонт с понятными решениями. Планировка организует пространство, концепция определяет стиль и материалы, а рабочие чертежи нужны для реализации. Визуализации, подбор мебели и авторское сопровождение включаются только в согласованный пакет.", includedWorks: ["Планировка с расстановкой мебели и зонированием", "Концепция интерьера и подбор материалов", "3D-визуализация — в согласованном пакете", "Рабочие чертежи и материалы для реализации"], suitableFor: ["Квартир и частных домов перед ремонтом", "Коммерческих пространств, которым нужен функциональный интерьер"], workTypes: ["Планировочное решение", "Концепция интерьера", "Дизайн-проект", "Авторское сопровождение — по согласованию"], estimateRequirements: ["Тип и площадь помещения", "План или существующие обмеры", "Краткое описание задачи и удобный способ связи"], primaryCta: "Посмотреть услугу дизайна", secondaryCta: "Обсудить мой проект", seoTitle: "Дизайн интерьера в Армении — Shinex", seoDescription: "Дизайн интерьера квартир, частных домов и коммерческих пространств в Армении: планировка, концепция, материалы и рабочие чертежи.", workflow: ["Предварительная консультация", "Разработка планировки", "Концепция и материалы", "Подготовка согласованных чертежей"] }),
-    en: serviceContent({ title: "Interior design", shortDescription: "We develop practical, complete interiors with layout solutions, a design concept, material selection, drawings, and documents for delivery.", fullDescription: "A design project helps you start renovation with clear decisions. The layout organises the space, the concept defines the style and materials, and working drawings support delivery. Visualisations, furniture selection, and design supervision are included only in the agreed package.", includedWorks: ["Layout with furniture placement and zoning", "Interior concept and material selection", "3D visualisation in the agreed package", "Working drawings and delivery materials"], suitableFor: ["Apartments and private homes before renovation", "Commercial spaces that need a functional interior"], workTypes: ["Layout solution", "Interior concept", "Design project", "Design supervision by agreement"], estimateRequirements: ["Property type and area", "Floor plan or existing measurements", "A short brief and preferred contact method"], primaryCta: "View the design service", secondaryCta: "Discuss my project", seoTitle: "Interior design in Armenia — Shinex", seoDescription: "Interior design for apartments, private homes, and commercial spaces in Armenia: layouts, concepts, materials, and working drawings.", workflow: ["Initial consultation", "Layout development", "Concept and material selection", "Preparation of agreed drawings"] }),
-    hy: serviceContent({ title: "Ինտերիերի դիզայն", shortDescription: "Մշակում ենք գործնական և ամբողջական ինտերիեր՝ հատակագծային լուծումներով, ոճային կոնցեպտով, նյութերի ընտրությամբ, գծագրերով և իրականացման համար անհրաժեշտ փաստաթղթերով։", fullDescription: "Դիզայն-նախագիծը օգնում է սկսել վերանորոգումը հստակ լուծումներով։ Հատակագծային լուծումը կազմակերպում է տարածքը, ինտերիերի կոնցեպտը սահմանում է ոճն ու նյութերը, իսկ աշխատանքային գծագրերը անհրաժեշտ են իրականացման համար։ 3D վիզուալիզացիան, կահույքի ընտրությունը և հեղինակային ուղեկցումը ներառվում են միայն համաձայնեցված փաթեթում։", includedWorks: ["Հատակագծային լուծում՝ կահույքի և գոտիների տեղադրմամբ", "Ինտերիերի կոնցեպտ և նյութերի ընտրություն", "3D վիզուալիզացիա՝ համաձայնեցված փաթեթի դեպքում", "Աշխատանքային գծագրեր և իրականացման նյութեր"], suitableFor: ["Բնակարանների և առանձնատների համար՝ վերանորոգումից առաջ", "Առևտրային տարածքների համար, որոնց անհրաժեշտ է գործառնական ինտերիեր"], workTypes: ["Հատակագծային լուծում", "Ինտերիերի կոնցեպտ", "Դիզայն-նախագիծ", "Հեղինակային ուղեկցում՝ համաձայնեցված դեպքում"], estimateRequirements: ["Տարածքի տեսակ և մակերես", "Հատակի պլան կամ առկա չափագրումներ", "Խնդրի կարճ նկարագրություն և կապի հարմար եղանակ"], faq: [{ question: "Ի՞նչ է ներառում դիզայն-նախագիծը", answer: "Դիզայն-նախագիծը կարող է ներառել հատակագծային լուծում, ինտերիերի կոնցեպտ, նյութերի ընտրություն, 3D վիզուալիզացիա և աշխատանքային գծագրեր։ Կազմը հաստատում ենք նախքան աշխատանքների մեկնարկը։" }], primaryCta: "Դիտել դիզայնի ծառայությունը", secondaryCta: "Քննարկել իմ նախագիծը", seoTitle: "Ինտերիերի դիզայն Հայաստանում — Shinex", seoDescription: "Բնակարանների, առանձնատների և առևտրային տարածքների ինտերիերի դիզայն Հայաստանում՝ հատակագիծ, կոնցեպտ, նյութեր և աշխատանքային գծագրեր։", workflow: [{ title: "Նախնական խորհրդատվություն և տվյալների հավաքագրում", description: "Ճշտում ենք տարածքի գործառույթը, Ձեր նախընտրությունները և առկա տվյալները։" }, { title: "Հատակագծային լուծման մշակում", description: "Առաջարկում ենք կահույքի, գոտիների և անցումների հարմար դասավորություն։" }, { title: "Ինտերիերի կոնցեպտ և նյութերի ընտրություն", description: "Համաձայնեցնում ենք ոճը, գույները, նյութերն ու հիմնական կահույքի լուծումները։" }, { title: "Աշխատանքային գծագրերի պատրաստում", description: "Պատրաստում ենք համաձայնեցված փաթեթի փաստաթղթերը՝ վերանորոգումը սկսելու համար։" }] }),
+    ru: serviceContent({ title: "Дизайн интерьера", shortDescription: "Разрабатываем практичный и целостный интерьер: планировочные решения, концепция, подбор материалов, чертежи и документы для реализации.", fullDescription: "Дизайн-проект помогает начать ремонт с понятными решениями. Планировка организует пространство, концепция определяет стиль и материалы, а рабочие чертежи нужны для реализации. Визуализации, подбор мебели и авторское сопровождение включаются только в согласованный пакет.", includedWorks: ["Планировка с расстановкой мебели и зонированием", "Концепция интерьера и подбор материалов", "3D-визуализация — в согласованном пакете", "Рабочие чертежи и материалы для реализации"], suitableFor: ["Квартир и частных домов перед ремонтом", "Коммерческих пространств, которым нужен функциональный интерьер"], workTypes: ["Планировочное решение", "Концепция интерьера", "Дизайн-проект", "Авторское сопровождение — по согласованию"], estimateRequirements: ["Тип и площадь помещения", "План или существующие обмеры", "Краткое описание задачи и удобный способ связи"], primaryCta: "Посмотреть услугу дизайна", secondaryCta: "Обсудить мой проект", seoTitle: "Дизайн интерьера в Армении — SHINEX", seoDescription: "Дизайн интерьера квартир, частных домов и коммерческих пространств в Армении: планировка, концепция, материалы и рабочие чертежи.", workflow: ["Предварительная консультация", "Разработка планировки", "Концепция и материалы", "Подготовка согласованных чертежей"] }),
+    en: serviceContent({ title: "Interior design", shortDescription: "We develop practical, complete interiors with layout solutions, a design concept, material selection, drawings, and documents for delivery.", fullDescription: "A design project helps you start renovation with clear decisions. The layout organises the space, the concept defines the style and materials, and working drawings support delivery. Visualisations, furniture selection, and design supervision are included only in the agreed package.", includedWorks: ["Layout with furniture placement and zoning", "Interior concept and material selection", "3D visualisation in the agreed package", "Working drawings and delivery materials"], suitableFor: ["Apartments and private homes before renovation", "Commercial spaces that need a functional interior"], workTypes: ["Layout solution", "Interior concept", "Design project", "Design supervision by agreement"], estimateRequirements: ["Property type and area", "Floor plan or existing measurements", "A short brief and preferred contact method"], primaryCta: "View the design service", secondaryCta: "Discuss my project", seoTitle: "Interior design in Armenia — SHINEX", seoDescription: "Interior design for apartments, private homes, and commercial spaces in Armenia: layouts, concepts, materials, and working drawings.", workflow: ["Initial consultation", "Layout development", "Concept and material selection", "Preparation of agreed drawings"] }),
+    hy: serviceContent({ title: "Ինտերիերի դիզայն", shortDescription: "Մշակում ենք գործնական և ամբողջական ինտերիեր՝ հատակագծային լուծումներով, ոճային կոնցեպտով, նյութերի ընտրությամբ, գծագրերով և իրականացման համար անհրաժեշտ փաստաթղթերով։", fullDescription: "Դիզայն-նախագիծը օգնում է սկսել վերանորոգումը հստակ լուծումներով։ Հատակագծային լուծումը կազմակերպում է տարածքը, ինտերիերի կոնցեպտը սահմանում է ոճն ու նյութերը, իսկ աշխատանքային գծագրերը անհրաժեշտ են իրականացման համար։ 3D վիզուալիզացիան, կահույքի ընտրությունը և հեղինակային ուղեկցումը ներառվում են միայն համաձայնեցված փաթեթում։", includedWorks: ["Հատակագծային լուծում՝ կահույքի և գոտիների տեղադրմամբ", "Ինտերիերի կոնցեպտ և նյութերի ընտրություն", "3D վիզուալիզացիա՝ համաձայնեցված փաթեթի դեպքում", "Աշխատանքային գծագրեր և իրականացման նյութեր"], suitableFor: ["Բնակարանների և առանձնատների համար՝ վերանորոգումից առաջ", "Առևտրային տարածքների համար, որոնց անհրաժեշտ է գործառնական ինտերիեր"], workTypes: ["Հատակագծային լուծում", "Ինտերիերի կոնցեպտ", "Դիզայն-նախագիծ", "Հեղինակային ուղեկցում՝ համաձայնեցված դեպքում"], estimateRequirements: ["Տարածքի տեսակ և մակերես", "Հատակի պլան կամ առկա չափագրումներ", "Խնդրի կարճ նկարագրություն և կապի հարմար եղանակ"], faq: [{ question: "Ի՞նչ է ներառում դիզայն-նախագիծը", answer: "Դիզայն-նախագիծը կարող է ներառել հատակագծային լուծում, ինտերիերի կոնցեպտ, նյութերի ընտրություն, 3D վիզուալիզացիա և աշխատանքային գծագրեր։ Կազմը հաստատում ենք նախքան աշխատանքների մեկնարկը։" }], primaryCta: "Դիտել դիզայնի ծառայությունը", secondaryCta: "Քննարկել իմ նախագիծը", seoTitle: "Ինտերիերի դիզայն Հայաստանում — SHINEX", seoDescription: "Բնակարանների, առանձնատների և առևտրային տարածքների ինտերիերի դիզայն Հայաստանում՝ հատակագիծ, կոնցեպտ, նյութեր և աշխատանքային գծագրեր։", workflow: [{ title: "Նախնական խորհրդատվություն և տվյալների հավաքագրում", description: "Ճշտում ենք տարածքի գործառույթը, Ձեր նախընտրությունները և առկա տվյալները։" }, { title: "Հատակագծային լուծման մշակում", description: "Առաջարկում ենք կահույքի, գոտիների և անցումների հարմար դասավորություն։" }, { title: "Ինտերիերի կոնցեպտ և նյութերի ընտրություն", description: "Համաձայնեցնում ենք ոճը, գույները, նյութերն ու հիմնական կահույքի լուծումները։" }, { title: "Աշխատանքային գծագրերի պատրաստում", description: "Պատրաստում ենք համաձայնեցված փաթեթի փաստաթղթերը՝ վերանորոգումը սկսելու համար։" }] }),
   },
   commercialConstruction: {
     ru: serviceContent({
@@ -224,7 +224,7 @@ export const serviceTranslations = {
       ],
       primaryCta: "Обсудить коммерческий объект",
       secondaryCta: "Отправить данные проекта",
-      seoTitle: "Ремонт коммерческих помещений в Армении — Shinex",
+      seoTitle: "Ремонт коммерческих помещений в Армении — SHINEX",
       seoDescription:
         "Работы для офисов, магазинов и сервисных пространств в Армении.",
       workflow: [
@@ -248,7 +248,7 @@ export const serviceTranslations = {
       suitableFor: ["Offices, retail, service, and other commercial spaces"],
       primaryCta: "Discuss a commercial project",
       secondaryCta: "Send project details",
-      seoTitle: "Commercial space renovation in Armenia — Shinex",
+      seoTitle: "Commercial space renovation in Armenia — SHINEX",
       seoDescription:
         "Work for offices, retail, and service spaces in Armenia.",
       workflow: [
@@ -274,7 +274,7 @@ export const serviceTranslations = {
       ],
       primaryCta: "Քննարկել առևտրային օբյեկտը",
       secondaryCta: "Ուղարկել նախագծի տվյալները",
-      seoTitle: "Առևտրային տարածքների վերանորոգում Հայաստանում — Shinex",
+      seoTitle: "Առևտրային տարածքների վերանորոգում Հայաստանում — SHINEX",
       seoDescription:
         "Աշխատանքներ գրասենյակների, խանութների և սպասարկման տարածքների համար Հայաստանում։",
       workflow: [
@@ -408,7 +408,7 @@ export const serviceTranslations = {
       ],
       primaryCta: "Посмотреть варианты ремонта",
       secondaryCta: "Получить предварительный расчёт",
-      seoTitle: "Ремонт квартир и домов под ключ в Армении — Shinex",
+      seoTitle: "Ремонт квартир и домов под ключ в Армении — SHINEX",
       seoDescription:
         "Ремонт квартир и частных домов под ключ в Ереване и регионах Армении: осмотр, предварительная оценка и согласование этапов.",
       workflow: [
@@ -477,7 +477,7 @@ export const serviceTranslations = {
       ],
       primaryCta: "View renovation options",
       secondaryCta: "Get an initial estimate",
-      seoTitle: "Turnkey apartment and house renovation in Armenia — Shinex",
+      seoTitle: "Turnkey apartment and house renovation in Armenia — SHINEX",
       seoDescription:
         "Turnkey apartment and private house renovation in Yerevan and across Armenia: survey, initial assessment, and agreed stages.",
       workflow: [
@@ -547,7 +547,7 @@ export const serviceTranslations = {
       primaryCta: "Դիտել վերանորոգման տարբերակները",
       secondaryCta: "Ստանալ նախնական հաշվարկ",
       seoTitle:
-        "Բնակարանների և տների վերանորոգում բանալիով Հայաստանում — Shinex",
+        "Բնակարանների և տների վերանորոգում բանալիով Հայաստանում — SHINEX",
       seoDescription:
         "Բնակարանների և առանձնատների բանալիով վերանորոգում Երևանում և Հայաստանի մարզերում՝ զննում, նախնական գնահատում և փուլերի համաձայնեցում։",
       workflow: [

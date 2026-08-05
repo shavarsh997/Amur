@@ -53,7 +53,7 @@ export default async function ContactsPage({ params }: Props) {
       <Container className="grid gap-8 py-12 sm:py-16 lg:grid-cols-[0.8fr_1.2fr] lg:py-20">
         <section className="rounded-2xl border border-[var(--border)] bg-[var(--background-soft)] p-6 sm:p-8">
           <h2 className="text-2xl font-semibold tracking-[-0.04em] text-[var(--text-primary)]">
-            Shinex
+            {companyConfig.brand.name}
           </h2>
           <p className="mt-3 leading-7 text-[var(--text-secondary)]">
             {companyConfig.business.serviceArea.join(" · ")}

@@ -18,15 +18,21 @@ export function SectionHeading({
   const alignment =
     align === "center" ? "mx-auto items-center text-center" : "items-start";
   const titleColor = inverted ? "text-white" : "text-[var(--text-primary)]";
-  const bodyColor = inverted ? "text-zinc-300" : "text-[var(--text-secondary)]";
+  const bodyColor = inverted
+    ? "text-white/70"
+    : "text-[var(--text-secondary)]";
 
   return (
     <div className={`flex max-w-3xl flex-col gap-4 ${alignment} ${className}`}>
-      <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[var(--text-muted)]">
+      <p
+        className={`text-xs font-semibold uppercase tracking-[0.16em] ${
+          inverted ? "text-[var(--brand-copper)]" : "text-[var(--brand-copper)]"
+        }`}
+      >
         {eyebrow}
       </p>
       <h2
-        className={`text-pretty text-3xl font-semibold tracking-[-0.04em] sm:text-4xl lg:text-5xl ${titleColor}`}
+        className={`text-pretty text-3xl font-semibold leading-[1.14] tracking-[-0.04em] sm:text-4xl lg:text-5xl ${titleColor}`}
       >
         {title}
       </h2>

@@ -30,31 +30,31 @@ export function Footer({ locale, dictionary }: FooterProps) {
   }));
 
   return (
-    <footer className="mt-auto border-t border-[var(--border)] bg-white py-12 text-[var(--text-secondary)] sm:py-14">
+    <footer className="mt-auto bg-[var(--brand-navy)] py-12 text-white/70 sm:py-14">
       <Container>
-        <div className="grid gap-10 border-b border-[var(--border)] pb-12 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-10 border-b border-white/15 pb-12 sm:grid-cols-2 lg:grid-cols-4">
           <div>
             <Link
-              className="inline-flex items-center gap-2.5 rounded-sm text-[15px] font-bold tracking-[0.04em] text-[var(--text-primary)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--button-primary)]"
+              aria-label="SHINEX"
+              className="inline-flex rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--brand-copper)]"
               href={prefix}
             >
-              <BrandMark className="h-8 w-auto" />
-              {companyConfig.brand.name}
+              <BrandMark alt="SHINEX" className="size-11" variant="symbol" />
             </Link>
-            <p className="mt-5 max-w-xs text-sm leading-6 text-[var(--text-secondary)]">
+            <p className="mt-5 max-w-xs text-sm leading-6 text-white/70">
               {dictionary.footer.description}
             </p>
           </div>
 
           <div>
-            <h2 className="font-semibold text-[var(--text-primary)]">
+            <h2 className="font-semibold text-white">
               {dictionary.footer.navigation}
             </h2>
             <ul className="mt-5 space-y-3 text-sm">
               {navigation.map((item) => (
                 <li key={item.href}>
                   <Link
-                    className="rounded-sm transition-colors hover:text-[var(--text-primary)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--button-primary)]"
+                    className="rounded-sm transition-colors hover:text-[var(--brand-copper)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--brand-copper)]"
                     href={item.href}
                   >
                     {item.label}
@@ -65,14 +65,14 @@ export function Footer({ locale, dictionary }: FooterProps) {
           </div>
 
           <div>
-            <h2 className="font-semibold text-[var(--text-primary)]">
+            <h2 className="font-semibold text-white">
               {dictionary.footer.services}
             </h2>
             <ul className="mt-5 space-y-3 text-sm">
               {getActiveServices(locale).map(({ content, slug }) => (
                 <li key={slug}>
                   <Link
-                    className="rounded-sm transition-colors hover:text-[var(--text-primary)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--button-primary)]"
+                    className="rounded-sm transition-colors hover:text-[var(--brand-copper)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--brand-copper)]"
                     href={`${prefix}/services/${slug}`}
                   >
                     {content.title}
@@ -83,13 +83,13 @@ export function Footer({ locale, dictionary }: FooterProps) {
           </div>
 
           <div>
-            <h2 className="font-semibold text-[var(--text-primary)]">
+            <h2 className="font-semibold text-white">
               {dictionary.footer.contacts}
             </h2>
             <div className="mt-5 space-y-3 text-sm">
               {phoneHref && companyConfig.contact.displayPhone ? (
                 <a
-                  className="block rounded-sm font-semibold text-[var(--text-primary)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--button-primary)]"
+                  className="block rounded-sm font-semibold text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--brand-copper)]"
                   href={phoneHref}
                 >
                   {companyConfig.contact.displayPhone}
@@ -97,7 +97,7 @@ export function Footer({ locale, dictionary }: FooterProps) {
               ) : null}
               {whatsappHref ? (
                 <a
-                  className="block rounded-sm hover:text-[var(--text-primary)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--button-primary)]"
+                  className="block rounded-sm hover:text-[var(--brand-copper)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--brand-copper)]"
                   href={whatsappHref}
                   rel="noreferrer"
                   target="_blank"
@@ -107,7 +107,7 @@ export function Footer({ locale, dictionary }: FooterProps) {
               ) : null}
               {mailHref && companyConfig.contact.email ? (
                 <a
-                  className="block rounded-sm hover:text-[var(--text-primary)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--button-primary)]"
+                  className="block rounded-sm hover:text-[var(--brand-copper)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--brand-copper)]"
                   href={mailHref}
                 >
                   {companyConfig.contact.email}
@@ -121,7 +121,7 @@ export function Footer({ locale, dictionary }: FooterProps) {
               ) : null}
               {getSocialLinks().map(({ name, url }) => (
                 <a
-                  className="block capitalize hover:text-[var(--text-primary)]"
+                  className="block capitalize hover:text-[var(--brand-copper)]"
                   href={url}
                   key={name}
                   rel="noreferrer"
@@ -139,14 +139,14 @@ export function Footer({ locale, dictionary }: FooterProps) {
           </div>
         </div>
 
-        <div className="flex flex-col gap-4 pt-7 text-sm text-[var(--text-muted)] sm:flex-row sm:items-center sm:justify-between">
+        <div className="flex flex-col gap-4 pt-7 text-sm text-white/55 sm:flex-row sm:items-center sm:justify-between">
           <p>
             © {new Date().getFullYear()}{" "}
             {companyConfig.brand.legalName ?? companyConfig.brand.name}.{" "}
             {dictionary.footer.rights}
           </p>
           <Link
-            className="rounded-sm hover:text-[var(--text-primary)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--button-primary)]"
+            className="rounded-sm hover:text-[var(--brand-copper)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--brand-copper)]"
             href={`${prefix}/privacy`}
           >
             {dictionary.footer.privacy}

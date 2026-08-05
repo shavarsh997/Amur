@@ -1,29 +1,38 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --background-soft: #fcfaf8;
-  --background-warm: #f3ebe4;
-  --surface: #ffffff;
-  --surface-muted: #f9f6f3;
-  --text-primary: #18212a;
-  --text-secondary: #62686e;
-  --text-muted: #8c8985;
-  --border: #e9e2db;
-  --border-strong: #dacbbc;
-  --button-primary: #18212a;
-  --button-primary-hover: #2b3640;
+  --brand-navy: #102a43;
+  --brand-navy-hover: #163b5c;
+  --brand-copper: #c96f45;
+  --brand-background: #faf8f4;
+  --brand-surface-warm: #f3e9e2;
+  --brand-surface: #ffffff;
+  --brand-text: #102a43;
+  --brand-text-secondary: #52606d;
+  --brand-border: #dde2e6;
+  --background: var(--brand-background);
+  --background-soft: var(--brand-background);
+  --background-warm: var(--brand-surface-warm);
+  --surface: var(--brand-surface);
+  --surface-muted: #f7f5f1;
+  --text-primary: var(--brand-text);
+  --text-secondary: var(--brand-text-secondary);
+  --text-muted: #657687;
+  --border: var(--brand-border);
+  --border-strong: #b9c5cf;
+  --button-primary: var(--brand-navy);
+  --button-primary-hover: var(--brand-navy-hover);
   --button-text: #ffffff;
-  --warm-accent: #ead8ca;
-  --brand-accent: #9f7f6a;
+  --warm-accent: var(--brand-surface-warm);
+  --brand-accent: var(--brand-copper);
   --success: #2f7d4a;
   --error: #b42318;
   --foreground: var(--text-primary);
   --surface: #ffffff;
   --muted: var(--surface-muted);
-  --radius-card: 1.25rem;
-  --radius-control: 0.875rem;
-  --shadow-card: 0 20px 45px -32px rgb(24 33 42 / 0.2);
+  --radius-card: 0.75rem;
+  --radius-control: 0.5rem;
+  --shadow-card: 0 12px 30px -26px rgb(16 42 67 / 0.22);
   --container-width: 80rem;
   --container-gutter: clamp(1rem, 3vw, 2rem);
 }
@@ -50,6 +59,11 @@ body {
   color: var(--foreground);
   font-family: var(--font-manrope), var(--font-armenian), system-ui, sans-serif;
   text-rendering: optimizeLegibility;
+}
+
+:focus-visible {
+  outline: 2px solid var(--brand-copper);
+  outline-offset: 3px;
 }
 
 ::selection {

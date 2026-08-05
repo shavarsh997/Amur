@@ -4,7 +4,7 @@ import type { Dictionary } from "@/types";
 const dictionary = {
   localeName: "English",
   metadata: {
-    title: "Apartment and house renovation in Armenia — Shinex",
+    title: "Apartment and house renovation in Armenia — SHINEX",
     description:
       "Apartment and private house renovation, interior design, house construction, and commercial-space work in Yerevan and across Armenia.",
   },
@@ -60,10 +60,10 @@ const dictionary = {
     },
   },
   projects: {
-    eyebrow: "Selected work",
-    title: "Projects across different Armenian settings",
+    eyebrow: "SHINEX portfolio",
+    title: "Completed projects",
     description:
-      "These demonstration projects present our areas of work without making unverified claims about prices, timelines, or materials.",
+      "We publish only verified case studies and work details. The portfolio is expanded as materials are approved with clients.",
     viewAll: "View all projects",
     pageTitle: "Projects",
     pageDescription:
@@ -201,8 +201,8 @@ const dictionary = {
     ],
   },
   whyUs: {
-    eyebrow: "Why Shinex",
-    title: "Why trust Shinex with your project",
+    eyebrow: "Why SHINEX",
+    title: "Why trust SHINEX with your project",
     description:
       "We discuss the work terms and changes in advance so every stage remains clear.",
     items: [
@@ -752,10 +752,10 @@ const dictionary = {
     privacy: "Privacy policy",
   },
   about: {
-    eyebrow: "About Shinex",
+    eyebrow: "About SHINEX",
     title: "A clear way to organize renovation and construction",
     intro:
-      "Shinex develops renovation and construction services in Armenia with an emphasis on clear organization, initial assessment, agreed stages, and convenient communication with clients.",
+      "SHINEX develops renovation and construction services in Armenia with an emphasis on clear organization, initial assessment, agreed stages, and convenient communication with clients.",
     storyTitle: "How the work is organized",
     story: [
       "We begin by understanding the task, the space, and the expected result rather than starting with a pre-made promise.",
