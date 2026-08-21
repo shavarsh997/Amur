@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
-import { Manrope, Noto_Sans_Armenian } from "next/font/google";
 import { notFound } from "next/navigation";
 
 import { Footer } from "@/components/layout/footer";
@@ -18,16 +17,6 @@ import {
 } from "@/lib/json-ld";
 
 import "../globals.css";
-
-const manrope = Manrope({
-  variable: "--font-manrope",
-  subsets: ["cyrillic", "latin"],
-});
-
-const notoArmenian = Noto_Sans_Armenian({
-  variable: "--font-armenian",
-  subsets: ["armenian"],
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL(getSiteOrigin()),
@@ -68,7 +57,7 @@ export default async function LocaleLayout({
   const htmlLang = locale === "hy" ? "hy-AM" : locale === "ru" ? "ru-AM" : "en";
   return (
     <html
-      className={`${manrope.variable} ${notoArmenian.variable} h-full antialiased`}
+      className="h-full antialiased"
       lang={htmlLang}
     >
       <body suppressHydrationWarning className="flex min-h-full flex-col">

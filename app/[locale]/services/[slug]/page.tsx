@@ -34,7 +34,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!isLocale(locale)) notFound();
   const service = getServiceBySlug(locale, slug);
   const landing = getSeoLandingPage(locale, slug);
-  if (!service && (!landing || landing.kind !== "service")) notFound();
 
   if (landing?.kind === "service") {
     return buildMetadata({
@@ -46,6 +45,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       imageAlt: landing.content.title,
     });
   }
+
+  if (!service) notFound();
 
   return buildMetadata({
     locale,
@@ -70,7 +71,7 @@ export default async function ServiceDetailPage({ params }: Props) {
   const copy = dictionary.services.detail;
   const primaryCta = service.content.primaryCta ?? copy.requestEstimate;
   const relatedSeoPages = seoLandingPages.filter((page) =>
-    page.relatedServiceSlugs.includes(service.slug)
+    (page.relatedServiceSlugs as readonly string[]).includes(service.slug)
   );
   const serviceJsonLd = getServiceJsonLd({
     locale,

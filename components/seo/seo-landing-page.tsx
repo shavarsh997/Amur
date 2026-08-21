@@ -29,7 +29,7 @@ export function SeoLandingPage({
   const { content } = page;
   const href = `/${locale}/${getSeoLandingPath(page)}`;
   const relatedServices = getActiveServices(locale).filter((service) =>
-    page.relatedServiceSlugs.includes(service.slug)
+    (page.relatedServiceSlugs as readonly string[]).includes(service.slug)
   );
   const breadcrumbs = [
     { label: dictionary.common.home, href: `/${locale}` },
