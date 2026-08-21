@@ -1,29 +1,51 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { FinalCta } from "@/components/sections/final-cta";
+import { SeoLandingPage } from "@/components/seo/seo-landing-page";
 import { ContactTrigger } from "@/components/forms/contact-dialog";
 import { Container } from "@/components/ui/container";
 import { PageHero } from "@/components/ui/page-hero";
-import { companyConfig } from "@/config/company.config";
 import { getActiveServices, getServiceBySlug } from "@/config/services.config";
+import {
+  getSeoLandingPage,
+  getSeoLandingPath,
+  seoLandingPages,
+} from "@/config/seo-landing-pages.config";
 import { getDictionary, isLocale } from "@/lib/i18n";
 import { buildMetadata } from "@/lib/metadata";
-import { getAbsoluteUrl } from "@/lib/company";
-import { getBreadcrumbJsonLd, serializeJsonLd } from "@/lib/json-ld";
+import { getBreadcrumbJsonLd, getServiceJsonLd, serializeJsonLd } from "@/lib/json-ld";
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
 
 export function generateStaticParams() {
-  return getActiveServices("hy").map(({ slug }) => ({ slug }));
+  return [
+    ...getActiveServices("hy").map(({ slug }) => ({ slug })),
+    ...seoLandingPages
+      .filter((page) => page.kind === "service")
+      .map(({ slug }) => ({ slug })),
+  ];
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, slug } = await params;
   if (!isLocale(locale)) notFound();
   const service = getServiceBySlug(locale, slug);
-  if (!service) notFound();
+  const landing = getSeoLandingPage(locale, slug);
+  if (!service && (!landing || landing.kind !== "service")) notFound();
+
+  if (landing?.kind === "service") {
+    return buildMetadata({
+      locale,
+      path: getSeoLandingPath(landing),
+      title: landing.content.seoTitle,
+      description: landing.content.seoDescription,
+      image: landing.image,
+      imageAlt: landing.content.title,
+    });
+  }
 
   return buildMetadata({
     locale,
@@ -40,24 +62,22 @@ export default async function ServiceDetailPage({ params }: Props) {
   if (!isLocale(locale)) notFound();
   const dictionary = await getDictionary(locale);
   const service = getServiceBySlug(locale, slug);
+  const landing = getSeoLandingPage(locale, slug);
+  if (landing?.kind === "service") {
+    return <SeoLandingPage dictionary={dictionary} locale={locale} page={landing} />;
+  }
   if (!service) notFound();
   const copy = dictionary.services.detail;
   const primaryCta = service.content.primaryCta ?? copy.requestEstimate;
-  const serviceJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Service",
+  const relatedSeoPages = seoLandingPages.filter((page) =>
+    page.relatedServiceSlugs.includes(service.slug)
+  );
+  const serviceJsonLd = getServiceJsonLd({
+    locale,
     name: service.content.title,
     description: service.content.seoDescription,
-    serviceType: service.content.title,
-    url: getAbsoluteUrl(`/${locale}/services/${service.slug}`),
-    areaServed: companyConfig.business.serviceArea.map((name) => ({
-      "@type": "Place",
-      name,
-    })),
-    provider: {
-      "@id": getAbsoluteUrl("/#organization"),
-    },
-  };
+    pathname: `services/${service.slug}`,
+  });
 
   return (
     <>
@@ -212,6 +232,33 @@ export default async function ServiceDetailPage({ params }: Props) {
                   </section>
                 ) : null}
               </div>
+            ) : null}
+            {relatedSeoPages.length ? (
+              <section>
+                <h2 className="text-2xl font-semibold tracking-[-0.03em] text-[var(--text-primary)]">
+                  {locale === "ru"
+                    ? "Полезные материалы и расчёт"
+                    : locale === "en"
+                      ? "Planning and pricing"
+                      : "Պլանավորում և հաշվարկ"}
+                </h2>
+                <div className="mt-5 grid gap-3 md:grid-cols-2">
+                  {relatedSeoPages.map((page) => (
+                    <Link
+                      className="rounded-2xl border border-[var(--border)] bg-[var(--background-soft)] p-5 transition hover:border-[var(--brand-copper)]"
+                      href={`/${locale}/${getSeoLandingPath(page)}`}
+                      key={page.slug}
+                    >
+                      <h3 className="font-semibold text-[var(--text-primary)]">
+                        {page.translations[locale].title}
+                      </h3>
+                      <p className="mt-2 text-sm leading-6 text-[var(--text-secondary)]">
+                        {page.translations[locale].description}
+                      </p>
+                    </Link>
+                  ))}
+                </div>
+              </section>
             ) : null}
             <div className="rounded-[24px] bg-[var(--background-warm)] p-7 sm:p-10">
               <h2 className="text-2xl font-semibold tracking-[-0.03em] text-[var(--text-primary)]">

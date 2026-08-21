@@ -5,6 +5,7 @@ import {
   getPhoneHref,
   getSocialLinks,
 } from "@/lib/company";
+import type { Locale } from "@/types";
 
 export type JsonLd = Record<string, unknown>;
 
@@ -40,7 +41,7 @@ export function getOrganizationJsonLd(): JsonLd {
       : undefined,
     telephone: phone,
     email,
-    address: companyConfig.contact.address
+    address: companyConfig.contact.address || companyConfig.contact.city
       ? {
           "@type": "PostalAddress",
           streetAddress: companyConfig.contact.address,
@@ -57,7 +58,7 @@ export function getOrganizationJsonLd(): JsonLd {
   );
 }
 
-export function getWebsiteJsonLd(): JsonLd {
+export function getWebsiteJsonLd(locale: "hy" | "ru" | "en"): JsonLd {
   return {
     "@context": "https://schema.org",
     "@type": "WebSite",
@@ -65,7 +66,7 @@ export function getWebsiteJsonLd(): JsonLd {
     name: companyConfig.brand.name,
     alternateName: companyConfig.brand.alternateName,
     url: getAbsoluteUrl("/"),
-    inLanguage: "hy-AM",
+    inLanguage: locale === "hy" ? "hy-AM" : locale === "ru" ? "ru-AM" : "en",
     publisher: { "@id": getAbsoluteUrl("/#organization") },
   };
 }
@@ -82,5 +83,31 @@ export function getBreadcrumbJsonLd(
       name: item.label,
       ...(item.href ? { item: getAbsoluteUrl(item.href) } : {}),
     })),
+  };
+}
+
+export function getServiceJsonLd({
+  locale,
+  name,
+  description,
+  pathname,
+}: {
+  locale: Locale;
+  name: string;
+  description: string;
+  pathname: string;
+}): JsonLd {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name,
+    description,
+    serviceType: name,
+    url: getAbsoluteUrl(`/${locale}/${pathname.replace(/^\//, "")}`),
+    areaServed: companyConfig.business.serviceArea.map((name) => ({
+      "@type": "Place",
+      name,
+    })),
+    provider: { "@id": getAbsoluteUrl("/#organization") },
   };
 }

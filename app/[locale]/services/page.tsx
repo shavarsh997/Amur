@@ -7,6 +7,7 @@ import { Container } from "@/components/ui/container";
 import { PageHero } from "@/components/ui/page-hero";
 import { getActiveServices } from "@/config/services.config";
 import { getDictionary, isLocale } from "@/lib/i18n";
+import { getBreadcrumbJsonLd, serializeJsonLd } from "@/lib/json-ld";
 import { buildMetadata } from "@/lib/metadata";
 
 type Props = { params: Promise<{ locale: string }> };
@@ -32,6 +33,17 @@ export default async function ServicesPage({ params }: Props) {
 
   return (
     <>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: serializeJsonLd(
+            getBreadcrumbJsonLd([
+              { label: common.home, href: `/${locale}` },
+              { label: services.pageTitle },
+            ])
+          ),
+        }}
+        type="application/ld+json"
+      />
       <PageHero
         breadcrumbsLabel={common.breadcrumbs}
         breadcrumbs={[

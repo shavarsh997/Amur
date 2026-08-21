@@ -13,6 +13,7 @@ import {
 } from "@/lib/company";
 import { getDictionary, isLocale } from "@/lib/i18n";
 import { buildMetadata } from "@/lib/metadata";
+import { getBreadcrumbJsonLd, serializeJsonLd } from "@/lib/json-ld";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -40,6 +41,17 @@ export default async function ContactsPage({ params }: Props) {
 
   return (
     <>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: serializeJsonLd(
+            getBreadcrumbJsonLd([
+              { label: dictionary.common.home, href: `/${locale}` },
+              { label: copy.title },
+            ])
+          ),
+        }}
+        type="application/ld+json"
+      />
       <PageHero
         breadcrumbsLabel={dictionary.common.breadcrumbs}
         breadcrumbs={[

@@ -81,7 +81,7 @@ export default async function LocaleLayout({
           />
           <script
             dangerouslySetInnerHTML={{
-              __html: serializeJsonLd(getWebsiteJsonLd()),
+              __html: serializeJsonLd(getWebsiteJsonLd(locale)),
             }}
             type="application/ld+json"
           />

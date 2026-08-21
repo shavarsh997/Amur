@@ -31,6 +31,26 @@ const checks = [
     "portfolio stays unpublished",
     read("app/[locale]/projects/page.tsx").includes("notFound()"),
   ],
+  [
+    "tier-one landing pages are data-driven and mapped in the sitemap",
+    read("config/seo-landing-pages.config.ts").includes(
+      'slug: "apartment-renovation-yerevan"'
+    ) &&
+      read("config/seo-landing-pages.config.ts").includes(
+        'slug: "new-build-renovation"'
+      ) &&
+      read("app/sitemap.ts").includes("seoLandingPages"),
+  ],
+  [
+    "calculator has server-rendered SEO content",
+    read("app/[locale]/calculator/page.tsx").includes("calculatorSeo") &&
+      existsSync("config/calculator-seo.config.ts"),
+  ],
+  [
+    "blog sitemap only uses reviewed content",
+    read("data/blog.ts").includes("getPublishedArticles") &&
+      read("app/sitemap.ts").includes("getPublishedArticles"),
+  ],
 ];
 
 const failed = checks.filter(([, passed]) => !passed).map(([name]) => name);
