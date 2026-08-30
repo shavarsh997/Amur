@@ -1,4 +1,5 @@
 import type { Locale } from "@/types";
+import { extraSeoLandingPages } from "@/config/seo-landing-pages-extra.config";
 
 export type SeoLandingPage = {
   slug: string;
@@ -36,7 +37,7 @@ const apartmentImage =
  * Intent-led pages only. Add a page when it has its own useful, reviewed content;
  * this is deliberately not a location-page generator.
  */
-export const seoLandingPages = [
+const coreSeoLandingPages = [
   {
     slug: "apartment-renovation-yerevan",
     kind: "service",
@@ -943,6 +944,15 @@ export const seoLandingPages = [
       },
     },
   },
+] as const satisfies readonly SeoLandingPage[];
+
+/**
+ * Each landing page targets a distinct customer need. Keep variants of the
+ * same intent on one canonical page instead of creating keyword-only copies.
+ */
+export const seoLandingPages = [
+  ...coreSeoLandingPages,
+  ...extraSeoLandingPages,
 ] as const satisfies readonly SeoLandingPage[];
 
 export type SeoLandingSlug = (typeof seoLandingPages)[number]["slug"];

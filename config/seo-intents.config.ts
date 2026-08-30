@@ -89,9 +89,9 @@ export const seoIntentMap = {
   },
   "house-construction": {
     paths: {
-      hy: "services/house-construction",
-      ru: "services/house-construction",
-      en: "services/house-construction",
+      hy: "services/house-construction-yerevan",
+      ru: "services/house-construction-yerevan",
+      en: "services/house-construction-yerevan",
     },
     primary: {
       hy: "առանձնատան կառուցում Երևան",
@@ -113,9 +113,9 @@ export const seoIntentMap = {
   },
   "interior-design": {
     paths: {
-      hy: "services/interior-design",
-      ru: "services/interior-design",
-      en: "services/interior-design",
+      hy: "services/interior-design-yerevan",
+      ru: "services/interior-design-yerevan",
+      en: "services/interior-design-yerevan",
     },
     primary: {
       hy: "ինտերիերի դիզայն Երևան",
@@ -126,6 +126,176 @@ export const seoIntentMap = {
       hy: ["բնակարանի դիզայն", "բնակարանի ինտերիերի դիզայն"],
       ru: ["дизайнер интерьера Ереван", "дизайн проект квартиры Ереван"],
       en: ["apartment interior design Yerevan"],
+    },
+  },
+  "complete-house-construction": {
+    paths: {
+      hy: "services/complete-house-construction-yerevan",
+      ru: "services/complete-house-construction-yerevan",
+      en: "services/complete-house-construction-yerevan",
+    },
+    primary: {
+      hy: "առանձնատան ամբողջական կառուցում Երևանում",
+      ru: "комплексное строительство частного дома в Ереване",
+      en: "complete private house construction in Yerevan",
+    },
+    secondary: {
+      hy: ["ամբողջական տունաշինություն Երևանում"],
+      ru: ["строительство дома одной компанией Ереван"],
+      en: ["complete house build Yerevan"],
+    },
+  },
+  "apartment-interior-design": {
+    paths: {
+      hy: "services/apartment-interior-design-yerevan",
+      ru: "services/apartment-interior-design-yerevan",
+      en: "services/apartment-interior-design-yerevan",
+    },
+    primary: {
+      hy: "բնակարանի ինտերիերի դիզայն Երևանում",
+      ru: "дизайн интерьера квартиры в Ереване",
+      en: "apartment interior design in Yerevan",
+    },
+    secondary: {
+      hy: ["բնակարանի դիզայն Երևան"],
+      ru: ["дизайн квартиры Ереван"],
+      en: ["apartment design Yerevan"],
+    },
+  },
+  "commercial-renovation": {
+    paths: {
+      hy: "services/commercial-renovation-yerevan",
+      ru: "services/commercial-renovation-yerevan",
+      en: "services/commercial-renovation-yerevan",
+    },
+    primary: {
+      hy: "առևտրային տարածքների վերանորոգում Երևանում",
+      ru: "ремонт коммерческих помещений в Ереване",
+      en: "commercial space renovation in Yerevan",
+    },
+    secondary: {
+      hy: ["խանութի վերանորոգում Երևանում", "սրահի վերանորոգում Երևանում"],
+      ru: ["ремонт магазина Ереван", "ремонт салона Ереван"],
+      en: ["shop renovation Yerevan", "salon renovation Yerevan"],
+    },
+  },
+  "office-renovation": {
+    paths: {
+      hy: "services/office-renovation-yerevan",
+      ru: "services/office-renovation-yerevan",
+      en: "services/office-renovation-yerevan",
+    },
+    primary: {
+      hy: "գրասենյակի վերանորոգում Երևանում",
+      ru: "ремонт офиса в Ереване",
+      en: "office renovation in Yerevan",
+    },
+    secondary: {
+      hy: ["գրասենյակի հարդարում Երևանում"],
+      ru: ["отделка офиса Ереван"],
+      en: ["office fit-out Yerevan"],
+    },
+  },
+  "capital-renovation": {
+    paths: {
+      hy: "services/capital-renovation-yerevan",
+      ru: "services/capital-renovation-yerevan",
+      en: "services/capital-renovation-yerevan",
+    },
+    primary: {
+      hy: "կապիտալ վերանորոգում Երևանում",
+      ru: "капитальный ремонт в Ереване",
+      en: "capital renovation in Yerevan",
+    },
+    secondary: {
+      hy: ["բնակարանի կապիտալ վերանորոգում"],
+      ru: ["капитальный ремонт квартиры Ереван"],
+      en: ["capital apartment renovation Yerevan"],
+    },
+  },
+  "cosmetic-renovation": {
+    paths: {
+      hy: "services/cosmetic-renovation-yerevan",
+      ru: "services/cosmetic-renovation-yerevan",
+      en: "services/cosmetic-renovation-yerevan",
+    },
+    primary: {
+      hy: "կոսմետիկ վերանորոգում Երևանում",
+      ru: "косметический ремонт в Ереване",
+      en: "cosmetic renovation in Yerevan",
+    },
+    secondary: {
+      hy: ["բնակարանի կոսմետիկ վերանորոգում"],
+      ru: ["косметический ремонт квартиры Ереван"],
+      en: ["cosmetic apartment renovation Yerevan"],
+    },
+  },
+  "renovation-estimate": {
+    paths: {
+      hy: "renovation-estimate-yerevan",
+      ru: "renovation-estimate-yerevan",
+      en: "renovation-estimate-yerevan",
+    },
+    primary: {
+      hy: "վերանորոգման նախահաշիվ Երևանում",
+      ru: "смета на ремонт в Ереване",
+      en: "renovation estimate in Yerevan",
+    },
+    secondary: {
+      hy: ["վերանորոգման նախահաշվի կազմում"],
+      ru: ["расчёт сметы на ремонт Ереван"],
+      en: ["renovation cost estimate Yerevan"],
+    },
+  },
+  "renovation-price-per-square-meter": {
+    paths: {
+      hy: "renovation-price-per-square-meter-yerevan",
+      ru: "renovation-price-per-square-meter-yerevan",
+      en: "renovation-price-per-square-meter-yerevan",
+    },
+    primary: {
+      hy: "վերանորոգման արժեքը մեկ քմ-ի համար Երևանում",
+      ru: "стоимость ремонта за м² в Ереване",
+      en: "renovation cost per m² in Yerevan",
+    },
+    secondary: {
+      hy: ["վերանորոգման գին քմ Երևան"],
+      ru: ["цена ремонта за квадратный метр Ереван"],
+      en: ["renovation price per square metre Yerevan"],
+    },
+  },
+  "plumbing-work": {
+    paths: {
+      hy: "services/plumbing-work-yerevan",
+      ru: "services/plumbing-work-yerevan",
+      en: "services/plumbing-work-yerevan",
+    },
+    primary: {
+      hy: "սանտեխնիկական աշխատանքներ Երևանում",
+      ru: "сантехнические работы в Ереване",
+      en: "plumbing work in Yerevan",
+    },
+    secondary: {
+      hy: ["սանտեխնիկ Երևան", "սանհանգույցի սանտեխնիկա"],
+      ru: ["сантехник Ереван", "сантехника для ремонта"],
+      en: ["plumber Yerevan", "renovation plumbing Yerevan"],
+    },
+  },
+  "electrical-work": {
+    paths: {
+      hy: "services/electrical-work-yerevan",
+      ru: "services/electrical-work-yerevan",
+      en: "services/electrical-work-yerevan",
+    },
+    primary: {
+      hy: "էլեկտրական աշխատանքներ Երևանում",
+      ru: "электрические работы в Ереване",
+      en: "electrical work in Yerevan",
+    },
+    secondary: {
+      hy: ["էլեկտրիկ Երևան", "բնակարանի էլեկտրական աշխատանքներ"],
+      ru: ["электрик Ереван", "электрика в квартире Ереван"],
+      en: ["electrician Yerevan", "apartment electrical work Yerevan"],
     },
   },
   company: {
