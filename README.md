@@ -29,6 +29,16 @@ TELEGRAM_CHAT_ID=-1001234567890
 
 Create the bot through [@BotFather](https://t.me/BotFather), add it to the target chat (or start a private chat with it), then obtain the chat ID. Do not use the `NEXT_PUBLIC_` prefix: the bot token must never be exposed to the browser.
 
+## Google Analytics 4
+
+To enable Google Analytics, add the GA4 Measurement ID to `.env.local` and to the environment variables of the deployed site:
+
+```bash
+NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
+```
+
+The identifier is public and starts with `G-`. The tag is omitted when this variable is unset. Existing interaction events (contact clicks, forms, and calculator actions) will then be sent to GA4 as well.
+
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
 ## Learn More
