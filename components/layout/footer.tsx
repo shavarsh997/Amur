@@ -10,7 +10,10 @@ import {
   getWhatsAppHref,
 } from "@/lib/company";
 import { getActiveServices } from "@/config/services.config";
-import { getSeoLandingPage } from "@/config/seo-landing-pages.config";
+import {
+  getSeoLandingPath,
+  seoLandingPages,
+} from "@/config/seo-landing-pages.config";
 import { BrandMark } from "@/components/ui/brand-mark";
 import { Container } from "@/components/ui/container";
 import type { Dictionary, Locale } from "@/types";
@@ -29,7 +32,6 @@ export function Footer({ locale, dictionary }: FooterProps) {
     href: item.path ? `${prefix}/${item.path}` : prefix,
     label: dictionary.nav[item.key],
   }));
-  const pricesPage = getSeoLandingPage(locale, "prices");
 
   return (
     <footer className="mt-auto bg-[var(--brand-navy)] py-12 text-white/70 sm:py-14">
@@ -81,16 +83,16 @@ export function Footer({ locale, dictionary }: FooterProps) {
                   </Link>
                 </li>
               ))}
-              {pricesPage ? (
-                <li>
+              {seoLandingPages.map((page) => (
+                <li key={page.slug}>
                   <Link
                     className="rounded-sm transition-colors hover:text-[var(--brand-copper)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--brand-copper)]"
-                    href={`${prefix}/prices`}
+                    href={`${prefix}/${getSeoLandingPath(page)}`}
                   >
-                    {pricesPage.content.title}
+                    {page.translations[locale].title}
                   </Link>
                 </li>
-              ) : null}
+              ))}
             </ul>
           </div>
 
@@ -131,6 +133,7 @@ export function Footer({ locale, dictionary }: FooterProps) {
               {companyConfig.contact.workingHours ? (
                 <p>{companyConfig.contact.workingHours}</p>
               ) : null}
+              <p>{companyConfig.contact.city} · Armenia</p>
               {getSocialLinks().map(({ name, url }) => (
                 <a
                   className="block capitalize hover:text-[var(--brand-copper)]"

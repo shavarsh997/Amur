@@ -7,7 +7,8 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
-      disallow: ["/api/", "/admin/", "/preview/", "/_next/"],
+      // Keep crawlers able to fetch Next.js assets needed to render the site.
+      disallow: ["/api/", "/admin/", "/preview/"],
     },
     sitemap: getAbsoluteUrl("/sitemap.xml"),
     host: getSiteOrigin(),

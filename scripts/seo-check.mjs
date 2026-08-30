@@ -42,6 +42,17 @@ const checks = [
       read("app/sitemap.ts").includes("seoLandingPages"),
   ],
   [
+    "commercial intent map avoids keyword-variant doorway pages",
+    existsSync("config/seo-intents.config.ts") &&
+      read("config/seo-intents.config.ts").includes("apartment-renovation") &&
+      read("config/seo-intents.config.ts").includes("turnkey-renovation") &&
+      read("config/seo-intents.config.ts").includes("house-construction"),
+  ],
+  [
+    "robots keeps render assets crawlable",
+    !read("app/robots.ts").includes('"/_next/"'),
+  ],
+  [
     "calculator has server-rendered SEO content",
     read("app/[locale]/calculator/page.tsx").includes("calculatorSeo") &&
       existsSync("config/calculator-seo.config.ts"),

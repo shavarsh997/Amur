@@ -21,7 +21,7 @@ export function getOrganizationJsonLd(): JsonLd {
   const email = getMailHref()?.replace("mailto:", "");
   const organization: JsonLd = {
     "@context": "https://schema.org",
-    "@type": "GeneralContractor",
+    "@type": ["Organization", "HomeAndConstructionBusiness"],
     "@id": getAbsoluteUrl("/#organization"),
     name: companyConfig.brand.name,
     alternateName: companyConfig.brand.alternateName,
@@ -41,15 +41,20 @@ export function getOrganizationJsonLd(): JsonLd {
       : undefined,
     telephone: phone,
     email,
-    address: companyConfig.contact.address || companyConfig.contact.city
-      ? {
-          "@type": "PostalAddress",
-          streetAddress: companyConfig.contact.address,
-          addressLocality: companyConfig.contact.city,
-          addressCountry: companyConfig.contact.countryCode,
-        }
-      : undefined,
-    sameAs: getSocialLinks().map(({ url }) => url),
+    address:
+      companyConfig.contact.address || companyConfig.contact.city
+        ? {
+            "@type": "PostalAddress",
+            ...(companyConfig.contact.address
+              ? { streetAddress: companyConfig.contact.address }
+              : {}),
+            addressLocality: companyConfig.contact.city,
+            addressCountry: companyConfig.contact.countryCode,
+          }
+        : undefined,
+    ...(getSocialLinks().length
+      ? { sameAs: getSocialLinks().map(({ url }) => url) }
+      : {}),
   };
   return Object.fromEntries(
     Object.entries(organization).filter(

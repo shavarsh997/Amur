@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import {
+  getSeoLandingPage,
   getSeoLandingPath,
   type SeoLandingPage,
 } from "@/config/seo-landing-pages.config";
@@ -31,6 +32,11 @@ export function SeoLandingPage({
   const relatedServices = getActiveServices(locale).filter((service) =>
     (page.relatedServiceSlugs as readonly string[]).includes(service.slug)
   );
+  const relatedLandings = page.relatedLandingSlugs
+    .map((slug) => getSeoLandingPage(locale, slug))
+    .filter((landing): landing is NonNullable<typeof landing> =>
+      Boolean(landing)
+    );
   const breadcrumbs = [
     { label: dictionary.common.home, href: `/${locale}` },
     ...(page.kind === "service"
@@ -66,7 +72,14 @@ export function SeoLandingPage({
         type="application/ld+json"
       />
       <PageHero
-        actions={<ContactTrigger label={content.contactLabel} />}
+        actions={
+          <>
+            <ContactTrigger label={content.contactLabel} />
+            <ButtonLink href={`/${locale}/calculator`} variant="secondary">
+              {content.calculatorLabel}
+            </ButtonLink>
+          </>
+        }
         breadcrumbs={breadcrumbs}
         breadcrumbsLabel={dictionary.common.breadcrumbs}
         description={content.description}
@@ -152,12 +165,26 @@ export function SeoLandingPage({
                 </div>
               </section>
             ) : null}
-            {relatedServices.length ? (
+            {relatedLandings.length || relatedServices.length ? (
               <section>
                 <h2 className="text-2xl font-semibold tracking-[-0.035em] text-[var(--text-primary)] sm:text-3xl">
                   {content.relatedTitle}
                 </h2>
                 <div className="mt-6 grid gap-3 sm:grid-cols-3">
+                  {relatedLandings.map((landing) => (
+                    <Link
+                      className="rounded-2xl border border-[var(--border)] bg-white p-5 transition hover:border-[var(--brand-copper)]"
+                      href={`/${locale}/${getSeoLandingPath(landing)}`}
+                      key={landing.slug}
+                    >
+                      <h3 className="font-semibold text-[var(--text-primary)]">
+                        {landing.content.title}
+                      </h3>
+                      <p className="mt-2 text-sm leading-6 text-[var(--text-secondary)]">
+                        {landing.content.description}
+                      </p>
+                    </Link>
+                  ))}
                   {relatedServices.map((service) => (
                     <Link
                       className="rounded-2xl border border-[var(--border)] bg-white p-5 transition hover:border-[var(--brand-copper)]"

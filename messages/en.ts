@@ -4,9 +4,9 @@ import type { Dictionary } from "@/types";
 const dictionary = {
   localeName: "English",
   metadata: {
-    title: "Apartment and house renovation in Armenia — SHINEX",
+    title: "Apartment renovation in Yerevan and Armenia — SHINEX",
     description:
-      "Apartment and private house renovation, interior design, house construction, and commercial-space work in Yerevan and across Armenia.",
+      "SHINEX is a renovation company in Yerevan for apartment renovation, complete apartment renovation, house construction, interior design, and commercial-space work.",
   },
   nav: {
     home: "Home",
@@ -22,9 +22,9 @@ const dictionary = {
   },
   hero: {
     eyebrow: "Renovation and construction services",
-    title: "Apartment and house renovation in Armenia",
+    title: "Apartment renovation in Yerevan and Armenia",
     description:
-      "We complete full and phased renovation for apartments and private homes. We also develop interior design, build homes, and deliver commercial construction work — from an initial estimate to handover of the finished property.",
+      "SHINEX is a renovation and construction company in Yerevan. We deliver complete apartment renovation, house construction, interior design, and commercial-space work — from an initial estimate to handover.",
     primaryAction: "Get an initial estimate",
     secondaryAction: "View services",
     trustPoints: [
