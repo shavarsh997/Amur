@@ -22,16 +22,19 @@ export function Hero({
           <div className="grid lg:min-h-[590px] lg:grid-cols-[0.9fr_1.1fr]">
             <div className="relative z-10 flex flex-col justify-center px-5 py-9 sm:px-9 sm:py-14 lg:px-12 lg:py-16">
               <p className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.13em] text-[var(--text-secondary)]">
-                <span aria-hidden="true" className="h-px w-8 bg-[var(--brand-copper)]" />
+                <span
+                  aria-hidden="true"
+                  className="h-px w-8 bg-[var(--brand-copper)]"
+                />
                 {dictionary.hero.eyebrow}
               </p>
-              <h1 className="mt-5 max-w-[11ch] break-words text-pretty text-[2.25rem] font-semibold leading-[1.14] tracking-[-0.055em] text-[var(--text-primary)] sm:mt-6 sm:text-[3.25rem] lg:text-[3.5rem]">
+              <h1 className="mt-5 w-full break-words text-pretty text-[2.25rem] font-semibold leading-[1.14] tracking-[-0.055em] text-[var(--text-primary)] sm:mt-6 sm:text-[2.25rem] lg:text-[3rem]">
                 {dictionary.hero.title}
               </h1>
               <p className="mt-5 max-w-xl text-[15px] leading-6 text-[var(--text-secondary)] sm:text-[17px] sm:leading-7">
                 {dictionary.hero.description}
               </p>
-              <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center">
+              <div className="w-full mt-7 grid grid-cols-2 gap-3 sm:flex sm:flex-row sm:items-center">
                 <ContactTrigger
                   className="w-full sm:w-auto"
                   label={dictionary.hero.primaryAction}
