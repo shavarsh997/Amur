@@ -76,59 +76,64 @@ export function MobileNav({
 
       {open ? (
         <div
-          className="absolute inset-x-0 top-[calc(100%+0.5rem)] max-h-[calc(100dvh-5.5rem)] overflow-y-auto rounded-[22px] border border-[var(--border)] bg-white p-4 text-[var(--text-primary)] shadow-[0_18px_38px_-30px_rgb(24_24_27/0.55)] sm:px-8"
+          className="absolute inset-x-0 top-[calc(100%+0.5rem)] rounded-[22px] border border-[var(--border)] bg-white p-4 text-[var(--text-primary)] shadow-[0_18px_38px_-30px_rgb(24_24_27/0.55)] sm:px-8"
           id={panelId}
         >
-          <nav aria-label={openLabel}>
-            <ul className="space-y-1">
-              {items.map((item, index) => (
-                <li key={item.href}>
-                  {item.isContact ? (
-                    <ContactTrigger
-                      className="block w-full rounded-xl px-4 py-3 text-left font-medium hover:bg-[var(--surface-muted)]"
-                      label={item.label}
-                      onClick={closeMenu}
-                      variant="link"
-                    />
-                  ) : (
+          <div
+            className="inset-x-0 max-h-[calc(100dvh-10.5rem)] overflow-y-auto"
+            id={panelId}
+          >
+            <nav aria-label={openLabel}>
+              <ul className="space-y-1">
+                {items.map((item, index) => (
+                  <li key={item.href}>
+                    {item.isContact ? (
+                      <ContactTrigger
+                        className="block w-full rounded-xl px-4 py-3 text-left font-medium hover:bg-[var(--surface-muted)]"
+                        label={item.label}
+                        onClick={closeMenu}
+                        variant="link"
+                      />
+                    ) : (
+                      <Link
+                        ref={index === 0 ? firstLinkRef : undefined}
+                        className="block rounded-xl px-4 py-3 font-medium hover:bg-[var(--surface-muted)] focus-visible:outline-2 focus-visible:outline-[var(--button-primary)]"
+                        href={item.href}
+                        onClick={closeMenu}
+                      >
+                        {item.label}
+                      </Link>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </nav>
+            <div className="mt-4 border-t border-[var(--border)] pt-4">
+              <p className="px-4 text-xs font-semibold uppercase tracking-[0.12em] text-[var(--text-muted)]">
+                {servicesLabel}
+              </p>
+              <ul className="mt-2 grid gap-1 sm:grid-cols-2">
+                {services.map((service) => (
+                  <li key={service.href}>
                     <Link
-                      ref={index === 0 ? firstLinkRef : undefined}
-                      className="block rounded-xl px-4 py-3 font-medium hover:bg-[var(--surface-muted)] focus-visible:outline-2 focus-visible:outline-[var(--button-primary)]"
-                      href={item.href}
+                      className="block rounded-xl px-4 py-2.5 text-sm font-medium hover:bg-[var(--surface-muted)] focus-visible:outline-2 focus-visible:outline-[var(--button-primary)]"
+                      href={service.href}
                       onClick={closeMenu}
                     >
-                      {item.label}
+                      {service.label}
                     </Link>
-                  )}
-                </li>
-              ))}
-            </ul>
-          </nav>
-          <div className="mt-4 border-t border-[var(--border)] pt-4">
-            <p className="px-4 text-xs font-semibold uppercase tracking-[0.12em] text-[var(--text-muted)]">
-              {servicesLabel}
-            </p>
-            <ul className="mt-2 grid gap-1 sm:grid-cols-2">
-              {services.map((service) => (
-                <li key={service.href}>
-                  <Link
-                    className="block rounded-xl px-4 py-2.5 text-sm font-medium hover:bg-[var(--surface-muted)] focus-visible:outline-2 focus-visible:outline-[var(--button-primary)]"
-                    href={service.href}
-                    onClick={closeMenu}
-                  >
-                    {service.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="mt-4 flex flex-wrap items-center gap-3 border-t border-[var(--border)] pt-4">
-            <ContactTrigger
-              className="min-h-11 flex-1 px-5"
-              label={cta.label}
-              onClick={closeMenu}
-            />
-            <LanguageSwitcher label={languageLabel} locale={locale} />
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="mt-4 flex flex-wrap items-center gap-3 border-t border-[var(--border)] pt-4">
+              <ContactTrigger
+                className="min-h-11 flex-1 px-5"
+                label={cta.label}
+                onClick={closeMenu}
+              />
+              <LanguageSwitcher label={languageLabel} locale={locale} />
+            </div>
           </div>
         </div>
       ) : null}
