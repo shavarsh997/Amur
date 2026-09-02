@@ -9,6 +9,7 @@ import {
 import { ContactTrigger } from "@/components/forms/contact-dialog";
 import { ButtonLink } from "@/components/ui/button-link";
 import { Container } from "@/components/ui/container";
+import { FAQAccordion } from "@/components/ui/faq-accordion";
 import { PageHero } from "@/components/ui/page-hero";
 import { getActiveServices } from "@/config/services.config";
 import {
@@ -16,6 +17,7 @@ import {
   getServiceJsonLd,
   serializeJsonLd,
 } from "@/lib/json-ld";
+import { getFaqsWithMinimum } from "@/lib/faq";
 import type { Dictionary, Locale } from "@/types";
 
 export function SeoLandingPage({
@@ -28,6 +30,7 @@ export function SeoLandingPage({
   dictionary: Dictionary;
 }) {
   const { content } = page;
+  const faqs = getFaqsWithMinimum(content.faqs, locale);
   const href = `/${locale}/${getSeoLandingPath(page)}`;
   const relatedServices = getActiveServices(locale).filter((service) =>
     (page.relatedServiceSlugs as readonly string[]).includes(service.slug)
@@ -172,22 +175,13 @@ export function SeoLandingPage({
                 <ContactTrigger label={content.contactLabel} />
               </div>
             </section>
-            {content.faqs.length ? (
+            {faqs.length ? (
               <section>
                 <h2 className="text-2xl font-semibold tracking-[-0.035em] text-[var(--text-primary)] sm:text-3xl">
                   FAQ
                 </h2>
-                <div className="mt-6 divide-y divide-[var(--border)] rounded-2xl border border-[var(--border)]">
-                  {content.faqs.map((faq) => (
-                    <div className="p-5" key={faq.question}>
-                      <h3 className="font-semibold text-[var(--text-primary)]">
-                        {faq.question}
-                      </h3>
-                      <p className="mt-2 leading-7 text-[var(--text-secondary)]">
-                        {faq.answer}
-                      </p>
-                    </div>
-                  ))}
+                <div className="mt-6">
+                  <FAQAccordion items={faqs} />
                 </div>
               </section>
             ) : null}

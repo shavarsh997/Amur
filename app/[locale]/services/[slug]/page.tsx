@@ -7,6 +7,7 @@ import { FinalCta } from "@/components/sections/final-cta";
 import { SeoLandingPage } from "@/components/seo/seo-landing-page";
 import { ContactTrigger } from "@/components/forms/contact-dialog";
 import { Container } from "@/components/ui/container";
+import { FAQAccordion } from "@/components/ui/faq-accordion";
 import { PageHero } from "@/components/ui/page-hero";
 import { getActiveServices, getServiceBySlug } from "@/config/services.config";
 import {
@@ -15,8 +16,13 @@ import {
   seoLandingPages,
 } from "@/config/seo-landing-pages.config";
 import { getDictionary, isLocale } from "@/lib/i18n";
+import { getFaqsWithMinimum } from "@/lib/faq";
 import { buildMetadata } from "@/lib/metadata";
-import { getBreadcrumbJsonLd, getServiceJsonLd, serializeJsonLd } from "@/lib/json-ld";
+import {
+  getBreadcrumbJsonLd,
+  getServiceJsonLd,
+  serializeJsonLd,
+} from "@/lib/json-ld";
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
 
@@ -65,10 +71,13 @@ export default async function ServiceDetailPage({ params }: Props) {
   const service = getServiceBySlug(locale, slug);
   const landing = getSeoLandingPage(locale, slug);
   if (landing?.kind === "service") {
-    return <SeoLandingPage dictionary={dictionary} locale={locale} page={landing} />;
+    return (
+      <SeoLandingPage dictionary={dictionary} locale={locale} page={landing} />
+    );
   }
   if (!service) notFound();
   const copy = dictionary.services.detail;
+  const faqs = getFaqsWithMinimum(service.content.faq, locale);
   const primaryCta = service.content.primaryCta ?? copy.requestEstimate;
   const relatedSeoPages = seoLandingPages.filter((page) =>
     (page.relatedServiceSlugs as readonly string[]).includes(service.slug)
@@ -198,9 +207,10 @@ export default async function ServiceDetailPage({ params }: Props) {
                 ) : null}
               </div>
             ) : null}
-            {service.content.priceFactors.length ||
-            service.content.faq.length ? (
-              <div className="grid gap-8 md:grid-cols-2">
+            {service.content.priceFactors.length || faqs.length ? (
+              <div
+                className={`grid gap-8 ${service.content.priceFactors.length && faqs.length ? "md:grid-cols-2" : "md:grid-cols-1"}`}
+              >
                 {service.content.priceFactors.length ? (
                   <section className="rounded-2xl border border-[var(--border)] bg-[var(--background-soft)] p-6">
                     <h2 className="text-xl font-semibold text-[var(--text-primary)]">
@@ -213,22 +223,13 @@ export default async function ServiceDetailPage({ params }: Props) {
                     </ul>
                   </section>
                 ) : null}
-                {service.content.faq.length ? (
-                  <section className="rounded-2xl border border-[var(--border)] bg-white p-6">
+                {faqs.length ? (
+                  <section className="rounded-2xl border border-[var(--border)] bg-white p-6 w-full">
                     <h2 className="text-xl font-semibold text-[var(--text-primary)]">
                       {copy.faq}
                     </h2>
-                    <div className="mt-4 space-y-5">
-                      {service.content.faq.map((item) => (
-                        <div key={item.question}>
-                          <h3 className="font-semibold text-[var(--text-primary)]">
-                            {item.question}
-                          </h3>
-                          <p className="mt-2 leading-7 text-[var(--text-secondary)]">
-                            {item.answer}
-                          </p>
-                        </div>
-                      ))}
+                    <div className="mt-4">
+                      <FAQAccordion items={faqs} />
                     </div>
                   </section>
                 ) : null}
@@ -261,12 +262,12 @@ export default async function ServiceDetailPage({ params }: Props) {
                 </div>
               </section>
             ) : null}
-            <div className="rounded-[24px] bg-[var(--background-warm)] p-7 sm:p-10">
+            {/* <div className="rounded-[24px] bg-[var(--background-warm)] p-7 sm:p-10">
               <h2 className="text-2xl font-semibold tracking-[-0.03em] text-[var(--text-primary)]">
                 {dictionary.estimate.title}
               </h2>
               <ContactTrigger className="mt-6" label={primaryCta} />
-            </div>
+            </div> */}
           </div>
         </Container>
       </article>

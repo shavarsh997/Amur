@@ -3,7 +3,9 @@ import { notFound } from "next/navigation";
 
 import { CostCalculator } from "@/components/calculator/cost-calculator";
 import { Container } from "@/components/ui/container";
+import { FAQAccordion } from "@/components/ui/faq-accordion";
 import { calculatorSeo } from "@/config/calculator-seo.config";
+import { getFaqsWithMinimum } from "@/lib/faq";
 import { getDictionary, isLocale } from "@/lib/i18n";
 import { buildMetadata } from "@/lib/metadata";
 import { getBreadcrumbJsonLd, serializeJsonLd } from "@/lib/json-ld";
@@ -30,6 +32,10 @@ export default async function CalculatorPage({ params }: Props) {
   const dictionary = await getDictionary(locale);
   const copy = dictionary.calculator;
   const seo = calculatorSeo[locale];
+  const faqs = getFaqsWithMinimum(
+    seo.faqs.map(([question, answer]) => ({ question, answer })),
+    locale
+  );
 
   return (
     <Container className="py-10 sm:py-16">
@@ -56,24 +62,29 @@ export default async function CalculatorPage({ params }: Props) {
         </p>
       </div>
       <section className="mx-auto mt-8 max-w-4xl">
-        <CostCalculator copy={dictionary.constructionCalculator} locale={locale} />
+        <CostCalculator
+          copy={dictionary.constructionCalculator}
+          locale={locale}
+        />
       </section>
       <section className="mx-auto mt-12 max-w-4xl border-t border-[var(--border)] pt-10">
         <p className="leading-7 text-[var(--text-secondary)]">{seo.intro}</p>
         <h2 className="mt-10 text-2xl font-semibold tracking-[-0.035em] text-[var(--text-primary)]">
           {seo.faqTitle}
         </h2>
-        <div className="mt-5 divide-y divide-[var(--border)] rounded-2xl border border-[var(--border)]">
-          {seo.faqs.map(([question, answer]) => (
-            <div className="p-5" key={question}>
-              <h3 className="font-semibold text-[var(--text-primary)]">{question}</h3>
-              <p className="mt-2 leading-7 text-[var(--text-secondary)]">{answer}</p>
-            </div>
-          ))}
+        <div className="mt-5">
+          <FAQAccordion items={faqs} />
         </div>
         <p className="mt-8 text-sm leading-6 text-[var(--text-secondary)]">
-          <Link className="font-semibold text-[var(--text-primary)] underline" href={`/${locale}/prices`}>
-            {locale === "ru" ? "Цены на ремонт квартир в Ереване" : locale === "en" ? "Apartment renovation prices in Yerevan" : "Բնակարանների վերանորոգման գներ Երևանում"}
+          <Link
+            className="font-semibold text-[var(--text-primary)] underline"
+            href={`/${locale}/prices`}
+          >
+            {locale === "ru"
+              ? "Цены на ремонт квартир в Ереване"
+              : locale === "en"
+                ? "Apartment renovation prices in Yerevan"
+                : "Բնակարանների վերանորոգման գներ Երևանում"}
           </Link>
         </p>
       </section>
