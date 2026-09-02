@@ -233,7 +233,8 @@ export const homeContent: Record<Locale, HomeContent> = {
           id: "armenia",
           icon: "map",
           title: "Աշխատում ենք ամբողջ Հայաստանում",
-          description: "Նախնական համաձայնությամբ և լոգիստիկայի հաշվառմամբ։",
+          description:
+            "Աշխատանքի պայմանները նախապես համաձայնեցնում ենք՝ հաշվի առնելով օբյեկտի գտնվելու վայրը։",
           enabled: true,
         },
       ],
