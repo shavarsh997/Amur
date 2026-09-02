@@ -158,7 +158,7 @@ export function Footer({ locale, dictionary }: FooterProps) {
           <p>
             © {new Date().getFullYear()}{" "}
             {companyConfig.brand.legalName ?? companyConfig.brand.name}.{" "}
-            {dictionary.footer.rights}
+            {/* {dictionary.footer.rights} */}
           </p>
           <Link
             className="rounded-sm hover:text-[var(--brand-copper)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--brand-copper)]"

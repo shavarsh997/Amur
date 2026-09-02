@@ -30,8 +30,8 @@ export const companyConfig = {
     workingHours: null,
   },
   social: {
-    instagram: null,
-    facebook: null,
+    instagram: "https://www.instagram.com/shinex_company/",
+    facebook: "https://www.facebook.com/profile.php?id=61592503598299",
     youtube: null,
   },
   business: {
