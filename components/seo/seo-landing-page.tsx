@@ -166,7 +166,7 @@ export function SeoLandingPage({
                   ? "Калькулятор даёт предварительный ориентир. Точная смета формируется после осмотра объекта."
                   : locale === "en"
                     ? "The calculator provides an initial guide. A precise estimate follows a property survey."
-                    : "Հաշվիչը տալիս է նախնական կողմնորոշիչ։ Ճշգրիտ նախահաշիվը կազմվում է օբյեկտի զննումից հետո։"}
+                    : "Հաշվիչը հնարավորություն է տալիս ստանալ նախնական արժեքի հաշվարկ։ Ճշգրիտ նախահաշիվը կազմվում է օբյեկտի զննումից հետո։"}
               </p>
               <div className="mt-6 flex flex-wrap gap-3">
                 <ButtonLink href={`/${locale}/calculator`}>
