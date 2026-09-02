@@ -348,7 +348,7 @@ const dictionary = {
     eyebrow: "Cost calculator",
     title: "Calculate your project’s initial cost",
     description:
-      "The calculator has four steps and does not require a phone number. Enter the property type, area, and required work to receive an initial cost. A precise estimate is prepared after a survey and clarification of the details.",
+      "The calculator helps provide an initial cost and does not require a phone number. Enter the property type, area, and work you need. A precise estimate is prepared after a survey and clarification of the details.",
     steps: {
       objectType: "Property",
       workType: "Work",

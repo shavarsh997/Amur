@@ -303,7 +303,7 @@ export const seoIntentMap = {
     primary: {
       hy: "շինարարական ընկերություն Երևանում",
       ru: "строительная компания Ереван",
-      en: "renovation company Yerevan",
+      en: "construction company Yerevan",
     },
     secondary: {
       hy: ["շինարարական աշխատանքներ Երևանում"],

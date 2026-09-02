@@ -195,50 +195,90 @@ const coreSeoLandingPages = [
         eyebrow: "Apartment renovation · Yerevan",
         title: "Apartment renovation in Yerevan",
         description:
-          "We organise apartment renovation in Yerevan, from a property survey and estimate through building-services work, finishes, and handover.",
+          "SHINEX delivers complete apartment renovation in Yerevan, from a survey and initial estimate through electrical, plumbing, finishes, and handover.",
         seoTitle: "Apartment Renovation in Yerevan, Armenia | SHINEX",
         seoDescription:
-          "Apartment renovation in Yerevan for new builds and existing homes: stages, cost factors, and an initial estimate from SHINEX.",
+          "Apartment renovation in Yerevan: new-build, major, and turnkey renovation. Electrical, plumbing, finishes, and a complete range of work. Get an initial estimate from SHINEX.",
         introduction: [
-          "An apartment renovation starts with a workable plan, not only a finish selection. SHINEX renovates new-build and existing apartments in Yerevan: we assess the starting condition, agree the scope, and coordinate the work in stages.",
-          "The final estimate depends on area, the condition of the property, building-services work, and selected materials. A site survey helps define the sequence and a realistic budget.",
+          "SHINEX renovates new-build and existing apartments in Yerevan. We start with a survey, measurements, and an initial estimate, then organise the building-services and finishing work in a clear sequence.",
+          "You do not need to find an electrician, plumber, tiler, and other trades separately: for a turnkey renovation, one team coordinates the agreed work scope and handover.",
         ],
         sections: [
           {
-            title: "Apartments we renovate",
+            title: "Turnkey apartment renovation",
             paragraphs: [
-              "The approach follows the property condition and the goal of the renovation—living, renting, or preparing for a move.",
+              "We take responsibility for the whole property, from preparing the space through final finishes and inspection. The work scope is confirmed after the survey and agreement on the solutions.",
             ],
             items: [
-              "New-build apartments: base preparation, building services, and final finishes.",
-              "Existing homes: demolition, utilities updates, and renovation of occupied spaces.",
-              "Cosmetic renovation of a room or whole apartment.",
-              "Capital and turnkey apartment renovation.",
+              "Demolition and space preparation.",
+              "Electrical, plumbing, and heating work.",
+              "Wall preparation, plastering, and puttying.",
+              "Painting, tiling, and floor finishes.",
+              "Ceilings, doors, and lighting.",
+              "Final finishes, quality control, and handover.",
             ],
           },
           {
-            title: "How the work is organised",
+            title: "New-build apartment renovation",
             paragraphs: [
-              "Before work begins, we establish the starting information and scope. Preparation, building-services, and finishing stages follow an agreed sequence.",
+              "For an apartment from the developer, we check walls and floors, service points, openings, and surface readiness. This lets us plan electrical, plumbing, partitions, levelling, ceilings, and finishes before moving in without redoing completed surfaces.",
             ],
             items: [
-              "Survey, measurements, and project discussion.",
-              "Agreement on decisions, work scope, and estimate.",
-              "Demolition and substrate preparation where needed.",
-              "Electrical, plumbing, levelling, screed, and other base work.",
-              "Tiling, floor finishes, ceilings, doors, lighting, and final inspection.",
+              "Check walls, floors, and building-services outlets.",
+              "Electrical, plumbing, and required partitions.",
+              "Levelling, substrate preparation, and ceilings.",
+              "Final finishes and preparing the apartment for living.",
             ],
           },
           {
-            title: "What affects apartment renovation cost",
+            title: "Major apartment renovation",
             paragraphs: [
-              "A per-square-metre figure does not replace an estimate: apartments with the same area can require very different preparation and building-services work.",
+              "Major renovation is needed when utilities need updating, old finishes must be removed, walls and floors require preparation, or the building-services and finishing scope needs to change. Before work begins, we establish the actual condition of the apartment and a safe sequence of stages.",
+            ],
+          },
+          {
+            title: "Cosmetic renovation",
+            paragraphs: [
+              "Cosmetic renovation refreshes apartment finishes without a full intervention in the building-services systems. After a survey, we agree which surfaces, finishes, lighting, or individual areas need updating.",
+            ],
+          },
+          {
+            title: "How much does apartment renovation in Yerevan cost?",
+            paragraphs: [
+              "Apartment renovation cost in Yerevan depends on more than area. The calculation is affected by wall and floor condition, demolition, electrical and plumbing scope, project complexity, materials, and finishing work.",
+              "A universal fixed price without a survey can be misleading. The calculator provides an initial guide, while an accurate estimate can be prepared after reviewing the property and agreeing the work.",
+            ],
+          },
+          {
+            title: "Renovation stages",
+            paragraphs: [
+              "We organise the work in stages so that the scope, changes, and next step are agreed in advance.",
             ],
             items: [
-              "Wall, floor, and ceiling condition.",
-              "Apartment area and layout.",
-              "New or replacement electrical and plumbing systems.",
-              "Complexity of the decisions, materials, and final finishes.",
+              "Initial consultation.",
+              "Property survey.",
+              "Measurements.",
+              "Defining the work scope.",
+              "Initial estimate.",
+              "Agreement.",
+              "Contract.",
+              "Work delivery.",
+              "Quality control.",
+              "Handover.",
+            ],
+          },
+          {
+            title: "Why SHINEX",
+            paragraphs: [
+              "We discuss work terms and changes before they are carried out, so the renovation process is clear to the client.",
+            ],
+            items: [
+              "Contract-based work.",
+              "Estimate agreed in advance.",
+              "One contractor for the whole property.",
+              "Work organised in stages.",
+              "Quality control.",
+              "Additional work agreed before it is carried out.",
             ],
           },
         ],
