@@ -10,10 +10,6 @@ import {
   getWhatsAppHref,
 } from "@/lib/company";
 import { getActiveServices } from "@/config/services.config";
-import {
-  getSeoLandingPath,
-  seoLandingPages,
-} from "@/config/seo-landing-pages.config";
 import { BrandMark } from "@/components/ui/brand-mark";
 import { Container } from "@/components/ui/container";
 import type { Dictionary, Locale } from "@/types";
@@ -32,11 +28,12 @@ export function Footer({ locale, dictionary }: FooterProps) {
     href: item.path ? `${prefix}/${item.path}` : prefix,
     label: dictionary.nav[item.key],
   }));
+  const services = getActiveServices(locale);
 
   return (
     <footer className="mt-auto bg-[var(--brand-navy)] py-12 text-white/70 sm:py-14">
       <Container>
-        <div className="grid gap-10 border-b border-white/15 pb-12 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-10 border-b border-white/15 pb-12 sm:grid-cols-2 lg:grid-cols-[0.9fr_0.9fr_1.5fr_1fr]">
           <div>
             <Link
               aria-label="SHINEX"
@@ -72,8 +69,8 @@ export function Footer({ locale, dictionary }: FooterProps) {
             <h2 className="font-semibold text-white">
               {dictionary.footer.services}
             </h2>
-            <ul className="mt-5 space-y-3 text-sm">
-              {getActiveServices(locale).map(({ content, slug }) => (
+            <ul className="mt-5 grid grid-cols-2 gap-x-5 gap-y-3 text-sm">
+              {services.map(({ content, slug }) => (
                 <li key={slug}>
                   <Link
                     className="rounded-sm transition-colors hover:text-[var(--brand-copper)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--brand-copper)]"
@@ -83,16 +80,14 @@ export function Footer({ locale, dictionary }: FooterProps) {
                   </Link>
                 </li>
               ))}
-              {seoLandingPages.map((page) => (
-                <li key={page.slug}>
-                  <Link
-                    className="rounded-sm transition-colors hover:text-[var(--brand-copper)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--brand-copper)]"
-                    href={`${prefix}/${getSeoLandingPath(page)}`}
-                  >
-                    {page.translations[locale].title}
-                  </Link>
-                </li>
-              ))}
+              <li className="col-span-2 pt-1">
+                <Link
+                  className="rounded-sm font-semibold text-white transition-colors hover:text-[var(--brand-copper)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--brand-copper)]"
+                  href={`${prefix}/services`}
+                >
+                  {dictionary.services.viewAll} →
+                </Link>
+              </li>
             </ul>
           </div>
 

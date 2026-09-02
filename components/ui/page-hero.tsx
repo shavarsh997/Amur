@@ -40,7 +40,7 @@ export function PageHero({
             {title}
           </h1>
           {description ? (
-            <p className="mt-5 max-w-2xl text-lg leading-8 text-[var(--text-secondary)]">
+            <p className="mt-5 max-w-full text-lg leading-8 text-[var(--text-secondary)]">
               {description}
             </p>
           ) : null}
