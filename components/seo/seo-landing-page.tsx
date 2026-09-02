@@ -49,6 +49,24 @@ export function SeoLandingPage({
       : []),
     { label: content.title },
   ];
+  const serviceCoverage =
+    locale === "ru"
+      ? {
+          title: "Работаем по всей Армении",
+          description:
+            "Берём проекты в Ереване, Гюмри, Ванадзоре, Дилижане и других городах Армении. Возможность выезда и условия уточняем по объекту и объёму работ.",
+        }
+      : locale === "en"
+        ? {
+            title: "Working across Armenia",
+            description:
+              "We take projects in Yerevan, Gyumri, Vanadzor, Dilijan, and other Armenian cities. Visit availability and terms are confirmed for each property and scope.",
+          }
+        : {
+            title: "Աշխատում ենք ամբողջ Հայաստանում",
+            description:
+              "Ընդունում ենք նախագծեր Երևանում, Գյումրիում, Վանաձորում, Դիլիջանում և Հայաստանի այլ քաղաքներում։ Մեկնելու հնարավորությունն ու պայմանները ճշտում ենք ըստ օբյեկտի և աշխատանքի ծավալի։",
+          };
 
   return (
     <>
@@ -103,6 +121,14 @@ export function SeoLandingPage({
               {content.introduction.map((paragraph) => (
                 <p key={paragraph}>{paragraph}</p>
               ))}
+            </section>
+            <section className="rounded-[24px] border border-[var(--border)] bg-[var(--background-soft)] p-7 sm:p-9">
+              <h2 className="text-2xl font-semibold tracking-[-0.03em] text-[var(--text-primary)]">
+                {serviceCoverage.title}
+              </h2>
+              <p className="mt-3 max-w-2xl leading-7 text-[var(--text-secondary)]">
+                {serviceCoverage.description}
+              </p>
             </section>
             {content.sections.map((section) => (
               <section key={section.title}>

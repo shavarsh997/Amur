@@ -45,11 +45,11 @@ function serviceContent(input: ServiceTranslationInput): ServiceContent {
 export const serviceTranslations = {
   houseConstruction: {
     ru: serviceContent({
-      title: "Строительство частных домов в Ереване",
+      title: "Строительство частных домов в Ереване и по всей Армении",
       shortDescription:
         "Строим частные дома: от изучения участка и проекта до фундамента, основных конструкций, кровли, инженерных систем и отделки.",
       fullDescription:
-        "Как строительная компания в Ереване, организуем и контролируем этапы строительства дома — от согласованного проекта до проверки и сдачи. Состав работ и стоимость зависят от участка, проекта и выбранной степени готовности.",
+        "Организуем и контролируем этапы строительства дома в Ереване и по всей Армении — от согласованного проекта до проверки и сдачи. Состав работ и стоимость зависят от участка, проекта и выбранной степени готовности.",
       includedWorks: [
         "Изучение участка и проекта",
         "Подготовительные и конструктивные работы",
@@ -84,9 +84,9 @@ export const serviceTranslations = {
       ],
       primaryCta: "Посмотреть этапы строительства",
       secondaryCta: "Обсудить строительство дома",
-      seoTitle: "Строительство домов в Ереване и Армении | SHINEX",
+      seoTitle: "Строительство домов в Ереване и по всей Армении | SHINEX",
       seoDescription:
-        "Строительство частных домов в Ереване и Армении: участок, проект, фундамент, конструкции, инженерные системы и согласованные этапы работ.",
+        "Строительство частных домов в Ереване и по всей Армении: участок, проект, фундамент, конструкции, инженерные системы и согласованные этапы работ.",
       workflow: [
         "Изучение участка и проекта",
         "Подготовка",
@@ -98,11 +98,11 @@ export const serviceTranslations = {
       ],
     }),
     en: serviceContent({
-      title: "House construction in Yerevan",
+      title: "House construction in Yerevan and across Armenia",
       shortDescription:
         "We build private homes from site and design review through foundations, main structure, roofing, building services, and finishes.",
       fullDescription:
-        "As a construction company in Yerevan, we organise and control each stage of a home build, from the agreed design to inspection and handover. The scope and cost depend on the site, design, and selected level of completion.",
+        "We organise and control each stage of a home build in Yerevan and across Armenia, from the agreed design to inspection and handover. The scope and cost depend on the site, design, and selected level of completion.",
       includedWorks: [
         "Site and design review",
         "Preparation and structural work",
@@ -135,9 +135,9 @@ export const serviceTranslations = {
       ],
       primaryCta: "View construction stages",
       secondaryCta: "Discuss a home build",
-      seoTitle: "Private House Construction in Yerevan | SHINEX",
+      seoTitle: "Private House Construction in Yerevan and across Armenia | SHINEX",
       seoDescription:
-        "Private house construction in Yerevan and Armenia: site and design review, foundations, structure, building services, and agreed work stages.",
+        "Private house construction in Yerevan and across Armenia: site and design review, foundations, structure, building services, and agreed work stages.",
       workflow: [
         "Site and design review",
         "Preparation",
@@ -149,11 +149,11 @@ export const serviceTranslations = {
       ],
     }),
     hy: serviceContent({
-      title: "Առանձնատների կառուցում Երևանում",
+      title: "Առանձնատների կառուցում Երևանում և ամբողջ Հայաստանում",
       shortDescription:
         "Կառուցում ենք առանձնատներ՝ հողամասի և նախագծի ուսումնասիրությունից մինչև հիմք, հիմնական կառուցվածքներ, տանիք, ինժեներական համակարգեր և հարդարում։",
       fullDescription:
-        "Որպես շինարարական ընկերություն Երևանում՝ կազմակերպում և վերահսկում ենք տան կառուցման փուլերը՝ համաձայնեցված նախագծից մինչև ստուգում և հանձնում։ Աշխատանքների կազմն ու արժեքը կախված են հողամասից, նախագծից և ընտրված պատրաստվածության աստիճանից։",
+        "Կազմակերպում և վերահսկում ենք տան կառուցման փուլերը Երևանում և ամբողջ Հայաստանում՝ համաձայնեցված նախագծից մինչև ստուգում և հանձնում։ Աշխատանքների կազմն ու արժեքը կախված են հողամասից, նախագծից և ընտրված պատրաստվածության աստիճանից։",
       includedWorks: [
         "Հողամասի և նախագծի ուսումնասիրություն",
         "Նախապատրաստական և կառուցվածքային աշխատանքներ",
@@ -188,9 +188,9 @@ export const serviceTranslations = {
       ],
       primaryCta: "Դիտել կառուցման փուլերը",
       secondaryCta: "Քննարկել տան կառուցումը",
-      seoTitle: "Առանձնատների կառուցում Երևանում և Հայաստանում | SHINEX",
+      seoTitle: "Առանձնատների կառուցում Երևանում և ամբողջ Հայաստանում | SHINEX",
       seoDescription:
-        "Առանձնատների կառուցում Երևանում և Հայաստանում՝ հողամասի ու նախագծի ուսումնասիրությունից մինչև հիմք, կառուցվածքներ, ինժեներական համակարգեր և հանձնում։",
+        "Առանձնատների կառուցում Երևանում և ամբողջ Հայաստանում՝ հողամասի ու նախագծի ուսումնասիրությունից մինչև հիմք, կառուցվածքներ, ինժեներական համակարգեր և հանձնում։",
       workflow: [
         {
           title: "Հողամասի և նախագծի ուսումնասիրություն",
@@ -231,7 +231,7 @@ export const serviceTranslations = {
   },
   interiorDesign: {
     ru: serviceContent({
-      title: "Дизайн интерьера в Ереване",
+      title: "Дизайн интерьера в Ереване и по всей Армении",
       shortDescription:
         "Разрабатываем практичный и целостный интерьер: планировочные решения, концепция, подбор материалов, чертежи и документы для реализации.",
       fullDescription:
@@ -259,9 +259,9 @@ export const serviceTranslations = {
       ],
       primaryCta: "Посмотреть услугу дизайна",
       secondaryCta: "Обсудить мой проект",
-      seoTitle: "Дизайн интерьера в Ереване | SHINEX",
+      seoTitle: "Дизайн интерьера в Ереване и по всей Армении | SHINEX",
       seoDescription:
-        "Дизайн интерьера квартир, частных домов и коммерческих пространств в Ереване и Армении: планировка, концепция, материалы и рабочие чертежи.",
+        "Дизайн интерьера квартир, частных домов и коммерческих пространств в Ереване и по всей Армении: планировка, концепция, материалы и рабочие чертежи.",
       workflow: [
         "Предварительная консультация",
         "Разработка планировки",
@@ -270,7 +270,7 @@ export const serviceTranslations = {
       ],
     }),
     en: serviceContent({
-      title: "Interior design in Yerevan",
+      title: "Interior design in Yerevan and across Armenia",
       shortDescription:
         "We develop practical, complete interiors with layout solutions, a design concept, material selection, drawings, and documents for delivery.",
       fullDescription:
@@ -298,9 +298,9 @@ export const serviceTranslations = {
       ],
       primaryCta: "View the design service",
       secondaryCta: "Discuss my project",
-      seoTitle: "Interior Design in Yerevan | SHINEX",
+      seoTitle: "Interior Design in Yerevan and across Armenia | SHINEX",
       seoDescription:
-        "Interior design for apartments, private homes, and commercial spaces in Yerevan and Armenia: layouts, concepts, materials, and working drawings.",
+        "Interior design for apartments, private homes, and commercial spaces in Yerevan and across Armenia: layouts, concepts, materials, and working drawings.",
       workflow: [
         "Initial consultation",
         "Layout development",
@@ -309,7 +309,7 @@ export const serviceTranslations = {
       ],
     }),
     hy: serviceContent({
-      title: "Ինտերիերի դիզայն Երևանում",
+      title: "Ինտերիերի դիզայն Երևանում և ամբողջ Հայաստանում",
       shortDescription:
         "Մշակում ենք գործնական և ամբողջական ինտերիեր՝ հատակագծային լուծումներով, ոճային կոնցեպտով, նյութերի ընտրությամբ, գծագրերով և իրականացման համար անհրաժեշտ փաստաթղթերով։",
       fullDescription:
@@ -344,9 +344,9 @@ export const serviceTranslations = {
       ],
       primaryCta: "Դիտել դիզայնի ծառայությունը",
       secondaryCta: "Քննարկել իմ նախագիծը",
-      seoTitle: "Ինտերիերի դիզայն Երևանում | SHINEX",
+      seoTitle: "Ինտերիերի դիզայն Երևանում և ամբողջ Հայաստանում | SHINEX",
       seoDescription:
-        "Բնակարանների, առանձնատների և առևտրային տարածքների ինտերիերի դիզայն Երևանում և Հայաստանում՝ հատակագիծ, կոնցեպտ, նյութեր և աշխատանքային գծագրեր։",
+        "Բնակարանների, առանձնատների և առևտրային տարածքների ինտերիերի դիզայն Երևանում և ամբողջ Հայաստանում՝ հատակագիծ, կոնցեպտ, նյութեր և աշխատանքային գծագրեր։",
       workflow: [
         {
           title: "Նախնական խորհրդատվություն և տվյալների հավաքագրում",
@@ -589,7 +589,7 @@ export const serviceTranslations = {
       secondaryCta: "Получить предварительный расчёт",
       seoTitle: "Ремонт квартир и домов под ключ в Армении — SHINEX",
       seoDescription:
-        "Ремонт квартир и частных домов под ключ в Ереване и регионах Армении: осмотр, предварительная оценка и согласование этапов.",
+        "Ремонт квартир и частных домов под ключ в Ереване и по всей Армении: осмотр, предварительная оценка и согласование этапов.",
       workflow: [
         "Осмотр и обсуждение задачи",
         "Планирование и предварительная смета",
@@ -727,7 +727,7 @@ export const serviceTranslations = {
       secondaryCta: "Ստանալ նախնական հաշվարկ",
       seoTitle: "Բնակարանների ամբողջական վերանորոգում Հայաստանում — SHINEX",
       seoDescription:
-        "Բնակարանների և առանձնատների ամբողջական վերանորոգում Երևանում և Հայաստանի մարզերում՝ զննում, նախնական գնահատում և փուլերի համաձայնեցում։",
+        "Բնակարանների և առանձնատների ամբողջական վերանորոգում Երևանում և ամբողջ Հայաստանում՝ զննում, նախնական գնահատում և փուլերի համաձայնեցում։",
       workflow: [
         {
           title: "Օբյեկտի զննում և չափագրում",

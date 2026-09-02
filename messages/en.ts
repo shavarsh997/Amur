@@ -4,9 +4,9 @@ import type { Dictionary } from "@/types";
 const dictionary = {
   localeName: "English",
   metadata: {
-    title: "Apartment renovation in Yerevan and Armenia — SHINEX",
+    title: "Apartment renovation in Yerevan and across Armenia — SHINEX",
     description:
-      "SHINEX is a renovation company in Yerevan for apartment renovation, complete apartment renovation, house construction, interior design, and commercial-space work.",
+      "SHINEX provides apartment renovation, house construction, interior design, and commercial-space work in Yerevan and across Armenia.",
   },
   nav: {
     home: "Home",
@@ -22,16 +22,16 @@ const dictionary = {
   },
   hero: {
     eyebrow: "Renovation and construction services",
-    title: "Apartment renovation in Yerevan and Armenia",
+    title: "Apartment renovation in Yerevan and across Armenia",
     description:
-      "SHINEX is a renovation and construction company in Yerevan. We deliver complete apartment renovation, house construction, interior design, and commercial-space work — from an initial estimate to handover.",
+      "SHINEX delivers apartment renovation, house construction, interior design, and commercial-space work in Yerevan and across Armenia — from an initial estimate to handover.",
     primaryAction: "Get an initial estimate",
     secondaryAction: "View services",
     trustPoints: [
       "Initial estimate and detailed cost plan",
       "Construction and building-services work",
       "Interior design and material selection",
-      "Yerevan and regional projects",
+      "Projects across Armenia",
     ],
   },
   services: {
@@ -232,9 +232,9 @@ const dictionary = {
           "If the scope or solution needs to change during work, we agree it with you first.",
       },
       {
-        title: "Working in Yerevan and the regions",
+        title: "Working across Armenia",
         description:
-          "We accept projects in Yerevan and across Armenia, taking account of the property location and scope.",
+          "We accept projects across Armenia, including Yerevan, taking account of the property location and scope.",
       },
     ],
   },
@@ -725,9 +725,9 @@ const dictionary = {
           "An initial range depends on the area, site, structural and building-services solutions, and selected completion level.",
       },
       {
-        question: "Do you work outside Yerevan?",
+        question: "Do you work across Armenia?",
         answer:
-          "We consider properties in Yerevan and the regions of Armenia. Site visits and logistics are confirmed for each project.",
+          "Yes. We work across Armenia, including Yerevan. Site visits and logistics are confirmed for each project.",
       },
       {
         question: "How do I start?",

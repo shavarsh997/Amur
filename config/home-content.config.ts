@@ -68,9 +68,9 @@ export const homeContent: Record<Locale, HomeContent> = {
     serviceArea: {
       enabled: true,
       label: "География работ",
-      title: "Ремонт и строительство в Ереване и регионах",
+      title: "Ремонт и строительство по всей Армении",
       description:
-        "Принимаем проекты квартир, частных домов и коммерческих помещений в Ереване и регионах Армении. Возможность выезда и условия зависят от объёма работ и расположения объекта.",
+        "Работаем с квартирами, частными домами и коммерческими помещениями по всей Армении, включая Ереван, Гюмри, Ванадзор, Дилижан и другие города. Возможность выезда и условия зависят от объёма работ и расположения объекта.",
       primaryCta: {
         label: "Заказать осмотр объекта",
         href: "/ru/contacts",
@@ -97,7 +97,7 @@ export const homeContent: Record<Locale, HomeContent> = {
         {
           id: "armenia",
           icon: "map",
-          title: "Выезд по Армении",
+          title: "Работаем по всей Армении",
           description: "По предварительному согласованию и с учетом логистики.",
           enabled: true,
         },
@@ -135,9 +135,9 @@ export const homeContent: Record<Locale, HomeContent> = {
     serviceArea: {
       enabled: true,
       label: "Service area",
-      title: "Renovation and construction in Yerevan and the regions",
+      title: "Renovation and construction across Armenia",
       description:
-        "We accept apartment, private home, and commercial-space projects in Yerevan and across Armenia. Visit availability and terms depend on the scope and property location.",
+        "We work on apartment, private home, and commercial-space projects across Armenia, including Yerevan, Gyumri, Vanadzor, Dilijan, and other cities. Visit availability and terms depend on the scope and property location.",
       primaryCta: {
         label: "Request a property survey",
         href: "/en/contacts",
@@ -164,7 +164,7 @@ export const homeContent: Record<Locale, HomeContent> = {
         {
           id: "armenia",
           icon: "map",
-          title: "Visits across Armenia",
+          title: "Working across Armenia",
           description: "By prior arrangement and subject to logistics.",
           enabled: true,
         },
@@ -202,9 +202,9 @@ export const homeContent: Record<Locale, HomeContent> = {
     serviceArea: {
       enabled: true,
       label: "Աշխատանքների աշխարհագրություն",
-      title: "Վերանորոգում և շինարարություն Երևանում ու մարզերում",
+      title: "Վերանորոգում և շինարարություն ամբողջ Հայաստանում",
       description:
-        "Ընդունում ենք բնակարանների, առանձնատների և առևտրային տարածքների նախագծեր Երևանում և Հայաստանի մարզերում։ Մեկնելու հնարավորությունն ու պայմանները կախված են աշխատանքի ծավալից և օբյեկտի գտնվելու վայրից։",
+        "Աշխատում ենք բնակարանների, առանձնատների և առևտրային տարածքների նախագծերի վրա ամբողջ Հայաստանում, ներառյալ Երևանում, Գյումրիում, Վանաձորում, Դիլիջանում և այլ քաղաքներում։ Մեկնելու հնարավորությունն ու պայմանները կախված են աշխատանքի ծավալից և օբյեկտի գտնվելու վայրից։",
       primaryCta: {
         label: "Պատվիրել օբյեկտի զննում",
         href: "/hy/contacts",
@@ -232,7 +232,7 @@ export const homeContent: Record<Locale, HomeContent> = {
         {
           id: "armenia",
           icon: "map",
-          title: "Մեկնում Հայաստանի մարզեր",
+          title: "Աշխատում ենք ամբողջ Հայաստանում",
           description: "Նախնական համաձայնությամբ և լոգիստիկայի հաշվառմամբ։",
           enabled: true,
         },

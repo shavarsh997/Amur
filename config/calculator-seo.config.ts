@@ -2,8 +2,8 @@ import type { Locale } from "@/types";
 
 export const calculatorSeo = {
   ru: {
-    title: "Калькулятор ремонта квартиры в Ереване",
-    description: "Рассчитайте предварительную стоимость ремонта квартиры в Ереване и узнайте, какие данные нужны для точной сметы.",
+    title: "Калькулятор ремонта квартиры в Ереване и по всей Армении",
+    description: "Рассчитайте предварительную стоимость ремонта квартиры в Ереване и по всей Армении и узнайте, какие данные нужны для точной сметы.",
     intro: "Этот калькулятор помогает получить первоначальный ориентир по стоимости ремонта. Он не заменяет осмотр: фактическая смета зависит от состояния квартиры, площади, инженерных работ, материалов и сложности решений.",
     faqTitle: "Как пользоваться калькулятором ремонта",
     faqs: [
@@ -12,8 +12,8 @@ export const calculatorSeo = {
     ],
   },
   en: {
-    title: "Apartment renovation cost calculator in Yerevan",
-    description: "Calculate an initial apartment renovation cost in Yerevan and learn what information is needed for an accurate estimate.",
+    title: "Apartment renovation cost calculator in Yerevan and across Armenia",
+    description: "Calculate an initial apartment renovation cost in Yerevan and across Armenia, and learn what information is needed for an accurate estimate.",
     intro: "This calculator provides an initial renovation-cost guide. It does not replace a survey: the actual estimate depends on property condition, area, building-services work, materials, and the complexity of the chosen solutions.",
     faqTitle: "How to use the renovation calculator",
     faqs: [
@@ -22,8 +22,8 @@ export const calculatorSeo = {
     ],
   },
   hy: {
-    title: "Բնակարանի վերանորոգման արժեքի հաշվիչ Երևանում",
-    description: "Հաշվեք բնակարանի վերանորոգման նախնական արժեքը Երևանում և իմացեք՝ ինչ տվյալներ են անհրաժեշտ ճշգրիտ նախահաշվի համար։",
+    title: "Բնակարանի վերանորոգման արժեքի հաշվիչ Երևանում և ամբողջ Հայաստանում",
+    description: "Հաշվեք բնակարանի վերանորոգման նախնական արժեքը Երևանում և ամբողջ Հայաստանում ու իմացեք՝ ինչ տվյալներ են անհրաժեշտ ճշգրիտ նախահաշվի համար։",
     intro: "Այս հաշվիչն օգնում է ստանալ վերանորոգման արժեքի նախնական կողմնորոշիչ։ Այն չի փոխարինում զննմանը․ փաստացի նախահաշիվը կախված է բնակարանի վիճակից, մակերեսից, ինժեներական աշխատանքներից, նյութերից և ընտրված լուծումների բարդությունից։",
     faqTitle: "Ինչպե՞ս օգտվել վերանորոգման հաշվիչից",
     faqs: [
