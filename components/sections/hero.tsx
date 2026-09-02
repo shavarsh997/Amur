@@ -1,11 +1,11 @@
-import { ArrowRight, Check } from "lucide-react";
+import { Check } from "lucide-react";
 import Image from "next/image";
 
-import { ContactTrigger } from "@/components/forms/contact-dialog";
 import { ButtonLink } from "@/components/ui/button-link";
 import { Container } from "@/components/ui/container";
 import { homeContent } from "@/config/home-content.config";
 import type { Dictionary, Locale } from "@/types";
+import { Button } from "@/components/ui/button";
 
 export function Hero({
   locale,
@@ -20,7 +20,7 @@ export function Hero({
       <Container className="py-4 sm:py-7 lg:py-8">
         <div className="relative overflow-hidden rounded-2xl border border-[var(--border)] bg-white">
           <div className="grid lg:min-h-[590px] lg:grid-cols-[0.9fr_1.1fr]">
-            <div className="relative z-10 flex flex-col justify-center px-5 py-9 sm:px-9 sm:py-14 lg:px-12 lg:py-16">
+            <div className="relative z-10 flex flex-col justify-center px-4 py-7 sm:px-9 sm:py-14 lg:px-12 lg:py-16">
               <p className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.13em] text-[var(--text-secondary)]">
                 <span
                   aria-hidden="true"
@@ -35,17 +35,18 @@ export function Hero({
                 {dictionary.hero.description}
               </p>
               <div className="w-full mt-7 grid grid-cols-2 gap-3 sm:flex sm:flex-row sm:items-center">
-                <ContactTrigger
-                  className="w-full sm:w-auto"
-                  label={dictionary.hero.primaryAction}
-                />
+                <Button
+                  className="w-full sm:w-auto text-left"
+                  variant="primary"
+                >
+                  {dictionary.hero.primaryAction}
+                </Button>
                 <ButtonLink
-                  className="w-full gap-2 sm:w-auto"
+                  className=" w-full gap-2 sm:w-auto"
                   href={`/${locale}/services`}
                   variant="secondary"
                 >
                   {dictionary.hero.secondaryAction}
-                  <ArrowRight aria-hidden="true" className="size-4" />
                 </ButtonLink>
               </div>
               <ul className="mt-8 grid gap-2.5 border-t border-[var(--border)] pt-5 text-sm font-medium leading-5 text-[var(--text-secondary)] sm:grid-cols-3 sm:gap-3">

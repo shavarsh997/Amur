@@ -25,7 +25,7 @@ const dictionary = {
     title: "Apartment renovation in Yerevan and across Armenia",
     description:
       "SHINEX delivers apartment renovation, house construction, interior design, and commercial-space work in Yerevan and across Armenia — from an initial estimate to handover.",
-    primaryAction: "Get an initial estimate",
+    primaryAction: "Get a consultation",
     secondaryAction: "View services",
     trustPoints: [
       "Initial estimate and detailed cost plan",
