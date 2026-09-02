@@ -31,7 +31,7 @@ export function Hero({
               <h1 className="mt-5 w-full break-words text-pretty text-[2.25rem] font-semibold leading-[1.14] tracking-[-0.055em] text-[var(--text-primary)] sm:mt-6 sm:text-[2.25rem] lg:text-[3rem]">
                 {dictionary.hero.title}
               </h1>
-              <p className="mt-5 max-w-xl text-[15px] leading-6 text-[var(--text-secondary)] sm:text-[17px] sm:leading-7">
+              <p className="mt-5 max-w-full text-[15px] leading-6 text-[var(--text-secondary)] sm:text-[17px] sm:leading-7">
                 {dictionary.hero.description}
               </p>
               <div className="w-full mt-7 grid grid-cols-2 gap-3 sm:flex sm:flex-row sm:items-center">
