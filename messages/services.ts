@@ -49,7 +49,7 @@ export const serviceTranslations = {
       shortDescription:
         "Строим частные дома: от изучения участка и проекта до фундамента, основных конструкций, кровли, инженерных систем и отделки.",
       fullDescription:
-        "Организуем и контролируем этапы строительства дома в Ереване и по всей Армении — от согласованного проекта до проверки и сдачи. Состав работ и стоимость зависят от участка, проекта и выбранной степени готовности.",
+        "Организуем и контролируем этапы строительства дома в Ереване и по всей Армении — от согласованного проекта до проверки и сдачи. Состав работ и стоимость зависят от участка, проекта и предусмотренного уровня работ и отделки.",
       includedWorks: [
         "Изучение участка и проекта",
         "Подготовительные и конструктивные работы",
@@ -72,14 +72,14 @@ export const serviceTranslations = {
         "Площадь и этажность",
         "Условия участка",
         "Конструктивные и инженерные решения",
-        "Степень готовности и отделка",
-        "Регион и логистика",
+        "Уровень работ и отделки",
+        "Расположение объекта и условия выезда",
       ],
       faq: [
         {
           question: "Как рассчитывается стоимость строительства дома?",
           answer:
-            "Предварительный диапазон зависит от площади, участка, конструкции, инженерных решений и выбранной степени готовности. Точная смета формируется после изучения задачи и имеющихся материалов.",
+            "Предварительный диапазон зависит от площади, участка, конструкции, инженерных решений и предусмотренного уровня работ и отделки. Точная смета формируется после уточнения требований проекта и изучения имеющихся материалов.",
         },
       ],
       primaryCta: "Посмотреть этапы строительства",
@@ -102,7 +102,7 @@ export const serviceTranslations = {
       shortDescription:
         "We build private homes from site and design review through foundations, main structure, roofing, building services, and finishes.",
       fullDescription:
-        "We organise and control each stage of a home build in Yerevan and across Armenia, from the agreed design to inspection and handover. The scope and cost depend on the site, design, and selected level of completion.",
+        "We organise and control each stage of a home build in Yerevan and across Armenia, from the agreed design to inspection and handover. The scope and cost depend on the site, design, and intended level of work and finishes.",
       includedWorks: [
         "Site and design review",
         "Preparation and structural work",
@@ -123,14 +123,14 @@ export const serviceTranslations = {
         "Area and number of floors",
         "Site conditions",
         "Structural and building-services solutions",
-        "Level of completion and finishes",
-        "Region and logistics",
+        "Level of work and finishes",
+        "Property location and travel arrangements",
       ],
       faq: [
         {
           question: "How is the cost of a home build calculated?",
           answer:
-            "An initial range depends on the area, site, structure, building services, and selected level of completion. A precise estimate is prepared after reviewing the brief and available information.",
+            "An initial range depends on the area, site, structure, building services, and intended level of work and finishes. A precise estimate is prepared after clarifying the project requirements and reviewing the available information.",
         },
       ],
       primaryCta: "View construction stages",
@@ -312,12 +312,12 @@ export const serviceTranslations = {
     hy: serviceContent({
       title: "Ինտերիերի դիզայն Երևանում և ամբողջ Հայաստանում",
       shortDescription:
-        "Ստեղծում ենք ֆունկցիոնալ և ամբողջական ինտերիերի լուծումներ՝ հատակագծային լուծումներով, ոճային կոնցեպտով, նյութերի ընտրությամբ, գծագրերով և իրականացման համար անհրաժեշտ փաստաթղթերով։",
+        "Ստեղծում ենք ֆունկցիոնալ և ամբողջական ինտերիերի լուծումներ՝ հատակագծային լուծումներով, ոճային հայեցակարգով, նյութերի ընտրությամբ, գծագրերով և իրականացման համար անհրաժեշտ փաստաթղթերով։",
       fullDescription:
-        "Դիզայն-նախագիծը օգնում է սկսել վերանորոգումը հստակ լուծումներով։ Հատակագծային լուծումը կազմակերպում է տարածքը, ինտերիերի կոնցեպտը սահմանում է ոճն ու նյութերը, իսկ աշխատանքային գծագրերը անհրաժեշտ են իրականացման համար։ 3D վիզուալիզացիան, կահույքի ընտրությունը և հեղինակային ուղեկցումը ներառվում են միայն համաձայնեցված փաթեթում։",
+        "Դիզայն-նախագիծը օգնում է սկսել վերանորոգումը հստակ լուծումներով։ Հատակագծային լուծումը կազմակերպում է տարածքը, ինտերիերի հայեցակարգը սահմանում է ոճն ու նյութերը, իսկ աշխատանքային գծագրերը անհրաժեշտ են իրականացման համար։ 3D վիզուալիզացիան, կահույքի ընտրությունը և հեղինակային ուղեկցումը ներառվում են միայն համաձայնեցված փաթեթում։",
       includedWorks: [
         "Հատակագծային լուծում՝ կահույքի և գոտիների տեղադրմամբ",
-        "Ինտերիերի կոնցեպտ և նյութերի ընտրություն",
+        "Ինտերիերի հայեցակարգ և նյութերի ընտրություն",
         "3D վիզուալիզացիա՝ համաձայնեցված փաթեթի դեպքում",
         "Աշխատանքային գծագրեր և իրականացման նյութեր",
       ],
@@ -327,7 +327,7 @@ export const serviceTranslations = {
       ],
       workTypes: [
         "Հատակագծային լուծում",
-        "Ինտերիերի կոնցեպտ",
+        "Ինտերիերի հայեցակարգ",
         "Դիզայն-նախագիծ",
         "Հեղինակային ուղեկցում՝ համաձայնեցված դեպքում",
       ],
@@ -340,14 +340,14 @@ export const serviceTranslations = {
         {
           question: "Ի՞նչ է ներառում դիզայն-նախագիծը",
           answer:
-            "Դիզայն-նախագիծը կարող է ներառել հատակագծային լուծում, ինտերիերի կոնցեպտ, նյութերի ընտրություն, 3D վիզուալիզացիա և աշխատանքային գծագրեր։ Կազմը հաստատում ենք նախքան աշխատանքների մեկնարկը։",
+            "Դիզայն-նախագիծը կարող է ներառել հատակագծային լուծում, ինտերիերի հայեցակարգ, նյութերի ընտրություն, 3D վիզուալիզացիա և աշխատանքային գծագրեր։ Կազմը հաստատում ենք նախքան աշխատանքների մեկնարկը։",
         },
       ],
       primaryCta: "Դիտել դիզայնի ծառայությունը",
       secondaryCta: "Քննարկել իմ նախագիծը",
       seoTitle: "Ինտերիերի դիզայն Երևանում և ամբողջ Հայաստանում | SHINEX",
       seoDescription:
-        "Բնակարանների, առանձնատների և առևտրային տարածքների ինտերիերի դիզայն Երևանում և ամբողջ Հայաստանում՝ հատակագիծ, կոնցեպտ, նյութեր և աշխատանքային գծագրեր։",
+        "Բնակարանների, առանձնատների և առևտրային տարածքների ինտերիերի դիզայն Երևանում և ամբողջ Հայաստանում՝ հատակագիծ, հայեցակարգ, նյութեր և աշխատանքային գծագրեր։",
       workflow: [
         {
           title: "Նախնական խորհրդատվություն և տվյալների հավաքագրում",
@@ -360,7 +360,7 @@ export const serviceTranslations = {
             "Առաջարկում ենք կահույքի, գոտիների և անցումների հարմար դասավորություն։",
         },
         {
-          title: "Ինտերիերի կոնցեպտ և նյութերի ընտրություն",
+          title: "Ինտերիերի հայեցակարգ և նյութերի ընտրություն",
           description:
             "Համաձայնեցնում ենք ոճը, գույները, նյութերն ու հիմնական կահույքի լուծումները։",
         },
@@ -428,7 +428,7 @@ export const serviceTranslations = {
       shortDescription:
         "Վերանորոգում և կառուցապատում ենք գրասենյակներ, խանութներ, սրահներ, ռեստորաններ և սպասարկման տարածքներ՝ հաշվի առնելով բիզնեսի աշխատանքը, ինժեներական պահանջներն ու տարածքի գործառույթը։",
       fullDescription:
-        "Կազմակերպում ենք առևտրային տարածքի վերանորոգումն ու կառուցապատումը՝ աշխատանքային գոտիների, հաճախորդների հոսքի և ինժեներական պահանջների հաշվառմամբ։ Նախքան մեկնարկը համաձայնեցնում ենք փուլերը, որպեսզի բիզնեսի աշխատանքի վրա ազդեցությունը հասկանալի լինի։",
+        "Կազմակերպում ենք առևտրային տարածքի վերանորոգումն ու կառուցապատումը՝ հաշվի առնելով աշխատանքային գոտիները, հաճախորդների հոսքը և ինժեներական պահանջները։ Նախքան մեկնարկը համաձայնեցնում ենք փուլերը, որպեսզի բիզնեսի աշխատանքի վրա ազդեցությունը հասկանալի լինի։",
       includedWorks: [
         "Օբյեկտի զննում և նախապատրաստում",
         "Շինարարական, ինժեներական և հարդարման աշխատանքներ",
@@ -471,11 +471,11 @@ export const serviceTranslations = {
       shortDescription:
         "Архитектурные решения, планировка здания и рабочая документация для подготовки к строительству.",
       fullDescription:
-        "Формируем решения с учётом задачи, участка, норм и последующей реализации, чтобы строительство опиралось на согласованную документацию.",
+        "Разрабатываем архитектурные решения с учётом цели проекта, особенностей участка, действующих норм и последующего строительства, чтобы строительство опиралось на согласованную документацию.",
       includedWorks: [
         "Сбор исходных данных",
         "Архитектурные и планировочные решения",
-        "Рабочие материалы в согласованном составе",
+        "Рабочие чертежи и проектная документация",
       ],
       suitableFor: [
         "Заказчикам, которым нужна обоснованная основа перед строительством или реконструкцией",
@@ -492,11 +492,11 @@ export const serviceTranslations = {
       shortDescription:
         "Architectural solutions, building layouts, and working documentation to prepare for construction.",
       fullDescription:
-        "We develop solutions around the brief, site, applicable requirements, and practical delivery so construction starts from agreed documentation.",
+        "We develop architectural solutions around the project purpose, site characteristics, applicable requirements, and future construction so work starts from agreed documentation.",
       includedWorks: [
         "Source-information collection",
         "Architectural and planning solutions",
-        "Agreed working materials",
+        "Working drawings and project documentation",
       ],
       suitableFor: [
         "Clients who need a sound design basis before construction or reconstruction",
@@ -572,13 +572,13 @@ export const serviceTranslations = {
         "Инженерные работы",
         "Сложность отделки",
         "Материалы и дизайн",
-        "Регион и логистика",
+        "Расположение объекта и условия выезда",
       ],
       faq: [
         {
           question: "От чего зависит стоимость ремонта?",
           answer:
-            "От площади, состояния помещения, объема демонтажа, инженерных работ, сложности отделки и выбранных материалов. Предварительный диапазон можно получить через калькулятор, а точная смета формируется после уточнения задачи и осмотра.",
+            "От площади, состояния помещения, объема демонтажа, инженерных работ, сложности отделки и выбранных материалов. Предварительный диапазон можно получить через калькулятор, а точная смета формируется после уточнения требований проекта и осмотра.",
         },
         {
           question: "Можно заказать отдельные этапы ремонта?",
@@ -592,7 +592,7 @@ export const serviceTranslations = {
       seoDescription:
         "Ремонт квартир и частных домов под ключ в Ереване и по всей Армении: осмотр, предварительная оценка и согласование этапов.",
       workflow: [
-        "Осмотр и обсуждение задачи",
+        "Осмотр и обсуждение требований проекта",
         "Планирование и предварительная смета",
         "Демонтаж и подготовка",
         "Инженерные и черновые работы",
@@ -641,7 +641,7 @@ export const serviceTranslations = {
         "Building-services work",
         "Finish complexity",
         "Materials and design",
-        "Region and logistics",
+        "Property location and travel arrangements",
       ],
       faq: [
         {

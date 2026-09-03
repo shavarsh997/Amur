@@ -128,7 +128,10 @@ export function Footer({ locale, dictionary }: FooterProps) {
               {companyConfig.contact.workingHours ? (
                 <p>{companyConfig.contact.workingHours}</p>
               ) : null}
-              <p>{companyConfig.contact.city} · Armenia</p>
+              <p>
+                {dictionary.footer.location ??
+                  `${companyConfig.contact.city} · Armenia`}
+              </p>
               {getSocialLinks().map(({ name, url }) => (
                 <a
                   className="block capitalize hover:text-[var(--brand-copper)]"

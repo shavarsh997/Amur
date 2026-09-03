@@ -70,7 +70,7 @@ export const homeContent: Record<Locale, HomeContent> = {
       label: "География работ",
       title: "Ремонт и строительство по всей Армении",
       description:
-        "Работаем с квартирами, частными домами и коммерческими помещениями по всей Армении, включая Ереван, Гюмри, Ванадзор, Дилижан и другие города. Возможность выезда и условия зависят от объёма работ и расположения объекта.",
+        "Работаем с квартирами, частными домами и коммерческими помещениями по всей Армении, включая Ереван, Гюмри, Ванадзор, Дилижан и другие города. Условия работ согласовываем с учётом расположения объекта и объёма работ.",
       primaryCta: {
         label: "Заказать осмотр объекта",
         href: "/ru/contacts",
@@ -98,7 +98,7 @@ export const homeContent: Record<Locale, HomeContent> = {
           id: "armenia",
           icon: "map",
           title: "Работаем по всей Армении",
-          description: "По предварительному согласованию и с учетом логистики.",
+          description: "Условия согласовываем с учётом расположения объекта.",
           enabled: true,
         },
       ],
@@ -137,7 +137,7 @@ export const homeContent: Record<Locale, HomeContent> = {
       label: "Service area",
       title: "Renovation and construction across Armenia",
       description:
-        "We work on apartment, private home, and commercial-space projects across Armenia, including Yerevan, Gyumri, Vanadzor, Dilijan, and other cities. Visit availability and terms depend on the scope and property location.",
+        "We work on apartment, private home, and commercial-space projects across Armenia, including Yerevan, Gyumri, Vanadzor, Dilijan, and other cities. Work terms are agreed based on the property location and scope.",
       primaryCta: {
         label: "Request a property survey",
         href: "/en/contacts",
@@ -165,7 +165,7 @@ export const homeContent: Record<Locale, HomeContent> = {
           id: "armenia",
           icon: "map",
           title: "Working across Armenia",
-          description: "By prior arrangement and subject to logistics.",
+          description: "Terms are agreed based on the property location.",
           enabled: true,
         },
       ],
@@ -232,7 +232,7 @@ export const homeContent: Record<Locale, HomeContent> = {
         {
           id: "armenia",
           icon: "map",
-          title: "Աշխատում ենք ամբողջ Հայաստանում",
+          title: "Աշխատանք Երևանում և մարզերում",
           description:
             "Աշխատանքի պայմանները նախապես համաձայնեցնում ենք՝ հաշվի առնելով օբյեկտի գտնվելու վայրը։",
           enabled: true,

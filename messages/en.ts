@@ -723,12 +723,12 @@ const dictionary = {
       {
         question: "How is the cost of house construction calculated?",
         answer:
-          "An initial range depends on the area, site, structural and building-services solutions, and selected completion level.",
+          "An initial range depends on the area, site, structural and building-services solutions, and the intended level of work and finishes.",
       },
       {
         question: "Do you work across Armenia?",
         answer:
-          "Yes. We work across Armenia, including Yerevan. Site visits and logistics are confirmed for each project.",
+          "Yes. We work across Armenia, including Yerevan. Work terms are agreed based on the property location and scope.",
       },
       {
         question: "How do I start?",
@@ -751,6 +751,7 @@ const dictionary = {
     contacts: "Contacts",
     rights: "All rights reserved.",
     privacy: "Privacy policy",
+    location: "Yerevan · Armenia",
   },
   about: {
     eyebrow: "About SHINEX",
@@ -759,7 +760,7 @@ const dictionary = {
       "SHINEX develops renovation and construction services in Armenia with an emphasis on clear organization, initial assessment, agreed stages, and convenient communication with clients.",
     storyTitle: "How the work is organized",
     story: [
-      "We begin by understanding the task, the space, and the expected result rather than starting with a pre-made promise.",
+      "We begin by understanding the project requirements, the space, and the expected result rather than starting with a pre-made promise.",
       "We shape the scope so the client can understand the stages, decision points, and each party's responsibilities.",
     ],
     valuesTitle: "Core areas",
@@ -827,7 +828,7 @@ const dictionary = {
       "Map placeholder — the exact address will appear after contact details are replaced.",
     methodsTitle: "Choose a convenient way to contact us",
     methodsDescription:
-      "Call, write in a messenger, or send us a message through the website.",
+      "Call, message us on WhatsApp, or send us a message through the website.",
     formTitle: "Send a message",
     formDescription:
       "We need your contact details and a short description to respond to your enquiry.",
@@ -867,12 +868,12 @@ const dictionary = {
   },
   blog: { label: "Blog", title: "Renovation guides for Armenia", description: "Reviewed guides to preparation, timing, and renovation estimates.", metadataDescription: "Practical SHINEX guides to renovation planning, estimates, and property preparation across Armenia." },
   seo: {
-    serviceCoverage: { title: "Working across Armenia", description: "We take projects in Yerevan, Gyumri, Vanadzor, Dilijan, and other Armenian cities. Visit availability and terms are confirmed for each property and scope." },
+    serviceCoverage: { title: "Working across Armenia", description: "We work in Yerevan, Gyumri, Vanadzor, Dilijan, and other Armenian cities. Work terms are agreed based on the property location and scope." },
     calculatorEstimateNotice: "The calculator provides an initial guide. A precise estimate follows a property survey.", faqTitle: "Frequently asked questions", relatedPlanningTitle: "Planning and pricing", calculatorPriceLink: "Apartment renovation prices in Yerevan",
     fallbackFaqs: [
-      { question: "How can I get an accurate estimate?", answer: "An initial guide is available online; an accurate estimate is prepared after discussing the project and surveying the property." },
+      { question: "How can I get an accurate estimate?", answer: "An initial guide is available online; an accurate estimate is prepared after clarifying the project requirements and surveying the property." },
       { question: "Is a property survey needed?", answer: "A survey helps assess the starting condition, clarify the work scope, and prepare a realistic estimate." },
-      { question: "Can the work scope be agreed before the start?", answer: "Yes. Before work starts, we discuss the tasks, scope, and sequence of stages to agree a suitable project format." },
+      { question: "Can the work scope be agreed before the start?", answer: "Yes. Before work starts, we discuss the project requirements, scope, and sequence of stages to agree a suitable project format." },
       { question: "What information is needed for an initial estimate?", answer: "It is helpful to provide the property type and area, the work you need, plus a plan or photographs if available." },
     ],
   },

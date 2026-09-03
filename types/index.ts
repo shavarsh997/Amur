@@ -457,6 +457,7 @@ export interface Dictionary {
     contacts: string;
     rights: string;
     privacy: string;
+    location?: string;
   };
   about: {
     eyebrow: string;
