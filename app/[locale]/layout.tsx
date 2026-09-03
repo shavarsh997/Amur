@@ -82,7 +82,7 @@ export default async function LocaleLayout({
             className="sr-only fixed left-4 top-4 z-[200] rounded-md bg-white px-4 py-2 font-semibold text-[var(--text-primary)] shadow focus:not-sr-only focus:outline-2 focus:outline-offset-2 focus:outline-[var(--button-primary)]"
             href="#main-content"
           >
-            Անցնել հիմնական բովանդակությանը
+            {dictionary.common.skipToContent}
           </a>
           <Header dictionary={dictionary} locale={locale} />
           <main className="flex-1 pb-20 sm:pb-0" id="main-content">

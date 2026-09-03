@@ -160,9 +160,18 @@ export function calculateConstructionEstimate(
   }
 
   if (area && values.calculationType === "renovation") {
+    const usesSplitRenovationParameters = Boolean(
+      copy.renovation.types && copy.renovation.finishLevels
+    );
+    const renovationType = config.renovation.types[values.renovationType];
+    const finishLevel = config.renovation.finishLevels[values.finishLevel];
     const level = config.renovation.levels[values.renovationLevel];
     const condition = config.renovation.conditions[values.renovationCondition];
-    renovationTotal = area * level.pricePerSquareMeter * condition.multiplier;
+    const renovationPricePerSquareMeter = usesSplitRenovationParameters
+      ? renovationType.pricePerSquareMeter * finishLevel.multiplier
+      : level.pricePerSquareMeter;
+    renovationTotal =
+      area * renovationPricePerSquareMeter * condition.multiplier;
     wallCalculation = calculateInternalWallArea({
       floorArea: area,
       ceilingHeight: numberValue(values.ceilingHeight),
@@ -204,10 +213,20 @@ export function calculateConstructionEstimate(
       lines.push({
         label: copy.result.surfaceWorks[surface],
         amount,
-        note: copy.result.renovationLine.replace(
-          "{level}",
-          copy.renovation.levels[values.renovationLevel]
-        ),
+        note: usesSplitRenovationParameters
+          ? copy.result.renovationParametersLine
+              ?.replace(
+                "{type}",
+                copy.renovation.types?.[values.renovationType] ?? ""
+              )
+              .replace(
+                "{finishLevel}",
+                copy.renovation.finishLevels?.[values.finishLevel] ?? ""
+              )
+          : copy.result.renovationLine.replace(
+              "{level}",
+              copy.renovation.levels[values.renovationLevel]
+            ),
         quantity,
         unit: "squareMeter",
         pricePerUnit: quantity ? amount / quantity : 0,

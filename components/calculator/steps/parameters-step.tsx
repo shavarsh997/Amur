@@ -7,12 +7,14 @@ import { OptionWithArea } from "@/components/calculator/form/option-with-area";
 import { StepTitle } from "@/components/calculator/form/step-title";
 import type { CalculatorFormValues } from "@/components/calculator/types";
 import { calculatorFieldDomId } from "@/components/calculator/types";
-import type { Dictionary } from "@/types";
+import type { Dictionary, Locale } from "@/types";
 
 export function ParametersStep({
   copy,
+  locale,
 }: {
   copy: Dictionary["constructionCalculator"];
+  locale: Locale;
 }) {
   const { control, watch } = useFormContext<CalculatorFormValues>();
   const calculationType = watch("calculationType");
@@ -93,12 +95,33 @@ export function ParametersStep({
               name="renovationCondition"
               options={copy.renovation.conditions}
             />
-            <ChoiceGroup
-              control={control}
-              label={copy.fields.renovationLevel}
-              name="renovationLevel"
-              options={copy.renovation.levels}
-            />
+            {locale === "hy" &&
+            copy.fields.renovationType &&
+            copy.fields.finishLevel &&
+            copy.renovation.types &&
+            copy.renovation.finishLevels ? (
+              <div className="grid gap-5">
+                <ChoiceGroup
+                  control={control}
+                  label={copy.fields.renovationType}
+                  name="renovationType"
+                  options={copy.renovation.types}
+                />
+                <ChoiceGroup
+                  control={control}
+                  label={copy.fields.finishLevel}
+                  name="finishLevel"
+                  options={copy.renovation.finishLevels}
+                />
+              </div>
+            ) : (
+              <ChoiceGroup
+                control={control}
+                label={copy.fields.renovationLevel}
+                name="renovationLevel"
+                options={copy.renovation.levels}
+              />
+            )}
           </div>
           <div className="grid gap-5 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_minmax(0,1.4fr)]">
             <NumberField

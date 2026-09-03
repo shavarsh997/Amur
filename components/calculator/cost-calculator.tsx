@@ -114,7 +114,7 @@ export function CostCalculator({
             selectedQuickScenario={selectedQuickScenario}
           />
 
-          <ParametersStep copy={copy} />
+          <ParametersStep copy={copy} locale={locale} />
 
           {isConstruction ? <ConstructionExtrasStep copy={copy} /> : null}
 

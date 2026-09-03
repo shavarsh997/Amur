@@ -4,7 +4,6 @@ import { notFound } from "next/navigation";
 import { CostCalculator } from "@/components/calculator/cost-calculator";
 import { Container } from "@/components/ui/container";
 import { FAQAccordion } from "@/components/ui/faq-accordion";
-import { calculatorSeo } from "@/config/calculator-seo.config";
 import { getFaqsWithMinimum } from "@/lib/faq";
 import { getDictionary, isLocale } from "@/lib/i18n";
 import { buildMetadata } from "@/lib/metadata";
@@ -16,7 +15,8 @@ type Props = { params: Promise<{ locale: string }> };
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   if (!isLocale(locale)) notFound();
-  const copy = calculatorSeo[locale];
+  const dictionary = await getDictionary(locale);
+  const copy = dictionary.calculatorPage;
 
   return buildMetadata({
     locale,
@@ -31,11 +31,8 @@ export default async function CalculatorPage({ params }: Props) {
   if (!isLocale(locale)) notFound();
   const dictionary = await getDictionary(locale);
   const copy = dictionary.calculator;
-  const seo = calculatorSeo[locale];
-  const faqs = getFaqsWithMinimum(
-    seo.faqs.map(([question, answer]) => ({ question, answer })),
-    locale
-  );
+  const seo = dictionary.calculatorPage;
+  const faqs = getFaqsWithMinimum(seo.faqs, dictionary.seo.fallbackFaqs);
 
   return (
     <Container className="py-10 sm:py-16">
@@ -80,11 +77,7 @@ export default async function CalculatorPage({ params }: Props) {
             className="font-semibold text-[var(--text-primary)] underline"
             href={`/${locale}/prices`}
           >
-            {locale === "ru"
-              ? "Цены на ремонт квартир в Ереване"
-              : locale === "en"
-                ? "Apartment renovation prices in Yerevan"
-                : "Բնակարանների վերանորոգման գներ Երևանում"}
+            {dictionary.seo.calculatorPriceLink}
           </Link>
         </p>
       </section>

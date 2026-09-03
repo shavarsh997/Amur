@@ -19,6 +19,8 @@ export const initialValues: CalculatorFormValues = {
   renovationObjectType: "apartment",
   renovationCondition: "newWithoutFinish",
   renovationLevel: "standard",
+  renovationType: "cosmetic",
+  finishLevel: "standard",
   renovationExtras: [],
   heatedFloorArea: "",
   doorsCount: "0",

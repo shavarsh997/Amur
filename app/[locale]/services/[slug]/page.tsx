@@ -77,7 +77,10 @@ export default async function ServiceDetailPage({ params }: Props) {
   }
   if (!service) notFound();
   const copy = dictionary.services.detail;
-  const faqs = getFaqsWithMinimum(service.content.faq, locale);
+  const faqs = getFaqsWithMinimum(
+    service.content.faq,
+    dictionary.seo.fallbackFaqs
+  );
   const primaryCta = service.content.primaryCta ?? copy.requestEstimate;
   const relatedSeoPages = seoLandingPages.filter((page) =>
     (page.relatedServiceSlugs as readonly string[]).includes(service.slug)
@@ -238,11 +241,7 @@ export default async function ServiceDetailPage({ params }: Props) {
             {relatedSeoPages.length ? (
               <section>
                 <h2 className="text-2xl font-semibold tracking-[-0.03em] text-[var(--text-primary)]">
-                  {locale === "ru"
-                    ? "Полезные материалы и расчёт"
-                    : locale === "en"
-                      ? "Planning and pricing"
-                      : "Պլանավորում և հաշվարկ"}
+                  {dictionary.seo.relatedPlanningTitle}
                 </h2>
                 <div className="mt-5 grid gap-3 md:grid-cols-2">
                   {relatedSeoPages.map((page) => (

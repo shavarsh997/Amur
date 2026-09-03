@@ -1,5 +1,7 @@
 import "server-only";
 
+import type { Dictionary } from "@/types";
+
 export type LeadInput = {
   objectType: string;
   area: number;
@@ -28,30 +30,36 @@ function getRequiredEnv(
   return value;
 }
 
-function formatLeadMessage(lead: LeadInput): string {
+function formatLeadMessage(
+  lead: LeadInput,
+  labels: Dictionary["leadNotification"]
+): string {
   const lines = [
-    "Новая заявка с сайта",
+    labels.title,
     "",
-    `Имя: ${lead.name}`,
-    `Телефон: ${lead.phone}`,
-    `Тип объекта: ${lead.objectType}`,
-    `Площадь: ${lead.area} м²`,
-    `Регион: ${lead.region}`,
-    `Вид работ: ${lead.workType}`,
+    `${labels.name}: ${lead.name}`,
+    `${labels.phone}: ${lead.phone}`,
+    `${labels.objectType}: ${lead.objectType}`,
+    `${labels.area}: ${lead.area} м²`,
+    `${labels.region}: ${lead.region}`,
+    `${labels.workType}: ${lead.workType}`,
   ];
 
   if (lead.options.length > 0) {
-    lines.push(`Дополнительно: ${lead.options.join(", ")}`);
+    lines.push(`${labels.options}: ${lead.options.join(", ")}`);
   }
 
   if (lead.comment) {
-    lines.push("", `Комментарий: ${lead.comment}`);
+    lines.push("", `${labels.comment}: ${lead.comment}`);
   }
 
   return lines.join("\n");
 }
 
-export async function submitLead(lead: LeadInput): Promise<void> {
+export async function submitLead(
+  lead: LeadInput,
+  labels: Dictionary["leadNotification"]
+): Promise<void> {
   const token = getRequiredEnv("TELEGRAM_BOT_TOKEN");
   const chatId = getRequiredEnv("TELEGRAM_CHAT_ID");
   const response = await fetch(
@@ -61,7 +69,7 @@ export async function submitLead(lead: LeadInput): Promise<void> {
       headers: { "content-type": "application/json" },
       body: JSON.stringify({
         chat_id: chatId,
-        text: formatLeadMessage(lead),
+        text: formatLeadMessage(lead, labels),
       }),
       cache: "no-store",
     }

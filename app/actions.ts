@@ -93,16 +93,19 @@ export async function submitLeadAction(
   }
 
   try {
-    await submitLead({
-      objectType,
-      area,
-      region,
-      workType,
-      options,
-      name,
-      phone,
-      comment,
-    });
+    await submitLead(
+      {
+        objectType,
+        area,
+        region,
+        workType,
+        options,
+        name,
+        phone,
+        comment,
+      },
+      dictionary.leadNotification
+    );
 
     return { status: "success", message: copy.success, errors: {} };
   } catch {

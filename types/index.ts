@@ -52,6 +52,7 @@ export interface Dictionary {
   metadata: {
     title: string;
     description: string;
+    manifestDescription: string;
   };
   nav: {
     home: string;
@@ -319,6 +320,8 @@ export interface Dictionary {
       terraceArea: string;
       currentCondition: string;
       renovationLevel: string;
+      renovationType?: string;
+      finishLevel?: string;
       distance: string;
       distanceHint: string;
       heatedFloorArea: string;
@@ -360,6 +363,8 @@ export interface Dictionary {
         string
       >;
       levels: Record<"cosmetic" | "standard" | "capital" | "premium", string>;
+      types?: Record<"cosmetic" | "capital" | "complete", string>;
+      finishLevels?: Record<"standard" | "high" | "premium", string>;
       extras: Record<
         "demolition" | "electrical" | "plumbing" | "heatedFloor" | "doors",
         string
@@ -394,6 +399,7 @@ export interface Dictionary {
       constructionIncrease: string;
       distanceNote: string;
       renovationLine: string;
+      renovationParametersLine?: string;
       loading: string;
       workBreakdownTitle: string;
       renovationScopeTitle: string;
@@ -496,6 +502,38 @@ export interface Dictionary {
       paragraphs: string[];
     }>;
   };
+  blog: {
+    label: string;
+    title: string;
+    description: string;
+    metadataDescription: string;
+  };
+  seo: {
+    serviceCoverage: LocalizedText;
+    calculatorEstimateNotice: string;
+    faqTitle: string;
+    relatedPlanningTitle: string;
+    calculatorPriceLink: string;
+    fallbackFaqs: FAQ[];
+  };
+  calculatorPage: {
+    title: string;
+    description: string;
+    intro: string;
+    faqTitle: string;
+    faqs: FAQ[];
+  };
+  leadNotification: {
+    title: string;
+    name: string;
+    phone: string;
+    objectType: string;
+    area: string;
+    region: string;
+    workType: string;
+    options: string;
+    comment: string;
+  };
   common: {
     home: string;
     back: string;
@@ -511,6 +549,8 @@ export interface Dictionary {
     notFoundDescription: string;
     returnHome: string;
     breadcrumbs: string;
+    skipToContent: string;
+    website: string;
     errors: {
       required: string;
       invalidEmail: string;

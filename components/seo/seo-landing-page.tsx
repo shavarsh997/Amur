@@ -30,7 +30,7 @@ export function SeoLandingPage({
   dictionary: Dictionary;
 }) {
   const { content } = page;
-  const faqs = getFaqsWithMinimum(content.faqs, locale);
+  const faqs = getFaqsWithMinimum(content.faqs, dictionary.seo.fallbackFaqs);
   const href = `/${locale}/${getSeoLandingPath(page)}`;
   const relatedServices = getActiveServices(locale).filter((service) =>
     (page.relatedServiceSlugs as readonly string[]).includes(service.slug)
@@ -52,24 +52,7 @@ export function SeoLandingPage({
       : []),
     { label: content.title },
   ];
-  const serviceCoverage =
-    locale === "ru"
-      ? {
-          title: "Работаем по всей Армении",
-          description:
-            "Берём проекты в Ереване, Гюмри, Ванадзоре, Дилижане и других городах Армении. Возможность выезда и условия уточняем по объекту и объёму работ.",
-        }
-      : locale === "en"
-        ? {
-            title: "Working across Armenia",
-            description:
-              "We take projects in Yerevan, Gyumri, Vanadzor, Dilijan, and other Armenian cities. Visit availability and terms are confirmed for each property and scope.",
-          }
-        : {
-            title: "Աշխատում ենք ամբողջ Հայաստանում",
-            description:
-              "Ընդունում ենք նախագծեր Երևանում, Գյումրիում, Վանաձորում, Դիլիջանում և Հայաստանի այլ քաղաքներում։ Մեկնելու հնարավորությունն ու պայմանները ճշտում ենք ըստ օբյեկտի և աշխատանքի ծավալի։",
-          };
+  const serviceCoverage = dictionary.seo.serviceCoverage;
 
   return (
     <>
@@ -162,11 +145,7 @@ export function SeoLandingPage({
                 {content.calculatorLabel}
               </h2>
               <p className="mt-3 max-w-2xl leading-7 text-[var(--text-secondary)]">
-                {locale === "ru"
-                  ? "Калькулятор даёт предварительный ориентир. Точная смета формируется после осмотра объекта."
-                  : locale === "en"
-                    ? "The calculator provides an initial guide. A precise estimate follows a property survey."
-                    : "Հաշվիչը հնարավորություն է տալիս ստանալ նախնական արժեքի հաշվարկ։ Ճշգրիտ նախահաշիվը կազմվում է օբյեկտի զննումից հետո։"}
+                {dictionary.seo.calculatorEstimateNotice}
               </p>
               <div className="mt-6 flex flex-wrap gap-3">
                 <ButtonLink href={`/${locale}/calculator`}>
@@ -178,7 +157,7 @@ export function SeoLandingPage({
             {faqs.length ? (
               <section>
                 <h2 className="text-2xl font-semibold tracking-[-0.035em] text-[var(--text-primary)] sm:text-3xl">
-                  FAQ
+                {dictionary.seo.faqTitle}
                 </h2>
                 <div className="mt-6">
                   <FAQAccordion items={faqs} />

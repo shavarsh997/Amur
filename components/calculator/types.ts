@@ -3,10 +3,12 @@ import type {
   ConstructionMaterial,
   ConstructionPackage,
   DesignPackage,
+  FinishLevel,
   HouseShape,
   RenovationCondition,
   RenovationExtra,
   RenovationLevel,
+  RenovationType,
   RenovationObjectType,
   LayoutDensity,
   WallWork,
@@ -30,6 +32,8 @@ export type ConstructionCalculatorValues = {
   distanceKm: string;
   renovationCondition: RenovationCondition;
   renovationLevel: RenovationLevel;
+  renovationType: RenovationType;
+  finishLevel: FinishLevel;
   renovationExtras: RenovationExtra[];
   heatedFloorArea: string;
   doorsCount: string;

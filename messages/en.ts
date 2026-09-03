@@ -7,6 +7,7 @@ const dictionary = {
     title: "Apartment renovation in Yerevan and across Armenia — SHINEX",
     description:
       "SHINEX provides apartment renovation, house construction, interior design, and commercial-space work in Yerevan and across Armenia.",
+    manifestDescription: "Apartment and house renovation, construction, and interior design in Armenia.",
   },
   nav: {
     home: "Home",
@@ -864,6 +865,25 @@ const dictionary = {
       },
     ],
   },
+  blog: { label: "Blog", title: "Renovation guides for Armenia", description: "Reviewed guides to preparation, timing, and renovation estimates.", metadataDescription: "Practical SHINEX guides to renovation planning, estimates, and property preparation across Armenia." },
+  seo: {
+    serviceCoverage: { title: "Working across Armenia", description: "We take projects in Yerevan, Gyumri, Vanadzor, Dilijan, and other Armenian cities. Visit availability and terms are confirmed for each property and scope." },
+    calculatorEstimateNotice: "The calculator provides an initial guide. A precise estimate follows a property survey.", faqTitle: "Frequently asked questions", relatedPlanningTitle: "Planning and pricing", calculatorPriceLink: "Apartment renovation prices in Yerevan",
+    fallbackFaqs: [
+      { question: "How can I get an accurate estimate?", answer: "An initial guide is available online; an accurate estimate is prepared after discussing the project and surveying the property." },
+      { question: "Is a property survey needed?", answer: "A survey helps assess the starting condition, clarify the work scope, and prepare a realistic estimate." },
+      { question: "Can the work scope be agreed before the start?", answer: "Yes. Before work starts, we discuss the tasks, scope, and sequence of stages to agree a suitable project format." },
+      { question: "What information is needed for an initial estimate?", answer: "It is helpful to provide the property type and area, the work you need, plus a plan or photographs if available." },
+    ],
+  },
+  calculatorPage: {
+    title: "Apartment renovation cost calculator in Yerevan and across Armenia", description: "Calculate an initial apartment renovation cost in Yerevan and across Armenia, and learn what information is needed for an accurate estimate.", intro: "This calculator provides an initial renovation-cost guide. It does not replace a survey: the actual estimate depends on property condition, area, building-services work, materials, and the complexity of the chosen solutions.", faqTitle: "How to use the renovation calculator",
+    faqs: [
+      { question: "How accurate is the result?", answer: "The result is for initial planning. A precise estimate can be prepared after a survey and agreement on the work scope." },
+      { question: "What should I prepare for an estimate?", answer: "Choose the property type, area, district, and desired work. A plan and current-condition photos help refine the calculation in a follow-up discussion." },
+    ],
+  },
+  leadNotification: { title: "New website enquiry", name: "Name", phone: "Phone", objectType: "Property type", area: "Area", region: "Region", workType: "Work type", options: "Additional options", comment: "Comment" },
   common: {
     home: "Home",
     back: "Back",
@@ -880,6 +900,8 @@ const dictionary = {
       "The address may have changed or the page may no longer be available.",
     returnHome: "Return home",
     breadcrumbs: "Breadcrumbs",
+    skipToContent: "Skip to main content",
+    website: "Website",
     errors: {
       required: "Complete this required field.",
       invalidEmail: "Enter a valid email address.",

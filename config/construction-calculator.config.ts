@@ -103,6 +103,16 @@ export const constructionCalculatorConfig = {
       capital: { pricePerSquareMeter: 170_000 },
       premium: { pricePerSquareMeter: 280_000 },
     },
+    types: {
+      cosmetic: { pricePerSquareMeter: 50_000 },
+      capital: { pricePerSquareMeter: 120_000 },
+      complete: { pricePerSquareMeter: 180_000 },
+    },
+    finishLevels: {
+      standard: { multiplier: 1 },
+      high: { multiplier: 1.18 },
+      premium: { multiplier: 1.4 },
+    },
     extras: {
       demolition: { pricePerSquareMeter: 10_000 },
       electrical: { pricePerSquareMeter: 15_000 },
@@ -132,6 +142,10 @@ export type RenovationCondition =
   keyof typeof constructionCalculatorConfig.renovation.conditions;
 export type RenovationLevel =
   keyof typeof constructionCalculatorConfig.renovation.levels;
+export type RenovationType =
+  keyof typeof constructionCalculatorConfig.renovation.types;
+export type FinishLevel =
+  keyof typeof constructionCalculatorConfig.renovation.finishLevels;
 export type DesignPackage = keyof typeof constructionCalculatorConfig.design;
 export type RenovationExtra =
   keyof typeof constructionCalculatorConfig.renovation.extras;

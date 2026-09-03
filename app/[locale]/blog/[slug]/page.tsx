@@ -31,7 +31,7 @@ export default async function BlogArticlePage({ params }: Props) {
   if (!article) notFound();
   const dictionary = await getDictionary(locale);
   const copy = article.translations[locale];
-  const breadcrumbs = [{ label: dictionary.common.home, href: `/${locale}` }, { label: "Blog", href: `/${locale}/blog` }, { label: copy.title }];
+  const breadcrumbs = [{ label: dictionary.common.home, href: `/${locale}` }, { label: dictionary.blog.label, href: `/${locale}/blog` }, { label: copy.title }];
   const articleJsonLd = { "@context": "https://schema.org", "@type": "Article", headline: copy.title, description: copy.metaDescription, datePublished: article.publishedAt, ...(article.updatedAt ? { dateModified: article.updatedAt } : {}), author: { "@type": "Person", name: article.author.name }, publisher: { "@id": getAbsoluteUrl("/#organization") }, mainEntityOfPage: getAbsoluteUrl(`/${locale}/blog/${slug}`), inLanguage: locale === "hy" ? "hy-AM" : locale === "ru" ? "ru-AM" : "en" };
   return <>
     <script dangerouslySetInnerHTML={{ __html: serializeJsonLd(articleJsonLd) }} type="application/ld+json" />

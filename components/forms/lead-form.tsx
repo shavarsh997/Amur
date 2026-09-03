@@ -294,7 +294,7 @@ export function LeadForm({
 
       <div className="flex flex-col items-start gap-3 md:col-span-2">
         <div aria-hidden="true" className="hidden">
-          <label htmlFor={fieldId("website")}>Website</label>
+          <label htmlFor={fieldId("website")}>{dictionary.common.website}</label>
           <input
             autoComplete="off"
             id={fieldId("website")}
