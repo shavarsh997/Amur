@@ -54,8 +54,10 @@ const checks = [
   ],
   [
     "calculator has server-rendered SEO content",
-    read("app/[locale]/calculator/page.tsx").includes("calculatorSeo") &&
-      existsSync("config/calculator-seo.config.ts"),
+    read("app/[locale]/calculator/page.tsx").includes("calculatorPage") &&
+      read("messages/ru.ts").includes("calculatorPage:") &&
+      read("messages/en.ts").includes("calculatorPage:") &&
+      read("messages/hy.ts").includes("calculatorPage:"),
   ],
   [
     "blog sitemap only uses reviewed content",
