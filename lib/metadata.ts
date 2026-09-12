@@ -47,13 +47,21 @@ export function createPageMetadata({
     ? image.startsWith("http")
       ? image
       : getAbsoluteUrl(image)
-    : undefined;
+    : getAbsoluteUrl("/share-image");
 
   return {
     metadataBase: new URL(getSiteOrigin()),
     title: { absolute: brandedTitle },
     description,
-    ...(noIndex ? { robots: { index: false, follow: false } } : {}),
+    ...(noIndex
+      ? {
+          robots: {
+            index: false,
+            follow: true,
+            googleBot: { index: false, follow: true },
+          },
+        }
+      : {}),
     alternates: {
       canonical,
       languages: {
@@ -75,9 +83,8 @@ export function createPageMetadata({
         ? [
             {
               url: absoluteImage,
-              alt: imageAlt ?? title,
-              width: 1200,
-              height: 630,
+              alt: image ? (imageAlt ?? title) : companyConfig.brand.name,
+              ...(!image ? { width: 1200, height: 630 } : {}),
             },
           ]
         : undefined,

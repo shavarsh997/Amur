@@ -116,3 +116,28 @@ export function getServiceJsonLd({
     provider: { "@id": getAbsoluteUrl("/#organization") },
   };
 }
+
+export function getWebPageJsonLd({
+  locale,
+  name,
+  description,
+  pathname,
+}: {
+  locale: Locale;
+  name: string;
+  description: string;
+  pathname: string;
+}): JsonLd {
+  const url = getAbsoluteUrl(`/${locale}/${pathname.replace(/^\//, "")}`);
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${url}#webpage`,
+    url,
+    name,
+    description,
+    inLanguage: locale,
+    isPartOf: { "@id": getAbsoluteUrl("/#website") },
+    publisher: { "@id": getAbsoluteUrl("/#organization") },
+  };
+}

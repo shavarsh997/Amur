@@ -5,10 +5,7 @@ import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { ServiceCard } from "@/components/ui/service-card";
 import { getActiveServices } from "@/config/services.config";
-import {
-  getSeoLandingPath,
-  seoLandingPages,
-} from "@/config/seo-landing-pages.config";
+import { ServiceGuides } from "@/components/sections/service-guides";
 import type { Dictionary, Locale } from "@/types";
 
 export function ServicesSection({
@@ -49,22 +46,7 @@ export function ServicesSection({
               />
             ))}
         </div>
-        <div className="mt-5 grid gap-3 md:grid-cols-3">
-          {seoLandingPages.map((page) => (
-            <Link
-              className="rounded-xl border border-[var(--border)] bg-white p-5 transition hover:border-[var(--brand-copper)]"
-              href={`/${locale}/${getSeoLandingPath(page)}`}
-              key={page.slug}
-            >
-              <h3 className="font-semibold text-[var(--text-primary)]">
-                {page.translations[locale].title}
-              </h3>
-              <p className="mt-2 text-sm leading-6 text-[var(--text-secondary)]">
-                {page.translations[locale].description}
-              </p>
-            </Link>
-          ))}
-        </div>
+        <ServiceGuides locale={locale} />
       </Container>
     </section>
   );

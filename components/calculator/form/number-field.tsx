@@ -43,12 +43,10 @@ export function NumberFieldInput({
     : "mt-2 min-h-12 w-full rounded-xl border border-[var(--border)] bg-white px-3 text-base font-medium text-[var(--text-primary)] outline-none transition focus:border-[var(--text-primary)] focus:ring-2 focus:ring-black/5";
 
   return (
-    <label
-      className="block text-sm font-semibold text-[var(--text-primary)]"
-      htmlFor={fieldId ?? name}
-      id={fieldId}
-    >
-      {label}
+    <div className="text-sm font-semibold text-[var(--text-primary)]">
+      <label className="block" htmlFor={fieldId ?? name}>
+        {label}
+      </label>
       <input
         aria-describedby={error ? errorId : undefined}
         aria-invalid={Boolean(error)}
@@ -78,7 +76,7 @@ export function NumberFieldInput({
           {hint}
         </span>
       ) : null}
-    </label>
+    </div>
   );
 }
 

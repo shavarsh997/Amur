@@ -10,7 +10,8 @@
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "seo:check": "node scripts/seo-check.mjs"
+    "seo:check": "node scripts/seo-check.mjs",
+    "calculator:check": "node scripts/calculator-check.mjs"
   },
   "dependencies": {
     "lucide-react": "^1.26.0",

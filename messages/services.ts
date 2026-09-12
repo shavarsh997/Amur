@@ -77,9 +77,19 @@ export const serviceTranslations = {
       ],
       faq: [
         {
-          question: "Как рассчитывается стоимость строительства дома?",
+          question: "С чего начать, если есть участок, но нет проекта?",
           answer:
-            "Предварительный диапазон зависит от площади, участка, конструкции, инженерных решений и предусмотренного уровня работ и отделки. Точная смета формируется после уточнения требований проекта и изучения имеющихся материалов.",
+            "Подготовьте данные об участке и желаемой площади дома. Сначала нужно определить требования к дому и состав проектных работ, затем оценивать строительные этапы.",
+        },
+        {
+          question: "Можно ли разделить строительство на этапы?",
+          answer:
+            "Этапы определяются проектом и технологической последовательностью. Заранее обсуждаем, в каком состоянии завершить очередной этап и что потребуется для продолжения.",
+        },
+        {
+          question: "Что входит в полный цикл строительства?",
+          answer:
+            "Перечень может включать подготовку участка, фундамент, несущие конструкции, стены, кровлю, инженерные системы и отделку. Проектирование, материалы и уровень готовности фиксируются отдельно в составе проекта.",
         },
       ],
       primaryCta: "Посмотреть этапы строительства",
@@ -128,9 +138,19 @@ export const serviceTranslations = {
       ],
       faq: [
         {
-          question: "How is the cost of a home build calculated?",
+          question: "Where do I start if I have land but no design?",
           answer:
-            "An initial range depends on the area, site, structure, building services, and intended level of work and finishes. A precise estimate is prepared after clarifying the project requirements and reviewing the available information.",
+            "Gather the site information and the approximate size of the home you want. First establish the design requirements and required drawings, then assess the construction stages.",
+        },
+        {
+          question: "Can construction be split into stages?",
+          answer:
+            "The design and construction sequence determine the stages. We discuss where each stage should end and what will be required before work can continue.",
+        },
+        {
+          question: "What does a complete home build include?",
+          answer:
+            "The scope may cover site preparation, foundations, structure, walls, roofing, building services and finishes. Design work, materials and the intended level of completion must be specified in the project scope.",
         },
       ],
       primaryCta: "View construction stages",
@@ -182,9 +202,19 @@ export const serviceTranslations = {
       ],
       faq: [
         {
-          question: "Ինչպե՞ս է հաշվարկվում տան շինարարության արժեքը",
+          question: "Ինչի՞ց սկսել, եթե հողամաս կա, բայց նախագիծ չկա։",
           answer:
-            "Նախնական միջակայքը կախված է մակերեսից, հողամասից, կառուցվածքից, ինժեներական լուծումներից և աշխատանքների և հարդարման նախատեսված մակարդակից։ Ճշգրիտ նախահաշիվը կազմվում է խնդրի և առկա նյութերի ուսումնասիրությունից հետո։",
+            "Պատրաստեք հողամասի տվյալներն ու նշեք տան ցանկալի մակերեսը։ Սկզբում պետք է որոշել տան պահանջներն ու նախագծային աշխատանքների կազմը, ապա գնահատել շինարարության փուլերը։",
+        },
+        {
+          question: "Հնարավո՞ր է տունը կառուցել փուլերով։",
+          answer:
+            "Փուլերը որոշվում են նախագծով և աշխատանքների տեխնոլոգիական հերթականությամբ։ Նախապես քննարկում ենք՝ ինչ վիճակում ավարտել յուրաքանչյուր փուլը և ինչ է անհրաժեշտ շարունակելու համար։",
+        },
+        {
+          question: "Ի՞նչ է ներառում տան ամբողջական կառուցումը։",
+          answer:
+            "Ցանկը կարող է ընդգրկել հողամասի նախապատրաստումը, հիմքը, կրող կառուցվածքները, պատերը, տանիքը, ինժեներական համակարգերն ու հարդարումը։ Նախագծումը, նյութերը և պատրաստվածության աստիճանը հստակեցվում են առանձին։",
         },
       ],
       primaryCta: "Դիտել կառուցման փուլերը",
@@ -232,6 +262,23 @@ export const serviceTranslations = {
   },
   interiorDesign: {
     ru: serviceContent({
+      faq: [
+        {
+          question: "Какие документы нужны для ремонта по дизайн-проекту?",
+          answer:
+            "Нужны согласованная планировка и рабочие чертежи для предусмотренных работ: расположение мебели, розеток, освещения, сантехники и отделки. Точный комплект зависит от задачи.",
+        },
+        {
+          question: "Входят ли визуализации и подбор мебели?",
+          answer:
+            "Их включение и объём согласовываются до начала проектирования. Изображение интерьера не заменяет рабочие чертежи и перечень материалов.",
+        },
+        {
+          question: "Когда лучше начинать дизайн?",
+          answer:
+            "До прокладки проводки и труб. План мебели и оборудования помогает определить расположение подключений и избежать изменений после отделки.",
+        },
+      ],
       title: "Дизайн интерьера в Ереване и по всей Армении",
       shortDescription:
         "Разрабатываем практичный и целостный интерьер: планировочные решения, концепция, подбор материалов, чертежи и документы для реализации.",
@@ -271,6 +318,23 @@ export const serviceTranslations = {
       ],
     }),
     en: serviceContent({
+      faq: [
+        {
+          question: "Which drawings are needed for renovation?",
+          answer:
+            "An agreed layout and working drawings for the planned work: furniture, outlets, lighting, plumbing fixtures and finishes. The exact set depends on the project.",
+        },
+        {
+          question: "Are visualisations and furniture selection included?",
+          answer:
+            "Their inclusion and scope are agreed before design work begins. An interior rendering does not replace working drawings and material specifications.",
+        },
+        {
+          question: "When should interior design begin?",
+          answer:
+            "Before wiring and pipework are installed. Furniture and appliance layouts help establish connection locations and reduce changes after finishing.",
+        },
+      ],
       title: "Interior design in Yerevan and across Armenia",
       shortDescription:
         "We develop practical, complete interiors with layout solutions, a design concept, material selection, drawings, and documents for delivery.",
@@ -338,9 +402,19 @@ export const serviceTranslations = {
       ],
       faq: [
         {
-          question: "Ի՞նչ է ներառում դիզայն-նախագիծը",
+          question: "Ի՞նչ գծագրեր են անհրաժեշտ վերանորոգման համար։",
           answer:
-            "Դիզայն-նախագիծը կարող է ներառել հատակագծային լուծում, ինտերիերի հայեցակարգ, նյութերի ընտրություն, 3D վիզուալիզացիա և աշխատանքային գծագրեր։ Կազմը հաստատում ենք նախքան աշխատանքների մեկնարկը։",
+            "Անհրաժեշտ են համաձայնեցված հատակագիծը և նախատեսված աշխատանքների գծագրերը՝ կահույքի, վարդակների, լուսավորության, սանտեխնիկայի ու հարդարման համար։ Ճշգրիտ ցանկը կախված է նախագծից։",
+        },
+        {
+          question: "Ներառվա՞ծ են վիզուալիզացիան և կահույքի ընտրությունը։",
+          answer:
+            "Դրանց ընդգրկումն ու ծավալը համաձայնեցնում ենք մինչև նախագծումը սկսելը։ Ինտերիերի պատկերը չի փոխարինում աշխատանքային գծագրերին և նյութերի ցանկին։",
+        },
+        {
+          question: "Ե՞րբ սկսել ինտերիերի դիզայնը։",
+          answer:
+            "Մինչև էլեկտրալարերի և խողովակների անցկացումը։ Կահույքի ու սարքավորումների դասավորությունը օգնում է նախապես որոշել միացումների տեղերը և խուսափել հարդարումից հետո փոփոխություններից։",
         },
       ],
       primaryCta: "Դիտել դիզայնի ծառայությունը",
@@ -374,6 +448,23 @@ export const serviceTranslations = {
   },
   commercialConstruction: {
     ru: serviceContent({
+      faq: [
+        {
+          question: "Можно ли ремонтировать помещение, пока бизнес работает?",
+          answer:
+            "Сначала оцениваем возможность разделить рабочую зону и зону ремонта. Последовательность, доступ и время шумных работ обсуждаются с учётом безопасности и режима бизнеса.",
+        },
+        {
+          question: "Что сообщить для оценки магазина или салона?",
+          answer:
+            "Назначение помещения, площадь, планировку, состояние систем, предполагаемое оборудование и желаемый срок открытия. Эти данные помогают определить требования к ремонту.",
+        },
+        {
+          question: "Чем отличается ремонт офиса?",
+          answer:
+            "Для офиса особенно важны рабочие места, переговорные, освещение, розетки и сетевая инфраструктура. Эти задачи разобраны на отдельной странице ремонта офисов.",
+        },
+      ],
       title: "Ремонт коммерческих помещений",
       shortDescription:
         "Ремонтируем и обустраиваем офисы, магазины, салоны, рестораны и сервисные пространства с учётом работы бизнеса, инженерных требований и функции помещения.",
@@ -400,6 +491,23 @@ export const serviceTranslations = {
       ],
     }),
     en: serviceContent({
+      faq: [
+        {
+          question: "Can renovation take place while the business stays open?",
+          answer:
+            "We first assess whether operating and construction areas can be separated. Access, sequencing and noisy work are discussed around safety and the business schedule.",
+        },
+        {
+          question: "What details are needed to assess a shop or salon?",
+          answer:
+            "The property use, area, layout, existing systems, planned equipment and desired opening date. These help establish the renovation requirements.",
+        },
+        {
+          question: "What is different about office renovation?",
+          answer:
+            "Offices need particular attention to workstations, meeting rooms, lighting, power outlets and network cabling. Our office renovation page covers these requirements.",
+        },
+      ],
       title: "Commercial space renovation",
       shortDescription:
         "We renovate and fit out offices, shops, salons, restaurants, and service spaces around business operations, building-services requirements, and room function.",
@@ -424,11 +532,28 @@ export const serviceTranslations = {
       ],
     }),
     hy: serviceContent({
+      faq: [
+        {
+          question: "Հնարավո՞ր է վերանորոգել տարածքը, երբ բիզնեսն աշխատում է։",
+          answer:
+            "Նախ գնահատում ենք՝ կարելի է արդյոք առանձնացնել գործող և վերանորոգվող գոտիները։ Մուտքը, փուլերի հերթականությունն ու աղմկոտ աշխատանքների ժամերը քննարկում ենք՝ հաշվի առնելով անվտանգությունն ու բիզնեսի աշխատանքային ռեժիմը։",
+        },
+        {
+          question: "Ի՞նչ տվյալներ են պետք խանութի կամ սրահի գնահատման համար։",
+          answer:
+            "Տարածքի նշանակությունը, մակերեսը, հատակագիծը, համակարգերի վիճակը, նախատեսված սարքավորումներն ու բացման ցանկալի ժամկետը։ Դրանք օգնում են որոշել վերանորոգման պահանջները։",
+        },
+        {
+          question: "Ի՞նչ առանձնահատկություններ ունի գրասենյակի վերանորոգումը։",
+          answer:
+            "Կարևոր են աշխատատեղերը, հանդիպումների սենյակները, լուսավորությունը, վարդակներն ու ցանցային մալուխները։ Այդ հարցերը ներկայացված են գրասենյակների վերանորոգման առանձին էջում։",
+        },
+      ],
       title: "Առևտրային տարածքների վերանորոգում",
       shortDescription:
-        "Վերանորոգում և կառուցապատում ենք գրասենյակներ, խանութներ, սրահներ, ռեստորաններ և սպասարկման տարածքներ՝ հաշվի առնելով բիզնեսի աշխատանքը, ինժեներական պահանջներն ու տարածքի գործառույթը։",
+        "Վերանորոգում և հարմարեցնում ենք գրասենյակներ, խանութներ, սրահներ, ռեստորաններ ու սպասարկման տարածքներ՝ հաշվի առնելով դրանց նշանակությունը, բիզնեսի աշխատանքային ռեժիմն ու ինժեներական պահանջները։",
       fullDescription:
-        "Կազմակերպում ենք առևտրային տարածքի վերանորոգումն ու կառուցապատումը՝ հաշվի առնելով աշխատանքային գոտիները, հաճախորդների հոսքը և ինժեներական պահանջները։ Նախքան մեկնարկը համաձայնեցնում ենք փուլերը, որպեսզի բիզնեսի աշխատանքի վրա ազդեցությունը հասկանալի լինի։",
+        "Վերանորոգում և հարմարեցնում ենք բիզնես տարածքները՝ հաշվի առնելով աշխատանքային գոտիները, հաճախորդների հոսքը և ինժեներական պահանջները։ Մինչ մեկնարկը համաձայնեցնում ենք փուլերն ու աշխատանքային ժամերը, որպեսզի պարզ լինի դրանց ազդեցությունը բիզնեսի գործունեության վրա։",
       includedWorks: [
         "Օբյեկտի զննում և նախապատրաստում",
         "Շինարարական, ինժեներական և հարդարման աշխատանքներ",
@@ -467,6 +592,18 @@ export const serviceTranslations = {
   },
   design: {
     ru: serviceContent({
+      faq: [
+        {
+          question: "Какие исходные данные нужны для проекта дома?",
+          answer:
+            "Данные об участке, планируемая площадь и этажность, требования к помещениям и имеющиеся документы. После изучения задачи определяем необходимый состав проекта.",
+        },
+        {
+          question: "Чем архитектурный проект отличается от дизайна интерьера?",
+          answer:
+            "Архитектурный проект определяет здание и его планировочные решения. Дизайн интерьера уточняет внутреннее пространство, мебель, освещение и отделку. Состав каждого проекта согласовывается отдельно.",
+        },
+      ],
       title: "Архитектурное проектирование",
       shortDescription:
         "Архитектурные решения, планировка здания и рабочая документация для подготовки к строительству.",
@@ -488,6 +625,19 @@ export const serviceTranslations = {
       ],
     }),
     en: serviceContent({
+      faq: [
+        {
+          question: "What information is needed for a house design?",
+          answer:
+            "Site information, the planned area and number of floors, room requirements and existing documents. Reviewing these establishes the required design scope.",
+        },
+        {
+          question:
+            "How does architectural design differ from interior design?",
+          answer:
+            "Architectural design defines the building and its layout. Interior design develops the internal spaces, furniture, lighting and finishes. Each design scope is agreed separately.",
+        },
+      ],
       title: "Architectural design",
       shortDescription:
         "Architectural solutions, building layouts, and working documentation to prepare for construction.",
@@ -509,6 +659,19 @@ export const serviceTranslations = {
       ],
     }),
     hy: serviceContent({
+      faq: [
+        {
+          question: "Ի՞նչ տվյալներ են անհրաժեշտ տան նախագծման համար։",
+          answer:
+            "Հողամասի տվյալները, նախատեսված մակերեսն ու հարկերի քանակը, սենյակների պահանջները և առկա փաստաթղթերը։ Դրանք ուսումնասիրելուց հետո որոշում ենք նախագծի անհրաժեշտ կազմը։",
+        },
+        {
+          question:
+            "Ճարտարապետական նախագիծն ինչո՞վ է տարբերվում ինտերիերի դիզայնից։",
+          answer:
+            "Ճարտարապետական նախագիծը սահմանում է շենքն ու դրա հատակագծային լուծումները։ Ինտերիերի դիզայնը մանրամասնում է ներքին տարածքը, կահույքը, լուսավորությունն ու հարդարումը։ Յուրաքանչյուր նախագծի կազմը համաձայնեցվում է առանձին։",
+        },
+      ],
       title: "Ճարտարապետական նախագծում",
       shortDescription:
         "Ճարտարապետական լուծումներ, շենքի հատակագիծ և աշխատանքային փաստաթղթեր՝ շինարարությանը նախապատրաստվելու համար։",
@@ -576,19 +739,24 @@ export const serviceTranslations = {
       ],
       faq: [
         {
-          question: "От чего зависит стоимость ремонта?",
+          question: "Как выбрать между косметическим и капитальным ремонтом?",
           answer:
-            "От площади, состояния помещения, объема демонтажа, инженерных работ, сложности отделки и выбранных материалов. Предварительный диапазон можно получить через калькулятор, а точная смета формируется после уточнения требований проекта и осмотра.",
+            "Если стены, пол и инженерные системы исправны, может быть достаточно обновления отделки. Изношенная проводка, трубы или повреждённые поверхности требуют более глубокого ремонта. Это уточняется при осмотре.",
         },
         {
-          question: "Можно заказать отдельные этапы ремонта?",
+          question: "Чем ремонт частного дома отличается от ремонта квартиры?",
           answer:
-            "Да, состав работ обсуждается для конкретной задачи. После осмотра можно определить, нужен ли комплексный ремонт или отдельные этапы.",
+            "В доме дополнительно учитываются состояние наружных стен, кровли и самостоятельных инженерных систем. Такие работы нужно отделить в смете от внутренней отделки.",
+        },
+        {
+          question: "Можно заказать отдельный этап?",
+          answer:
+            "Да, необходимые работы обсуждаем по данным объекта. Важно проверить, готовы ли смежные поверхности и системы, чтобы результат можно было использовать без переделок.",
         },
       ],
       primaryCta: "Посмотреть варианты ремонта",
       secondaryCta: "Получить предварительный расчёт",
-      seoTitle: "Ремонт квартир и домов под ключ в Армении — SHINEX",
+      seoTitle: "Ремонт жилья в Армении: виды и состав работ | SHINEX",
       seoDescription:
         "Ремонт квартир и частных домов под ключ в Ереване и по всей Армении: осмотр, предварительная оценка и согласование этапов.",
       workflow: [
@@ -645,19 +813,24 @@ export const serviceTranslations = {
       ],
       faq: [
         {
-          question: "What affects the renovation cost?",
+          question: "Do I need redecoration or major renovation?",
           answer:
-            "It depends on the area, property condition, demolition scope, building-services work, finish complexity, and selected materials. An initial range can be explored with the calculator; a precise estimate follows clarification and a survey.",
+            "If walls, floors and building services are sound, refreshing the finishes may be enough. Worn wiring, pipes or damaged surfaces need a more extensive scope, established during a site assessment.",
         },
         {
-          question: "Can separate renovation stages be ordered?",
+          question: "How does renovating a house differ from an apartment?",
           answer:
-            "Yes. The scope is discussed for the particular project, and a survey helps determine whether a full renovation or individual stages are suitable.",
+            "A house also requires consideration of external walls, roofing and its own building services. These should be listed separately from interior finishes in the estimate.",
+        },
+        {
+          question: "Can I request just one stage of work?",
+          answer:
+            "Yes, we can discuss a specific stage using the property details. We first need to check whether adjoining surfaces and systems are ready so the work will not need to be repeated.",
         },
       ],
       primaryCta: "View renovation options",
       secondaryCta: "Get an initial estimate",
-      seoTitle: "Turnkey apartment and house renovation in Armenia — SHINEX",
+      seoTitle: "Home Renovation in Armenia: Services and Options | SHINEX",
       seoDescription:
         "Turnkey apartment and private house renovation in Yerevan and across Armenia: survey, initial assessment, and agreed stages.",
       workflow: [
@@ -714,19 +887,25 @@ export const serviceTranslations = {
       ],
       faq: [
         {
-          question: "Ինչի՞ց է կախված վերանորոգման արժեքը",
+          question: "Ինչպե՞ս ընտրել կոսմետիկ և կապիտալ վերանորոգման միջև։",
           answer:
-            "Վերանորոգման արժեքը կախված է մակերեսից, տարածքի վիճակից, ապամոնտաժման, ինժեներական աշխատանքների, հարդարման բարդության և նյութերի ընտրության ծավալից։ Նախնական արժեքը կարող եք հաշվարկել կայքում, իսկ ճշգրիտ նախահաշիվը կազմում ենք օբյեկտի զննումից հետո։",
+            "Եթե պատերը, հատակն ու ինժեներական համակարգերը լավ վիճակում են, կարող է բավարար լինել հարդարումը թարմացնելը։ Մաշված էլեկտրալարերը, խողովակներն ու վնասված մակերեսները պահանջում են ավելի ծավալուն աշխատանք։ Դա ճշտում ենք զննումից հետո։",
         },
         {
-          question: "Կարո՞ղ եմ պատվիրել վերանորոգման առանձին փուլեր",
+          question:
+            "Առանձնատան վերանորոգումն ինչո՞վ է տարբերվում բնակարանի վերանորոգումից։",
           answer:
-            "Այո, կարող եք պատվիրել միայն անհրաժեշտ փուլերը՝ օրինակ էլեկտրականություն, սանտեխնիկա, սալիկապատում կամ հարդարում։ Ուղարկեք օբյեկտի տվյալները, և կճշտենք հաշվարկի համար անհրաժեշտ մանրամասները։",
+            "Առանձնատան դեպքում հաշվի ենք առնում նաև արտաքին պատերի, տանիքի և առանձին ինժեներական համակարգերի վիճակը։ Այդ աշխատանքները նախահաշվում պետք է առանձնացնել ներքին հարդարումից։",
+        },
+        {
+          question: "Կարելի՞ է պատվիրել միայն մեկ փուլ։",
+          answer:
+            "Այո, անհրաժեշտ աշխատանքները քննարկում ենք ըստ տարածքի տվյալների։ Նախ պետք է ստուգել՝ պատրաստ են արդյոք հարակից մակերեսներն ու համակարգերը, որպեսզի կատարված աշխատանքը կրկնելու կարիք չլինի։",
         },
       ],
       primaryCta: "Դիտել վերանորոգման տարբերակները",
       secondaryCta: "Ստանալ նախնական հաշվարկ",
-      seoTitle: "Բնակարանների ամբողջական վերանորոգում Հայաստանում — SHINEX",
+      seoTitle: "Բնակարանի և տան վերանորոգում Հայաստանում | SHINEX",
       seoDescription:
         "Բնակարանների և առանձնատների ամբողջական վերանորոգում Երևանում և ամբողջ Հայաստանում՝ զննում, նախնական գնահատում և փուլերի համաձայնեցում։",
       workflow: [
@@ -765,6 +944,20 @@ export const serviceTranslations = {
   },
   monolithicWork: {
     ru: serviceContent({
+      seoTitle: "Монолитные работы в Армении | SHINEX",
+      faq: [
+        {
+          question:
+            "Можно ли оценить монолитные работы только по площади дома?",
+          answer:
+            "Для точной оценки нужны конструктивные чертежи и объёмы бетона, арматуры и опалубки. Одинаковая площадь дома не означает одинаковый объём монолитных конструкций.",
+        },
+        {
+          question: "Что подготовить для обсуждения работ?",
+          answer:
+            "Конструктивный проект, сведения об участке, готовности основания и доступе для техники. По этим данным уточняются состав и последовательность работ.",
+        },
+      ],
       title: "Монолитные работы",
       shortDescription:
         "Устройство железобетонных конструкций по проектной документации.",
@@ -786,11 +979,24 @@ export const serviceTranslations = {
       ],
     }),
     en: serviceContent({
-      title: "Monolithic concrete work",
+      seoTitle: "Reinforced Concrete Construction in Armenia | SHINEX",
+      faq: [
+        {
+          question: "Can concrete work be estimated from floor area alone?",
+          answer:
+            "An accurate estimate needs structural drawings and quantities for concrete, reinforcement and formwork. Buildings with the same floor area can require different structural quantities.",
+        },
+        {
+          question: "What should I provide to discuss the work?",
+          answer:
+            "Structural drawings, site information, the condition of the prepared base and equipment access. These help establish the scope and sequence.",
+        },
+      ],
+      title: "Reinforced concrete construction",
       shortDescription:
         "Reinforced-concrete structures delivered to approved project documentation.",
       fullDescription:
-        "We execute monolithic structural work with control of project geometry, sequence, and critical operations.",
+        "We carry out reinforced concrete work according to the structural design, with attention to dimensions, construction sequence and the checks required at each stage.",
       includedWorks: [
         "Preparation and formwork",
         "Reinforcement",
@@ -807,6 +1013,20 @@ export const serviceTranslations = {
       ],
     }),
     hy: serviceContent({
+      seoTitle: "Մոնոլիտ աշխատանքներ Հայաստանում | SHINEX",
+      faq: [
+        {
+          question:
+            "Մոնոլիտ աշխատանքները կարելի՞ է գնահատել միայն տան մակերեսով։",
+          answer:
+            "Ճշգրիտ գնահատման համար անհրաժեշտ են կառուցվածքային գծագրերը, բետոնի, ամրանի և կաղապարամածի ծավալները։ Նույն մակերեսով տները կարող են տարբեր քանակի մոնոլիտ կառուցվածքներ պահանջել։",
+        },
+        {
+          question: "Ի՞նչ պատրաստել աշխատանքները քննարկելու համար։",
+          answer:
+            "Կառուցվածքային նախագիծը, հողամասի տվյալները, հիմքի պատրաստվածության և տեխնիկայի մուտքի մասին տեղեկությունը։ Դրանք օգնում են ճշտել աշխատանքների կազմն ու հերթականությունը։",
+        },
+      ],
       title: "Մոնոլիտ աշխատանքներ",
       shortDescription:
         "Երկաթբետոնե կառուցվածքների իրականացում՝ նախագծային փաստաթղթերով։",
@@ -830,6 +1050,18 @@ export const serviceTranslations = {
   },
   facadeAndRoofing: {
     ru: serviceContent({
+      faq: [
+        {
+          question: "Какие данные нужны для оценки кровли или фасада?",
+          answer:
+            "Фотографии, размеры, тип существующего покрытия, сведения об утеплении и замеченных протечках или повреждениях. Также важны высота здания и доступ к рабочей зоне.",
+        },
+        {
+          question: "Почему одного выбора покрытия недостаточно?",
+          answer:
+            "На результат влияют состояние основания, примыкания, защитные слои и водоотведение. Их нужно проверить и учесть в составе работ вместе с покрытием.",
+        },
+      ],
       title: "Фасадные и кровельные работы",
       shortDescription:
         "Устройство и обновление фасадов, кровли и защитных узлов здания.",
@@ -851,11 +1083,23 @@ export const serviceTranslations = {
       ],
     }),
     en: serviceContent({
+      faq: [
+        {
+          question: "What is needed to assess roofing or facade work?",
+          answer:
+            "Photographs, dimensions, the existing finish, insulation details and any leaks or damage. Building height and access to the work area also matter.",
+        },
+        {
+          question: "Why is choosing a finish not enough?",
+          answer:
+            "The base condition, junctions, protective layers and drainage also affect the result. They need to be assessed and included in the scope alongside the finish.",
+        },
+      ],
       title: "Facade and roofing work",
       shortDescription:
         "Construction and renewal of facades, roofs, and protective building details.",
       fullDescription:
-        "We organize exterior work around the approved design, drainage, protective layers, and junction integrity.",
+        "We plan facade and roofing work around the design, drainage, protective layers and junctions, taking the condition of the existing structure into account.",
       includedWorks: [
         "Facade systems",
         "Roof assemblies",
@@ -872,6 +1116,18 @@ export const serviceTranslations = {
       ],
     }),
     hy: serviceContent({
+      faq: [
+        {
+          question: "Ի՞նչ տվյալներ են պետք տանիքի կամ ճակատի գնահատման համար։",
+          answer:
+            "Լուսանկարները, չափերը, առկա ծածկույթի տեսակը, ջերմամեկուսացման և նկատված արտահոսքերի կամ վնասվածքների մասին տեղեկությունը։ Կարևոր են նաև շենքի բարձրությունն ու աշխատանքային գոտու հասանելիությունը։",
+        },
+        {
+          question: "Ինչո՞ւ բավարար չէ միայն ծածկույթ ընտրելը։",
+          answer:
+            "Արդյունքի վրա ազդում են հիմքի վիճակը, միացումները, պաշտպանական շերտերն ու ջրահեռացումը։ Դրանք պետք է ստուգել և ներառել աշխատանքների կազմում՝ ծածկույթի հետ միասին։",
+        },
+      ],
       title: "Ճակատային և տանիքային աշխատանքներ",
       shortDescription:
         "Շենքի ճակատի, տանիքի և պաշտպանական հանգույցների կառուցում ու նորոգում։",

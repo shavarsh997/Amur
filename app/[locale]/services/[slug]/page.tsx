@@ -16,7 +16,7 @@ import {
   seoLandingPages,
 } from "@/config/seo-landing-pages.config";
 import { getDictionary, isLocale } from "@/lib/i18n";
-import { getFaqsWithMinimum } from "@/lib/faq";
+import { getServiceImageAlt } from "@/config/service-images.config";
 import { buildMetadata } from "@/lib/metadata";
 import {
   getBreadcrumbJsonLd,
@@ -48,7 +48,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: landing.content.seoTitle,
       description: landing.content.seoDescription,
       image: landing.image,
-      imageAlt: landing.content.title,
+      imageAlt: getServiceImageAlt(landing.image, locale),
     });
   }
 
@@ -60,7 +60,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: service.content.seoTitle,
     description: service.content.seoDescription,
     image: service.image,
-    imageAlt: service.content.shortDescription,
+    imageAlt: getServiceImageAlt(service.image, locale),
   });
 }
 
@@ -77,11 +77,8 @@ export default async function ServiceDetailPage({ params }: Props) {
   }
   if (!service) notFound();
   const copy = dictionary.services.detail;
-  const faqs = getFaqsWithMinimum(
-    service.content.faq,
-    dictionary.seo.fallbackFaqs
-  );
-  const primaryCta = service.content.primaryCta ?? copy.requestEstimate;
+  const faqs = service.content.faq;
+  const primaryCta = service.content.secondaryCta ?? copy.requestEstimate;
   const relatedSeoPages = seoLandingPages.filter((page) =>
     (page.relatedServiceSlugs as readonly string[]).includes(service.slug)
   );
@@ -131,7 +128,7 @@ export default async function ServiceDetailPage({ params }: Props) {
         <Container className="py-12 sm:py-16 lg:py-20">
           <div className="relative aspect-[16/8] overflow-hidden rounded-[28px] bg-[var(--background-warm)]">
             <Image
-              alt={service.content.shortDescription}
+              alt={getServiceImageAlt(service.image, locale)}
               className="object-cover"
               fill
               sizes="(max-width: 1279px) 100vw, 1200px"

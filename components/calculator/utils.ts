@@ -31,7 +31,10 @@ export function scrollToCalculatorField(field: CalculatorFieldId) {
   const element = document.getElementById(calculatorFieldDomId(field));
   element?.scrollIntoView({ behavior: "smooth", block: "center" });
 
-  const input = element?.querySelector("input");
+  const input =
+    element instanceof HTMLInputElement
+      ? element
+      : element?.querySelector("input");
   if (input instanceof HTMLInputElement) {
     window.setTimeout(() => input.focus({ preventScroll: true }), 300);
   }

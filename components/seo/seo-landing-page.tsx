@@ -6,6 +6,12 @@ import {
   getSeoLandingPath,
   type SeoLandingPage,
 } from "@/config/seo-landing-pages.config";
+import { CostCalculator } from "@/components/calculator/cost-calculator";
+import {
+  EstimateExample,
+  RenovationBudget,
+} from "@/components/seo/renovation-budget";
+import { getServiceImageAlt } from "@/config/service-images.config";
 import { ContactTrigger } from "@/components/forms/contact-dialog";
 import { ButtonLink } from "@/components/ui/button-link";
 import { Container } from "@/components/ui/container";
@@ -15,9 +21,9 @@ import { getActiveServices } from "@/config/services.config";
 import {
   getBreadcrumbJsonLd,
   getServiceJsonLd,
+  getWebPageJsonLd,
   serializeJsonLd,
 } from "@/lib/json-ld";
-import { getFaqsWithMinimum } from "@/lib/faq";
 import type { Dictionary, Locale } from "@/types";
 
 export function SeoLandingPage({
@@ -30,8 +36,10 @@ export function SeoLandingPage({
   dictionary: Dictionary;
 }) {
   const { content } = page;
-  const faqs = getFaqsWithMinimum(content.faqs, dictionary.seo.fallbackFaqs);
-  const href = `/${locale}/${getSeoLandingPath(page)}`;
+  const faqs = content.faqs;
+  const isPrices = page.slug === "prices";
+  const calculatorHref = isPrices ? "#calculator" : `/${locale}/calculator`;
+  const schema = page.kind === "service" ? getServiceJsonLd : getWebPageJsonLd;
   const relatedServices = getActiveServices(locale).filter((service) =>
     (page.relatedServiceSlugs as readonly string[]).includes(service.slug)
   );
@@ -52,14 +60,13 @@ export function SeoLandingPage({
       : []),
     { label: content.title },
   ];
-  const serviceCoverage = dictionary.seo.serviceCoverage;
 
   return (
     <>
       <script
         dangerouslySetInnerHTML={{
           __html: serializeJsonLd(
-            getServiceJsonLd({
+            schema({
               locale,
               name: content.title,
               description: content.seoDescription,
@@ -79,7 +86,7 @@ export function SeoLandingPage({
         actions={
           <>
             <ContactTrigger label={content.contactLabel} />
-            <ButtonLink href={`/${locale}/calculator`} variant="secondary">
+            <ButtonLink href={calculatorHref} variant="secondary">
               {content.calculatorLabel}
             </ButtonLink>
           </>
@@ -92,30 +99,27 @@ export function SeoLandingPage({
       />
       <article>
         <Container className="py-12 sm:py-16 lg:py-20">
-          <div className="relative aspect-[16/7] overflow-hidden rounded-[28px] bg-[var(--background-warm)]">
-            <Image
-              alt={content.title}
-              className="object-cover"
-              fill
-              priority
-              sizes="(max-width: 1279px) 100vw, 1200px"
-              src={page.image}
-            />
-          </div>
+          {page.kind === "service" ? (
+            <div className="relative aspect-[16/7] overflow-hidden rounded-[28px] bg-[var(--background-warm)]">
+              <Image
+                alt={getServiceImageAlt(page.image, locale)}
+                className="object-cover"
+                fill
+                sizes="(max-width: 1279px) 100vw, 1200px"
+                src={page.image}
+              />
+            </div>
+          ) : null}
           <div className="mx-auto mt-12 max-w-4xl space-y-12">
             <section className="space-y-5 text-lg leading-8 text-[var(--text-secondary)]">
               {content.introduction.map((paragraph) => (
                 <p key={paragraph}>{paragraph}</p>
               ))}
             </section>
-            <section className="rounded-[24px] border border-[var(--border)] bg-[var(--background-soft)] p-7 sm:p-9">
-              <h2 className="text-2xl font-semibold tracking-[-0.03em] text-[var(--text-primary)]">
-                {serviceCoverage.title}
-              </h2>
-              <p className="mt-3 max-w-2xl leading-7 text-[var(--text-secondary)]">
-                {serviceCoverage.description}
-              </p>
-            </section>
+            {isPrices ? <RenovationBudget locale={locale} /> : null}
+            {page.slug === "renovation-estimate-yerevan" ? (
+              <EstimateExample locale={locale} />
+            ) : null}
             {content.sections.map((section) => (
               <section key={section.title}>
                 <h2 className="text-2xl font-semibold tracking-[-0.035em] text-[var(--text-primary)] sm:text-3xl">
@@ -140,24 +144,42 @@ export function SeoLandingPage({
                 ) : null}
               </section>
             ))}
-            <section className="rounded-[24px] bg-[var(--background-warm)] p-7 sm:p-10">
-              <h2 className="text-2xl font-semibold tracking-[-0.03em] text-[var(--text-primary)]">
-                {content.calculatorLabel}
-              </h2>
-              <p className="mt-3 max-w-2xl leading-7 text-[var(--text-secondary)]">
-                {dictionary.seo.calculatorEstimateNotice}
-              </p>
-              <div className="mt-6 flex flex-wrap gap-3">
-                <ButtonLink href={`/${locale}/calculator`}>
+            {isPrices ? (
+              <section
+                className="scroll-mt-24 border-t border-[var(--border)] pt-10"
+                id="calculator"
+              >
+                <h2 className="text-2xl font-semibold tracking-tight text-[var(--text-primary)]">
                   {content.calculatorLabel}
-                </ButtonLink>
-                <ContactTrigger label={content.contactLabel} />
-              </div>
-            </section>
+                </h2>
+                <p className="mb-6 mt-3 leading-7 text-[var(--text-secondary)]">
+                  {dictionary.seo.calculatorEstimateNotice}
+                </p>
+                <CostCalculator
+                  copy={dictionary.constructionCalculator}
+                  locale={locale}
+                />
+              </section>
+            ) : (
+              <section className="rounded-[24px] bg-[var(--background-warm)] p-7 sm:p-10">
+                <h2 className="text-2xl font-semibold tracking-[-0.03em] text-[var(--text-primary)]">
+                  {content.calculatorLabel}
+                </h2>
+                <p className="mt-3 max-w-2xl leading-7 text-[var(--text-secondary)]">
+                  {dictionary.seo.calculatorEstimateNotice}
+                </p>
+                <div className="mt-6 flex flex-wrap gap-3">
+                  <ButtonLink href={calculatorHref}>
+                    {content.calculatorLabel}
+                  </ButtonLink>
+                  <ContactTrigger label={content.contactLabel} />
+                </div>
+              </section>
+            )}
             {faqs.length ? (
               <section>
                 <h2 className="text-2xl font-semibold tracking-[-0.035em] text-[var(--text-primary)] sm:text-3xl">
-                {dictionary.seo.faqTitle}
+                  {dictionary.seo.faqTitle}
                 </h2>
                 <div className="mt-6">
                   <FAQAccordion items={faqs} />
@@ -199,7 +221,6 @@ export function SeoLandingPage({
                     </Link>
                   ))}
                 </div>
-                <p className="sr-only">{href}</p>
               </section>
             ) : null}
           </div>

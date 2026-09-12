@@ -29,7 +29,7 @@ export const seoIntentMap = {
       ],
       en: [
         "apartment repair",
-        "capital apartment renovation",
+        "major apartment renovation",
         "cosmetic renovation",
       ],
     },
@@ -89,9 +89,9 @@ export const seoIntentMap = {
   },
   "house-construction": {
     paths: {
-      hy: "services/house-construction-yerevan",
-      ru: "services/house-construction-yerevan",
-      en: "services/house-construction-yerevan",
+      hy: "services/house-construction",
+      ru: "services/house-construction",
+      en: "services/house-construction",
     },
     primary: {
       hy: "առանձնատան կառուցում Երևան",
@@ -113,9 +113,9 @@ export const seoIntentMap = {
   },
   "interior-design": {
     paths: {
-      hy: "services/interior-design-yerevan",
-      ru: "services/interior-design-yerevan",
-      en: "services/interior-design-yerevan",
+      hy: "services/interior-design",
+      ru: "services/interior-design",
+      en: "services/interior-design",
     },
     primary: {
       hy: "ինտերիերի դիզայն Երևան",
@@ -130,9 +130,9 @@ export const seoIntentMap = {
   },
   "complete-house-construction": {
     paths: {
-      hy: "services/complete-house-construction-yerevan",
-      ru: "services/complete-house-construction-yerevan",
-      en: "services/complete-house-construction-yerevan",
+      hy: "services/house-construction",
+      ru: "services/house-construction",
+      en: "services/house-construction",
     },
     primary: {
       hy: "առանձնատան ամբողջական կառուցում Երևանում",
@@ -164,9 +164,9 @@ export const seoIntentMap = {
   },
   "commercial-renovation": {
     paths: {
-      hy: "services/commercial-renovation-yerevan",
-      ru: "services/commercial-renovation-yerevan",
-      en: "services/commercial-renovation-yerevan",
+      hy: "services/commercial-construction",
+      ru: "services/commercial-construction",
+      en: "services/commercial-construction",
     },
     primary: {
       hy: "առևտրային տարածքների վերանորոգում Երևանում",
@@ -205,12 +205,12 @@ export const seoIntentMap = {
     primary: {
       hy: "կապիտալ վերանորոգում Երևանում",
       ru: "капитальный ремонт в Ереване",
-      en: "capital renovation in Yerevan",
+      en: "major renovation in Yerevan",
     },
     secondary: {
       hy: ["բնակարանի կապիտալ վերանորոգում"],
       ru: ["капитальный ремонт квартиры Ереван"],
-      en: ["capital apartment renovation Yerevan"],
+      en: ["major apartment renovation Yerevan"],
     },
   },
   "cosmetic-renovation": {
@@ -249,9 +249,9 @@ export const seoIntentMap = {
   },
   "renovation-price-per-square-meter": {
     paths: {
-      hy: "renovation-price-per-square-meter-yerevan",
-      ru: "renovation-price-per-square-meter-yerevan",
-      en: "renovation-price-per-square-meter-yerevan",
+      hy: "prices",
+      ru: "prices",
+      en: "prices",
     },
     primary: {
       hy: "վերանորոգման արժեքը մեկ քմ-ի համար Երևանում",

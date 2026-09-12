@@ -2,8 +2,13 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import { SeoLandingPage } from "@/components/seo/seo-landing-page";
-import { getSeoLandingPage, getSeoLandingPath, seoLandingPages } from "@/config/seo-landing-pages.config";
+import {
+  getSeoLandingPage,
+  getSeoLandingPath,
+  seoLandingPages,
+} from "@/config/seo-landing-pages.config";
 import { getDictionary, isLocale, locales } from "@/lib/i18n";
+import { getServiceImageAlt } from "@/config/service-images.config";
 import { createPageMetadata } from "@/lib/metadata";
 
 type Props = { params: Promise<{ locale: string; landing: string }> };
@@ -28,7 +33,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: page.content.seoTitle,
     description: page.content.seoDescription,
     image: page.image,
-    imageAlt: page.content.title,
+    imageAlt: getServiceImageAlt(page.image, locale),
   });
 }
 

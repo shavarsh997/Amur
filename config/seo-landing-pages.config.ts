@@ -30,18 +30,13 @@ export type SeoLandingPage = {
   >;
 };
 
-const apartmentImage =
-  "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1800&q=85";
-
-/**
- * Intent-led pages only. Add a page when it has its own useful, reviewed content;
- * this is deliberately not a location-page generator.
- */
+/** Apartment renovation, project coordination and budget planning have distinct roles. */
 const coreSeoLandingPages = [
   {
     slug: "apartment-renovation-yerevan",
     kind: "service",
-    image: apartmentImage,
+    image:
+      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1800&q=85",
     relatedServiceSlugs: ["renovation", "interior-design", "design"],
     relatedLandingSlugs: [
       "turnkey-renovation",
@@ -53,138 +48,68 @@ const coreSeoLandingPages = [
         eyebrow: "Ремонт квартир · Ереван",
         title: "Ремонт квартир в Ереване",
         description:
-          "SHINEX выполняет полный ремонт квартир в Ереване — от осмотра и предварительной сметы до электрики, сантехники, отделки и сдачи готового объекта.",
-        seoTitle: "Ремонт квартир в Ереване под ключ | SHINEX",
+          "От осмотра квартиры до готовой отделки: планируем работы с учётом состояния помещения, вашей планировки и выбранных материалов.",
+        seoTitle: "Ремонт квартир в Ереване | SHINEX",
         seoDescription:
-          "Ремонт квартир в Ереване: новостройки, капитальный и ремонт под ключ. Электрика, сантехника, отделка и полный комплекс работ. Получите предварительную смету в SHINEX.",
+          "Ремонт квартир в Ереване: подготовка помещения, электрика, сантехника и отделка. Состав работ для новостройки и вторичного жилья, расчёт стоимости.",
         introduction: [
-          "SHINEX выполняет ремонт квартир в Ереване для новостроек и вторичного жилья. Начинаем с осмотра, замеров и предварительной сметы, а затем организуем инженерные и отделочные работы в понятной последовательности.",
-          "Вы не ищете отдельно электрика, сантехника, плиточника и других мастеров: при ремонте под ключ одна команда организует весь согласованный объём работ и сдачу готового объекта.",
+          "Ремонт квартиры в Ереване начинаем с осмотра и замеров. Затем составляем смету и согласуем перечень работ: подготовку поверхностей, электрику, сантехнику и отделку.",
+          "В новостройке проверяем, в каком состоянии застройщик передал помещение. В квартире со старым ремонтом определяем, какие покрытия и системы можно сохранить, а какие нужно заменить.",
         ],
         sections: [
           {
-            title: "Ремонт квартиры под ключ",
+            title: "Что учитываем перед ремонтом",
             paragraphs: [
-              "Берём на себя весь объект — от подготовки помещения до чистовой отделки и финальной проверки. Состав работ фиксируется после осмотра и согласования решений.",
+              "Площадь квартиры не показывает весь объём работ. Важно знать состояние стен и пола, расположение кухни и санузла, количество розеток и выбранную отделку.",
             ],
             items: [
-              "Демонтаж и подготовка помещения.",
-              "Электрика, сантехника и отопление.",
-              "Подготовка стен, штукатурка и шпаклёвка.",
-              "Покраска, кафель и напольные покрытия.",
-              "Потолки, двери и освещение.",
-              "Чистовая отделка, контроль и сдача объекта.",
+              "Планировка и расстановка мебели.",
+              "Состояние существующей проводки и труб.",
+              "Участки демонтажа и поверхности под отделку.",
+              "Материалы для пола, стен и потолка.",
             ],
           },
           {
-            title: "Ремонт квартиры в новостройке",
+            title: "Как проходят работы",
             paragraphs: [
-              "В квартире от застройщика проверяем стены и пол, инженерные точки, проёмы и готовность поверхностей. Это помогает заложить электрику, сантехнику, перегородки, выравнивание, потолки и отделку до переезда без переделок готовых поверхностей.",
+              "Последовательность зависит от квартиры и проекта. Расположение проводки, труб и оборудования определяем до финишной отделки.",
             ],
             items: [
-              "Проверка стен, пола и инженерных выводов.",
-              "Электрика, сантехника и необходимые перегородки.",
-              "Выравнивание, подготовка оснований и потолков.",
-              "Чистовая отделка и подготовка квартиры к проживанию.",
+              "Осмотр, замеры и согласование сметы.",
+              "Демонтаж и подготовка помещения при необходимости.",
+              "Электрика, сантехника и подготовка поверхностей.",
+              "Плитка, покраска и напольные покрытия.",
+              "Установка согласованного оборудования и проверка результата.",
             ],
           },
           {
-            title: "Капитальный ремонт квартиры",
+            title: "Выберите подходящий объём ремонта",
             paragraphs: [
-              "Капитальный ремонт нужен, когда требуется обновить коммуникации, демонтировать старые покрытия, подготовить стены и пол или изменить состав инженерных и отделочных работ. Перед началом определяем фактическое состояние квартиры и безопасную последовательность этапов.",
+              "Для обновления покрытий может быть достаточно косметического ремонта. При изношенной проводке, трубах и основаниях нужен капитальный ремонт. Формат «под ключ» относится к организации всего проекта и отдельно определяет, какие этапы ведёт одна компания.",
             ],
           },
           {
-            title: "Косметический ремонт",
+            title: "Как рассчитать стоимость",
             paragraphs: [
-              "Косметический ремонт помогает обновить отделку квартиры без полного вмешательства в инженерные системы. После осмотра согласуем, какие поверхности, покрытия, свет или отдельные зоны требуют обновления.",
-            ],
-          },
-          {
-            title: "Сколько стоит ремонт квартиры в Ереване",
-            paragraphs: [
-              "Стоимость ремонта квартиры в Ереване зависит не только от площади. На расчёт влияют состояние стен и пола, демонтаж, объём электрики и сантехники, сложность проекта, материалы и объём отделочных работ.",
-              "Универсальная фиксированная цена без осмотра может вводить в заблуждение. Калькулятор помогает получить предварительный ориентир, а точную смету можно подготовить после изучения объекта и согласования работ.",
-            ],
-          },
-          {
-            title: "Этапы ремонта",
-            paragraphs: [
-              "Работу организуем поэтапно, чтобы заранее согласовать объём, изменения и следующий шаг.",
-            ],
-            items: [
-              "Первичная консультация.",
-              "Осмотр объекта.",
-              "Замеры.",
-              "Определение объёма работ.",
-              "Предварительная смета.",
-              "Согласование.",
-              "Договор.",
-              "Выполнение работ.",
-              "Контроль качества.",
-              "Сдача объекта.",
-            ],
-          },
-          {
-            title: "Почему SHINEX",
-            paragraphs: [
-              "Условия работы и изменения обсуждаем до их выполнения, чтобы процесс ремонта был понятным для заказчика.",
-            ],
-            items: [
-              "Работа по договору.",
-              "Заранее согласованная смета.",
-              "Один подрядчик на весь объект.",
-              "Поэтапная организация работ.",
-              "Контроль качества.",
-              "Согласование дополнительных работ до их выполнения.",
+              "Для первого расчёта укажите площадь и состояние квартиры. Затем уточняем объёмы демонтажа, электрики, сантехники и отделки. В разделе стоимости можно посмотреть структуру бюджета и воспользоваться калькулятором.",
             ],
           },
         ],
         faqs: [
           {
-            question: "Сколько стоит ремонт квартиры в Ереване?",
+            question: "Что нужно подготовить для оценки квартиры?",
             answer:
-              "Стоимость зависит от площади, состояния квартиры, демонтажа, инженерных работ, материалов и сложности отделки. Предварительный ориентир даст калькулятор, а точная смета готовится после осмотра.",
+              "Площадь, адрес, фотографии текущего состояния и планировку, если она есть. Также укажите, хотите ли вы обновить отделку или изменить расположение кухни, санузла и мебели.",
           },
           {
-            question: "Что входит в ремонт квартиры под ключ?",
+            question: "Нужно ли менять всю проводку и сантехнику?",
             answer:
-              "В согласованный объём могут входить демонтаж, электрика, сантехника, подготовка стен и пола, плитка, покрытия, потолки, двери, освещение, чистовая отделка и сдача объекта.",
+              "Решение зависит от состояния существующих систем и будущей нагрузки. Перечень замены определяем после осмотра, а не только по возрасту квартиры.",
           },
           {
-            question: "Делаете ли вы электрику?",
+            question: "Что согласовывается до начала отделки?",
             answer:
-              "Да, при согласованном объёме ремонта организуем электрические работы как часть одного проекта.",
-          },
-          {
-            question: "Делаете ли вы сантехнику?",
-            answer:
-              "Да, сантехнические работы можно включить в комплексный ремонт после осмотра и определения задач.",
-          },
-          {
-            question: "Можно ли заказать полный ремонт одной компанией?",
-            answer:
-              "Да. SHINEX может организовать весь согласованный ремонт объекта, чтобы вам не искать отдельных исполнителей для каждого этапа.",
-          },
-          {
-            question: "Делаете ли вы ремонт новостроек?",
-            answer:
-              "Да. Проверяем исходное состояние квартиры и выполняем согласованные инженерные, подготовительные и отделочные работы.",
-          },
-          {
-            question: "Сколько времени занимает ремонт квартиры?",
-            answer:
-              "Срок зависит от площади, состояния объекта, инженерных работ и состава отделки. После осмотра можно составить реалистичный поэтапный график.",
-          },
-          {
-            question: "Можно ли предварительно рассчитать стоимость?",
-            answer:
-              "Да. Используйте калькулятор для ориентира, затем закажите осмотр для подготовки точной сметы.",
-          },
-          {
-            question: "Работаете ли вы за пределами Еревана?",
-            answer:
-              "SHINEX принимает проекты в Ереване и регионах Армении; возможность выезда зависит от расположения и объёма работ.",
+              "Расстановка мебели, расположение розеток, освещения, сантехники и выбор покрытий. Это позволяет предусмотреть необходимые подключения до закрытия стен и пола.",
           },
         ],
         calculatorLabel: "Рассчитать стоимость ремонта квартиры",
@@ -195,138 +120,68 @@ const coreSeoLandingPages = [
         eyebrow: "Apartment renovation · Yerevan",
         title: "Apartment renovation in Yerevan",
         description:
-          "SHINEX delivers complete apartment renovation in Yerevan, from a survey and initial estimate through electrical, plumbing, finishes, and handover.",
-        seoTitle: "Apartment Renovation in Yerevan, Armenia | SHINEX",
+          "Plan your apartment renovation around the property condition, your preferred layout and the finishes you choose.",
+        seoTitle: "Apartment Renovation in Yerevan | SHINEX",
         seoDescription:
-          "Apartment renovation in Yerevan: new-build, major, and turnkey renovation. Electrical, plumbing, finishes, and a complete range of work. Get an initial estimate from SHINEX.",
+          "Apartment renovation in Yerevan, from property assessment to electrical work, plumbing and finishes. Explore the work involved and plan your budget.",
         introduction: [
-          "SHINEX renovates new-build and existing apartments in Yerevan. We start with a survey, measurements, and an initial estimate, then organise the building-services and finishing work in a clear sequence.",
-          "You do not need to find an electrician, plumber, tiler, and other trades separately: for a turnkey renovation, one team coordinates the agreed work scope and handover.",
+          "SHINEX starts an apartment renovation with a site visit and measurements. We then prepare an estimate covering surface preparation, electrical work, plumbing and finishes.",
+          "For a newly built apartment, we check the condition in which it was handed over. For an older apartment, we assess which finishes and systems can stay and which need replacing.",
         ],
         sections: [
           {
-            title: "Turnkey apartment renovation",
+            title: "What we review before work begins",
             paragraphs: [
-              "We take responsibility for the whole property, from preparing the space through final finishes and inspection. The work scope is confirmed after the survey and agreement on the solutions.",
+              "Floor area is only part of the picture. Wall and floor condition, kitchen and bathroom layouts, electrical outlets and finish choices all affect the work.",
             ],
             items: [
-              "Demolition and space preparation.",
-              "Electrical, plumbing, and heating work.",
-              "Wall preparation, plastering, and puttying.",
-              "Painting, tiling, and floor finishes.",
-              "Ceilings, doors, and lighting.",
-              "Final finishes, quality control, and handover.",
+              "Room layout and furniture placement.",
+              "Existing wiring and pipework.",
+              "Demolition and surface preparation.",
+              "Floor, wall and ceiling finishes.",
             ],
           },
           {
-            title: "New-build apartment renovation",
+            title: "From preparation to completion",
             paragraphs: [
-              "For an apartment from the developer, we check walls and floors, service points, openings, and surface readiness. This lets us plan electrical, plumbing, partitions, levelling, ceilings, and finishes before moving in without redoing completed surfaces.",
+              "The sequence follows the property and design. Wiring, pipes and equipment locations are planned before final finishes.",
             ],
             items: [
-              "Check walls, floors, and building-services outlets.",
-              "Electrical, plumbing, and required partitions.",
-              "Levelling, substrate preparation, and ceilings.",
-              "Final finishes and preparing the apartment for living.",
+              "Site visit, measurements and estimate.",
+              "Demolition and preparation where needed.",
+              "Electrical work, plumbing and surface preparation.",
+              "Tiling, painting and floor coverings.",
+              "Installation of agreed fixtures and final inspection.",
             ],
           },
           {
-            title: "Major apartment renovation",
+            title: "Choosing the scope of renovation",
             paragraphs: [
-              "Major renovation is needed when utilities need updating, old finishes must be removed, walls and floors require preparation, or the building-services and finishing scope needs to change. Before work begins, we establish the actual condition of the apartment and a safe sequence of stages.",
+              "Redecoration may be enough to refresh sound surfaces. Major renovation deals with worn wiring, pipes and surfaces. A complete renovation service describes who coordinates the project; its scope needs to specify which stages are included.",
             ],
           },
           {
-            title: "Cosmetic renovation",
+            title: "Planning the budget",
             paragraphs: [
-              "Cosmetic renovation refreshes apartment finishes without a full intervention in the building-services systems. After a survey, we agree which surfaces, finishes, lighting, or individual areas need updating.",
-            ],
-          },
-          {
-            title: "How much does apartment renovation in Yerevan cost?",
-            paragraphs: [
-              "Apartment renovation cost in Yerevan depends on more than area. The calculation is affected by wall and floor condition, demolition, electrical and plumbing scope, project complexity, materials, and finishing work.",
-              "A universal fixed price without a survey can be misleading. The calculator provides an initial guide, while an accurate estimate can be prepared after reviewing the property and agreeing the work.",
-            ],
-          },
-          {
-            title: "Renovation stages",
-            paragraphs: [
-              "We organise the work in stages so that the scope, changes, and next step are agreed in advance.",
-            ],
-            items: [
-              "Initial consultation.",
-              "Property survey.",
-              "Measurements.",
-              "Defining the work scope.",
-              "Initial estimate.",
-              "Agreement.",
-              "Contract.",
-              "Work delivery.",
-              "Quality control.",
-              "Handover.",
-            ],
-          },
-          {
-            title: "Why SHINEX",
-            paragraphs: [
-              "We discuss work terms and changes before they are carried out, so the renovation process is clear to the client.",
-            ],
-            items: [
-              "Contract-based work.",
-              "Estimate agreed in advance.",
-              "One contractor for the whole property.",
-              "Work organised in stages.",
-              "Quality control.",
-              "Additional work agreed before it is carried out.",
+              "Start with the area and condition of your apartment. Demolition, wiring, plumbing and finishing quantities refine the estimate. Visit our cost guide for a budget breakdown and calculator.",
             ],
           },
         ],
         faqs: [
           {
-            question: "How much does apartment renovation in Yerevan cost?",
+            question: "What should I send for an initial assessment?",
             answer:
-              "The cost depends on the area, condition, demolition, building-services work, materials, and finish complexity. The calculator gives an initial guide; a precise estimate follows a survey.",
+              "Send the area, address, current photographs and a floor plan if available. Explain whether you want to refresh the finishes or change the kitchen, bathroom or furniture layout.",
           },
           {
-            question: "What is included in turnkey apartment renovation?",
+            question: "Does all wiring and plumbing need replacing?",
             answer:
-              "The agreed scope can include demolition, electrical and plumbing work, wall and floor preparation, tiling, floor finishes, ceilings, doors, lighting, final finishes, and handover.",
+              "That depends on the condition of the existing systems and the future electrical and plumbing requirements. The replacement scope is assessed on site rather than based on the age of the apartment alone.",
           },
           {
-            question: "Do you handle electrical work?",
+            question: "Which decisions should be made before finishing?",
             answer:
-              "Yes. Electrical work can be organised as part of the agreed renovation project.",
-          },
-          {
-            question: "Do you handle plumbing work?",
-            answer:
-              "Yes. Plumbing work can be included in the agreed scope after a survey and project discussion.",
-          },
-          {
-            question: "Can one company complete the whole renovation?",
-            answer:
-              "Yes. SHINEX can coordinate the agreed work scope so you do not need to find separate contractors for each stage.",
-          },
-          {
-            question: "Do you renovate new-build apartments?",
-            answer:
-              "Yes. We review the apartment’s starting condition and carry out agreed building-services, preparation, and finishing work.",
-          },
-          {
-            question: "How long does apartment renovation take?",
-            answer:
-              "Timing depends on area, the starting condition, building-services work, and finish scope. Following a survey, we can prepare a realistic staged schedule.",
-          },
-          {
-            question: "Can I calculate the cost in advance?",
-            answer:
-              "Yes. Use the calculator for an initial guide, then request a survey for a precise estimate.",
-          },
-          {
-            question: "Do you work outside Yerevan?",
-            answer:
-              "SHINEX accepts projects in Yerevan and Armenia’s regions; visit availability depends on the location and work scope.",
+              "Furniture positions, outlets, lighting, plumbing fixtures and finishes. Agreeing these early lets the necessary connections be planned before walls and floors are finished.",
           },
         ],
         calculatorLabel: "Calculate renovation cost",
@@ -337,99 +192,68 @@ const coreSeoLandingPages = [
         eyebrow: "Բնակարանների վերանորոգում · Երևան",
         title: "Բնակարանների վերանորոգում Երևանում",
         description:
-          "Կազմակերպում ենք բնակարանների վերանորոգում Երևանում՝ զննումից և նախահաշվից մինչև ինժեներական աշխատանքներ, հարդարում և հանձնում։",
-        seoTitle: "Բնակարանների վերանորոգում Երևանում — SHINEX",
+          "Բնակարանի վերանորոգումը պլանավորում ենք՝ հաշվի առնելով տարածքի վիճակը, ձեր նախընտրած դասավորությունն ու հարդարման նյութերը։",
+        seoTitle: "Բնակարանների վերանորոգում Երևանում | SHINEX",
         seoDescription:
-          "Բնակարանների վերանորոգում Երևանում՝ նորակառույցների և երկրորդային բնակֆոնդի համար, փուլեր, արժեքի գործոններ և նախնական հաշվարկ։",
+          "Բնակարանների վերանորոգում Երևանում՝ տարածքի նախապատրաստում, էլեկտրական և սանտեխնիկական աշխատանքներ, հարդարում ու արժեքի հաշվարկ։",
         introduction: [
-          "Բնակարանի վերանորոգումը սկսվում է ոչ թե միայն հարդարման ընտրությունից, այլ հստակ աշխատանքային պլանից։ SHINEX-ը Երևանում վերանորոգում է նորակառույց և երկրորդային բնակարաններ՝ գնահատելով ելակետային վիճակը և փուլերով կազմակերպելով աշխատանքը։",
-          "Վերջնական նախահաշիվը կախված է մակերեսից, տարածքի վիճակից, ինժեներական աշխատանքներից և ընտրված նյութերից։ Զննումից հետո հնարավոր է որոշել աշխատանքների հերթականությունն ու իրատեսական բյուջեն։",
+          "SHINEX-ը Երևանում բնակարանների վերանորոգումը սկսում է տարածքի զննումից ու չափագրումից։ Այնուհետև կազմում ենք նախահաշիվ և համաձայնեցնում նախապատրաստական, էլեկտրական, սանտեխնիկական ու հարդարման աշխատանքների ցանկը։",
+          "Նորակառույցում ստուգում ենք կառուցապատողի հանձնած բնակարանի վիճակը։ Հին վերանորոգմամբ բնակարանում պարզում ենք՝ որ ծածկույթներն ու համակարգերը կարելի է պահպանել, և որոնք են փոխարինման կարիք ունենում։",
         ],
         sections: [
           {
-            title: "Ո՞ր բնակարաններն ենք վերանորոգում",
+            title: "Ի՞նչ ենք հաշվի առնում մինչև աշխատանքը սկսելը",
             paragraphs: [
-              "Մոտեցումն ընտրում ենք ըստ օբյեկտի վիճակի և վերանորոգման նպատակի՝ բնակվելու, վարձակալության կամ տեղափոխվելու համար։",
+              "Միայն բնակարանի մակերեսը բավարար չէ աշխատանքների ծավալը որոշելու համար։ Կարևոր են պատերի ու հատակի վիճակը, խոհանոցի և սանհանգույցի դասավորությունը, վարդակների քանակն ու ընտրված հարդարումը։",
             ],
             items: [
-              "Նորակառույց բնակարաններ՝ հիմքի նախապատրաստում, ինժեներական համակարգեր և վերջնական հարդարում։",
-              "Երկրորդային բնակֆոնդ՝ ապամոնտաժում, ինժեներական համակարգերի թարմացում և տարածքի վերանորոգում։",
-              "Կոսմետիկ վերանորոգում՝ մեկ սենյակի կամ ամբողջ բնակարանի համար։",
-              "Կապիտալ և ամբողջական վերանորոգում։",
+              "Սենյակների հատակագիծը և կահույքի տեղադրությունը։",
+              "Առկա էլեկտրալարերի և խողովակների վիճակը։",
+              "Ապամոնտաժման ենթակա հատվածներն ու հարդարման մակերեսները։",
+              "Պատերի, հատակի և առաստաղի նյութերը։",
             ],
           },
           {
-            title: "Ինչպե՞ս է կազմակերպվում աշխատանքը",
+            title: "Ինչպե՞ս են կատարվում աշխատանքները",
             paragraphs: [
-              "Մինչ մեկնարկը ճշտում ենք ելակետային տվյալներն ու աշխատանքների ծավալը։ Նախապատրաստական, ինժեներական և հարդարման փուլերը կատարվում են համաձայնեցված հերթականությամբ։",
+              "Փուլերի հերթականությունը որոշում ենք ըստ բնակարանի և նախագծի։ Էլեկտրալարերի, խողովակների ու սարքավորումների տեղերը ճշտում ենք մինչև վերջնական հարդարումը։",
             ],
             items: [
-              "Զննում, չափագրում և նախագծի պահանջների քննարկում։",
-              "Լուծումների, աշխատանքների կազմի և նախահաշվի համաձայնեցում։",
-              "Ապամոնտաժում և հիմքերի նախապատրաստում՝ անհրաժեշտության դեպքում։",
-              "Էլեկտրականություն, սանտեխնիկա, հարթեցում, հատակի հարթեցնող շերտ (ստյաժկա) և այլ սև աշխատանքներ։",
-              "Սալիկ, ծածկույթներ, առաստաղներ, դռներ, լուսավորություն և վերջնական ստուգում։",
+              "Զննում, չափագրում և նախահաշվի համաձայնեցում։",
+              "Անհրաժեշտ ապամոնտաժում և տարածքի նախապատրաստում։",
+              "Էլեկտրական ու սանտեխնիկական աշխատանքներ, մակերեսների նախապատրաստում։",
+              "Սալիկապատում, ներկում և հատակի ծածկույթի տեղադրում։",
+              "Համաձայնեցված սարքավորումների տեղադրում և վերջնական ստուգում։",
             ],
           },
           {
-            title: "Ի՞նչն է ազդում բնակարանի վերանորոգման արժեքի վրա",
+            title: "Վերանորոգման ո՞ր տարբերակն ընտրել",
             paragraphs: [
-              "Քառակուսի մետրի ցուցանիշը չի փոխարինում նախահաշվին․ նույն մակերեսով բնակարանները կարող են պահանջել տարբեր նախապատրաստական և ինժեներական աշխատանքներ։",
+              "Լավ վիճակում գտնվող մակերեսների հարդարումը թարմացնելու համար կարող է բավարար լինել կոսմետիկ վերանորոգումը։ Մաշված էլեկտրալարերը, խողովակներն ու մակերեսները վերականգնելու համար անհրաժեշտ է կապիտալ վերանորոգում։ Ամբողջական վերանորոգման դեպքում առանձին սահմանում ենք, թե որ փուլերն է կազմակերպում մեկ ընկերությունը։",
             ],
-            items: [
-              "Պատերի, հատակի և առաստաղի վիճակը։",
-              "Բնակարանի մակերեսն ու հատակագիծը։",
-              "Էլեկտրականության և սանտեխնիկայի նոր կամ փոխարինվող համակարգերը։",
-              "Լուծումների, նյութերի և վերջնական հարդարման բարդությունը։",
+          },
+          {
+            title: "Ինչպե՞ս հաշվարկել արժեքը",
+            paragraphs: [
+              "Սկզբում նշեք բնակարանի մակերեսն ու վիճակը։ Հետո ճշտում ենք ապամոնտաժման, էլեկտրական, սանտեխնիկական և հարդարման աշխատանքների ծավալները։ Արժեքի բաժնում կարող եք ծանոթանալ բյուջեի կազմին և օգտվել հաշվիչից։",
             ],
           },
         ],
         faqs: [
           {
-            question: "Որքա՞ն արժե բնակարանի վերանորոգումը Երևանում",
+            question: "Ի՞նչ ուղարկել նախնական գնահատման համար։",
             answer:
-              "Արժեքը կախված է մակերեսից, բնակարանի վիճակից, ապամոնտաժումից, ինժեներական աշխատանքներից, նյութերից և հարդարման բարդությունից։ Հաշվիչը հնարավորություն է տալիս ստանալ նախնական արժեքի հաշվարկ, իսկ ճշգրիտ նախահաշիվը կազմվում է զննումից հետո։",
+              "Նշեք մակերեսն ու հասցեն, ուղարկեք ներկա վիճակի լուսանկարները և հատակագիծը, եթե ունեք։ Գրեք նաև՝ ուզում եք թարմացնել միայն հարդարումը, թե փոխել խոհանոցի, սանհանգույցի կամ կահույքի դասավորությունը։",
           },
           {
-            question: "Ի՞նչ է ներառում բնակարանի ամբողջական վերանորոգումը",
+            question: "Պե՞տք է փոխարինել բոլոր էլեկտրալարերն ու խողովակները։",
             answer:
-              "Համաձայնեցված աշխատանքների կազմը կարող է ներառել ապամոնտաժում, էլեկտրական և սանտեխնիկական աշխատանքներ, պատերի ու հատակի պատրաստում, սալիկ, ծածկույթներ, առաստաղներ, դռներ, լուսավորություն, վերջնական հարդարում և հանձնում։",
+              "Դա կախված է առկա համակարգերի վիճակից և հետագա օգտագործման պահանջներից։ Փոխարինման ցանկը որոշում ենք զննումից հետո՝ հաշվի առնելով ոչ միայն բնակարանի տարիքը։",
           },
           {
-            question: "Կատարո՞ւմ եք էլեկտրական աշխատանքներ",
+            question: "Ի՞նչ պետք է որոշել մինչև հարդարումը։",
             answer:
-              "Այո, էլեկտրական աշխատանքները կարող են ներառվել համաձայնեցված վերանորոգման նախագծում։",
-          },
-          {
-            question: "Կատարո՞ւմ եք սանտեխնիկական աշխատանքներ",
-            answer:
-              "Այո, սանտեխնիկական աշխատանքները կարող են ներառվել համալիր վերանորոգման մեջ՝ զննումից և խնդիրների ճշտումից հետո։",
-          },
-          {
-            question:
-              "Հնարավո՞ր է ամբողջ վերանորոգումը պատվիրել մեկ ընկերությունից",
-            answer:
-              "Այո։ SHINEX-ը կարող է կազմակերպել օբյեկտի համաձայնեցված ամբողջ վերանորոգումը, որպեսզի յուրաքանչյուր փուլի համար առանձին կատարող չփնտրեք։",
-          },
-          {
-            question: "Կատարո՞ւմ եք նորակառույց բնակարանների վերանորոգում",
-            answer:
-              "Այո։ Ստուգում ենք բնակարանի ելակետային վիճակը և կատարում համաձայնեցված ինժեներական, նախապատրաստական ու հարդարման աշխատանքները։",
-          },
-          {
-            question: "Որքա՞ն է տևում բնակարանի վերանորոգումը",
-            answer:
-              "Ժամկետը կախված է մակերեսից, ելակետային վիճակից, ինժեներական աշխատանքներից և հարդարման ծավալից։ Զննումից հետո կազմում ենք իրատեսական փուլային գրաֆիկ։",
-          },
-          {
-            question: "Հնարավո՞ր է արժեքը նախապես հաշվարկել",
-            answer:
-              "Այո։ Հաշվիչով կարող եք ստանալ նախնական արժեքի հաշվարկ, ապա պատվիրել զննում՝ ճշգրիտ նախահաշիվ ստանալու համար։",
-          },
-          {
-            question: "Աշխատո՞ւմ եք Երևանից դուրս",
-            answer:
-              "SHINEX-ը աշխատում է Երևանում և Հայաստանի մարզերում։ Աշխատանքի պայմանները համաձայնեցնում ենք՝ հաշվի առնելով օբյեկտի գտնվելու վայրը և աշխատանքների ծավալը։",
+              "Կահույքի, վարդակների, լուսավորության ու սանտեխնիկայի տեղերը և հարդարման նյութերը։ Այդպես անհրաժեշտ միացումները հնարավոր է նախատեսել մինչև պատերն ու հատակը վերջնական հարդարելը։",
           },
         ],
         calculatorLabel: "Հաշվել վերանորոգման արժեքը",
@@ -459,8 +283,8 @@ const coreSeoLandingPages = [
         seoDescription:
           "Ремонт квартиры в новостройке в Ереване: черновые и чистовые этапы, сроки и факторы стоимости.",
         introduction: [
-          "Квартира от застройщика требует проверки реального состояния стен, пола, проёмов и инженерных точек. Мы начинаем ремонт новостройки с осмотра и согласования того, что необходимо исправить до чистовой отделки.",
-          "Последовательность работ важна: она помогает не переделывать готовые поверхности после электрики, сантехники или подготовки оснований.",
+          "В квартире от застройщика проверяем стены, пол, проёмы, расположение розеток и выводов воды. По результатам осмотра определяем, что нужно подготовить до чистовой отделки.",
+          "Расстановку мебели, освещение и сантехнику согласовываем заранее: необходимые подключения проще предусмотреть до укладки плитки, покраски и монтажа покрытий.",
         ],
         sections: [
           {
@@ -478,7 +302,7 @@ const coreSeoLandingPages = [
           {
             title: "Этапы ремонта новостройки",
             paragraphs: [
-              "Работы планируем от скрытых инженерных решений к видимым материалам и оборудованию.",
+              "Проводку и трубы планируем до финишной отделки. Порядок подготовительных работ уточняется по проекту и состоянию квартиры.",
             ],
             items: [
               "Обмеры, планировка и смета.",
@@ -491,7 +315,7 @@ const coreSeoLandingPages = [
           {
             title: "Сроки и стоимость",
             paragraphs: [
-              "Сроки и бюджет зависят от готовности квартиры, площади, числа инженерных точек, выбранных материалов и сложности решений. Точную смету можно подготовить после осмотра объекта.",
+              "Сроки и бюджет зависят от готовности квартиры, площади, числа розеток, освещения и подключений воды, выбранных материалов и сложности решений. Точную смету можно подготовить после осмотра объекта.",
             ],
           },
         ],
@@ -506,6 +330,11 @@ const coreSeoLandingPages = [
             answer:
               "Лучше до начала инженерных работ: планировка и расстановка оборудования помогают правильно разместить электрические и сантехнические точки.",
           },
+          {
+            question: "Что уточнить у застройщика перед ремонтом?",
+            answer:
+              "Какие работы выполнены при передаче квартиры и какие сведения есть об инженерных системах. Если доступны планы подключения и документы о состоянии помещения, передайте их вместе с планировкой.",
+          },
         ],
         calculatorLabel: "Рассчитать стоимость ремонта",
         contactLabel: "Заказать осмотр новостройки",
@@ -515,13 +344,13 @@ const coreSeoLandingPages = [
         eyebrow: "New-build renovation · Yerevan",
         title: "New-build apartment renovation in Yerevan",
         description:
-          "We renovate new-build apartments from base preparation and building services through final finishes.",
+          "Finish your new-build apartment with the wiring, plumbing, surface preparation and interior finishes planned before you move in.",
         seoTitle: "New-Build Apartment Renovation in Yerevan | SHINEX",
         seoDescription:
           "New apartment renovation in Yerevan: base and finishing stages, timing, and cost factors from SHINEX.",
         introduction: [
-          "A developer-delivered apartment needs a real check of walls, floors, openings, and service points. We start with a survey and agree what must be resolved before final finishes.",
-          "The work sequence matters: it avoids remaking completed surfaces after electrical, plumbing, or substrate preparation work.",
+          "We begin by checking what the developer has provided: walls, floors, openings and utility connections. This establishes the preparation and finishing work still needed.",
+          "Agree furniture, lighting and plumbing fixture positions early so the necessary connections can be planned before surfaces are finished.",
         ],
         sections: [
           {
@@ -539,7 +368,7 @@ const coreSeoLandingPages = [
           {
             title: "New-build renovation stages",
             paragraphs: [
-              "Work moves from concealed systems to visible materials and fittings.",
+              "Plan concealed wiring and pipework before final finishes. The preparation sequence follows the design and the condition of the apartment.",
             ],
             items: [
               "Measurements, layout, and estimate.",
@@ -567,6 +396,11 @@ const coreSeoLandingPages = [
             answer:
               "Preferably before building-services work: a layout and equipment plan help place electrical and plumbing points correctly.",
           },
+          {
+            question: "What information should I request from the developer?",
+            answer:
+              "Ask what work has been completed at handover and what information is available about utility connections. Share any connection plans and handover documents with the apartment layout.",
+          },
         ],
         calculatorLabel: "Calculate renovation cost",
         contactLabel: "Request a new-build survey",
@@ -576,13 +410,13 @@ const coreSeoLandingPages = [
         eyebrow: "Նորակառույցների վերանորոգում · Երևան",
         title: "Նորակառույց բնակարանի վերանորոգում Երևանում",
         description:
-          "Վերանորոգում ենք նորակառույց բնակարաններ՝ հիմքերի նախապատրաստումից և ինժեներական համակարգերից մինչև վերջնական հարդարում։",
+          "Նորակառույց բնակարանի վերանորոգում՝ պատերի ու հատակի նախապատրաստումից մինչև էլեկտրական, սանտեխնիկական և հարդարման աշխատանքներ։",
         seoTitle: "Նորակառույց բնակարանի վերանորոգում Երևանում | SHINEX",
         seoDescription:
-          "Նորակառույց բնակարանի վերանորոգում Երևանում՝ սև և վերջնական փուլեր, ժամկետներ և արժեքի գործոններ։",
+          "Նորակառույց բնակարանի վերանորոգում Երևանում՝ վիճակի ստուգում, նախապատրաստական ու հարդարման աշխատանքներ, փուլերի և բյուջեի պլանավորում։",
         introduction: [
-          "Կառուցապատողից հանձնված բնակարանը պահանջում է պատերի, հատակի, բացվածքների և ինժեներական կետերի իրական ստուգում։ Աշխատանքը սկսում ենք զննումից և համաձայնեցնում ենք՝ ինչ է պետք կարգավորել մինչև վերջնական հարդարումը։",
-          "Աշխատանքների հերթականությունը կարևոր է․ այն օգնում է չվերամշակել արդեն պատրաստ մակերեսները էլեկտրականությունից, սանտեխնիկայից կամ հիմքերի նախապատրաստումից հետո։",
+          "Կառուցապատողի հանձնած բնակարանում նախ ստուգում ենք պատերի, հատակի, դռների ու պատուհանների բացվածքների և ինժեներական համակարգերի վիճակը։ Զննումից հետո որոշում ենք, թե ինչ աշխատանքներ են անհրաժեշտ մինչև վերջնական հարդարումը։",
+          "Կահույքի, վարդակների, լուսավորության ու սանտեխնիկայի տեղերը ճշտում ենք նախապես։ Այդպես խողովակներն ու էլեկտրալարերը հնարավոր է անցկացնել մինչև պատրաստ մակերեսները հարդարելը։",
         ],
         sections: [
           {
@@ -600,7 +434,7 @@ const coreSeoLandingPages = [
           {
             title: "Նորակառույցի վերանորոգման փուլերը",
             paragraphs: [
-              "Աշխատանքը անցնում է թաքնված համակարգերից դեպի տեսանելի նյութեր և սարքավորումներ։",
+              "Սկզբում պլանավորում ենք թաքնված խողովակներն ու էլեկտրալարերը, ապա անցնում մակերեսների նախապատրաստմանն ու հարդարմանը՝ ըստ նախագծի։",
             ],
             items: [
               "Չափագրում, հատակագիծ և նախահաշիվ։",
@@ -628,6 +462,11 @@ const coreSeoLandingPages = [
             answer:
               "Լավ է՝ ինժեներական աշխատանքներից առաջ․ հատակագիծն ու սարքավորումների պլանը օգնում են ճիշտ տեղադրել էլեկտրական և սանտեխնիկական կետերը։",
           },
+          {
+            question: "Ի՞նչ տեղեկություն խնդրել կառուցապատողից։",
+            answer:
+              "Ճշտեք՝ ինչ աշխատանքներ են կատարված բնակարանը հանձնելիս և ինչ տվյալներ կան ինժեներական համակարգերի մասին։ Եթե ունեք միացումների պլաններ ու հանձնման փաստաթղթեր, ուղարկեք դրանք հատակագծի հետ։",
+          },
         ],
         calculatorLabel: "Հաշվել վերանորոգման արժեքը",
         contactLabel: "Պատվիրել նորակառույցի զննում",
@@ -649,160 +488,178 @@ const coreSeoLandingPages = [
     translations: {
       ru: {
         eyebrow: "Комплексный ремонт",
-        title: "Полный ремонт квартиры в Ереване",
+        title: "Ремонт под ключ в Ереване",
         description:
-          "Организуем полный ремонт квартиры в Ереване: от осмотра и сметы до финальной проверки объекта.",
-        seoTitle: "Полный ремонт квартиры в Ереване | SHINEX",
+          "Организация ремонта одной компанией: определяем состав проекта, связываем этапы и согласовываем решения до выполнения работ.",
+        seoTitle: "Ремонт под ключ в Ереване: состав и этапы | SHINEX",
         seoDescription:
-          "Полный ремонт квартиры в Ереване: согласованный комплекс работ, этапы и расчет стоимости после осмотра.",
+          "Ремонт под ключ в Ереване: какие работы включить, как согласовать материалы, этапы и изменения. Подготовьте проект к работе с SHINEX.",
         introduction: [
-          "Полный ремонт квартиры — это согласованный комплекс работ, а не фиксированный набор без учёта объекта. Мы выстраиваем процесс от исходного состояния помещения до финальной сдачи.",
-          "До начала обсуждаем требования проекта, состав работ, решения и порядок организации работ. Финальный перечень и смета формируются после осмотра.",
+          "При ремонте под ключ важно заранее определить границы проекта: какие работы выполняет SHINEX, какие материалы нужны и что входит в сдачу объекта.",
+          "Косметический или капитальный ремонт описывает объём изменений в помещении. «Под ключ» описывает организацию этих работ. Поэтому состав такого ремонта фиксируем для вашей квартиры или дома.",
         ],
         sections: [
           {
-            title: "Что может входить в полный ремонт квартиры",
-            paragraphs: ["Состав зависит от объекта и согласованного проекта."],
+            title: "Что включить в перечень работ",
+            paragraphs: [
+              "По результатам осмотра составляем последовательность от подготовки помещения до проверки отделки и установленного оборудования.",
+            ],
             items: [
-              "Обмеры, планировка и подготовка сметы.",
-              "Демонтаж и подготовка поверхностей.",
-              "Электрика, сантехника, выравнивание и стяжка.",
-              "Плитка, покрытия, потолки, покраска и двери.",
-              "Установка согласованного оборудования, проверка и сдача.",
+              "Замеры и подготовка сметы.",
+              "Демонтаж и подготовка поверхностей при необходимости.",
+              "Электрика, сантехника и отделка.",
+              "Установка оборудования из согласованного перечня.",
+              "Проверка выполненных работ и сдача объекта.",
             ],
           },
           {
-            title: "Почему важен единый план",
+            title: "Материалы, закупки и дизайн",
             paragraphs: [
-              "Когда инженерные и отделочные работы связаны общей последовательностью, проще контролировать решения, сроки и совместимость материалов. Это не исключает изменений, но помогает согласовывать их до выполнения.",
+              "До старта нужно определить, кто выбирает, закупает и доставляет материалы. Дизайн-проект, мебель и отдельное оборудование обсуждаются отдельно: они не считаются автоматически включёнными в стоимость ремонта.",
             ],
           },
           {
-            title: "Как получить точный расчет",
+            title: "Как согласовывать изменения",
             paragraphs: [
-              "Отправьте площадь, планировку и краткое описание требований проекта либо закажите осмотр. Калькулятор даст предварительный ориентир, а точную смету готовим после изучения объекта.",
+              "Изменение планировки, материалов или состава работ может повлиять на смету и сроки. Новое решение обсуждаем до выполнения соответствующего этапа, чтобы обновлённые требования были понятны всем участникам.",
             ],
           },
         ],
         faqs: [
           {
-            question: "Включены ли материалы в полный ремонт квартиры?",
+            question: "Все материалы входят в ремонт под ключ?",
             answer:
-              "Это зависит от согласованного формата проекта. Смета должна отдельно обозначать состав работ и материалов.",
+              "Это определяется сметой. В ней нужно отдельно указать работы, материалы, доставку и оборудование, а также кто отвечает за закупку.",
           },
           {
-            question: "Можно ли начать без дизайн-проекта?",
+            question: "Чем ремонт под ключ отличается от капитального?",
             answer:
-              "Да, если решений достаточно для выполнения работ. Для сложной планировки или большого числа инженерных изменений дизайн-проект помогает согласовать их заранее.",
+              "Капитальный ремонт описывает глубину обновления помещения и инженерных систем. Под ключ — способ организации проекта, при котором компания ведёт согласованные этапы до сдачи.",
+          },
+          {
+            question: "Можно ли работать по готовому дизайн-проекту?",
+            answer:
+              "Пришлите проект вместе с данными объекта. Проверяем, достаточно ли в нём планов, размеров и указаний по материалам для составления сметы и выполнения работ.",
           },
         ],
         calculatorLabel: "Получить предварительный расчет",
-        contactLabel: "Обсудить полный ремонт квартиры",
+        contactLabel: "Обсудить ремонт под ключ",
         relatedTitle: "Связанные услуги",
       },
       en: {
         eyebrow: "Complete renovation",
-        title: "Complete apartment renovation in Yerevan",
+        title: "Complete renovation service in Yerevan",
         description:
-          "We coordinate complete apartment renovation in Yerevan, from survey and estimate through final property inspection.",
-        seoTitle: "Complete Apartment Renovation in Yerevan | SHINEX",
+          "Bring the renovation stages together with one company, an agreed scope and decisions made before work begins.",
+        seoTitle: "Complete Renovation Service in Yerevan | SHINEX",
         seoDescription:
-          "Complete apartment renovation in Yerevan: scope, stages, and a cost estimate following a property survey.",
+          "A complete renovation service in Yerevan. Plan the work, materials, responsibilities and handover with SHINEX.",
         introduction: [
-          "Complete apartment renovation is an agreed scope of coordinated work, not a fixed package that ignores the property. We plan the process from the starting condition through final handover.",
-          "Before work begins, we discuss the brief, scope, decisions, and workflow. The final list and estimate follow a property survey.",
+          "A complete renovation starts with a clear scope: the work SHINEX will carry out, the materials required and what is included at handover.",
+          "Major renovation describes how much a property changes. A complete or turnkey service describes how the project is managed. The actual scope is agreed for your apartment or house.",
         ],
         sections: [
           {
-            title: "What complete apartment renovation can include",
-            paragraphs: ["The scope follows the property and agreed project."],
+            title: "Define the work from start to finish",
+            paragraphs: [
+              "The property assessment establishes a sequence from preparation to checking the finishes and installed fixtures.",
+            ],
             items: [
-              "Measurements, layout, and estimate preparation.",
-              "Demolition and substrate preparation.",
-              "Electrical, plumbing, levelling, and screed work.",
-              "Tiling, floors, ceilings, painting, and doors.",
-              "Agreed fixture installation, inspection, and handover.",
+              "Measurements and estimate.",
+              "Demolition and surface preparation where needed.",
+              "Electrical work, plumbing and finishes.",
+              "Installation of agreed fixtures and equipment.",
+              "Final inspection and handover.",
             ],
           },
           {
-            title: "Why one plan matters",
+            title: "Materials, purchasing and design",
             paragraphs: [
-              "When building-services and finishing work follow one sequence, decisions, timing, and material compatibility are easier to control. Changes can still happen, but are agreed before work is done.",
+              "Decide who selects, buys and delivers materials before work starts. Interior design, furniture and individual appliances are discussed separately and are not automatically included in the renovation price.",
             ],
           },
           {
-            title: "How to get an accurate estimate",
+            title: "Agreeing changes during the project",
             paragraphs: [
-              "Send the area, plan, and a short brief, or request a survey. The calculator gives an initial guide; a precise estimate follows a property review.",
+              "Changes to layouts, materials or work can affect the budget and schedule. We discuss the new requirements before the relevant stage begins so everyone works from the same plan.",
             ],
           },
         ],
         faqs: [
           {
-            question:
-              "Are materials included in complete apartment renovation?",
+            question: "Are all materials included?",
             answer:
-              "That depends on the agreed project format. The estimate should clearly show the scope of work and materials.",
+              "The estimate needs to state which materials, deliveries and equipment are included, alongside labour, and who is responsible for purchasing them.",
           },
           {
-            question:
-              "Can renovation begin without an interior design project?",
+            question: "How does this differ from major renovation?",
             answer:
-              "Yes, when decisions are sufficient for delivery. For a complex layout or significant services changes, a design project helps agree them beforehand.",
+              "Major renovation describes the extent of changes to the property and its systems. A complete service describes the coordination of agreed stages through to handover.",
+          },
+          {
+            question: "Can you work from an existing interior design?",
+            answer:
+              "Send the design and property details. We review whether the plans, dimensions and material specifications provide enough information to prepare an estimate and carry out the work.",
           },
         ],
         calculatorLabel: "Get an initial estimate",
-        contactLabel: "Discuss complete apartment renovation",
+        contactLabel: "Discuss a complete renovation",
         relatedTitle: "Related services",
       },
       hy: {
         eyebrow: "Համալիր վերանորոգում",
-        title: "Բնակարանի ամբողջական վերանորոգում Երևանում",
+        title: "Ամբողջական վերանորոգում Երևանում",
         description:
-          "Կազմակերպում ենք բնակարանի ամբողջական վերանորոգումը Երևանում՝ զննումից և նախահաշվից մինչև օբյեկտի վերջնական ստուգում։",
-        seoTitle: "Բնակարանի ամբողջական վերանորոգում Երևանում — SHINEX",
+          "Վերանորոգման փուլերը կազմակերպում ենք մեկ ընկերության շրջանակում՝ նախապես հստակեցնելով աշխատանքները, նյութերն ու պատասխանատվությունը։",
+        seoTitle: "Ամբողջական վերանորոգում Երևանում | SHINEX",
         seoDescription:
-          "Բնակարանի ամբողջական վերանորոգում Երևանում՝ աշխատանքների կազմ, փուլեր և զննումից հետո արժեքի հաշվարկ։",
+          "Ամբողջական վերանորոգում Երևանում՝ աշխատանքների ցանկի, նյութերի, փուլերի և հանձնման պայմանների նախնական համաձայնեցմամբ։",
         introduction: [
-          "Բնակարանի ամբողջական վերանորոգումը համաձայնեցված համալիր աշխատանք է, ոչ թե նախապես սահմանված միատեսակ փաթեթ։ Կազմակերպում ենք ընթացքը բնակարանի ելակետային վիճակից մինչև վերջնական հանձնում։",
-          "Մինչ մեկնարկը քննարկում ենք նախագծի պահանջները, աշխատանքի ծավալը, լուծումներն ու աշխատանքի կազմակերպման կարգը։ Վերջնական ցանկն ու նախահաշիվը կազմվում են զննումից հետո։",
+          "Ամբողջական վերանորոգում պատվիրելիս կարևոր է նախապես իմանալ՝ ինչ աշխատանքներ է կատարելու SHINEX-ը, ինչ նյութեր են անհրաժեշտ և ինչ վիճակում է հանձնվելու տարածքը։",
+          "Կապիտալ վերանորոգումը նկարագրում է տարածքի ու համակարգերի փոփոխությունների ծավալը։ Ամբողջական վերանորոգումը վերաբերում է նաև աշխատանքների կազմակերպմանը, ուստի դրա կազմը սահմանում ենք ձեր բնակարանի կամ տան համար։",
         ],
         sections: [
           {
-            title: "Ի՞նչ կարող է ներառել բնակարանի ամբողջական վերանորոգումը",
-            paragraphs: ["Կազմը կախված է օբյեկտից և համաձայնեցված նախագծից։"],
+            title: "Աշխատանքների ցանկը՝ սկզբից մինչև հանձնում",
+            paragraphs: [
+              "Զննումից հետո որոշում ենք փուլերի հերթականությունը՝ տարածքի նախապատրաստումից մինչև հարդարման և տեղադրված սարքավորումների ստուգում։",
+            ],
             items: [
-              "Չափագրում, հատակագիծ և նախահաշվի կազմում։",
-              "Ապամոնտաժում և մակերեսների նախապատրաստում։",
-              "Էլեկտրականություն, սանտեխնիկա, հարթեցում և հատակի հարթեցնող շերտ (ստյաժկա)։",
-              "Սալիկ, ծածկույթներ, առաստաղներ, ներկում և դռներ։",
-              "Համաձայնեցված սարքավորումների տեղադրում, ստուգում և հանձնում։",
+              "Չափագրում և նախահաշվի կազմում։",
+              "Անհրաժեշտ ապամոնտաժում և մակերեսների նախապատրաստում։",
+              "Էլեկտրական, սանտեխնիկական ու հարդարման աշխատանքներ։",
+              "Համաձայնեցված սարքավորումների տեղադրում։",
+              "Աշխատանքների ստուգում և տարածքի հանձնում։",
             ],
           },
           {
-            title: "Ինչո՞ւ է կարևոր միասնական պլանը",
+            title: "Նյութեր, գնումներ և դիզայն",
             paragraphs: [
-              "Երբ ինժեներական և հարդարման աշխատանքները միավորված են մեկ հերթականությամբ, ավելի հեշտ է վերահսկել լուծումները, ժամկետները և նյութերի համատեղելիությունը։ Փոփոխությունները հնարավոր են, բայց համաձայնեցվում են կատարելուց առաջ։",
+              "Մինչ մեկնարկը որոշում ենք՝ ով է ընտրում, գնում և առաքում նյութերը։ Դիզայն-նախագիծը, կահույքն ու առանձին սարքավորումները քննարկվում են առանձին և ինքնաբերաբար չեն մտնում վերանորոգման արժեքի մեջ։",
             ],
           },
           {
-            title: "Ինչպե՞ս ստանալ ճշգրիտ հաշվարկ",
+            title: "Փոփոխությունների համաձայնեցում",
             paragraphs: [
-              "Ուղարկեք մակերեսը, հատակագիծը և խնդրի կարճ նկարագրությունը կամ պատվիրեք զննում։ Հաշվիչը հնարավորություն է տալիս ստանալ նախնական արժեքի հաշվարկ, իսկ ճշգրիտ նախահաշիվը կազմում ենք օբյեկտը ուսումնասիրելուց հետո։",
+              "Հատակագծի, նյութերի կամ աշխատանքների փոփոխությունը կարող է ազդել բյուջեի և ժամկետների վրա։ Նոր պահանջները քննարկում ենք մինչև համապատասխան փուլը սկսելը, որպեսզի բոլոր մասնակիցներն աշխատեն նույն պլանով։",
             ],
           },
         ],
         faqs: [
           {
-            question:
-              "Նյութերը ներառվո՞ւմ են բնակարանի ամբողջական վերանորոգման մեջ",
+            question: "Բոլոր նյութերը ներառվա՞ծ են արժեքի մեջ։",
             answer:
-              "Դա կախված է համաձայնեցված ձևաչափից։ Նախահաշվում պետք է հստակ նշված լինի աշխատանքների և նյութերի կազմը։",
+              "Դա պետք է հստակ նշված լինի նախահաշվում։ Առանձին նշվում են աշխատանքները, նյութերը, առաքումն ու սարքավորումները, ինչպես նաև գնումների պատասխանատուն։",
           },
           {
-            question: "Հնարավո՞ր է սկսել առանց դիզայն-նախագծի",
+            question: "Ինչո՞վ է ամբողջական վերանորոգումը տարբերվում կապիտալից։",
             answer:
-              "Այո, երբ իրականացնելու համար որոշումները բավարար են։ Բարդ հատակագծի կամ լուրջ ինժեներական փոփոխությունների դեպքում դիզայն-նախագիծն օգնում է դրանք նախապես համաձայնեցնել։",
+              "Կապիտալ վերանորոգումը վերաբերում է տարածքի և դրա համակարգերի փոփոխությունների ծավալին։ Ամբողջական տարբերակում ընկերությունը կազմակերպում է համաձայնեցված փուլերը մինչև տարածքի հանձնումը։",
+          },
+          {
+            question: "Կարո՞ղ եք աշխատել պատրաստի դիզայն-նախագծով։",
+            answer:
+              "Ուղարկեք նախագիծն ու տարածքի տվյալները։ Ստուգում ենք՝ արդյոք հատակագծերը, չափերն ու նյութերի նկարագրությունները բավարար են նախահաշիվ կազմելու և աշխատանքը կատարելու համար։",
           },
         ],
         calculatorLabel: "Ստանալ նախնական հաշվարկ",
@@ -814,7 +671,8 @@ const coreSeoLandingPages = [
   {
     slug: "prices",
     kind: "prices",
-    image: apartmentImage,
+    image:
+      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1800&q=85",
     relatedServiceSlugs: ["renovation", "interior-design", "design"],
     relatedLandingSlugs: [
       "apartment-renovation-yerevan",
@@ -824,39 +682,27 @@ const coreSeoLandingPages = [
     translations: {
       ru: {
         eyebrow: "Стоимость ремонта",
-        title: "Цены на ремонт квартир в Ереване",
+        title: "Стоимость ремонта в Ереване",
         description:
-          "Что влияет на стоимость ремонта квартиры и как получить точную смету после осмотра.",
-        seoTitle: "Цены на ремонт квартир в Ереване | SHINEX",
+          "Разберите бюджет на работы, материалы и дополнительные расходы. Рассчитайте предварительную стоимость для вашего объекта прямо на странице.",
+        seoTitle: "Стоимость ремонта в Ереване: расчёт бюджета | SHINEX",
         seoDescription:
-          "Стоимость ремонта квартиры в Ереване: факторы цены за м² и точный расчет после осмотра объекта.",
+          "Стоимость ремонта в Ереване: состав бюджета, расчёт площадей, работы и материалы. Калькулятор для предварительной оценки вашей квартиры или дома.",
         introduction: [
-          "Стоимость ремонта квартиры в Ереване рассчитывается по фактическому объёму работ. Ориентир полезен для планирования, но предложения сравнивают только при одинаковом составе работ и материалов.",
-          "Мы не публикуем универсальную цену, если она не отражает состояние конкретного объекта. Финальная стоимость определяется после осмотра и согласования решений.",
+          "Бюджет ремонта складывается из конкретных работ и материалов. Цена за квадратный метр полезна только тогда, когда понятно, за какие поверхности и операции вы платите.",
+          "Ниже показано, как различаются площадь пола и площадь отделки, что уточнить в предложении подрядчика и как получить предварительный расчёт для своего объекта.",
         ],
         sections: [
           {
-            title: "Что влияет на цену ремонта",
+            title: "Как сравнивать предложения",
             paragraphs: [
-              "Площадь важна, но не является единственным параметром расчёта.",
-            ],
-            items: [
-              "Состояние стен, пола, потолка и необходимость демонтажа.",
-              "Количество и сложность электрических и сантехнических работ.",
-              "Тип ремонта: косметический, капитальный или под ключ.",
-              "Материалы, плитка, потолки, двери и другие решения.",
+              "Сопоставляйте одинаковый перечень работ. Уточните, входят ли подготовка поверхностей, демонтаж, расходные материалы, доставка и вывоз строительного мусора. Низкая итоговая сумма без этих деталей не позволяет сравнить предложения.",
             ],
           },
           {
-            title: "Почему цена за м² — только ориентир",
+            title: "Что потребуется для точной сметы",
             paragraphs: [
-              "Стоимость за квадратный метр полезна для первоначального планирования, если известны её состав и ограничения. Она не показывает подготовительные и инженерные работы, необходимые конкретной квартире.",
-            ],
-          },
-          {
-            title: "Как получить смету",
-            paragraphs: [
-              "Используйте калькулятор для предварительного диапазона и закажите осмотр. Для расчёта полезны площадь, планировка, фотографии текущего состояния и перечень желаемых работ.",
+              "Подготовьте планировку, фотографии, площадь и список желаемых изменений. После осмотра можно уточнить объёмы работ и выбранные материалы. Подробный разбор документа находится на странице сметы.",
             ],
           },
         ],
@@ -878,39 +724,27 @@ const coreSeoLandingPages = [
       },
       en: {
         eyebrow: "Renovation costs",
-        title: "Apartment renovation prices in Yerevan",
+        title: "Renovation costs in Yerevan",
         description:
-          "What shapes apartment renovation cost and how to obtain an accurate estimate after a property survey.",
-        seoTitle: "Apartment Renovation Prices in Yerevan | SHINEX",
+          "Understand labour, materials and additional costs, then use the calculator below to explore a budget for your property.",
+        seoTitle: "Renovation Costs in Yerevan: Budget Calculator | SHINEX",
         seoDescription:
-          "Apartment renovation cost in Yerevan: per-m² price factors and an accurate estimate after a property survey.",
+          "Plan renovation costs in Yerevan. Understand floor and finishing areas, labour and materials, and use our calculator for an initial estimate.",
         introduction: [
-          "Apartment renovation cost in Yerevan is calculated from the actual scope. An initial guide helps planning, but offers can only be compared fairly when they include the same work and materials.",
-          "We do not publish one universal figure when it would misrepresent a property’s condition. The final cost follows a survey and agreed solutions.",
+          "A renovation budget is built from the work and materials your property needs. A price per square metre is useful only when you know which surfaces and tasks it covers.",
+          "The guide below explains the difference between floor area and finishing area, what to check in a quotation and how to get an initial estimate for your property.",
         ],
         sections: [
           {
-            title: "What affects renovation price",
+            title: "Comparing quotations",
             paragraphs: [
-              "Area matters, but it is not the only calculation input.",
-            ],
-            items: [
-              "Wall, floor, and ceiling condition and demolition needs.",
-              "Quantity and complexity of electrical and plumbing work.",
-              "Renovation type: cosmetic, capital, or turnkey.",
-              "Materials, tiling, ceilings, doors, and other choices.",
+              "Compare the same work in each quotation. Check surface preparation, demolition, consumables, delivery and removal of construction waste. A total without this breakdown is difficult to compare.",
             ],
           },
           {
-            title: "Why a per-m² price is only a guide",
+            title: "Preparing for an accurate estimate",
             paragraphs: [
-              "A per-square-metre figure supports initial planning when its scope and limits are clear. It cannot show the preparation and building-services work a specific apartment needs.",
-            ],
-          },
-          {
-            title: "How to get an estimate",
-            paragraphs: [
-              "Use the calculator for an initial range and request a survey. Area, a plan, current-condition photos, and a desired-work list help prepare the calculation.",
+              "Gather a floor plan, photographs, the area and the changes you want. A site visit helps establish quantities and material requirements. Our estimate guide explains how to read the resulting document.",
             ],
           },
         ],
@@ -932,37 +766,27 @@ const coreSeoLandingPages = [
       },
       hy: {
         eyebrow: "Վերանորոգման արժեք",
-        title: "Բնակարանների վերանորոգման գներ Երևանում",
+        title: "Վերանորոգման արժեքը Երևանում",
         description:
-          "Ինչից է կազմվում բնակարանի վերանորոգման արժեքը և ինչպես ստանալ ճշգրիտ նախահաշիվ զննումից հետո։",
-        seoTitle: "Բնակարանների վերանորոգման գներ Երևանում | SHINEX",
+          "Ծանոթացեք աշխատանքների, նյութերի և լրացուցիչ ծախսերի կազմին։ Հաշվիչով ստացեք ձեր բնակարանի կամ տան վերանորոգման նախնական արժեքը։",
+        seoTitle: "Վերանորոգման արժեքը Երևանում․ բյուջեի հաշվարկ | SHINEX",
         seoDescription:
-          "Բնակարանի վերանորոգման արժեք Երևանում՝ քմ-ի գնի գործոններ և զննումից հետո ճշգրիտ հաշվարկ։",
+          "Վերանորոգման արժեքը Երևանում՝ աշխատանքներ, նյութեր և մակերեսների հաշվարկ։ Օգտվեք հաշվիչից՝ ձեր տարածքի նախնական բյուջեն գնահատելու համար։",
         introduction: [
-          "Բնակարանի վերանորոգման արժեքը Երևանում հաշվարկվում է ըստ աշխատանքների իրական ծավալի։ Նախնական միջակայքը հարմար է պլանավորման համար, սակայն առաջարկները ճիշտ է համեմատել միայն նույն աշխատանքների և նյութերի կազմի դեպքում։",
-          "Մենք մեկ ընդհանուր գին չենք հրապարակում, եթե այն չի արտացոլում կոնկրետ օբյեկտի վիճակը։ Վերջնական արժեքը որոշվում է զննումից և լուծումների համաձայնեցումից հետո։",
+          "Վերանորոգման բյուջեն ձևավորվում է անհրաժեշտ աշխատանքների և նյութերի արժեքից։ Մեկ քառակուսի մետրի գինը համեմատելու համար պետք է իմանալ՝ որ մակերեսներն ու աշխատանքներն են ներառված դրա մեջ։",
+          "Ստորև կտեսնեք՝ ինչով է հատակի մակերեսը տարբերվում հարդարման մակերեսից, ինչ ճշտել գնային առաջարկում և ինչպես ստանալ ձեր տարածքի նախնական հաշվարկը։",
         ],
         sections: [
           {
-            title: "Ի՞նչն է ազդում վերանորոգման գնի վրա",
-            paragraphs: ["Մակերեսը կարևոր է, բայց հաշվարկի միակ չափանիշը չէ։"],
-            items: [
-              "Պատերի, հատակի, առաստաղի վիճակը և ապամոնտաժման անհրաժեշտությունը։",
-              "Էլեկտրական և սանտեխնիկական աշխատանքների քանակն ու բարդությունը։",
-              "Վերանորոգման տեսակը՝ կոսմետիկ, կապիտալ կամ ամբողջական։",
-              "Նյութերը, սալիկը, առաստաղները, դռները և այլ լուծումներ։",
+            title: "Ինչպե՞ս համեմատել առաջարկները",
+            paragraphs: [
+              "Համեմատեք նույն աշխատանքների ցանկը։ Ճշտեք՝ ներառված են արդյոք մակերեսների նախապատրաստումը, ապամոնտաժումը, օժանդակ նյութերը, առաքումն ու շինարարական աղբի տեղափոխումը։ Առանց այս մանրամասների միայն վերջնական գումարը բավարար չէ առաջարկները համեմատելու համար։",
             ],
           },
           {
-            title: "Ինչու է քմ-ի գինը միայն նախնական ցուցանիշ",
+            title: "Ի՞նչ պատրաստել ճշգրիտ նախահաշվի համար",
             paragraphs: [
-              "Քառակուսի մետրի արժեքը օգնում է սկզբնական պլանավորմանը, եթե պարզ է դրա կազմն ու սահմանափակումները։ Այն չի ցույց տալիս կոնկրետ բնակարանի նախապատրաստական և ինժեներական աշխատանքները։",
-            ],
-          },
-          {
-            title: "Ինչպե՞ս ստանալ նախահաշիվ",
-            paragraphs: [
-              "Օգտագործեք հաշվիչը նախնական միջակայքի համար և պատվիրեք զննում։ Հաշվարկին օգնում են մակերեսը, հատակագիծը, ներկա վիճակի լուսանկարները և ցանկալի աշխատանքների ցանկը։",
+              "Պատրաստեք հատակագիծը, լուսանկարները, մակերեսի տվյալներն ու ցանկալի փոփոխությունների ցանկը։ Զննումից հետո հնարավոր է ճշտել աշխատանքների ծավալներն ու նյութերը։ Նախահաշվի բաժնում բացատրում ենք փաստաթղթի կառուցվածքը։",
             ],
           },
         ],

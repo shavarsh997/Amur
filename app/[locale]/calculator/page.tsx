@@ -4,7 +4,6 @@ import { notFound } from "next/navigation";
 import { CostCalculator } from "@/components/calculator/cost-calculator";
 import { Container } from "@/components/ui/container";
 import { FAQAccordion } from "@/components/ui/faq-accordion";
-import { getFaqsWithMinimum } from "@/lib/faq";
 import { getDictionary, isLocale } from "@/lib/i18n";
 import { buildMetadata } from "@/lib/metadata";
 import { getBreadcrumbJsonLd, serializeJsonLd } from "@/lib/json-ld";
@@ -32,7 +31,7 @@ export default async function CalculatorPage({ params }: Props) {
   const dictionary = await getDictionary(locale);
   const copy = dictionary.calculator;
   const seo = dictionary.calculatorPage;
-  const faqs = getFaqsWithMinimum(seo.faqs, dictionary.seo.fallbackFaqs);
+  const faqs = seo.faqs;
 
   return (
     <Container className="py-10 sm:py-16">

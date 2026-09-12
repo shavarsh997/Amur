@@ -68,7 +68,7 @@ export default async function ContactsPage({ params }: Props) {
             {companyConfig.brand.name}
           </h2>
           <p className="mt-3 leading-7 text-[var(--text-secondary)]">
-            {companyConfig.business.serviceArea.join(" · ")}
+            {dictionary.footer.location}
           </p>
           <dl className="mt-7 space-y-5 text-[var(--text-secondary)]">
             {phoneHref && companyConfig.contact.displayPhone ? (

@@ -39,6 +39,25 @@ NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
 
 The identifier is public and starts with `G-`. The tag is omitted when this variable is unset. Existing interaction events (contact clicks, forms, and calculator actions) will then be sent to GA4 as well.
 
+## SEO and multilingual checks
+
+```bash
+npm run lint
+npm run build
+npm run seo:check
+npm run calculator:check
+```
+
+To check rendered pages, start the production build with `npm run start`, then run:
+
+```bash
+npm run seo:check -- --base-url http://localhost:3000
+```
+
+The HTTP check covers all 72 sitemap URLs, metadata, reciprocal language links, structured data, internal links, duplicate HTML IDs, 15 permanent redirects, missing-page responses and the share image. Redirects for consolidated landing pages live in `config/seo-redirects.config.ts`; keep them when publishing future updates. Portfolio content is not published.
+
+Calculator checks verify that the same inputs produce the same amounts in all three languages. Rates and coefficients remain in `config/construction-calculator.config.ts`; these tests verify calculation behavior, not current market prices. The budget guide uses quantities and formulas instead of unverified fixed offers.
+
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
 ## Learn More

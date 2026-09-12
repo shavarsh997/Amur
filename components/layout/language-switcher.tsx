@@ -1,11 +1,13 @@
 "use client";
 
 import { Languages } from "lucide-react";
-import { usePathname, useRouter } from "next/navigation";
-import type { ChangeEvent } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 import { locales } from "@/lib/i18n";
 import type { Locale } from "@/types";
+
+const languageNames = { hy: "Հայերեն", ru: "Русский", en: "English" };
 
 export function LanguageSwitcher({
   locale,
@@ -17,47 +19,33 @@ export function LanguageSwitcher({
   inverted?: boolean;
 }) {
   const pathname = usePathname();
-  const router = useRouter();
-
-  function changeLocale(event: ChangeEvent<HTMLSelectElement>) {
-    const nextLocale = event.target.value as Locale;
+  function languagePath(nextLocale: Locale) {
     const segments = pathname.split("/");
-
-    if (locales.includes(segments[1] as Locale)) {
-      segments[1] = nextLocale;
-    } else {
-      segments.splice(1, 0, nextLocale);
-    }
-
-    router.push(segments.join("/") || `/${nextLocale}`);
+    if (locales.includes(segments[1] as Locale)) segments[1] = nextLocale;
+    else segments.splice(1, 0, nextLocale);
+    return segments.join("/") || `/${nextLocale}`;
   }
 
   return (
-    <label
-      className={`inline-flex min-h-10 items-center gap-2 rounded-lg border px-3 text-sm font-semibold focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-[var(--button-primary)] ${
-        inverted
-          ? "border-white/30 text-white"
-          : "border-[var(--border)] text-[var(--text-primary)]"
-      }`}
+    <nav
+      aria-label={label}
+      className={`inline-flex min-h-10 shrink-0 items-center gap-1 rounded-lg border px-2 text-xs font-semibold ${inverted ? "border-white/30 text-white" : "border-[var(--border)] text-[var(--text-primary)]"}`}
     >
       <Languages aria-hidden="true" className="size-4" />
-      <span className="sr-only">{label}</span>
-      <select
-        aria-label={label}
-        className="cursor-pointer appearance-none bg-transparent pr-1 uppercase outline-none"
-        onChange={changeLocale}
-        value={locale}
-      >
-        {locales.map((item) => (
-          <option
-            className="text-[var(--text-primary)]"
-            key={item}
-            value={item}
-          >
-            {item}
-          </option>
-        ))}
-      </select>
-    </label>
+      {locales.map((item) => (
+        <Link
+          aria-current={item === locale ? "page" : undefined}
+          aria-label={languageNames[item]}
+          className={`inline-flex min-h-10 min-w-9 items-center justify-center rounded px-1 uppercase focus-visible:outline-2 focus-visible:outline-offset-2 ${item === locale ? "underline decoration-2 underline-offset-4" : "opacity-70 hover:opacity-100"}`}
+          href={languagePath(item)}
+          hrefLang={item}
+          key={item}
+          lang={item}
+          prefetch={false}
+        >
+          {item}
+        </Link>
+      ))}
+    </nav>
   );
 }

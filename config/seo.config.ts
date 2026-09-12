@@ -5,11 +5,7 @@ export const seoConfig = {
   category: "construction",
   titleSeparator: " — ",
   robots: {
-    index: true,
-    follow: true,
     googleBot: {
-      index: true,
-      follow: true,
       "max-image-preview": "large",
       "max-snippet": -1,
       "max-video-preview": -1,
@@ -24,11 +20,7 @@ export const seoConfig = {
   category: string;
   titleSeparator: string;
   robots: {
-    index: boolean;
-    follow: boolean;
     googleBot: {
-      index: boolean;
-      follow: boolean;
       "max-image-preview": "large";
       "max-snippet": number;
       "max-video-preview": number;

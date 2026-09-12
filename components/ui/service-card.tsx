@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import { getServiceImageAlt } from "@/config/service-images.config";
 import Link from "next/link";
 
 import { ContactTrigger } from "@/components/forms/contact-dialog";
@@ -29,7 +30,7 @@ export function ServiceCard({
     <article className="group grid h-full overflow-hidden rounded-xl border border-[var(--border)] bg-white transition-colors hover:border-[var(--border-strong)] sm:grid-cols-[0.95fr_1.05fr]">
       <div className="relative min-h-56 overflow-hidden bg-[var(--background-warm)] sm:min-h-[310px]">
         <Image
-          alt={content.title}
+          alt={getServiceImageAlt(service.image, locale)}
           className="object-cover transition duration-500 group-hover:scale-105"
           fill
           sizes="(max-width: 639px) 100vw, (max-width: 1199px) 42vw, 27vw"

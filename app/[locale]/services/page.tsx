@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 
+import { ServiceGuides } from "@/components/sections/service-guides";
+import { getServiceImageAlt } from "@/config/service-images.config";
 import { ButtonLink } from "@/components/ui/button-link";
 import { Container } from "@/components/ui/container";
 import { PageHero } from "@/components/ui/page-hero";
@@ -64,7 +66,7 @@ export default async function ServicesPage({ params }: Props) {
               className={`relative min-h-72 bg-[var(--background-warm)] ${index % 2 ? "lg:order-2" : ""}`}
             >
               <Image
-                alt={content.shortDescription}
+                alt={getServiceImageAlt(service.image, locale)}
                 className="object-cover"
                 fill
                 sizes="(max-width: 1023px) 100vw, 50vw"
@@ -119,6 +121,7 @@ export default async function ServicesPage({ params }: Props) {
             </div>
           </article>
         ))}
+        <ServiceGuides locale={locale} />
       </Container>
     </>
   );

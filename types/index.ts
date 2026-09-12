@@ -320,8 +320,8 @@ export interface Dictionary {
       terraceArea: string;
       currentCondition: string;
       renovationLevel: string;
-      renovationType?: string;
-      finishLevel?: string;
+      renovationType: string;
+      finishLevel: string;
       distance: string;
       distanceHint: string;
       heatedFloorArea: string;
@@ -363,8 +363,8 @@ export interface Dictionary {
         string
       >;
       levels: Record<"cosmetic" | "standard" | "capital" | "premium", string>;
-      types?: Record<"cosmetic" | "capital" | "complete", string>;
-      finishLevels?: Record<"standard" | "high" | "premium", string>;
+      types: Record<"cosmetic" | "capital" | "complete", string>;
+      finishLevels: Record<"standard" | "high" | "premium", string>;
       extras: Record<
         "demolition" | "electrical" | "plumbing" | "heatedFloor" | "doors",
         string
@@ -399,7 +399,7 @@ export interface Dictionary {
       constructionIncrease: string;
       distanceNote: string;
       renovationLine: string;
-      renovationParametersLine?: string;
+      renovationParametersLine: string;
       loading: string;
       workBreakdownTitle: string;
       renovationScopeTitle: string;

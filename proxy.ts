@@ -1,5 +1,7 @@
 import { NextResponse, type NextRequest } from "next/server";
 
+import { seoRedirects } from "@/config/seo-redirects.config";
+
 const canonicalHost = "www.shinex.am";
 const knownHosts = new Set(["shinex.am", canonicalHost]);
 
@@ -21,20 +23,23 @@ export function proxy(request: NextRequest) {
   const needsCanonicalHost =
     isKnownHost && (host !== canonicalHost || protocol !== "https");
 
-  if (needsCanonicalHost) {
-    const destination = request.nextUrl.clone();
-    destination.protocol = "https:";
-    destination.hostname = canonicalHost;
-    destination.port = "";
-    if (destination.pathname === "/") destination.pathname = "/hy";
-    return NextResponse.redirect(destination, 308);
-  }
+  const localizedPath = request.nextUrl.pathname.match(/^\/(hy|ru|en)\/(.+)$/);
+  const retiredPage = localizedPath
+    ? seoRedirects.find(({ source }) => source === localizedPath[2])
+    : undefined;
+  const isRoot = request.nextUrl.pathname === "/";
 
-  // Preview URLs (for example, ngrok) are not canonical domains, but still need
-  // a locale because all pages live under the `[locale]` route segment.
-  if (request.nextUrl.pathname === "/") {
+  if (needsCanonicalHost || isRoot || retiredPage) {
     const destination = request.nextUrl.clone();
-    destination.pathname = "/hy";
+    if (needsCanonicalHost) {
+      destination.protocol = "https:";
+      destination.hostname = canonicalHost;
+      destination.port = "";
+    }
+    if (isRoot) destination.pathname = "/hy";
+    if (retiredPage && localizedPath) {
+      destination.pathname = `/${localizedPath[1]}/${retiredPage.destination}`;
+    }
     return NextResponse.redirect(destination, 308);
   }
 

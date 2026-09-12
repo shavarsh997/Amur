@@ -4,10 +4,11 @@ import type { Dictionary } from "@/types";
 const dictionary = {
   localeName: "English",
   metadata: {
-    title: "Apartment renovation in Yerevan and across Armenia — SHINEX",
+    title: "Construction and Renovation Company in Armenia — SHINEX",
     description:
-      "SHINEX provides apartment renovation, house construction, interior design, and commercial-space work in Yerevan and across Armenia.",
-    manifestDescription: "Apartment and house renovation, construction, and interior design in Armenia.",
+      "SHINEX builds homes, renovates residential and commercial properties, and designs interiors in Yerevan and across Armenia. Discuss your project with us.",
+    manifestDescription:
+      "Apartment and house renovation, construction, and interior design in Armenia.",
   },
   nav: {
     home: "Home",
@@ -23,9 +24,9 @@ const dictionary = {
   },
   hero: {
     eyebrow: "Renovation and construction services",
-    title: "Apartment renovation in Yerevan and across Armenia",
+    title: "Construction, renovation and interior design in Armenia",
     description:
-      "SHINEX delivers apartment renovation, house construction, interior design, and commercial-space work in Yerevan and across Armenia — from an initial estimate to handover.",
+      "From building a home to renovating an apartment or business premises, SHINEX helps plan and carry out your project. We start by reviewing the property and the work you need, then prepare an initial estimate.",
     primaryAction: "Get a consultation",
     secondaryAction: "View services",
     trustPoints: [
@@ -52,7 +53,7 @@ const dictionary = {
       stages: "Work stages",
       audience: "Who it is for",
       customerTypes: "When this service is suitable",
-      workTypes: "Work formats",
+      workTypes: "Scope of work",
       estimateRequirements: "For an initial assessment",
       priceFactors: "What affects the cost",
       faq: "Frequently asked questions",
@@ -471,6 +472,8 @@ const dictionary = {
       },
     },
     fields: {
+      finishLevel: "Finish quality",
+      renovationType: "Renovation scope",
       area: "Area, m²",
       bathrooms: "Bathrooms",
       houseShape: "House shape",
@@ -544,21 +547,31 @@ const dictionary = {
       },
     },
     renovation: {
+      finishLevels: {
+        standard: "Standard",
+        high: "Upgraded",
+        premium: "Premium",
+      },
+      types: {
+        cosmetic: "Cosmetic refresh",
+        capital: "Major renovation",
+        complete: "Complete renovation",
+      },
       conditions: {
         newWithoutFinish: "New build without finishes",
-        roughFinish: "Rough finish",
-        oldRenovation: "Existing old renovation",
+        roughFinish: "Basic unfinished interior",
+        oldRenovation: "Older property with existing finishes",
         partiallyRenovated: "Partially renovated property",
       },
       levels: {
         cosmetic: "Cosmetic",
         standard: "Standard",
-        capital: "Capital",
+        capital: "Major renovation",
         premium: "Premium",
       },
       extras: {
         demolition: "Demolition of old finishes",
-        electrical: "Electrical replacement",
+        electrical: "Rewiring",
         plumbing: "Plumbing replacement",
         heatedFloor: "Underfloor heating",
         doors: "Internal door installation",
@@ -602,6 +615,8 @@ const dictionary = {
       },
     },
     result: {
+      renovationParametersLine:
+        "Renovation scope: {type}; finishes: {finishLevel}",
       title: "Initial assessment",
       range: "Next step",
       included: "Included",
@@ -814,9 +829,9 @@ const dictionary = {
   },
   contacts: {
     eyebrow: "Contacts",
-    title: "Let's discuss your project",
+    title: "Contact our construction company in Yerevan",
     description:
-      "Write or call with the property's location and a broad description of the work you need.",
+      "Contact SHINEX by phone, WhatsApp or email to discuss construction, renovation and interior design in Yerevan and across Armenia.",
     phone: "Phone",
     email: "Email",
     address: "Address",
@@ -866,25 +881,79 @@ const dictionary = {
       },
     ],
   },
-  blog: { label: "Blog", title: "Renovation guides for Armenia", description: "Reviewed guides to preparation, timing, and renovation estimates.", metadataDescription: "Practical SHINEX guides to renovation planning, estimates, and property preparation across Armenia." },
+  blog: {
+    label: "Blog",
+    title: "Renovation guides for Armenia",
+    description:
+      "Reviewed guides to preparation, timing, and renovation estimates.",
+    metadataDescription:
+      "Practical SHINEX guides to renovation planning, estimates, and property preparation across Armenia.",
+  },
   seo: {
-    serviceCoverage: { title: "Working across Armenia", description: "We work in Yerevan, Gyumri, Vanadzor, Dilijan, and other Armenian cities. Work terms are agreed based on the property location and scope." },
-    calculatorEstimateNotice: "The calculator provides an initial guide. A precise estimate follows a property survey.", faqTitle: "Frequently asked questions", relatedPlanningTitle: "Planning and pricing", calculatorPriceLink: "Apartment renovation prices in Yerevan",
+    serviceCoverage: {
+      title: "Working across Armenia",
+      description:
+        "We work in Yerevan, Gyumri, Vanadzor, Dilijan, and other Armenian cities. Work terms are agreed based on the property location and scope.",
+    },
+    calculatorEstimateNotice:
+      "The calculator provides an initial guide. A precise estimate follows a property survey.",
+    faqTitle: "Frequently asked questions",
+    relatedPlanningTitle: "Explore your options",
+    calculatorPriceLink: "Apartment renovation prices in Yerevan",
     fallbackFaqs: [
-      { question: "How can I get an accurate estimate?", answer: "An initial guide is available online; an accurate estimate is prepared after clarifying the project requirements and surveying the property." },
-      { question: "Is a property survey needed?", answer: "A survey helps assess the starting condition, clarify the work scope, and prepare a realistic estimate." },
-      { question: "Can the work scope be agreed before the start?", answer: "Yes. Before work starts, we discuss the project requirements, scope, and sequence of stages to agree a suitable project format." },
-      { question: "What information is needed for an initial estimate?", answer: "It is helpful to provide the property type and area, the work you need, plus a plan or photographs if available." },
+      {
+        question: "How can I get an accurate estimate?",
+        answer:
+          "An initial guide is available online; an accurate estimate is prepared after clarifying the project requirements and surveying the property.",
+      },
+      {
+        question: "Is a property survey needed?",
+        answer:
+          "A survey helps assess the starting condition, clarify the work scope, and prepare a realistic estimate.",
+      },
+      {
+        question: "Can the work scope be agreed before the start?",
+        answer:
+          "Yes. Before work starts, we discuss the project requirements, scope, and sequence of stages to agree a suitable project format.",
+      },
+      {
+        question: "What information is needed for an initial estimate?",
+        answer:
+          "It is helpful to provide the property type and area, the work you need, plus a plan or photographs if available.",
+      },
     ],
   },
   calculatorPage: {
-    title: "Apartment renovation cost calculator in Yerevan and across Armenia", description: "Calculate an initial apartment renovation cost in Yerevan and across Armenia, and learn what information is needed for an accurate estimate.", intro: "This calculator provides an initial renovation-cost guide. It does not replace a survey: the actual estimate depends on property condition, area, building-services work, materials, and the complexity of the chosen solutions.", faqTitle: "How to use the renovation calculator",
+    title: "Renovation and Construction Cost Calculator in Armenia",
+    description:
+      "Choose renovation, house construction or interior design. Enter your property details for an initial estimate in Armenian drams.",
+    intro:
+      "Renovation costs depend on the area, property condition and selected work. For a new home, the design and site also matter. Use the calculator to explore your options; the result is a budget guide, with the final scope and estimate agreed after reviewing the property.",
+    faqTitle: "How to use the renovation calculator",
     faqs: [
-      { question: "How accurate is the result?", answer: "The result is for initial planning. A precise estimate can be prepared after a survey and agreement on the work scope." },
-      { question: "What should I prepare for an estimate?", answer: "Choose the property type, area, district, and desired work. A plan and current-condition photos help refine the calculation in a follow-up discussion." },
+      {
+        question: "How accurate is the result?",
+        answer:
+          "The result is for initial planning. A precise estimate can be prepared after a survey and agreement on the work scope.",
+      },
+      {
+        question: "What should I prepare for an estimate?",
+        answer:
+          "Choose the property type, area, district, and desired work. A plan and current-condition photos help refine the calculation in a follow-up discussion.",
+      },
     ],
   },
-  leadNotification: { title: "New website enquiry", name: "Name", phone: "Phone", objectType: "Property type", area: "Area", region: "Region", workType: "Work type", options: "Additional options", comment: "Comment" },
+  leadNotification: {
+    title: "New website enquiry",
+    name: "Name",
+    phone: "Phone",
+    objectType: "Property type",
+    area: "Area",
+    region: "Region",
+    workType: "Work type",
+    options: "Additional options",
+    comment: "Comment",
+  },
   common: {
     home: "Home",
     back: "Back",

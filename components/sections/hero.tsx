@@ -5,7 +5,7 @@ import { ButtonLink } from "@/components/ui/button-link";
 import { Container } from "@/components/ui/container";
 import { homeContent } from "@/config/home-content.config";
 import type { Dictionary, Locale } from "@/types";
-import { Button } from "@/components/ui/button";
+import { ContactTrigger } from "@/components/forms/contact-dialog";
 
 export function Hero({
   locale,
@@ -35,12 +35,11 @@ export function Hero({
                 {dictionary.hero.description}
               </p>
               <div className="w-full mt-7 grid grid-cols-2 gap-3 sm:flex sm:flex-row sm:items-center">
-                <Button
+                <ContactTrigger
                   className="w-full sm:w-auto text-left"
+                  label={dictionary.hero.primaryAction}
                   variant="primary"
-                >
-                  {dictionary.hero.primaryAction}
-                </Button>
+                />
                 <ButtonLink
                   className=" w-full gap-2 sm:w-auto"
                   href={`/${locale}/services`}
