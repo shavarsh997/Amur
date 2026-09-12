@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { Calculator, X } from "lucide-react";
 
 import { CostCalculator } from "@/components/calculator/cost-calculator";
+import { ContactTrigger } from "@/components/forms/contact-dialog";
 import type {
   CalculatorScenarioId,
   CalculationType,
@@ -28,6 +29,9 @@ export function CalculatorTrigger({
   defaultCalculationType?: CalculationType;
   defaultScenarioId?: CalculatorScenarioId;
 }) {
+  if (defaultCalculationType === "renovation") {
+    return <ContactTrigger className={className} label={label} />;
+  }
   return (
     <button
       aria-haspopup="dialog"

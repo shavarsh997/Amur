@@ -11,7 +11,12 @@ const copies = ["hy", "ru", "en"].map(
 );
 const calculate = (values, copy = copies[0]) =>
   calculateConstructionEstimate(
-    { ...initialValues, area: "60", ...values },
+    {
+      ...initialValues,
+      calculationType: "construction",
+      area: "60",
+      ...values,
+    },
     copy
   );
 const numbers = (estimate) => ({
@@ -49,21 +54,23 @@ function checkLanguages(values) {
   scenarios++;
 }
 
-for (const renovationType of ["cosmetic", "capital", "complete"])
-  for (const finishLevel of ["standard", "high", "premium"])
-    for (const renovationCondition of [
-      "newWithoutFinish",
-      "roughFinish",
-      "oldRenovation",
-      "partiallyRenovated",
-    ])
-      checkLanguages({ renovationType, finishLevel, renovationCondition });
+for (const copy of copies)
+  for (const renovationObjectType of [
+    "apartment",
+    "privateHouse",
+    "commercial",
+  ])
+    for (const area of ["", "60", "100"])
+      assert.throws(
+        () =>
+          calculate(
+            { calculationType: "renovation", renovationObjectType, area },
+            copy
+          ),
+        /Renovation estimates require contacting SHINEX/,
+        "Renovation must not produce an automatic price"
+      );
 
-checkLanguages({
-  selectedWallWorks: ["painting"],
-  renovationExtras: ["electrical", "heatedFloor"],
-  heatedFloorArea: "20",
-});
 for (const constructionPackage of ["shell", "rough", "turnkey"])
   checkLanguages({
     calculationType: "construction",
@@ -75,19 +82,11 @@ for (const constructionPackage of ["shell", "rough", "turnkey"])
 for (const designPackage of ["basic", "full", "supervision"])
   checkLanguages({ calculationType: "design", designPackage });
 
-assert(
-  calculate({ finishLevel: "premium" }).total >
-    calculate({ finishLevel: "standard" }).total
-);
-assert(
-  calculate({ renovationType: "complete" }).total >
-    calculate({ renovationType: "cosmetic" }).total
-);
 assert.equal(
   calculate({ area: "60,5" }).total,
   calculate({ area: "60.5" }).total
 );
 assert.equal(calculate({ area: "" }).total, 0);
 console.log(
-  `Calculator checks passed: ${scenarios} scenarios with identical amounts in Armenian, Russian and English.`
+  `Calculator checks passed: renovation requires contact; ${scenarios} construction/design scenarios with identical amounts in Armenian, Russian and English.`
 );

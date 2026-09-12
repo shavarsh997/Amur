@@ -17,7 +17,6 @@ export function ParametersStep({
   const { control, watch } = useFormContext<CalculatorFormValues>();
   const calculationType = watch("calculationType");
   const isConstruction = calculationType === "construction";
-  const isRenovation = calculationType === "renovation";
   const isDesign = calculationType === "design";
 
   return (
@@ -28,8 +27,8 @@ export function ParametersStep({
           control={control}
           fieldId={calculatorFieldDomId("area")}
           label={copy.fields.area}
-          max={isRenovation ? 2000 : 100_000}
-          min={isRenovation ? 10 : 1}
+          max={100_000}
+          min={1}
           name="area"
         />
       </div>
@@ -79,57 +78,6 @@ export function ParametersStep({
               fieldLabel={copy.fields.terraceArea}
               label={copy.construction.extras.terrace}
               toggleName="terrace"
-            />
-          </div>
-        </div>
-      ) : null}
-
-      {isRenovation ? (
-        <div className="mt-8 space-y-7 border-t border-[var(--border)] pt-7">
-          <div className="grid gap-5 lg:grid-cols-2">
-            <ChoiceGroup
-              control={control}
-              label={copy.fields.currentCondition}
-              name="renovationCondition"
-              options={copy.renovation.conditions}
-            />
-            <div className="grid gap-5">
-              <ChoiceGroup
-                control={control}
-                label={copy.fields.renovationType}
-                name="renovationType"
-                options={copy.renovation.types}
-              />
-              <ChoiceGroup
-                control={control}
-                label={copy.fields.finishLevel}
-                name="finishLevel"
-                options={copy.renovation.finishLevels}
-              />
-            </div>
-          </div>
-          <div className="grid gap-5 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_minmax(0,1.4fr)]">
-            <NumberField
-              control={control}
-              fieldId={calculatorFieldDomId("ceilingHeight")}
-              label={copy.fields.ceilingHeight}
-              max={6}
-              min={2}
-              name="ceilingHeight"
-            />
-            <NumberField
-              control={control}
-              fieldId={calculatorFieldDomId("roomsCount")}
-              label={copy.fields.roomsCount}
-              max={50}
-              min={1}
-              name="roomsCount"
-            />
-            <ChoiceGroup
-              control={control}
-              label={copy.fields.layoutDensity}
-              name="layoutDensity"
-              options={copy.wallWorks.layoutDensity}
             />
           </div>
         </div>

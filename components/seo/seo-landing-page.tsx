@@ -6,7 +6,7 @@ import {
   getSeoLandingPath,
   type SeoLandingPage,
 } from "@/config/seo-landing-pages.config";
-import { CostCalculator } from "@/components/calculator/cost-calculator";
+import { RenovationContact } from "@/components/calculator/renovation-contact";
 import {
   EstimateExample,
   RenovationBudget,
@@ -38,7 +38,8 @@ export function SeoLandingPage({
   const { content } = page;
   const faqs = content.faqs;
   const isPrices = page.slug === "prices";
-  const calculatorHref = isPrices ? "#calculator" : `/${locale}/calculator`;
+  const supportsCalculator = page.slug === "apartment-interior-design-yerevan";
+  const calculatorHref = `/${locale}/calculator`;
   const schema = page.kind === "service" ? getServiceJsonLd : getWebPageJsonLd;
   const relatedServices = getActiveServices(locale).filter((service) =>
     (page.relatedServiceSlugs as readonly string[]).includes(service.slug)
@@ -86,9 +87,11 @@ export function SeoLandingPage({
         actions={
           <>
             <ContactTrigger label={content.contactLabel} />
-            <ButtonLink href={calculatorHref} variant="secondary">
-              {content.calculatorLabel}
-            </ButtonLink>
+            {supportsCalculator ? (
+              <ButtonLink href={calculatorHref} variant="secondary">
+                {content.calculatorLabel}
+              </ButtonLink>
+            ) : null}
           </>
         }
         breadcrumbs={breadcrumbs}
@@ -144,22 +147,12 @@ export function SeoLandingPage({
                 ) : null}
               </section>
             ))}
-            {isPrices ? (
-              <section
-                className="scroll-mt-24 border-t border-[var(--border)] pt-10"
-                id="calculator"
-              >
-                <h2 className="text-2xl font-semibold tracking-tight text-[var(--text-primary)]">
-                  {content.calculatorLabel}
-                </h2>
-                <p className="mb-6 mt-3 leading-7 text-[var(--text-secondary)]">
-                  {dictionary.seo.calculatorEstimateNotice}
-                </p>
-                <CostCalculator
-                  copy={dictionary.constructionCalculator}
-                  locale={locale}
+            {!supportsCalculator ? (
+              <div id="request-estimate" className="scroll-mt-24">
+                <RenovationContact
+                  copy={dictionary.constructionCalculator.renovationContact}
                 />
-              </section>
+              </div>
             ) : (
               <section className="rounded-[24px] bg-[var(--background-warm)] p-7 sm:p-10">
                 <h2 className="text-2xl font-semibold tracking-[-0.03em] text-[var(--text-primary)]">

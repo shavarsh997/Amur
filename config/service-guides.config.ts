@@ -129,9 +129,9 @@ export const serviceGuideGroups: readonly {
       {
         path: "calculator",
         label: {
-          hy: "Արժեքի հաշվիչ",
-          ru: "Калькулятор стоимости",
-          en: "Cost calculator",
+          hy: "Շինարարության և դիզայնի հաշվիչ",
+          ru: "Калькулятор строительства и дизайна",
+          en: "Construction and design calculator",
         },
       },
     ],

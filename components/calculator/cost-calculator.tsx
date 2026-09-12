@@ -14,9 +14,8 @@ import { ConstructionEstimateDialog } from "@/components/calculator/construction
 import { CalculateButton } from "@/components/calculator/steps/calculate-button";
 import { ConstructionExtrasStep } from "@/components/calculator/steps/construction-extras-step";
 import { ParametersStep } from "@/components/calculator/steps/parameters-step";
-import { RenovationExtrasStep } from "@/components/calculator/steps/renovation-extras-step";
+import { RenovationContact } from "@/components/calculator/renovation-contact";
 import { ScenarioStep } from "@/components/calculator/steps/scenario-step";
-import { WallWorksStep } from "@/components/calculator/steps/wall-works-step";
 import type {
   CalculatorFieldId,
   CalculatorFormValues,
@@ -75,6 +74,8 @@ export function CostCalculator({
       (item) => item.id === scenarioId
     );
     if (!scenario) return;
+    setIsEstimateOpen(false);
+    setSubmittedValues(null);
 
     form.reset(
       valuesForScenario(
@@ -91,6 +92,7 @@ export function CostCalculator({
     CALCULATOR_FIELD_ORDER.find((field) => errors[field]) ?? null;
 
   const onSubmit: SubmitHandler<CalculatorFormValues> = (values) => {
+    if (values.calculationType === "renovation") return;
     setSubmittedValues(values);
     setIsEstimateOpen(true);
   };
@@ -114,21 +116,21 @@ export function CostCalculator({
             selectedQuickScenario={selectedQuickScenario}
           />
 
-          <ParametersStep copy={copy} />
-
-          {isConstruction ? <ConstructionExtrasStep copy={copy} /> : null}
-
-          {isRenovation ? <RenovationExtrasStep copy={copy} /> : null}
-
-          {isRenovation ? <WallWorksStep copy={copy} /> : null}
-
-          <CalculateButton
-            copy={copy}
-            onClick={form.handleSubmit(onSubmit, onInvalid)}
-          />
+          {isRenovation ? (
+            <RenovationContact copy={copy.renovationContact} />
+          ) : (
+            <>
+              <ParametersStep copy={copy} />
+              {isConstruction ? <ConstructionExtrasStep copy={copy} /> : null}
+              <CalculateButton
+                copy={copy}
+                onClick={form.handleSubmit(onSubmit, onInvalid)}
+              />
+            </>
+          )}
         </div>
 
-        {isEstimateOpen && submittedValues ? (
+        {!isRenovation && isEstimateOpen && submittedValues ? (
           <ConstructionEstimateDialog
             copy={copy}
             locale={locale}

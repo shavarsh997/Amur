@@ -76,8 +76,8 @@ export const homeContent: Record<Locale, HomeContent> = {
         href: "/ru/contacts",
       },
       secondaryCta: {
-        label: "Рассчитать стоимость ремонта",
-        href: "/ru/calculator?step=region",
+        label: "Обсудить стоимость ремонта",
+        href: "/ru/contacts",
       },
       items: [
         {
@@ -143,8 +143,8 @@ export const homeContent: Record<Locale, HomeContent> = {
         href: "/en/contacts",
       },
       secondaryCta: {
-        label: "Calculate renovation cost",
-        href: "/en/calculator?step=region",
+        label: "Discuss renovation costs",
+        href: "/en/contacts",
       },
       items: [
         {
@@ -210,8 +210,8 @@ export const homeContent: Record<Locale, HomeContent> = {
         href: "/hy/contacts",
       },
       secondaryCta: {
-        label: "Հաշվել վերանորոգման արժեքը",
-        href: "/hy/calculator?step=region",
+        label: "Քննարկել վերանորոգման արժեքը",
+        href: "/hy/contacts",
       },
       items: [
         {

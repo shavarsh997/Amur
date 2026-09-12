@@ -109,8 +109,16 @@ export async function crawlSeo({ base, sitemap, seoRedirects, locales }) {
             `Planning page labelled as a service: ${path}`
           );
         }
-        if (path.endsWith("/prices"))
-          assert(page.ids.has("calculator"), `No embedded calculator: ${path}`);
+        if (path.endsWith("/prices")) {
+          assert(
+            page.ids.has("request-estimate"),
+            `Missing contact section: ${path}`
+          );
+          assert(
+            !page.ids.has("calculator-field-area"),
+            `Renovation calculator remains on prices: ${path}`
+          );
+        }
         for (const locale of locales) {
           assert(
             page.anchors.some(

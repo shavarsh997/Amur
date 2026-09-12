@@ -1,12 +1,9 @@
 import type { CalculatorFormValues } from "@/components/calculator/types";
 import { constructionCalculatorConfig as config } from "@/config/construction-calculator.config";
-import { calculateInternalWallArea } from "@/lib/calculator/calculate-internal-wall-area";
-import { calculateRenovationSurfaces } from "@/lib/calculator/calculate-renovation-surfaces";
+import type { calculateInternalWallArea } from "@/lib/calculator/calculate-internal-wall-area";
+import type { calculateRenovationSurfaces } from "@/lib/calculator/calculate-renovation-surfaces";
 import type { RenovationSurfaceKey } from "@/lib/calculator/calculate-renovation-surfaces";
-import {
-  calculateWallWorksCost,
-  type WallWorkCostLine,
-} from "@/lib/calculator/calculate-wall-works-cost";
+import type { WallWorkCostLine } from "@/lib/calculator/calculate-wall-works-cost";
 import type { Dictionary } from "@/types";
 
 export type EstimateUnit = "squareMeter" | "bathroom" | "item" | "kilometer";
@@ -46,16 +43,18 @@ export function calculateConstructionEstimate(
   values: CalculatorFormValues,
   copy: Dictionary["constructionCalculator"]
 ): ConstructionEstimate {
+  if (values.calculationType === "renovation") {
+    throw new Error("Renovation estimates require contacting SHINEX.");
+  }
   const area = numberValue(values.area);
-  const bathrooms = numberValue(values.bathrooms);
   const lines: EstimateLine[] = [];
   let constructionTotal = 0;
-  let renovationTotal = 0;
+  const renovationTotal = 0;
   let designTotal = 0;
-  let wallCalculation: ConstructionEstimate["wallCalculation"] = null;
-  let surfaceCalculation: ConstructionEstimate["surfaceCalculation"] = null;
-  let wallWorks: WallWorkCostLine[] = [];
-  let wallWorksTotal = 0;
+  const wallCalculation: ConstructionEstimate["wallCalculation"] = null;
+  const surfaceCalculation: ConstructionEstimate["surfaceCalculation"] = null;
+  const wallWorks: WallWorkCostLine[] = [];
+  const wallWorksTotal = 0;
 
   if (area && values.calculationType === "construction") {
     const packageOption =
@@ -155,118 +154,6 @@ export function calculateConstructionEstimate(
         quantity: numberValue(values.distanceKm),
         unit: "kilometer",
         pricePerUnit: config.construction.extras.distance.pricePerKm,
-      });
-    }
-  }
-
-  if (area && values.calculationType === "renovation") {
-    const renovationType = config.renovation.types[values.renovationType];
-    const finishLevel = config.renovation.finishLevels[values.finishLevel];
-    const condition = config.renovation.conditions[values.renovationCondition];
-    const renovationPricePerSquareMeter =
-      renovationType.pricePerSquareMeter * finishLevel.multiplier;
-    renovationTotal =
-      area * renovationPricePerSquareMeter * condition.multiplier;
-    wallCalculation = calculateInternalWallArea({
-      floorArea: area,
-      ceilingHeight: numberValue(values.ceilingHeight),
-      roomsCount: numberValue(values.roomsCount),
-      layoutDensity: values.layoutDensity,
-    });
-    surfaceCalculation = calculateRenovationSurfaces({
-      floorArea: area,
-      ceilingHeight: numberValue(values.ceilingHeight),
-      roomsCount: numberValue(values.roomsCount),
-      layoutDensity: values.layoutDensity,
-    });
-    const wallWorksResult = calculateWallWorksCost(
-      wallCalculation.netWallArea,
-      values.selectedWallWorks
-    );
-    wallWorks = wallWorksResult.lines;
-    wallWorksTotal = wallWorksResult.total;
-    const baseRenovationTotal = renovationTotal;
-    const selectedWallWorksReplaceBase = wallWorksTotal > 0;
-    if (selectedWallWorksReplaceBase) {
-      renovationTotal +=
-        wallWorksTotal -
-        baseRenovationTotal * config.renovation.surfaceAllocation.internalWalls;
-    }
-    const surfaceQuantities = {
-      floor: surfaceCalculation.floorArea,
-      ceiling: surfaceCalculation.ceilingArea,
-      internalWalls: surfaceCalculation.internalWallArea,
-      exteriorWalls: surfaceCalculation.exteriorWallArea,
-    } as const;
-    for (const [surface, quantity] of Object.entries(surfaceQuantities) as [
-      keyof typeof surfaceQuantities,
-      number,
-    ][]) {
-      if (surface === "internalWalls" && selectedWallWorksReplaceBase) continue;
-      const amount =
-        baseRenovationTotal * config.renovation.surfaceAllocation[surface];
-      lines.push({
-        label: copy.result.surfaceWorks[surface],
-        amount,
-        note: copy.result.renovationParametersLine
-          .replace("{type}", copy.renovation.types[values.renovationType])
-          .replace(
-            "{finishLevel}",
-            copy.renovation.finishLevels[values.finishLevel]
-          ),
-        quantity,
-        unit: "squareMeter",
-        pricePerUnit: quantity ? amount / quantity : 0,
-        surface:
-          surface === "floor"
-            ? "floorArea"
-            : surface === "ceiling"
-              ? "ceilingArea"
-              : surface === "internalWalls"
-                ? "internalWallArea"
-                : "exteriorWallArea",
-      });
-    }
-    for (const extraKey of new Set(values.renovationExtras ?? [])) {
-      const extra = config.renovation.extras[extraKey];
-      const amount =
-        "pricePerSquareMeter" in extra
-          ? (extraKey === "heatedFloor"
-              ? numberValue(values.heatedFloorArea)
-              : area) * extra.pricePerSquareMeter
-          : "pricePerBathroom" in extra
-            ? bathrooms * extra.pricePerBathroom
-            : "pricePerItem" in extra
-              ? numberValue(values.doorsCount) * extra.pricePerItem
-              : 0;
-      renovationTotal += amount;
-      const quantity =
-        extraKey === "plumbing"
-          ? bathrooms
-          : extraKey === "doors"
-            ? numberValue(values.doorsCount)
-            : extraKey === "heatedFloor"
-              ? numberValue(values.heatedFloorArea)
-              : area;
-      const pricePerUnit =
-        "pricePerSquareMeter" in extra
-          ? extra.pricePerSquareMeter
-          : "pricePerBathroom" in extra
-            ? extra.pricePerBathroom
-            : "pricePerItem" in extra
-              ? extra.pricePerItem
-              : 0;
-      lines.push({
-        label: copy.renovation.extras[extraKey],
-        amount,
-        quantity,
-        unit:
-          extraKey === "plumbing"
-            ? "bathroom"
-            : extraKey === "doors"
-              ? "item"
-              : "squareMeter",
-        pricePerUnit,
       });
     }
   }

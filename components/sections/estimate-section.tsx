@@ -1,11 +1,10 @@
-import { ButtonLink } from "@/components/ui/button-link";
+import { ContactTrigger } from "@/components/forms/contact-dialog";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import type { Dictionary } from "@/types";
 
 export function EstimateSection({
   dictionary,
-  locale,
 }: {
   dictionary: Dictionary;
   locale: string;
@@ -29,9 +28,12 @@ export function EstimateSection({
               <p className="text-sm leading-6 text-[var(--text-secondary)]">
                 {dictionary.constructionCalculator.estimateSectionDescription}
               </p>
-              <ButtonLink className="mt-6 w-full" href={`/${locale}/calculator`}>
-                {dictionary.hero.primaryAction}
-              </ButtonLink>
+              <ContactTrigger
+                className="mt-6 w-full"
+                label={
+                  dictionary.constructionCalculator.renovationContact.action
+                }
+              />
             </div>
           </div>
         </div>

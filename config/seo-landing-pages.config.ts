@@ -91,7 +91,7 @@ const coreSeoLandingPages = [
           {
             title: "Как рассчитать стоимость",
             paragraphs: [
-              "Для первого расчёта укажите площадь и состояние квартиры. Затем уточняем объёмы демонтажа, электрики, сантехники и отделки. В разделе стоимости можно посмотреть структуру бюджета и воспользоваться калькулятором.",
+              "Для обсуждения сметы расскажите о площади и состоянии квартиры. Уточним объёмы демонтажа, электрики, сантехники и отделки. В разделе стоимости можно посмотреть структуру бюджета.",
             ],
           },
         ],
@@ -112,8 +112,8 @@ const coreSeoLandingPages = [
               "Расстановка мебели, расположение розеток, освещения, сантехники и выбор покрытий. Это позволяет предусмотреть необходимые подключения до закрытия стен и пола.",
           },
         ],
-        calculatorLabel: "Рассчитать стоимость ремонта квартиры",
-        contactLabel: "Заказать осмотр квартиры",
+        calculatorLabel: "Обсудить ремонт",
+        contactLabel: "Обсудить ремонт",
         relatedTitle: "Связанные услуги",
       },
       en: {
@@ -163,7 +163,7 @@ const coreSeoLandingPages = [
           {
             title: "Planning the budget",
             paragraphs: [
-              "Start with the area and condition of your apartment. Demolition, wiring, plumbing and finishing quantities refine the estimate. Visit our cost guide for a budget breakdown and calculator.",
+              "Tell us about the size and condition of your apartment so we can discuss an estimate. We will clarify the demolition, wiring, plumbing and finishing work needed. Our cost guide explains how the budget is structured.",
             ],
           },
         ],
@@ -184,8 +184,8 @@ const coreSeoLandingPages = [
               "Furniture positions, outlets, lighting, plumbing fixtures and finishes. Agreeing these early lets the necessary connections be planned before walls and floors are finished.",
           },
         ],
-        calculatorLabel: "Calculate renovation cost",
-        contactLabel: "Request an apartment survey",
+        calculatorLabel: "Discuss your renovation",
+        contactLabel: "Discuss your renovation",
         relatedTitle: "Related services",
       },
       hy: {
@@ -235,7 +235,7 @@ const coreSeoLandingPages = [
           {
             title: "Ինչպե՞ս հաշվարկել արժեքը",
             paragraphs: [
-              "Սկզբում նշեք բնակարանի մակերեսն ու վիճակը։ Հետո ճշտում ենք ապամոնտաժման, էլեկտրական, սանտեխնիկական և հարդարման աշխատանքների ծավալները։ Արժեքի բաժնում կարող եք ծանոթանալ բյուջեի կազմին և օգտվել հաշվիչից։",
+              "Նախահաշիվը քննարկելու համար նշեք բնակարանի մակերեսն ու վիճակը։ Կճշտենք ապամոնտաժման, էլեկտրական, սանտեխնիկական և հարդարման աշխատանքների ծավալները։ Արժեքի բաժնում կարող եք ծանոթանալ բյուջեի կազմին։",
             ],
           },
         ],
@@ -256,8 +256,8 @@ const coreSeoLandingPages = [
               "Կահույքի, վարդակների, լուսավորության ու սանտեխնիկայի տեղերը և հարդարման նյութերը։ Այդպես անհրաժեշտ միացումները հնարավոր է նախատեսել մինչև պատերն ու հատակը վերջնական հարդարելը։",
           },
         ],
-        calculatorLabel: "Հաշվել վերանորոգման արժեքը",
-        contactLabel: "Պատվիրել բնակարանի զննում",
+        calculatorLabel: "Կապվել մեզ հետ",
+        contactLabel: "Կապվել մեզ հետ",
         relatedTitle: "Կապված ծառայություններ",
       },
     },
@@ -336,8 +336,8 @@ const coreSeoLandingPages = [
               "Какие работы выполнены при передаче квартиры и какие сведения есть об инженерных системах. Если доступны планы подключения и документы о состоянии помещения, передайте их вместе с планировкой.",
           },
         ],
-        calculatorLabel: "Рассчитать стоимость ремонта",
-        contactLabel: "Заказать осмотр новостройки",
+        calculatorLabel: "Обсудить ремонт",
+        contactLabel: "Обсудить ремонт",
         relatedTitle: "Связанные услуги",
       },
       en: {
@@ -402,8 +402,8 @@ const coreSeoLandingPages = [
               "Ask what work has been completed at handover and what information is available about utility connections. Share any connection plans and handover documents with the apartment layout.",
           },
         ],
-        calculatorLabel: "Calculate renovation cost",
-        contactLabel: "Request a new-build survey",
+        calculatorLabel: "Discuss your renovation",
+        contactLabel: "Discuss your renovation",
         relatedTitle: "Related services",
       },
       hy: {
@@ -468,8 +468,8 @@ const coreSeoLandingPages = [
               "Ճշտեք՝ ինչ աշխատանքներ են կատարված բնակարանը հանձնելիս և ինչ տվյալներ կան ինժեներական համակարգերի մասին։ Եթե ունեք միացումների պլաններ ու հանձնման փաստաթղթեր, ուղարկեք դրանք հատակագծի հետ։",
           },
         ],
-        calculatorLabel: "Հաշվել վերանորոգման արժեքը",
-        contactLabel: "Պատվիրել նորակառույցի զննում",
+        calculatorLabel: "Կապվել մեզ հետ",
+        contactLabel: "Կապվել մեզ հետ",
         relatedTitle: "Կապված ծառայություններ",
       },
     },
@@ -542,8 +542,8 @@ const coreSeoLandingPages = [
               "Пришлите проект вместе с данными объекта. Проверяем, достаточно ли в нём планов, размеров и указаний по материалам для составления сметы и выполнения работ.",
           },
         ],
-        calculatorLabel: "Получить предварительный расчет",
-        contactLabel: "Обсудить ремонт под ключ",
+        calculatorLabel: "Обсудить ремонт",
+        contactLabel: "Обсудить ремонт",
         relatedTitle: "Связанные услуги",
       },
       en: {
@@ -602,8 +602,8 @@ const coreSeoLandingPages = [
               "Send the design and property details. We review whether the plans, dimensions and material specifications provide enough information to prepare an estimate and carry out the work.",
           },
         ],
-        calculatorLabel: "Get an initial estimate",
-        contactLabel: "Discuss a complete renovation",
+        calculatorLabel: "Discuss your renovation",
+        contactLabel: "Discuss your renovation",
         relatedTitle: "Related services",
       },
       hy: {
@@ -662,8 +662,8 @@ const coreSeoLandingPages = [
               "Ուղարկեք նախագիծն ու տարածքի տվյալները։ Ստուգում ենք՝ արդյոք հատակագծերը, չափերն ու նյութերի նկարագրությունները բավարար են նախահաշիվ կազմելու և աշխատանքը կատարելու համար։",
           },
         ],
-        calculatorLabel: "Ստանալ նախնական հաշվարկ",
-        contactLabel: "Քննարկել ամբողջական վերանորոգումը",
+        calculatorLabel: "Կապվել մեզ հետ",
+        contactLabel: "Կապվել մեզ հետ",
         relatedTitle: "Կապված ծառայություններ",
       },
     },
@@ -684,13 +684,13 @@ const coreSeoLandingPages = [
         eyebrow: "Стоимость ремонта",
         title: "Стоимость ремонта в Ереване",
         description:
-          "Разберите бюджет на работы, материалы и дополнительные расходы. Рассчитайте предварительную стоимость для вашего объекта прямо на странице.",
+          "Узнайте, из чего складывается бюджет ремонта: работы, материалы и дополнительные расходы. Чтобы обсудить стоимость вашего проекта, свяжитесь с нами.",
         seoTitle: "Стоимость ремонта в Ереване: расчёт бюджета | SHINEX",
         seoDescription:
-          "Стоимость ремонта в Ереване: состав бюджета, расчёт площадей, работы и материалы. Калькулятор для предварительной оценки вашей квартиры или дома.",
+          "Стоимость ремонта в Ереване: работы, материалы и состав сметы. Свяжитесь с SHINEX, чтобы обсудить ваш объект и необходимые работы.",
         introduction: [
           "Бюджет ремонта складывается из конкретных работ и материалов. Цена за квадратный метр полезна только тогда, когда понятно, за какие поверхности и операции вы платите.",
-          "Ниже показано, как различаются площадь пола и площадь отделки, что уточнить в предложении подрядчика и как получить предварительный расчёт для своего объекта.",
+          "Ниже показано, как различаются площадь пола и площадь отделки и что уточнить в предложении подрядчика. Свяжитесь с нами, чтобы обсудить смету для вашего объекта.",
         ],
         sections: [
           {
@@ -718,21 +718,21 @@ const coreSeoLandingPages = [
               "В ней должны быть объём работ, единицы измерения, стоимость работ и отдельно оговорённые материалы или условия.",
           },
         ],
-        calculatorLabel: "Рассчитать стоимость ремонта",
-        contactLabel: "Заказать осмотр и смету",
+        calculatorLabel: "Обсудить ремонт",
+        contactLabel: "Обсудить ремонт",
         relatedTitle: "Услуги для расчета",
       },
       en: {
         eyebrow: "Renovation costs",
         title: "Renovation costs in Yerevan",
         description:
-          "Understand labour, materials and additional costs, then use the calculator below to explore a budget for your property.",
-        seoTitle: "Renovation Costs in Yerevan: Budget Calculator | SHINEX",
+          "Understand the labour, materials and additional costs that make up a renovation budget. Contact us to discuss the cost of your project.",
+        seoTitle: "Renovation Costs in Yerevan: Budget Guide | SHINEX",
         seoDescription:
-          "Plan renovation costs in Yerevan. Understand floor and finishing areas, labour and materials, and use our calculator for an initial estimate.",
+          "Renovation costs in Yerevan: labour, materials and estimate structure. Contact SHINEX to discuss your property and the work you need.",
         introduction: [
           "A renovation budget is built from the work and materials your property needs. A price per square metre is useful only when you know which surfaces and tasks it covers.",
-          "The guide below explains the difference between floor area and finishing area, what to check in a quotation and how to get an initial estimate for your property.",
+          "Below, we explain how floor area differs from finishing area and what to check in a quotation. Contact us to discuss an estimate for your property.",
         ],
         sections: [
           {
@@ -760,21 +760,21 @@ const coreSeoLandingPages = [
               "It should show quantities, units, work cost, and separately agreed materials or conditions.",
           },
         ],
-        calculatorLabel: "Calculate renovation cost",
-        contactLabel: "Request a survey and estimate",
+        calculatorLabel: "Discuss your renovation",
+        contactLabel: "Discuss your renovation",
         relatedTitle: "Services to plan your project",
       },
       hy: {
         eyebrow: "Վերանորոգման արժեք",
         title: "Վերանորոգման արժեքը Երևանում",
         description:
-          "Ծանոթացեք աշխատանքների, նյութերի և լրացուցիչ ծախսերի կազմին։ Հաշվիչով ստացեք ձեր բնակարանի կամ տան վերանորոգման նախնական արժեքը։",
+          "Ծանոթացեք վերանորոգման բյուջեի կազմին՝ աշխատանքներին, նյութերին ու լրացուցիչ ծախսերին։ Ձեր նախագծի արժեքը քննարկելու համար կապվեք մեզ հետ։",
         seoTitle: "Վերանորոգման արժեքը Երևանում․ բյուջեի հաշվարկ | SHINEX",
         seoDescription:
-          "Վերանորոգման արժեքը Երևանում՝ աշխատանքներ, նյութեր և մակերեսների հաշվարկ։ Օգտվեք հաշվիչից՝ ձեր տարածքի նախնական բյուջեն գնահատելու համար։",
+          "Վերանորոգման արժեքը Երևանում՝ աշխատանքներ, նյութեր և նախահաշվի կազմ։ Կապվեք SHINEX-ի հետ՝ ձեր տարածքն ու անհրաժեշտ աշխատանքները քննարկելու համար։",
         introduction: [
           "Վերանորոգման բյուջեն ձևավորվում է անհրաժեշտ աշխատանքների և նյութերի արժեքից։ Մեկ քառակուսի մետրի գինը համեմատելու համար պետք է իմանալ՝ որ մակերեսներն ու աշխատանքներն են ներառված դրա մեջ։",
-          "Ստորև կտեսնեք՝ ինչով է հատակի մակերեսը տարբերվում հարդարման մակերեսից, ինչ ճշտել գնային առաջարկում և ինչպես ստանալ ձեր տարածքի նախնական հաշվարկը։",
+          "Ստորև կտեսնեք՝ ինչով է հատակի մակերեսը տարբերվում հարդարման մակերեսից և ինչ ճշտել գնային առաջարկում։ Ձեր տարածքի նախահաշիվը քննարկելու համար կապվեք մեզ հետ։",
         ],
         sections: [
           {
@@ -802,8 +802,8 @@ const coreSeoLandingPages = [
               "Այն պետք է նշի աշխատանքի ծավալները, չափման միավորները, արժեքը և առանձին համաձայնեցված նյութերը կամ պայմանները։",
           },
         ],
-        calculatorLabel: "Հաշվել վերանորոգման արժեքը",
-        contactLabel: "Պատվիրել զննում և նախահաշիվ",
+        calculatorLabel: "Կապվել մեզ հետ",
+        contactLabel: "Կապվել մեզ հետ",
         relatedTitle: "Նախագիծը պլանավորելու ծառայություններ",
       },
     },

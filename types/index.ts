@@ -302,6 +302,7 @@ export interface Dictionary {
     };
   };
   constructionCalculator: {
+    renovationContact: { title: string; description: string; action: string };
     dialog: { eyebrow: string; title: string; close: string; open: string };
     steps: {
       scenario: { title: string; description: string };

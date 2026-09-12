@@ -347,10 +347,10 @@ const dictionary = {
       "The enquiry could not be sent. Please try again or contact us directly.",
   },
   calculator: {
-    eyebrow: "Cost calculator",
-    title: "Calculate your project’s initial cost",
+    eyebrow: "Let’s discuss your project",
+    title: "Planning a renovation or construction project?",
     description:
-      "The calculator helps provide an initial cost and does not require a phone number. Enter the property type, area, and work you need. A precise estimate is prepared after a survey and clarification of the details.",
+      "Tell us about your property and the work you have in mind. Contact us in the way that suits you to discuss the details and next steps.",
     steps: {
       objectType: "Property",
       workType: "Work",
@@ -438,6 +438,12 @@ const dictionary = {
     },
   },
   constructionCalculator: {
+    renovationContact: {
+      title: "Discuss your renovation",
+      description:
+        "Contact SHINEX and tell us what you would like to renovate. We will discuss the property condition, the work you need and the next steps for a site visit and estimate.",
+      action: "Discuss your renovation",
+    },
     dialog: {
       eyebrow: "Online calculator",
       title: "Preliminary project cost",
@@ -448,7 +454,7 @@ const dictionary = {
       scenario: {
         title: "Choose a service",
         description:
-          "Choose renovation, home construction, design, or work for a commercial property.",
+          "Contact us for renovation enquiries, or get an initial calculation for house construction and design.",
       },
       parameters: {
         title: "Property details",
@@ -494,7 +500,7 @@ const dictionary = {
     quickScenarios: {
       apartmentOrPrivateHouseRenovation: {
         title: "Apartment renovation",
-        description: "Assess an apartment renovation",
+        description: "Contact us to discuss the work and cost",
       },
       houseConstruction: {
         title: "House construction",
@@ -506,7 +512,7 @@ const dictionary = {
       },
       commercial: {
         title: "Commercial property",
-        description: "Office, retail, or service space",
+        description: "Contact us to discuss the work and cost",
       },
     },
     construction: {
@@ -667,7 +673,7 @@ const dictionary = {
       roomsCountOutOfRange: "Enter a number of rooms from 1 to 50.",
     },
     estimateSectionDescription:
-      "The calculator shows an initial cost. A precise estimate is prepared after a property survey and clarification of the work.",
+      "Contact us to discuss renovation costs. We will clarify what you need and agree the information and site visit required to prepare an estimate.",
   },
   testimonials: {
     eyebrow: "Testimonials",
@@ -924,22 +930,22 @@ const dictionary = {
     ],
   },
   calculatorPage: {
-    title: "Renovation and Construction Cost Calculator in Armenia",
+    title: "Construction and design cost calculator in Armenia",
     description:
-      "Choose renovation, house construction or interior design. Enter your property details for an initial estimate in Armenian drams.",
+      "Get an initial house construction or design estimate in AMD. For renovation costs, contact SHINEX by phone, WhatsApp or the enquiry form.",
     intro:
-      "Renovation costs depend on the area, property condition and selected work. For a new home, the design and site also matter. Use the calculator to explore your options; the result is a budget guide, with the final scope and estimate agreed after reviewing the property.",
-    faqTitle: "How to use the renovation calculator",
+      "The calculator provides initial estimates for house construction and design. For apartment, house or commercial renovation, contact us to discuss the property, the work required and how to arrange an estimate.",
+    faqTitle: "Calculations and cost enquiries",
     faqs: [
       {
-        question: "How accurate is the result?",
+        question: "How can I find out the cost of a renovation?",
         answer:
-          "The result is for initial planning. A precise estimate can be prepared after a survey and agreement on the work scope.",
+          "Contact SHINEX in the way that suits you and tell us about your project. We will clarify the details and agree the next steps for preparing an estimate.",
       },
       {
-        question: "What should I prepare for an estimate?",
+        question: "What does the calculator cover?",
         answer:
-          "Choose the property type, area, district, and desired work. A plan and current-condition photos help refine the calculation in a follow-up discussion.",
+          "It provides an initial guide for house construction and design. The final scope and cost are agreed after reviewing the project details.",
       },
     ],
   },

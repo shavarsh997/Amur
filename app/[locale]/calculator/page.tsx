@@ -60,6 +60,7 @@ export default async function CalculatorPage({ params }: Props) {
       <section className="mx-auto mt-8 max-w-4xl">
         <CostCalculator
           copy={dictionary.constructionCalculator}
+          defaultCalculationType="construction"
           locale={locale}
         />
       </section>

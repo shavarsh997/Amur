@@ -56,7 +56,7 @@ npm run seo:check -- --base-url http://localhost:3000
 
 The HTTP check covers all 72 sitemap URLs, metadata, reciprocal language links, structured data, internal links, duplicate HTML IDs, 15 permanent redirects, missing-page responses and the share image. Redirects for consolidated landing pages live in `config/seo-redirects.config.ts`; keep them when publishing future updates. Portfolio content is not published.
 
-Calculator checks verify that the same inputs produce the same amounts in all three languages. Rates and coefficients remain in `config/construction-calculator.config.ts`; these tests verify calculation behavior, not current market prices. The budget guide uses quantities and formulas instead of unverified fixed offers.
+Renovation enquiries lead to contact methods; there is no automatic renovation estimate. Calculator checks enforce this and verify construction and design amounts across all three languages. Rates and coefficients for these calculations remain in `config/construction-calculator.config.ts`; the tests do not verify current market prices. The renovation budget guide explains quantities and estimate structure, with a contact action for discussing the project.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
