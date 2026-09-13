@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { Check, ChevronDown } from "lucide-react";
+import { useEffect, useId, useRef, useState } from "react";
 
 import { locales } from "@/lib/i18n";
 import type { Locale } from "@/types";
@@ -49,12 +51,39 @@ export function LanguageSwitcher({
   locale,
   label,
   inverted = false,
+  placement = "bottom",
 }: {
   locale: Locale;
   label: string;
   inverted?: boolean;
+  placement?: "top" | "bottom";
 }) {
   const pathname = usePathname();
+  const [open, setOpen] = useState(false);
+  const panelId = useId();
+  const rootRef = useRef<HTMLDivElement>(null);
+  const buttonRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    if (!open) return;
+
+    function closeOutside(event: Event) {
+      if (
+        event.target instanceof Node &&
+        !rootRef.current?.contains(event.target)
+      ) {
+        setOpen(false);
+      }
+    }
+
+    document.addEventListener("pointerdown", closeOutside);
+    document.addEventListener("focusin", closeOutside);
+    return () => {
+      document.removeEventListener("pointerdown", closeOutside);
+      document.removeEventListener("focusin", closeOutside);
+    };
+  }, [open]);
+
   function languagePath(nextLocale: Locale) {
     const segments = pathname.split("/");
     if (locales.includes(segments[1] as Locale)) segments[1] = nextLocale;
@@ -63,25 +92,69 @@ export function LanguageSwitcher({
   }
 
   return (
-    <nav
-      aria-label={label}
-      className={`inline-flex shrink-0 items-center gap-1 rounded-lg border p-1 ${inverted ? "border-white/30 text-white" : "border-[var(--border)] text-[var(--text-primary)]"}`}
+    <div
+      className="relative shrink-0"
+      ref={rootRef}
+      onKeyDown={(event) => {
+        if (event.key === "Escape" && open) {
+          event.preventDefault();
+          event.stopPropagation();
+          setOpen(false);
+          buttonRef.current?.focus();
+        }
+      }}
     >
-      {locales.map((item) => (
-        <Link
-          aria-current={item === locale ? "page" : undefined}
-          aria-label={languageNames[item]}
-          className={`inline-flex size-10 items-center justify-center rounded-md transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 ${item === locale ? (inverted ? "bg-white/20 ring-1 ring-white/50" : "bg-[var(--background-warm)] ring-1 ring-[var(--brand-copper)]") : inverted ? "hover:bg-white/10" : "hover:bg-[var(--surface-muted)]"}`}
-          href={languagePath(item)}
-          hrefLang={item}
-          key={item}
-          lang={item}
-          prefetch={false}
-          title={languageNames[item]}
-        >
-          <LanguageFlag locale={item} />
-        </Link>
-      ))}
-    </nav>
+      <button
+        aria-controls={panelId}
+        aria-expanded={open}
+        aria-label={`${label}: ${languageNames[locale]}`}
+        className={`inline-flex min-h-11 items-center justify-center gap-2 rounded-lg border px-3 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--brand-copper)] ${inverted ? "border-white/30 text-white hover:bg-white/10" : "border-[var(--border)] text-[var(--text-primary)] hover:bg-[var(--surface-muted)]"}`}
+        onClick={() => setOpen((value) => !value)}
+        ref={buttonRef}
+        title={label}
+        type="button"
+      >
+        <LanguageFlag locale={locale} />
+        <ChevronDown
+          aria-hidden="true"
+          className={`size-4 transition-transform ${open ? "rotate-180" : ""}`}
+        />
+      </button>
+      <nav
+        aria-label={label}
+        className={`absolute right-0 z-10 w-44 rounded-xl border border-[var(--border)] bg-white p-1.5 text-[var(--text-primary)] shadow-lg ${placement === "top" ? "bottom-full mb-2" : "top-full mt-2"}`}
+        hidden={!open}
+        id={panelId}
+      >
+        <ul className="space-y-1">
+          {locales.map((item) => (
+            <li key={item}>
+              <Link
+                aria-current={item === locale ? "page" : undefined}
+                aria-label={languageNames[item]}
+                className={`flex min-h-11 items-center gap-3 rounded-lg px-3 text-sm font-medium transition-colors hover:bg-[var(--surface-muted)] focus-visible:outline-2 focus-visible:outline-[var(--brand-copper)] ${item === locale ? "bg-[var(--background-warm)]" : ""}`}
+                href={languagePath(item)}
+                hrefLang={item}
+                lang={item}
+                onClick={() => {
+                  setOpen(false);
+                  buttonRef.current?.focus();
+                }}
+                prefetch={false}
+              >
+                <LanguageFlag locale={item} />
+                <span>{languageNames[item]}</span>
+                {item === locale ? (
+                  <Check
+                    aria-hidden="true"
+                    className="ml-auto size-4 text-[var(--brand-copper)]"
+                  />
+                ) : null}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </div>
   );
 }

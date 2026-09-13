@@ -79,10 +79,7 @@ export function MobileNav({
           className="absolute inset-x-0 top-[calc(100%+0.5rem)] rounded-[22px] border border-[var(--border)] bg-white p-4 text-[var(--text-primary)] shadow-[0_18px_38px_-30px_rgb(24_24_27/0.55)] sm:px-8"
           id={panelId}
         >
-          <div
-            className="inset-x-0 max-h-[calc(100dvh-10.5rem)] overflow-y-auto"
-            id={panelId}
-          >
+          <div className="inset-x-0 max-h-[calc(100dvh-10.5rem)] overflow-y-auto">
             <nav aria-label={openLabel}>
               <ul className="space-y-1">
                 {items.map((item, index) => (
@@ -132,7 +129,11 @@ export function MobileNav({
                 label={cta.label}
                 onClick={closeMenu}
               />
-              <LanguageSwitcher label={languageLabel} locale={locale} />
+              <LanguageSwitcher
+                label={languageLabel}
+                locale={locale}
+                placement="top"
+              />
             </div>
           </div>
         </div>
