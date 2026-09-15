@@ -4,6 +4,8 @@
   --brand-navy: #102a43;
   --brand-navy-hover: #163b5c;
   --brand-copper: #c96f45;
+  --brand-copper-text: #9f4f2d;
+  --brand-copper-on-dark: #db875e;
   --brand-background: #faf8f4;
   --brand-surface-warm: #f3e9e2;
   --brand-surface: #ffffff;
@@ -40,7 +42,8 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-sans:
+    system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --radius-card: var(--radius-card);
   --radius-control: var(--radius-control);
   --shadow-card: var(--shadow-card);

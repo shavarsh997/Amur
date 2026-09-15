@@ -8,9 +8,15 @@ export type ServicePriceRange = {
   isPublic: boolean;
 };
 
-/** Public prices stay hidden until Shinex approves real ranges. */
+/** Only owner-confirmed rates are public. Other services remain quote-based. */
 export const servicePriceRanges = [
-  { serviceSlug: "renovation", unit: "sqm", currency: "AMD", isPublic: false },
+  {
+    serviceSlug: "renovation",
+    unit: "sqm",
+    from: 55_000,
+    currency: "AMD",
+    isPublic: true,
+  },
   {
     serviceSlug: "house-construction",
     unit: "project",
@@ -30,3 +36,11 @@ export const servicePriceRanges = [
     isPublic: false,
   },
 ] as const satisfies readonly ServicePriceRange[];
+
+export function getPublicServicePrice(
+  serviceSlug: string
+): ServicePriceRange | undefined {
+  return servicePriceRanges.find(
+    (price) => price.serviceSlug === serviceSlug && price.isPublic
+  );
+}

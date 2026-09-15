@@ -4,7 +4,22 @@ import { companyConfig } from "@/config/company.config";
 import { seoConfig } from "@/config/seo.config";
 import { getAbsoluteUrl, getSiteOrigin } from "@/lib/company";
 import { locales } from "@/lib/i18n";
+import { shouldPreventIndexing } from "@/lib/seo-environment";
 import type { Locale } from "@/types";
+
+export function getRobotsMetadata(noIndex = false): Metadata["robots"] {
+  if (!noIndex && !shouldPreventIndexing()) return seoConfig.robots;
+
+  return {
+    index: false,
+    follow: true,
+    googleBot: {
+      ...seoConfig.robots.googleBot,
+      index: false,
+      follow: true,
+    },
+  };
+}
 
 export function createPageMetadata({
   locale,
@@ -53,15 +68,7 @@ export function createPageMetadata({
     metadataBase: new URL(getSiteOrigin()),
     title: { absolute: brandedTitle },
     description,
-    ...(noIndex
-      ? {
-          robots: {
-            index: false,
-            follow: true,
-            googleBot: { index: false, follow: true },
-          },
-        }
-      : {}),
+    robots: getRobotsMetadata(noIndex),
     alternates: {
       canonical,
       languages: {

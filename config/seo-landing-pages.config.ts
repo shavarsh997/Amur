@@ -1,5 +1,12 @@
 import type { Locale } from "@/types";
 import { extraSeoLandingPages } from "@/config/seo-landing-pages-extra.config";
+import { getRenovationStartingPrice } from "@/lib/pricing";
+
+const renovationStartingPrice = {
+  hy: getRenovationStartingPrice("hy"),
+  ru: getRenovationStartingPrice("ru"),
+  en: getRenovationStartingPrice("en"),
+};
 
 export type SeoLandingPage = {
   slug: string;
@@ -678,21 +685,41 @@ const coreSeoLandingPages = [
       "apartment-renovation-yerevan",
       "turnkey-renovation",
       "new-build-renovation",
+      "renovation-estimate-yerevan",
+      "capital-renovation-yerevan",
+      "cosmetic-renovation-yerevan",
     ],
     translations: {
       ru: {
         eyebrow: "Стоимость ремонта",
-        title: "Стоимость ремонта в Ереване",
-        description:
-          "Узнайте, из чего складывается бюджет ремонта: работы, материалы и дополнительные расходы. Чтобы обсудить стоимость вашего проекта, свяжитесь с нами.",
-        seoTitle: "Стоимость ремонта в Ереване: расчёт бюджета | SHINEX",
-        seoDescription:
-          "Стоимость ремонта в Ереване: работы, материалы и состав сметы. Свяжитесь с SHINEX, чтобы обсудить ваш объект и необходимые работы.",
+        title: "Стоимость ремонта квартиры в Ереване",
+        description: `${renovationStartingPrice.ru ? `Ремонт квартиры ${renovationStartingPrice.ru}. ` : ""}Итоговая стоимость зависит от состояния квартиры и состава работ. Обсудите смету с SHINEX.`,
+        seoTitle: "Стоимость ремонта квартиры в Ереване: расчёт за м² | SHINEX",
+        seoDescription: `${renovationStartingPrice.ru ? `Ремонт квартиры в Ереване ${renovationStartingPrice.ru}. ` : ""}Что входит в стоимость за м², работы и материалы. Точная смета после осмотра. Свяжитесь с SHINEX.`,
         introduction: [
-          "Бюджет ремонта складывается из конкретных работ и материалов. Цена за квадратный метр полезна только тогда, когда понятно, за какие поверхности и операции вы платите.",
+          "Стоимость ремонта квартиры зависит от её состояния, площади и согласованного перечня работ. В SHINEX обсуждаем демонтаж, электрику, сантехнику и отделку, а точную смету составляем после осмотра и замеров.",
           "Ниже показано, как различаются площадь пола и площадь отделки и что уточнить в предложении подрядчика. Свяжитесь с нами, чтобы обсудить смету для вашего объекта.",
         ],
         sections: [
+          {
+            title: "Стоимость ремонта за 1 м²: что именно считают",
+            paragraphs: [
+              "Средняя стоимость ремонта за м² = согласованная сумма сметы ÷ площадь квартиры. Этот показатель помогает сравнивать предложения, только если в них совпадает состав работ и одинаково учтены материалы.",
+              "Цена отдельной операции за м² считается по обрабатываемой поверхности. Например, покраску считают по площади стен, а укладку покрытия — по площади пола. Такие ставки нельзя напрямую сравнивать со стоимостью всего ремонта за м² квартиры.",
+            ],
+          },
+          {
+            title: "Как вид ремонта влияет на бюджет",
+            paragraphs: [
+              "Для двух квартир одинаковой площади могут потребоваться разные работы. До сравнения стоимости определите, что сохраняется, а что нужно подготовить или заменить.",
+            ],
+            items: [
+              "Косметический ремонт: обновление покрытий с учётом состояния стен, пола и потолка.",
+              "Капитальный ремонт: демонтаж, подготовка оснований и замена инженерных систем по результатам осмотра.",
+              "Новостройка: проверка работ застройщика, подготовка поверхностей, разводка коммуникаций и отделка.",
+              "Полный ремонт: согласованный перечень этапов; мебель, техника и дизайн обсуждаются отдельно.",
+            ],
+          },
           {
             title: "Как сравнивать предложения",
             paragraphs: [
@@ -708,6 +735,11 @@ const coreSeoLandingPages = [
         ],
         faqs: [
           {
+            question: "Сколько стоит ремонт квартиры с материалами?",
+            answer:
+              "Для расчёта нужны объёмы работ и выбранные материалы. Попросите отдельно указать работы, черновые и отделочные материалы, доставку и вывоз мусора. Общую сумму можно сравнивать с другой сметой только при одинаковом составе.",
+          },
+          {
             question: "Можно ли узнать точную цену ремонта по телефону?",
             answer:
               "Можно обсудить ориентир, но точная смета без осмотра и состава работ невозможна.",
@@ -719,22 +751,39 @@ const coreSeoLandingPages = [
           },
         ],
         calculatorLabel: "Обсудить ремонт",
-        contactLabel: "Обсудить ремонт",
+        contactLabel: "Обсудить стоимость ремонта",
         relatedTitle: "Услуги для расчета",
       },
       en: {
         eyebrow: "Renovation costs",
-        title: "Renovation costs in Yerevan",
-        description:
-          "Understand the labour, materials and additional costs that make up a renovation budget. Contact us to discuss the cost of your project.",
-        seoTitle: "Renovation Costs in Yerevan: Budget Guide | SHINEX",
-        seoDescription:
-          "Renovation costs in Yerevan: labour, materials and estimate structure. Contact SHINEX to discuss your property and the work you need.",
+        title: "Apartment renovation costs in Yerevan",
+        description: `${renovationStartingPrice.en ? `Apartment renovation ${renovationStartingPrice.en}. ` : ""}The final cost depends on your apartment's condition and the agreed work. Discuss your estimate with SHINEX.`,
+        seoTitle: "Apartment Renovation Cost in Yerevan | SHINEX",
+        seoDescription: `${renovationStartingPrice.en ? `Apartment renovation in Yerevan ${renovationStartingPrice.en}. ` : ""}Understand labour and materials costs per m². Get an accurate estimate after a survey with SHINEX.`,
         introduction: [
-          "A renovation budget is built from the work and materials your property needs. A price per square metre is useful only when you know which surfaces and tasks it covers.",
+          "Apartment renovation cost depends on the property's condition, area and agreed work. At SHINEX, we discuss demolition, electrical work, plumbing and finishes, then prepare an accurate estimate after a survey and measurements.",
           "Below, we explain how floor area differs from finishing area and what to check in a quotation. Contact us to discuss an estimate for your property.",
         ],
         sections: [
+          {
+            title: "Renovation cost per m²: what is being measured?",
+            paragraphs: [
+              "Average renovation cost per m² = the agreed estimate total ÷ apartment floor area. This is useful for comparing quotations only when they cover the same work and account for materials in the same way.",
+              "An individual task's rate per m² applies to the surface being treated. Painting uses wall area, while flooring uses floor area. These rates cannot be compared directly with the cost of a complete renovation per m² of apartment space.",
+            ],
+          },
+          {
+            title: "How the type of renovation affects the budget",
+            paragraphs: [
+              "Two apartments with the same floor area can need different work. Before comparing costs, establish what can stay and what needs preparation or replacement.",
+            ],
+            items: [
+              "Cosmetic renovation: refreshing finishes according to the condition of the walls, floors and ceilings.",
+              "Major renovation: demolition, surface preparation and replacement of building services where the survey identifies a need.",
+              "New-build renovation: checking the developer's work, preparing surfaces, installing services and finishing.",
+              "Complete renovation: an agreed set of stages; furniture, appliances and design are discussed separately.",
+            ],
+          },
           {
             title: "Comparing quotations",
             paragraphs: [
@@ -750,6 +799,11 @@ const coreSeoLandingPages = [
         ],
         faqs: [
           {
+            question: "How much does apartment renovation with materials cost?",
+            answer:
+              "A calculation needs work quantities and material choices. Ask for labour, preparation and finishing materials, delivery and waste removal to be listed separately. Compare totals only when quotations include the same scope.",
+          },
+          {
             question: "Can I get an exact renovation price by phone?",
             answer:
               "We can discuss an initial range, but an exact estimate requires a survey and agreed scope.",
@@ -761,22 +815,39 @@ const coreSeoLandingPages = [
           },
         ],
         calculatorLabel: "Discuss your renovation",
-        contactLabel: "Discuss your renovation",
+        contactLabel: "Discuss renovation costs",
         relatedTitle: "Services to plan your project",
       },
       hy: {
         eyebrow: "Վերանորոգման արժեք",
-        title: "Վերանորոգման արժեքը Երևանում",
-        description:
-          "Ծանոթացեք վերանորոգման բյուջեի կազմին՝ աշխատանքներին, նյութերին ու լրացուցիչ ծախսերին։ Ձեր նախագծի արժեքը քննարկելու համար կապվեք մեզ հետ։",
-        seoTitle: "Վերանորոգման արժեքը Երևանում․ բյուջեի հաշվարկ | SHINEX",
-        seoDescription:
-          "Վերանորոգման արժեքը Երևանում՝ աշխատանքներ, նյութեր և նախահաշվի կազմ։ Կապվեք SHINEX-ի հետ՝ ձեր տարածքն ու անհրաժեշտ աշխատանքները քննարկելու համար։",
+        title: "Բնակարանի վերանորոգման արժեքը Երևանում",
+        description: `${renovationStartingPrice.hy ? `Բնակարանի վերանորոգում՝ ${renovationStartingPrice.hy}։ ` : ""}Վերջնական արժեքը կախված է բնակարանի վիճակից և աշխատանքների կազմից։ Քննարկեք ձեր նախահաշիվը SHINEX-ի հետ։`,
+        seoTitle: "Բնակարանի վերանորոգման գին Երևանում | SHINEX",
+        seoDescription: `${renovationStartingPrice.hy ? `Բնակարանի վերանորոգում Երևանում՝ ${renovationStartingPrice.hy}։ ` : ""}Մեկ քմ-ի արժեք, աշխատանքներ և նյութեր։ Ճշգրիտ նախահաշիվ՝ զննումից հետո։ Կապվեք SHINEX-ի հետ։`,
         introduction: [
-          "Վերանորոգման բյուջեն ձևավորվում է անհրաժեշտ աշխատանքների և նյութերի արժեքից։ Մեկ քառակուսի մետրի գինը համեմատելու համար պետք է իմանալ՝ որ մակերեսներն ու աշխատանքներն են ներառված դրա մեջ։",
+          "Բնակարանի վերանորոգման գինը կախված է տարածքի վիճակից, մակերեսից և համաձայնեցված աշխատանքներից։ SHINEX-ում քննարկում ենք ապամոնտաժումը, էլեկտրական ու սանտեխնիկական աշխատանքները և հարդարումը, իսկ ճշգրիտ նախահաշիվը կազմում ենք զննումից ու չափագրումից հետո։",
           "Ստորև կտեսնեք՝ ինչով է հատակի մակերեսը տարբերվում հարդարման մակերեսից և ինչ ճշտել գնային առաջարկում։ Ձեր տարածքի նախահաշիվը քննարկելու համար կապվեք մեզ հետ։",
         ],
         sections: [
+          {
+            title: "Վերանորոգման արժեքը 1 քմ-ի համար․ ի՞նչ է հաշվարկվում",
+            paragraphs: [
+              "Վերանորոգման միջին արժեքը մեկ քմ-ի համար = համաձայնեցված նախահաշվի ընդհանուր գումար ÷ բնակարանի հատակի մակերես։ Այս ցուցանիշով առաջարկները կարելի է համեմատել, երբ աշխատանքների ցանկը նույնն է, և նյութերը նույն կերպ են հաշվառված։",
+              "Առանձին աշխատանքի մեկ քմ-ի գինը վերաբերում է մշակվող մակերեսին։ Օրինակ՝ ներկումը հաշվարկվում է պատերի մակերեսով, իսկ հատակի ծածկույթի տեղադրումը՝ հատակի մակերեսով։ Այդ գները չի կարելի ուղղակի համեմատել բնակարանի ամբողջ վերանորոգման մեկ քմ-ի արժեքի հետ։",
+            ],
+          },
+          {
+            title: "Ինչպե՞ս է վերանորոգման տեսակը ազդում բյուջեի վրա",
+            paragraphs: [
+              "Նույն մակերեսով երկու բնակարաններում կարող են տարբեր աշխատանքներ պահանջվել։ Գները համեմատելուց առաջ որոշեք՝ ինչն է պահպանվում, և ինչը պետք է նախապատրաստել կամ փոխարինել։",
+            ],
+            items: [
+              "Կոսմետիկ վերանորոգում՝ ծածկույթների թարմացում՝ ըստ պատերի, հատակի և առաստաղի վիճակի։",
+              "Կապիտալ վերանորոգում՝ ապամոնտաժում, մակերեսների նախապատրաստում և ինժեներական համակարգերի փոխարինում՝ ըստ զննման արդյունքների։",
+              "Նորակառույց բնակարան՝ կառուցապատողի աշխատանքների ստուգում, մակերեսների նախապատրաստում, հաղորդակցությունների անցկացում և հարդարում։",
+              "Ամբողջական վերանորոգում՝ համաձայնեցված փուլերի ցանկով․ կահույքը, տեխնիկան և դիզայնը քննարկվում են առանձին։",
+            ],
+          },
           {
             title: "Ինչպե՞ս համեմատել առաջարկները",
             paragraphs: [
@@ -792,6 +863,11 @@ const coreSeoLandingPages = [
         ],
         faqs: [
           {
+            question: "Որքա՞ն արժե բնակարանի վերանորոգումը նյութերով",
+            answer:
+              "Հաշվարկի համար անհրաժեշտ են աշխատանքների ծավալներն ու ընտրված նյութերը։ Խնդրեք առանձին նշել աշխատանքները, նախապատրաստական ու հարդարման նյութերը, առաքումն ու աղբի տեղափոխումը։ Ընդհանուր գումարները համեմատելի են, երբ առաջարկների կազմը նույնն է։",
+          },
+          {
             question: "Հնարավո՞ր է հեռախոսով իմանալ ճշգրիտ գինը",
             answer:
               "Կարող ենք քննարկել նախնական միջակայքը, սակայն ճշգրիտ նախահաշիվը պահանջում է զննում և համաձայնեցված աշխատանքների կազմ։",
@@ -803,7 +879,7 @@ const coreSeoLandingPages = [
           },
         ],
         calculatorLabel: "Կապվել մեզ հետ",
-        contactLabel: "Կապվել մեզ հետ",
+        contactLabel: "Քննարկել վերանորոգման արժեքը",
         relatedTitle: "Նախագիծը պլանավորելու ծառայություններ",
       },
     },

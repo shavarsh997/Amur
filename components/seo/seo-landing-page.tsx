@@ -39,6 +39,8 @@ export function SeoLandingPage({
   const faqs = content.faqs;
   const isPrices = page.slug === "prices";
   const supportsCalculator = page.slug === "apartment-interior-design-yerevan";
+  const showPriceGuide =
+    page.kind === "service" && page.relatedLandingSlugs.includes("prices");
   const calculatorHref = `/${locale}/calculator`;
   const schema = page.kind === "service" ? getServiceJsonLd : getWebPageJsonLd;
   const relatedServices = getActiveServices(locale).filter((service) =>
@@ -87,6 +89,11 @@ export function SeoLandingPage({
         actions={
           <>
             <ContactTrigger label={content.contactLabel} />
+            {showPriceGuide ? (
+              <ButtonLink href={`/${locale}/prices`} variant="secondary">
+                {dictionary.seo.calculatorPriceLink}
+              </ButtonLink>
+            ) : null}
             {supportsCalculator ? (
               <ButtonLink href={calculatorHref} variant="secondary">
                 {content.calculatorLabel}

@@ -43,6 +43,7 @@ The identifier is public and starts with `G-`. The tag is omitted when this vari
 
 ```bash
 npm run lint
+npm run typecheck
 npm run build
 npm run seo:check
 npm run calculator:check
@@ -54,11 +55,45 @@ To check rendered pages, start the production build with `npm run start`, then r
 npm run seo:check -- --base-url http://localhost:3000
 ```
 
-The HTTP check covers all 72 sitemap URLs, metadata, reciprocal language links, structured data, internal links, duplicate HTML IDs, 15 permanent redirects, missing-page responses and the share image. Redirects for consolidated landing pages live in `config/seo-redirects.config.ts`; keep them when publishing future updates. Portfolio content is not published.
+To save the verified URL/status/title/description/H1/canonical/locale inventory:
+
+```bash
+npm run seo:check -- --base-url http://localhost:3000 --report /tmp/shinex-seo-pages.json
+```
+
+The smoke check also evaluates robots rules for every sitemap URL, checks rendered XML language alternatives, absolute internal links, same-language incoming links, attribution parameters and consistent organization schema. Its robots helper covers the user-agent groups and Allow/Disallow prefix, wildcard and end-anchor rules used by this project; it is not a general-purpose search crawler.
+
+### SEO invariants
+
+- Every production sitemap URL returns HTML 200 without redirects or blocking meta/HTTP robots directives, is allowed by robots.txt, and has server-rendered primary content.
+- It has one nonempty title, description and H1, a self-canonical on `https://www.shinex.am`, and an OpenGraph URL matching that canonical.
+- Locale, equivalent reciprocal hreflang targets and sitemap alternatives agree. Every alternate is another verified canonical 200 page.
+- Crawlable internal links use the final canonical path and intended language. Every indexed page has an incoming link from another page of the same language; translation links alone do not count.
+- Retired URLs are excluded from sitemap and redirect permanently to a verified page in the same locale. Query parameters survive the redirect; attribution URLs canonicalize to the clean page.
+- Missing and unpublished pages return real 404s with noindex. Technical/private content stays outside sitemap. Preview noindex never reaches a production build.
+- Organization identity and contact data agree across pages; JSON-LD is parseable and does not invent ratings. New metadata or routing changes must pass the production HTTP check before release.
+
+The HTTP check covers all 72 sitemap URLs, metadata and indexing headers, reciprocal language links, structured data, internal links, duplicate HTML IDs, 15 permanent redirects with and without trailing slashes, locale slash normalization, missing-page responses and the share image. Redirects for consolidated landing pages live in `config/seo-redirects.config.ts`; keep them when publishing future updates. Portfolio content is not published.
+
+### Production and preview indexing
+
+`lib/seo-environment.ts` keeps normal production builds indexable. Development and Vercel preview deployments receive `noindex, follow` metadata and an `X-Robots-Tag` header. For other staging hosts, set `SITE_NOINDEX=true` in both the build and runtime environment. Keep this flag unset (or `false`) in production. Rebuild after changing it because page metadata is generated statically. Do not promote a preview build directly to production; build with production environment settings.
+
+Preview robots.txt remains crawlable so crawlers can read the noindex instruction. Its sitemap and canonical references continue to use the public production domain. Indexing controls do not replace access control for private staging content.
+
+The proxy combines domain, trailing slash and retired-page redirects. `skipTrailingSlashRedirect` disables the separate framework redirect. Hosting-level HTTP/HTTPS and apex/www redirects run before the proxy; configure those in Vercel if a shorter public redirect chain is needed.
+
+### Google Search Console verification
+
+Prefer a Domain property for `shinex.am` verified through the owner's DNS settings. For a URL-prefix property, optionally set `GOOGLE_SITE_VERIFICATION` to the verification token (not the complete HTML tag) before building. The locale layout emits the Google verification meta tag. Existing DNS verification is independent of this setting.
+
+Submit `https://www.shinex.am/sitemap.xml` and use URL Inspection on the Armenian home, apartment renovation, new-build renovation, prices and construction pages after deploying. The code and HTTP checks establish technical eligibility; actual Google indexing, selected canonicals, traffic and Core Web Vitals require Search Console data.
 
 Renovation enquiries lead to contact methods; there is no automatic renovation estimate. Calculator checks enforce this and verify construction and design amounts across all three languages. Rates and coefficients for these calculations remain in `config/construction-calculator.config.ts`; the tests do not verify current market prices. The renovation budget guide explains quantities and estimate structure, with a contact action for discussing the project.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The owner-confirmed renovation starting rate is stored in `config/pricing.config.ts`. `lib/pricing.ts` formats it for the visible price-page introduction and search descriptions in all three languages. Keep the starting rate distinct from a final quotation; do not use it to generate automatic renovation estimates. Other service prices remain unpublished.
+
+The site uses a system font stack without external font downloads.
 
 ## Learn More
 

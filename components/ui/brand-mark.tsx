@@ -24,6 +24,7 @@ export function BrandMark({
       className={`shrink-0 object-contain ${className}`}
       height={asset.height}
       preload={preload}
+      sizes={variant === "symbol" ? "44px" : "120px"}
       src={asset.src}
       width={asset.width}
     />

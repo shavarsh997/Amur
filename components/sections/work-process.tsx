@@ -23,7 +23,7 @@ export function WorkProcess({ dictionary }: { dictionary: Dictionary }) {
                 className="relative grid grid-cols-[2rem_1fr] gap-x-3 py-4 first:pt-0 last:pb-0 md:block md:border-t md:border-white/20 md:pt-5 md:first:pt-5 lg:pr-8"
                 key={workflowKey}
               >
-                <span className="relative z-10 inline-flex size-8 items-center justify-center text-sm font-bold text-[var(--brand-copper)]">
+                <span className="relative z-10 inline-flex size-8 items-center justify-center text-sm font-bold text-[var(--brand-copper-on-dark)]">
                   {step.number}
                 </span>
                 <div>

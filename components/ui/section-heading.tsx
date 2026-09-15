@@ -18,15 +18,15 @@ export function SectionHeading({
   const alignment =
     align === "center" ? "mx-auto items-center text-center" : "items-start";
   const titleColor = inverted ? "text-white" : "text-[var(--text-primary)]";
-  const bodyColor = inverted
-    ? "text-white/70"
-    : "text-[var(--text-secondary)]";
+  const bodyColor = inverted ? "text-white/70" : "text-[var(--text-secondary)]";
 
   return (
     <div className={`flex max-w-3xl flex-col gap-4 ${alignment} ${className}`}>
       <p
         className={`text-xs font-semibold uppercase tracking-[0.16em] ${
-          inverted ? "text-[var(--brand-copper)]" : "text-[var(--brand-copper)]"
+          inverted
+            ? "text-[var(--brand-copper-on-dark)]"
+            : "text-[var(--brand-copper-text)]"
         }`}
       >
         {eyebrow}

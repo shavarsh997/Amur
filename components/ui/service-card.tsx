@@ -38,7 +38,7 @@ export function ServiceCard({
         />
       </div>
       <div className="flex min-h-56 flex-col items-start p-5 sm:min-h-[310px] sm:p-7">
-        <span className="text-sm font-bold tracking-[0.14em] text-[var(--brand-copper)]">
+        <span className="text-sm font-bold tracking-[0.14em] text-[var(--brand-copper-text)]">
           {String(service.order).padStart(2, "0")}
         </span>
         <h3 className="mt-5 text-xl font-semibold leading-[1.15] tracking-[-0.035em] text-[var(--text-primary)] sm:text-2xl">

@@ -2,6 +2,8 @@ import type { NextConfig } from "next";
 import { fileURLToPath } from "node:url";
 
 const nextConfig: NextConfig = {
+  // proxy.ts combines slash normalization with domain and retired-URL redirects.
+  skipTrailingSlashRedirect: true,
   experimental: {
     globalNotFound: true,
   },

@@ -111,6 +111,36 @@ export const seoIntentMap = {
       ],
     },
   },
+  "house-renovation": {
+    paths: {
+      hy: "services/renovation",
+      ru: "services/renovation",
+      en: "services/renovation",
+    },
+    primary: {
+      hy: "առանձնատան վերանորոգում",
+      ru: "ремонт частного дома в Армении",
+      en: "private house renovation in Armenia",
+    },
+    secondary: {
+      hy: ["տան վերանորոգում Հայաստանում"],
+      ru: ["ремонт дома Ереван"],
+      en: ["house renovation Yerevan"],
+    },
+  },
+  "house-construction-cost": {
+    paths: { hy: "calculator", ru: "calculator", en: "calculator" },
+    primary: {
+      hy: "տան կառուցման արժեքը",
+      ru: "стоимость строительства дома в Армении",
+      en: "house construction cost in Armenia",
+    },
+    secondary: {
+      hy: ["առանձնատան կառուցման հաշվիչ"],
+      ru: ["калькулятор строительства дома Ереван"],
+      en: ["house construction cost calculator Yerevan"],
+    },
+  },
   "interior-design": {
     paths: {
       hy: "services/interior-design",

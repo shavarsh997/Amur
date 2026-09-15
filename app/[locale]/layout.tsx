@@ -11,6 +11,7 @@ import { companyConfig } from "@/config/company.config";
 import { seoConfig } from "@/config/seo.config";
 import { getSiteOrigin } from "@/lib/company";
 import { getDictionary, isLocale, locales } from "@/lib/i18n";
+import { getRobotsMetadata } from "@/lib/metadata";
 import {
   getOrganizationJsonLd,
   getWebsiteJsonLd,
@@ -19,8 +20,7 @@ import {
 
 import "../globals.css";
 
-const googleAnalyticsMeasurementId =
-  process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+const googleAnalyticsMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 
 export const metadata: Metadata = {
   metadataBase: new URL(getSiteOrigin()),
@@ -35,7 +35,10 @@ export const metadata: Metadata = {
     apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
   },
   category: seoConfig.category,
-  robots: seoConfig.robots,
+  robots: getRobotsMetadata(),
+  ...(process.env.GOOGLE_SITE_VERIFICATION?.trim()
+    ? { verification: { google: process.env.GOOGLE_SITE_VERIFICATION.trim() } }
+    : {}),
 };
 
 export const viewport: Viewport = {
@@ -60,10 +63,7 @@ export default async function LocaleLayout({
   const dictionary = await getDictionary(locale);
   const htmlLang = locale === "hy" ? "hy-AM" : locale === "ru" ? "ru-AM" : "en";
   return (
-    <html
-      className="h-full antialiased"
-      lang={htmlLang}
-    >
+    <html className="h-full antialiased" lang={htmlLang}>
       <body suppressHydrationWarning className="flex min-h-full flex-col">
         <div className="flex min-h-screen flex-col">
           <script

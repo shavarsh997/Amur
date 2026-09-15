@@ -1,8 +1,31 @@
 import assert from "node:assert/strict";
 import { createRequire } from "node:module";
+import { writeFileSync } from "node:fs";
 import { createTypeScriptLoader } from "./lib/load-typescript.mjs";
+import { robotsAllows } from "./lib/robots-rules.mjs";
 
 const load = createTypeScriptLoader(process.cwd());
+const sampleRobots =
+  "User-agent: *\nDisallow: /\nUser-agent: Googlebot\nDisallow: /private/\nAllow: /private/public/\nDisallow: /*?draft=$";
+assert(!robotsAllows(sampleRobots, "https://www.shinex.am/hy", "OtherBot"));
+assert(robotsAllows(sampleRobots, "https://www.shinex.am/hy"));
+assert(!robotsAllows(sampleRobots, "https://www.shinex.am/private/draft"));
+assert(robotsAllows(sampleRobots, "https://www.shinex.am/private/public/page"));
+assert(!robotsAllows(sampleRobots, "https://www.shinex.am/hy?draft="));
+assert(robotsAllows(sampleRobots, "https://www.shinex.am/hy?draft=published"));
+assert(
+  robotsAllows(
+    "User-agent: *\nDisallow:\nUser-agent: Googlebot\nDisallow: /",
+    "https://www.shinex.am/hy",
+    "OtherBot"
+  )
+);
+assert(
+  robotsAllows(
+    "User-agent: *\nDisallow: /hy\nAllow: /hy",
+    "https://www.shinex.am/hy"
+  )
+);
 const require = createRequire(import.meta.url);
 const { NextRequest } = require("next/server");
 const { proxy } = load("proxy");
@@ -14,7 +37,8 @@ const { getActiveServices } = load("config/services.config");
 const { serviceGuideGroups } = load("config/service-guides.config");
 const { seoIntentMap } = load("config/seo-intents.config");
 const { seoRedirects } = load("config/seo-redirects.config");
-const { createPageMetadata } = load("lib/metadata");
+const { createPageMetadata, getRobotsMetadata } = load("lib/metadata");
+const { shouldPreventIndexing } = load("lib/seo-environment");
 const {
   serializeJsonLd,
   getOrganizationJsonLd,
@@ -36,6 +60,24 @@ assert.equal(
   "Duplicate landing slugs"
 );
 for (const route of sitemap) {
+  const url = new URL(route.url);
+  assert.equal(
+    url.origin,
+    "https://www.shinex.am",
+    "Non-canonical sitemap origin"
+  );
+  assert(
+    locales.includes(url.pathname.split("/")[1]),
+    "Missing sitemap locale"
+  );
+  assert(
+    !url.search && !url.hash && !url.pathname.endsWith("/"),
+    "Non-canonical sitemap URL"
+  );
+  assert(
+    !/\/(admin|api|auth|preview)(\/|$)/.test(url.pathname),
+    "Technical URL in sitemap"
+  );
   assert(
     !/\/(projects|blog)(\/|$)/.test(new URL(route.url).pathname),
     "Unpublished content in sitemap"
@@ -113,19 +155,29 @@ for (const { source, destination } of seoRedirects) {
       "http://shinex.am",
       "https://www.shinex.am",
     ]) {
-      const request = new NextRequest(
-        `${origin}/${locale}/${source}?utm_source=check`,
-        { headers: { host: new URL(origin).host } }
-      );
-      const response = proxy(request);
-      assert.equal(response.status, 308);
-      const target = new URL(response.headers.get("location"));
-      assert.equal(target.pathname, `/${locale}/${destination}`);
-      assert.equal(target.searchParams.get("utm_source"), "check");
-      assert.equal(
-        target.origin,
-        origin.includes("localhost") ? origin : "https://www.shinex.am"
-      );
+      for (const suffix of ["", "/"]) {
+        const request = new NextRequest(
+          `${origin}/${locale}/${source}${suffix}?utm_source=check`,
+          { headers: { host: new URL(origin).host } }
+        );
+        const response = proxy(request);
+        assert.equal(response.status, 308);
+        const target = new URL(response.headers.get("location"));
+        assert.equal(target.pathname, `/${locale}/${destination}`);
+        assert.equal(target.searchParams.get("utm_source"), "check");
+        assert.equal(
+          target.origin,
+          origin.includes("localhost") ? origin : "https://www.shinex.am"
+        );
+        assert(
+          !proxy(
+            new NextRequest(target, {
+              headers: { host: target.host },
+            })
+          ).headers.has("location"),
+          "Redirect destination redirects again"
+        );
+      }
     }
   }
 }
@@ -145,6 +197,79 @@ assert(
   ).headers.has("location"),
   "Unsupported locale was redirected"
 );
+for (const path of ["/hy", "/ru/prices", "/en/services", "/robots.txt"]) {
+  const response = proxy(
+    new NextRequest(`https://www.shinex.am${path}/?ref=check`, {
+      headers: { host: "www.shinex.am" },
+    })
+  );
+  assert.equal(response.status, 308);
+  assert.equal(
+    response.headers.get("location"),
+    `https://www.shinex.am${path}?ref=check`
+  );
+}
+
+const environmentKeys = ["SITE_NOINDEX", "VERCEL_ENV", "NODE_ENV"];
+const originalEnvironment = Object.fromEntries(
+  environmentKeys.map((key) => [key, process.env[key]])
+);
+try {
+  for (const settings of [
+    { NODE_ENV: "production" },
+    { NODE_ENV: "production", VERCEL_ENV: "production", SITE_NOINDEX: "false" },
+    { NODE_ENV: "production", VERCEL_ENV: "preview" },
+    { NODE_ENV: "production", VERCEL_ENV: "development" },
+    { NODE_ENV: "development" },
+    { NODE_ENV: "production", SITE_NOINDEX: "true" },
+  ]) {
+    for (const key of environmentKeys) {
+      if (settings[key] === undefined) delete process.env[key];
+      else process.env[key] = settings[key];
+    }
+    const blocked =
+      settings.NODE_ENV === "development" ||
+      ["preview", "development"].includes(settings.VERCEL_ENV) ||
+      settings.SITE_NOINDEX === "true";
+    assert.equal(shouldPreventIndexing(), blocked, JSON.stringify(settings));
+    for (const noIndex of [false, true]) {
+      const robots = getRobotsMetadata(noIndex);
+      assert.equal(robots.index === false, blocked || noIndex);
+      assert.equal(robots.googleBot.index === false, blocked || noIndex);
+      assert.notEqual(robots.follow, false);
+      assert.notEqual(robots.googleBot.follow, false);
+    }
+    for (const path of [
+      "/",
+      "/hy/prices",
+      "/robots.txt",
+      "/_next/static/example.js",
+    ]) {
+      const response = proxy(
+        new NextRequest(`https://www.shinex.am${path}`, {
+          headers: { host: "www.shinex.am" },
+        })
+      );
+      assert.equal(
+        response.headers.get("x-robots-tag"),
+        blocked ? "noindex, follow" : null
+      );
+    }
+    const page = createPageMetadata({
+      locale: "hy",
+      pathname: "prices",
+      title: "Prices",
+      description: "Prices",
+    });
+    assert.equal(page.robots.index === false, blocked);
+    assert.equal(page.alternates.canonical, "https://www.shinex.am/hy/prices");
+  }
+} finally {
+  for (const key of environmentKeys) {
+    if (originalEnvironment[key] === undefined) delete process.env[key];
+    else process.env[key] = originalEnvironment[key];
+  }
+}
 assert(
   !serializeJsonLd({ value: "</script><script>alert(1)</script>" }).includes(
     "<"
@@ -162,7 +287,7 @@ const schemaProps = {
 assert.equal(getWebPageJsonLd(schemaProps)["@type"], "WebPage");
 assert.equal(getServiceJsonLd(schemaProps)["@type"], "Service");
 console.log(
-  `SEO data checks passed: ${sitemap.length} URLs, ${seoRedirects.length * locales.length} redirects, metadata and route references.`
+  `SEO data checks passed: ${sitemap.length} URLs, ${seoRedirects.length * locales.length} redirects with slash/host variants, production/preview indexing, metadata and route references.`
 );
 
 const baseIndex = process.argv.indexOf("--base-url");
@@ -170,5 +295,22 @@ if (baseIndex !== -1) {
   assert(process.argv[baseIndex + 1], "Provide a base URL after --base-url");
   const base = new URL(process.argv[baseIndex + 1]);
   const { crawlSeo } = await import("./lib/crawl-seo.mjs");
-  await crawlSeo({ base, sitemap, seoRedirects, locales });
+  const pages = await crawlSeo({ base, sitemap, seoRedirects, locales });
+  const reportIndex = process.argv.indexOf("--report");
+  if (reportIndex !== -1) {
+    assert(process.argv[reportIndex + 1], "Provide a JSON path after --report");
+    writeFileSync(
+      process.argv[reportIndex + 1],
+      JSON.stringify(
+        {
+          checkedAt: new Date().toISOString(),
+          checkedBase: base.origin,
+          pages,
+        },
+        null,
+        2
+      ) + "\n"
+    );
+    console.log(`SEO page inventory saved: ${process.argv[reportIndex + 1]}`);
+  }
 }

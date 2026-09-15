@@ -23,9 +23,9 @@ export const serviceGuideGroups: readonly {
       {
         path: "services/apartment-renovation-yerevan",
         label: {
-          hy: "Աշխատանքների կազմն ու փուլերը",
-          ru: "Состав и этапы ремонта",
-          en: "Work and renovation stages",
+          hy: "Բնակարանների վերանորոգում Երևանում",
+          ru: "Ремонт квартир в Ереване",
+          en: "Apartment renovation in Yerevan",
         },
       },
       {
@@ -113,17 +113,17 @@ export const serviceGuideGroups: readonly {
       {
         path: "prices",
         label: {
-          hy: "Ինչից է կազմվում արժեքը",
-          ru: "Из чего складывается стоимость",
-          en: "Understanding renovation costs",
+          hy: "Բնակարանի վերանորոգման արժեքը",
+          ru: "Стоимость ремонта квартиры",
+          en: "Apartment renovation costs",
         },
       },
       {
         path: "renovation-estimate-yerevan",
         label: {
-          hy: "Ինչպես կարդալ նախահաշիվը",
-          ru: "Как читать смету",
-          en: "How to read an estimate",
+          hy: "Վերանորոգման նախահաշիվ",
+          ru: "Смета на ремонт",
+          en: "Renovation estimate guide",
         },
       },
       {
