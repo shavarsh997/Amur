@@ -8,7 +8,13 @@ import { useEffect, useId, useRef, useState } from "react";
 import { locales } from "@/lib/i18n";
 import type { Locale } from "@/types";
 
-const languageNames = { hy: "Հայերեն", ru: "Русский", en: "English" };
+const languageNames = {
+  hy: "Հայերեն",
+  ru: "Русский",
+  en: "English",
+  de: "Deutsch",
+  fr: "Français",
+} satisfies Record<Locale, string>;
 
 function LanguageFlag({ locale }: { locale: Locale }) {
   return (
@@ -29,6 +35,18 @@ function LanguageFlag({ locale }: { locale: Locale }) {
           />
           <path d="M30 0v30M0 15h60" stroke="#fff" strokeWidth="10" />
           <path d="M30 0v30M0 15h60" stroke="#C8102E" strokeWidth="6" />
+        </>
+      ) : locale === "de" ? (
+        <>
+          <path d="M0 0h60v10H0z" fill="#000" />
+          <path d="M0 10h60v10H0z" fill="#DD0000" />
+          <path d="M0 20h60v10H0z" fill="#FFCE00" />
+        </>
+      ) : locale === "fr" ? (
+        <>
+          <path d="M0 0h20v30H0z" fill="#000091" />
+          <path d="M20 0h20v30H20z" fill="#fff" />
+          <path d="M40 0h20v30H40z" fill="#E1000F" />
         </>
       ) : (
         <>
@@ -151,7 +169,6 @@ export function LanguageSwitcher({
                   />
                 ) : null}
               </Link>
-              
             </li>
           ))}
         </ul>

@@ -379,7 +379,7 @@ export async function crawlSeo({ base, sitemap, seoRedirects, locales }) {
     );
   }
   console.log(
-    `SEO HTTP crawl passed: ${pages.size} pages, ${seoRedirects.length * locales.length * 2} retired-URL variants + 3 slash redirects, 9 true 404s, internal links, hreflang, schema and share image.`
+    `SEO HTTP crawl passed: ${pages.size} pages, ${seoRedirects.length * locales.length * 2} retired-URL variants + 3 slash redirects, ${locales.length * 3} true 404s, internal links, hreflang, schema and share image.`
   );
   return [...pages].map(([path, page]) => ({
     url: `${publicOrigin}${path}`,

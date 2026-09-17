@@ -192,6 +192,128 @@ export const extraSeoLandingPages = [
         contactLabel: "Book a survey",
         relatedTitle: "Related services",
       },
+      de: {
+        eyebrow: "Wohnungsinnenraumgestaltung · Eriwan",
+        title: "Innenraumgestaltung für Wohnungen in Eriwan",
+        description:
+          "Planen Sie eine alltagstaugliche Wohnung: Möbel, Stauraum und Beleuchtung werden vor Renovierungsbeginn festgelegt.",
+        seoTitle: "Innenraumgestaltung für Wohnungen in Eriwan | SHINEX",
+        seoDescription:
+          "Innenraumgestaltung für Wohnungen in Eriwan: Grundriss, Möbel, Beleuchtung und praktische Renovierungsentscheidungen.",
+        introduction: [
+          "Die Wohnungsplanung sollte die täglichen Gewohnheiten der Bewohner unterstützen.",
+          "Besonders sinnvoll ist sie bei Neubauten oder Grundrissen, die neu durchdacht werden müssen.",
+        ],
+        sections: [
+          {
+            title: "Ihre Wohnung planen",
+            paragraphs: [
+              "Wir entwickeln Lösungen für Komfort, Stauraum und Alltagstauglichkeit.",
+            ],
+            items: [
+              "Raumaufteilung und Funktionsbereiche",
+              "Küchen- und Badgrundrisse",
+              "Stauraumlösungen",
+              "Möbelmaße und Anordnung",
+              "Beleuchtung für verschiedene Tätigkeiten",
+              "Steckdosen und Geräteanschlüsse",
+            ],
+          },
+          {
+            title: "Planung vor der Renovierung",
+            paragraphs: [
+              "Ein abgestimmter Plan zeigt Elektrikern, Installateuren und Ausbaugewerken, wo Möbel, Einbauten und Geräte vorgesehen sind.",
+            ],
+          },
+          {
+            title: "Planungsumfang",
+            paragraphs: [
+              "Das Honorar hängt von Wohnungsgröße, Raumanzahl und den benötigten Plänen und Spezifikationen ab.",
+            ],
+          },
+        ],
+        faqs: [
+          {
+            question: "Ist eine Planung für eine Neubauwohnung sinnvoll?",
+            answer:
+              "Ja. Sie hilft, Geräte, Beleuchtung und Möbel vor dem Ausbau zu planen.",
+          },
+          {
+            question: "Gestalten Sie auch kleine Wohnungen?",
+            answer:
+              "Ja. Gerade in kleinen Räumen sind Grundriss und Stauraum entscheidend.",
+          },
+          {
+            question: "Kann die Planung einen Möblierungsplan enthalten?",
+            answer:
+              "Ja. Ein Möblierungsplan kann Teil des Projekts sein. Die Liste der Zeichnungen vereinbaren wir vor Planungsbeginn.",
+          },
+        ],
+        calculatorLabel: "Erste Kostenschätzung anfragen",
+        contactLabel: "Besichtigung vereinbaren",
+        relatedTitle: "Passende Leistungen",
+      },
+      fr: {
+        eyebrow: "Aménagement intérieur d’appartement · Erevan",
+        title: "Aménagement intérieur d’appartement à Erevan",
+        description:
+          "Concevez un appartement adapté au quotidien, avec mobilier, rangements et éclairage prévus avant la rénovation.",
+        seoTitle: "Aménagement intérieur d’appartement à Erevan | SHINEX",
+        seoDescription:
+          "Aménagement intérieur d’appartement à Erevan : agencement, mobilier, éclairage et choix pratiques pour la rénovation.",
+        introduction: [
+          "La conception d’un appartement doit s’adapter aux habitudes quotidiennes de ses habitants.",
+          "Elle est particulièrement utile dans les logements neufs ou lorsque l’agencement doit être repensé.",
+        ],
+        sections: [
+          {
+            title: "Concevoir votre appartement",
+            paragraphs: [
+              "Nous élaborons des solutions autour du confort, du rangement et de l’usage quotidien.",
+            ],
+            items: [
+              "Agencement des pièces et zones d’activité",
+              "Agencement de la cuisine et de la salle de bains",
+              "Solutions de rangement",
+              "Dimensions et implantation du mobilier",
+              "Éclairage adapté aux différentes activités",
+              "Emplacement des prises et raccordements des appareils",
+            ],
+          },
+          {
+            title: "Concevoir avant de rénover",
+            paragraphs: [
+              "Un plan convenu indique aux électriciens, plombiers et professionnels des finitions où se trouveront les meubles, équipements et appareils.",
+            ],
+          },
+          {
+            title: "Périmètre de conception",
+            paragraphs: [
+              "Les honoraires dépendent de la surface, du nombre de pièces et des plans et spécifications nécessaires.",
+            ],
+          },
+        ],
+        faqs: [
+          {
+            question: "La conception est-elle utile pour un appartement neuf ?",
+            answer:
+              "Oui. Elle permet de prévoir les appareils, l’éclairage et le mobilier avant les finitions.",
+          },
+          {
+            question: "Concevez-vous de petits appartements ?",
+            answer:
+              "Oui. L’agencement et le rangement sont essentiels dans les petits espaces.",
+          },
+          {
+            question: "Le projet peut-il inclure un plan de mobilier ?",
+            answer:
+              "Oui. Un plan de mobilier peut faire partie du projet. Nous convenons de la liste des plans avant le début de la conception.",
+          },
+        ],
+        calculatorLabel: "Demander une première estimation",
+        contactLabel: "Réserver une visite",
+        relatedTitle: "Services associés",
+      },
     },
   },
   {
@@ -384,6 +506,128 @@ export const extraSeoLandingPages = [
         calculatorLabel: "Discuss your renovation",
         contactLabel: "Discuss your renovation",
         relatedTitle: "Related services",
+      },
+      de: {
+        eyebrow: "Bürorenovierung · Eriwan",
+        title: "Bürorenovierung in Eriwan",
+        description:
+          "Renovieren Sie Ihr Büro passend zur Arbeitsweise Ihres Teams, mit geplanten Arbeitsplätzen, Besprechungsbereichen, Beleuchtung und Netzwerkverkabelung.",
+        seoTitle: "Bürorenovierung in Eriwan | SHINEX",
+        seoDescription:
+          "Bürorenovierung in Eriwan: Ausbau, Arbeitsplatzgestaltung, Elektro- und Beleuchtungslösungen.",
+        introduction: [
+          "Eine Bürorenovierung sollte die Arbeit des Teams und den Komfort der Besucher verbessern und nicht nur die Optik verändern.",
+          "Die Planung berücksichtigt Arbeitsplätze, Besprechungsbereiche, Geräte und Verkabelung.",
+        ],
+        sections: [
+          {
+            title: "Was eine Bürorenovierung umfassen kann",
+            paragraphs: [
+              "Wir planen die Arbeiten nach Bürogrundriss, Ausstattung und täglichen Abläufen.",
+            ],
+            items: [
+              "Arbeitsplätze und Gemeinschaftsbereiche",
+              "Trennwände, Schalldämmung und Akustik",
+              "Steckdosen, Netzwerkanschlüsse und Beleuchtung",
+              "Wandoberflächen und Bodenbeläge",
+              "Küchen- und Sanitärbereiche",
+              "Arbeiten in Phasen bei laufender Büronutzung",
+            ],
+          },
+          {
+            title: "Arbeiten im genutzten Büro planen",
+            paragraphs: [
+              "Können die Arbeiten während der Büronutzung sicher ausgeführt werden, besprechen wir Reihenfolge und Zeiten lauter oder störender Tätigkeiten.",
+            ],
+          },
+          {
+            title: "Budgetfaktoren",
+            paragraphs: [
+              "Grundrissänderungen, Steckdosen, Beleuchtung, Sanitäranschlüsse, Netzwerkbedarf, Materialien und der gewünschte Termin beeinflussen die Kostenschätzung.",
+            ],
+          },
+        ],
+        faqs: [
+          {
+            question: "Renovieren Sie Büros im laufenden Betrieb?",
+            answer:
+              "Wir besprechen eine Aufteilung in Phasen, sofern Objektbedingungen und Sicherheit dies erlauben.",
+          },
+          {
+            question: "Können Sie Beleuchtung und Steckdosen planen?",
+            answer:
+              "Ja, auf Grundlage des Arbeitsplatz- und Ausstattungsplans.",
+          },
+          {
+            question: "Wie lange dauert eine Bürorenovierung?",
+            answer:
+              "Der Zeitplan hängt von Bürogröße, nötigen Arbeiten und möglichen Einschränkungen der Arbeitszeiten ab.",
+          },
+        ],
+        calculatorLabel: "Renovierung besprechen",
+        contactLabel: "Renovierung besprechen",
+        relatedTitle: "Passende Leistungen",
+      },
+      fr: {
+        eyebrow: "Rénovation de bureaux · Erevan",
+        title: "Rénovation de bureaux à Erevan",
+        description:
+          "Rénovez vos bureaux selon la façon de travailler de votre équipe, en prévoyant les postes, espaces de réunion, éclairages et câblages réseau.",
+        seoTitle: "Rénovation de bureaux à Erevan | SHINEX",
+        seoDescription:
+          "Rénovation de bureaux à Erevan : finitions, organisation des postes, électricité et éclairage.",
+        introduction: [
+          "La rénovation de bureaux doit faciliter le travail de l’équipe et le confort des visiteurs, au-delà du changement d’apparence.",
+          "La planification prend en compte les postes de travail, les espaces de réunion, les équipements et le câblage.",
+        ],
+        sections: [
+          {
+            title: "Ce que peut comprendre une rénovation de bureaux",
+            paragraphs: [
+              "Nous planifions les travaux selon l’agencement des bureaux, les équipements et les activités quotidiennes.",
+            ],
+            items: [
+              "Postes de travail et espaces communs",
+              "Cloisons, isolation phonique et acoustique",
+              "Prises, connexions réseau et éclairage",
+              "Finitions murales et revêtements de sol",
+              "Espaces cuisine et sanitaires",
+              "Travaux par phases lorsque les bureaux restent occupés",
+            ],
+          },
+          {
+            title: "Planifier les travaux dans des bureaux occupés",
+            paragraphs: [
+              "Si les travaux peuvent être réalisés en sécurité pendant l’occupation des bureaux, nous discutons de l’ordre et des horaires des interventions bruyantes ou perturbantes.",
+            ],
+          },
+          {
+            title: "Facteurs du budget",
+            paragraphs: [
+              "Les changements d’agencement, les prises, l’éclairage, les raccordements sanitaires, les besoins réseau, les matériaux et l’échéance visée influencent le devis.",
+            ],
+          },
+        ],
+        faqs: [
+          {
+            question: "Rénovez-vous des bureaux en activité ?",
+            answer:
+              "Nous discutons d’un phasage lorsque les conditions du bien et la sécurité le permettent.",
+          },
+          {
+            question: "Pouvez-vous prévoir l’éclairage et les prises ?",
+            answer:
+              "Oui, à partir du plan des postes de travail et des équipements.",
+          },
+          {
+            question: "Combien de temps dure une rénovation de bureaux ?",
+            answer:
+              "Le planning dépend de la taille des bureaux, des travaux nécessaires et des éventuelles restrictions horaires.",
+          },
+        ],
+        calculatorLabel: "Discuter de votre rénovation",
+        contactLabel: "Discuter de votre rénovation",
+        relatedTitle: "Services associés",
       },
     },
   },
@@ -582,6 +826,129 @@ export const extraSeoLandingPages = [
         contactLabel: "Discuss your renovation",
         relatedTitle: "Related services",
       },
+      de: {
+        eyebrow: "Umfassende Sanierung · Eriwan",
+        title: "Umfassende Sanierung in Eriwan",
+        description:
+          "Sanieren Sie eine ältere Wohnung oder ein Haus in Eriwan: vom Entfernen verschlissener Oberflächen und Ersetzen von Kabeln oder Rohren bis zur Vorbereitung und zum Ausbau.",
+        seoTitle: "Umfassende Sanierung in Eriwan | SHINEX",
+        seoDescription:
+          "Umfassende Sanierung von Wohnungen und Häusern in Eriwan: Rückbau, Elektro-, Sanitär- und Ausbauarbeiten.",
+        introduction: [
+          "Eine umfassende Sanierung kann nötig sein, wenn neben den sichtbaren Oberflächen auch verschlissene Kabel, Rohre, Wände oder Böden bearbeitet werden müssen.",
+          "Vor Beginn prüfen wir den tatsächlichen Zustand, um eine sichere Arbeitsfolge zu planen.",
+        ],
+        sections: [
+          {
+            title: "Phasen einer umfassenden Sanierung",
+            paragraphs: [
+              "Die endgültige Arbeitsliste wird nach der Objektbesichtigung festgelegt.",
+            ],
+            items: [
+              "Rückbau",
+              "Vorbereitung von Wänden, Böden und Decken",
+              "Modernisierung der Elektroinstallation",
+              "Sanitärarbeiten",
+              "Trennwände oder Grundrissänderungen",
+              "Endausbau",
+            ],
+          },
+          {
+            title: "Warum eine Besichtigung wichtig ist",
+            paragraphs: [
+              "Bestehende Oberflächen können Schäden an Wänden, Böden, Kabeln oder Rohren verdecken. Eine Besichtigung hilft, mögliche Reparaturen zu erkennen und vor dem neuen Ausbau zu planen.",
+            ],
+          },
+          {
+            title: "Was den Preis beeinflusst",
+            paragraphs: [
+              "Rückbau, Ausgleichsarbeiten, Elektro- und Sanitärarbeiten sowie Materialien beeinflussen die Kosten.",
+            ],
+          },
+        ],
+        faqs: [
+          {
+            question:
+              "Wie unterscheiden sich umfassende und optische Renovierung?",
+            answer:
+              "Eine umfassende Sanierung kann Wand- und Bodenreparaturen sowie den Austausch von Kabeln und Rohren umfassen. Eine optische Renovierung erneuert hauptsächlich sichtbare Oberflächen.",
+          },
+          {
+            question: "Muss die Elektroanlage ersetzt werden?",
+            answer:
+              "Das hängt von Zustand, Leistungsbedarf und einer Sicherheitsprüfung ab.",
+          },
+          {
+            question: "Können Sie einen Kostenvoranschlag erstellen?",
+            answer:
+              "Ja. Eine genaue Kostenschätzung erfolgt nach der Besichtigung.",
+          },
+        ],
+        calculatorLabel: "Renovierung besprechen",
+        contactLabel: "Renovierung besprechen",
+        relatedTitle: "Passende Leistungen",
+      },
+      fr: {
+        eyebrow: "Rénovation lourde · Erevan",
+        title: "Rénovation lourde à Erevan",
+        description:
+          "Rénovez un appartement ancien ou une maison à Erevan, de la dépose des finitions usées et du remplacement des réseaux à la préparation et à la finition des surfaces.",
+        seoTitle: "Rénovation lourde à Erevan | SHINEX",
+        seoDescription:
+          "Rénovation lourde d’appartements et de maisons à Erevan : démolition, électricité, plomberie et finitions.",
+        introduction: [
+          "Une rénovation lourde peut être nécessaire lorsque les câbles, la plomberie, les murs ou les sols usés demandent une intervention en plus des finitions visibles.",
+          "Avant le démarrage, nous évaluons l’état réel pour planifier un ordre de travaux sûr.",
+        ],
+        sections: [
+          {
+            title: "Étapes d’une rénovation lourde",
+            paragraphs: [
+              "La liste définitive des travaux est définie après la visite du bien.",
+            ],
+            items: [
+              "Démolition",
+              "Préparation des murs, sols et plafonds",
+              "Modernisation de l’installation électrique",
+              "Travaux de plomberie",
+              "Cloisons ou modifications de l’agencement",
+              "Finitions finales",
+            ],
+          },
+          {
+            title: "Pourquoi une visite est importante",
+            paragraphs: [
+              "Les finitions existantes peuvent masquer des dommages aux murs, aux sols, aux câbles ou aux tuyaux. Une visite aide à repérer les réparations possibles et à préparer les travaux avant les nouvelles finitions.",
+            ],
+          },
+          {
+            title: "Ce qui influence le prix",
+            paragraphs: [
+              "La démolition, le nivellement, l’électricité, la plomberie et les matériaux influencent le coût.",
+            ],
+          },
+        ],
+        faqs: [
+          {
+            question:
+              "Quelle différence entre rénovation lourde et rénovation légère ?",
+            answer:
+              "Une rénovation lourde peut inclure la réparation des murs et sols, la réfection électrique et le remplacement des canalisations. Une rénovation légère renouvelle surtout les finitions visibles.",
+          },
+          {
+            question: "Faut-il remplacer l’installation électrique ?",
+            answer:
+              "Cela dépend de l’état, des besoins et d’une évaluation de sécurité.",
+          },
+          {
+            question: "Pouvez-vous établir un devis ?",
+            answer: "Oui. Un devis précis est établi après la visite du bien.",
+          },
+        ],
+        calculatorLabel: "Discuter de votre rénovation",
+        contactLabel: "Discuter de votre rénovation",
+        relatedTitle: "Services associés",
+      },
     },
   },
   {
@@ -777,6 +1144,128 @@ export const extraSeoLandingPages = [
         contactLabel: "Discuss your renovation",
         relatedTitle: "Related services",
       },
+      de: {
+        eyebrow: "Optische Renovierung · Eriwan",
+        title: "Optische Renovierung in Eriwan",
+        description:
+          "Frischen Sie Ihre Wohnung, Ihr Haus oder einen einzelnen Raum auf, wenn Kabel, Rohre und Untergründe in gutem Zustand sind.",
+        seoTitle: "Optische Renovierung in Eriwan | SHINEX",
+        seoDescription:
+          "Optische Renovierung in Eriwan: Anstriche, Tapeten, Deckenreparaturen und neue Bodenbeläge für Wohnungen, Häuser oder einzelne Räume.",
+        introduction: [
+          "Eine optische Renovierung ist geeignet, wenn Wände, Böden, Kabel und Rohre intakt sind, die sichtbaren Oberflächen aber erneuert werden sollen.",
+          "Wir prüfen zuerst die Untergründe, damit eine optische Auffrischung keine ernsteren Probleme verdeckt.",
+        ],
+        sections: [
+          {
+            title: "Was eine optische Renovierung umfassen kann",
+            paragraphs: [
+              "Der Umfang kann einen einzelnen Raum oder die gesamte Wohnung betreffen.",
+            ],
+            items: [
+              "Wandvorbereitung und Anstrich",
+              "Erneuerung von Tapeten oder Wandbelägen",
+              "Deckenreparatur",
+              "Erneuerung der Bodenbeläge",
+              "Örtliche Reparaturen an Fliesen und Badoberflächen",
+              "Austausch von Beleuchtung oder Türen",
+            ],
+          },
+          {
+            title: "Wann eine Auffrischung ausreicht",
+            paragraphs: [
+              "Sind Kabel, Rohre und Bausubstanz in gutem Zustand, kann die Erneuerung der Oberflächen ausreichen, um den Raum zu verbessern.",
+            ],
+          },
+          {
+            title: "Erste Kostenschätzung",
+            paragraphs: [
+              "Die Kosten hängen von Fläche, Wand- und Bodenzustand, Materialwahl und nötigen Untergrundreparaturen ab.",
+            ],
+          },
+        ],
+        faqs: [
+          {
+            question: "Sind Elektroarbeiten enthalten?",
+            answer:
+              "Probleme mit der Verkabelung prüfen wir separat und klären die nötigen Arbeiten vor dem Aufbringen neuer Oberflächen.",
+          },
+          {
+            question: "Können Sie einen einzelnen Raum renovieren?",
+            answer:
+              "Ja. Wir können einen einzelnen Raum oder Bereich besprechen.",
+          },
+          {
+            question: "Wie lange dauert es?",
+            answer:
+              "Das hängt von Fläche, Materialtrocknungszeiten und vereinbartem Umfang ab.",
+          },
+        ],
+        calculatorLabel: "Renovierung besprechen",
+        contactLabel: "Renovierung besprechen",
+        relatedTitle: "Passende Leistungen",
+      },
+      fr: {
+        eyebrow: "Rénovation légère · Erevan",
+        title: "Rénovation légère à Erevan",
+        description:
+          "Rafraîchissez les finitions de votre appartement, maison ou d’une seule pièce lorsque l’électricité, la plomberie et les surfaces sont en bon état.",
+        seoTitle: "Rénovation légère à Erevan | SHINEX",
+        seoDescription:
+          "Rénovation légère à Erevan : peinture, papier peint, réparations de plafonds et renouvellement des sols pour appartement, maison ou pièce individuelle.",
+        introduction: [
+          "Une rénovation légère convient lorsque les murs, sols, câbles et canalisations sont sains, mais que les finitions visibles ont besoin d’être renouvelées.",
+          "Nous vérifions d’abord les surfaces pour qu’un rafraîchissement ne masque pas un problème plus sérieux.",
+        ],
+        sections: [
+          {
+            title: "Ce que peut comprendre une rénovation légère",
+            paragraphs: [
+              "Les travaux peuvent concerner une seule pièce ou l’ensemble de l’appartement.",
+            ],
+            items: [
+              "Préparation et peinture des murs",
+              "Renouvellement du papier peint ou des revêtements muraux",
+              "Réparation du plafond",
+              "Renouvellement des revêtements de sol",
+              "Réparations localisées du carrelage et des finitions de salle de bains",
+              "Remplacement de l’éclairage ou des portes",
+            ],
+          },
+          {
+            title: "Quand un rafraîchissement suffit",
+            paragraphs: [
+              "Lorsque l’électricité, la plomberie et la structure sont en bon état, renouveler les finitions peut suffire à améliorer la pièce.",
+            ],
+          },
+          {
+            title: "Première estimation",
+            paragraphs: [
+              "Le coût dépend de la surface, de l’état des murs et sols, des matériaux et des réparations nécessaires.",
+            ],
+          },
+        ],
+        faqs: [
+          {
+            question: "Les travaux électriques sont-ils inclus ?",
+            answer:
+              "Nous évaluons séparément les problèmes électriques et précisons les travaux nécessaires avant les nouvelles finitions.",
+          },
+          {
+            question: "Pouvez-vous rénover une seule pièce ?",
+            answer:
+              "Oui. Nous pouvons discuter d’une pièce ou d’une zone précise.",
+          },
+          {
+            question: "Combien de temps cela prend-il ?",
+            answer:
+              "Cela dépend de la surface, du temps de séchage des matériaux et du périmètre convenu.",
+          },
+        ],
+        calculatorLabel: "Discuter de votre rénovation",
+        contactLabel: "Discuter de votre rénovation",
+        relatedTitle: "Services associés",
+      },
     },
   },
   {
@@ -967,6 +1456,126 @@ export const extraSeoLandingPages = [
         calculatorLabel: "Discuss your renovation",
         contactLabel: "Discuss your renovation",
         relatedTitle: "Related services",
+      },
+      de: {
+        eyebrow: "Renovierungskostenschätzung · Eriwan",
+        title: "Renovierungskostenschätzung in Eriwan",
+        description:
+          "So lesen Sie einen Renovierungskostenvoranschlag: Prüfen Sie Arbeiten, gemessene Mengen, Einheitspreise, Materialien und Zusatzkosten.",
+        seoTitle: "Renovierungskostenschätzung in Eriwan | SHINEX",
+        seoDescription:
+          "Renovierungskostenschätzungen in Eriwan: Arbeitsliste, Mengen und genaue Berechnung nach Besichtigung.",
+        introduction: [
+          "Ein Kostenvoranschlag sollte zeigen, was das Budget abdeckt und was es verändern kann.",
+          "Ein telefonisch genannter Preis ist nur ein Ausgangspunkt. Besichtigung und Aufmaß sind nötig, um Untergrundvorbereitung, Elektro-, Sanitär- und weitere Arbeiten einzuschätzen.",
+        ],
+        sections: [
+          {
+            title: "Was ein Kostenvoranschlag enthalten sollte",
+            paragraphs: [
+              "Jede Position sollte Arbeit, gemessene Menge und Einheitspreis nennen. Materialien und Zusatzkosten sollten separat stehen. Das folgende Beispiel zeigt eine Struktur zur Angebotsprüfung.",
+            ],
+            items: [
+              "Einzelne Tätigkeiten",
+              "Gemessene Mengen und Einheiten",
+              "Vorbereitung und Entfernung alter Oberflächen",
+              "Elektro- und Sanitärarbeiten",
+              "Anstriche, Bodenbeläge und weiterer Ausbau",
+              "Materialien, Zusatzkosten und vereinbarte Ausschlüsse",
+            ],
+          },
+          {
+            title: "Eine genaue Berechnung erhalten",
+            paragraphs: [
+              "Wir sammeln die Ausgangsdaten und präzisieren den Umfang nach Besichtigung und Aufmaß.",
+            ],
+          },
+          {
+            title: "Warum sich der Preis ändern kann",
+            paragraphs: [
+              "Verdeckte Schäden, unebene Wände oder Böden, andere Materialien sowie Änderungen an Planung oder Mengen können das Budget beeinflussen.",
+            ],
+          },
+        ],
+        faqs: [
+          {
+            question: "Kann ich telefonisch einen genauen Preis erhalten?",
+            answer:
+              "Wir können eine erste Orientierung geben. Eine genaue Kostenschätzung benötigt jedoch Objektdaten und eine Besichtigung.",
+          },
+          {
+            question: "Enthält ein Kostenvoranschlag Materialien?",
+            answer: "Das wird je nach Projekt separat vereinbart.",
+          },
+          {
+            question: "Was wird für eine Kostenschätzung benötigt?",
+            answer:
+              "Fläche, Zustand, gewünschte Arbeiten und möglichst Fotos oder ein Plan.",
+          },
+        ],
+        calculatorLabel: "Renovierung besprechen",
+        contactLabel: "Renovierung besprechen",
+        relatedTitle: "Passende Leistungen",
+      },
+      fr: {
+        eyebrow: "Devis de rénovation · Erevan",
+        title: "Devis de rénovation à Erevan",
+        description:
+          "Apprenez à lire un devis de rénovation : vérifiez les tâches, quantités mesurées, prix unitaires, matériaux et frais supplémentaires.",
+        seoTitle: "Devis de rénovation à Erevan | SHINEX",
+        seoDescription:
+          "Devis de rénovation à Erevan : liste des travaux, quantités et calcul précis après une visite.",
+        introduction: [
+          "Un devis doit montrer ce que couvre le budget et ce qui peut le modifier.",
+          "Un prix évoqué par téléphone n’est qu’un point de départ. Une visite et des mesures sont nécessaires pour évaluer la préparation des surfaces, l’électricité, la plomberie et les autres travaux.",
+        ],
+        sections: [
+          {
+            title: "Ce qu’un devis doit contenir",
+            paragraphs: [
+              "Chaque ligne doit préciser la tâche, la quantité mesurée et le prix unitaire. Les matériaux et frais supplémentaires doivent être séparés. L’exemple ci-dessous propose une structure pour examiner un devis.",
+            ],
+            items: [
+              "Tâches individuelles",
+              "Quantités mesurées et unités",
+              "Préparation et dépose des anciennes finitions",
+              "Travaux d’électricité et de plomberie",
+              "Peinture, sols et autres finitions",
+              "Matériaux, frais supplémentaires et exclusions convenues",
+            ],
+          },
+          {
+            title: "Obtenir un calcul précis",
+            paragraphs: [
+              "Nous réunissons les informations initiales, puis affinons le périmètre après visite et mesures.",
+            ],
+          },
+          {
+            title: "Pourquoi le prix peut changer",
+            paragraphs: [
+              "Des dommages cachés, des murs ou sols irréguliers, d’autres matériaux et des modifications de conception ou de quantités peuvent affecter le budget.",
+            ],
+          },
+        ],
+        faqs: [
+          {
+            question: "Puis-je obtenir un prix exact par téléphone ?",
+            answer:
+              "Nous pouvons donner une première indication, mais un devis précis nécessite les informations du bien et une visite.",
+          },
+          {
+            question: "Un devis comprend-il les matériaux ?",
+            answer: "Cela est convenu séparément selon le projet.",
+          },
+          {
+            question: "Que faut-il pour établir un devis ?",
+            answer:
+              "La surface, l’état, les travaux souhaités et, si possible, des photos ou un plan.",
+          },
+        ],
+        calculatorLabel: "Discuter de votre rénovation",
+        contactLabel: "Discuter de votre rénovation",
+        relatedTitle: "Services associés",
       },
     },
   },
@@ -1165,6 +1774,129 @@ export const extraSeoLandingPages = [
         contactLabel: "Discuss your renovation",
         relatedTitle: "Related services",
       },
+      de: {
+        eyebrow: "Sanitärarbeiten · Eriwan",
+        title: "Sanitärarbeiten in Eriwan",
+        description:
+          "Sanitärarbeiten in Eriwan für Wohnungen, Häuser und Gewerberäume im Rahmen einer Renovierung, von der Planung bis zur Installation und Prüfung.",
+        seoTitle: "Sanitärarbeiten in Eriwan | SHINEX",
+        seoDescription:
+          "Sanitärarbeiten in Eriwan: Wasser- und Abwasserleitungen, Küchen- und Badanschlüsse, Installation und Prüfung bei Renovierungen.",
+        introduction: [
+          "Sanitärarbeiten sollten früh geplant werden, vor dem endgültigen Wand- und Bodenausbau.",
+          "Wir planen Leitungswege und Anschlüsse nach Küchen- und Badgrundriss, einschließlich Geräten und Einbaumöbeln.",
+        ],
+        sections: [
+          {
+            title: "Sanitärlösungen",
+            paragraphs: [
+              "Wir vereinbaren die Arbeiten nach Prüfung von Grundriss, vorhandenen Rohren und den geplanten Sanitärobjekten oder Geräten.",
+            ],
+            items: [
+              "Wasseranschlüsse",
+              "Abwasserleitungswege",
+              "Anschlüsse für Sanitärobjekte",
+              "Anschlüsse für Spüle und Küchengeräte",
+              "Prüfung vorhandener Rohre und Armaturen",
+              "Prüfung der installierten Anlage",
+            ],
+          },
+          {
+            title: "Warum der Grundriss zuerst kommt",
+            paragraphs: [
+              "Werden Geräte oder Sanitärobjekte nach dem Ausbau versetzt, müssen möglicherweise Rohre verlegt und fertige Oberflächen geöffnet werden. Eine frühe Abstimmung hilft, diese Zusatzarbeiten zu vermeiden.",
+            ],
+          },
+          {
+            title: "Kostenfaktoren",
+            paragraphs: [
+              "Die Anzahl der Anschlüsse, Leitungswege, der Anlagenzustand, Rückbau und ausgewählte Ausstattung beeinflussen die Kosten.",
+            ],
+          },
+        ],
+        faqs: [
+          {
+            question: "Wann werden Sanitärarbeiten ausgeführt?",
+            answer:
+              "Leitungen werden üblicherweise in frühen Renovierungsphasen installiert, bevor Wände und Böden ihre endgültigen Oberflächen erhalten.",
+          },
+          {
+            question: "Können Küchen- oder Badanschlüsse versetzt werden?",
+            answer:
+              "Das hängt von der vorhandenen Anlage und den technischen Bedingungen ab.",
+          },
+          {
+            question: "Kann ich Sanitärarbeiten separat beauftragen?",
+            answer:
+              "Beschreiben Sie die nötigen Arbeiten sowie den Zustand der vorhandenen Rohre und Ausstattung. Danach besprechen wir Umfang und Bedingungen eines Einzelauftrags.",
+          },
+        ],
+        calculatorLabel: "Renovierung besprechen",
+        contactLabel: "Renovierung besprechen",
+        relatedTitle: "Passende Leistungen",
+      },
+      fr: {
+        eyebrow: "Plomberie · Erevan",
+        title: "Travaux de plomberie à Erevan",
+        description:
+          "Travaux de plomberie à Erevan pour appartements, maisons et locaux professionnels dans le cadre d’une rénovation, de la planification à l’installation et aux essais.",
+        seoTitle: "Travaux de plomberie à Erevan | SHINEX",
+        seoDescription:
+          "Plomberie à Erevan : conduites d’eau et d’évacuation, raccordements de cuisine et de salle de bains, installation et essais pendant la rénovation.",
+        introduction: [
+          "La plomberie se prépare de préférence tôt, avant les finitions définitives des murs et des sols.",
+          "Nous prévoyons les tracés des canalisations et les raccordements selon l’agencement de la cuisine et de la salle de bains, appareils et mobilier intégré compris.",
+        ],
+        sections: [
+          {
+            title: "Solutions de plomberie",
+            paragraphs: [
+              "Nous convenons des travaux après étude de l’agencement, des canalisations existantes et des équipements sanitaires ou appareils à installer.",
+            ],
+            items: [
+              "Raccordements d’alimentation en eau",
+              "Tracés des évacuations",
+              "Raccordements des équipements sanitaires",
+              "Raccordements de l’évier et des appareils de cuisine",
+              "Évaluation des canalisations et raccords existants",
+              "Essais de l’installation",
+            ],
+          },
+          {
+            title: "Pourquoi l’agencement vient d’abord",
+            paragraphs: [
+              "Déplacer des appareils ou équipements après les finitions peut obliger à déplacer les tuyaux et à ouvrir les surfaces terminées. Définir leurs positions tôt aide à éviter ces travaux supplémentaires.",
+            ],
+          },
+          {
+            title: "Facteurs de coût",
+            paragraphs: [
+              "Le nombre de raccordements, les tracés des tuyaux, l’état du réseau, la démolition et les équipements choisis influencent le coût.",
+            ],
+          },
+        ],
+        faqs: [
+          {
+            question: "Quand réalise-t-on la plomberie ?",
+            answer:
+              "Les canalisations sont généralement installées au début de la rénovation, avant les finitions définitives des murs et des sols.",
+          },
+          {
+            question:
+              "Peut-on déplacer les raccordements de cuisine ou de salle de bains ?",
+            answer:
+              "Cela dépend du réseau existant et des conditions techniques.",
+          },
+          {
+            question: "Puis-je demander uniquement des travaux de plomberie ?",
+            answer:
+              "Indiquez les travaux souhaités et l’état des tuyaux et équipements existants. Nous pourrons ensuite discuter du périmètre et des modalités d’une intervention distincte.",
+          },
+        ],
+        calculatorLabel: "Discuter de votre rénovation",
+        contactLabel: "Discuter de votre rénovation",
+        relatedTitle: "Services associés",
+      },
     },
   },
   {
@@ -1361,6 +2093,129 @@ export const extraSeoLandingPages = [
         calculatorLabel: "Discuss your renovation",
         contactLabel: "Discuss your renovation",
         relatedTitle: "Related services",
+      },
+      de: {
+        eyebrow: "Elektroarbeiten · Eriwan",
+        title: "Elektroarbeiten in Eriwan",
+        description:
+          "Elektroinstallation bei Renovierung oder Bau: Steckdosen und Beleuchtung planen, Kabel verlegen und Geräteanschlüsse vorbereiten.",
+        seoTitle: "Elektroarbeiten in Eriwan | SHINEX",
+        seoDescription:
+          "Elektroinstallation in Eriwan: Steckdosen, Beleuchtung, Verkabelung und Geräteanschlüsse passend zu Ihrem Renovierungs- oder Bauprojekt.",
+        introduction: [
+          "Die Elektroplanung beginnt mit Möbeln, Geräten und den Tätigkeiten in jedem Raum.",
+          "Vor dem Wandfinish stimmen wir Steckdosen, Schalter und Leuchten ab und prüfen den Leistungsbedarf der Geräte.",
+        ],
+        sections: [
+          {
+            title: "Elektroplanung",
+            paragraphs: [
+              "Der Umfang wird anhand von Planung, Geräten und Sicherheitsanforderungen vereinbart.",
+            ],
+            items: [
+              "Beleuchtung für verschiedene Räume und Tätigkeiten",
+              "Positionen von Steckdosen und Schaltern",
+              "Anschlüsse für Großgeräte",
+              "Arbeitsplatz- und Netzwerkanschlüsse",
+              "Kabelwege",
+              "Vorbereitung von Geräteanschlüssen",
+            ],
+          },
+          {
+            title: "Warum die Gestaltung die Elektroinstallation beeinflusst",
+            paragraphs: [
+              "Möbel, Küchenzeilen und Arbeitsplätze bestimmen, wo Steckdosen, Schalter, Leuchten und Geräteanschlüsse benötigt werden.",
+            ],
+          },
+          {
+            title: "Grundlage der Kostenschätzung",
+            paragraphs: [
+              "Die Kosten hängen von Anschlussanzahl, Leitungslängen, Verteileranforderungen, Wandzustand und Komplexität ab.",
+            ],
+          },
+        ],
+        faqs: [
+          {
+            question: "Wann sollten Steckdosen und Beleuchtung geplant werden?",
+            answer:
+              "Zu Beginn der Renovierung, zusammen mit dem Möbel- und Geräteplan.",
+          },
+          {
+            question: "Kann eine alte Elektroanlage ersetzt werden?",
+            answer:
+              "Der Umfang ergibt sich aus der Prüfung der bestehenden Anlage und der erforderlichen Leistung.",
+          },
+          {
+            question: "Ist die Montage der Leuchten enthalten?",
+            answer:
+              "Der genaue Umfang wird anhand des Projekts und der gewählten Ausstattung vereinbart.",
+          },
+        ],
+        calculatorLabel: "Renovierung besprechen",
+        contactLabel: "Renovierung besprechen",
+        relatedTitle: "Passende Leistungen",
+      },
+      fr: {
+        eyebrow: "Électricité · Erevan",
+        title: "Travaux électriques à Erevan",
+        description:
+          "Installation électrique pendant une rénovation ou une construction : prévoir les prises et éclairages, poser les câbles et préparer les raccordements des appareils.",
+        seoTitle: "Travaux électriques à Erevan | SHINEX",
+        seoDescription:
+          "Installation électrique à Erevan : prises, éclairage, câblage et raccordements prévus selon votre projet de rénovation ou de construction.",
+        introduction: [
+          "La conception électrique commence par le mobilier, les appareils et les usages de chaque pièce.",
+          "Avant les finitions murales, nous convenons des emplacements des prises, interrupteurs et luminaires et évaluons la puissance nécessaire aux équipements.",
+        ],
+        sections: [
+          {
+            title: "Plan des travaux électriques",
+            paragraphs: [
+              "Le périmètre est convenu selon le projet, les équipements et les exigences de sécurité.",
+            ],
+            items: [
+              "Éclairage selon les pièces et les activités",
+              "Emplacements des prises et interrupteurs",
+              "Raccordements des gros appareils",
+              "Connexions des postes de travail et du réseau",
+              "Cheminements des câbles",
+              "Préparation des raccordements d’équipements",
+            ],
+          },
+          {
+            title: "Pourquoi l’agencement influence l’électricité",
+            paragraphs: [
+              "Le mobilier, les meubles de cuisine et les postes de travail déterminent où les prises, interrupteurs, luminaires et raccordements seront nécessaires.",
+            ],
+          },
+          {
+            title: "Base du devis",
+            paragraphs: [
+              "Le coût dépend du nombre de prises et raccordements, de la longueur des tracés, des besoins du tableau électrique, de l’état des murs et de la complexité.",
+            ],
+          },
+        ],
+        faqs: [
+          {
+            question: "Quand prévoir les prises et l’éclairage ?",
+            answer:
+              "Au début de la rénovation, avec le plan du mobilier et des appareils.",
+          },
+          {
+            question:
+              "Peut-on remplacer une ancienne installation électrique ?",
+            answer:
+              "Le périmètre suit l’évaluation de l’installation existante et de la puissance nécessaire.",
+          },
+          {
+            question: "Les travaux comprennent-ils la pose des luminaires ?",
+            answer:
+              "Le périmètre exact est convenu selon le projet et les équipements choisis.",
+          },
+        ],
+        calculatorLabel: "Discuter de votre rénovation",
+        contactLabel: "Discuter de votre rénovation",
+        relatedTitle: "Services associés",
       },
     },
   },

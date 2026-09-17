@@ -10,7 +10,12 @@ import { ContactDialog } from "@/components/forms/contact-dialog";
 import { companyConfig } from "@/config/company.config";
 import { seoConfig } from "@/config/seo.config";
 import { getSiteOrigin } from "@/lib/company";
-import { getDictionary, isLocale, locales } from "@/lib/i18n";
+import {
+  getDictionary,
+  isLocale,
+  localeLanguageTags,
+  locales,
+} from "@/lib/i18n";
 import { getRobotsMetadata } from "@/lib/metadata";
 import {
   getOrganizationJsonLd,
@@ -61,7 +66,7 @@ export default async function LocaleLayout({
   if (!isLocale(locale)) notFound();
 
   const dictionary = await getDictionary(locale);
-  const htmlLang = locale === "hy" ? "hy-AM" : locale === "ru" ? "ru-AM" : "en";
+  const htmlLang = localeLanguageTags[locale];
   return (
     <html className="h-full antialiased" lang={htmlLang}>
       <body suppressHydrationWarning className="flex min-h-full flex-col">

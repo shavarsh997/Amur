@@ -4,6 +4,8 @@ const localeMap: Record<Locale, string> = {
   hy: "hy-AM",
   ru: "ru-RU",
   en: "en-US",
+  de: "de-DE",
+  fr: "fr-FR",
 };
 
 export function formatPrice(

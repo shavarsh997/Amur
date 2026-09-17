@@ -20,6 +20,8 @@ export function getRenovationStartingPrice(locale: Locale): string | null {
     hy: `${amount} դրամ/մ²-ից`,
     ru: `от ${amount} драм/м²`,
     en: `from AMD ${amount}/m²`,
+    de: `ab ${amount} AMD/m²`,
+    fr: `à partir de ${amount} AMD/m²`,
   };
   return labels[locale];
 }

@@ -103,6 +103,90 @@ export const budgetCopy: Record<Locale, BudgetCopy> = {
     totalNote:
       "The final estimate combines all labour items, separately listed materials and agreed additional costs. Check that the same task has not been counted twice.",
   },
+  de: {
+    title: "So setzt sich das Budget zusammen",
+    items: [
+      {
+        title: "Arbeitskosten",
+        description:
+          "Jede Arbeit hat eine Menge und einen Einheitspreis. Wandvorbereitung, Streichen, Bodenverlegung und Montage sollten einzeln aufgeführt werden.",
+      },
+      {
+        title: "Materialien",
+        description:
+          "Vorbereitungs- und Ausbaumaterialien, Verbrauchsmaterial und Ausstattung. Im Angebot sollte stehen, was ausgewählt wurde und wer den Einkauf übernimmt.",
+      },
+      {
+        title: "Zusätzliche Kosten",
+        description:
+          "Prüfen Sie Lieferung, Transport der Materialien zum Arbeitsbereich, Bauschuttentsorgung und Zugang. Die relevanten Positionen hängen vom Projekt ab.",
+      },
+    ],
+    areaTitle: "Bodenfläche und Bearbeitungsfläche sind verschieden",
+    areaDescription:
+      "Ein 4 × 5 m großer Raum hat 20 m² Bodenfläche. Bei 2,7 m Höhe ergeben die vier Wände vor Abzug von Türen und Fenstern 48,6 m². Ein Preis für Wandanstrich lässt sich deshalb nicht einfach mit der Bodenfläche multiplizieren.",
+    formula: "Kosten einer Arbeit = gemessene Menge × Einheitspreis",
+    exampleTitle: "Einen detaillierten Kostenvoranschlag lesen",
+    exampleDescription:
+      "Beispielmengen für einen Raum mit 4 × 5 m und 2,7 m Höhe. Jede Arbeit benötigt einen eigenen Preis; Materialien werden separat aufgeführt.",
+    work: "Aufgabe",
+    quantity: "Menge",
+    amount: "Kostenberechnung",
+    squareMetres: "m²",
+    rate: "Preis je m²",
+    rows: [
+      "Wandvorbereitung",
+      "Wände streichen",
+      "Deckenfinish",
+      "Bodenbelag verlegen",
+    ],
+    exampleNote:
+      "Dies zeigt den Aufbau eines Kostenvoranschlags. Tür- und Fensteröffnungen, Oberflächenzustand und Ausbauwahl beeinflussen die Mengen; Preise werden für die konkrete Arbeit festgelegt.",
+    totalNote:
+      "Der endgültige Kostenvoranschlag umfasst alle Arbeitspositionen, separat aufgeführte Materialien und vereinbarte Zusatzkosten. Prüfen Sie, dass keine Arbeit doppelt berechnet wurde.",
+  },
+  fr: {
+    title: "Ce qui compose le budget",
+    items: [
+      {
+        title: "Main-d’œuvre",
+        description:
+          "Chaque tâche a une quantité et un prix unitaire. La préparation des murs, la peinture, les sols et la pose des équipements doivent être détaillées séparément.",
+      },
+      {
+        title: "Matériaux",
+        description:
+          "Matériaux de préparation et de finition, consommables et équipements. Le devis doit préciser les éléments choisis et qui les achète.",
+      },
+      {
+        title: "Frais supplémentaires",
+        description:
+          "Vérifiez la livraison, l’acheminement des matériaux, l’évacuation des gravats et les conditions d’accès. Les postes concernés dépendent du projet.",
+      },
+    ],
+    areaTitle: "La surface au sol diffère de la surface à traiter",
+    areaDescription:
+      "Une pièce de 4 × 5 m a une surface au sol de 20 m². Avec une hauteur de 2,7 m, ses quatre murs représentent 48,6 m² avant déduction des portes et fenêtres. On ne peut donc pas simplement multiplier le tarif de peinture des murs par la surface au sol.",
+    formula: "Coût d’une tâche = quantité mesurée × prix unitaire",
+    exampleTitle: "Lire un devis détaillé",
+    exampleDescription:
+      "Exemples de quantités pour une pièce de 4 × 5 m et 2,7 m de hauteur. Chaque tâche a son propre tarif, les matériaux étant indiqués séparément.",
+    work: "Objectif",
+    quantity: "Quantité",
+    amount: "Calcul du coût",
+    squareMetres: "m²",
+    rate: "prix au m²",
+    rows: [
+      "Préparation des murs",
+      "Peinture des murs",
+      "Finition du plafond",
+      "Pose du revêtement de sol",
+    ],
+    exampleNote:
+      "Cet exemple illustre la structure d’un devis. Les ouvertures, l’état des surfaces et les finitions choisies influencent les quantités ; les tarifs sont fixés pour les travaux précis.",
+    totalNote:
+      "Le devis final regroupe tous les postes de main-d’œuvre, les matériaux indiqués séparément et les frais supplémentaires convenus. Vérifiez qu’aucune tâche n’est comptée deux fois.",
+  },
   hy: {
     title: "Ինչի՞ց է կազմվում բյուջեն",
     items: [

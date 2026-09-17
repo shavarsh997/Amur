@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { companyConfig } from "@/config/company.config";
 import { seoConfig } from "@/config/seo.config";
 import { getAbsoluteUrl, getSiteOrigin } from "@/lib/company";
-import { locales } from "@/lib/i18n";
+import { localeLanguageTags, locales } from "@/lib/i18n";
 import { shouldPreventIndexing } from "@/lib/seo-environment";
 import type { Locale } from "@/types";
 
@@ -49,7 +49,7 @@ export function createPageMetadata({
   const canonical = getAbsoluteUrl(canonicalPath);
   const languages = Object.fromEntries(
     locales.map((language) => [
-      language === "hy" ? "hy-AM" : language === "ru" ? "ru-AM" : "en",
+      localeLanguageTags[language],
       getAbsoluteUrl(`/${language}${normalizedPath}`),
     ])
   );

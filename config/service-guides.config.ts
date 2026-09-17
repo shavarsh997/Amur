@@ -7,6 +7,8 @@ export const serviceGuidesTitle: Label = {
   hy: "Ընտրեք աշխատանքները կամ հաշվարկեք արժեքը",
   ru: "Выберите задачу или рассчитайте стоимость",
   en: "Explore the work you need or plan your budget",
+  de: "Passende Arbeiten finden oder das Budget planen",
+  fr: "Découvrez les travaux adaptés ou préparez votre budget",
 };
 
 export const serviceGuideGroups: readonly {
@@ -18,6 +20,8 @@ export const serviceGuideGroups: readonly {
       hy: "Բնակարանի վերանորոգում",
       ru: "Ремонт квартиры",
       en: "Apartment renovation",
+      de: "Wohnungsrenovierung",
+      fr: "Rénovation d’appartement",
     },
     links: [
       {
@@ -26,6 +30,8 @@ export const serviceGuideGroups: readonly {
           hy: "Բնակարանների վերանորոգում Երևանում",
           ru: "Ремонт квартир в Ереване",
           en: "Apartment renovation in Yerevan",
+          de: "Wohnungsrenovierung in Eriwan",
+          fr: "Rénovation d’appartement à Erevan",
         },
       },
       {
@@ -34,6 +40,8 @@ export const serviceGuideGroups: readonly {
           hy: "Նորակառույց բնակարան",
           ru: "Квартира в новостройке",
           en: "New-build apartments",
+          de: "Neubauwohnungen",
+          fr: "Appartements neufs",
         },
       },
       {
@@ -42,6 +50,8 @@ export const serviceGuideGroups: readonly {
           hy: "Ամբողջական վերանորոգում",
           ru: "Ремонт под ключ",
           en: "Complete renovation service",
+          de: "Komplette Renovierungsleistung",
+          fr: "Service de rénovation complète",
         },
       },
       {
@@ -50,6 +60,8 @@ export const serviceGuideGroups: readonly {
           hy: "Կապիտալ վերանորոգում",
           ru: "Капитальный ремонт",
           en: "Major renovation",
+          de: "Umfassende Sanierung",
+          fr: "Rénovation lourde",
         },
       },
       {
@@ -58,6 +70,8 @@ export const serviceGuideGroups: readonly {
           hy: "Հարդարման թարմացում",
           ru: "Косметический ремонт",
           en: "Redecoration and interior refresh",
+          de: "Renovierung und Auffrischung des Innenraums",
+          fr: "Rafraîchissement et rénovation légère",
         },
       },
     ],
@@ -67,6 +81,8 @@ export const serviceGuideGroups: readonly {
       hy: "Առանձին աշխատանքներ",
       ru: "Отдельные задачи",
       en: "Specialist work",
+      de: "Facharbeiten",
+      fr: "Travaux spécialisés",
     },
     links: [
       {
@@ -75,6 +91,8 @@ export const serviceGuideGroups: readonly {
           hy: "Գրասենյակի վերանորոգում",
           ru: "Ремонт офиса",
           en: "Office renovation",
+          de: "Bürorenovierung",
+          fr: "Rénovation de bureaux",
         },
       },
       {
@@ -83,6 +101,8 @@ export const serviceGuideGroups: readonly {
           hy: "Սանտեխնիկական աշխատանքներ",
           ru: "Сантехнические работы",
           en: "Plumbing installation",
+          de: "Sanitärinstallation",
+          fr: "Installation de plomberie",
         },
       },
       {
@@ -91,6 +111,8 @@ export const serviceGuideGroups: readonly {
           hy: "Էլեկտրական աշխատանքներ",
           ru: "Электромонтажные работы",
           en: "Electrical installation",
+          de: "Elektroinstallation",
+          fr: "Installation électrique",
         },
       },
       {
@@ -99,6 +121,8 @@ export const serviceGuideGroups: readonly {
           hy: "Բնակարանի ինտերիերի դիզայն",
           ru: "Дизайн интерьера квартиры",
           en: "Apartment interior design",
+          de: "Wohnungsinnenraumgestaltung",
+          fr: "Aménagement intérieur d’appartement",
         },
       },
     ],
@@ -108,6 +132,8 @@ export const serviceGuideGroups: readonly {
       hy: "Բյուջե և նախահաշիվ",
       ru: "Бюджет и смета",
       en: "Budget and estimates",
+      de: "Budget und Kostenschätzungen",
+      fr: "Budget et devis",
     },
     links: [
       {
@@ -116,6 +142,8 @@ export const serviceGuideGroups: readonly {
           hy: "Բնակարանի վերանորոգման արժեքը",
           ru: "Стоимость ремонта квартиры",
           en: "Apartment renovation costs",
+          de: "Kosten einer Wohnungsrenovierung",
+          fr: "Coût de rénovation d’appartement",
         },
       },
       {
@@ -124,6 +152,8 @@ export const serviceGuideGroups: readonly {
           hy: "Վերանորոգման նախահաշիվ",
           ru: "Смета на ремонт",
           en: "Renovation estimate guide",
+          de: "Ratgeber zur Renovierungskostenschätzung",
+          fr: "Guide du devis de rénovation",
         },
       },
       {
@@ -132,6 +162,8 @@ export const serviceGuideGroups: readonly {
           hy: "Շինարարության և դիզայնի հաշվիչ",
           ru: "Калькулятор строительства и дизайна",
           en: "Construction and design calculator",
+          de: "Bau- und Planungsrechner",
+          fr: "Calculateur de construction et de conception",
         },
       },
     ],

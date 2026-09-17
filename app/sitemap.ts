@@ -9,7 +9,7 @@ import {
 import { getPublishedArticles } from "@/data/blog";
 import { companyConfig } from "@/config/company.config";
 import { getAbsoluteUrl } from "@/lib/company";
-import { defaultLocale, locales } from "@/lib/i18n";
+import { defaultLocale, localeLanguageTags, locales } from "@/lib/i18n";
 
 const servicePaths = getActiveServices(defaultLocale).map(
   ({ slug }) => `services/${slug}`
@@ -28,7 +28,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const suffix = path ? `/${path}` : "";
     const languages = Object.fromEntries([
       ...locales.map((locale) => [
-        locale === "hy" ? "hy-AM" : locale === "ru" ? "ru-AM" : "en",
+        localeLanguageTags[locale],
         getAbsoluteUrl(`/${locale}${suffix}`),
       ]),
       [

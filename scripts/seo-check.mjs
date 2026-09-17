@@ -29,7 +29,7 @@ assert(
 const require = createRequire(import.meta.url);
 const { NextRequest } = require("next/server");
 const { proxy } = load("proxy");
-const { locales } = load("lib/i18n");
+const { getDictionary, localeLanguageTags, locales } = load("lib/i18n");
 const { seoLandingPages, getSeoLandingPath } = load(
   "config/seo-landing-pages.config"
 );
@@ -44,6 +44,7 @@ const {
   getOrganizationJsonLd,
   getServiceJsonLd,
   getWebPageJsonLd,
+  getWebsiteJsonLd,
 } = load("lib/json-ld");
 const sitemap = load("app/sitemap").default();
 const urls = new Set(sitemap.map(({ url }) => url));
@@ -52,6 +53,66 @@ const paths = new Set(
 );
 const serviceSlugs = new Set(getActiveServices("hy").map(({ slug }) => slug));
 const landingSlugs = new Set(seoLandingPages.map(({ slug }) => slug));
+
+// New dictionaries must preserve form fields, list entries and interpolation tokens.
+function checkTranslation(reference, translated, path) {
+  assert.equal(
+    typeof translated,
+    typeof reference,
+    `Translation type: ${path}`
+  );
+  if (typeof reference === "string") {
+    assert(
+      translated.trim() || !reference.trim(),
+      `Empty translation: ${path}`
+    );
+    const placeholders = (text) =>
+      [...text.matchAll(/\{\w+\}/g)].map(([token]) => token).sort();
+    assert.deepEqual(
+      placeholders(translated),
+      placeholders(reference),
+      `Translation placeholders: ${path}`
+    );
+  } else if (reference && typeof reference === "object") {
+    assert(translated, `Missing translation: ${path}`);
+    assert.equal(
+      Array.isArray(translated),
+      Array.isArray(reference),
+      `Translation list: ${path}`
+    );
+    assert.deepEqual(
+      Object.keys(translated).sort(),
+      Object.keys(reference).sort(),
+      `Translation keys: ${path}`
+    );
+    for (const key of Object.keys(reference))
+      checkTranslation(reference[key], translated[key], `${path}.${key}`);
+  } else {
+    assert.equal(translated, reference, `Non-text value changed: ${path}`);
+  }
+}
+const englishDictionary = await getDictionary("en");
+for (const locale of ["de", "fr"]) {
+  assert(locales.includes(locale), `Missing locale: ${locale}`);
+  checkTranslation(englishDictionary, await getDictionary(locale), locale);
+}
+for (const locale of locales) {
+  const dictionary = await getDictionary(locale);
+  const metadata = createPageMetadata({
+    locale,
+    title: dictionary.metadata.title,
+    description: dictionary.metadata.description,
+  });
+  assert.deepEqual(
+    Object.keys(metadata.alternates.languages).sort(),
+    [...Object.values(localeLanguageTags), "x-default"].sort()
+  );
+  assert.equal(
+    metadata.alternates.languages[localeLanguageTags[locale]],
+    `https://www.shinex.am/${locale}`
+  );
+  assert.equal(getWebsiteJsonLd(locale).inLanguage, localeLanguageTags[locale]);
+}
 
 assert.equal(urls.size, sitemap.length, "Duplicate sitemap URLs");
 assert.equal(
@@ -192,7 +253,7 @@ assert.equal(
 assert(
   !proxy(
     new NextRequest(
-      "http://localhost:3000/fr/services/house-construction-yerevan"
+      "http://localhost:3000/es/services/house-construction-yerevan"
     )
   ).headers.has("location"),
   "Unsupported locale was redirected"

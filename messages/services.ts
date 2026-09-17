@@ -1,4 +1,5 @@
 import type { ServiceContent, ServiceWorkflowStep } from "@/types/service";
+import type { Locale } from "@/types";
 
 type ServiceTranslationInput = Pick<
   ServiceContent,
@@ -167,6 +168,132 @@ export const serviceTranslations = {
         "Building services",
         "Finishes",
         "Inspection and handover",
+      ],
+    }),
+    de: serviceContent({
+      title: "Hausbau in Eriwan und ganz Armenien",
+      shortDescription:
+        "Wir bauen Privathäuser: von der Grundstücks- und Planungsprüfung über Fundamente, Tragwerk und Dach bis zur Gebäudetechnik und zum Ausbau.",
+      fullDescription:
+        "Wir organisieren und kontrollieren jede Bauphase eines Hauses in Eriwan und ganz Armenien, von der abgestimmten Planung bis zur Prüfung und Übergabe. Umfang und Kosten hängen vom Grundstück, der Planung und dem vorgesehenen Bau- und Ausbaustandard ab.",
+      includedWorks: [
+        "Grundstücks- und Planungsprüfung",
+        "Vorbereitung und Rohbauarbeiten",
+        "Gebäudetechnische Lösungen und Ausbau",
+      ],
+      suitableFor: ["Grundstückseigentümer, die ein Privathaus planen"],
+      customerTypes: [
+        "Grundstück und Planung sind vorhanden",
+        "Das Grundstück ist vorhanden, die Planung wird noch geklärt",
+        "Die nächste Bauphase muss eingeschätzt werden",
+      ],
+      estimateRequirements: [
+        "Ungefähre Hausfläche",
+        "Vorhandene Grundstücks- und Planungsunterlagen",
+        "Geplanter Fertigstellungsgrad",
+      ],
+      priceFactors: [
+        "Fläche und Geschosszahl",
+        "Grundstücksbedingungen",
+        "Konstruktive und gebäudetechnische Lösungen",
+        "Bau- und Ausbaustandard",
+        "Standort und Anfahrt",
+      ],
+      faq: [
+        {
+          question:
+            "Wo beginne ich, wenn ich ein Grundstück, aber noch keine Planung habe?",
+          answer:
+            "Sammeln Sie die Grundstücksdaten und die ungefähre gewünschte Hausgröße. Klären Sie zunächst die Planungsanforderungen und nötigen Zeichnungen, anschließend die Bauphasen.",
+        },
+        {
+          question: "Kann der Bau in Phasen aufgeteilt werden?",
+          answer:
+            "Planung und Bauablauf bestimmen die Phasen. Wir besprechen, wo jede Phase endet und welche Voraussetzungen für die Fortsetzung nötig sind.",
+        },
+        {
+          question: "Was umfasst ein vollständiger Hausbau?",
+          answer:
+            "Der Umfang kann Grundstücksvorbereitung, Fundamente, Tragwerk, Wände, Dach, Gebäudetechnik und Ausbau abdecken. Planung, Materialien und Fertigstellungsgrad müssen im Leistungsumfang festgelegt werden.",
+        },
+      ],
+      primaryCta: "Bauphasen ansehen",
+      secondaryCta: "Hausbau besprechen",
+      seoTitle: "Bau von Privathäusern in Eriwan und ganz Armenien | SHINEX",
+      seoDescription:
+        "Bau von Privathäusern in Eriwan und ganz Armenien: Grundstücks- und Planungsprüfung, Fundamente, Tragwerk, Gebäudetechnik und abgestimmte Bauphasen.",
+      workflow: [
+        "Grundstücks- und Planungsprüfung",
+        "Vorbereitung",
+        "Fundament und Tragwerk",
+        "Wände und Dach",
+        "Gebäudetechnik",
+        "Ausbau",
+        "Prüfung und Übergabe",
+      ],
+    }),
+    fr: serviceContent({
+      title: "Construction de maisons à Erevan et dans toute l’Arménie",
+      shortDescription:
+        "Nous construisons des maisons individuelles, de l’étude du terrain et du projet aux fondations, à la structure, à la toiture, aux réseaux techniques et aux finitions.",
+      fullDescription:
+        "Nous organisons et contrôlons chaque étape de construction d’une maison à Erevan et dans toute l’Arménie, du projet convenu au contrôle et à la livraison. Le périmètre et le coût dépendent du terrain, du projet et du niveau de travaux et de finitions prévu.",
+      includedWorks: [
+        "Étude du terrain et du projet",
+        "Préparation et gros œuvre",
+        "Solutions techniques et finitions",
+      ],
+      suitableFor: [
+        "Propriétaires d’un terrain qui prévoient une maison individuelle",
+      ],
+      customerTypes: [
+        "Le terrain et le projet sont disponibles",
+        "Le terrain est disponible, le projet reste à préciser",
+        "La prochaine étape de construction doit être évaluée",
+      ],
+      estimateRequirements: [
+        "Surface approximative de la maison",
+        "Informations disponibles sur le terrain et le projet",
+        "Niveau d’achèvement prévu",
+      ],
+      priceFactors: [
+        "Surface et nombre d’étages",
+        "Conditions du terrain",
+        "Solutions structurelles et techniques",
+        "Niveau de travaux et de finitions",
+        "Localisation du bien et déplacements",
+      ],
+      faq: [
+        {
+          question: "Par où commencer si j’ai un terrain, mais pas de projet ?",
+          answer:
+            "Réunissez les informations sur le terrain et la surface approximative de la maison souhaitée. Définissez d’abord les besoins de conception et les plans nécessaires, puis évaluez les étapes de construction.",
+        },
+        {
+          question: "Peut-on construire par étapes ?",
+          answer:
+            "Le projet et l’ordre de construction déterminent les étapes. Nous discutons du point d’arrêt de chacune et des conditions à réunir pour poursuivre.",
+        },
+        {
+          question: "Que comprend la construction complète d’une maison ?",
+          answer:
+            "Le périmètre peut couvrir la préparation du terrain, les fondations, la structure, les murs, la toiture, les réseaux techniques et les finitions. La conception, les matériaux et le niveau d’achèvement doivent être précisés dans le périmètre du projet.",
+        },
+      ],
+      primaryCta: "Voir les étapes de construction",
+      secondaryCta: "Discuter d’une construction de maison",
+      seoTitle:
+        "Construction de maisons individuelles à Erevan et en Arménie | SHINEX",
+      seoDescription:
+        "Construction de maisons à Erevan et dans toute l’Arménie : étude du terrain et du projet, fondations, structure, réseaux techniques et étapes convenues.",
+      workflow: [
+        "Étude du terrain et du projet",
+        "Préparation",
+        "Fondations et structure",
+        "Murs et toiture",
+        "Réseaux techniques",
+        "Finitions",
+        "Contrôle et livraison",
       ],
     }),
     hy: serviceContent({
@@ -373,6 +500,119 @@ export const serviceTranslations = {
         "Preparation of agreed drawings",
       ],
     }),
+    de: serviceContent({
+      faq: [
+        {
+          question: "Welche Pläne werden für eine Renovierung benötigt?",
+          answer:
+            "Ein abgestimmter Grundriss und Ausführungspläne für die vorgesehenen Arbeiten: Möbel, Steckdosen, Beleuchtung, Sanitärobjekte und Oberflächen. Der genaue Umfang hängt vom Projekt ab.",
+        },
+        {
+          question: "Sind Visualisierungen und Möbelauswahl enthalten?",
+          answer:
+            "Ob und in welchem Umfang sie enthalten sind, wird vor Planungsbeginn vereinbart. Eine Innenraumvisualisierung ersetzt keine Ausführungspläne und Materialspezifikationen.",
+        },
+        {
+          question: "Wann sollte die Innenraumplanung beginnen?",
+          answer:
+            "Vor der Verlegung von Kabeln und Leitungen. Möbel- und Gerätepläne helfen, Anschlüsse festzulegen und spätere Änderungen nach dem Ausbau zu vermeiden.",
+        },
+      ],
+      title: "Innenraumgestaltung in Eriwan und ganz Armenien",
+      shortDescription:
+        "Wir entwickeln funktionale, durchdachte Innenräume mit Grundrisslösungen, Gestaltungskonzept, Materialauswahl, Zeichnungen und Umsetzungsunterlagen.",
+      fullDescription:
+        "Ein Planungsprojekt ermöglicht einen Renovierungsstart mit klaren Entscheidungen. Der Grundriss ordnet den Raum, das Konzept bestimmt Stil und Materialien, Ausführungspläne unterstützen die Umsetzung. Visualisierungen, Möbelauswahl und gestalterische Begleitung gehören nur zum vereinbarten Paket.",
+      includedWorks: [
+        "Grundriss mit Möblierung und Zonierung",
+        "Innenraumkonzept und Materialauswahl",
+        "3D-Visualisierung im vereinbarten Paket",
+        "Ausführungspläne und Umsetzungsunterlagen",
+      ],
+      suitableFor: [
+        "Wohnungen und Privathäuser vor der Renovierung",
+        "Gewerberäume, die eine funktionale Innengestaltung benötigen",
+      ],
+      workTypes: [
+        "Grundrisslösung",
+        "Innenraumkonzept",
+        "Planungsprojekt",
+        "Gestalterische Begleitung nach Vereinbarung",
+      ],
+      estimateRequirements: [
+        "Objektart und Fläche",
+        "Grundriss oder vorhandenes Aufmaß",
+        "Kurze Beschreibung und bevorzugter Kontaktweg",
+      ],
+      primaryCta: "Planungsleistung ansehen",
+      secondaryCta: "Mein Projekt besprechen",
+      seoTitle: "Innenraumgestaltung in Eriwan und ganz Armenien | SHINEX",
+      seoDescription:
+        "Innenraumgestaltung für Wohnungen, Privathäuser und Gewerberäume in Eriwan und ganz Armenien: Grundrisse, Konzepte, Materialien und Ausführungspläne.",
+      workflow: [
+        "Erstberatung",
+        "Grundrissentwicklung",
+        "Konzept und Materialauswahl",
+        "Erstellung der vereinbarten Pläne",
+      ],
+    }),
+    fr: serviceContent({
+      faq: [
+        {
+          question: "Quels plans faut-il pour une rénovation ?",
+          answer:
+            "Un agencement convenu et des plans d’exécution pour les travaux prévus : mobilier, prises, éclairage, équipements sanitaires et finitions. Le dossier exact dépend du projet.",
+        },
+        {
+          question:
+            "Les visualisations et le choix du mobilier sont-ils inclus ?",
+          answer:
+            "Leur inclusion et leur périmètre sont convenus avant le début de la conception. Un rendu d’intérieur ne remplace pas les plans d’exécution ni les spécifications des matériaux.",
+        },
+        {
+          question: "Quand faut-il commencer la conception intérieure ?",
+          answer:
+            "Avant la pose des câbles et des canalisations. Les plans de mobilier et d’équipements permettent de fixer les raccordements et de limiter les modifications après les finitions.",
+        },
+      ],
+      title: "Aménagement intérieur à Erevan et dans toute l’Arménie",
+      shortDescription:
+        "Nous concevons des intérieurs pratiques et cohérents : agencement, concept, choix des matériaux, plans et documents de réalisation.",
+      fullDescription:
+        "Un projet de conception permet de commencer la rénovation avec des décisions claires. L’agencement organise l’espace, le concept définit le style et les matériaux, et les plans d’exécution guident les travaux. Les visualisations, le choix du mobilier et le suivi de conception ne sont inclus que dans la formule convenue.",
+      includedWorks: [
+        "Plan avec implantation du mobilier et répartition des zones",
+        "Concept intérieur et choix des matériaux",
+        "Visualisation 3D dans la formule convenue",
+        "Plans d’exécution et documents de réalisation",
+      ],
+      suitableFor: [
+        "Appartements et maisons avant rénovation",
+        "Locaux professionnels nécessitant un intérieur fonctionnel",
+      ],
+      workTypes: [
+        "Solution d’agencement",
+        "Concept intérieur",
+        "Projet de conception",
+        "Suivi de conception sur accord",
+      ],
+      estimateRequirements: [
+        "Type de bien et surface",
+        "Plan ou mesures existantes",
+        "Bref descriptif et moyen de contact préféré",
+      ],
+      primaryCta: "Voir le service de conception",
+      secondaryCta: "Discuter de mon projet",
+      seoTitle: "Aménagement intérieur à Erevan et en Arménie | SHINEX",
+      seoDescription:
+        "Aménagement intérieur d’appartements, de maisons et de locaux professionnels à Erevan et en Arménie : plans, concepts, matériaux et dessins d’exécution.",
+      workflow: [
+        "Premier échange",
+        "Élaboration de l’agencement",
+        "Concept et choix des matériaux",
+        "Préparation des plans convenus",
+      ],
+    }),
     hy: serviceContent({
       title: "Ինտերիերի դիզայն Երևանում և ամբողջ Հայաստանում",
       shortDescription:
@@ -531,6 +771,95 @@ export const serviceTranslations = {
         "Inspect and hand over",
       ],
     }),
+    de: serviceContent({
+      faq: [
+        {
+          question:
+            "Kann während des laufenden Geschäftsbetriebs renoviert werden?",
+          answer:
+            "Zunächst prüfen wir, ob Betriebs- und Baubereiche getrennt werden können. Zugang, Arbeitsfolge und laute Arbeiten werden unter Berücksichtigung der Sicherheit und der Betriebszeiten besprochen.",
+        },
+        {
+          question:
+            "Welche Angaben werden zur Einschätzung eines Ladens oder Salons benötigt?",
+          answer:
+            "Nutzung, Fläche, Grundriss, vorhandene Anlagen, geplante Ausstattung und gewünschter Eröffnungstermin. Damit lassen sich die Renovierungsanforderungen festlegen.",
+        },
+        {
+          question: "Was ist bei einer Bürorenovierung anders?",
+          answer:
+            "Bei Büros sind Arbeitsplätze, Besprechungsräume, Beleuchtung, Steckdosen und Netzwerkverkabelung besonders wichtig. Unsere Seite zur Bürorenovierung erläutert diese Anforderungen.",
+        },
+      ],
+      title: "Renovierung von Gewerberäumen",
+      shortDescription:
+        "Wir renovieren und gestalten Büros, Läden, Salons, Restaurants und Dienstleistungsräume nach Betriebsabläufen, technischen Anforderungen und Raumfunktion.",
+      fullDescription:
+        "Wir organisieren Gewerberenovierung und Ausbau unter Berücksichtigung von Arbeitsbereichen, Kundenströmen und Gebäudetechnik. Vor Beginn stimmen wir die Phasen ab, damit die Auswirkungen auf den Betrieb klar sind.",
+      includedWorks: [
+        "Besichtigung und Objektvorbereitung",
+        "Bau-, Gebäudetechnik- und Ausbauarbeiten",
+        "Phasen und Änderungen vorab vereinbaren",
+      ],
+      suitableFor: ["Büros, Läden, Dienstleistungs- und andere Gewerberäume"],
+      primaryCta: "Gewerbeprojekt besprechen",
+      secondaryCta: "Projektdaten senden",
+      seoTitle: "Gewerberenovierung in Armenien — SHINEX",
+      seoDescription:
+        "Arbeiten für Büros, Läden und Dienstleistungsräume in Armenien.",
+      workflow: [
+        "Raumfunktion und Betriebszeiten besprechen",
+        "Besichtigung, Lösungen und Kostenschätzung",
+        "Bau-, Gebäudetechnik- und Ausbauarbeiten",
+        "Prüfen und übergeben",
+      ],
+    }),
+    fr: serviceContent({
+      faq: [
+        {
+          question:
+            "Peut-on rénover en maintenant l’activité de l’entreprise ?",
+          answer:
+            "Nous évaluons d’abord si les zones d’activité et de chantier peuvent être séparées. Les accès, l’ordre des interventions et les travaux bruyants sont discutés en fonction de la sécurité et des horaires d’activité.",
+        },
+        {
+          question:
+            "Quelles informations faut-il pour évaluer un commerce ou un salon ?",
+          answer:
+            "L’usage du local, sa surface, son agencement, les réseaux existants, les équipements prévus et la date d’ouverture souhaitée. Ces éléments permettent de définir les besoins de rénovation.",
+        },
+        {
+          question:
+            "Quelles sont les particularités d’une rénovation de bureaux ?",
+          answer:
+            "Les bureaux demandent une attention particulière aux postes de travail, salles de réunion, éclairages, prises et câblages réseau. Notre page sur la rénovation de bureaux détaille ces besoins.",
+        },
+      ],
+      title: "Rénovation de locaux professionnels",
+      shortDescription:
+        "Nous rénovons et aménageons bureaux, commerces, salons, restaurants et espaces de service selon l’activité, les besoins techniques et la fonction des pièces.",
+      fullDescription:
+        "Nous organisons la rénovation et l’aménagement des locaux professionnels selon les zones de travail, les flux clients et les besoins techniques. Avant le démarrage, nous convenons des étapes pour clarifier l’impact sur l’activité.",
+      includedWorks: [
+        "Visite et préparation du bien",
+        "Travaux de construction, de réseaux techniques et de finition",
+        "Étapes et modifications convenues à l’avance",
+      ],
+      suitableFor: [
+        "Bureaux, commerces, espaces de service et autres locaux professionnels",
+      ],
+      primaryCta: "Discuter d’un projet professionnel",
+      secondaryCta: "Envoyer les détails du projet",
+      seoTitle: "Rénovation de locaux professionnels en Arménie — SHINEX",
+      seoDescription:
+        "Travaux pour bureaux, commerces et espaces de service en Arménie.",
+      workflow: [
+        "Discuter de la fonction des pièces et des horaires d’activité",
+        "Visite, solutions et devis",
+        "Travaux de construction, de réseaux techniques et de finition",
+        "Contrôle et livraison",
+      ],
+    }),
     hy: serviceContent({
       faq: [
         {
@@ -656,6 +985,74 @@ export const serviceTranslations = {
         "Concept",
         "Solution approval",
         "Working documentation",
+      ],
+    }),
+    de: serviceContent({
+      faq: [
+        {
+          question: "Welche Angaben sind für eine Hausplanung nötig?",
+          answer:
+            "Grundstücksdaten, geplante Fläche und Geschosszahl, Raumanforderungen und vorhandene Unterlagen. Deren Prüfung bestimmt den erforderlichen Planungsumfang.",
+        },
+        {
+          question:
+            "Wie unterscheiden sich Architekturplanung und Innenraumgestaltung?",
+          answer:
+            "Die Architekturplanung legt das Gebäude und seinen Grundriss fest. Die Innenraumgestaltung entwickelt Räume, Möbel, Beleuchtung und Oberflächen. Beide Leistungsumfänge werden getrennt vereinbart.",
+        },
+      ],
+      title: "Architekturplanung",
+      shortDescription:
+        "Architektonische Lösungen, Gebäudegrundrisse und Ausführungsunterlagen zur Bauvorbereitung.",
+      fullDescription:
+        "Wir entwickeln architektonische Lösungen nach Projektziel, Grundstückseigenschaften, geltenden Anforderungen und späterer Ausführung, damit die Arbeiten auf abgestimmten Unterlagen beruhen.",
+      includedWorks: [
+        "Erfassung der Ausgangsdaten",
+        "Architektur- und Grundrisslösungen",
+        "Ausführungspläne und Projektunterlagen",
+      ],
+      suitableFor: [
+        "Kunden, die vor Bau oder Umbau eine fundierte Planungsgrundlage benötigen",
+      ],
+      workflow: [
+        "Technisches Anforderungsprofil",
+        "Konzept",
+        "Freigabe der Lösungen",
+        "Ausführungsunterlagen",
+      ],
+    }),
+    fr: serviceContent({
+      faq: [
+        {
+          question: "Quelles informations faut-il pour concevoir une maison ?",
+          answer:
+            "Les informations sur le terrain, la surface et le nombre d’étages prévus, les besoins en pièces et les documents existants. Leur étude permet de définir le périmètre de conception nécessaire.",
+        },
+        {
+          question:
+            "Quelle est la différence entre conception architecturale et aménagement intérieur ?",
+          answer:
+            "La conception architecturale définit le bâtiment et son plan. L’aménagement intérieur développe les espaces intérieurs, le mobilier, l’éclairage et les finitions. Chaque périmètre est convenu séparément.",
+        },
+      ],
+      title: "Conception architecturale",
+      shortDescription:
+        "Solutions architecturales, plans du bâtiment et documents d’exécution pour préparer la construction.",
+      fullDescription:
+        "Nous élaborons les solutions architecturales selon l’objectif du projet, les caractéristiques du terrain, les exigences applicables et la future construction, pour démarrer les travaux sur la base de documents convenus.",
+      includedWorks: [
+        "Collecte des données initiales",
+        "Solutions architecturales et d’agencement",
+        "Plans d’exécution et documentation du projet",
+      ],
+      suitableFor: [
+        "Clients ayant besoin d’une base de conception solide avant une construction ou une transformation",
+      ],
+      workflow: [
+        "Cahier des charges technique",
+        "Concept",
+        "Validation des solutions",
+        "Documents d’exécution",
       ],
     }),
     hy: serviceContent({
@@ -842,6 +1239,160 @@ export const serviceTranslations = {
         "Final inspection and handover",
       ],
     }),
+    de: serviceContent({
+      title: "Renovierung von Wohnungen und Privathäusern",
+      shortDescription:
+        "Wir führen optische Auffrischungen, umfassende Sanierungen und schlüsselfertige Renovierungen aus. Wir organisieren Rückbau, Elektro- und Sanitärarbeiten, Wand- und Bodenvorbereitung, Endausbau und Übergabe.",
+      fullDescription:
+        "Wir renovieren Wohnungen und Privathäuser komplett oder in einzelnen Phasen. Eine optische Renovierung erneuert Oberflächen, eine umfassende Sanierung wichtige Anlagen und Untergründe; die schlüsselfertige Renovierung umfasst den gesamten Ablauf bis zur Übergabe.",
+      includedWorks: [
+        "Besichtigung und Aufmaß",
+        "Planung und erste Kostenschätzung",
+        "Rückbau und Vorbereitung",
+        "Elektro-, Sanitär-, Vorbereitungs- und Ausbauarbeiten",
+        "Abschlussprüfung und Übergabe",
+      ],
+      suitableFor: [
+        "Eigentümer von Wohnungen und Privathäusern",
+        "Menschen, die eine Neubau- oder Bestandswohnung renovieren",
+      ],
+      customerTypes: [
+        "Neubauwohnung",
+        "Bestandswohnung",
+        "Privathaus",
+        "Bestehender Innenraum",
+      ],
+      workTypes: [
+        "Optische Renovierung",
+        "Umfassende Sanierung",
+        "Schlüsselfertige Renovierung",
+        "Einzelne Phasen",
+      ],
+      estimateRequirements: [
+        "Objektart und Zustand",
+        "Ungefähre Fläche",
+        "Was geändert oder fertiggestellt werden soll",
+        "Objektadresse und passende Kontaktzeit",
+      ],
+      priceFactors: [
+        "Fläche und aktueller Zustand",
+        "Rückbauumfang",
+        "Gebäudetechnische Arbeiten",
+        "Komplexität des Ausbaus",
+        "Materialien und Gestaltung",
+        "Standort und Anfahrt",
+      ],
+      faq: [
+        {
+          question:
+            "Reicht eine Auffrischung oder brauche ich eine umfassende Sanierung?",
+          answer:
+            "Sind Wände, Böden und Gebäudetechnik in gutem Zustand, kann eine Erneuerung der Oberflächen genügen. Verschlissene Kabel, Rohre oder beschädigte Untergründe erfordern umfangreichere Arbeiten, die bei einer Besichtigung festgelegt werden.",
+        },
+        {
+          question:
+            "Wie unterscheidet sich eine Hausrenovierung von einer Wohnungsrenovierung?",
+          answer:
+            "Bei einem Haus müssen auch Außenwände, Dach und eigene Haustechnik berücksichtigt werden. Diese Positionen sollten im Kostenvoranschlag getrennt vom Innenausbau stehen.",
+        },
+        {
+          question: "Kann ich nur eine Arbeitsphase beauftragen?",
+          answer:
+            "Ja, anhand der Objektdaten können wir eine einzelne Phase besprechen. Zunächst prüfen wir, ob angrenzende Oberflächen und Anlagen bereit sind, damit keine Arbeiten wiederholt werden müssen.",
+        },
+      ],
+      primaryCta: "Renovierungsmöglichkeiten ansehen",
+      secondaryCta: "Erste Kostenschätzung anfragen",
+      seoTitle:
+        "Haus- und Wohnungsrenovierung in Armenien: Leistungen | SHINEX",
+      seoDescription:
+        "Schlüsselfertige Wohnungs- und Hausrenovierung in Eriwan und ganz Armenien: Besichtigung, erste Einschätzung und abgestimmte Phasen.",
+      workflow: [
+        "Besichtigung und Bedarfsaufnahme",
+        "Planung und erste Kostenschätzung",
+        "Rückbau und Vorbereitung",
+        "Gebäudetechnik und vorbereitende Arbeiten",
+        "Endausbau",
+        "Abschlussprüfung und Übergabe",
+      ],
+    }),
+    fr: serviceContent({
+      title: "Rénovation d’appartements et de maisons individuelles",
+      shortDescription:
+        "Nous réalisons des rafraîchissements, des rénovations lourdes et clé en main. Nous organisons la démolition, l’électricité, la plomberie, la préparation des murs et sols, les finitions et la livraison.",
+      fullDescription:
+        "Nous rénovons appartements et maisons dans le cadre d’un service complet ou par étapes. Le rafraîchissement renouvelle les finitions, la rénovation lourde remplace les principaux réseaux et surfaces, et la formule clé en main couvre l’ensemble du processus jusqu’à la livraison.",
+      includedWorks: [
+        "Visite et mesures",
+        "Planification et première estimation",
+        "Démolition et préparation",
+        "Travaux d’électricité, de plomberie, de préparation et de finition",
+        "Contrôle final et livraison",
+      ],
+      suitableFor: [
+        "Propriétaires d’appartements et de maisons individuelles",
+        "Personnes rénovant un appartement neuf ou existant",
+      ],
+      customerTypes: [
+        "Appartement neuf",
+        "Appartement existant",
+        "Maison individuelle",
+        "Intérieur existant",
+      ],
+      workTypes: [
+        "Rénovation légère",
+        "Rénovation lourde",
+        "Rénovation clé en main",
+        "Étapes distinctes",
+      ],
+      estimateRequirements: [
+        "Type de bien et état",
+        "Surface approximative",
+        "Ce qui doit être modifié ou achevé",
+        "Adresse du bien et moment souhaité pour échanger",
+      ],
+      priceFactors: [
+        "Surface et état actuel",
+        "Étendue des démolitions",
+        "Travaux sur les réseaux techniques",
+        "Complexité des finitions",
+        "Matériaux et conception",
+        "Localisation du bien et déplacements",
+      ],
+      faq: [
+        {
+          question:
+            "Un rafraîchissement suffit-il ou faut-il une rénovation lourde ?",
+          answer:
+            "Si les murs, les sols et les réseaux sont en bon état, renouveler les finitions peut suffire. Des câbles ou tuyaux usés et des surfaces endommagées exigent des travaux plus importants, définis lors de la visite.",
+        },
+        {
+          question:
+            "En quoi la rénovation d’une maison diffère-t-elle de celle d’un appartement ?",
+          answer:
+            "Une maison demande aussi d’examiner les murs extérieurs, la toiture et ses propres installations techniques. Ces postes doivent apparaître séparément des finitions intérieures dans le devis.",
+        },
+        {
+          question: "Puis-je demander une seule étape de travaux ?",
+          answer:
+            "Oui, nous pouvons discuter d’une étape précise à partir des informations du bien. Nous vérifions d’abord que les surfaces et réseaux adjacents sont prêts pour éviter de devoir refaire les travaux.",
+        },
+      ],
+      primaryCta: "Voir les options de rénovation",
+      secondaryCta: "Demander une première estimation",
+      seoTitle:
+        "Rénovation de logements en Arménie : services et options | SHINEX",
+      seoDescription:
+        "Rénovation clé en main d’appartements et de maisons à Erevan et en Arménie : visite, première évaluation et étapes convenues.",
+      workflow: [
+        "Visite et définition du besoin",
+        "Planification et première estimation",
+        "Démolition et préparation",
+        "Réseaux techniques et travaux préparatoires",
+        "Finitions finales",
+        "Contrôle final et livraison",
+      ],
+    }),
     hy: serviceContent({
       title: "Բնակարանների և առանձնատների վերանորոգում",
       shortDescription:
@@ -1012,6 +1563,77 @@ export const serviceTranslations = {
         "Inspection and striking",
       ],
     }),
+    de: serviceContent({
+      seoTitle: "Stahlbetonbau in Armenien | SHINEX",
+      faq: [
+        {
+          question:
+            "Lassen sich Betonarbeiten allein anhand der Bodenfläche schätzen?",
+          answer:
+            "Eine genaue Kostenschätzung erfordert Tragwerkspläne und Mengen für Beton, Bewehrung und Schalung. Gebäude mit gleicher Bodenfläche können unterschiedliche Mengen benötigen.",
+        },
+        {
+          question:
+            "Welche Unterlagen sollte ich für ein Gespräch bereitstellen?",
+          answer:
+            "Tragwerkspläne, Grundstücksdaten, Angaben zum vorbereiteten Untergrund und zur Zufahrt für Geräte. So lassen sich Umfang und Ablauf festlegen.",
+        },
+      ],
+      title: "Stahlbetonbau",
+      shortDescription:
+        "Stahlbetonkonstruktionen nach freigegebenen Projektunterlagen.",
+      fullDescription:
+        "Wir führen Stahlbetonarbeiten nach der Tragwerksplanung aus und achten auf Maße, Baufolge und die in jeder Phase nötigen Prüfungen.",
+      includedWorks: [
+        "Vorbereitung und Schalung",
+        "Bewehrung",
+        "Betonieren und Ausführungskontrolle",
+      ],
+      suitableFor: [
+        "Private und gewerbliche Auftraggeber mit freigegebener Tragwerksplanung",
+      ],
+      workflow: [
+        "Prüfung von Planung und Untergrund",
+        "Schalung und Bewehrung",
+        "Betonieren",
+        "Prüfung und Ausschalen",
+      ],
+    }),
+    fr: serviceContent({
+      seoTitle: "Construction en béton armé en Arménie | SHINEX",
+      faq: [
+        {
+          question:
+            "Peut-on estimer les travaux de béton à partir de la seule surface au sol ?",
+          answer:
+            "Un devis précis nécessite des plans de structure et les quantités de béton, d’armatures et de coffrage. Des bâtiments de même surface au sol peuvent demander des quantités structurelles différentes.",
+        },
+        {
+          question: "Que dois-je fournir pour discuter des travaux ?",
+          answer:
+            "Les plans de structure, les informations sur le terrain, l’état du support préparé et l’accès des engins. Ils permettent de définir le périmètre et l’ordre des travaux.",
+        },
+      ],
+      title: "Construction en béton armé",
+      shortDescription:
+        "Structures en béton armé réalisées selon les documents de projet approuvés.",
+      fullDescription:
+        "Nous réalisons les travaux de béton armé selon les plans de structure, en respectant les dimensions, l’ordre de construction et les contrôles nécessaires à chaque étape.",
+      includedWorks: [
+        "Préparation et coffrage",
+        "Ferraillage",
+        "Coulage du béton et contrôle d’exécution",
+      ],
+      suitableFor: [
+        "Clients particuliers et professionnels disposant d’un projet de structure approuvé",
+      ],
+      workflow: [
+        "Examen du projet et du support",
+        "Coffrage et ferraillage",
+        "Coulage du béton",
+        "Contrôle et décoffrage",
+      ],
+    }),
     hy: serviceContent({
       seoTitle: "Մոնոլիտ աշխատանքներ Հայաստանում | SHINEX",
       faq: [
@@ -1115,6 +1737,74 @@ export const serviceTranslations = {
         "Final inspection",
       ],
     }),
+    de: serviceContent({
+      faq: [
+        {
+          question:
+            "Was wird zur Einschätzung von Dach- oder Fassadenarbeiten benötigt?",
+          answer:
+            "Fotos, Maße, vorhandene Oberflächen, Angaben zur Dämmung sowie zu Undichtigkeiten oder Schäden. Auch Gebäudehöhe und Zugang zum Arbeitsbereich sind wichtig.",
+        },
+        {
+          question: "Warum reicht die Auswahl einer Oberfläche nicht aus?",
+          answer:
+            "Auch Untergrund, Anschlüsse, Schutzschichten und Entwässerung beeinflussen das Ergebnis. Sie müssen geprüft und neben der Oberfläche in den Umfang aufgenommen werden.",
+        },
+      ],
+      title: "Fassaden- und Dacharbeiten",
+      shortDescription:
+        "Bau und Erneuerung von Fassaden, Dächern und schützenden Gebäudedetails.",
+      fullDescription:
+        "Wir planen Fassaden- und Dacharbeiten nach Entwurf, Entwässerung, Schutzschichten und Anschlüssen und berücksichtigen dabei den Zustand des Bestands.",
+      includedWorks: [
+        "Fassadensysteme",
+        "Dachaufbauten",
+        "Entwässerung und Anschlüsse",
+      ],
+      suitableFor: [
+        "Eigentümer neuer oder bestehender Wohn- und Gewerbegebäude",
+      ],
+      workflow: [
+        "Besichtigung und Planungsabstimmung",
+        "Untergrundvorbereitung",
+        "Systemmontage",
+        "Abschlussprüfung",
+      ],
+    }),
+    fr: serviceContent({
+      faq: [
+        {
+          question:
+            "Que faut-il pour évaluer des travaux de toiture ou de façade ?",
+          answer:
+            "Des photos, les dimensions, les finitions existantes, les détails d’isolation et les éventuelles fuites ou dégradations. La hauteur du bâtiment et l’accès à la zone de travail comptent également.",
+        },
+        {
+          question: "Pourquoi le choix d’une finition ne suffit-il pas ?",
+          answer:
+            "L’état du support, les raccords, les couches de protection et l’évacuation des eaux influencent aussi le résultat. Ils doivent être évalués et intégrés aux travaux avec la finition.",
+        },
+      ],
+      title: "Travaux de façade et de toiture",
+      shortDescription:
+        "Construction et rénovation de façades, de toitures et d’éléments de protection du bâtiment.",
+      fullDescription:
+        "Nous planifions les travaux de façade et de toiture selon le projet, l’évacuation des eaux, les protections et les raccords, en tenant compte de l’état de la structure existante.",
+      includedWorks: [
+        "Systèmes de façade",
+        "Complexes de toiture",
+        "Évacuation des eaux et raccords",
+      ],
+      suitableFor: [
+        "Propriétaires de bâtiments résidentiels et commerciaux neufs ou existants",
+      ],
+      workflow: [
+        "Visite et clarification du projet",
+        "Préparation du support",
+        "Installation du système",
+        "Contrôle final",
+      ],
+    }),
     hy: serviceContent({
       faq: [
         {
@@ -1149,4 +1839,4 @@ export const serviceTranslations = {
       ],
     }),
   },
-} satisfies Record<string, Record<"hy" | "ru" | "en", ServiceContent>>;
+} satisfies Record<string, Record<Locale, ServiceContent>>;

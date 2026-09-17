@@ -171,6 +171,144 @@ export const homeContent: Record<Locale, HomeContent> = {
       ],
     },
   },
+  de: {
+    heroVisual: {
+      image:
+        "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1800&q=90",
+      alt: "Heller, moderner Innenraum als Illustration einer Renovierungsleistung",
+    },
+    heroDirections: [
+      "Wohnungs- und Hausrenovierung",
+      "Hausbau",
+      "Innenraumgestaltung",
+      "Gewerberäume",
+    ],
+    renovationIncluded: {
+      eyebrow: "Schlüsselfertige Renovierung",
+      title: "Was eine schlüsselfertige Renovierung umfasst",
+      notice:
+        "Die endgültige Arbeitsliste wird nach Besichtigung und Besprechung Ihrer Anforderungen erstellt.",
+      items: [
+        "Objektbesichtigung und Aufmaß",
+        "Grundrissplanung und Kostenschätzung",
+        "Rückbau und Raumvorbereitung",
+        "Elektro- und Sanitärarbeiten",
+        "Wand-, Boden- und Deckenvorbereitung",
+        "Fliesen und Endausbau",
+        "Einbau von Türen, Beleuchtung und Ausstattung",
+        "Reinigung, Prüfung und Übergabe",
+      ],
+    },
+    serviceArea: {
+      enabled: true,
+      label: "Einsatzgebiet",
+      title: "Renovierung und Bau in ganz Armenien",
+      description:
+        "Wir arbeiten an Wohnungs-, Haus- und Gewerbeprojekten in ganz Armenien, darunter Eriwan, Gjumri, Wanadsor, Dilidschan und weitere Städte. Die Bedingungen werden nach Standort und Umfang vereinbart.",
+      primaryCta: {
+        label: "Objektbesichtigung anfragen",
+        href: "/de/contacts",
+      },
+      secondaryCta: {
+        label: "Renovierungskosten besprechen",
+        href: "/de/contacts",
+      },
+      items: [
+        {
+          id: "homes",
+          icon: "building-2",
+          title: "Wohnungen und Privathäuser",
+          description: "Renovierung, Innenraumgestaltung und Bauarbeiten.",
+          enabled: true,
+        },
+        {
+          id: "commercial",
+          icon: "store",
+          title: "Gewerberäume",
+          description: "Renovierungs- und Bauarbeiten für Unternehmen.",
+          enabled: true,
+        },
+        {
+          id: "armenia",
+          icon: "map",
+          title: "In ganz Armenien tätig",
+          description:
+            "Die Bedingungen werden je nach Standort des Objekts vereinbart.",
+          enabled: true,
+        },
+      ],
+    },
+  },
+  fr: {
+    heroVisual: {
+      image:
+        "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1800&q=90",
+      alt: "Intérieur moderne et lumineux illustrant un service de rénovation",
+    },
+    heroDirections: [
+      "Rénovation d’appartements et de maisons",
+      "Construction de maison",
+      "Aménagement intérieur",
+      "Locaux professionnels",
+    ],
+    renovationIncluded: {
+      eyebrow: "Rénovation clé en main",
+      title: "Ce que comprend une rénovation clé en main",
+      notice:
+        "La liste définitive des travaux est établie après une visite et un échange sur vos besoins.",
+      items: [
+        "Visite du bien et prise de mesures",
+        "Planification de l’agencement et devis",
+        "Démolition et préparation des espaces",
+        "Travaux d’électricité et de plomberie",
+        "Préparation des murs, sols et plafonds",
+        "Carrelage et finitions finales",
+        "Installation des portes, de l’éclairage et des équipements",
+        "Nettoyage, contrôle et livraison",
+      ],
+    },
+    serviceArea: {
+      enabled: true,
+      label: "Zone d’intervention",
+      title: "Rénovation et construction dans toute l’Arménie",
+      description:
+        "Nous réalisons des projets d’appartements, de maisons et de locaux professionnels dans toute l’Arménie, notamment à Erevan, Gyumri, Vanadzor, Dilidjan et dans d’autres villes. Les modalités sont convenues selon la localisation et les travaux prévus.",
+      primaryCta: {
+        label: "Demander une visite du bien",
+        href: "/fr/contacts",
+      },
+      secondaryCta: {
+        label: "Discuter du coût de rénovation",
+        href: "/fr/contacts",
+      },
+      items: [
+        {
+          id: "homes",
+          icon: "building-2",
+          title: "Appartements et maisons individuelles",
+          description:
+            "Rénovation, aménagement intérieur et travaux de construction.",
+          enabled: true,
+        },
+        {
+          id: "commercial",
+          icon: "store",
+          title: "Locaux professionnels",
+          description:
+            "Travaux de rénovation et de construction pour les entreprises.",
+          enabled: true,
+        },
+        {
+          id: "armenia",
+          icon: "map",
+          title: "Interventions dans toute l’Arménie",
+          description:
+            "Les modalités sont convenues selon la localisation du bien.",
+          enabled: true,
+        },
+      ],
+    },
+  },
   hy: {
     heroVisual: {
       image:

@@ -28,6 +28,20 @@ const messages = {
     home: "Back to home",
     services: "Services",
   },
+  de: {
+    title: "Seite nicht gefunden",
+    description:
+      "Unter dieser Adresse gibt es keine Seite. Kehren Sie zur Startseite zurück oder sehen Sie sich unsere Leistungen an.",
+    home: "Zur Startseite",
+    services: "Leistungen",
+  },
+  fr: {
+    title: "Page introuvable",
+    description:
+      "Aucune page ne correspond à cette adresse. Revenez à l’accueil ou découvrez nos services.",
+    home: "Retour à l’accueil",
+    services: "Services",
+  },
 };
 
 export default function LocaleNotFound() {

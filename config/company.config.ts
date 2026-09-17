@@ -15,7 +15,7 @@ export const companyConfig = {
   website: {
     origin: SITE_URL,
     defaultLocale: "hy",
-    supportedLocales: ["hy", "ru", "en"],
+    supportedLocales: ["hy", "ru", "en", "de", "fr"],
   },
   contact: {
     phone: "+37455156615",

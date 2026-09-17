@@ -1,4 +1,4 @@
-export type Locale = "hy" | "ru" | "en";
+export type Locale = "hy" | "ru" | "en" | "de" | "fr";
 
 export interface LocalizedText {
   title: string;

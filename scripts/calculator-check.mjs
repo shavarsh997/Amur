@@ -6,7 +6,8 @@ const { initialValues } = load("components/calculator/constants");
 const { calculateConstructionEstimate } = load(
   "lib/calculator/calculate-construction-estimate"
 );
-const copies = ["hy", "ru", "en"].map(
+const { locales } = load("lib/i18n");
+const copies = locales.map(
   (locale) => load(`messages/${locale}`).default.constructionCalculator
 );
 const calculate = (values, copy = copies[0]) =>
@@ -88,5 +89,5 @@ assert.equal(
 );
 assert.equal(calculate({ area: "" }).total, 0);
 console.log(
-  `Calculator checks passed: renovation requires contact; ${scenarios} construction/design scenarios with identical amounts in Armenian, Russian and English.`
+  `Calculator checks passed: renovation requires contact; ${scenarios} construction/design scenarios with identical amounts across ${locales.length} locales (${locales.join(", ")}).`
 );

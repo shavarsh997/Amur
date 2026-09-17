@@ -6,6 +6,7 @@ import {
   getSocialLinks,
 } from "@/lib/company";
 import type { Locale } from "@/types";
+import { localeLanguageTags } from "@/lib/i18n";
 
 export type JsonLd = Record<string, unknown>;
 
@@ -63,7 +64,7 @@ export function getOrganizationJsonLd(): JsonLd {
   );
 }
 
-export function getWebsiteJsonLd(locale: "hy" | "ru" | "en"): JsonLd {
+export function getWebsiteJsonLd(locale: Locale): JsonLd {
   return {
     "@context": "https://schema.org",
     "@type": "WebSite",
@@ -71,7 +72,7 @@ export function getWebsiteJsonLd(locale: "hy" | "ru" | "en"): JsonLd {
     name: companyConfig.brand.name,
     alternateName: companyConfig.brand.alternateName,
     url: getAbsoluteUrl("/"),
-    inLanguage: locale === "hy" ? "hy-AM" : locale === "ru" ? "ru-AM" : "en",
+    inLanguage: localeLanguageTags[locale],
     publisher: { "@id": getAbsoluteUrl("/#organization") },
   };
 }

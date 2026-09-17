@@ -15,6 +15,8 @@ export const seoConfig = {
     hy: "hy_AM",
     ru: "ru_RU",
     en: "en_US",
+    de: "de_DE",
+    fr: "fr_FR",
   },
 } as const satisfies {
   category: string;
@@ -26,5 +28,5 @@ export const seoConfig = {
       "max-video-preview": number;
     };
   };
-  openGraphLocale: Record<Locale, "hy_AM" | "ru_RU" | "en_US">;
+  openGraphLocale: Record<Locale, string>;
 };

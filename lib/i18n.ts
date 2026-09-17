@@ -4,10 +4,21 @@ import type { Dictionary, Locale } from "@/types";
 export const locales = companyConfig.website.supportedLocales;
 export const defaultLocale = companyConfig.website.defaultLocale;
 
+/** Shared language tags for the document, hreflang and structured data. */
+export const localeLanguageTags = {
+  hy: "hy-AM",
+  ru: "ru-AM",
+  en: "en",
+  de: "de",
+  fr: "fr",
+} as const satisfies Record<Locale, string>;
+
 const dictionaries: Record<Locale, () => Promise<Dictionary>> = {
   hy: async () => (await import("@/messages/hy")).default,
   ru: async () => (await import("@/messages/ru")).default,
   en: async () => (await import("@/messages/en")).default,
+  de: async () => (await import("@/messages/de")).default,
+  fr: async () => (await import("@/messages/fr")).default,
 };
 
 export function isLocale(value: unknown): value is Locale {

@@ -3,6 +3,7 @@ import { NextResponse, type NextRequest } from "next/server";
 import { seoRedirects } from "@/config/seo-redirects.config";
 import { shouldPreventIndexing } from "@/lib/seo-environment";
 import { CANONICAL_SITE_URL } from "@/lib/site-url";
+import { isLocale } from "@/lib/i18n";
 
 const canonicalHost = new URL(CANONICAL_SITE_URL).hostname;
 const knownHosts = new Set([
@@ -31,10 +32,11 @@ export function proxy(request: NextRequest) {
   // Resolve host, slash and retired-page aliases together to avoid extra hops.
   const pathname = request.nextUrl.pathname;
   const normalizedPath = pathname === "/" ? "/" : pathname.replace(/\/+$/, "");
-  const localizedPath = normalizedPath.match(/^\/(hy|ru|en)\/(.+)$/);
-  const retiredPage = localizedPath
-    ? seoRedirects.find(({ source }) => source === localizedPath[2])
-    : undefined;
+  const localizedPath = normalizedPath.match(/^\/([^/]+)\/(.+)$/);
+  const retiredPage =
+    localizedPath && isLocale(localizedPath[1])
+      ? seoRedirects.find(({ source }) => source === localizedPath[2])
+      : undefined;
   const isRoot = pathname === "/";
   const hasTrailingSlash = pathname !== normalizedPath;
   let response: NextResponse;
