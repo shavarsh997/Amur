@@ -130,7 +130,9 @@ export default async function ServiceDetailPage({ params }: Props) {
             <Image
               alt={getServiceImageAlt(service.image, locale)}
               className="object-cover"
+              fetchPriority="high"
               fill
+              loading="eager"
               sizes="(max-width: 1279px) 100vw, 1200px"
               src={service.image}
             />

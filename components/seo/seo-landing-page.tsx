@@ -114,7 +114,9 @@ export function SeoLandingPage({
               <Image
                 alt={getServiceImageAlt(page.image, locale)}
                 className="object-cover"
+                fetchPriority="high"
                 fill
+                loading="eager"
                 sizes="(max-width: 1279px) 100vw, 1200px"
                 src={page.image}
               />
