@@ -66,6 +66,18 @@ export default async function CalculatorPage({ params }: Props) {
       </section>
       <section className="mx-auto mt-12 max-w-4xl border-t border-[var(--border)] pt-10">
         <p className="leading-7 text-[var(--text-secondary)]">{seo.intro}</p>
+        {locale === "ru" ? (
+          <p className="mt-4 leading-7 text-[var(--text-secondary)]">
+            Состав и этапы работ:{" "}
+            <Link
+              className="font-semibold text-[var(--text-primary)] underline"
+              href="/ru/services/apartment-renovation-yerevan"
+            >
+              Ремонт квартир в Ереване
+            </Link>
+            .
+          </p>
+        ) : null}
         <h2 className="mt-10 text-2xl font-semibold tracking-[-0.035em] text-[var(--text-primary)]">
           {seo.faqTitle}
         </h2>
