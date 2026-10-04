@@ -1,6 +1,7 @@
 import { companyConfig } from "@/config/company.config";
 import {
   getAbsoluteUrl,
+  getGoogleMapsHref,
   getMailHref,
   getPhoneHref,
   getSocialLinks,
@@ -17,12 +18,17 @@ export function serializeJsonLd(value: JsonLd): string {
     .replace(/&/g, "\\u0026");
 }
 
-export function getOrganizationJsonLd(): JsonLd {
+export function getOrganizationJsonLd(
+  locale: Locale = companyConfig.website.defaultLocale
+): JsonLd {
   const phone = getPhoneHref()?.replace("tel:", "");
   const email = getMailHref()?.replace("mailto:", "");
+  const address = companyConfig.contact.address?.[locale];
+  const geo = companyConfig.contact.geo;
+  const workingHours = companyConfig.contact.workingHours;
   const organization: JsonLd = {
     "@context": "https://schema.org",
-    "@type": ["Organization", "HomeAndConstructionBusiness"],
+    "@type": ["Organization", "LocalBusiness", "HomeAndConstructionBusiness"],
     "@id": getAbsoluteUrl("/#organization"),
     name: companyConfig.brand.name,
     alternateName: companyConfig.brand.alternateName,
@@ -43,16 +49,25 @@ export function getOrganizationJsonLd(): JsonLd {
     telephone: phone,
     email,
     address:
-      companyConfig.contact.address || companyConfig.contact.city
+      address || companyConfig.contact.city
         ? {
             "@type": "PostalAddress",
-            ...(companyConfig.contact.address
-              ? { streetAddress: companyConfig.contact.address }
-              : {}),
-            addressLocality: companyConfig.contact.city,
+            streetAddress: address?.streetAddress,
+            addressLocality:
+              address?.addressLocality ?? companyConfig.contact.city,
             addressCountry: companyConfig.contact.countryCode,
           }
         : undefined,
+    geo: geo ? { "@type": "GeoCoordinates", ...geo } : undefined,
+    hasMap: getGoogleMapsHref(),
+    openingHoursSpecification: workingHours
+      ? {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: workingHours.dayOfWeek,
+          opens: workingHours.opens,
+          closes: workingHours.closes,
+        }
+      : undefined,
     ...(getSocialLinks().length
       ? { sameAs: getSocialLinks().map(({ url }) => url) }
       : {}),

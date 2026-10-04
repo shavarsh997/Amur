@@ -846,6 +846,7 @@ const dictionary = {
     email: "Էլ. փոստ",
     address: "Հասցե",
     hours: "Աշխատանքային ժամեր",
+    noVisitors: "Այս հասցեում հաճախորդների ընդունելություն չի իրականացվում։",
     messengers: "Մեսենջերներ",
     whatsapp: "WhatsApp",
     telegram: "Telegram",

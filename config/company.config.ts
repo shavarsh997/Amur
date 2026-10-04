@@ -24,10 +24,51 @@ export const companyConfig = {
     // Add the full public Telegram URL here to display it as a separate contact option.
     telegram: null,
     email: "info@shinex.am",
-    address: null,
+    address: {
+      hy: {
+        streetAddress: "Հրաչյա Քոչարի փողոց, 13Ա",
+        addressLocality: "Երևան",
+      },
+      ru: {
+        streetAddress: "улица Грачья Кочара, 13А",
+        addressLocality: "Ереван",
+      },
+      en: {
+        streetAddress: "13A Hrachya Kochar Street",
+        addressLocality: "Yerevan",
+      },
+      de: {
+        streetAddress: "Hrachya-Kochar-Straße 13A",
+        addressLocality: "Jerewan",
+      },
+      fr: {
+        streetAddress: "13A, rue Hrachya Kochar",
+        addressLocality: "Erevan",
+      },
+    },
     city: "Yerevan",
     countryCode: "AM",
-    workingHours: null,
+    geo: { latitude: 40.200501, longitude: 44.498802 },
+    acceptsVisitors: false,
+    workingHours: {
+      dayOfWeek: [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ],
+      opens: "09:00",
+      closes: "19:00",
+      display: {
+        hy: "Երկ–շբ՝ 09:00–19:00, կիրակի՝ փակ",
+        ru: "Пн–сб: 09:00–19:00, вс: выходной",
+        en: "Mon–Sat: 09:00–19:00, Sun: closed",
+        de: "Mo–Sa: 09:00–19:00, So: geschlossen",
+        fr: "Lun–sam : 09:00–19:00, dim : fermé",
+      },
+    },
   },
   social: {
     instagram: "https://www.instagram.com/shinex_company/",

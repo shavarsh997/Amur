@@ -47,6 +47,14 @@ export function getMailHref(): string | null {
     : null;
 }
 
+export function getGoogleMapsHref(): string | null {
+  const geo = companyConfig.contact.geo;
+  if (!geo) return null;
+
+  const query = encodeURIComponent(`${geo.latitude},${geo.longitude}`);
+  return `https://www.google.com/maps/search/?api=1&query=${query}`;
+}
+
 export function getSocialLinks() {
   return Object.entries(companyConfig.social as Record<string, string | null>)
     .filter((entry): entry is [string, string] => isValidExternalUrl(entry[1]))

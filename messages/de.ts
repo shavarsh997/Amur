@@ -851,6 +851,7 @@ const dictionary = {
     email: "E-Mail",
     address: "Adresse",
     hours: "Öffnungszeiten",
+    noVisitors: "An dieser Adresse empfangen wir keine Kunden.",
     messengers: "Messenger",
     whatsapp: "WhatsApp",
     telegram: "Telegram",

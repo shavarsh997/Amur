@@ -73,7 +73,7 @@ export default async function LocaleLayout({
         <div className="flex min-h-screen flex-col">
           <script
             dangerouslySetInnerHTML={{
-              __html: serializeJsonLd(getOrganizationJsonLd()),
+              __html: serializeJsonLd(getOrganizationJsonLd(locale)),
             }}
             type="application/ld+json"
           />

@@ -36,10 +36,28 @@ export interface CompanyConfiguration {
     whatsapp: string | null;
     telegram: string | null;
     email: string | null;
-    address: string | null;
+    address: Record<
+      Locale,
+      { streetAddress: string; addressLocality: string }
+    > | null;
     city: string;
     countryCode: string;
-    workingHours: string | null;
+    geo: { latitude: number; longitude: number } | null;
+    acceptsVisitors: boolean | null;
+    workingHours: {
+      dayOfWeek: readonly (
+        | "Monday"
+        | "Tuesday"
+        | "Wednesday"
+        | "Thursday"
+        | "Friday"
+        | "Saturday"
+        | "Sunday"
+      )[];
+      opens: string;
+      closes: string;
+      display: Record<Locale, string>;
+    } | null;
   };
   social: {
     instagram: string | null;

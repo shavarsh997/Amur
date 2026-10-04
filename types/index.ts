@@ -485,6 +485,7 @@ export interface Dictionary {
     email: string;
     address: string;
     hours: string;
+    noVisitors: string;
     messengers: string;
     whatsapp: string;
     telegram: string;

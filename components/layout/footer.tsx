@@ -4,6 +4,7 @@ import { ContactTrigger } from "@/components/forms/contact-dialog";
 import { navigationConfig } from "@/config/navigation.config";
 import { companyConfig } from "@/config/company.config";
 import {
+  getGoogleMapsHref,
   getMailHref,
   getPhoneHref,
   getSocialLinks,
@@ -24,6 +25,8 @@ export function Footer({ locale, dictionary }: FooterProps) {
   const phoneHref = getPhoneHref();
   const whatsappHref = getWhatsAppHref();
   const mailHref = getMailHref();
+  const address = companyConfig.contact.address?.[locale];
+  const mapHref = getGoogleMapsHref();
   const navigation = navigationConfig.map((item) => ({
     href: item.path ? `${prefix}/${item.path}` : prefix,
     label: dictionary.nav[item.key],
@@ -122,11 +125,31 @@ export function Footer({ locale, dictionary }: FooterProps) {
                   {companyConfig.contact.email}
                 </a>
               ) : null}
-              {companyConfig.contact.address ? (
-                <p>{companyConfig.contact.address}</p>
+              {address ? (
+                <p>
+                  {mapHref ? (
+                    <a
+                      className="rounded-sm underline underline-offset-4 hover:text-[var(--brand-copper)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--brand-copper)]"
+                      href={mapHref}
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      {address.streetAddress}, {address.addressLocality}
+                    </a>
+                  ) : (
+                    <>
+                      {address.streetAddress}, {address.addressLocality}
+                    </>
+                  )}
+                  {companyConfig.contact.acceptsVisitors === false ? (
+                    <span className="mt-2 block text-xs leading-5">
+                      {dictionary.contacts.noVisitors}
+                    </span>
+                  ) : null}
+                </p>
               ) : null}
               {companyConfig.contact.workingHours ? (
-                <p>{companyConfig.contact.workingHours}</p>
+                <p>{companyConfig.contact.workingHours.display[locale]}</p>
               ) : null}
               <p>
                 {dictionary.footer.location ??

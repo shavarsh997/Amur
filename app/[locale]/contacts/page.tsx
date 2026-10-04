@@ -6,6 +6,7 @@ import { Container } from "@/components/ui/container";
 import { PageHero } from "@/components/ui/page-hero";
 import { companyConfig } from "@/config/company.config";
 import {
+  getGoogleMapsHref,
   getMailHref,
   getPhoneHref,
   getSocialLinks,
@@ -38,6 +39,8 @@ export default async function ContactsPage({ params }: Props) {
   const phoneHref = getPhoneHref();
   const whatsappHref = getWhatsAppHref();
   const mailHref = getMailHref();
+  const address = companyConfig.contact.address?.[locale];
+  const mapHref = getGoogleMapsHref();
 
   return (
     <>
@@ -113,12 +116,30 @@ export default async function ContactsPage({ params }: Props) {
                 </dd>
               </div>
             ) : null}
-            {companyConfig.contact.address ? (
+            {address ? (
               <div>
                 <dt className="text-sm font-semibold text-[var(--text-primary)]">
                   {copy.address}
                 </dt>
-                <dd className="mt-1">{companyConfig.contact.address}</dd>
+                <dd className="mt-1">
+                  {mapHref ? (
+                    <a
+                      className="rounded-sm underline underline-offset-4 hover:text-[var(--text-primary)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--button-primary)]"
+                      href={mapHref}
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      {address.streetAddress}, {address.addressLocality}
+                    </a>
+                  ) : (
+                    <>
+                      {address.streetAddress}, {address.addressLocality}
+                    </>
+                  )}
+                </dd>
+                {companyConfig.contact.acceptsVisitors === false ? (
+                  <dd className="mt-2 text-sm">{copy.noVisitors}</dd>
+                ) : null}
               </div>
             ) : null}
             {companyConfig.contact.workingHours ? (
@@ -126,7 +147,9 @@ export default async function ContactsPage({ params }: Props) {
                 <dt className="text-sm font-semibold text-[var(--text-primary)]">
                   {copy.hours}
                 </dt>
-                <dd className="mt-1">{companyConfig.contact.workingHours}</dd>
+                <dd className="mt-1">
+                  {companyConfig.contact.workingHours.display[locale]}
+                </dd>
               </div>
             ) : null}
             {getSocialLinks().map(({ name, url }) => (
