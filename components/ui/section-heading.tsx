@@ -21,7 +21,10 @@ export function SectionHeading({
   const bodyColor = inverted ? "text-white/70" : "text-[var(--text-secondary)]";
 
   return (
-    <div className={`flex max-w-3xl flex-col gap-4 ${alignment} ${className}`}>
+    <div
+      className={`flex max-w-3xl flex-col gap-4 ${alignment} ${className}`}
+      data-motion="reveal"
+    >
       <p
         className={`text-xs font-semibold uppercase tracking-[0.16em] ${
           inverted

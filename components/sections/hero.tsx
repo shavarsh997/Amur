@@ -61,16 +61,22 @@ export function Hero({
               </ul>
             </div>
             <div className="relative order-2 min-h-[280px] overflow-hidden bg-[var(--surface-muted)] lg:order-none lg:min-h-full">
-              <Image
-                alt={content.heroVisual.alt}
-                className="object-cover object-center"
-                fill
-                preload
-                quality={82}
-                sizes="(max-width: 1023px) 100vw, 56vw"
-                src={content.heroVisual.image}
+              <div className="motion-photo" data-parallax="vertical">
+                <Image
+                  alt={content.heroVisual.alt}
+                  className="object-cover object-center"
+                  fill
+                  preload
+                  quality={82}
+                  sizes="(max-width: 1023px) 100vw, 56vw"
+                  src={content.heroVisual.image}
+                />
+              </div>
+              <span
+                aria-hidden="true"
+                className="motion-hero-rule absolute bottom-5 left-5 h-12 w-1 bg-[var(--brand-copper)] sm:bottom-7 sm:left-7"
+                data-motion="rule"
               />
-              <span className="absolute bottom-5 left-5 h-12 w-1 bg-[var(--brand-copper)] sm:bottom-7 sm:left-7" />
             </div>
           </div>
         </div>

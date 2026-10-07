@@ -7,6 +7,7 @@ import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
 import { MobileCtaBar } from "@/components/layout/mobile-cta-bar";
 import { ContactDialog } from "@/components/forms/contact-dialog";
+import { SiteMotion } from "@/components/motion/site-motion";
 import { companyConfig } from "@/config/company.config";
 import { seoConfig } from "@/config/seo.config";
 import { getSiteOrigin } from "@/lib/company";
@@ -91,7 +92,7 @@ export default async function LocaleLayout({
           </a>
           <Header dictionary={dictionary} locale={locale} />
           <main className="flex-1 pb-20 sm:pb-0" id="main-content">
-            {children}
+            <SiteMotion>{children}</SiteMotion>
           </main>
           <Footer dictionary={dictionary} locale={locale} />
           <ContactDialog dictionary={dictionary} locale={locale} />

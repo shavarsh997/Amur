@@ -27,15 +27,23 @@ export function ServiceCard({
   const ctaLabel = content.primaryCta ?? learnMore;
 
   return (
-    <article className="group grid h-full overflow-hidden rounded-xl border border-[var(--border)] bg-white transition-colors hover:border-[var(--border-strong)] sm:grid-cols-[0.95fr_1.05fr]">
+    <article
+      className="motion-service-card group grid h-full overflow-hidden rounded-xl border border-[var(--border)] bg-white transition-colors hover:border-[var(--border-strong)] sm:grid-cols-[0.95fr_1.05fr]"
+      data-motion="reveal"
+    >
       <div className="relative min-h-56 overflow-hidden bg-[var(--background-warm)] sm:min-h-[310px]">
-        <Image
-          alt={getServiceImageAlt(service.image, locale)}
-          className="object-cover transition duration-500 group-hover:scale-105"
-          fill
-          sizes="(max-width: 639px) 100vw, (max-width: 1199px) 42vw, 27vw"
-          src={service.image}
-        />
+        <div
+          className="motion-photo"
+          data-parallax={service.order % 2 ? "left" : "right"}
+        >
+          <Image
+            alt={getServiceImageAlt(service.image, locale)}
+            className="motion-service-photo object-cover"
+            fill
+            sizes="(max-width: 639px) 100vw, (max-width: 1199px) 42vw, 27vw"
+            src={service.image}
+          />
+        </div>
       </div>
       <div className="flex min-h-56 flex-col items-start p-5 sm:min-h-[310px] sm:p-7">
         <span className="text-sm font-bold tracking-[0.14em] text-[var(--brand-copper-text)]">
