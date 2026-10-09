@@ -718,7 +718,7 @@ export const serviceTranslations = {
       suitableFor: [
         "Офисам, магазинам, сервисным и другим коммерческим пространствам",
       ],
-      primaryCta: "Обсудить коммерческий объект",
+      primaryCta: "Обсудить объект",
       secondaryCta: "Отправить данные проекта",
       seoTitle: "Ремонт коммерческих помещений в Армении — SHINEX",
       seoDescription:
@@ -759,7 +759,7 @@ export const serviceTranslations = {
         "Stages and changes agreed in advance",
       ],
       suitableFor: ["Offices, retail, service, and other commercial spaces"],
-      primaryCta: "Discuss a commercial project",
+      primaryCta: "Discuss your project",
       secondaryCta: "Send project details",
       seoTitle: "Commercial space renovation in Armenia — SHINEX",
       seoDescription:
@@ -802,7 +802,7 @@ export const serviceTranslations = {
         "Phasen und Änderungen vorab vereinbaren",
       ],
       suitableFor: ["Büros, Läden, Dienstleistungs- und andere Gewerberäume"],
-      primaryCta: "Gewerbeprojekt besprechen",
+      primaryCta: "Projekt besprechen",
       secondaryCta: "Projektdaten senden",
       seoTitle: "Gewerberenovierung in Armenien — SHINEX",
       seoDescription:
@@ -848,7 +848,7 @@ export const serviceTranslations = {
       suitableFor: [
         "Bureaux, commerces, espaces de service et autres locaux professionnels",
       ],
-      primaryCta: "Discuter d’un projet professionnel",
+      primaryCta: "Parlons du projet",
       secondaryCta: "Envoyer les détails du projet",
       seoTitle: "Rénovation de locaux professionnels en Arménie — SHINEX",
       seoDescription:
@@ -891,7 +891,7 @@ export const serviceTranslations = {
       suitableFor: [
         "Գրասենյակների, խանութների, սպասարկման և այլ առևտրային տարածքների համար",
       ],
-      primaryCta: "Քննարկել առևտրային օբյեկտը",
+      primaryCta: "Քննարկել նախագիծը",
       secondaryCta: "Ուղարկել նախագծի տվյալները",
       seoTitle: "Առևտրային տարածքների վերանորոգում Հայաստանում — SHINEX",
       seoDescription:

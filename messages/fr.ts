@@ -27,8 +27,8 @@ const dictionary = {
     title: "Construction, rénovation et aménagement intérieur en Arménie",
     description:
       "De la construction d’une maison à la rénovation d’un appartement ou de locaux professionnels, SHINEX vous accompagne dans la préparation et la réalisation de votre projet. Nous étudions d’abord le bien et les travaux souhaités, puis établissons une première estimation.",
-    primaryAction: "Demander conseil",
-    secondaryAction: "Voir les services",
+    primaryAction: "Parlons du projet",
+    secondaryAction: "Nos services",
     trustPoints: [
       "Première estimation et budget détaillé",
       "Construction et équipements techniques du bâtiment",
@@ -345,7 +345,7 @@ const dictionary = {
       phoneRequired: "Indiquez votre numéro de téléphone.",
       phoneInvalid: "Indiquez un numéro de téléphone valide.",
     },
-    submit: "Envoyer une demande d’estimation",
+    submit: "Envoyer la demande",
     submitting: "Envoi en cours…",
     success:
       "Votre demande a été envoyée. Nous vous contacterons pour préciser les détails.",
@@ -780,7 +780,7 @@ const dictionary = {
     title: "Vous prévoyez des travaux de rénovation ou de construction ?",
     description:
       "Envoyez les informations essentielles du projet ; nous définirons la prochaine étape adaptée : estimation ou visite sur place.",
-    primaryAction: "Envoyer les détails du projet",
+    primaryAction: "Parlons du projet",
     secondaryAction: "Demander une visite du bien",
   },
   footer: {
@@ -926,7 +926,7 @@ const dictionary = {
       "Le calculateur fournit une première indication. Un devis précis suit la visite du bien.",
     faqTitle: "Questions fréquentes",
     relatedPlanningTitle: "Découvrez vos options",
-    calculatorPriceLink: "Prix de rénovation d’appartement à Erevan",
+    calculatorPriceLink: "Tarifs de rénovation",
     fallbackFaqs: [
       {
         question: "Comment obtenir un devis précis ?",

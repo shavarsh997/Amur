@@ -1,30 +1,38 @@
-import type { ComponentProps } from "react";
+import type { ComponentProps, ReactNode } from "react";
+
+import {
+  buttonStyles,
+  type ButtonSize,
+  type ButtonVariant,
+} from "@/components/ui/button-styles";
 
 type ButtonProps = ComponentProps<"button"> & {
-  variant?: "primary" | "secondary" | "light";
+  variant?: ButtonVariant;
+  size?: ButtonSize;
+  icon?: ReactNode;
 };
-
-const variants = {
-  primary:
-    "bg-[var(--button-primary)] text-[var(--button-text)] hover:bg-[var(--button-primary-hover)] focus-visible:outline-[var(--button-primary)]",
-  secondary:
-    "border border-[var(--border)] bg-white text-[var(--text-primary)] hover:border-[var(--border-strong)] hover:bg-[var(--surface-muted)] focus-visible:outline-[var(--button-primary)]",
-  light:
-    "border border-[var(--border)] bg-white text-[var(--text-primary)] hover:bg-[var(--surface-muted)] focus-visible:outline-[var(--button-primary)]",
-} as const;
 
 export function Button({
   variant = "primary",
+  size = "default",
+  icon,
   className = "",
   children,
+  type = "button",
   ...props
 }: ButtonProps) {
   return (
     <button
-      className={`inline-flex min-h-12 items-center justify-center rounded-lg px-6 py-3 text-sm font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 ${variants[variant]} ${className}`}
+      className={buttonStyles(variant, size, className)}
+      type={type}
       {...props}
     >
-      {children}
+      {icon ? (
+        <span aria-hidden="true" className="action-button__icon">
+          {icon}
+        </span>
+      ) : null}
+      <span className="action-button__label">{children}</span>
     </button>
   );
 }

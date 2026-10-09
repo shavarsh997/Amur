@@ -8,6 +8,8 @@ import {
   contactMessageEvent,
 } from "@/components/forms/contact-methods";
 import { LeadForm } from "@/components/forms/lead-form";
+import { Button } from "@/components/ui/button";
+import type { ButtonSize } from "@/components/ui/button-styles";
 import { trackEvent } from "@/lib/analytics";
 import type { Dictionary, Locale } from "@/types";
 
@@ -18,36 +20,44 @@ export function ContactTrigger({
   className = "",
   onClick,
   variant = "primary",
+  size = "default",
 }: {
   label: string;
   className?: string;
   onClick?: () => void;
   variant?: "primary" | "link" | "secondary";
+  size?: ButtonSize;
 }) {
-  const variants = {
-    primary:
-      "inline-flex min-h-12 items-center justify-center rounded-lg bg-[var(--button-primary)] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[var(--button-primary-hover)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--brand-copper)]",
-    link: "inline-flex items-center rounded-sm text-sm font-medium transition-colors hover:text-[var(--text-secondary)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--button-primary)]",
-    secondary:
-      "inline-flex min-h-12 items-center justify-center rounded-lg border border-[var(--border)] bg-white px-6 py-3 text-sm font-semibold text-[var(--text-primary)] transition hover:border-[var(--brand-copper)] hover:bg-[var(--surface-muted)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--brand-copper)]",
+  const openContact = () => {
+    onClick?.();
+    trackEvent("cta_click", { cta_label: label });
+    window.dispatchEvent(new Event(contactOpenEvent));
   };
 
+  if (variant === "link") {
+    return (
+      <button
+        aria-haspopup="dialog"
+        className={`inline-flex items-center rounded-sm text-sm font-medium transition-colors hover:text-[var(--text-secondary)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--button-primary)] ${className}`}
+        onClick={openContact}
+        type="button"
+      >
+        {label}
+      </button>
+    );
+  }
+
   return (
-    <button
+    <Button
       aria-haspopup="dialog"
-      className={`${variants[variant]} ${className}`}
-      onClick={() => {
-        onClick?.();
-        trackEvent("cta_click", { cta_label: label });
-        window.dispatchEvent(new Event(contactOpenEvent));
-      }}
-      type="button"
+      className={className}
+      icon={variant === "primary" ? <MessageCircle /> : undefined}
+      onClick={openContact}
+      size={size}
+      variant={variant}
     >
-      {variant === "primary" ? (
-        <MessageCircle aria-hidden="true" className="mr-2 h-5 w-5" />
-      ) : null}
       {label}
-    </button>
+    </Button>
   );
 }
 

@@ -170,7 +170,7 @@ export function SeoLandingPage({
                 <p className="mt-3 max-w-2xl leading-7 text-[var(--text-secondary)]">
                   {dictionary.seo.calculatorEstimateNotice}
                 </p>
-                <div className="mt-6 flex flex-wrap gap-3">
+                <div className="action-group mt-6">
                   <ButtonLink href={calculatorHref}>
                     {content.calculatorLabel}
                   </ButtonLink>

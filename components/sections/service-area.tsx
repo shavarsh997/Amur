@@ -34,7 +34,7 @@ export function ServiceArea({ locale }: { locale: Locale }) {
             <p className="mt-4 max-w-xl text-[15px] leading-6 text-[var(--text-secondary)] sm:text-base sm:leading-7">
               {content.description}
             </p>
-            <div className="content-actions mt-6 flex flex-col gap-3 sm:flex-row">
+            <div className="action-group mt-6">
               <ButtonLink href={content.primaryCta.href}>
                 {content.primaryCta.label}
               </ButtonLink>

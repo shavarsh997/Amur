@@ -34,17 +34,12 @@ export function Hero({
               <p className="mt-5 max-w-full text-[15px] leading-6 text-[var(--text-secondary)] sm:text-[17px] sm:leading-7">
                 {dictionary.hero.description}
               </p>
-              <div className="content-actions w-full mt-7 grid grid-cols-2 gap-3 sm:flex sm:flex-row sm:items-center">
+              <div className="action-group mt-7">
                 <ContactTrigger
-                  className="w-full sm:w-auto text-left"
                   label={dictionary.hero.primaryAction}
                   variant="primary"
                 />
-                <ButtonLink
-                  className=" w-full gap-2 sm:w-auto"
-                  href={`/${locale}/services`}
-                  variant="secondary"
-                >
+                <ButtonLink href={`/${locale}/services`} variant="secondary">
                   {dictionary.hero.secondaryAction}
                 </ButtonLink>
               </div>

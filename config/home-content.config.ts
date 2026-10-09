@@ -72,11 +72,11 @@ export const homeContent: Record<Locale, HomeContent> = {
       description:
         "Работаем с квартирами, частными домами и коммерческими помещениями по всей Армении, включая Ереван, Гюмри, Ванадзор, Дилижан и другие города. Условия работ согласовываем с учётом расположения объекта и объёма работ.",
       primaryCta: {
-        label: "Заказать осмотр объекта",
+        label: "Заказать осмотр",
         href: "/ru/contacts",
       },
       secondaryCta: {
-        label: "Обсудить стоимость ремонта",
+        label: "Обсудить смету",
         href: "/ru/contacts",
       },
       items: [
@@ -139,11 +139,11 @@ export const homeContent: Record<Locale, HomeContent> = {
       description:
         "We work on apartment, private home, and commercial-space projects across Armenia, including Yerevan, Gyumri, Vanadzor, Dilijan, and other cities. Work terms are agreed based on the property location and scope.",
       primaryCta: {
-        label: "Request a property survey",
+        label: "Book a survey",
         href: "/en/contacts",
       },
       secondaryCta: {
-        label: "Discuss renovation costs",
+        label: "Discuss costs",
         href: "/en/contacts",
       },
       items: [
@@ -206,11 +206,11 @@ export const homeContent: Record<Locale, HomeContent> = {
       description:
         "Wir arbeiten an Wohnungs-, Haus- und Gewerbeprojekten in ganz Armenien, darunter Eriwan, Gjumri, Wanadsor, Dilidschan und weitere Städte. Die Bedingungen werden nach Standort und Umfang vereinbart.",
       primaryCta: {
-        label: "Objektbesichtigung anfragen",
+        label: "Besichtigung anfragen",
         href: "/de/contacts",
       },
       secondaryCta: {
-        label: "Renovierungskosten besprechen",
+        label: "Kosten besprechen",
         href: "/de/contacts",
       },
       items: [
@@ -274,11 +274,11 @@ export const homeContent: Record<Locale, HomeContent> = {
       description:
         "Nous réalisons des projets d’appartements, de maisons et de locaux professionnels dans toute l’Arménie, notamment à Erevan, Gyumri, Vanadzor, Dilidjan et dans d’autres villes. Les modalités sont convenues selon la localisation et les travaux prévus.",
       primaryCta: {
-        label: "Demander une visite du bien",
+        label: "Demander une visite",
         href: "/fr/contacts",
       },
       secondaryCta: {
-        label: "Discuter du coût de rénovation",
+        label: "Discuter du budget",
         href: "/fr/contacts",
       },
       items: [
@@ -344,11 +344,11 @@ export const homeContent: Record<Locale, HomeContent> = {
       description:
         "Աշխատում ենք ամբողջ Հայաստանում՝ Երևանում, Գյումրիում, Վանաձորում, Դիլիջանում և այլ քաղաքներում՝ բնակարանների, առանձնատների և առևտրային տարածքների նախագծերի վրա։ Աշխատանքի պայմաններն ու արժեքը որոշվում են՝ հաշվի առնելով օբյեկտի գտնվելու վայրը և աշխատանքների ծավալը։",
       primaryCta: {
-        label: "Պատվիրել օբյեկտի զննում",
+        label: "Պատվիրել զննում",
         href: "/hy/contacts",
       },
       secondaryCta: {
-        label: "Քննարկել վերանորոգման արժեքը",
+        label: "Քննարկել արժեքը",
         href: "/hy/contacts",
       },
       items: [

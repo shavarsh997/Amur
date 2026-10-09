@@ -6,6 +6,7 @@ import { Calculator, X } from "lucide-react";
 
 import { CostCalculator } from "@/components/calculator/cost-calculator";
 import { ContactTrigger } from "@/components/forms/contact-dialog";
+import { Button } from "@/components/ui/button";
 import type {
   CalculatorScenarioId,
   CalculationType,
@@ -34,9 +35,10 @@ export function CalculatorTrigger({
     return <ContactTrigger className={className} label={label} />;
   }
   return (
-    <button
+    <Button
       aria-haspopup="dialog"
-      className={`inline-flex min-h-12 items-center justify-center rounded-xl bg-[var(--button-primary)] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[var(--button-primary-hover)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--button-primary)] ${className}`}
+      className={className}
+      icon={<Calculator />}
       onClick={() =>
         window.dispatchEvent(
           new CustomEvent<CalculatorLaunch>(calculatorOpenEvent, {
@@ -49,9 +51,8 @@ export function CalculatorTrigger({
       }
       type="button"
     >
-      <Calculator aria-hidden="true" className="mr-2 size-4" />
       {label}
-    </button>
+    </Button>
   );
 }
 

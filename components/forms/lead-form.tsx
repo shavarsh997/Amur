@@ -4,6 +4,7 @@ import { useActionState, useEffect, useId, useRef } from "react";
 
 import { submitLeadAction, type LeadActionState } from "@/app/actions";
 import { leadFormConfig } from "@/config/lead-form.config";
+import { Button } from "@/components/ui/button";
 import { trackEvent } from "@/lib/analytics";
 import type { Dictionary, Locale } from "@/types";
 
@@ -305,13 +306,14 @@ export function LeadForm({
             type="text"
           />
         </div>
-        <button
-          className="w-full inline-flex min-h-12 items-center justify-center rounded-xl bg-[var(--button-primary)] px-7 py-3 text-sm font-semibold text-white transition hover:bg-[var(--button-primary-hover)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--button-primary)] disabled:cursor-wait disabled:opacity-65"
+        <Button
+          aria-busy={pending}
+          className="w-full"
           disabled={pending}
           type="submit"
         >
           {pending ? copy.submitting : copy.submit}
-        </button>
+        </Button>
         <p
           aria-live="polite"
           className={

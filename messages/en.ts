@@ -27,7 +27,7 @@ const dictionary = {
     title: "Construction, renovation and interior design in Armenia",
     description:
       "From building a home to renovating an apartment or business premises, SHINEX helps plan and carry out your project. We start by reviewing the property and the work you need, then prepare an initial estimate.",
-    primaryAction: "Get a consultation",
+    primaryAction: "Discuss your project",
     secondaryAction: "View services",
     trustPoints: [
       "Initial estimate and detailed cost plan",
@@ -339,7 +339,7 @@ const dictionary = {
       phoneRequired: "Enter your phone number.",
       phoneInvalid: "Enter a valid phone number.",
     },
-    submit: "Send an initial-estimate enquiry",
+    submit: "Send enquiry",
     submitting: "Sending…",
     success:
       "Your enquiry has been sent. We will contact you to clarify the details.",
@@ -762,7 +762,7 @@ const dictionary = {
     title: "Planning renovation or construction?",
     description:
       "Send the key project details and we will identify the right next step: an estimate or a site survey.",
-    primaryAction: "Send project details",
+    primaryAction: "Discuss your project",
     secondaryAction: "Request a property survey",
   },
   footer: {
@@ -906,7 +906,7 @@ const dictionary = {
       "The calculator provides an initial guide. A precise estimate follows a property survey.",
     faqTitle: "Frequently asked questions",
     relatedPlanningTitle: "Explore your options",
-    calculatorPriceLink: "Apartment renovation prices in Yerevan",
+    calculatorPriceLink: "Renovation prices",
     fallbackFaqs: [
       {
         question: "How can I get an accurate estimate?",

@@ -44,9 +44,7 @@ export function PageHero({
               {description}
             </p>
           ) : null}
-          {actions ? (
-            <div className="mt-8 flex flex-wrap gap-3">{actions}</div>
-          ) : null}
+          {actions ? <div className="action-group mt-8">{actions}</div> : null}
         </div>
       </Container>
     </section>

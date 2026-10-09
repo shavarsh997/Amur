@@ -23,7 +23,7 @@ html {
   padding-inline: clamp(16px, 4cqw, 40px);
 }
 
-.site-page-content a {
+.site-page-content a:not(.action-button) {
   overflow-wrap: anywhere;
 }
 
@@ -48,10 +48,6 @@ html {
 
 .site-page-content .content-panel {
   padding: clamp(20px, 4cqw, 40px);
-}
-
-.site-page-content .content-actions {
-  flex-wrap: wrap;
 }
 
 .site-page-content .content-hero-layout {

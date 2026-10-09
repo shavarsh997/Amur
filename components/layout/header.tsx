@@ -65,10 +65,7 @@ export function Header({ locale, dictionary }: HeaderProps) {
             label={dictionary.nav.language}
             locale={locale}
           />
-          <ContactTrigger
-            className="min-h-10 rounded-lg px-4"
-            label={cta.label}
-          />
+          <ContactTrigger size="compact" label={cta.label} />
         </div>
 
         <div className="flex shrink-0 items-center gap-2 xl:hidden">

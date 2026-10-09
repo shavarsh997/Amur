@@ -125,7 +125,7 @@ export function MobileNav({
             </div>
             <div className="mt-4 flex flex-wrap items-center gap-3 border-t border-[var(--border)] pt-4">
               <ContactTrigger
-                className="min-h-11 flex-1 px-5"
+                className="w-full"
                 label={cta.label}
                 onClick={closeMenu}
               />

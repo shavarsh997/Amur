@@ -57,18 +57,19 @@ export function ServiceCard({
         </p>
         {service.ctaKind === "calculator" || service.ctaKind === "contact" ? (
           <ContactTrigger
-            className="mt-5 min-h-10 px-4 text-sm"
+            className="mt-5"
+            size="compact"
             label={content.primaryCta ?? contactLabel}
           />
         ) : (
           <Link
-            className="mt-5 inline-flex items-center gap-2 rounded-sm text-sm font-semibold text-[var(--text-primary)] transition-colors hover:text-[var(--brand-copper)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--brand-copper)]"
+            className="mt-5 inline-flex max-w-full items-center gap-2 rounded-sm text-sm font-semibold leading-5 text-[var(--text-primary)] transition-colors hover:text-[var(--brand-copper)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--brand-copper)]"
             href={href}
           >
-            {ctaLabel}
+            <span className="min-w-0 text-pretty">{ctaLabel}</span>
             <ArrowRight
               aria-hidden="true"
-              className="size-4 transition-transform group-hover:translate-x-1"
+              className="size-4 shrink-0 transition-transform group-hover:translate-x-1"
             />
           </Link>
         )}

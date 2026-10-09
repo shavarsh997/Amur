@@ -23,11 +23,8 @@ export function FinalCta({
               <p className="mt-5 max-w-xl text-[15px] leading-7 text-[var(--text-secondary)] sm:text-base">
                 {dictionary.cta.description}
               </p>
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
-                <ContactTrigger
-                  className="w-full sm:w-auto"
-                  label={dictionary.cta.primaryAction}
-                />
+              <div className="action-group mt-8">
+                <ContactTrigger label={dictionary.cta.primaryAction} />
               </div>
             </div>
             <aside className="grid min-h-72 overflow-hidden rounded-xl bg-[var(--brand-navy)] p-5 text-white sm:grid-cols-[0.9fr_1fr] sm:p-7">

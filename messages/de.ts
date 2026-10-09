@@ -27,8 +27,8 @@ const dictionary = {
     title: "Bau, Renovierung und Innenraumgestaltung in Armenien",
     description:
       "Vom Hausbau bis zur Renovierung einer Wohnung oder von Geschäftsräumen begleitet SHINEX die Planung und Umsetzung Ihres Projekts. Zunächst prüfen wir das Objekt und Ihren Bedarf, dann erstellen wir eine erste Kostenschätzung.",
-    primaryAction: "Beratung anfragen",
-    secondaryAction: "Leistungen ansehen",
+    primaryAction: "Projekt besprechen",
+    secondaryAction: "Leistungen",
     trustPoints: [
       "Erste Kostenschätzung und detaillierte Kostenplanung",
       "Bauarbeiten und Gebäudetechnik",
@@ -337,7 +337,7 @@ const dictionary = {
       phoneRequired: "Geben Sie Ihre Telefonnummer ein.",
       phoneInvalid: "Geben Sie eine gültige Telefonnummer ein.",
     },
-    submit: "Erste Kostenschätzung anfragen",
+    submit: "Anfrage senden",
     submitting: "Wird gesendet…",
     success:
       "Ihre Anfrage wurde gesendet. Wir melden uns bei Ihnen, um die Einzelheiten zu klären.",
@@ -771,7 +771,7 @@ const dictionary = {
     title: "Planen Sie Renovierungs- oder Bauarbeiten?",
     description:
       "Senden Sie die wichtigsten Projektdaten. Wir bestimmen den passenden nächsten Schritt: eine Kostenschätzung oder eine Besichtigung.",
-    primaryAction: "Projektdaten senden",
+    primaryAction: "Projekt besprechen",
     secondaryAction: "Objektbesichtigung anfragen",
   },
   footer: {
@@ -916,7 +916,7 @@ const dictionary = {
       "Der Rechner bietet eine erste Orientierung. Eine genaue Kostenschätzung erfolgt nach einer Objektbesichtigung.",
     faqTitle: "Häufig gestellte Fragen",
     relatedPlanningTitle: "Möglichkeiten ansehen",
-    calculatorPriceLink: "Preise für Wohnungsrenovierung in Eriwan",
+    calculatorPriceLink: "Renovierungspreise",
     fallbackFaqs: [
       {
         question: "Wie erhalte ich eine genaue Kostenschätzung?",
