@@ -54,7 +54,7 @@ export default async function AboutPage({ params }: Props) {
         title={about.title}
       />
       <Container className="space-y-12 py-12 sm:space-y-16 sm:py-16 lg:space-y-20 lg:py-20">
-        <section className="grid gap-8 lg:grid-cols-[0.7fr_1.3fr]">
+        <section className="content-split grid gap-8 lg:grid-cols-[0.7fr_1.3fr]">
           <h2 className="text-3xl font-semibold tracking-[-0.04em] text-[var(--text-primary)]">
             {about.storyTitle}
           </h2>
@@ -68,7 +68,7 @@ export default async function AboutPage({ params }: Props) {
           <h2 className="text-3xl font-semibold tracking-[-0.04em] text-[var(--text-primary)]">
             {about.valuesTitle}
           </h2>
-          <div className="mt-8 grid gap-4 md:grid-cols-3">
+          <div className="mt-8 grid gap-4 content-grid-three md:grid-cols-3">
             {about.values.map((value) => (
               <article
                 className="rounded-2xl border border-[var(--border)] bg-[var(--background-soft)] p-6"
@@ -84,7 +84,7 @@ export default async function AboutPage({ params }: Props) {
             ))}
           </div>
         </section>
-        <section className="grid gap-6 rounded-[28px] bg-[var(--background-warm)] p-8 sm:p-12 lg:grid-cols-2">
+        <section className="content-split content-panel grid gap-6 rounded-[28px] bg-[var(--background-warm)] p-8 sm:p-12 lg:grid-cols-2">
           <div>
             <h2 className="text-3xl font-semibold tracking-[-0.04em] text-[var(--text-primary)]">
               {about.approachTitle}
@@ -93,7 +93,7 @@ export default async function AboutPage({ params }: Props) {
               {about.approach}
             </p>
           </div>
-          <div className="border-t border-white/70 pt-6 lg:border-l lg:border-t-0 lg:pl-10 lg:pt-0">
+          <div className="content-aside border-t border-white/70 pt-6 lg:border-l lg:border-t-0 lg:pl-10 lg:pt-0">
             <h2 className="text-2xl font-semibold tracking-[-0.03em] text-[var(--text-primary)]">
               {geography.title}
             </h2>

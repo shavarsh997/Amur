@@ -51,7 +51,7 @@ export function LeadForm({
     <form
       ref={formRef}
       action={formAction}
-      className={`grid gap-5 md:grid-cols-2 ${className}`}
+      className={`grid gap-5 content-grid md:grid-cols-2 ${className}`}
       noValidate
       onFocus={() => trackEvent("form_start", { form: "lead" })}
     >
@@ -271,7 +271,7 @@ export function LeadForm({
         ) : null}
       </div>
 
-      <div className="md:col-span-2">
+      <div className="col-span-full">
         <label
           className="mb-2 block text-sm font-semibold"
           htmlFor={fieldId("comment")}
@@ -292,9 +292,11 @@ export function LeadForm({
         />
       </div>
 
-      <div className="flex flex-col items-start gap-3 md:col-span-2">
+      <div className="col-span-full flex flex-col items-start gap-3">
         <div aria-hidden="true" className="hidden">
-          <label htmlFor={fieldId("website")}>{dictionary.common.website}</label>
+          <label htmlFor={fieldId("website")}>
+            {dictionary.common.website}
+          </label>
           <input
             autoComplete="off"
             id={fieldId("website")}

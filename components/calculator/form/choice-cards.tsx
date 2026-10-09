@@ -29,7 +29,7 @@ export function ChoiceCardsInput({
   options,
 }: ChoiceCardsInputProps) {
   return (
-    <div className="grid gap-3 md:grid-cols-3" role="group">
+    <div className="grid gap-3 content-grid-three md:grid-cols-3" role="group">
       {Object.entries(options).map(([optionValue, option]) => (
         <button
           aria-pressed={value === optionValue}

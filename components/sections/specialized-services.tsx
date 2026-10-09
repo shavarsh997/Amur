@@ -31,7 +31,7 @@ export function SpecializedServices({
           <h2 className="text-2xl font-semibold tracking-[-0.03em] text-[var(--text-primary)] sm:text-3xl">
             {dictionary.services.specializedTitle}
           </h2>
-          <div className="mt-5 grid gap-3 sm:grid-cols-3">
+          <div className="content-grid-three mt-5 grid gap-3 sm:grid-cols-3">
             {getActiveServices(locale)
               .filter((service) => service.category === "additional")
               .map(({ content, ...service }) => {

@@ -52,7 +52,7 @@ export function ContactMethods({
 
   return (
     <div>
-      <div className="grid gap-3 sm:grid-cols-2">
+      <div className="grid gap-3 content-grid sm:grid-cols-2">
         {phoneHref && companyConfig.contact.displayPhone ? (
           <a className={cardClass} href={phoneHref}>
             <MethodIcon>

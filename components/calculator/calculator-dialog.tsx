@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import { Calculator, X } from "lucide-react";
 
 import { CostCalculator } from "@/components/calculator/cost-calculator";
@@ -101,9 +102,9 @@ export function CalculatorDialog({
     };
   }, [isOpen]);
 
-  if (!isOpen) return null;
+  if (!isOpen || typeof document === "undefined") return null;
 
-  return (
+  return createPortal(
     <div
       aria-labelledby="calculator-dialog-title"
       aria-modal="true"
@@ -152,6 +153,7 @@ export function CalculatorDialog({
           />
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }

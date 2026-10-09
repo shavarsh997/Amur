@@ -12,7 +12,7 @@ export function ServiceGuides({ locale }: { locale: Locale }) {
       <h2 className="text-2xl font-semibold tracking-tight text-[var(--text-primary)]">
         {serviceGuidesTitle[locale]}
       </h2>
-      <div className="mt-6 grid gap-5 md:grid-cols-3">
+      <div className="content-grid-three mt-6 grid gap-5 md:grid-cols-3">
         {serviceGuideGroups.map((group) => (
           <div
             className="rounded-2xl border border-[var(--border)] bg-white p-5 sm:p-6"

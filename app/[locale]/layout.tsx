@@ -8,6 +8,7 @@ import { Header } from "@/components/layout/header";
 import { MobileCtaBar } from "@/components/layout/mobile-cta-bar";
 import { ContactDialog } from "@/components/forms/contact-dialog";
 import { SiteMotion } from "@/components/motion/site-motion";
+import { ConstructionBackdrop } from "@/components/motion/construction-backdrop";
 import { companyConfig } from "@/config/company.config";
 import { seoConfig } from "@/config/seo.config";
 import { getSiteOrigin } from "@/lib/company";
@@ -69,7 +70,11 @@ export default async function LocaleLayout({
   const dictionary = await getDictionary(locale);
   const htmlLang = localeLanguageTags[locale];
   return (
-    <html className="h-full antialiased" lang={htmlLang}>
+    <html
+      className="h-full antialiased"
+      data-scroll-behavior="smooth"
+      lang={htmlLang}
+    >
       <body suppressHydrationWarning className="flex min-h-full flex-col">
         <div className="flex min-h-screen flex-col">
           <script
@@ -92,7 +97,9 @@ export default async function LocaleLayout({
           </a>
           <Header dictionary={dictionary} locale={locale} />
           <main className="flex-1 pb-20 sm:pb-0" id="main-content">
-            <SiteMotion>{children}</SiteMotion>
+            <SiteMotion backdrop={<ConstructionBackdrop />}>
+              {children}
+            </SiteMotion>
           </main>
           <Footer dictionary={dictionary} locale={locale} />
           <ContactDialog dictionary={dictionary} locale={locale} />

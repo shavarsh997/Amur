@@ -32,7 +32,7 @@ export function WhyUs({ dictionary }: { dictionary: Dictionary }) {
           eyebrow={dictionary.whyUs.eyebrow}
           title={dictionary.whyUs.title}
         />
-        <div className="mt-8 grid border-t border-[var(--border)] sm:grid-cols-2 lg:grid-cols-3">
+        <div className="content-benefits content-grid-three mt-8 grid border-t border-[var(--border)] sm:grid-cols-2 lg:grid-cols-3">
           {operationsConfig.benefits.map((benefitKey, index) => {
             const item = dictionary.whyUs.items[index];
             if (!item) return null;

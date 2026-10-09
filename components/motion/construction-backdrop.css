@@ -1,0 +1,284 @@
+.site-motion-shell {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) min(78%, 1240px) minmax(0, 1fr);
+  align-items: start;
+}
+
+.site-page-content {
+  grid-column: 2;
+  grid-row: 1;
+  min-width: 0;
+  position: relative;
+  z-index: 1;
+  container: site-content / inline-size;
+  background: var(--background);
+}
+
+.construction-backdrop {
+  --construction-copper: #a55432;
+  --construction-shadow: #d5cfc4;
+  --construction-grid: #708995;
+  --construction-line: #708995;
+  --construction-floor: #e3e4dc;
+  --construction-wall-left: #c5c9c0;
+  --construction-wall-right: #b8bfb8;
+  --construction-wall-edge: #f9f6ef;
+  --construction-grain: #a68b67;
+  --construction-window-frame: #eee9db;
+  --construction-window: #9ebfc5;
+  --construction-sun: #fff6d9;
+  --construction-baseboard: #f8f4e9;
+  --construction-rug: #dbd2c1;
+  --construction-rug-edge: #b8aa93;
+  --construction-sofa-back: #9a8871;
+  --construction-sofa-front: #b1a089;
+  --construction-sofa-top: #d6cbb8;
+  --construction-sofa-seam: #968570;
+  --construction-table: #c6a679;
+  --construction-table-edge: #a2825a;
+  --construction-table-leg: #645c4f;
+  --construction-book: #738c92;
+  --construction-pot: #796c5d;
+  --construction-pot-edge: #5c5c4b;
+  --construction-leaf: #687b5b;
+  --construction-leaf-dark: #516449;
+  --construction-picture-frame: #746656;
+  --construction-picture: #f0eadd;
+  --construction-pipe: #718e9d;
+  --construction-concrete: #e0e2db;
+  --construction-structure: #83918d;
+  --construction-building-left: #c1c7be;
+  --construction-building-right: #929e99;
+  --construction-building-glass: #5f7e8b;
+  --construction-building-level: 0;
+  --construction-travel: 0;
+  overflow: clip;
+  pointer-events: none;
+  user-select: none;
+}
+
+.construction-backdrop--page {
+  position: sticky;
+  grid-column: 3;
+  grid-row: 1;
+  top: var(--site-header-height);
+  height: calc(100svh - var(--site-header-height));
+  width: 100%;
+  z-index: 0;
+}
+
+.construction-backdrop--header {
+  display: none;
+}
+
+.construction-backdrop__sticky {
+  position: relative;
+  height: 100%;
+}
+
+.construction-scene {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  padding: 12px;
+  opacity: 0.48;
+  filter: saturate(0.5);
+}
+
+.construction-backdrop[data-building-level="1"] {
+  --construction-building-level: 1;
+}
+
+.construction-backdrop[data-building-level="2"] {
+  --construction-building-level: 2;
+}
+
+.construction-backdrop[data-building-level="3"] {
+  --construction-building-level: 3;
+}
+
+.construction-backdrop[data-building-level="4"] {
+  --construction-building-level: 4;
+}
+
+.construction-backdrop[data-building-level="5"] {
+  --construction-building-level: 5;
+}
+
+/* The camera approaches the lit third-floor window, then opens into the room. */
+.construction-building,
+.construction-interior {
+  transform-box: view-box;
+}
+
+.construction-building {
+  transform-origin: 64.34% 52.47%;
+  transform: translate(
+      calc(-76px * var(--construction-travel)),
+      calc(-10px * var(--construction-travel))
+    )
+    scale(calc(1 + 3.2 * var(--construction-travel)));
+  opacity: clamp(0, calc(1.6 - 1.8 * var(--construction-travel)), 1);
+}
+
+.construction-interior {
+  transform-origin: 50% 50%;
+  transform: translate(
+      calc(76px * (1 - var(--construction-travel))),
+      calc(10px * (1 - var(--construction-travel)))
+    )
+    scale(calc(0.18 + 0.82 * var(--construction-travel)));
+  opacity: clamp(0, calc(1.82 * var(--construction-travel) - 0.55), 1);
+}
+
+.construction-building-floor {
+  opacity: clamp(
+    0,
+    calc(var(--construction-building-level) - var(--storey) + 1),
+    1
+  );
+  transform: translateY(
+    clamp(
+      0px,
+      calc((var(--storey) - var(--construction-building-level)) * 24px),
+      24px
+    )
+  );
+}
+
+.construction-building-envelope,
+.construction-building-roof {
+  opacity: 0;
+}
+
+.construction-backdrop[data-building-level="5"] .construction-building-roof,
+.construction-backdrop[data-building-finished="true"]
+  .construction-building-envelope {
+  opacity: 1;
+}
+
+.construction-floor {
+  fill: var(--construction-floor);
+}
+
+.construction-wall-left {
+  fill: var(--construction-wall-left);
+}
+
+.construction-wall-right {
+  fill: var(--construction-wall-right);
+}
+
+.construction-layer,
+.construction-infrastructure {
+  opacity: 0;
+}
+
+.construction-layer {
+  transform: translateY(18px);
+}
+
+.construction-walls {
+  transform: translateY(34px);
+}
+
+.construction-circuit {
+  stroke-dasharray: 850;
+  stroke-dashoffset: 850;
+}
+
+.construction-backdrop:not([data-build-stage="0"]) .construction-plan {
+  opacity: 0.22;
+}
+
+.construction-backdrop:not([data-build-stage="0"]) .construction-walls,
+.construction-backdrop:is([data-build-stage="2"], [data-build-stage="3"])
+  .construction-finish,
+.construction-backdrop[data-build-stage="3"] .construction-furniture {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.construction-backdrop[data-build-stage="1"] .construction-infrastructure {
+  opacity: 1;
+}
+
+.construction-backdrop[data-build-stage="1"] .construction-circuit {
+  stroke-dashoffset: 0;
+}
+
+.construction-backdrop:is([data-build-stage="2"], [data-build-stage="3"]) {
+  --construction-floor: #d8c09c;
+  --construction-wall-left: #eee9de;
+  --construction-wall-right: #dbd3c5;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .construction-building-floor {
+    transition:
+      opacity 650ms ease,
+      transform 900ms var(--motion-ease);
+  }
+
+  .construction-building-envelope,
+  .construction-building-roof {
+    transition: opacity 900ms ease;
+  }
+
+  .construction-layer {
+    transition:
+      opacity 900ms ease,
+      transform 1100ms var(--motion-ease);
+  }
+
+  .construction-infrastructure,
+  .construction-plan {
+    transition: opacity 800ms ease;
+  }
+
+  .construction-circuit {
+    transition: stroke-dashoffset 1200ms var(--motion-ease);
+  }
+
+  .construction-floor,
+  .construction-wall-left,
+  .construction-wall-right {
+    transition: fill 900ms ease;
+  }
+}
+
+@media (max-width: 1279px) {
+  .site-motion-shell {
+    display: block;
+  }
+
+  .construction-backdrop--page {
+    display: none;
+  }
+
+  .construction-backdrop--header {
+    display: block;
+    position: relative;
+    flex: 0 0 56px;
+    width: 56px;
+    height: 44px;
+  }
+
+  .construction-backdrop--header .construction-scene {
+    padding: 0;
+    opacity: 0.72;
+  }
+}
+
+@media print, (forced-colors: active) {
+  .site-motion-shell {
+    display: block;
+  }
+
+  .construction-backdrop {
+    display: none;
+  }
+}

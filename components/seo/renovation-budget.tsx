@@ -8,7 +8,7 @@ export function RenovationBudget({ locale }: { locale: Locale }) {
       <h2 className="text-2xl font-semibold tracking-tight text-[var(--text-primary)]">
         {copy.title}
       </h2>
-      <div className="grid gap-4 md:grid-cols-3">
+      <div className="grid gap-4 content-grid-three md:grid-cols-3">
         {copy.items.map(({ title, description }) => (
           <div
             className="rounded-2xl border border-[var(--border)] bg-white p-5"

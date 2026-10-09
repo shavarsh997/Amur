@@ -1,0 +1,201 @@
+:root {
+  --site-header-height: 65px;
+}
+
+html {
+  scroll-padding-top: calc(var(--site-header-height) + 20px);
+}
+
+@media (min-width: 640px) {
+  :root {
+    --site-header-height: 73px;
+  }
+}
+
+@media (max-width: 1023px) {
+  html {
+    scroll-padding-bottom: 88px;
+  }
+}
+
+/* Layout responds to the reading column, rather than the entire viewport. */
+.site-page-content .site-container {
+  padding-inline: clamp(16px, 4cqw, 40px);
+}
+
+.site-page-content a {
+  overflow-wrap: anywhere;
+}
+
+.site-page-content :is(input, select, textarea) {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.site-page-content
+  :is(.content-split, .content-cards, .content-grid, .content-grid-three) {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.site-page-content .content-section-header {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.site-page-content .content-heading {
+  font-size: clamp(2rem, 5.2cqw, 3rem);
+}
+
+.site-page-content .content-panel {
+  padding: clamp(20px, 4cqw, 40px);
+}
+
+.site-page-content .content-actions {
+  flex-wrap: wrap;
+}
+
+.site-page-content .content-hero-layout {
+  grid-template-columns: minmax(0, 1fr);
+  min-height: 0;
+}
+
+.site-page-content .content-hero-copy {
+  padding: clamp(24px, 4cqw, 48px);
+}
+
+.site-page-content .content-hero-title {
+  font-size: clamp(2rem, 5.8cqw, 3.5rem);
+}
+
+.site-page-content .content-hero-image {
+  min-height: clamp(220px, 34cqw, 340px);
+}
+
+.site-page-content .motion-service-card {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.site-page-content .motion-service-card > div:first-child {
+  min-height: 220px;
+}
+
+.site-page-content .motion-service-card > div:last-child {
+  min-height: 0;
+  padding: 24px;
+}
+
+.site-page-content .content-benefits > article {
+  border-inline: 0;
+  padding: 20px 0;
+}
+
+.site-page-content .content-benefits p {
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.site-page-content .content-included > li {
+  border-right: 0;
+}
+
+.site-page-content .content-process {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.site-page-content .content-process::before {
+  display: block;
+}
+
+.site-page-content .content-process > li {
+  display: grid;
+  grid-template-columns: 2rem minmax(0, 1fr);
+  border-top: 0;
+  padding: 16px 0;
+}
+
+.site-page-content .content-process h3 {
+  margin-top: 0;
+}
+
+.site-page-content .content-aside {
+  border-left: 0;
+  border-top-width: 1px;
+  padding: 24px 0 0;
+}
+
+@container site-content (min-width: 640px) {
+  .site-page-content :is(.content-grid, .content-grid-three) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .site-page-content .motion-service-card {
+    grid-template-columns: 0.8fr 1.2fr;
+  }
+
+  .site-page-content .motion-service-card > div:first-child {
+    min-height: 300px;
+  }
+
+  .site-page-content .content-benefits > article {
+    padding: 24px;
+  }
+
+  .site-page-content .content-included > li:nth-child(odd) {
+    border-right: 1px solid var(--border);
+  }
+}
+
+@container site-content (min-width: 720px) {
+  .site-page-content .content-process {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .site-page-content .content-process::before {
+    display: none;
+  }
+
+  .site-page-content .content-process > li {
+    display: block;
+    border-top: 1px solid rgb(255 255 255 / 0.2);
+    padding: 20px 24px 16px 0;
+  }
+
+  .site-page-content .content-process h3 {
+    margin-top: 16px;
+  }
+}
+
+@container site-content (min-width: 1040px) {
+  .site-page-content :is(.content-grid-three, .content-process) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .site-page-content :is(.content-split, .content-cards) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .site-page-content .content-section-header {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+
+  .site-page-content .content-hero-layout {
+    grid-template-columns: 0.95fr 1.05fr;
+  }
+
+  .site-page-content .content-hero-image {
+    min-height: 100%;
+  }
+
+  .site-page-content .content-aside {
+    border-left-width: 1px;
+    border-top: 0;
+    padding: 0 0 0 32px;
+  }
+}
+
+@media print, (forced-colors: active) {
+  html {
+    scroll-padding-top: calc(var(--site-header-height) + 20px);
+  }
+}

@@ -13,11 +13,11 @@ export function FinalCta({
   return (
     <section className="bg-white py-12 sm:py-16 lg:py-20">
       <Container>
-        <div className="overflow-hidden rounded-2xl border border-[var(--border)] bg-[var(--brand-surface-warm)] p-6 sm:p-10 lg:p-12">
-          <div className="grid items-end gap-8 lg:grid-cols-2 lg:gap-12">
+        <div className="content-panel overflow-hidden rounded-2xl border border-[var(--border)] bg-[var(--brand-surface-warm)] p-6 sm:p-10 lg:p-12">
+          <div className="content-split grid items-end gap-8 lg:grid-cols-2 lg:gap-12">
             <div>
               <span className="block h-px w-10 bg-[var(--brand-copper)]" />
-              <h2 className="max-w-3xl text-pretty text-[clamp(2rem,4vw,3.5rem)] font-semibold leading-[1.14] tracking-[-0.055em] text-[var(--text-primary)]">
+              <h2 className="content-heading max-w-3xl text-pretty text-[clamp(2rem,4vw,3.5rem)] font-semibold leading-[1.14] tracking-[-0.055em] text-[var(--text-primary)]">
                 {dictionary.cta.title}
               </h2>
               <p className="mt-5 max-w-xl text-[15px] leading-7 text-[var(--text-secondary)] sm:text-base">

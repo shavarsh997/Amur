@@ -18,7 +18,7 @@ export function ServicesSection({
   return (
     <section className="bg-[var(--brand-background)] py-12 sm:py-16 lg:py-20">
       <Container>
-        <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
+        <div className="content-section-header flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           <SectionHeading
             description={dictionary.services.description}
             eyebrow={dictionary.services.eyebrow}
@@ -32,7 +32,7 @@ export function ServicesSection({
             <ArrowRight aria-hidden="true" className="size-4" />
           </Link>
         </div>
-        <div className="mt-8 grid gap-4 lg:grid-cols-2">
+        <div className="content-cards mt-8 grid gap-4 lg:grid-cols-2">
           {getActiveServices(locale)
             .filter((service) => service.category === "primary")
             .map(({ content, ...service }) => (

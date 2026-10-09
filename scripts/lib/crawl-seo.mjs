@@ -68,7 +68,13 @@ function parse(html) {
   };
 }
 
-export async function crawlSeo({ base, sitemap, seoRedirects, locales }) {
+export async function crawlSeo({
+  base,
+  sitemap,
+  seoRedirects,
+  locales,
+  organizationsByLocale,
+}) {
   const robotsResponse = await fetch(new URL("/robots.txt", base));
   assert.equal(robotsResponse.status, 200, "robots.txt status");
   const robotsText = await robotsResponse.text();
@@ -201,7 +207,6 @@ export async function crawlSeo({ base, sitemap, seoRedirects, locales }) {
       `Duplicate ${field}`
     );
   }
-  const organizationDefinitions = new Set();
   for (const [path, page] of pages) {
     const schemasOfType = (type) =>
       page.jsonLd.filter((schema) => [schema["@type"]].flat().includes(type));
@@ -212,7 +217,13 @@ export async function crawlSeo({ base, sitemap, seoRedirects, locales }) {
       schemasOfType("BreadcrumbList").length <= 1,
       `Duplicate breadcrumbs: ${path}`
     );
-    organizationDefinitions.add(JSON.stringify(organizations[0]));
+    // The same company's street address and city are translated per locale.
+    // Check the full configured schema for that locale, including its identity.
+    assert.deepEqual(
+      organizations[0],
+      organizationsByLocale[path.split("/")[1]],
+      `Incorrect organization definition: ${path}`
+    );
     for (const service of schemasOfType("Service"))
       assert.equal(
         service.url,
@@ -226,11 +237,6 @@ export async function crawlSeo({ base, sitemap, seoRedirects, locales }) {
       `Duplicate schema IDs: ${path}`
     );
   }
-  assert.equal(
-    organizationDefinitions.size,
-    1,
-    "Conflicting organization definitions across locales"
-  );
   const incoming = new Map([...pages.keys()].map((path) => [path, new Set()]));
   for (const [path, page] of pages) {
     for (const { href, hreflang } of page.anchors) {

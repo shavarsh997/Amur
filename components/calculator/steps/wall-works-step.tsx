@@ -34,7 +34,7 @@ export function WallWorksStep({
             );
 
           return (
-            <div className="mt-6 grid gap-3 sm:grid-cols-2">
+            <div className="mt-6 grid gap-3 content-grid sm:grid-cols-2">
               {wallWorks.map((work) => (
                 <SwitchRowInput
                   inputRef={null}

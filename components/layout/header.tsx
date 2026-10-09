@@ -7,6 +7,7 @@ import { MobileNav, type NavigationItem } from "@/components/layout/mobile-nav";
 import { ContactTrigger } from "@/components/forms/contact-dialog";
 import { BrandMark } from "@/components/ui/brand-mark";
 import { Container } from "@/components/ui/container";
+import { ConstructionBackdrop } from "@/components/motion/construction-backdrop";
 import type { Dictionary, Locale } from "@/types";
 
 type HeaderProps = {
@@ -70,16 +71,19 @@ export function Header({ locale, dictionary }: HeaderProps) {
           />
         </div>
 
-        <MobileNav
-          closeLabel={dictionary.nav.closeMenu}
-          cta={cta}
-          items={navigation}
-          languageLabel={dictionary.nav.language}
-          locale={locale}
-          openLabel={dictionary.nav.openMenu}
-          services={services}
-          servicesLabel={dictionary.footer.services}
-        />
+        <div className="flex shrink-0 items-center gap-2 xl:hidden">
+          <ConstructionBackdrop placement="header" />
+          <MobileNav
+            closeLabel={dictionary.nav.closeMenu}
+            cta={cta}
+            items={navigation}
+            languageLabel={dictionary.nav.language}
+            locale={locale}
+            openLabel={dictionary.nav.openMenu}
+            services={services}
+            servicesLabel={dictionary.footer.services}
+          />
+        </div>
       </Container>
     </header>
   );

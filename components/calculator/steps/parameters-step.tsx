@@ -40,7 +40,7 @@ export function ParametersStep({
             name="constructionPackage"
             options={copy.construction.packages}
           />
-          <div className="grid gap-5 lg:grid-cols-2">
+          <div className="grid gap-5 content-grid lg:grid-cols-2">
             <ChoiceGroup
               control={control}
               label={copy.fields.houseShape}
@@ -54,7 +54,7 @@ export function ParametersStep({
               options={copy.construction.materials}
             />
           </div>
-          <div className="grid gap-3 sm:grid-cols-2">
+          <div className="grid gap-3 content-grid sm:grid-cols-2">
             <OptionWithArea
               areaField="basementArea"
               areaName="basementArea"

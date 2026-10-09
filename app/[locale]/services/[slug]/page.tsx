@@ -146,7 +146,7 @@ export default async function ServiceDetailPage({ params }: Props) {
                 {service.content.fullDescription}
               </p>
             </section>
-            <div className="grid gap-10 md:grid-cols-3">
+            <div className="grid gap-10 content-grid-three md:grid-cols-3">
               <section>
                 <h2 className="text-xl font-semibold text-[var(--text-primary)]">
                   {copy.included}
@@ -188,7 +188,7 @@ export default async function ServiceDetailPage({ params }: Props) {
             {service.content.customerTypes?.length ||
             service.content.workTypes?.length ||
             service.content.estimateRequirements?.length ? (
-              <div className="grid gap-5 md:grid-cols-3">
+              <div className="grid gap-5 content-grid-three md:grid-cols-3">
                 {service.content.customerTypes?.length ? (
                   <ContentList
                     items={service.content.customerTypes}
@@ -211,7 +211,7 @@ export default async function ServiceDetailPage({ params }: Props) {
             ) : null}
             {service.content.priceFactors.length || faqs.length ? (
               <div
-                className={`grid gap-8 ${service.content.priceFactors.length && faqs.length ? "md:grid-cols-2" : "md:grid-cols-1"}`}
+                className={`grid gap-8 ${service.content.priceFactors.length && faqs.length ? "content-grid md:grid-cols-2" : "md:grid-cols-1"}`}
               >
                 {service.content.priceFactors.length ? (
                   <section className="rounded-2xl border border-[var(--border)] bg-[var(--background-soft)] p-6">
@@ -242,7 +242,7 @@ export default async function ServiceDetailPage({ params }: Props) {
                 <h2 className="text-2xl font-semibold tracking-[-0.03em] text-[var(--text-primary)]">
                   {dictionary.seo.relatedPlanningTitle}
                 </h2>
-                <div className="mt-5 grid gap-3 md:grid-cols-2">
+                <div className="mt-5 grid gap-3 content-grid md:grid-cols-2">
                   {relatedSeoPages.map((page) => (
                     <Link
                       className="rounded-2xl border border-[var(--border)] bg-[var(--background-soft)] p-5 transition hover:border-[var(--brand-copper)]"

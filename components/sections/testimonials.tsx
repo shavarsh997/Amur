@@ -14,7 +14,7 @@ export function Testimonials({ dictionary }: { dictionary: Dictionary }) {
           eyebrow={dictionary.testimonials.eyebrow}
           title={dictionary.testimonials.title}
         />
-        <div className="mt-12 grid gap-6 lg:grid-cols-3">
+        <div className="mt-12 grid gap-6 content-grid-three lg:grid-cols-3">
           {dictionary.testimonials.items.map((item, index) => (
             <figure
               className="flex flex-col rounded-3xl border border-zinc-200 bg-zinc-50 p-7"

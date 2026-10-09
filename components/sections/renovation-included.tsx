@@ -11,10 +11,10 @@ export function RenovationIncluded({ locale }: { locale: Locale }) {
   return (
     <section className="bg-[var(--background-soft)] py-12 sm:py-16 lg:py-20">
       <Container>
-        <div className="grid gap-8 lg:grid-cols-[0.7fr_1.3fr] lg:gap-14">
+        <div className="content-split grid gap-8 lg:grid-cols-[0.7fr_1.3fr] lg:gap-14">
           <SectionHeading eyebrow={content.eyebrow} title={content.title} />
           <div>
-            <ul className="grid border-t border-[var(--border)] sm:grid-cols-2">
+            <ul className="content-included content-grid grid border-t border-[var(--border)] sm:grid-cols-2">
               {content.items.map((item) => (
                 <li
                   className="flex items-center gap-3 border-b border-[var(--border)] py-4 pr-4 text-sm font-medium text-[var(--text-primary)] sm:px-4 sm:odd:border-r"

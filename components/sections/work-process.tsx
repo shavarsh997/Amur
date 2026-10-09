@@ -13,7 +13,7 @@ export function WorkProcess({ dictionary }: { dictionary: Dictionary }) {
           inverted
           title={dictionary.process.title}
         />
-        <ol className="relative mt-8 grid gap-x-0 gap-y-0 before:absolute before:bottom-4 before:left-4 before:top-4 before:w-px before:bg-white/20 md:grid-cols-2 md:gap-y-7 md:before:hidden lg:grid-cols-3">
+        <ol className="content-process relative mt-8 grid gap-x-0 gap-y-0 before:absolute before:bottom-4 before:left-4 before:top-4 before:w-px before:bg-white/20 md:grid-cols-2 md:gap-y-7 md:before:hidden lg:grid-cols-3">
           {operationsConfig.workflow.map((workflowKey, index) => {
             const step = dictionary.process.steps[index];
             if (!step) return null;

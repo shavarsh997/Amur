@@ -143,7 +143,7 @@ export function SeoLandingPage({
                   ))}
                 </div>
                 {section.items?.length ? (
-                  <ul className="mt-5 grid gap-3 sm:grid-cols-2">
+                  <ul className="mt-5 grid gap-3 content-grid sm:grid-cols-2">
                     {section.items.map((item) => (
                       <li
                         className="rounded-xl border border-[var(--border)] bg-[var(--background-soft)] px-4 py-3 leading-6 text-[var(--text-secondary)]"
@@ -193,7 +193,7 @@ export function SeoLandingPage({
                 <h2 className="text-2xl font-semibold tracking-[-0.035em] text-[var(--text-primary)] sm:text-3xl">
                   {content.relatedTitle}
                 </h2>
-                <div className="mt-6 grid gap-3 sm:grid-cols-3">
+                <div className="mt-6 grid gap-3 content-grid-three sm:grid-cols-3">
                   {relatedLandings.map((landing) => (
                     <Link
                       className="rounded-2xl border border-[var(--border)] bg-white p-5 transition hover:border-[var(--brand-copper)]"

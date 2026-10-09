@@ -19,8 +19,8 @@ export function Hero({
     <section className="overflow-hidden bg-[var(--brand-background)]">
       <Container className="py-4 sm:py-7 lg:py-8">
         <div className="relative overflow-hidden rounded-2xl border border-[var(--border)] bg-white">
-          <div className="grid lg:min-h-[590px] lg:grid-cols-[0.9fr_1.1fr]">
-            <div className="relative z-10 flex flex-col justify-center px-4 py-7 sm:px-9 sm:py-14 lg:px-12 lg:py-16">
+          <div className="content-hero-layout grid lg:min-h-[590px] lg:grid-cols-[0.9fr_1.1fr]">
+            <div className="content-hero-copy relative z-10 flex flex-col justify-center px-4 py-7 sm:px-9 sm:py-14 lg:px-12 lg:py-16">
               <p className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.13em] text-[var(--text-secondary)]">
                 <span
                   aria-hidden="true"
@@ -28,13 +28,13 @@ export function Hero({
                 />
                 {dictionary.hero.eyebrow}
               </p>
-              <h1 className="mt-5 w-full break-words text-pretty text-[2.25rem] font-semibold leading-[1.14] tracking-[-0.055em] text-[var(--text-primary)] sm:mt-6 sm:text-[2.25rem] lg:text-[3rem]">
+              <h1 className="content-hero-title mt-5 w-full break-words text-pretty text-[2.25rem] font-semibold leading-[1.14] tracking-[-0.055em] text-[var(--text-primary)] sm:mt-6 sm:text-[2.25rem] lg:text-[3rem]">
                 {dictionary.hero.title}
               </h1>
               <p className="mt-5 max-w-full text-[15px] leading-6 text-[var(--text-secondary)] sm:text-[17px] sm:leading-7">
                 {dictionary.hero.description}
               </p>
-              <div className="w-full mt-7 grid grid-cols-2 gap-3 sm:flex sm:flex-row sm:items-center">
+              <div className="content-actions w-full mt-7 grid grid-cols-2 gap-3 sm:flex sm:flex-row sm:items-center">
                 <ContactTrigger
                   className="w-full sm:w-auto text-left"
                   label={dictionary.hero.primaryAction}
@@ -60,7 +60,7 @@ export function Hero({
                 ))}
               </ul>
             </div>
-            <div className="relative order-2 min-h-[280px] overflow-hidden bg-[var(--surface-muted)] lg:order-none lg:min-h-full">
+            <div className="content-hero-image relative order-2 min-h-[280px] overflow-hidden bg-[var(--surface-muted)] lg:order-none lg:min-h-full">
               <div className="motion-photo" data-parallax="vertical">
                 <Image
                   alt={content.heroVisual.alt}
@@ -68,7 +68,7 @@ export function Hero({
                   fill
                   preload
                   quality={82}
-                  sizes="(max-width: 1023px) 100vw, 56vw"
+                  sizes="(max-width: 1279px) 100vw, (max-width: 1333px) 78vw, 620px"
                   src={content.heroVisual.image}
                 />
               </div>

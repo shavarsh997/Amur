@@ -70,7 +70,7 @@ export function ProjectFilter({
         })}
       </div>
 
-      <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-10 grid gap-6 content-grid md:grid-cols-2 content-grid-three lg:grid-cols-3">
         {visibleProjects.map((project) => (
           <ProjectCard
             key={project.slug}

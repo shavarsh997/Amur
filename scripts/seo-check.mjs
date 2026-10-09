@@ -356,7 +356,18 @@ if (baseIndex !== -1) {
   assert(process.argv[baseIndex + 1], "Provide a base URL after --base-url");
   const base = new URL(process.argv[baseIndex + 1]);
   const { crawlSeo } = await import("./lib/crawl-seo.mjs");
-  const pages = await crawlSeo({ base, sitemap, seoRedirects, locales });
+  const pages = await crawlSeo({
+    base,
+    sitemap,
+    seoRedirects,
+    locales,
+    organizationsByLocale: Object.fromEntries(
+      locales.map((locale) => [
+        locale,
+        JSON.parse(serializeJsonLd(getOrganizationJsonLd(locale))),
+      ])
+    ),
+  });
   const reportIndex = process.argv.indexOf("--report");
   if (reportIndex !== -1) {
     assert(process.argv[reportIndex + 1], "Provide a JSON path after --report");

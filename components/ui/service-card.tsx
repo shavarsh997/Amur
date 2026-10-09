@@ -40,7 +40,7 @@ export function ServiceCard({
             alt={getServiceImageAlt(service.image, locale)}
             className="motion-service-photo object-cover"
             fill
-            sizes="(max-width: 639px) 100vw, (max-width: 1199px) 42vw, 27vw"
+            sizes="(max-width: 639px) 100vw, (max-width: 1279px) 40vw, (max-width: 1333px) 32vw, 260px"
             src={service.image}
           />
         </div>

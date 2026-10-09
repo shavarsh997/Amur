@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { createPortal } from "react-dom";
 
 import type { CalculatorFormValues } from "@/components/calculator/types";
 import { EstimateLoadingState } from "@/components/calculator/estimate-loading-state";
@@ -85,7 +86,9 @@ export function ConstructionEstimateDialog({
     </dd>
   );
 
-  return (
+  if (typeof document === "undefined") return null;
+
+  return createPortal(
     <div
       aria-labelledby="construction-estimate-title"
       aria-modal="true"
@@ -275,6 +278,7 @@ export function ConstructionEstimateDialog({
           </p>
         ) : null}
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }

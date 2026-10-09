@@ -7,7 +7,7 @@ export function FAQSection({ dictionary }: { dictionary: Dictionary }) {
   return (
     <section className="bg-[var(--background-soft)] py-12 sm:py-16 lg:py-20">
       <Container>
-        <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:gap-10">
+        <div className="content-split grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:gap-10">
           <SectionHeading
             description={dictionary.faq.description}
             eyebrow={dictionary.faq.eyebrow}

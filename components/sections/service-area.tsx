@@ -19,19 +19,22 @@ export function ServiceArea({ locale }: { locale: Locale }) {
   return (
     <section className="bg-white py-12 sm:py-16 lg:py-20">
       <Container>
-        <div className="grid gap-8 rounded-2xl bg-[var(--background-warm)] p-6 sm:p-9 lg:grid-cols-[1.1fr_0.9fr] lg:gap-14 lg:p-10">
+        <div className="content-split content-panel grid gap-8 rounded-2xl bg-[var(--background-warm)] p-6 sm:p-9 lg:grid-cols-[1.1fr_0.9fr] lg:gap-14 lg:p-10">
           <div className="min-w-0">
             <p className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.13em] text-[var(--text-secondary)]">
-              <span aria-hidden="true" className="h-px w-8 bg-[var(--brand-copper)]" />
+              <span
+                aria-hidden="true"
+                className="h-px w-8 bg-[var(--brand-copper)]"
+              />
               {content.label}
             </p>
-            <h2 className="mt-5 max-w-xl text-balance text-3xl font-semibold leading-[1.14] tracking-[-0.04em] text-[var(--text-primary)] sm:text-4xl">
+            <h2 className="content-heading mt-5 max-w-xl text-balance text-3xl font-semibold leading-[1.14] tracking-[-0.04em] text-[var(--text-primary)] sm:text-4xl">
               {content.title}
             </h2>
             <p className="mt-4 max-w-xl text-[15px] leading-6 text-[var(--text-secondary)] sm:text-base sm:leading-7">
               {content.description}
             </p>
-            <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+            <div className="content-actions mt-6 flex flex-col gap-3 sm:flex-row">
               <ButtonLink href={content.primaryCta.href}>
                 {content.primaryCta.label}
               </ButtonLink>

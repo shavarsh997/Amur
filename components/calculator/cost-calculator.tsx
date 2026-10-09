@@ -107,9 +107,9 @@ export function CostCalculator({
   return (
     <FormProvider {...form}>
       <div
-        className={`flex flex-col items-start gap-5 lg:grid-cols-[minmax(0,1fr)_20rem] ${className}`}
+        className={`w-full min-w-0 flex flex-col items-stretch gap-5 lg:grid-cols-[minmax(0,1fr)_20rem] ${className}`}
       >
-        <div className="space-y-5">
+        <div className="min-w-0 space-y-5">
           <ScenarioStep
             copy={copy}
             onSelectScenario={selectScenario}

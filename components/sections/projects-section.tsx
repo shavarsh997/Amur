@@ -5,7 +5,10 @@ import { SectionHeading } from "@/components/ui/section-heading";
 import { featuredProjects } from "@/data/featured-projects";
 import type { Dictionary, Locale } from "@/types";
 
-export function ProjectsSection({ locale, dictionary }: {
+export function ProjectsSection({
+  locale,
+  dictionary,
+}: {
   locale: Locale;
   dictionary: Dictionary;
 }) {
@@ -19,7 +22,7 @@ export function ProjectsSection({ locale, dictionary }: {
             title={dictionary.projects.title}
           />
         </div>
-        <div className="mt-8 grid gap-3 md:grid-cols-2 lg:grid-cols-3 lg:gap-5">
+        <div className="mt-8 grid gap-3 content-grid md:grid-cols-2 content-grid-three lg:grid-cols-3 lg:gap-5">
           {featuredProjects.map((project, index) => (
             <figure
               className="group relative aspect-[4/3] overflow-hidden rounded-xl bg-[var(--surface-muted)]"

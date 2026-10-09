@@ -1,9 +1,4 @@
-import {
-  Building2,
-  Home,
-  Paintbrush,
-  PenTool,
-} from "lucide-react";
+import { Building2, Home, Paintbrush, PenTool } from "lucide-react";
 
 import { selectionClass } from "@/components/calculator/constants";
 import { StepTitle } from "@/components/calculator/form/step-title";
@@ -29,7 +24,7 @@ export function ScenarioStep({
   return (
     <section className="rounded-[28px] border border-[var(--border)] bg-white p-5 shadow-[var(--shadow-card)] sm:p-7">
       <StepTitle number="01" {...copy.steps.scenario} />
-      <div className="mt-6 grid gap-3 sm:grid-cols-2">
+      <div className="mt-6 grid gap-3 content-grid sm:grid-cols-2">
         {config.quickScenarios.map((scenario) => {
           const Icon =
             scenarioIcons[scenario.id as keyof typeof scenarioIcons] ??

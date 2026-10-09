@@ -46,11 +46,11 @@ export default async function CalculatorPage({ params }: Props) {
         }}
         type="application/ld+json"
       />
-      <div className="rounded-[28px] border border-[var(--border)] bg-[var(--background-soft)] p-7 text-center sm:p-12">
+      <div className="content-panel rounded-[28px] border border-[var(--border)] bg-[var(--background-soft)] p-7 text-center sm:p-12">
         <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[var(--brand-accent)]">
           {copy.eyebrow}
         </p>
-        <h1 className="mx-auto mt-3 max-w-2xl text-3xl font-semibold tracking-[-0.05em] text-[var(--text-primary)] sm:text-5xl">
+        <h1 className="content-heading mx-auto mt-3 max-w-2xl text-3xl font-semibold tracking-[-0.05em] text-[var(--text-primary)] sm:text-5xl">
           {seo.title}
         </h1>
         <p className="mx-auto mt-4 max-w-xl text-base leading-7 text-[var(--text-secondary)]">

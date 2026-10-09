@@ -59,7 +59,7 @@ export default async function ServicesPage({ params }: Props) {
       <Container className="space-y-5 py-12 sm:py-16 lg:py-20">
         {getActiveServices(locale).map(({ content, ...service }, index) => (
           <article
-            className="grid overflow-hidden rounded-[24px] border border-[var(--border)] bg-white lg:grid-cols-2"
+            className="content-split grid overflow-hidden rounded-[24px] border border-[var(--border)] bg-white lg:grid-cols-2"
             key={service.slug}
           >
             <div
@@ -80,7 +80,7 @@ export default async function ServicesPage({ params }: Props) {
               <p className="mt-4 leading-7 text-[var(--text-secondary)]">
                 {content.fullDescription}
               </p>
-              <div className="mt-7 grid gap-6 sm:grid-cols-2">
+              <div className="mt-7 grid gap-6 content-grid sm:grid-cols-2">
                 <div>
                   <h3 className="font-semibold text-[var(--text-primary)]">
                     {services.detail.included}
