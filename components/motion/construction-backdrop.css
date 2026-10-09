@@ -76,6 +76,10 @@
 .construction-backdrop__sticky {
   position: relative;
   height: 100%;
+  @media (min-width: 1280px) {
+    height: 50%;
+    top: 50%;
+  }
 }
 
 .construction-scene {

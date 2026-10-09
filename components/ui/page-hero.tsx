@@ -30,7 +30,7 @@ export function PageHero({
             items={breadcrumbs}
           />
         ) : null}
-        <div className="max-w-4xl">
+        <div className="max-w-6xl">
           {eyebrow ? (
             <p className="mb-4 text-xs font-semibold uppercase tracking-[0.16em] text-[var(--text-muted)]">
               {eyebrow}

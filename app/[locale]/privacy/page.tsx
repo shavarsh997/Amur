@@ -40,7 +40,7 @@ export default async function PrivacyPage({ params }: Props) {
         title={privacy.title}
       />
       <Container className="py-12 sm:py-16 lg:py-20">
-        <article className="mx-auto max-w-4xl">
+        <article className="mx-auto max-w-6xl">
           {companyConfig.privacy.updatedAt ? (
             <p className="text-sm font-semibold text-[var(--brand-accent)]">
               {privacy.updated}: {companyConfig.privacy.updatedAt}

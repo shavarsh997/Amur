@@ -122,7 +122,7 @@ export function SeoLandingPage({
               />
             </div>
           ) : null}
-          <div className="mx-auto mt-12 max-w-4xl space-y-12">
+          <div className="mx-auto mt-12 max-w-8xl space-y-12">
             <section className="space-y-5 text-lg leading-8 text-[var(--text-secondary)]">
               {content.introduction.map((paragraph) => (
                 <p key={paragraph}>{paragraph}</p>
