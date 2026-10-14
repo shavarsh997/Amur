@@ -19,7 +19,7 @@ const cardClass =
   "group flex min-h-24 items-center gap-3 rounded-2xl border border-[var(--border)] bg-white p-4 text-left shadow-[0_14px_30px_-26px_rgb(24_24_27/0.55)] transition hover:-translate-y-0.5 hover:border-[var(--border-strong)] hover:shadow-[0_18px_36px_-26px_rgb(24_24_27/0.45)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--button-primary)]";
 
 type ContactMethodsProps = {
-  dictionary: Dictionary;
+  copy: Dictionary["contacts"];
   onMessageClick?: () => void;
 };
 
@@ -31,11 +31,7 @@ function MethodIcon({ children }: { children: ReactNode }) {
   );
 }
 
-export function ContactMethods({
-  dictionary,
-  onMessageClick,
-}: ContactMethodsProps) {
-  const copy = dictionary.contacts;
+export function ContactMethods({ copy, onMessageClick }: ContactMethodsProps) {
   const phoneHref = getPhoneHref();
   const whatsappHref = getWhatsAppHref();
   const mailHref = getMailHref();

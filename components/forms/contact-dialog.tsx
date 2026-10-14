@@ -1,17 +1,23 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { lazy, Suspense, useEffect, useRef, useState } from "react";
 import { ArrowLeft, CheckCircle2, MessageCircle, X } from "lucide-react";
 
 import {
   ContactMethods,
   contactMessageEvent,
 } from "@/components/forms/contact-methods";
-import { LeadForm } from "@/components/forms/lead-form";
 import { Button } from "@/components/ui/button";
 import type { ButtonSize } from "@/components/ui/button-styles";
 import { trackEvent } from "@/lib/analytics";
-import type { Dictionary, Locale } from "@/types";
+import type { Locale } from "@/types";
+import type { ContactDialogDictionary } from "@/types/contact";
+
+const LeadForm = lazy(() =>
+  import("@/components/forms/lead-form").then((module) => ({
+    default: module.LeadForm,
+  }))
+);
 
 const contactOpenEvent = "open-project-contact";
 
@@ -66,7 +72,7 @@ export function ContactDialog({
   dictionary,
   locale,
 }: {
-  dictionary: Dictionary;
+  dictionary: ContactDialogDictionary;
   locale: Locale;
 }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -208,16 +214,28 @@ export function ContactDialog({
                 {copy.methodsDescription}
               </p>
               <ContactMethods
-                dictionary={dictionary}
+                copy={copy}
                 onMessageClick={() => setView("form")}
               />
             </>
           ) : view === "form" ? (
-            <LeadForm
-              dictionary={dictionary}
-              locale={locale}
-              onSuccess={() => setView("success")}
-            />
+            <Suspense
+              fallback={
+                <div
+                  aria-busy="true"
+                  className="flex min-h-56 items-center justify-center text-sm text-[var(--text-secondary)]"
+                  role="status"
+                >
+                  {dictionary.common.loading}
+                </div>
+              }
+            >
+              <LeadForm
+                dictionary={dictionary}
+                locale={locale}
+                onSuccess={() => setView("success")}
+              />
+            </Suspense>
           ) : (
             <div
               aria-live="polite"

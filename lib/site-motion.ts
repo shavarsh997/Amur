@@ -51,16 +51,26 @@ export function initializeSiteMotion(root: HTMLElement) {
       { rootMargin: "0px 0px 24px 0px", threshold: 0 }
     );
 
-    root.querySelectorAll<HTMLElement>("[data-motion]").forEach((element) => {
+    // Read every position before changing animation styles. Interleaving these
+    // reads and writes makes the browser repeatedly recalculate layout on startup.
+    const initialPositions = Array.from(
+      root.querySelectorAll<HTMLElement>("[data-motion]")
+    )
+      .filter((element) => !element.dataset.motionState)
+      .map((element) => ({
+        element,
+        inViewport: element.getBoundingClientRect().top < window.innerHeight,
+      }));
+
+    for (const { element, inViewport } of initialPositions) {
       // Do not replay entrances on restored scroll positions or preference changes.
-      if (element.dataset.motionState) return;
-      if (element.getBoundingClientRect().top < window.innerHeight) {
+      if (inViewport) {
         element.dataset.motionState =
           element.dataset.motion === "rule" ? "entered" : "visible";
       } else {
         revealObserver.observe(element);
       }
-    });
+    }
 
     let stopParallax = () => {};
 

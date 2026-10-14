@@ -6,7 +6,8 @@ import { submitLeadAction, type LeadActionState } from "@/app/actions";
 import { leadFormConfig } from "@/config/lead-form.config";
 import { Button } from "@/components/ui/button";
 import { trackEvent } from "@/lib/analytics";
-import type { Dictionary, Locale } from "@/types";
+import type { Locale } from "@/types";
+import type { LeadFormDictionary } from "@/types/contact";
 
 const initialState: LeadActionState = {
   status: "idle",
@@ -24,7 +25,7 @@ export function LeadForm({
   onSuccess,
 }: {
   locale: Locale;
-  dictionary: Dictionary;
+  dictionary: LeadFormDictionary;
   className?: string;
   onSuccess?: () => void;
 }) {

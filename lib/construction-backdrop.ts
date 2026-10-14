@@ -60,33 +60,53 @@ export function initializeConstructionBackdrop(root: HTMLElement) {
     }
 
     let frame = 0;
+    let needsMeasurement = true;
+    let documentTop = 0;
+    let scrollRange = 0;
     const update = () => {
       frame = 0;
-      const { top, height } = root.getBoundingClientRect();
-      render(getConstructionSequence(-top, height - window.innerHeight));
+      // Scrolling changes the viewport offset, not the page geometry. Measure
+      // only after layout changes, before writing animation styles.
+      if (needsMeasurement) {
+        const { top, height } = root.getBoundingClientRect();
+        documentTop = top + window.scrollY;
+        scrollRange = height - window.innerHeight;
+        needsMeasurement = false;
+      }
+      render(
+        getConstructionSequence(window.scrollY - documentTop, scrollRange)
+      );
     };
     const schedule = () => {
       if (!frame && !document.hidden) {
         frame = window.requestAnimationFrame(update);
       }
     };
+    const invalidateLayout = () => {
+      needsMeasurement = true;
+      schedule();
+    };
     const resizeObserver =
-      "ResizeObserver" in window ? new ResizeObserver(schedule) : null;
+      "ResizeObserver" in window ? new ResizeObserver(invalidateLayout) : null;
 
     resizeObserver?.observe(root);
+    // A wrapped header can move the animation root without resizing it.
+    if (root.parentElement) resizeObserver?.observe(root.parentElement);
+    const header = document.querySelector("header");
+    if (header) resizeObserver?.observe(header);
     window.addEventListener("scroll", schedule, { passive: true });
-    window.addEventListener("resize", schedule);
-    window.addEventListener("pageshow", schedule);
-    document.addEventListener("visibilitychange", schedule);
+    window.addEventListener("resize", invalidateLayout);
+    window.addEventListener("pageshow", invalidateLayout);
+    document.addEventListener("visibilitychange", invalidateLayout);
     schedule();
 
     stop = () => {
       window.cancelAnimationFrame(frame);
       resizeObserver?.disconnect();
       window.removeEventListener("scroll", schedule);
-      window.removeEventListener("resize", schedule);
-      window.removeEventListener("pageshow", schedule);
-      document.removeEventListener("visibilitychange", schedule);
+      window.removeEventListener("resize", invalidateLayout);
+      window.removeEventListener("pageshow", invalidateLayout);
+      document.removeEventListener("visibilitychange", invalidateLayout);
     };
   };
 

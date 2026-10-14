@@ -26,6 +26,8 @@ import {
 } from "@/lib/json-ld";
 
 import "../globals.css";
+import "@/components/motion/construction-backdrop.css";
+import "@/components/motion/content-layout.css";
 
 const googleAnalyticsMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 
@@ -102,21 +104,34 @@ export default async function LocaleLayout({
             </SiteMotion>
           </main>
           <Footer dictionary={dictionary} locale={locale} />
-          <ContactDialog dictionary={dictionary} locale={locale} />
+          <ContactDialog
+            dictionary={{
+              contacts: dictionary.contacts,
+              estimate: dictionary.estimate,
+              nav: { closeMenu: dictionary.nav.closeMenu },
+              common: {
+                back: dictionary.common.back,
+                loading: dictionary.common.loading,
+                optional: dictionary.common.optional,
+                website: dictionary.common.website,
+              },
+            }}
+            locale={locale}
+          />
           <MobileCtaBar contactLabel={dictionary.nav.contacts} />
         </div>
         {googleAnalyticsMeasurementId ? (
           <>
             <Script
               src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsMeasurementId}`}
-              strategy="afterInteractive"
+              strategy="lazyOnload"
             />
             <Script id="google-analytics" strategy="afterInteractive">
               {`
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
-                gtag('config', '${googleAnalyticsMeasurementId}');
+                gtag('config', ${JSON.stringify(googleAnalyticsMeasurementId)});
               `}
             </Script>
           </>

@@ -1,5 +1,3 @@
-import "./construction-backdrop.css";
-import "./content-layout.css";
 import { ConstructionBuilding } from "./construction-building";
 
 /** Decorative vector artwork, rendered on the server and excluded from the accessibility tree. */

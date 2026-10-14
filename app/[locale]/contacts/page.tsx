@@ -173,7 +173,7 @@ export default async function ContactsPage({ params }: Props) {
           <p className="mt-4 leading-7 text-[var(--text-secondary)]">
             {copy.methodsDescription}
           </p>
-          <ContactMethods dictionary={dictionary} />
+          <ContactMethods copy={dictionary.contacts} />
         </section>
       </Container>
     </>
