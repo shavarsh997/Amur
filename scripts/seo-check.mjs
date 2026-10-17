@@ -34,6 +34,8 @@ const { seoLandingPages, getSeoLandingPath } = load(
   "config/seo-landing-pages.config"
 );
 const { getActiveServices } = load("config/services.config");
+const { getServiceNavigation } = load("config/navigation.config");
+const { blogArticles } = load("data/blog");
 const { serviceGuideGroups } = load("config/service-guides.config");
 const { seoIntentMap } = load("config/seo-intents.config");
 const { seoRedirects } = load("config/seo-redirects.config");
@@ -53,6 +55,119 @@ const paths = new Set(
 );
 const serviceSlugs = new Set(getActiveServices("hy").map(({ slug }) => slug));
 const landingSlugs = new Set(seoLandingPages.map(({ slug }) => slug));
+const pageExpectations = {};
+function expectPage(locale, path, title, description, h1) {
+  const metadata = createPageMetadata({ locale, path, title, description });
+  pageExpectations[`/${locale}/${path}`] = {
+    title: metadata.title.absolute,
+    description,
+    h1,
+  };
+}
+
+// Test the public copy against the actual calculation engine, not just route names.
+const { initialValues } = load("components/calculator/constants");
+const { calculateConstructionEstimate } = load(
+  "lib/calculator/calculate-construction-estimate"
+);
+const russian = await getDictionary("ru");
+for (const calculationType of ["construction", "design"]) {
+  const estimate = calculateConstructionEstimate(
+    { ...initialValues, calculationType, area: "60" },
+    russian.constructionCalculator
+  );
+  assert(estimate.total > 0 && Number.isFinite(estimate.total));
+}
+assert.throws(
+  () =>
+    calculateConstructionEstimate(
+      { ...initialValues, calculationType: "renovation", area: "60" },
+      russian.constructionCalculator
+    ),
+  /Renovation estimates require contacting SHINEX/
+);
+for (const field of ["title", "description", "intro", "faqTitle"]) {
+  assert.match(
+    russian.calculatorPage[field],
+    /строительств/iu,
+    `Calculator ${field}: missing construction`
+  );
+  assert.match(
+    russian.calculatorPage[field],
+    /дизайн/iu,
+    `Calculator ${field}: missing design`
+  );
+}
+assert.doesNotMatch(
+  russian.calculatorPage.title,
+  /ремонт/iu,
+  "Calculator title promises unsupported renovation calculation"
+);
+for (const field of ["description", "intro"]) {
+  assert.match(
+    russian.calculatorPage[field],
+    /ремонт[\s\S]*автоматическ[\s\S]*недоступен/iu,
+    `Calculator ${field}: missing renovation limitation`
+  );
+}
+
+// Publication fixtures are isolated in memory and never written to site content.
+function checkBlogSitemap(entries, articles) {
+  const published = articles.filter(({ isPublished }) => isPublished);
+  const expectedPaths = published.length
+    ? ["blog", ...published.map(({ slug }) => `blog/${slug}`)]
+    : [];
+  const actual = entries.filter(({ url }) =>
+    /^\/[^/]+\/blog(?:\/|$)/.test(new URL(url).pathname)
+  );
+  const expectedUrls = expectedPaths.flatMap((path) =>
+    locales.map((locale) => `https://www.shinex.am/${locale}/${path}`)
+  );
+  assert.deepEqual(
+    actual.map(({ url }) => url).sort(),
+    expectedUrls.sort(),
+    "Sitemap must include exactly the published articles and their blog index in every locale"
+  );
+  for (const entry of actual) {
+    const path = new URL(entry.url).pathname.split("/").slice(2).join("/");
+    const metadata = createPageMetadata({
+      locale: "hy",
+      path,
+      title: "Test",
+      description: "Test",
+    });
+    assert.deepEqual(
+      entry.alternates.languages,
+      metadata.alternates.languages,
+      `Blog hreflang: ${entry.url}`
+    );
+  }
+}
+checkBlogSitemap(sitemap, blogArticles);
+const fixtureLoad = createTypeScriptLoader(process.cwd());
+const fixtureBlog = fixtureLoad("data/blog");
+const fixtureSitemap = fixtureLoad("app/sitemap").default;
+fixtureBlog.blogArticles.splice(0);
+checkBlogSitemap(fixtureSitemap(), []);
+const draft = { slug: "seo-test-draft", isPublished: false };
+fixtureBlog.blogArticles.push(draft);
+checkBlogSitemap(fixtureSitemap(), [draft]);
+const published = { slug: "seo-test-published", isPublished: true };
+fixtureBlog.blogArticles.push(published);
+checkBlogSitemap(fixtureSitemap(), [draft, published]);
+assert.equal(
+  fixtureBlog.getPublishedArticle(draft.slug),
+  undefined,
+  "Draft article is publicly accessible"
+);
+assert.equal(fixtureBlog.getPublishedArticle(published.slug), published);
+published.isPublished = false;
+checkBlogSitemap(fixtureSitemap(), [draft, published]);
+assert.equal(
+  fixtureBlog.getPublishedArticle(published.slug),
+  undefined,
+  "Unpublished article remains accessible"
+);
 
 // New dictionaries must preserve form fields, list entries and interpolation tokens.
 function checkTranslation(reference, translated, path) {
@@ -98,6 +213,74 @@ for (const locale of ["de", "fr"]) {
 }
 for (const locale of locales) {
   const dictionary = await getDictionary(locale);
+  expectPage(
+    locale,
+    "calculator",
+    dictionary.calculatorPage.title,
+    dictionary.calculatorPage.description,
+    dictionary.calculatorPage.title
+  );
+  expectPage(
+    locale,
+    "about",
+    dictionary.about.title,
+    dictionary.about.intro,
+    dictionary.about.title
+  );
+  for (const { slug, content } of getActiveServices(locale)) {
+    expectPage(
+      locale,
+      `services/${slug}`,
+      content.seoTitle,
+      content.seoDescription,
+      content.heroTitle ?? content.title
+    );
+  }
+  const serviceNavigation = getServiceNavigation(locale);
+  assert.equal(
+    serviceNavigation[0].path,
+    seoIntentMap["apartment-renovation"].paths[locale],
+    `Apartment renovation must lead service navigation: ${locale}`
+  );
+  assert(
+    serviceNavigation.some(
+      ({ path }) => path === seoIntentMap["house-renovation"].paths[locale]
+    ),
+    `House renovation navigation missing: ${locale}`
+  );
+  assert.equal(
+    new Set(serviceNavigation.map(({ path }) => path)).size,
+    serviceNavigation.length,
+    `Duplicate service navigation: ${locale}`
+  );
+  const house = getActiveServices(locale).find(
+    ({ slug }) => slug === "renovation"
+  ).content;
+  const houseTerms = {
+    hy: /առանձնատ/iu,
+    ru: /частн[а-яё]* дом/iu,
+    en: /private house/iu,
+    de: /privathäuser/iu,
+    fr: /maisons individuelles/iu,
+  };
+  for (const field of ["title", "seoTitle"]) {
+    assert.match(
+      house[field],
+      houseTerms[locale],
+      `House page lost its distinct intent: ${locale}/${field}`
+    );
+    assert.doesNotMatch(
+      house[field],
+      /բնակարան|квартир|apartment|wohnung|appartement/iu,
+      `House page competes for apartment intent: ${locale}/${field}`
+    );
+  }
+  for (const { path, label } of serviceNavigation) {
+    assert(
+      paths.has(path) && label.trim(),
+      `Invalid service navigation: ${locale}/${path}`
+    );
+  }
   const metadata = createPageMetadata({
     locale,
     title: dictionary.metadata.title,
@@ -140,8 +323,8 @@ for (const route of sitemap) {
     "Technical URL in sitemap"
   );
   assert(
-    !/\/(projects|blog)(\/|$)/.test(new URL(route.url).pathname),
-    "Unpublished content in sitemap"
+    !/\/projects(\/|$)/.test(url.pathname),
+    "Unpublished projects in sitemap"
   );
   const alternatives = Object.values(route.alternates.languages);
   assert(
@@ -165,6 +348,13 @@ for (const page of seoLandingPages) {
     assert(landingSlugs.has(slug), `Unknown related landing ${slug}`);
   for (const locale of locales) {
     const content = page.translations[locale];
+    expectPage(
+      locale,
+      getSeoLandingPath(page),
+      content.seoTitle,
+      content.seoDescription,
+      content.title
+    );
     for (const key of ["title", "description", "seoTitle", "seoDescription"])
       assert(content[key]?.trim(), `${page.slug}/${locale}: missing ${key}`);
     assert(content.sections.length, `No content for ${page.slug}/${locale}`);
@@ -367,6 +557,7 @@ if (baseIndex !== -1) {
         JSON.parse(serializeJsonLd(getOrganizationJsonLd(locale))),
       ])
     ),
+    pageExpectations,
   });
   const reportIndex = process.argv.indexOf("--report");
   if (reportIndex !== -1) {

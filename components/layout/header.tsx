@@ -1,7 +1,9 @@
 import Link from "next/link";
 
-import { navigationConfig } from "@/config/navigation.config";
-import { getActiveServices } from "@/config/services.config";
+import {
+  getServiceNavigation,
+  navigationConfig,
+} from "@/config/navigation.config";
 import { LanguageSwitcher } from "@/components/layout/language-switcher";
 import { MobileNav, type NavigationItem } from "@/components/layout/mobile-nav";
 import { ContactTrigger } from "@/components/forms/contact-dialog";
@@ -21,10 +23,10 @@ export function Header({ locale, dictionary }: HeaderProps) {
     href: item.path ? `${prefix}/${item.path}` : prefix,
     label: dictionary.nav[item.key],
   }));
-  const services: NavigationItem[] = getActiveServices(locale).map(
-    ({ content, slug }) => ({
-      href: `${prefix}/services/${slug}`,
-      label: content.title,
+  const services: NavigationItem[] = getServiceNavigation(locale).map(
+    ({ path, label }) => ({
+      href: `${prefix}/${path}`,
+      label,
     })
   );
   const cta = {

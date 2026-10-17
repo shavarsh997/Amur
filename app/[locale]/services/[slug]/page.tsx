@@ -79,6 +79,10 @@ export default async function ServiceDetailPage({ params }: Props) {
   const copy = dictionary.services.detail;
   const faqs = service.content.faq;
   const primaryCta = service.content.secondaryCta ?? copy.requestEstimate;
+  const apartment =
+    service.slug === "renovation"
+      ? getSeoLandingPage(locale, "apartment-renovation-yerevan")
+      : undefined;
   const relatedSeoPages = seoLandingPages.filter((page) =>
     (page.relatedServiceSlugs as readonly string[]).includes(service.slug)
   );
@@ -145,6 +149,18 @@ export default async function ServiceDetailPage({ params }: Props) {
               <p className="mt-5 text-lg leading-8 text-[var(--text-secondary)]">
                 {service.content.fullDescription}
               </p>
+              {apartment ? (
+                <p className="mt-4 leading-7 text-[var(--text-secondary)]">
+                  <Link
+                    className="font-semibold text-[var(--text-primary)] underline"
+                    href={`/${locale}/${getSeoLandingPath(apartment)}`}
+                  >
+                    {apartment.content.title}
+                  </Link>
+                  {": "}
+                  {apartment.content.description}
+                </p>
+              ) : null}
             </section>
             <div className="grid gap-10 content-grid-three md:grid-cols-3">
               <section>

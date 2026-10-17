@@ -720,9 +720,9 @@ export const serviceTranslations = {
       ],
       primaryCta: "Обсудить объект",
       secondaryCta: "Отправить данные проекта",
-      seoTitle: "Ремонт коммерческих помещений в Армении — SHINEX",
+      seoTitle: "Ремонт коммерческих помещений в Ереване | SHINEX",
       seoDescription:
-        "Работы для офисов, магазинов и сервисных пространств в Армении.",
+        "Ремонт офисов, магазинов и салонов в Ереване и по всей Армении. Согласуем состав работ, смету и этапы с учётом режима вашего бизнеса.",
       workflow: [
         "Обсуждение функции помещения и рабочего графика",
         "Осмотр, решения и смета",
@@ -934,6 +934,9 @@ export const serviceTranslations = {
         },
       ],
       title: "Архитектурное проектирование",
+      seoTitle: "Архитектурное проектирование в Армении | SHINEX",
+      seoDescription:
+        "Архитектурные проекты для строительства и реконструкции в Армении: планировка здания, рабочие чертежи и документация с учётом участка и задач проекта.",
       shortDescription:
         "Архитектурные решения, планировка здания и рабочая документация для подготовки к строительству.",
       fullDescription:
@@ -1092,11 +1095,11 @@ export const serviceTranslations = {
   },
   renovation: {
     ru: serviceContent({
-      title: "Ремонт квартир и частных домов",
+      title: "Ремонт частных домов в Армении",
       shortDescription:
-        "Выполняем косметический, капитальный и ремонт под ключ. Организуем демонтаж, электрику и сантехнику, подготовку стен и пола, чистовую отделку и сдачу объекта.",
+        "Ремонтируем частные дома полностью или отдельными этапами: от демонтажа и инженерных работ до чистовой отделки. Состав работ определяем после осмотра дома.",
       fullDescription:
-        "Ремонтируем квартиры и частные дома полностью или отдельными этапами. Косметический ремонт обновляет отделку, капитальный затрагивает основные системы и поверхности, а ремонт под ключ охватывает весь процесс до сдачи.",
+        "При ремонте частного дома оцениваем внутренние помещения, наружные стены, кровлю и самостоятельные инженерные системы. Согласуем косметический, капитальный или полный ремонт и его этапы. Наружные работы отделяем в смете от внутренней отделки.",
       includedWorks: [
         "Осмотр и замеры",
         "Планирование и предварительная смета",
@@ -1105,14 +1108,14 @@ export const serviceTranslations = {
         "Финальная проверка и передача",
       ],
       suitableFor: [
-        "Владельцам квартир и частных домов",
-        "Тем, кто ремонтирует квартиру в новостройке или на вторичном рынке",
+        "Владельцам частных домов",
+        "Тем, кто обновляет отделку и инженерные системы дома",
       ],
       customerTypes: [
-        "Квартира в новостройке",
-        "Квартира на вторичном рынке",
-        "Частный дом",
-        "Существующий интерьер",
+        "Частный дом без отделки",
+        "Дом с существующей отделкой",
+        "Отдельные помещения дома",
+        "Дом с инженерными системами, требующими обновления",
       ],
       workTypes: [
         "Косметический ремонт",
@@ -1151,11 +1154,11 @@ export const serviceTranslations = {
             "Да, необходимые работы обсуждаем по данным объекта. Важно проверить, готовы ли смежные поверхности и системы, чтобы результат можно было использовать без переделок.",
         },
       ],
-      primaryCta: "Посмотреть варианты ремонта",
+      primaryCta: "Подробнее о ремонте дома",
       secondaryCta: "Получить предварительный расчёт",
-      seoTitle: "Ремонт жилья в Армении: виды и состав работ | SHINEX",
+      seoTitle: "Ремонт частных домов в Армении | SHINEX",
       seoDescription:
-        "Ремонт квартир и частных домов под ключ в Ереване и по всей Армении: осмотр, предварительная оценка и согласование этапов.",
+        "Ремонт частных домов в Ереване и по всей Армении: отделка, электрика и сантехника. Состояние фасада и кровли учитываем отдельно при осмотре и подготовке сметы.",
       workflow: [
         "Осмотр и обсуждение требований проекта",
         "Планирование и предварительная смета",
@@ -1166,11 +1169,11 @@ export const serviceTranslations = {
       ],
     }),
     en: serviceContent({
-      title: "Apartment and private house renovation",
+      title: "Private house renovation in Armenia",
       shortDescription:
-        "We deliver cosmetic, major, and turnkey renovation. We organise demolition, electrical and plumbing work, wall and floor preparation, final finishes, and handover.",
+        "We renovate private houses in full or in stages, from demolition and building services to final finishes. We define the scope after inspecting the house.",
       fullDescription:
-        "We renovate apartments and private homes as a complete service or in individual stages. Cosmetic renovation refreshes finishes, major renovation changes key systems and surfaces, and turnkey renovation covers the full process through handover.",
+        "For a private house renovation, we assess the interior, external walls, roof and independent building services. We agree the scope and stages of cosmetic, major or complete renovation. Exterior work is listed separately from interior finishes in the estimate.",
       includedWorks: [
         "Survey and measurements",
         "Planning and an initial estimate",
@@ -1179,14 +1182,14 @@ export const serviceTranslations = {
         "Final inspection and handover",
       ],
       suitableFor: [
-        "Apartment and private home owners",
-        "People renovating a new-build or existing apartment",
+        "Private house owners",
+        "People updating their house finishes and building services",
       ],
       customerTypes: [
-        "New-build apartment",
-        "Existing apartment",
-        "Private house",
-        "Existing interior",
+        "Unfinished private house",
+        "House with existing finishes",
+        "Individual rooms in a house",
+        "House with building services that need updating",
       ],
       workTypes: [
         "Cosmetic renovation",
@@ -1225,11 +1228,11 @@ export const serviceTranslations = {
             "Yes, we can discuss a specific stage using the property details. We first need to check whether adjoining surfaces and systems are ready so the work will not need to be repeated.",
         },
       ],
-      primaryCta: "View renovation options",
+      primaryCta: "Explore house renovation",
       secondaryCta: "Get an initial estimate",
-      seoTitle: "Home Renovation in Armenia: Services and Options | SHINEX",
+      seoTitle: "Private House Renovation in Armenia | SHINEX",
       seoDescription:
-        "Turnkey apartment and private house renovation in Yerevan and across Armenia: survey, initial assessment, and agreed stages.",
+        "Private house renovation in Yerevan and Armenia: finishes, electrical and plumbing work. Facade and roof condition assessed separately for the estimate.",
       workflow: [
         "Survey and brief",
         "Planning and initial estimate",
@@ -1240,11 +1243,11 @@ export const serviceTranslations = {
       ],
     }),
     de: serviceContent({
-      title: "Renovierung von Wohnungen und Privathäusern",
+      title: "Renovierung von Privathäusern in Armenien",
       shortDescription:
-        "Wir führen optische Auffrischungen, umfassende Sanierungen und schlüsselfertige Renovierungen aus. Wir organisieren Rückbau, Elektro- und Sanitärarbeiten, Wand- und Bodenvorbereitung, Endausbau und Übergabe.",
+        "Wir renovieren Privathäuser komplett oder in einzelnen Phasen, vom Rückbau und der Haustechnik bis zum Endausbau. Den Umfang legen wir nach einer Besichtigung fest.",
       fullDescription:
-        "Wir renovieren Wohnungen und Privathäuser komplett oder in einzelnen Phasen. Eine optische Renovierung erneuert Oberflächen, eine umfassende Sanierung wichtige Anlagen und Untergründe; die schlüsselfertige Renovierung umfasst den gesamten Ablauf bis zur Übergabe.",
+        "Bei der Renovierung eines Privathauses prüfen wir Innenräume, Außenwände, Dach und eigenständige Haustechnik. Wir stimmen Umfang und Phasen einer Auffrischung, umfassenden Sanierung oder kompletten Renovierung ab. Außenarbeiten führen wir im Kostenvoranschlag getrennt vom Innenausbau auf.",
       includedWorks: [
         "Besichtigung und Aufmaß",
         "Planung und erste Kostenschätzung",
@@ -1253,14 +1256,14 @@ export const serviceTranslations = {
         "Abschlussprüfung und Übergabe",
       ],
       suitableFor: [
-        "Eigentümer von Wohnungen und Privathäusern",
-        "Menschen, die eine Neubau- oder Bestandswohnung renovieren",
+        "Eigentümer von Privathäusern",
+        "Menschen, die Oberflächen und Haustechnik ihres Hauses erneuern",
       ],
       customerTypes: [
-        "Neubauwohnung",
-        "Bestandswohnung",
-        "Privathaus",
-        "Bestehender Innenraum",
+        "Privathaus ohne Innenausbau",
+        "Haus mit bestehendem Innenausbau",
+        "Einzelne Räume eines Hauses",
+        "Haus mit erneuerungsbedürftiger Haustechnik",
       ],
       workTypes: [
         "Optische Renovierung",
@@ -1301,12 +1304,11 @@ export const serviceTranslations = {
             "Ja, anhand der Objektdaten können wir eine einzelne Phase besprechen. Zunächst prüfen wir, ob angrenzende Oberflächen und Anlagen bereit sind, damit keine Arbeiten wiederholt werden müssen.",
         },
       ],
-      primaryCta: "Renovierungsmöglichkeiten ansehen",
+      primaryCta: "Mehr zur Hausrenovierung",
       secondaryCta: "Erste Kostenschätzung anfragen",
-      seoTitle:
-        "Haus- und Wohnungsrenovierung in Armenien: Leistungen | SHINEX",
+      seoTitle: "Renovierung von Privathäusern in Armenien | SHINEX",
       seoDescription:
-        "Schlüsselfertige Wohnungs- und Hausrenovierung in Eriwan und ganz Armenien: Besichtigung, erste Einschätzung und abgestimmte Phasen.",
+        "Hausrenovierung in Eriwan und Armenien: Innenausbau, Elektro- und Sanitärarbeiten. Fassade und Dach werden für den Kostenvoranschlag gesondert geprüft.",
       workflow: [
         "Besichtigung und Bedarfsaufnahme",
         "Planung und erste Kostenschätzung",
@@ -1317,11 +1319,11 @@ export const serviceTranslations = {
       ],
     }),
     fr: serviceContent({
-      title: "Rénovation d’appartements et de maisons individuelles",
+      title: "Rénovation de maisons individuelles en Arménie",
       shortDescription:
-        "Nous réalisons des rafraîchissements, des rénovations lourdes et clé en main. Nous organisons la démolition, l’électricité, la plomberie, la préparation des murs et sols, les finitions et la livraison.",
+        "Nous rénovons les maisons individuelles entièrement ou par étapes, de la démolition et des réseaux techniques aux finitions. Le périmètre est défini après une visite de la maison.",
       fullDescription:
-        "Nous rénovons appartements et maisons dans le cadre d’un service complet ou par étapes. Le rafraîchissement renouvelle les finitions, la rénovation lourde remplace les principaux réseaux et surfaces, et la formule clé en main couvre l’ensemble du processus jusqu’à la livraison.",
+        "Pour rénover une maison individuelle, nous évaluons l’intérieur, les murs extérieurs, la toiture et les installations techniques autonomes. Nous convenons du périmètre et des étapes du rafraîchissement ou de la rénovation lourde ou complète. Le devis distingue les travaux extérieurs des finitions intérieures.",
       includedWorks: [
         "Visite et mesures",
         "Planification et première estimation",
@@ -1330,14 +1332,14 @@ export const serviceTranslations = {
         "Contrôle final et livraison",
       ],
       suitableFor: [
-        "Propriétaires d’appartements et de maisons individuelles",
-        "Personnes rénovant un appartement neuf ou existant",
+        "Propriétaires de maisons individuelles",
+        "Personnes renouvelant les finitions et les réseaux de leur maison",
       ],
       customerTypes: [
-        "Appartement neuf",
-        "Appartement existant",
-        "Maison individuelle",
-        "Intérieur existant",
+        "Maison individuelle sans finitions",
+        "Maison avec finitions existantes",
+        "Pièces individuelles d’une maison",
+        "Maison dont les réseaux techniques sont à renouveler",
       ],
       workTypes: [
         "Rénovation légère",
@@ -1378,12 +1380,11 @@ export const serviceTranslations = {
             "Oui, nous pouvons discuter d’une étape précise à partir des informations du bien. Nous vérifions d’abord que les surfaces et réseaux adjacents sont prêts pour éviter de devoir refaire les travaux.",
         },
       ],
-      primaryCta: "Voir les options de rénovation",
+      primaryCta: "Découvrir la rénovation de maisons",
       secondaryCta: "Demander une première estimation",
-      seoTitle:
-        "Rénovation de logements en Arménie : services et options | SHINEX",
+      seoTitle: "Rénovation de maisons individuelles en Arménie | SHINEX",
       seoDescription:
-        "Rénovation clé en main d’appartements et de maisons à Erevan et en Arménie : visite, première évaluation et étapes convenues.",
+        "Rénovation de maisons à Erevan et en Arménie : finitions, électricité et plomberie. Façade et toiture évaluées séparément pour préparer le devis.",
       workflow: [
         "Visite et définition du besoin",
         "Planification et première estimation",
@@ -1394,11 +1395,11 @@ export const serviceTranslations = {
       ],
     }),
     hy: serviceContent({
-      title: "Բնակարանների և առանձնատների վերանորոգում",
+      title: "Առանձնատների վերանորոգում Հայաստանում",
       shortDescription:
-        "Կատարում ենք կոսմետիկ, կապիտալ և ամբողջական վերանորոգում։ Կազմակերպում ենք ապամոնտաժումը, էլեկտրական և սանտեխնիկական աշխատանքները, պատերի ու հատակի պատրաստումը, վերջնական հարդարումը և օբյեկտի հանձնումը։",
+        "Վերանորոգում ենք առանձնատներ՝ ամբողջությամբ կամ առանձին փուլերով՝ ապամոնտաժումից ու ինժեներական աշխատանքներից մինչև վերջնական հարդարում։ Աշխատանքների կազմը որոշում ենք տան զննումից հետո։",
       fullDescription:
-        "Վերանորոգում ենք բնակարաններ և առանձնատներ՝ ամբողջական կամ առանձին փուլերով։ Կոսմետիկ վերանորոգումը թարմացնում է հարդարումը, կապիտալ վերանորոգումը ներառում է հիմնական համակարգերի և մակերեսների փոփոխությունը, իսկ ամբողջական տարբերակում կազմակերպում ենք ամբողջ ընթացքը մինչև հանձնումը։",
+        "Առանձնատան վերանորոգման համար գնահատում ենք ներքին տարածքները, արտաքին պատերը, տանիքն ու առանձին ինժեներական համակարգերը։ Համաձայնեցնում ենք կոսմետիկ, կապիտալ կամ ամբողջական վերանորոգման ծավալն ու փուլերը։ Արտաքին աշխատանքները նախահաշվում առանձնացնում ենք ներքին հարդարումից։",
       includedWorks: [
         "Զննում և չափագրում",
         "Պլանավորում և նախնական հաշվարկ",
@@ -1407,19 +1408,19 @@ export const serviceTranslations = {
         "Վերջնական ստուգում և հանձնում",
       ],
       suitableFor: [
-        "Բնակարանների և առանձնատների սեփականատերերին",
-        "Նորակառույց կամ երկրորդային բնակարան վերանորոգողներին",
+        "Առանձնատների սեփականատերերին",
+        "Տան հարդարումն ու ինժեներական համակարգերը թարմացնողներին",
       ],
       customerTypes: [
-        "Նորակառույց բնակարան",
-        "Երկրորդային շուկայի բնակարան",
-        "Առանձնատուն",
-        "Գոյություն ունեցող ինտերիեր",
+        "Առանձնատուն՝ առանց հարդարման",
+        "Տուն՝ առկա հարդարմամբ",
+        "Տան առանձին սենյակներ",
+        "Տուն՝ թարմացման կարիք ունեցող ինժեներական համակարգերով",
       ],
       workTypes: [
         "Կոսմետիկ վերանորոգում",
         "Կապիտալ վերանորոգում",
-        "Բնակարանի ամբողջական վերանորոգում",
+        "Առանձնատան ամբողջական վերանորոգում",
         "Առանձին փուլեր",
       ],
       estimateRequirements: [
@@ -1454,11 +1455,11 @@ export const serviceTranslations = {
             "Այո, անհրաժեշտ աշխատանքները քննարկում ենք ըստ տարածքի տվյալների։ Նախ պետք է ստուգել՝ պատրաստ են արդյոք հարակից մակերեսներն ու համակարգերը, որպեսզի կատարված աշխատանքը կրկնելու կարիք չլինի։",
         },
       ],
-      primaryCta: "Դիտել վերանորոգման տարբերակները",
+      primaryCta: "Մանրամասն՝ առանձնատան վերանորոգման մասին",
       secondaryCta: "Ստանալ նախնական հաշվարկ",
-      seoTitle: "Բնակարանի և տան վերանորոգում Հայաստանում | SHINEX",
+      seoTitle: "Առանձնատների վերանորոգում Հայաստանում | SHINEX",
       seoDescription:
-        "Բնակարանների և առանձնատների ամբողջական վերանորոգում Երևանում և ամբողջ Հայաստանում՝ զննում, նախնական գնահատում և փուլերի համաձայնեցում։",
+        "Առանձնատների վերանորոգում Երևանում և ամբողջ Հայաստանում՝ հարդարում, էլեկտրական ու սանտեխնիկական աշխատանքներ։ Ճակատն ու տանիքը գնահատում ենք առանձին՝ նախահաշվի համար։",
       workflow: [
         {
           title: "Օբյեկտի զննում և չափագրում",
@@ -1487,8 +1488,7 @@ export const serviceTranslations = {
         },
         {
           title: "Վերջնական ստուգում և հանձնում",
-          description:
-            "Ստուգում ենք կատարվածը և հանձնում պատրաստի բնակարանը կամ տունը։",
+          description: "Ստուգում ենք կատարվածը և հանձնում պատրաստի տունը։",
         },
       ],
     }),
@@ -1685,6 +1685,9 @@ export const serviceTranslations = {
         },
       ],
       title: "Фасадные и кровельные работы",
+      seoTitle: "Фасадные и кровельные работы в Армении | SHINEX",
+      seoDescription:
+        "Устройство и обновление фасадов и кровли в Армении. Оцениваем основание, защитные слои, водоотведение и примыкания, согласуем состав наружных работ.",
       shortDescription:
         "Устройство и обновление фасадов, кровли и защитных узлов здания.",
       fullDescription:

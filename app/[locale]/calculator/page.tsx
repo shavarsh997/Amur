@@ -4,6 +4,10 @@ import { notFound } from "next/navigation";
 import { CostCalculator } from "@/components/calculator/cost-calculator";
 import { Container } from "@/components/ui/container";
 import { FAQAccordion } from "@/components/ui/faq-accordion";
+import {
+  getSeoLandingPage,
+  getSeoLandingPath,
+} from "@/config/seo-landing-pages.config";
 import { getDictionary, isLocale } from "@/lib/i18n";
 import { buildMetadata } from "@/lib/metadata";
 import { getBreadcrumbJsonLd, serializeJsonLd } from "@/lib/json-ld";
@@ -32,6 +36,7 @@ export default async function CalculatorPage({ params }: Props) {
   const copy = dictionary.calculator;
   const seo = dictionary.calculatorPage;
   const faqs = seo.faqs;
+  const apartment = getSeoLandingPage(locale, "apartment-renovation-yerevan");
 
   return (
     <Container className="py-10 sm:py-16">
@@ -66,16 +71,14 @@ export default async function CalculatorPage({ params }: Props) {
       </section>
       <section className="mx-auto mt-12 max-w-4xl border-t border-[var(--border)] pt-10">
         <p className="leading-7 text-[var(--text-secondary)]">{seo.intro}</p>
-        {locale === "ru" ? (
+        {apartment ? (
           <p className="mt-4 leading-7 text-[var(--text-secondary)]">
-            Состав и этапы работ:{" "}
             <Link
               className="font-semibold text-[var(--text-primary)] underline"
-              href="/ru/services/apartment-renovation-yerevan"
+              href={`/${locale}/${getSeoLandingPath(apartment)}`}
             >
-              Ремонт квартир в Ереване
+              {apartment.content.title}
             </Link>
-            .
           </p>
         ) : null}
         <h2 className="mt-10 text-2xl font-semibold tracking-[-0.035em] text-[var(--text-primary)]">

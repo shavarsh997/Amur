@@ -74,6 +74,7 @@ export async function crawlSeo({
   seoRedirects,
   locales,
   organizationsByLocale,
+  pageExpectations = {},
 }) {
   const robotsResponse = await fetch(new URL("/robots.txt", base));
   assert.equal(robotsResponse.status, 200, "robots.txt status");
@@ -122,6 +123,24 @@ export async function crawlSeo({
           `Missing SSR main content: ${path}`
         );
         assert.equal(page.h1, 1, `H1 count: ${path}`);
+        const expected = pageExpectations[path];
+        if (expected) {
+          assert.equal(
+            page.title,
+            expected.title,
+            `Rendered title differs from configured SEO copy: ${path}`
+          );
+          assert.equal(
+            page.description,
+            expected.description,
+            `Rendered description differs from configured SEO copy: ${path}`
+          );
+          assert.equal(
+            page.h1Text,
+            expected.h1,
+            `Rendered H1 differs from configured copy: ${path}`
+          );
+        }
         assert.equal(
           page.ids.size,
           page.idCount,
@@ -146,6 +165,37 @@ export async function crawlSeo({
         );
         assert(page.image, `Missing share image: ${path}`);
         const language = path.split("/")[1];
+        const apartmentPath = `/${language}/services/apartment-renovation-yerevan`;
+        const housePath = `/${language}/services/renovation`;
+        const footer =
+          page.document.match(/<footer\b[^>]*>([\s\S]*?)<\/footer>/i)?.[1] ??
+          "";
+        for (const destination of [apartmentPath, housePath]) {
+          assert(
+            footer.includes(`href="${destination}"`),
+            `Missing renovation owner in footer: ${path} -> ${destination}`
+          );
+        }
+        if (
+          [`/${language}`, `/${language}/calculator`, housePath].includes(path)
+        ) {
+          const main =
+            page.document.match(/<main\b[^>]*>([\s\S]*?)<\/main>/i)?.[1] ?? "";
+          assert(
+            main.includes(`href="${apartmentPath}"`),
+            `Missing contextual apartment link: ${path}`
+          );
+          if (path === `/${language}`) {
+            const firstServiceCard =
+              main.match(
+                /<article\b[^>]*class="[^"]*motion-service-card[^"]*"[^>]*>([\s\S]*?)<\/article>/i
+              )?.[1] ?? "";
+            assert(
+              firstServiceCard.includes(`href="${apartmentPath}"`),
+              `Main renovation card must link to apartment owner: ${path}`
+            );
+          }
+        }
         assert.equal(
           page.lang.split("-")[0],
           language,
