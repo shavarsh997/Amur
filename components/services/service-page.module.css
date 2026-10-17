@@ -1,0 +1,651 @@
+/* The service composition fills the existing page shell; other routes keep their layout. */
+:global(.site-motion-shell):has(.page) {
+  display: block;
+}
+:global(body):has(.page) :global(.construction-backdrop) {
+  display: none;
+}
+
+.page {
+  background: var(--brand-surface);
+  color: var(--text-primary);
+}
+.page :is(h1, h2, h3) {
+  font-weight: 500;
+  text-wrap: balance;
+  overflow-wrap: anywhere;
+}
+.page h2 {
+  font-size: clamp(1.75rem, 2.8vw, 2.6rem);
+  line-height: 1.12;
+  letter-spacing: -0.045em;
+}
+.page h3 {
+  font-size: 1rem;
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+}
+.page :global(.action-button) {
+  border-radius: 4px;
+}
+.page :global(.site-container) {
+  padding-inline: clamp(20px, 4vw, 40px);
+}
+.page :is(section, figure, div) {
+  min-width: 0;
+}
+.eyebrow {
+  margin-bottom: 14px;
+  font-size: 10px;
+  line-height: 1.6;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.hero {
+  display: grid;
+  grid-template-columns: 45% 55%;
+  max-width: 1600px;
+  margin-inline: auto;
+  background: var(--background-soft);
+}
+.heroCopy {
+  padding: 36px 36px 48px max(24px, calc((100vw - 1200px) / 2));
+}
+.breadcrumbs {
+  margin-bottom: 38px;
+}
+.breadcrumbs ol {
+  gap: 6px;
+  font-size: 11px;
+  line-height: 1.65;
+}
+.breadcrumbs li {
+  gap: 5px;
+}
+.breadcrumbs svg {
+  width: 11px;
+  height: 11px;
+}
+.hero h1 {
+  max-width: 13em;
+  font-size: clamp(2rem, 4vw, 3.8rem);
+  line-height: 1.06;
+  letter-spacing: -0.055em;
+}
+.heroDescription {
+  max-width: 37rem;
+  margin-top: 24px;
+  color: var(--text-secondary);
+  font-size: clamp(0.9375rem, 1.2vw, 1.05rem);
+  line-height: 1.65;
+}
+.actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px 26px;
+  margin-top: 30px;
+}
+.textLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  line-height: 1.5;
+  padding-block: 12px;
+}
+.textLink:hover {
+  color: var(--brand-copper-text);
+}
+.heroPhoto,
+.detailPhoto {
+  position: relative;
+  overflow: hidden;
+  background: var(--background-warm);
+}
+.heroPhoto {
+  min-height: 500px;
+}
+.photo {
+  object-fit: cover;
+}
+.heroPhoto figcaption,
+.detailPhoto figcaption {
+  position: absolute;
+  inset: auto 0 0;
+  padding: 28px 24px 16px;
+  background: linear-gradient(transparent, rgb(0 0 0 / 0.58));
+  color: white;
+  font-size: 11px;
+  line-height: 1.5;
+}
+.heroPhoto figcaption {
+  text-align: right;
+}
+.section {
+  padding-block: clamp(44px, 5vw, 72px);
+}
+.warm {
+  background: var(--surface-muted);
+}
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+.sectionHeader > div:first-child {
+  max-width: 42rem;
+}
+.sectionDescription {
+  max-width: 27rem;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+.sectionDescription p + p {
+  margin-top: 12px;
+}
+.scopeGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+.scopeCard {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  position: relative;
+  padding: 28px 24px 42px;
+  background: var(--brand-surface);
+  border: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+.scopeCard:hover {
+  border-color: var(--border-strong);
+}
+.scopeCard h3 {
+  margin-top: 22px;
+}
+.scopeCard p {
+  margin-top: 10px;
+  font-size: 13px;
+  line-height: 1.65;
+  color: var(--text-secondary);
+}
+.cardArrow {
+  position: absolute;
+  right: 20px;
+  bottom: 18px;
+}
+.details {
+  padding-block: clamp(44px, 5vw, 72px);
+  scroll-margin-top: 90px;
+}
+.detailsGrid {
+  display: grid;
+  grid-template-columns: 0.92fr 1.08fr;
+  align-items: stretch;
+  gap: clamp(28px, 5vw, 72px);
+}
+.detailPhoto {
+  min-height: 410px;
+}
+.detailsCopy {
+  padding-block: 8px;
+}
+.detailsCopy > h3 {
+  margin-top: 28px;
+}
+.prose {
+  margin-top: 22px;
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+.prose p + p {
+  margin-top: 14px;
+}
+.workList {
+  padding: 0;
+  list-style: none;
+}
+.workList li {
+  display: flex;
+  align-items: baseline;
+  gap: 13px;
+  padding-block: 16px;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+  line-height: 1.6;
+}
+.listRule {
+  flex: 0 0 12px;
+  width: 12px;
+  height: 1px;
+  background: var(--brand-copper);
+}
+.facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+  gap: 36px;
+  margin-top: 40px;
+  padding-top: 32px;
+  border-top: 1px solid var(--border);
+}
+.facts h3 {
+  margin-bottom: 12px;
+}
+.facts .workList li {
+  padding-block: 9px;
+  font-size: 13px;
+  border: 0;
+}
+.facts .listRule {
+  width: 5px;
+  flex-basis: 5px;
+}
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  list-style: none;
+  gap: 24px;
+  margin-top: 36px;
+}
+.timeline li {
+  position: relative;
+  border-top: 1px solid var(--border-strong);
+  padding: 25px 12px 0 0;
+}
+.stepNumber {
+  display: block;
+  margin-bottom: 22px;
+  color: var(--brand-copper-text);
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.12em;
+}
+.timeline h3 {
+  font-size: 15px;
+}
+.timeline p {
+  margin-top: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+.pricing {
+  border-block: 1px solid var(--border);
+}
+.pricingHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px 40px;
+}
+.pricingIntro {
+  flex: 1;
+  max-width: 48rem;
+}
+.pricingAction {
+  flex: 0 1 auto;
+  justify-content: flex-end;
+  max-width: 22rem;
+  margin-top: 0;
+}
+.pricingFactors {
+  margin-top: 32px;
+}
+.pricingFactors .workList,
+.requirements .workList {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0 32px;
+}
+.pricing .workList li {
+  padding-block: 18px;
+}
+.requirements {
+  margin-top: 32px;
+  padding: 28px;
+  background: var(--surface-muted);
+}
+.requirements .workList {
+  margin-top: 8px;
+}
+.requirements .workList li {
+  font-size: 13px;
+}
+.pricingAside {
+  margin-top: 32px;
+}
+.faqGrid {
+  display: grid;
+  grid-template-columns: 0.7fr 1.3fr;
+  gap: 48px;
+}
+.faq > div {
+  padding-inline: 0;
+}
+.faq details {
+  padding-inline: 0;
+}
+.faq summary {
+  padding-block: 22px;
+  font-size: 15px;
+  font-weight: 500;
+}
+.faq details > p {
+  max-width: none;
+  font-size: 14px;
+  line-height: 1.8;
+}
+.relatedGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+.relatedCard {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 26px;
+  background: var(--brand-surface);
+  border: 1px solid var(--border);
+  transition: border-color 0.2s;
+}
+.relatedCard > svg {
+  flex-shrink: 0;
+}
+.relatedCard:hover {
+  border-color: var(--brand-copper);
+}
+.relatedCard p {
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin-top: 12px;
+}
+.moreServices {
+  margin-top: 24px;
+}
+.moreServices > summary {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding-block: 18px;
+  border-block: 1px solid var(--border);
+  font-size: 14px;
+  list-style: none;
+}
+.moreServices > summary::-webkit-details-marker {
+  display: none;
+}
+.moreServices[open] > summary svg {
+  transform: rotate(45deg);
+}
+.moreServices .relatedGrid {
+  margin-top: 20px;
+}
+.cta {
+  color: white;
+  background: var(--brand-navy);
+  padding-block: clamp(44px, 6vw, 84px);
+}
+.ctaGrid {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 60px;
+}
+.cta h2 {
+  max-width: 17em;
+}
+.cta p:not(.eyebrow) {
+  margin-top: 20px;
+  max-width: 33rem;
+  font-size: 14px;
+  line-height: 1.8;
+  color: rgb(255 255 255 / 0.8);
+}
+.cta .eyebrow {
+  color: var(--brand-copper-on-dark);
+}
+.cta aside {
+  padding-left: 40px;
+  border-left: 1px solid rgb(255 255 255 / 0.25);
+}
+.ctaMark {
+  display: block;
+  font-size: 56px;
+  font-weight: 300;
+  line-height: 1;
+  margin-bottom: 30px;
+  color: var(--brand-copper-on-dark);
+}
+
+@media (min-width: 1600px) {
+  .heroCopy {
+    padding-left: 80px;
+  }
+}
+@media (max-width: 1100px) {
+  .heroCopy {
+    padding: 28px;
+  }
+  .hero h1 {
+    font-size: clamp(2.15rem, 4.25vw, 3.2rem);
+  }
+  .scopeGrid {
+    gap: 12px;
+  }
+  .scopeCard {
+    padding: 22px 18px 42px;
+  }
+  .timeline {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+  }
+  .relatedGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .relatedCard:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+  .sectionHeader {
+    align-items: start;
+  }
+}
+@media (max-width: 767px) {
+  .hero {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .heroCopy {
+    padding: 24px 20px 32px;
+  }
+  .breadcrumbs {
+    margin-bottom: 24px;
+  }
+  .hero h1 {
+    font-size: clamp(2.15rem, 7vw, 3.2rem);
+    max-width: 16em;
+  }
+  .heroDescription {
+    margin-top: 20px;
+  }
+  .heroPhoto {
+    min-height: 0;
+    aspect-ratio: 16 / 10;
+  }
+  .actions {
+    gap: 12px 22px;
+    margin-top: 24px;
+  }
+  .sectionHeader {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .scopeGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .scopeCard {
+    padding: 22px 18px 44px;
+  }
+  .scopeCard h3 {
+    font-size: 15px;
+  }
+  .scopeCard p {
+    font-size: 12px;
+  }
+  .detailsGrid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 30px;
+  }
+  .detailPhoto {
+    min-height: 0;
+    aspect-ratio: 4 / 3;
+  }
+  .faqGrid,
+  .ctaGrid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 30px;
+  }
+  .cta aside {
+    padding: 24px 0 0;
+    border-left: 0;
+    border-top: 1px solid rgb(255 255 255 / 0.25);
+  }
+  .ctaMark {
+    font-size: 36px;
+    margin-bottom: 18px;
+  }
+  .facts {
+    gap: 28px;
+  }
+  .timeline {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+  .timeline li {
+    display: grid;
+    grid-template-columns: 36px minmax(0, 1fr);
+    column-gap: 20px;
+    border-top: 0;
+    border-left: 1px solid var(--border-strong);
+    padding: 0 0 28px 22px;
+  }
+  .timeline li:last-child {
+    padding-bottom: 0;
+  }
+  .stepNumber {
+    margin: 0;
+    padding-top: 2px;
+    grid-row: span 2;
+  }
+  .timeline h3 {
+    font-size: 16px;
+  }
+  .timeline p {
+    margin-top: 8px;
+  }
+  .relatedGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .relatedCard {
+    padding: 22px;
+  }
+}
+@media (max-width: 420px) {
+  .scopeGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .scopeCard {
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    column-gap: 20px;
+    padding: 24px 24px 32px;
+  }
+  .scopeCard > svg:first-child {
+    grid-row: span 2;
+  }
+  .scopeCard h3 {
+    margin-top: 0;
+  }
+  .scopeCard p {
+    margin-top: 8px;
+    font-size: 13px;
+  }
+  .cardArrow {
+    width: 16px;
+    bottom: 12px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .page *,
+  .page *::before,
+  .page *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+.workGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+.workGrid li {
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+  padding: 24px;
+  background: var(--brand-surface);
+  border: 1px solid var(--border);
+}
+.workGrid li > span {
+  color: var(--brand-copper-text);
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+}
+.workGrid p {
+  font-size: 14px;
+  line-height: 1.7;
+}
+.detailsCopy .workGrid {
+  grid-template-columns: minmax(0, 1fr);
+  margin-top: 20px;
+}
+.page :global(#request-estimate) > section {
+  border-radius: 4px;
+}
+@media (max-width: 1000px) {
+  .pricingHeader {
+    flex-direction: column;
+    align-items: start;
+    gap: 24px;
+  }
+  .pricingAction {
+    justify-content: flex-start;
+    max-width: none;
+    margin-top: 0;
+  }
+  .pricingFactors .workList,
+  .requirements .workList,
+  .workGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 600px) {
+  .requirements {
+    padding: 22px 20px;
+  }
+  .pricingFactors .workList,
+  .requirements .workList,
+  .workGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { ServiceLandingContent } from "@/components/services/service-landing-content";
 import Link from "next/link";
 
 import {
@@ -11,7 +11,6 @@ import {
   EstimateExample,
   RenovationBudget,
 } from "@/components/seo/renovation-budget";
-import { getServiceImageAlt } from "@/config/service-images.config";
 import { ContactTrigger } from "@/components/forms/contact-dialog";
 import { ButtonLink } from "@/components/ui/button-link";
 import { Container } from "@/components/ui/container";
@@ -85,149 +84,170 @@ export function SeoLandingPage({
         }}
         type="application/ld+json"
       />
-      <PageHero
-        actions={
-          <>
-            <ContactTrigger label={content.contactLabel} />
-            {showPriceGuide ? (
+      {page.kind === "service" ? (
+        <ServiceLandingContent
+          page={page}
+          locale={locale}
+          dictionary={dictionary}
+          breadcrumbs={breadcrumbs}
+          relatedLinks={[
+            ...relatedLandings.map((landing) => ({
+              href: `/${locale}/${getSeoLandingPath(landing)}`,
+              title: landing.content.title,
+              description: landing.content.description,
+            })),
+            ...relatedServices.map((service) => ({
+              href: `/${locale}/services/${service.slug}`,
+              title: service.content.title,
+              description: service.content.shortDescription,
+            })),
+          ]}
+          secondaryAction={
+            showPriceGuide ? (
               <ButtonLink href={`/${locale}/prices`} variant="secondary">
                 {dictionary.seo.calculatorPriceLink}
               </ButtonLink>
-            ) : null}
-            {supportsCalculator ? (
+            ) : supportsCalculator ? (
               <ButtonLink href={calculatorHref} variant="secondary">
                 {content.calculatorLabel}
               </ButtonLink>
-            ) : null}
-          </>
-        }
-        breadcrumbs={breadcrumbs}
-        breadcrumbsLabel={dictionary.common.breadcrumbs}
-        description={content.description}
-        eyebrow={content.eyebrow}
-        title={content.title}
-      />
-      <article>
-        <Container className="py-12 sm:py-16 lg:py-20">
-          {page.kind === "service" ? (
-            <div className="relative aspect-[16/7] overflow-hidden rounded-[28px] bg-[var(--background-warm)]">
-              <Image
-                alt={getServiceImageAlt(page.image, locale)}
-                className="object-cover"
-                fetchPriority="high"
-                fill
-                loading="eager"
-                sizes="(max-width: 1279px) 100vw, 1200px"
-                src={page.image}
-              />
-            </div>
-          ) : null}
-          <div className="mx-auto mt-12 max-w-8xl space-y-12">
-            <section className="space-y-5 text-lg leading-8 text-[var(--text-secondary)]">
-              {content.introduction.map((paragraph) => (
-                <p key={paragraph}>{paragraph}</p>
-              ))}
-            </section>
-            {isPrices ? <RenovationBudget locale={locale} /> : null}
-            {page.slug === "renovation-estimate-yerevan" ? (
-              <EstimateExample locale={locale} />
-            ) : null}
-            {content.sections.map((section) => (
-              <section key={section.title}>
-                <h2 className="text-2xl font-semibold tracking-[-0.035em] text-[var(--text-primary)] sm:text-3xl">
-                  {section.title}
-                </h2>
-                <div className="mt-5 space-y-4 leading-7 text-[var(--text-secondary)]">
-                  {section.paragraphs.map((paragraph) => (
-                    <p key={paragraph}>{paragraph}</p>
-                  ))}
-                </div>
-                {section.items?.length ? (
-                  <ul className="mt-5 grid gap-3 content-grid sm:grid-cols-2">
-                    {section.items.map((item) => (
-                      <li
-                        className="rounded-xl border border-[var(--border)] bg-[var(--background-soft)] px-4 py-3 leading-6 text-[var(--text-secondary)]"
-                        key={item}
-                      >
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
+            ) : undefined
+          }
+        />
+      ) : (
+        <>
+          <PageHero
+            actions={
+              <>
+                <ContactTrigger label={content.contactLabel} />
+                {showPriceGuide ? (
+                  <ButtonLink href={`/${locale}/prices`} variant="secondary">
+                    {dictionary.seo.calculatorPriceLink}
+                  </ButtonLink>
                 ) : null}
-              </section>
-            ))}
-            {!supportsCalculator ? (
-              <div id="request-estimate" className="scroll-mt-24">
-                <RenovationContact
-                  copy={dictionary.constructionCalculator.renovationContact}
-                />
-              </div>
-            ) : (
-              <section className="rounded-[24px] bg-[var(--background-warm)] p-7 sm:p-10">
-                <h2 className="text-2xl font-semibold tracking-[-0.03em] text-[var(--text-primary)]">
-                  {content.calculatorLabel}
-                </h2>
-                <p className="mt-3 max-w-2xl leading-7 text-[var(--text-secondary)]">
-                  {dictionary.seo.calculatorEstimateNotice}
-                </p>
-                <div className="action-group mt-6">
-                  <ButtonLink href={calculatorHref}>
+                {supportsCalculator ? (
+                  <ButtonLink href={calculatorHref} variant="secondary">
                     {content.calculatorLabel}
                   </ButtonLink>
-                  <ContactTrigger label={content.contactLabel} />
-                </div>
-              </section>
-            )}
-            {faqs.length ? (
-              <section>
-                <h2 className="text-2xl font-semibold tracking-[-0.035em] text-[var(--text-primary)] sm:text-3xl">
-                  {dictionary.seo.faqTitle}
-                </h2>
-                <div className="mt-6">
-                  <FAQAccordion items={faqs} />
-                </div>
-              </section>
-            ) : null}
-            {relatedLandings.length || relatedServices.length ? (
-              <section>
-                <h2 className="text-2xl font-semibold tracking-[-0.035em] text-[var(--text-primary)] sm:text-3xl">
-                  {content.relatedTitle}
-                </h2>
-                <div className="mt-6 grid gap-3 content-grid-three sm:grid-cols-3">
-                  {relatedLandings.map((landing) => (
-                    <Link
-                      className="rounded-2xl border border-[var(--border)] bg-white p-5 transition hover:border-[var(--brand-copper)]"
-                      href={`/${locale}/${getSeoLandingPath(landing)}`}
-                      key={landing.slug}
-                    >
-                      <h3 className="font-semibold text-[var(--text-primary)]">
-                        {landing.content.title}
-                      </h3>
-                      <p className="mt-2 text-sm leading-6 text-[var(--text-secondary)]">
-                        {landing.content.description}
-                      </p>
-                    </Link>
+                ) : null}
+              </>
+            }
+            breadcrumbs={breadcrumbs}
+            breadcrumbsLabel={dictionary.common.breadcrumbs}
+            description={content.description}
+            eyebrow={content.eyebrow}
+            title={content.title}
+          />
+          <article>
+            <Container className="py-12 sm:py-16 lg:py-20">
+              <div className="mx-auto mt-12 max-w-8xl space-y-12">
+                <section className="space-y-5 text-lg leading-8 text-[var(--text-secondary)]">
+                  {content.introduction.map((paragraph) => (
+                    <p key={paragraph}>{paragraph}</p>
                   ))}
-                  {relatedServices.map((service) => (
-                    <Link
-                      className="rounded-2xl border border-[var(--border)] bg-white p-5 transition hover:border-[var(--brand-copper)]"
-                      href={`/${locale}/services/${service.slug}`}
-                      key={service.slug}
-                    >
-                      <h3 className="font-semibold text-[var(--text-primary)]">
-                        {service.content.title}
-                      </h3>
-                      <p className="mt-2 text-sm leading-6 text-[var(--text-secondary)]">
-                        {service.content.shortDescription}
-                      </p>
-                    </Link>
-                  ))}
-                </div>
-              </section>
-            ) : null}
-          </div>
-        </Container>
-      </article>
+                </section>
+                {isPrices ? <RenovationBudget locale={locale} /> : null}
+                {page.slug === "renovation-estimate-yerevan" ? (
+                  <EstimateExample locale={locale} />
+                ) : null}
+                {content.sections.map((section) => (
+                  <section key={section.title}>
+                    <h2 className="text-2xl font-semibold tracking-[-0.035em] text-[var(--text-primary)] sm:text-3xl">
+                      {section.title}
+                    </h2>
+                    <div className="mt-5 space-y-4 leading-7 text-[var(--text-secondary)]">
+                      {section.paragraphs.map((paragraph) => (
+                        <p key={paragraph}>{paragraph}</p>
+                      ))}
+                    </div>
+                    {section.items?.length ? (
+                      <ul className="mt-5 grid gap-3 content-grid sm:grid-cols-2">
+                        {section.items.map((item) => (
+                          <li
+                            className="rounded-xl border border-[var(--border)] bg-[var(--background-soft)] px-4 py-3 leading-6 text-[var(--text-secondary)]"
+                            key={item}
+                          >
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    ) : null}
+                  </section>
+                ))}
+                {!supportsCalculator ? (
+                  <div id="request-estimate" className="scroll-mt-24">
+                    <RenovationContact
+                      copy={dictionary.constructionCalculator.renovationContact}
+                    />
+                  </div>
+                ) : (
+                  <section className="rounded-[24px] bg-[var(--background-warm)] p-7 sm:p-10">
+                    <h2 className="text-2xl font-semibold tracking-[-0.03em] text-[var(--text-primary)]">
+                      {content.calculatorLabel}
+                    </h2>
+                    <p className="mt-3 max-w-2xl leading-7 text-[var(--text-secondary)]">
+                      {dictionary.seo.calculatorEstimateNotice}
+                    </p>
+                    <div className="action-group mt-6">
+                      <ButtonLink href={calculatorHref}>
+                        {content.calculatorLabel}
+                      </ButtonLink>
+                      <ContactTrigger label={content.contactLabel} />
+                    </div>
+                  </section>
+                )}
+                {faqs.length ? (
+                  <section>
+                    <h2 className="text-2xl font-semibold tracking-[-0.035em] text-[var(--text-primary)] sm:text-3xl">
+                      {dictionary.seo.faqTitle}
+                    </h2>
+                    <div className="mt-6">
+                      <FAQAccordion items={faqs} />
+                    </div>
+                  </section>
+                ) : null}
+                {relatedLandings.length || relatedServices.length ? (
+                  <section>
+                    <h2 className="text-2xl font-semibold tracking-[-0.035em] text-[var(--text-primary)] sm:text-3xl">
+                      {content.relatedTitle}
+                    </h2>
+                    <div className="mt-6 grid gap-3 content-grid-three sm:grid-cols-3">
+                      {relatedLandings.map((landing) => (
+                        <Link
+                          className="rounded-2xl border border-[var(--border)] bg-white p-5 transition hover:border-[var(--brand-copper)]"
+                          href={`/${locale}/${getSeoLandingPath(landing)}`}
+                          key={landing.slug}
+                        >
+                          <h3 className="font-semibold text-[var(--text-primary)]">
+                            {landing.content.title}
+                          </h3>
+                          <p className="mt-2 text-sm leading-6 text-[var(--text-secondary)]">
+                            {landing.content.description}
+                          </p>
+                        </Link>
+                      ))}
+                      {relatedServices.map((service) => (
+                        <Link
+                          className="rounded-2xl border border-[var(--border)] bg-white p-5 transition hover:border-[var(--brand-copper)]"
+                          href={`/${locale}/services/${service.slug}`}
+                          key={service.slug}
+                        >
+                          <h3 className="font-semibold text-[var(--text-primary)]">
+                            {service.content.title}
+                          </h3>
+                          <p className="mt-2 text-sm leading-6 text-[var(--text-secondary)]">
+                            {service.content.shortDescription}
+                          </p>
+                        </Link>
+                      ))}
+                    </div>
+                  </section>
+                ) : null}
+              </div>
+            </Container>
+          </article>
+        </>
+      )}
     </>
   );
 }

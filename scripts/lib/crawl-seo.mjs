@@ -140,6 +140,96 @@ export async function crawlSeo({
             expected.h1,
             `Rendered H1 differs from configured copy: ${path}`
           );
+          if (expected.serviceMedia) {
+            const hero = page.document.match(
+              /<section\b[^>]*aria-labelledby="service-title"[^>]*>[\s\S]*?<\/section>/i
+            );
+            const overview = page.document.match(
+              /<section\b[^>]*id="service-overview"[^>]*>[\s\S]*?<\/section>/i
+            );
+            const details = page.document.match(
+              /<section\b[^>]*id="service-details"[^>]*>[\s\S]*?<\/section>/i
+            );
+            assert(
+              hero && overview && details,
+              `Missing service section: ${path}`
+            );
+            assert.match(
+              page.document.slice(hero.index + hero[0].length),
+              /^\s*<section\b[^>]*id="service-overview"/i,
+              `Numbered information block must immediately follow hero: ${path}`
+            );
+            assert(
+              overview.index < details.index,
+              `Overview appears below details: ${path}`
+            );
+            const cards = [
+              ...overview[0].matchAll(/<li\b[^>]*>([\s\S]*?)<\/li>/gi),
+            ];
+            assert(cards.length >= 3, `Missing information cards: ${path}`);
+            cards.forEach(([, card], index) => {
+              assert.match(
+                card,
+                new RegExp(
+                  `aria-hidden="true"[^>]*>${String(index + 1).padStart(2, "0")}<`
+                ),
+                `Card number: ${path}`
+              );
+            });
+            for (const [slot, section] of [
+              ["hero", hero],
+              ["details", details],
+            ]) {
+              const photo = attributes(
+                section[0].match(/<img\b[^>]*>/i)?.[0] ?? ""
+              );
+              const image = expected.serviceMedia[slot];
+              assert(photo.src, `Missing ${slot} photo: ${path}`);
+              const imageUrl = new URL(photo.src, base);
+              const source =
+                imageUrl.pathname === "/_next/image"
+                  ? imageUrl.searchParams.get("url")
+                  : photo.src;
+              assert.equal(
+                source,
+                image.src,
+                `Incorrect ${slot} photo: ${path}`
+              );
+              assert.equal(
+                photo.alt,
+                image.alt,
+                `Incorrect ${slot} alt: ${path}`
+              );
+              assert(
+                section[0].includes(image.caption),
+                `Missing ${slot} caption: ${path}`
+              );
+              if (slot === "hero") {
+                assert.equal(
+                  photo.loading,
+                  "eager",
+                  `Lazy hero photo: ${path}`
+                );
+                assert.equal(
+                  photo.fetchpriority,
+                  "high",
+                  `Hero fetch priority: ${path}`
+                );
+              } else {
+                assert.equal(
+                  photo.loading,
+                  "lazy",
+                  `Unnecessary eager details photo: ${path}`
+                );
+              }
+            }
+          }
+          for (const fragment of expected.textFragments ?? []) {
+            assert(
+              page.mainText.includes(fragment.replace(/\s+/g, " ").trim()),
+              `Missing indexable service content: ${path}: ${fragment}`
+            );
+          }
         }
         assert.equal(
           page.ids.size,

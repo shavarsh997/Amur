@@ -1,6 +1,8 @@
 import assert from "node:assert/strict";
 import { createRequire } from "node:module";
-import { writeFileSync } from "node:fs";
+import { readFileSync, statSync, writeFileSync } from "node:fs";
+import { createHash } from "node:crypto";
+import { join } from "node:path";
 import { createTypeScriptLoader } from "./lib/load-typescript.mjs";
 import { robotsAllows } from "./lib/robots-rules.mjs";
 
@@ -35,6 +37,12 @@ const { seoLandingPages, getSeoLandingPath } = load(
 );
 const { getActiveServices } = load("config/services.config");
 const { getServiceNavigation } = load("config/navigation.config");
+const { servicePageTranslations } = load("messages/service-pages");
+const { servicePlanningTranslations, getServicePlanning } = load(
+  "messages/service-planning"
+);
+const { serviceMedia, getServiceMedia } = load("config/service-media.config");
+const { serviceSectionRoles } = load("config/service-presentation.config");
 const { blogArticles } = load("data/blog");
 const { serviceGuideGroups } = load("config/service-guides.config");
 const { seoIntentMap } = load("config/seo-intents.config");
@@ -56,13 +64,91 @@ const paths = new Set(
 const serviceSlugs = new Set(getActiveServices("hy").map(({ slug }) => slug));
 const landingSlugs = new Set(seoLandingPages.map(({ slug }) => slug));
 const pageExpectations = {};
-function expectPage(locale, path, title, description, h1) {
+function expectPage(locale, path, title, description, h1, textFragments = []) {
   const metadata = createPageMetadata({ locale, path, title, description });
+  const planning = path.startsWith("services/")
+    ? getServicePlanning(path.slice("services/".length), locale)
+    : undefined;
   pageExpectations[`/${locale}/${path}`] = {
     title: metadata.title.absolute,
     description,
     h1,
+    serviceMedia: path.startsWith("services/")
+      ? getServiceMedia(path.slice("services/".length), locale)
+      : undefined,
+    textFragments: [
+      ...textFragments,
+      ...(planning
+        ? [planning.title, planning.description, ...planning.items]
+        : []),
+    ].filter(Boolean),
   };
+}
+
+// The presentation layer must cover every published service without reusing
+// photos in a different slot, even when an image URL has different crop options.
+const publishedServiceSlugs = [
+  ...serviceSlugs,
+  ...seoLandingPages
+    .filter((page) => page.kind === "service")
+    .map(({ slug }) => slug),
+];
+assert.deepEqual(
+  Object.keys(serviceMedia).sort(),
+  publishedServiceSlugs.sort()
+);
+const imageIdentities = new Set();
+const localImageHashes = new Set();
+for (const slug of publishedServiceSlugs) {
+  for (const slot of ["hero", "details"]) {
+    const asset = serviceMedia[slug][slot];
+    const identity = new URL(asset.src, "https://www.shinex.am").pathname;
+    assert(
+      !imageIdentities.has(identity),
+      `Repeated service photo: ${slug}/${slot}`
+    );
+    imageIdentities.add(identity);
+    if (asset.src.startsWith("/")) {
+      const file = join(process.cwd(), "public", asset.src);
+      const bytes = readFileSync(file);
+      assert.equal(
+        bytes.toString("ascii", 0, 4),
+        "RIFF",
+        `Invalid WebP: ${file}`
+      );
+      assert.equal(
+        bytes.toString("ascii", 8, 12),
+        "WEBP",
+        `Invalid WebP: ${file}`
+      );
+      assert(
+        statSync(file).size <= 400_000,
+        `Oversized service image: ${file}`
+      );
+      const hash = createHash("sha256").update(bytes).digest("hex");
+      assert(!localImageHashes.has(hash), `Duplicate photo file: ${file}`);
+      localImageHashes.add(hash);
+    }
+    for (const locale of locales) {
+      const image = getServiceMedia(slug, locale)[slot];
+      assert(image.alt.trim(), `Missing image alt: ${slug}/${slot}/${locale}`);
+      assert(
+        image.caption.trim(),
+        `Missing caption: ${slug}/${slot}/${locale}`
+      );
+      if (asset.generated) {
+        assert(
+          asset.alt[locale]?.trim(),
+          `Untranslated image: ${slug}/${slot}/${locale}`
+        );
+        assert.notEqual(
+          image.caption,
+          image.alt,
+          `Missing illustration disclosure: ${slug}/${slot}/${locale}`
+        );
+      }
+    }
+  }
 }
 
 // Test the public copy against the actual calculation engine, not just route names.
@@ -207,12 +293,50 @@ function checkTranslation(reference, translated, path) {
   }
 }
 const englishDictionary = await getDictionary("en");
+// The apartment page already has detailed planning sections. Every other
+// published service needs its own guidance in every supported language.
+const planningSlugs = [
+  ...serviceSlugs,
+  ...seoLandingPages
+    .filter(
+      (page) =>
+        page.kind === "service" && page.slug !== "apartment-renovation-yerevan"
+    )
+    .map(({ slug }) => slug),
+];
+assert.deepEqual(
+  Object.keys(servicePlanningTranslations).sort(),
+  [...planningSlugs].sort(),
+  "Planning guidance must cover exactly the other published services"
+);
+for (const locale of locales) {
+  const planningTitles = new Set();
+  for (const slug of planningSlugs) {
+    const content = getServicePlanning(slug, locale);
+    checkTranslation(
+      servicePlanningTranslations[slug].en,
+      content,
+      `service-planning.${slug}.${locale}`
+    );
+    assert(content.items.length, `Empty planning guidance: ${slug}/${locale}`);
+    assert(
+      !planningTitles.has(content.title),
+      `Generic repeated planning title: ${slug}/${locale}`
+    );
+    planningTitles.add(content.title);
+  }
+}
 for (const locale of ["de", "fr"]) {
   assert(locales.includes(locale), `Missing locale: ${locale}`);
   checkTranslation(englishDictionary, await getDictionary(locale), locale);
 }
 for (const locale of locales) {
   const dictionary = await getDictionary(locale);
+  checkTranslation(
+    servicePageTranslations.en,
+    servicePageTranslations[locale],
+    `service-pages.${locale}`
+  );
   expectPage(
     locale,
     "calculator",
@@ -233,7 +357,21 @@ for (const locale of locales) {
       `services/${slug}`,
       content.seoTitle,
       content.seoDescription,
-      content.heroTitle ?? content.title
+      content.heroTitle ?? content.title,
+      [
+        content.heroDescription,
+        content.fullDescription,
+        ...content.includedWorks,
+        ...content.suitableFor,
+        ...(content.customerTypes ?? []),
+        ...(content.workTypes ?? []),
+        ...content.workflow.flatMap((step) => [step.title, step.description]),
+        ...content.priceFactors,
+        ...(content.estimateRequirements ?? []),
+        ...content.faq.flatMap((item) => [item.question, item.answer]),
+        dictionary.cta.title,
+        dictionary.cta.description,
+      ]
     );
   }
   const serviceNavigation = getServiceNavigation(locale);
@@ -353,8 +491,37 @@ for (const page of seoLandingPages) {
       getSeoLandingPath(page),
       content.seoTitle,
       content.seoDescription,
-      content.title
+      content.title,
+      [
+        content.description,
+        ...content.introduction,
+        ...content.sections.flatMap((section) => [
+          section.title,
+          ...section.paragraphs,
+          ...(section.items ?? []),
+        ]),
+        ...content.faqs.flatMap((item) => [item.question, item.answer]),
+      ]
     );
+    const roles = serviceSectionRoles[page.slug];
+    if (roles) {
+      const indexes = Object.values(roles);
+      assert.equal(
+        new Set(indexes).size,
+        indexes.length,
+        `Repeated service section: ${page.slug}`
+      );
+      for (const index of indexes)
+        assert(
+          content.sections[index],
+          `Missing service section: ${page.slug}/${locale}/${index}`
+        );
+      if (roles.process !== undefined)
+        assert(
+          content.sections[roles.process].items?.length,
+          `Process has no verified steps: ${page.slug}/${locale}`
+        );
+    }
     for (const key of ["title", "description", "seoTitle", "seoDescription"])
       assert(content[key]?.trim(), `${page.slug}/${locale}: missing ${key}`);
     assert(content.sections.length, `No content for ${page.slug}/${locale}`);

@@ -1,0 +1,189 @@
+{
+  "generator": "Built-in image_gen",
+  "purpose": "Illustrative service photography. These scenes do not document completed SHINEX projects.",
+  "optimization": "WebP, quality 82, maximum width 1536px. Original generated PNGs retained outside the application.",
+  "assets": [
+    {
+      "path": "public/images/services/electrical-work-yerevan-hero.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 132900,
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape website photograph, 1536x1024. Create a premium editorial architectural illustration for an electrical installation service. A bright unfinished apartment room with clean plaster walls and visible neatly routed electrical conduits leading to recessed outlet boxes, tall side window, workbench with coiled cable and unbranded tools in foreground. No people. The scene must read as electrical planning and installation rather than a furnished living room. Soft natural daylight, realistic construction textures, restrained neutral palette, plausible geometry, professional composition with a clearly readable central subject suitable for mobile cropping. One continuous photograph, no collage, no text, no logos, no watermark, no labels. This is an illustrative concept, not a real completed project."
+    },
+    {
+      "path": "public/images/services/renovation-hero.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 390620,
+      "prompt": "Use case: photorealistic-natural. Landscape 1536x1024 architectural editorial photograph for a premium construction service website. Subject: A modest premium two-storey private house with pale Armenian tuff stone walls, pitched charcoal roof, mature apricot garden and timber entry, viewed from the garden at calm early morning. Clearly an existing private house to be renovated, tasteful and realistic, no extravagant mansion or pool. Realistic material textures, plausible geometry, restrained natural colors, clearly readable central subject suitable for mobile cropping. One continuous photograph, no collage, no overlaid text, no logos, no watermark, no people. Illustrative concept, not documentation of a real SHINEX project."
+    },
+    {
+      "path": "public/images/services/apartment-interior-design-yerevan-hero.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 169024,
+      "prompt": "Use case: photorealistic-natural. Landscape 1536x1024 architectural editorial photograph for a premium construction service website. Subject: A carefully designed compact city apartment with muted olive kitchen joinery, rounded oak dining table, built-in storage and linen curtains. Wide interior photograph from entry toward the kitchen, practical premium design, natural afternoon light, no beige sofa living room. Realistic material textures, plausible geometry, restrained natural colors, clearly readable central subject suitable for mobile cropping. One continuous photograph, no collage, no overlaid text, no logos, no watermark, no people. Illustrative concept, not documentation of a real SHINEX project."
+    },
+    {
+      "path": "public/images/services/office-renovation-yerevan-hero.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 186094,
+      "prompt": "Use case: photorealistic-natural. Landscape 1536x1024 architectural editorial photograph for a premium construction service website. Subject: A modern office corridor with glass meeting rooms, navy conference chairs, acoustic timber wall panels, linear ceiling lighting and a clear view to desks at the end. Cool daylight with warm accents, balanced commercial architectural photography. Realistic material textures, plausible geometry, restrained natural colors, clearly readable central subject suitable for mobile cropping. One continuous photograph, no collage, no overlaid text, no logos, no watermark, no people. Illustrative concept, not documentation of a real SHINEX project."
+    },
+    {
+      "path": "public/images/services/capital-renovation-yerevan-hero.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 232458,
+      "prompt": "Use case: photorealistic-natural. Landscape 1536x1024 architectural editorial photograph for a premium construction service website. Subject: An apartment undergoing major renovation, empty rooms with old plaster removed from part of the walls exposing brick, new clean floor screed, door openings through several rooms, stacks of construction materials placed tidily. Warm raking daylight, authentic intermediate construction stage, no people. Realistic material textures, plausible geometry, restrained natural colors, clearly readable central subject suitable for mobile cropping. One continuous photograph, no collage, no overlaid text, no logos, no watermark, no people. Illustrative concept, not documentation of a real SHINEX project."
+    },
+    {
+      "path": "public/images/services/cosmetic-renovation-yerevan-hero.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 132422,
+      "prompt": "Use case: photorealistic-natural. Landscape 1536x1024 architectural editorial photograph for a premium construction service website. Subject: A bright bedroom during light redecoration, freshly painted muted sage wall, protected floor, a paint roller tray and neatly folded dust sheet, simple step ladder, tall window. Close architectural composition focused on surface renewal, no structural demolition, no people. Realistic material textures, plausible geometry, restrained natural colors, clearly readable central subject suitable for mobile cropping. One continuous photograph, no collage, no overlaid text, no logos, no watermark, no people. Illustrative concept, not documentation of a real SHINEX project."
+    },
+    {
+      "path": "public/images/services/plumbing-work-yerevan-hero.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 155238,
+      "prompt": "Use case: photorealistic-natural. Landscape 1536x1024 architectural editorial photograph for a premium construction service website. Subject: A bathroom under renovation showing a wall-hung WC support frame and carefully routed water supply and drainage pipework before wall closure. Unfinished neutral plaster, a large window, plumbing components plausible and professionally arranged. Wide photographic composition, no people. Realistic material textures, plausible geometry, restrained natural colors, clearly readable central subject suitable for mobile cropping. One continuous photograph, no collage, no overlaid text, no logos, no watermark, no people. Illustrative concept, not documentation of a real SHINEX project."
+    },
+    {
+      "path": "public/images/services/renovation-details.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 270784,
+      "prompt": "Use case: photorealistic-natural. Landscape 1536x1024 architectural editorial photograph for a premium construction service website. Subject: An older private house interior during careful refurbishment: exposed timber ceiling beams, partially replastered wall, restored wooden window, neatly stacked floor boards and plastering tools. View across a large airy room toward a garden. Warm natural side light. Realistic material textures, plausible geometry, restrained natural colors, clearly readable central subject suitable for mobile cropping. One continuous photograph, no collage, no overlaid text, no logos, no watermark, no people. Illustrative concept, not documentation of a real SHINEX project."
+    },
+    {
+      "path": "public/images/services/house-construction-details.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 339124,
+      "prompt": "Use case: photorealistic-natural. Landscape 1536x1024 architectural editorial photograph for a premium construction service website. Subject: A private house at the structural construction stage: compact masonry walls and concrete columns rising on a clean foundation slab, timber roof framing partly installed, orderly materials on site, distant dry hills. Elevated three-quarter view in bright morning light. Realistic material textures, plausible geometry, restrained natural colors, clearly readable central subject suitable for mobile cropping. One continuous photograph, no collage, no overlaid text, no logos, no watermark, no people. Illustrative concept, not documentation of a real SHINEX project."
+    },
+    {
+      "path": "public/images/services/interior-design-details.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 321538,
+      "prompt": "Use case: photorealistic-natural. Landscape 1536x1024 architectural editorial photograph for a premium construction service website. Subject: Interior designer's material composition on a large dark worktable: architectural floor plan without legible text, oak and stone samples, muted fabric swatches, a brass finish sample and a pencil. Close top-down editorial still life, soft window shadows, richly tactile surfaces. Realistic material textures, plausible geometry, restrained natural colors, clearly readable central subject suitable for mobile cropping. One continuous photograph, no collage, no overlaid text, no logos, no watermark, no people. Illustrative concept, not documentation of a real SHINEX project."
+    },
+    {
+      "path": "public/images/services/commercial-construction-details.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 221880,
+      "prompt": "Use case: photorealistic-natural. Landscape 1536x1024 architectural editorial photograph for a premium construction service website. Subject: A small premium street-level retail showroom under fit-out: empty oak display shelving, pale terrazzo floor, unfinished ceiling with neatly routed building services, protected shopfront glazing and a workbench. Wide diagonal view, soft daylight, no products or signage. Realistic material textures, plausible geometry, restrained natural colors, clearly readable central subject suitable for mobile cropping. One continuous photograph, no collage, no overlaid text, no logos, no watermark, no people. Illustrative concept, not documentation of a real SHINEX project."
+    },
+    {
+      "path": "public/images/services/design-details.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 119214,
+      "prompt": "Use case: photorealistic-natural. Landscape 1536x1024 architectural editorial photograph for a premium construction service website. Subject: A white physical architectural massing model of a modern two-storey house on a topographic site model on an architect's table. Rolled plans without readable text and a scale ruler, close three-quarter photograph with shallow depth of field, cool studio daylight. Realistic material textures, plausible geometry, restrained natural colors, clearly readable central subject suitable for mobile cropping. One continuous photograph, no collage, no overlaid text, no logos, no watermark, no people. Illustrative concept, not documentation of a real SHINEX project."
+    },
+    {
+      "path": "public/images/services/monolithic-work-details.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 378216,
+      "prompt": "Use case: photorealistic-natural. Landscape 1536x1024 architectural editorial photograph for a premium construction service website. Subject: Close architectural construction photograph of a reinforced concrete foundation preparation: carefully tied steel reinforcement cage and timber formwork with spacers and a clean concrete base. Strong diagonal perspective, clear steel texture, bright overcast light, technically plausible arrangement, no workers or machinery. Realistic material textures, plausible geometry, restrained natural colors, clearly readable central subject suitable for mobile cropping. One continuous photograph, no collage, no overlaid text, no logos, no watermark, no people. Illustrative concept, not documentation of a real SHINEX project."
+    },
+    {
+      "path": "public/images/services/facade-and-roofing-details.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 200724,
+      "prompt": "Use case: photorealistic-natural. Landscape 1536x1024 architectural editorial photograph for a premium construction service website. Subject: Detailed close architectural view of a charcoal standing-seam metal roof meeting a warm stone facade, with a neatly installed gutter and downpipe, eave junction and precise flashing clearly visible. Blue-grey sky, clean daylight, focus on roof and drainage craftsmanship. Realistic material textures, plausible geometry, restrained natural colors, clearly readable central subject suitable for mobile cropping. One continuous photograph, no collage, no overlaid text, no logos, no watermark, no people. Illustrative concept, not documentation of a real SHINEX project."
+    },
+    {
+      "path": "public/images/services/apartment-renovation-yerevan-details.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 159538,
+      "prompt": "Use case: photorealistic-natural. Landscape 1536x1024 architectural editorial photograph for a premium construction service website. Subject: An apartment at the finishing stage: unoccupied room with newly levelled walls, a partially tiled floor, a tile cutter and stacked pale porcelain tiles on a workbench beside a tall window. Clear central work area, honest renovation details, bright neutral daylight. Realistic material textures, plausible geometry, restrained natural colors, clearly readable central subject suitable for mobile cropping. One continuous photograph, no collage, no overlaid text, no logos, no watermark, no people. Illustrative concept, not documentation of a real SHINEX project."
+    },
+    {
+      "path": "public/images/services/new-build-renovation-details.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 166932,
+      "prompt": "Use case: photorealistic-natural. Landscape 1536x1024 architectural editorial photograph for a premium construction service website. Subject: A newly handed-over apartment before interior finishing: empty concrete slab ceiling, raw block walls, clean screed floor, panoramic window and basic utility connection points. Broad architectural view in cool morning daylight, no furniture or demolition debris. Realistic material textures, plausible geometry, restrained natural colors, clearly readable central subject suitable for mobile cropping. One continuous photograph, no collage, no overlaid text, no logos, no watermark, no people. Illustrative concept, not documentation of a real SHINEX project."
+    },
+    {
+      "path": "public/images/services/turnkey-renovation-details.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 174090,
+      "prompt": "Use case: photorealistic-natural. Landscape 1536x1024 architectural editorial photograph for a premium construction service website. Subject: Completed apartment entrance hall ready for handover: warm oak front door, built-in wardrobe, pale stone floor, simple brass wall light and open view toward a bright dining room. No living room sofa composition. Warm architectural photograph, clean but realistic. Realistic material textures, plausible geometry, restrained natural colors, clearly readable central subject suitable for mobile cropping. One continuous photograph, no collage, no overlaid text, no logos, no watermark, no people. Illustrative concept, not documentation of a real SHINEX project."
+    },
+    {
+      "path": "public/images/services/apartment-interior-design-yerevan-details.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 223014,
+      "prompt": "Use case: photorealistic-natural. Landscape 1536x1024 architectural editorial photograph for a premium construction service website. Subject: Compact apartment home office and storage nook: built-in walnut desk beneath a window, muted terracotta wall, integrated shelving, upholstered chair and small table lamp. Editorial close interior photograph showing efficient use of space, gentle daylight. Realistic material textures, plausible geometry, restrained natural colors, clearly readable central subject suitable for mobile cropping. One continuous photograph, no collage, no overlaid text, no logos, no watermark, no people. Illustrative concept, not documentation of a real SHINEX project."
+    },
+    {
+      "path": "public/images/services/office-renovation-yerevan-details.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 221864,
+      "prompt": "Use case: photorealistic-natural. Landscape 1536x1024 architectural editorial photograph for a premium construction service website. Subject: Office fit-out work in progress: lightweight partition framing, raised floor panels with neatly organized cable routes, stacked acoustic ceiling panels, unfinished meeting room behind. Wide practical construction photograph, daylight, no people. Realistic material textures, plausible geometry, restrained natural colors, clearly readable central subject suitable for mobile cropping. One continuous photograph, no collage, no overlaid text, no logos, no watermark, no people. Illustrative concept, not documentation of a real SHINEX project."
+    },
+    {
+      "path": "public/images/services/capital-renovation-yerevan-details.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 241232,
+      "prompt": "Use case: photorealistic-natural. Landscape 1536x1024 architectural editorial photograph for a premium construction service website. Subject: Close interior renovation scene showing a rebuilt doorway with clean brick edges, plaster levelling guides on a wall and a neatly prepared floor junction, mixing bucket and plaster trowel beside the wall. Focus on substrate preparation in soft side light, no broad empty-room shot. Realistic material textures, plausible geometry, restrained natural colors, clearly readable central subject suitable for mobile cropping. One continuous photograph, no collage, no overlaid text, no logos, no watermark, no people. Illustrative concept, not documentation of a real SHINEX project."
+    },
+    {
+      "path": "public/images/services/cosmetic-renovation-yerevan-details.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 201566,
+      "prompt": "Use case: photorealistic-natural. Landscape 1536x1024 architectural editorial photograph for a premium construction service website. Subject: Editorial close-up of an interior decoration workbench: open tray with warm off-white paint, a roller, brushes and wall-finish samples beside freshly painted wall and protected oak skirting. Gentle natural light, tangible textures, no labels, no people. Realistic material textures, plausible geometry, restrained natural colors, clearly readable central subject suitable for mobile cropping. One continuous photograph, no collage, no overlaid text, no logos, no watermark, no people. Illustrative concept, not documentation of a real SHINEX project."
+    },
+    {
+      "path": "public/images/services/plumbing-work-yerevan-details.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 75792,
+      "prompt": "Use case: photorealistic-natural. Landscape 1536x1024 architectural editorial photograph for a premium construction service website. Subject: Close-up under a bathroom vanity during installation: clean hot and cold water supply connections and a chrome bottle trap beneath a white basin, cabinet doors open, a wrench placed neatly on folded cloth. Technical editorial photograph, believable simple plumbing, soft light. Realistic material textures, plausible geometry, restrained natural colors, clearly readable central subject suitable for mobile cropping. One continuous photograph, no collage, no overlaid text, no logos, no watermark, no people. Illustrative concept, not documentation of a real SHINEX project."
+    },
+    {
+      "path": "public/images/services/electrical-work-yerevan-details.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 151014,
+      "prompt": "Use case: photorealistic-natural. Landscape 1536x1024 architectural editorial photograph for a premium construction service website. Subject: Finished interior wall detail with a neat row of modern graphite electrical outlets and a light switch above an oak home-office desktop, a closed neutral notebook and a simple desk lamp nearby. Close architectural photograph, warm side light, emphasize fixtures and their placement, no exposed wiring. Realistic material textures, plausible geometry, restrained natural colors, clearly readable central subject suitable for mobile cropping. One continuous photograph, no collage, no overlaid text, no logos, no watermark, no people. Illustrative concept, not documentation of a real SHINEX project."
+    },
+    {
+      "path": "public/images/services/facade-and-roofing-hero.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 305644,
+      "prompt": "Use case: photorealistic-natural. Landscape 1536x1024 architectural editorial photograph for a premium construction service website. Subject: A low eye-level three-quarter exterior view of a modest two-storey private house with pale warm stone facade, graphite standing seam pitched roof, clearly visible roof edges, gutter system, clean plaster facade sections and deep window reveals. Building envelope and roof are the obvious focus, not an interior room. Bare gravel foreground and restrained landscaping, soft bright overcast light, strong diagonal roof silhouette across the frame, contemporary Caucasus residential architecture. Realistic material textures, plausible geometry, restrained natural colors, clearly readable central subject suitable for mobile cropping. One continuous photograph, no collage, no overlaid text, no logos, no watermark, no people. Illustrative concept, not documentation of a real SHINEX project."
+    },
+    {
+      "path": "public/images/services/turnkey-renovation-hero.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 140270,
+      "prompt": "Use case: photorealistic-natural. Landscape 1536x1024 architectural editorial photograph for a premium construction service website. Subject: A newly completed compact apartment bedroom ready for furnishing and use, low upholstered bed with ivory linen, softly illuminated warm oak wall panel behind bed, muted dusty blue curtains beside a city-facing window, built-in wardrobe and pristine continuous oak flooring. Finished coordinated surfaces, switches and door trim clearly visible. Straight-on composed view from the doorway, soft morning daylight, refined warm-neutral design, no house exterior, no living room, no staircases. Realistic material textures, plausible geometry, restrained natural colors, clearly readable central subject suitable for mobile cropping. One continuous photograph, no collage, no overlaid text, no logos, no watermark, no people. Illustrative concept, not documentation of a real SHINEX project."
+    },
+    {
+      "path": "public/images/services/new-build-renovation-hero.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 224586,
+      "prompt": "Use case: photorealistic-natural. Landscape 1536x1024 architectural editorial photograph for a premium construction service website. Subject: A freshly completed compact living room in a newly built city apartment, a low slate-blue sofa on the left, pale oak herringbone floor, simple cream plaster walls, large black-framed windows on the right showing an anonymous midrise city skyline and distant dry mountains. A single light stone oval coffee table, minimal walnut shelving. Bright crisp midday daylight, clear rectangular room geometry, cozy normal apartment ceiling height, fully finished but uncluttered. No double-height room, no stairs, no exterior house view. Realistic material textures, plausible geometry, restrained natural colors, clearly readable central subject suitable for mobile cropping. One continuous photograph, no collage, no overlaid text, no logos, no watermark, no people. Illustrative concept, not documentation of a real SHINEX project."
+    }
+  ]
+}
