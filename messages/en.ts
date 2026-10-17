@@ -438,6 +438,20 @@ const dictionary = {
     },
   },
   constructionCalculator: {
+    request: {
+      commentPlaceholder:
+        "Additional requirements or a convenient time to contact you.",
+      title: "Request a project estimate",
+      description:
+        "Leave your contact details. We will review your project parameters, prepare an estimate and contact you. No price is calculated automatically.",
+      summaryTitle: "Your project details",
+      submit: "Send estimate request",
+      success: "Request sent. We will contact you to discuss the cost.",
+      invalidParameters:
+        "We could not validate the project parameters. Close this form, check the calculator details and try again.",
+      yes: "Yes",
+      no: "No",
+    },
     renovationContact: {
       title: "Discuss your renovation",
       description:
@@ -446,7 +460,7 @@ const dictionary = {
     },
     dialog: {
       eyebrow: "Online calculator",
-      title: "Preliminary project cost",
+      title: "Project estimate request",
       close: "Close calculator",
       open: "Open calculator",
     },
@@ -454,7 +468,7 @@ const dictionary = {
       scenario: {
         title: "Choose a service",
         description:
-          "Contact us for renovation enquiries, or get an initial calculation for house construction and design.",
+          "Contact us about renovation. For house construction and design, enter the project parameters and request an estimate.",
       },
       parameters: {
         title: "Property details",
@@ -629,10 +643,11 @@ const dictionary = {
       empty: "Enter approximate details to prepare for a project discussion.",
       pricingUnavailable:
         "Public cost ranges are not published yet. Leave the key details and we will clarify an initial guide after reviewing the brief.",
-      calculate: "Calculate cost",
+      calculate: "Request a cost estimate",
       calculateDescription:
-        "See the preliminary total and a breakdown of the selected work.",
-      ready: "Select the button to see the preliminary cost.",
+        "Leave your contact details in the next step. We will review your project, calculate the cost and contact you.",
+      ready:
+        "Leave your contact details in the next step. We will review your project, calculate the cost and contact you.",
       total: "Estimated total",
       notice:
         "The exact cost is determined after the brief, materials, property conditions, and survey are clarified.",
@@ -903,7 +918,7 @@ const dictionary = {
         "We work in Yerevan, Gyumri, Vanadzor, Dilijan, and other Armenian cities. Work terms are agreed based on the property location and scope.",
     },
     calculatorEstimateNotice:
-      "The calculator provides an initial guide. A precise estimate follows a property survey.",
+      "Send your project parameters and contact details. We will assess the cost after reviewing the work required and property conditions.",
     faqTitle: "Frequently asked questions",
     relatedPlanningTitle: "Explore your options",
     calculatorPriceLink: "Renovation prices",
@@ -933,9 +948,9 @@ const dictionary = {
   calculatorPage: {
     title: "Construction and design cost calculator in Armenia",
     description:
-      "Get an initial house construction or design estimate in AMD. For renovation costs, contact SHINEX by phone, WhatsApp or the enquiry form.",
+      "Request a house construction or interior design estimate in Armenia. Send your project parameters and contact details for a personal cost assessment.",
     intro:
-      "The calculator provides initial estimates for house construction and design. For apartment, house or commercial renovation, contact us to discuss the property, the work required and how to arrange an estimate.",
+      "Enter the area and parameters for house construction or interior design, then leave your name, phone number and property location. SHINEX will review the request, clarify the details and contact you to discuss the cost. No automatic price is displayed. For renovation, contact us to discuss the property, scope of work and preparation of an estimate.",
     faqTitle: "Calculations and cost enquiries",
     faqs: [
       {
@@ -946,7 +961,7 @@ const dictionary = {
       {
         question: "What does the calculator cover?",
         answer:
-          "It provides an initial guide for house construction and design. The final scope and cost are agreed after reviewing the project details.",
+          "Select house construction or interior design and enter your project parameters. The request button opens a contact form. Submit your details and SHINEX will review the project and contact you about the estimate. The calculator does not display an automatic price.",
       },
     ],
   },

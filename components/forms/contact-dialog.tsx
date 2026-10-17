@@ -9,6 +9,7 @@ import {
 } from "@/components/forms/contact-methods";
 import { Button } from "@/components/ui/button";
 import type { ButtonSize } from "@/components/ui/button-styles";
+import type { CalculatorRequestContext } from "@/lib/calculator/calculator-request";
 import { trackEvent } from "@/lib/analytics";
 import type { Locale } from "@/types";
 import type { ContactDialogDictionary } from "@/types/contact";
@@ -78,6 +79,8 @@ export function ContactDialog({
   const [isOpen, setIsOpen] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
   const [view, setView] = useState<"methods" | "form" | "success">("methods");
+  const [calculatorContext, setCalculatorContext] =
+    useState<CalculatorRequestContext | null>(null);
   const dialogRef = useRef<HTMLDivElement>(null);
   const copy = dictionary.contacts;
 
@@ -97,11 +100,15 @@ export function ContactDialog({
 
   useEffect(() => {
     const openContact = () => {
+      setCalculatorContext(null);
       setIsClosing(false);
       setView("methods");
       setIsOpen(true);
     };
-    const openMessage = () => {
+    const openMessage = (event: Event) => {
+      setCalculatorContext(
+        (event as CustomEvent<CalculatorRequestContext>).detail ?? null
+      );
       setIsClosing(false);
       setView("form");
       setIsOpen(true);
@@ -119,8 +126,32 @@ export function ContactDialog({
     if (!isOpen) return;
 
     const previousOverflow = document.body.style.overflow;
+    const previousFocus = document.activeElement;
     const closeOnEscape = (event: KeyboardEvent) => {
       if (event.key === "Escape") closeDialog();
+      if (event.key === "Tab") {
+        const focusable = Array.from(
+          dialogRef.current?.querySelectorAll<HTMLElement>(
+            'button:not([disabled]), input:not([disabled]):not([type="hidden"]), select:not([disabled]), textarea:not([disabled]), a[href], summary, [tabindex="0"]'
+          ) ?? []
+        ).filter(
+          (element) =>
+            element.getClientRects().length > 0 && element.tabIndex >= 0
+        );
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        if (
+          first &&
+          last &&
+          (event.shiftKey
+            ? document.activeElement === first ||
+              document.activeElement === dialogRef.current
+            : document.activeElement === last)
+        ) {
+          event.preventDefault();
+          (event.shiftKey ? last : first).focus();
+        }
+      }
     };
 
     document.body.style.overflow = "hidden";
@@ -130,6 +161,8 @@ export function ContactDialog({
     return () => {
       document.body.style.overflow = previousOverflow;
       window.removeEventListener("keydown", closeOnEscape);
+      if (previousFocus instanceof HTMLElement && previousFocus.isConnected)
+        previousFocus.focus({ preventScroll: true });
     };
   }, [isOpen]);
 
@@ -183,11 +216,15 @@ export function ContactDialog({
               className="mt-1 text-lg font-semibold tracking-[-0.03em] text-[var(--text-primary)]"
               id="contact-dialog-title"
             >
-              {view === "methods" ? copy.methodsTitle : copy.formTitle}
+              {calculatorContext
+                ? dictionary.calculatorRequest?.title
+                : view === "methods"
+                  ? copy.methodsTitle
+                  : copy.formTitle}
             </h2>
           </div>
           <div className="flex items-center gap-2">
-            {view === "form" ? (
+            {view === "form" && !calculatorContext ? (
               <button
                 className="inline-flex h-10 items-center gap-1.5 rounded-xl px-3 text-sm font-semibold text-[var(--text-primary)] transition hover:bg-[var(--surface-muted)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--button-primary)]"
                 onClick={() => setView("methods")}
@@ -231,6 +268,7 @@ export function ContactDialog({
               }
             >
               <LeadForm
+                calculatorContext={calculatorContext ?? undefined}
                 dictionary={dictionary}
                 locale={locale}
                 onSuccess={() => setView("success")}
@@ -246,7 +284,9 @@ export function ContactDialog({
                 <CheckCircle2 aria-hidden="true" className="size-7" />
               </span>
               <p className="mt-5 text-lg font-semibold text-[var(--text-primary)]">
-                {dictionary.estimate.success}
+                {calculatorContext
+                  ? dictionary.calculatorRequest?.success
+                  : dictionary.estimate.success}
               </p>
               <p className="mt-2 text-sm text-[var(--text-secondary)]">
                 {copy.closeAfterSending}

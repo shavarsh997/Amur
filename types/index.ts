@@ -302,6 +302,17 @@ export interface Dictionary {
     };
   };
   constructionCalculator: {
+    request: {
+      commentPlaceholder: string;
+      title: string;
+      description: string;
+      summaryTitle: string;
+      submit: string;
+      success: string;
+      invalidParameters: string;
+      yes: string;
+      no: string;
+    };
     renovationContact: { title: string; description: string; action: string };
     dialog: { eyebrow: string; title: string; close: string; open: string };
     steps: {

@@ -108,6 +108,7 @@ export default async function LocaleLayout({
             dictionary={{
               contacts: dictionary.contacts,
               estimate: dictionary.estimate,
+              calculatorRequest: dictionary.constructionCalculator.request,
               nav: { closeMenu: dictionary.nav.closeMenu },
               common: {
                 back: dictionary.common.back,

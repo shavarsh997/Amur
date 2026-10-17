@@ -452,6 +452,20 @@ const dictionary = {
     },
   },
   constructionCalculator: {
+    request: {
+      commentPlaceholder:
+        "Précisions sur le projet ou moment souhaité pour vous contacter.",
+      title: "Demander une estimation",
+      description:
+        "Laissez vos coordonnées. Nous étudierons les paramètres du projet, préparerons une estimation et vous contacterons. Aucun prix n’est calculé automatiquement.",
+      summaryTitle: "Les paramètres de votre projet",
+      submit: "Envoyer la demande d’estimation",
+      success: "Demande envoyée. Nous vous contacterons pour discuter du coût.",
+      invalidParameters:
+        "Les paramètres du projet n’ont pas pu être validés. Fermez ce formulaire, vérifiez les données du calculateur et réessayez.",
+      yes: "Oui",
+      no: "Non",
+    },
     renovationContact: {
       title: "Discuter de votre rénovation",
       description:
@@ -460,7 +474,7 @@ const dictionary = {
     },
     dialog: {
       eyebrow: "Calculateur en ligne",
-      title: "Coût préliminaire du projet",
+      title: "Demande d’estimation du projet",
       close: "Fermer le calculateur",
       open: "Ouvrir le calculateur",
     },
@@ -468,7 +482,7 @@ const dictionary = {
       scenario: {
         title: "Choisissez un service",
         description:
-          "Contactez-nous pour une rénovation ou obtenez un premier calcul pour la construction d’une maison et la conception.",
+          "Contactez-nous pour une rénovation. Pour la construction de maisons et la conception, renseignez les paramètres du projet et demandez une estimation.",
       },
       parameters: {
         title: "Caractéristiques du bien",
@@ -645,10 +659,11 @@ const dictionary = {
         "Indiquez des données approximatives pour préparer l’échange sur votre projet.",
       pricingUnavailable:
         "Les fourchettes de prix publiques ne sont pas encore disponibles. Indiquez les informations essentielles ; nous vous donnerons une première indication après étude de votre besoin.",
-      calculate: "Calculer le coût",
+      calculate: "Demander une estimation",
       calculateDescription:
-        "Consultez le total préliminaire et le détail des travaux sélectionnés.",
-      ready: "Cliquez sur le bouton pour afficher le coût préliminaire.",
+        "Laissez vos coordonnées à l’étape suivante. Nous étudierons votre projet, calculerons son coût et vous contacterons.",
+      ready:
+        "Laissez vos coordonnées à l’étape suivante. Nous étudierons votre projet, calculerons son coût et vous contacterons.",
       total: "Total estimé",
       notice:
         "Le coût exact est déterminé après clarification du besoin, des matériaux, de l’état du bien et de la visite.",
@@ -923,7 +938,7 @@ const dictionary = {
         "Nous intervenons à Erevan, Gyumri, Vanadzor, Dilidjan et dans d’autres villes d’Arménie. Les modalités sont convenues selon la localisation du bien et les travaux prévus.",
     },
     calculatorEstimateNotice:
-      "Le calculateur fournit une première indication. Un devis précis suit la visite du bien.",
+      "Envoyez les paramètres de votre projet et vos coordonnées. Nous évaluerons le coût après étude des travaux nécessaires et des conditions du bien.",
     faqTitle: "Questions fréquentes",
     relatedPlanningTitle: "Découvrez vos options",
     calculatorPriceLink: "Tarifs de rénovation",
@@ -953,9 +968,9 @@ const dictionary = {
   calculatorPage: {
     title: "Calculateur de coûts de construction et de conception en Arménie",
     description:
-      "Obtenez une première estimation de construction de maison ou de conception en AMD. Pour une rénovation, contactez SHINEX par téléphone, WhatsApp ou le formulaire de demande.",
+      "Demandez une estimation de construction de maison ou de conception intérieure en Arménie. Envoyez les paramètres du projet et vos coordonnées.",
     intro:
-      "Le calculateur fournit des premières estimations pour la construction de maisons et la conception. Pour rénover un appartement, une maison ou un local professionnel, contactez-nous afin de discuter du bien, des travaux et de la préparation d’un devis.",
+      "Indiquez la surface et les paramètres de construction ou de conception intérieure, puis votre nom, votre numéro de téléphone et la localisation du bien. SHINEX étudiera la demande, précisera les détails et vous contactera pour discuter du coût. Aucun prix automatique n’est affiché. Pour une rénovation, contactez-nous pour discuter de l’état du bien, des travaux et de la préparation d’un devis.",
     faqTitle: "Calculs et demandes de prix",
     faqs: [
       {
@@ -966,7 +981,7 @@ const dictionary = {
       {
         question: "Que couvre le calculateur ?",
         answer:
-          "Il fournit une première indication pour la construction de maisons et la conception. Le périmètre et le coût définitifs sont convenus après étude des détails du projet.",
+          "Sélectionnez la construction de maison ou la conception intérieure et renseignez les paramètres. Le bouton de demande ouvre un formulaire de contact. Envoyez votre demande : SHINEX l’étudiera et vous contactera au sujet de l’estimation. Le calculateur n’affiche aucun prix automatique.",
       },
     ],
   },

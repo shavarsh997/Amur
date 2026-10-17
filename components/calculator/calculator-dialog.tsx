@@ -5,6 +5,7 @@ import { createPortal } from "react-dom";
 import { Calculator, X } from "lucide-react";
 
 import { CostCalculator } from "@/components/calculator/cost-calculator";
+import { contactMessageEvent } from "@/components/forms/contact-methods";
 import { ContactTrigger } from "@/components/forms/contact-dialog";
 import { Button } from "@/components/ui/button";
 import type {
@@ -79,10 +80,14 @@ export function CalculatorDialog({
       setDefaultScenarioId(launch?.scenarioId);
       setIsOpen(true);
     };
+    const openContactForm = () => setIsOpen(false);
     window.addEventListener(calculatorOpenEvent, openCalculator);
+    window.addEventListener(contactMessageEvent, openContactForm);
 
-    return () =>
+    return () => {
       window.removeEventListener(calculatorOpenEvent, openCalculator);
+      window.removeEventListener(contactMessageEvent, openContactForm);
+    };
   }, []);
 
   useEffect(() => {

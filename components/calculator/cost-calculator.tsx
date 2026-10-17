@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import {
   FormProvider,
   useForm,
@@ -10,7 +9,12 @@ import {
   type SubmitHandler,
 } from "react-hook-form";
 
-import { ConstructionEstimateDialog } from "@/components/calculator/construction-estimate-dialog";
+import { contactMessageEvent } from "@/components/forms/contact-methods";
+import {
+  calculatorRequestFromValues,
+  calculatorRequestSummary,
+  type CalculatorRequestContext,
+} from "@/lib/calculator/calculator-request";
 import { CalculateButton } from "@/components/calculator/steps/calculate-button";
 import { ConstructionExtrasStep } from "@/components/calculator/steps/construction-extras-step";
 import { ParametersStep } from "@/components/calculator/steps/parameters-step";
@@ -46,7 +50,6 @@ export function CostCalculator({
   defaultScenarioId?: CalculatorScenarioId;
   className?: string;
 }) {
-  const [isEstimateOpen, setIsEstimateOpen] = useState(false);
   const form = useForm<CalculatorFormValues>({
     defaultValues: valuesForScenario(defaultCalculationType, defaultScenarioId),
     resolver: createCalculatorResolver(copy),
@@ -56,8 +59,6 @@ export function CostCalculator({
     name: "calculationType",
     defaultValue: defaultCalculationType,
   });
-  const [submittedValues, setSubmittedValues] =
-    useState<CalculatorFormValues | null>(null);
   const isConstruction = calculationType === "construction";
   const isRenovation = calculationType === "renovation";
 
@@ -74,8 +75,6 @@ export function CostCalculator({
       (item) => item.id === scenarioId
     );
     if (!scenario) return;
-    setIsEstimateOpen(false);
-    setSubmittedValues(null);
 
     form.reset(
       valuesForScenario(
@@ -93,8 +92,16 @@ export function CostCalculator({
 
   const onSubmit: SubmitHandler<CalculatorFormValues> = (values) => {
     if (values.calculationType === "renovation") return;
-    setSubmittedValues(values);
-    setIsEstimateOpen(true);
+    const request = calculatorRequestFromValues(values);
+    if (!request) return;
+    window.dispatchEvent(
+      new CustomEvent<CalculatorRequestContext>(contactMessageEvent, {
+        detail: {
+          request,
+          summary: calculatorRequestSummary(request, copy, locale),
+        },
+      })
+    );
   };
 
   const onInvalid: SubmitErrorHandler<CalculatorFormValues> = (errors) => {
@@ -129,15 +136,6 @@ export function CostCalculator({
             </>
           )}
         </div>
-
-        {!isRenovation && isEstimateOpen && submittedValues ? (
-          <ConstructionEstimateDialog
-            copy={copy}
-            locale={locale}
-            onClose={() => setIsEstimateOpen(false)}
-            values={submittedValues}
-          />
-        ) : null}
       </div>
     </FormProvider>
   );

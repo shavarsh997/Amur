@@ -1,5 +1,9 @@
 "use server";
 
+import {
+  parseCalculatorRequest,
+  calculatorRequestSummary,
+} from "@/lib/calculator/calculator-request";
 import { leadFormConfig } from "@/config/lead-form.config";
 import { defaultLocale, getDictionary, isLocale } from "@/lib/i18n";
 import { submitLead, type LeadInput } from "@/lib/leads/service";
@@ -49,10 +53,32 @@ export async function submitLeadAction(
   const dictionary = await getDictionary(locale);
   const copy = dictionary.estimate;
 
-  const objectType = readString(formData, "objectType", 40);
-  const areaValue = readString(formData, "area", 20).replace(",", ".");
+  let calculatorRequest = null;
+  if (formData.has("calculatorRequest")) {
+    const raw = formData.get("calculatorRequest");
+    try {
+      if (typeof raw === "string" && raw.length <= 2000)
+        calculatorRequest = parseCalculatorRequest(JSON.parse(raw));
+    } catch {
+      /* Invalid JSON is rejected like other invalid parameters. */
+    }
+    if (!calculatorRequest)
+      return {
+        status: "error",
+        message: dictionary.constructionCalculator.request.invalidParameters,
+        errors: {},
+      };
+  }
+  const objectType =
+    calculatorRequest?.calculationType === "construction"
+      ? "private-house"
+      : readString(formData, "objectType", 40);
+  const areaValue = calculatorRequest
+    ? String(calculatorRequest.area)
+    : readString(formData, "area", 20).replace(",", ".");
   const region = readString(formData, "region", 120);
-  const workType = readString(formData, "workType", 40);
+  const workType =
+    calculatorRequest?.calculationType ?? readString(formData, "workType", 40);
   const options = formData
     .getAll("options")
     .filter((value): value is string => typeof value === "string")
@@ -76,7 +102,8 @@ export async function submitLeadAction(
     errors.area = copy.errors.areaInvalid;
   }
   if (!region) errors.region = copy.errors.regionRequired;
-  if (!workTypes.has(workType)) errors.workType = copy.errors.workTypeRequired;
+  if (!calculatorRequest && !workTypes.has(workType))
+    errors.workType = copy.errors.workTypeRequired;
   if (!name) errors.name = copy.errors.nameRequired;
   if (!phone) {
     errors.phone = copy.errors.phoneRequired;
@@ -95,11 +122,32 @@ export async function submitLeadAction(
   try {
     await submitLead(
       {
-        objectType,
+        objectType: calculatorRequest
+          ? copy.choices.objectType[
+              leadFormConfig.objectTypes.find(
+                (item) => item.value === objectType
+              )!.labelKey
+            ]
+          : objectType,
         area,
         region,
-        workType,
-        options,
+        workType: calculatorRequest
+          ? dictionary.constructionCalculator.quickScenarios[
+              calculatorRequest.calculationType === "construction"
+                ? "houseConstruction"
+                : "interiorDesign"
+            ].title
+          : workType,
+        options: calculatorRequest
+          ? calculatorRequestSummary(
+              calculatorRequest,
+              dictionary.constructionCalculator,
+              locale
+            ).map(({ label, value }) => `${label}: ${value}`)
+          : options,
+        source: calculatorRequest
+          ? `${dictionary.constructionCalculator.request.title} (/${locale}/calculator)`
+          : undefined,
         name,
         phone,
         comment,
@@ -107,7 +155,13 @@ export async function submitLeadAction(
       dictionary.leadNotification
     );
 
-    return { status: "success", message: copy.success, errors: {} };
+    return {
+      status: "success",
+      message: calculatorRequest
+        ? dictionary.constructionCalculator.request.success
+        : copy.success,
+      errors: {},
+    };
   } catch {
     return { status: "error", message: copy.error, errors: {} };
   }

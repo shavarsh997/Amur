@@ -197,6 +197,27 @@ for (const field of ["description", "intro"]) {
   );
 }
 
+// Public calculator copy describes the contact request flow, not an instant quote.
+assert.match(russian.constructionCalculator.result.calculate, /запросить/iu);
+assert.match(
+  russian.constructionCalculator.result.calculateDescription,
+  /контакт/iu
+);
+assert.match(russian.calculatorPage.intro, /свяжется с вами/iu);
+assert.doesNotMatch(
+  russian.calculatorPage.description,
+  /калькулятор покажет|сразу.*стоимость/iu
+);
+const calculatorComponent = readFileSync(
+  join(process.cwd(), "components/calculator/cost-calculator.tsx"),
+  "utf8"
+);
+assert(calculatorComponent.includes("contactMessageEvent"));
+assert(
+  !calculatorComponent.includes("ConstructionEstimateDialog"),
+  "Calculator bypasses contact capture with an automatic estimate"
+);
+
 // Publication fixtures are isolated in memory and never written to site content.
 function checkBlogSitemap(entries, articles) {
   const published = articles.filter(({ isPublished }) => isPublished);

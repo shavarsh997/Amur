@@ -5,11 +5,14 @@ import { useActionState, useEffect, useId, useRef } from "react";
 import { submitLeadAction, type LeadActionState } from "@/app/actions";
 import { leadFormConfig } from "@/config/lead-form.config";
 import { Button } from "@/components/ui/button";
+import type { CalculatorRequestContext } from "@/lib/calculator/calculator-request";
 import { trackEvent } from "@/lib/analytics";
 import type { Locale } from "@/types";
 import type { LeadFormDictionary } from "@/types/contact";
 
-const initialState: LeadActionState = {
+type FormState = LeadActionState & { values?: Record<string, string> };
+
+const initialState: FormState = {
   status: "idle",
   message: "",
   errors: {},
@@ -23,14 +26,36 @@ export function LeadForm({
   dictionary,
   className = "",
   onSuccess,
+  calculatorContext,
 }: {
   locale: Locale;
   dictionary: LeadFormDictionary;
   className?: string;
   onSuccess?: () => void;
+  calculatorContext?: CalculatorRequestContext;
 }) {
   const action = submitLeadAction.bind(null, locale);
-  const [state, formAction, pending] = useActionState(action, initialState);
+  const [state, formAction, pending] = useActionState(
+    async (previous: FormState, data: FormData): Promise<FormState> => {
+      const result = await action(previous, data);
+      if (result.status !== "error") return result;
+      const values: Record<string, string> = {};
+      for (const field of [
+        "objectType",
+        "area",
+        "region",
+        "workType",
+        "name",
+        "phone",
+        "comment",
+      ]) {
+        const value = data.get(field);
+        if (typeof value === "string") values[field] = value;
+      }
+      return { ...result, values };
+    },
+    initialState
+  );
   const formRef = useRef<HTMLFormElement>(null);
   const id = useId();
   const copy = dictionary.estimate;
@@ -55,82 +80,119 @@ export function LeadForm({
       action={formAction}
       className={`grid gap-5 content-grid md:grid-cols-2 ${className}`}
       noValidate
-      onFocus={() => trackEvent("form_start", { form: "lead" })}
+      onFocus={() =>
+        trackEvent("form_start", {
+          form: calculatorContext ? "calculator" : "lead",
+        })
+      }
     >
-      <div>
-        <label
-          className="mb-2 block text-sm font-semibold"
-          htmlFor={fieldId("objectType")}
-        >
-          {copy.fields.objectType}
-          <span
-            className="ml-1 text-[var(--text-secondary)]"
-            aria-hidden="true"
+      {calculatorContext ? (
+        <div className="col-span-full">
+          <p className="mb-4 leading-6 text-[var(--text-secondary)]">
+            {dictionary.calculatorRequest?.description}
+          </p>
+          <details className="rounded-xl border border-[var(--border)] bg-white p-4">
+            <summary className="cursor-pointer font-semibold">
+              {dictionary.calculatorRequest?.summaryTitle}
+            </summary>
+            <dl className="mt-3 space-y-2 text-sm">
+              {calculatorContext.summary.map(({ label, value }) => (
+                <div
+                  className="flex flex-wrap justify-between gap-x-4 gap-y-1"
+                  key={label}
+                >
+                  <dt className="text-[var(--text-secondary)]">{label}</dt>
+                  <dd className="font-medium">{value}</dd>
+                </div>
+              ))}
+            </dl>
+          </details>
+          <input
+            name="calculatorRequest"
+            type="hidden"
+            value={JSON.stringify(calculatorContext.request)}
+          />
+        </div>
+      ) : null}
+      {calculatorContext?.request.calculationType !== "construction" ? (
+        <div>
+          <label
+            className="mb-2 block text-sm font-semibold"
+            htmlFor={fieldId("objectType")}
           >
-            *
-          </span>
-        </label>
-        <select
-          aria-describedby={
-            state.errors.objectType ? errorId("objectType") : undefined
-          }
-          aria-invalid={Boolean(state.errors.objectType)}
-          className={fieldClass}
-          defaultValue=""
-          disabled={pending}
-          id={fieldId("objectType")}
-          name="objectType"
-          required
-        >
-          <option disabled value="">
-            {copy.placeholders.objectType}
-          </option>
-          {leadFormConfig.objectTypes.map((option) => (
-            <option key={option.value} value={option.value}>
-              {copy.choices.objectType[option.labelKey]}
+            {copy.fields.objectType}
+            <span
+              className="ml-1 text-[var(--text-secondary)]"
+              aria-hidden="true"
+            >
+              *
+            </span>
+          </label>
+          <select
+            aria-describedby={
+              state.errors.objectType ? errorId("objectType") : undefined
+            }
+            aria-invalid={Boolean(state.errors.objectType)}
+            className={fieldClass}
+            defaultValue={state.values?.objectType ?? ""}
+            disabled={pending}
+            id={fieldId("objectType")}
+            name="objectType"
+            required
+          >
+            <option disabled value="">
+              {copy.placeholders.objectType}
             </option>
-          ))}
-        </select>
-        {state.errors.objectType ? (
-          <p className="mt-2 text-sm text-red-700" id={errorId("objectType")}>
-            {state.errors.objectType}
-          </p>
-        ) : null}
-      </div>
+            {leadFormConfig.objectTypes.map((option) => (
+              <option key={option.value} value={option.value}>
+                {copy.choices.objectType[option.labelKey]}
+              </option>
+            ))}
+          </select>
+          {state.errors.objectType ? (
+            <p className="mt-2 text-sm text-red-700" id={errorId("objectType")}>
+              {state.errors.objectType}
+            </p>
+          ) : null}
+        </div>
+      ) : null}
 
-      <div>
-        <label
-          className="mb-2 block text-sm font-semibold"
-          htmlFor={fieldId("area")}
-        >
-          {copy.fields.area}
-          <span
-            className="ml-1 text-[var(--text-secondary)]"
-            aria-hidden="true"
+      {!calculatorContext ? (
+        <div>
+          <label
+            className="mb-2 block text-sm font-semibold"
+            htmlFor={fieldId("area")}
           >
-            *
-          </span>
-        </label>
-        <input
-          aria-describedby={state.errors.area ? errorId("area") : undefined}
-          aria-invalid={Boolean(state.errors.area)}
-          className={fieldClass}
-          disabled={pending}
-          id={fieldId("area")}
-          inputMode="decimal"
-          min="0.01"
-          name="area"
-          placeholder={copy.placeholders.area}
-          required
-          step="any"
-          type="number"
-        />
-        {state.errors.area ? (
-          <p className="mt-2 text-sm text-red-700" id={errorId("area")}>
-            {state.errors.area}
-          </p>
-        ) : null}
-      </div>
+            {copy.fields.area}
+            <span
+              className="ml-1 text-[var(--text-secondary)]"
+              aria-hidden="true"
+            >
+              *
+            </span>
+          </label>
+          <input
+            aria-describedby={state.errors.area ? errorId("area") : undefined}
+            aria-invalid={Boolean(state.errors.area)}
+            className={fieldClass}
+            disabled={pending}
+            id={fieldId("area")}
+            inputMode="decimal"
+            min="0.01"
+            name="area"
+            defaultValue={state.values?.area ?? ""}
+            placeholder={copy.placeholders.area}
+            required
+            step="any"
+            type="number"
+          />
+          {state.errors.area ? (
+            <p className="mt-2 text-sm text-red-700" id={errorId("area")}>
+              {state.errors.area}
+            </p>
+          ) : null}
+        </div>
+      ) : null}
 
       <div>
         <label
@@ -154,6 +216,7 @@ export function LeadForm({
           id={fieldId("region")}
           maxLength={120}
           name="region"
+          defaultValue={state.values?.region ?? ""}
           placeholder={copy.placeholders.region}
           required
           type="text"
@@ -165,46 +228,48 @@ export function LeadForm({
         ) : null}
       </div>
 
-      <div>
-        <label
-          className="mb-2 block text-sm font-semibold"
-          htmlFor={fieldId("workType")}
-        >
-          {copy.fields.workType}
-          <span
-            className="ml-1 text-[var(--text-secondary)]"
-            aria-hidden="true"
+      {!calculatorContext ? (
+        <div>
+          <label
+            className="mb-2 block text-sm font-semibold"
+            htmlFor={fieldId("workType")}
           >
-            *
-          </span>
-        </label>
-        <select
-          aria-describedby={
-            state.errors.workType ? errorId("workType") : undefined
-          }
-          aria-invalid={Boolean(state.errors.workType)}
-          className={fieldClass}
-          defaultValue=""
-          disabled={pending}
-          id={fieldId("workType")}
-          name="workType"
-          required
-        >
-          <option disabled value="">
-            {copy.placeholders.workType}
-          </option>
-          {leadFormConfig.workTypes.map((option) => (
-            <option key={option.value} value={option.value}>
-              {copy.choices.workType[option.labelKey]}
+            {copy.fields.workType}
+            <span
+              className="ml-1 text-[var(--text-secondary)]"
+              aria-hidden="true"
+            >
+              *
+            </span>
+          </label>
+          <select
+            aria-describedby={
+              state.errors.workType ? errorId("workType") : undefined
+            }
+            aria-invalid={Boolean(state.errors.workType)}
+            className={fieldClass}
+            defaultValue={state.values?.workType ?? ""}
+            disabled={pending}
+            id={fieldId("workType")}
+            name="workType"
+            required
+          >
+            <option disabled value="">
+              {copy.placeholders.workType}
             </option>
-          ))}
-        </select>
-        {state.errors.workType ? (
-          <p className="mt-2 text-sm text-red-700" id={errorId("workType")}>
-            {state.errors.workType}
-          </p>
-        ) : null}
-      </div>
+            {leadFormConfig.workTypes.map((option) => (
+              <option key={option.value} value={option.value}>
+                {copy.choices.workType[option.labelKey]}
+              </option>
+            ))}
+          </select>
+          {state.errors.workType ? (
+            <p className="mt-2 text-sm text-red-700" id={errorId("workType")}>
+              {state.errors.workType}
+            </p>
+          ) : null}
+        </div>
+      ) : null}
 
       <div>
         <label
@@ -228,6 +293,7 @@ export function LeadForm({
           id={fieldId("name")}
           maxLength={120}
           name="name"
+          defaultValue={state.values?.name ?? ""}
           placeholder={copy.placeholders.name}
           required
           type="text"
@@ -262,6 +328,7 @@ export function LeadForm({
           inputMode="tel"
           maxLength={40}
           name="phone"
+          defaultValue={state.values?.phone ?? ""}
           placeholder={copy.placeholders.phone}
           required
           type="tel"
@@ -289,7 +356,12 @@ export function LeadForm({
           id={fieldId("comment")}
           maxLength={2000}
           name="comment"
-          placeholder={copy.placeholders.comment}
+          defaultValue={state.values?.comment ?? ""}
+          placeholder={
+            calculatorContext
+              ? dictionary.calculatorRequest?.commentPlaceholder
+              : copy.placeholders.comment
+          }
           rows={5}
         />
       </div>
@@ -313,7 +385,11 @@ export function LeadForm({
           disabled={pending}
           type="submit"
         >
-          {pending ? copy.submitting : copy.submit}
+          {pending
+            ? copy.submitting
+            : calculatorContext
+              ? dictionary.calculatorRequest?.submit
+              : copy.submit}
         </Button>
         <p
           aria-live="polite"

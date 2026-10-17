@@ -4,7 +4,7 @@ import { dirname, resolve } from "node:path";
 import ts from "typescript";
 
 /** Load the project's data modules for checks without generating build files. */
-export function createTypeScriptLoader(root) {
+export function createTypeScriptLoader(root, moduleMocks = {}) {
   const cache = new Map();
   function load(filename) {
     const file = resolve(
@@ -16,6 +16,7 @@ export function createTypeScriptLoader(root) {
     cache.set(file, loaded);
     const nativeRequire = createRequire(file);
     const require = (specifier) => {
+      if (Object.hasOwn(moduleMocks, specifier)) return moduleMocks[specifier];
       if (specifier.startsWith("@/")) return load(specifier.slice(2));
       if (specifier.startsWith("."))
         return load(resolve(dirname(file), specifier));

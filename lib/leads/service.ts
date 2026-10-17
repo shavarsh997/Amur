@@ -11,6 +11,7 @@ export type LeadInput = {
   name: string;
   phone: string;
   comment: string;
+  source?: string;
 };
 
 type TelegramResponse = {
@@ -36,6 +37,7 @@ function formatLeadMessage(
 ): string {
   const lines = [
     labels.title,
+    ...(lead.source ? [lead.source] : []),
     "",
     `${labels.name}: ${lead.name}`,
     `${labels.phone}: ${lead.phone}`,
@@ -46,7 +48,10 @@ function formatLeadMessage(
   ];
 
   if (lead.options.length > 0) {
-    lines.push(`${labels.options}: ${lead.options.join(", ")}`);
+    lines.push(
+      `${labels.options}:`,
+      ...lead.options.map((option) => `• ${option}`)
+    );
   }
 
   if (lead.comment) {
@@ -72,6 +77,7 @@ export async function submitLead(
         text: formatLeadMessage(lead, labels),
       }),
       cache: "no-store",
+      signal: AbortSignal.timeout(15_000),
     }
   );
   const result = (await response

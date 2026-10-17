@@ -444,6 +444,21 @@ const dictionary = {
     },
   },
   constructionCalculator: {
+    request: {
+      commentPlaceholder:
+        "Weitere Wünsche oder eine passende Zeit für die Kontaktaufnahme.",
+      title: "Kostenschätzung anfragen",
+      description:
+        "Hinterlassen Sie Ihre Kontaktdaten. Wir prüfen die Projektangaben, erstellen eine Kostenschätzung und melden uns bei Ihnen. Es wird kein Preis automatisch berechnet.",
+      summaryTitle: "Ihre Projektangaben",
+      submit: "Anfrage zur Kostenschätzung senden",
+      success:
+        "Anfrage gesendet. Wir melden uns bei Ihnen, um die Kosten zu besprechen.",
+      invalidParameters:
+        "Die Projektangaben konnten nicht geprüft werden. Schließen Sie das Formular, prüfen Sie die Angaben im Rechner und versuchen Sie es erneut.",
+      yes: "Ja",
+      no: "Nein",
+    },
     renovationContact: {
       title: "Renovierung besprechen",
       description:
@@ -452,7 +467,7 @@ const dictionary = {
     },
     dialog: {
       eyebrow: "Online-Rechner",
-      title: "Vorläufige Projektkosten",
+      title: "Kostenschätzung für Ihr Projekt",
       close: "Rechner schließen",
       open: "Rechner öffnen",
     },
@@ -460,7 +475,7 @@ const dictionary = {
       scenario: {
         title: "Leistung auswählen",
         description:
-          "Kontaktieren Sie uns bei Renovierungsanfragen oder erhalten Sie eine erste Berechnung für Hausbau und Planung.",
+          "Kontaktieren Sie uns für Renovierungen. Für Hausbau und Planung geben Sie die Projektdaten ein und senden eine Kostenanfrage.",
       },
       parameters: {
         title: "Objektdaten",
@@ -636,11 +651,11 @@ const dictionary = {
         "Geben Sie ungefähre Angaben ein, um das Projektgespräch vorzubereiten.",
       pricingUnavailable:
         "Öffentliche Kostenrahmen sind noch nicht verfügbar. Hinterlassen Sie die wichtigsten Angaben; nach Prüfung Ihres Vorhabens geben wir Ihnen eine erste Orientierung.",
-      calculate: "Kosten berechnen",
+      calculate: "Kostenschätzung anfragen",
       calculateDescription:
-        "Sehen Sie die vorläufige Gesamtsumme und eine Aufschlüsselung der gewählten Arbeiten.",
+        "Hinterlassen Sie im nächsten Schritt Ihre Kontaktdaten. Wir prüfen Ihr Projekt, berechnen die Kosten und melden uns bei Ihnen.",
       ready:
-        "Klicken Sie auf die Schaltfläche, um die vorläufigen Kosten anzuzeigen.",
+        "Hinterlassen Sie im nächsten Schritt Ihre Kontaktdaten. Wir prüfen Ihr Projekt, berechnen die Kosten und melden uns bei Ihnen.",
       total: "Geschätzte Gesamtkosten",
       notice:
         "Die genauen Kosten werden nach Klärung des Vorhabens, der Materialien, des Objektzustands und der Besichtigung bestimmt.",
@@ -913,7 +928,7 @@ const dictionary = {
         "Wir arbeiten in Eriwan, Gjumri, Wanadsor, Dilidschan und weiteren armenischen Städten. Die Bedingungen werden nach Standort und Umfang vereinbart.",
     },
     calculatorEstimateNotice:
-      "Der Rechner bietet eine erste Orientierung. Eine genaue Kostenschätzung erfolgt nach einer Objektbesichtigung.",
+      "Senden Sie Ihre Projekt- und Kontaktdaten. Wir bewerten die Kosten nach Prüfung der erforderlichen Arbeiten und der Bedingungen vor Ort.",
     faqTitle: "Häufig gestellte Fragen",
     relatedPlanningTitle: "Möglichkeiten ansehen",
     calculatorPriceLink: "Renovierungspreise",
@@ -944,9 +959,9 @@ const dictionary = {
   calculatorPage: {
     title: "Bau- und Planungskostenrechner für Armenien",
     description:
-      "Erhalten Sie eine erste Kostenschätzung für Hausbau oder Planung in AMD. Für Renovierungskosten kontaktieren Sie SHINEX telefonisch, per WhatsApp oder über das Anfrageformular.",
+      "Fordern Sie eine Kostenschätzung für Hausbau oder Innenraumplanung in Armenien an. Senden Sie Projektdaten und Kontaktdaten für eine persönliche Bewertung.",
     intro:
-      "Der Rechner liefert erste Kostenschätzungen für Hausbau und Planung. Bei Wohnungs-, Haus- oder Gewerberenovierungen kontaktieren Sie uns, um das Objekt, die nötigen Arbeiten und den Weg zur Kostenschätzung zu besprechen.",
+      "Geben Sie die Fläche und Parameter für Hausbau oder Innenraumplanung ein, anschließend Ihren Namen, Ihre Telefonnummer und den Standort des Objekts. SHINEX prüft die Anfrage, klärt Details und kontaktiert Sie zur Besprechung der Kosten. Es wird kein automatischer Preis angezeigt. Für Renovierungen kontaktieren Sie uns, um den Zustand, die Arbeiten und die Kostenschätzung zu besprechen.",
     faqTitle: "Berechnungen und Kostenanfragen",
     faqs: [
       {
@@ -957,7 +972,7 @@ const dictionary = {
       {
         question: "Was umfasst der Rechner?",
         answer:
-          "Er bietet eine erste Orientierung für Hausbau und Planung. Der endgültige Umfang und die Kosten werden nach Prüfung der Projektdetails vereinbart.",
+          "Wählen Sie Hausbau oder Innenraumplanung und geben Sie Ihre Projektdaten ein. Die Schaltfläche zur Kostenanfrage öffnet ein Kontaktformular. Senden Sie die Anfrage; SHINEX prüft sie und meldet sich bei Ihnen. Der Rechner zeigt keinen automatischen Preis an.",
       },
     ],
   },

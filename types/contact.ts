@@ -3,6 +3,7 @@ import type { Dictionary } from "@/types";
 /** Only the copy needed by the client-side contact flow crosses the RSC boundary. */
 export type LeadFormDictionary = Pick<Dictionary, "estimate"> & {
   common: Pick<Dictionary["common"], "optional" | "website">;
+  calculatorRequest?: Dictionary["constructionCalculator"]["request"];
 };
 
 export type ContactDialogDictionary = LeadFormDictionary & {
