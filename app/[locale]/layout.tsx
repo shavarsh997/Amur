@@ -5,7 +5,6 @@ import Script from "next/script";
 
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
-import { MobileCtaBar } from "@/components/layout/mobile-cta-bar";
 import { ContactDialog } from "@/components/forms/contact-dialog";
 import { SiteMotion } from "@/components/motion/site-motion";
 import { ConstructionBackdrop } from "@/components/motion/construction-backdrop";
@@ -98,7 +97,7 @@ export default async function LocaleLayout({
             {dictionary.common.skipToContent}
           </a>
           <Header dictionary={dictionary} locale={locale} />
-          <main className="flex-1 pb-20 sm:pb-0" id="main-content">
+          <main className="flex-1" id="main-content">
             <SiteMotion backdrop={<ConstructionBackdrop />}>
               {children}
             </SiteMotion>
@@ -119,7 +118,6 @@ export default async function LocaleLayout({
             }}
             locale={locale}
           />
-          <MobileCtaBar contactLabel={dictionary.nav.contacts} />
         </div>
         {googleAnalyticsMeasurementId ? (
           <>
