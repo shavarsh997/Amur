@@ -21,7 +21,7 @@ export function PageHero({
   actions,
 }: PageHeroProps) {
   return (
-    <section className="border-b border-[var(--border)] bg-[var(--background-soft)] py-10 sm:py-12 lg:py-16">
+    <section className="border-b border-[var(--border)] bg-[var(--background-soft)] py-10 sm:py-12 lg:py-14">
       <Container>
         {breadcrumbs?.length && breadcrumbsLabel ? (
           <Breadcrumbs

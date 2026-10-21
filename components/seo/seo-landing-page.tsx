@@ -139,7 +139,7 @@ export function SeoLandingPage({
             title={content.title}
           />
           <article>
-            <Container className="py-12 sm:py-16 lg:py-20">
+            <Container className="py-10 sm:py-12 lg:py-14">
               <div className="mx-auto max-w-8xl space-y-12">
                 <section className="space-y-5 text-lg leading-8 text-[var(--text-secondary)]">
                   {content.introduction.map((paragraph) => (
