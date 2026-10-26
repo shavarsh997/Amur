@@ -4,7 +4,9 @@ import { notFound } from "next/navigation";
 import Script from "next/script";
 
 import { Footer } from "@/components/layout/footer";
+import { ConversionTracking } from "@/components/analytics/conversion-tracking";
 import { Header } from "@/components/layout/header";
+import { MobileContactBar } from "@/components/layout/mobile-contact-bar";
 import { ContactDialog } from "@/components/forms/contact-dialog";
 import { SiteMotion } from "@/components/motion/site-motion";
 import { ConstructionBackdrop } from "@/components/motion/construction-backdrop";
@@ -28,7 +30,12 @@ import "../globals.css";
 import "@/components/motion/construction-backdrop.css";
 import "@/components/motion/content-layout.css";
 
-const googleAnalyticsMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+const configuredMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? "";
+const googleAnalyticsMeasurementId = /^G-[A-Z0-9]+$/.test(
+  configuredMeasurementId
+)
+  ? configuredMeasurementId
+  : undefined;
 
 export const metadata: Metadata = {
   metadataBase: new URL(getSiteOrigin()),
@@ -77,7 +84,8 @@ export default async function LocaleLayout({
       lang={htmlLang}
     >
       <body suppressHydrationWarning className="flex min-h-full flex-col">
-        <div className="flex min-h-screen flex-col">
+        <ConversionTracking />
+        <div className="flex min-h-screen flex-col pb-[calc(5rem+env(safe-area-inset-bottom))] sm:pb-0">
           <script
             dangerouslySetInnerHTML={{
               __html: serializeJsonLd(getOrganizationJsonLd(locale)),
@@ -103,6 +111,7 @@ export default async function LocaleLayout({
             </SiteMotion>
           </main>
           <Footer dictionary={dictionary} locale={locale} />
+          <MobileContactBar dictionary={dictionary} />
           <ContactDialog
             dictionary={{
               contacts: dictionary.contacts,
@@ -130,7 +139,12 @@ export default async function LocaleLayout({
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
-                gtag('config', ${JSON.stringify(googleAnalyticsMeasurementId)});
+                gtag('config', ${JSON.stringify(googleAnalyticsMeasurementId)}, {
+                  send_page_view: false,
+                  page_location: window.location.origin,
+                  page_referrer: ''
+                });
+                window.dispatchEvent(new Event('shinex-analytics-ready'));
               `}
             </Script>
           </>

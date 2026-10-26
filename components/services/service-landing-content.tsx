@@ -57,7 +57,10 @@ export function ServiceLandingContent({
       <p className="mt-4 text-sm leading-7 text-[var(--text-secondary)]">
         {dictionary.seo.calculatorEstimateNotice}
       </p>
-      <ButtonLink className="mt-6" href={`/${locale}/calculator`}>
+      <ButtonLink
+        className="mt-6"
+        href={`/${locale}/calculator?scenario=interior-design`}
+      >
         {content.calculatorLabel}
       </ButtonLink>
     </section>

@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import { Container } from "@/components/ui/container";
+import { ButtonLink } from "@/components/ui/button-link";
 import {
   getSeoLandingPage,
   getSeoLandingPath,
@@ -84,6 +85,16 @@ export function BaseServicePage({
         description={content.heroDescription}
         image={media.hero}
         contactLabel={primaryCta}
+        secondaryAction={
+          ["house-construction", "interior-design"].includes(service.slug) ? (
+            <ButtonLink
+              href={`/${locale}/calculator?scenario=${service.slug}`}
+              variant="secondary"
+            >
+              {dictionary.constructionCalculator.result.calculate}
+            </ButtonLink>
+          ) : undefined
+        }
         exploreLabel={presentation.explore}
       />
       <ServicePlanning

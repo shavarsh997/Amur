@@ -340,7 +340,7 @@ export async function crawlSeo({
       })
     );
   }
-  for (const field of ["title", "description"]) {
+  for (const field of ["title", "description", "h1Text"]) {
     assert.equal(
       new Set([...pages.values()].map((page) => page[field])).size,
       pages.size,
@@ -448,6 +448,18 @@ export async function crawlSeo({
       `robots blocks rendering resource: ${resource}`
     );
   }
+  const root = await fetch(new URL("/?utm_source=seo-check", base), {
+    redirect: "manual",
+  });
+  assert.equal(root.status, 308, "Root must permanently redirect");
+  const rootTarget = new URL(root.headers.get("location"), base);
+  assert.equal(rootTarget.pathname, "/hy");
+  assert.equal(rootTarget.searchParams.get("utm_source"), "seo-check");
+  assert.equal(
+    (await fetch(rootTarget, { redirect: "manual" })).status,
+    200,
+    "Root redirect chain"
+  );
   for (const locale of locales) {
     for (const { source, destination } of seoRedirects) {
       for (const suffix of ["", "/"]) {
@@ -471,6 +483,9 @@ export async function crawlSeo({
     for (const path of [
       "projects",
       "projects/example",
+      "blog",
+      "blog/seo-check-missing-article",
+      "services/seo-check-missing-service",
       "seo-check-missing-page",
     ]) {
       const { response, page } = await fetchPage(`/${locale}/${path}`);
@@ -525,7 +540,7 @@ export async function crawlSeo({
     );
   }
   console.log(
-    `SEO HTTP crawl passed: ${pages.size} pages, ${seoRedirects.length * locales.length * 2} retired-URL variants + 3 slash redirects, ${locales.length * 3} true 404s, internal links, hreflang, schema and share image.`
+    `SEO HTTP crawl passed: ${pages.size} pages, ${seoRedirects.length * locales.length * 2} retired-URL variants + root + ${locales.length} slash redirects, ${locales.length * 6} true 404s, internal links, hreflang, schema and share image.`
   );
   return [...pages].map(([path, page]) => ({
     url: `${publicOrigin}${path}`,

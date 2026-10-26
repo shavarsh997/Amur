@@ -7,6 +7,7 @@ import { leadFormConfig } from "@/config/lead-form.config";
 import { Button } from "@/components/ui/button";
 import type { CalculatorRequestContext } from "@/lib/calculator/calculator-request";
 import { trackEvent } from "@/lib/analytics";
+import { getLeadAttribution, publicPagePath } from "@/lib/lead-attribution";
 import type { Locale } from "@/types";
 import type { LeadFormDictionary } from "@/types/contact";
 
@@ -34,10 +35,36 @@ export function LeadForm({
   onSuccess?: () => void;
   calculatorContext?: CalculatorRequestContext;
 }) {
+  const started = useRef(false);
+  const handledSuccess = useRef<FormState | null>(null);
+  const formKind = calculatorContext ? "calculator" : "lead";
   const action = submitLeadAction.bind(null, locale);
   const [state, formAction, pending] = useActionState(
     async (previous: FormState, data: FormData): Promise<FormState> => {
-      const result = await action(previous, data);
+      const attribution = getLeadAttribution();
+      if (attribution) data.set("attribution", JSON.stringify(attribution));
+      const submittedFrom = publicPagePath(window.location.pathname);
+      if (submittedFrom) data.set("submittedFrom", submittedFrom);
+      trackEvent("form_submit", { form: formKind });
+      let result: LeadActionState;
+      try {
+        result = await action(previous, data);
+      } catch {
+        result = {
+          status: "error",
+          errorType: "delivery",
+          message: dictionary.estimate.error,
+          errors: {},
+        };
+      }
+      if (result.status === "success" && result.delivered) {
+        trackEvent("generate_lead", { form: formKind });
+      } else if (result.status === "error") {
+        trackEvent("form_error", {
+          form: formKind,
+          error_type: result.errorType ?? "delivery",
+        });
+      }
       if (result.status !== "error") return result;
       const values: Record<string, string> = {};
       for (const field of [
@@ -61,10 +88,26 @@ export function LeadForm({
   const copy = dictionary.estimate;
 
   useEffect(() => {
-    if (state.status !== "success") return;
+    if (state.status === "error" && state.values) {
+      // React resets uncontrolled form controls after an action resolves,
+      // including failed submissions. Restore the submitted values explicitly;
+      // changing select.defaultValue alone does not restore its selection.
+      for (const [name, value] of Object.entries(state.values)) {
+        const field = formRef.current?.elements.namedItem(name);
+        if (
+          field instanceof HTMLInputElement ||
+          field instanceof HTMLSelectElement ||
+          field instanceof HTMLTextAreaElement
+        )
+          field.value = value;
+      }
+      return;
+    }
+    if (state.status !== "success" || handledSuccess.current === state) return;
+    handledSuccess.current = state;
     formRef.current?.reset();
     onSuccess?.();
-  }, [onSuccess, state.status]);
+  }, [onSuccess, state]);
 
   function fieldId(name: string) {
     return `${id}-${name}`;
@@ -80,11 +123,11 @@ export function LeadForm({
       action={formAction}
       className={`grid gap-5 content-grid md:grid-cols-2 ${className}`}
       noValidate
-      onFocus={() =>
-        trackEvent("form_start", {
-          form: calculatorContext ? "calculator" : "lead",
-        })
-      }
+      onChange={() => {
+        if (started.current) return;
+        started.current = true;
+        trackEvent("form_start", { form: formKind });
+      }}
     >
       {calculatorContext ? (
         <div className="col-span-full">

@@ -23,6 +23,17 @@ export function Header({ locale, dictionary }: HeaderProps) {
     href: item.path ? `${prefix}/${item.path}` : prefix,
     label: dictionary.nav[item.key],
   }));
+  const priceLabels = {
+    hy: "Գներ",
+    ru: "Цены",
+    en: "Prices",
+    de: "Preise",
+    fr: "Tarifs",
+  };
+  navigation.splice(2, 0, {
+    href: `${prefix}/prices`,
+    label: priceLabels[locale],
+  });
   const services: NavigationItem[] = getServiceNavigation(locale).map(
     ({ path, label }) => ({
       href: `${prefix}/${path}`,

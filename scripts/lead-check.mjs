@@ -90,6 +90,7 @@ try {
       data.set("comment", "C".repeat(2000));
       const result = await submitLeadAction(locale, initialState, data);
       assert.equal(result.status, "success");
+      assert.equal(result.delivered, true);
       assert.equal(result.message, copy.constructionCalculator.request.success);
       const text = sent.at(-1);
       assert(text.includes(`/${locale}/calculator`));
@@ -111,6 +112,25 @@ try {
   }
 
   const beforeInvalid = sent.length;
+  const attributed = form();
+  attributed.set("submittedFrom", "/ru/services/house-construction");
+  attributed.set(
+    "attribution",
+    JSON.stringify({
+      landing_page: "/ru/prices",
+      source: "google",
+      medium: "organic",
+      phone: "DO-NOT-FORWARD",
+    })
+  );
+  assert.equal(
+    (await submitLeadAction("ru", initialState, attributed)).delivered,
+    true
+  );
+  assert(sent.at(-1).includes("/ru/services/house-construction"));
+  assert(sent.at(-1).includes("google / organic; landing: /ru/prices"));
+  assert(!sent.at(-1).includes("DO-NOT-FORWARD"));
+  sent.pop();
   for (const request of [
     null,
     [],
@@ -164,9 +184,12 @@ try {
   assert(missingObject.errors.objectType);
   const bot = form();
   bot.set("website", "spam.example");
-  assert.equal(
-    (await submitLeadAction("ru", initialState, bot)).status,
-    "success"
+  const botResult = await submitLeadAction("ru", initialState, bot);
+  assert.equal(botResult.status, "success");
+  assert.notEqual(
+    botResult.delivered,
+    true,
+    "Honeypot must not count as a delivered lead"
   );
   assert.equal(
     sent.length,

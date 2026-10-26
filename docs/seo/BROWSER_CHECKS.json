@@ -1,0 +1,70 @@
+{
+  "checkedAt": "2026-10-26T12:21:04.738Z",
+  "base": "http://127.0.0.1:3101",
+  "viewport": "320×844 / 390×844 / 768×844 / 1440×900",
+  "results": [
+    {
+      "check": "hy mobile prices",
+      "passed": true
+    },
+    {
+      "check": "ru mobile prices",
+      "passed": true
+    },
+    {
+      "check": "en mobile prices",
+      "passed": true
+    },
+    {
+      "check": "de mobile prices",
+      "passed": true
+    },
+    {
+      "check": "fr mobile prices",
+      "passed": true
+    },
+    {
+      "check": "hy design CTA selects design and retains canonical",
+      "passed": true
+    },
+    {
+      "check": "ru design CTA selects design and retains canonical",
+      "passed": true
+    },
+    {
+      "check": "en design CTA selects design and retains canonical",
+      "passed": true
+    },
+    {
+      "check": "de design CTA selects design and retains canonical",
+      "passed": true
+    },
+    {
+      "check": "fr design CTA selects design and retains canonical",
+      "passed": true
+    },
+    {
+      "check": "base service CTA destinations and invalid scenario fallback",
+      "passed": true
+    },
+    {
+      "check": "form validation, failed delivery, preserved input, retry, one successful conversion; contact clicks; no PII",
+      "passed": true
+    },
+    {
+      "check": "construction calculator to acknowledged lead",
+      "passed": true
+    },
+    {
+      "check": "design calculator to acknowledged lead",
+      "passed": true
+    },
+    {
+      "check": "desktop layout and no browser exceptions",
+      "passed": true
+    }
+  ],
+  "pageErrors": [],
+  "telegram": "mocked; no real messages",
+  "analytics": "captured locally; GA network blocked"
+}

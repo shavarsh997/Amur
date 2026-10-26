@@ -37,7 +37,7 @@ export function ContactTrigger({
 }) {
   const openContact = () => {
     onClick?.();
-    trackEvent("cta_click", { cta_label: label });
+    trackEvent("cta_click", { cta_id: "contact_methods" });
     window.dispatchEvent(new Event(contactOpenEvent));
   };
 

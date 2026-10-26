@@ -1,4 +1,5 @@
 import { ServiceLandingContent } from "@/components/services/service-landing-content";
+import { RenovationPriceExamples } from "@/components/seo/renovation-price-examples";
 import Link from "next/link";
 
 import {
@@ -40,7 +41,7 @@ export function SeoLandingPage({
   const supportsCalculator = page.slug === "apartment-interior-design-yerevan";
   const showPriceGuide =
     page.kind === "service" && page.relatedLandingSlugs.includes("prices");
-  const calculatorHref = `/${locale}/calculator`;
+  const calculatorHref = `/${locale}/calculator?scenario=interior-design`;
   const schema = page.kind === "service" ? getServiceJsonLd : getWebPageJsonLd;
   const relatedServices = getActiveServices(locale).filter((service) =>
     (page.relatedServiceSlugs as readonly string[]).includes(service.slug)
@@ -146,7 +147,12 @@ export function SeoLandingPage({
                     <p key={paragraph}>{paragraph}</p>
                   ))}
                 </section>
-                {isPrices ? <RenovationBudget locale={locale} /> : null}
+                {isPrices ? (
+                  <>
+                    <RenovationPriceExamples locale={locale} />
+                    <RenovationBudget locale={locale} />
+                  </>
+                ) : null}
                 {page.slug === "renovation-estimate-yerevan" ? (
                   <EstimateExample locale={locale} />
                 ) : null}

@@ -13,7 +13,9 @@
     "format:check": "prettier --check .",
     "seo:check": "node scripts/seo-check.mjs",
     "calculator:check": "node scripts/calculator-check.mjs",
-    "leads:check": "node scripts/lead-check.mjs"
+    "leads:check": "node scripts/lead-check.mjs",
+    "analytics:check": "node scripts/analytics-check.mjs",
+    "seo:inventory": "node scripts/seo-inventory.mjs"
   },
   "dependencies": {
     "lucide-react": "^1.26.0",

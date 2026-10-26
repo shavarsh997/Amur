@@ -21,30 +21,21 @@ export const seoIntentMap = {
       fr: "rénovation d’appartement à Erevan",
     },
     secondary: {
-      hy: [
-        "բնակարանի վերանորոգում",
-        "կապիտալ վերանորոգում",
-        "կոսմետիկ վերանորոգում",
-      ],
+      hy: ["բնակարանի վերանորոգում", "բնակարանի հարդարում Երևանում"],
       ru: [
         "ремонт квартиры",
-        "капитальный ремонт квартиры",
-        "косметический ремонт",
+        "ремонт вторичного жилья в Ереване",
+        "отделка квартиры в Ереване",
       ],
       en: [
         "apartment repair",
-        "major apartment renovation",
-        "cosmetic renovation",
+        "existing apartment renovation Yerevan",
+        "apartment finishing Yerevan",
       ],
-      de: [
-        "Wohnung renovieren",
-        "umfassende Wohnungssanierung",
-        "optische Renovierung",
-      ],
+      de: ["Wohnung renovieren", "Bestandswohnung renovieren Eriwan"],
       fr: [
         "rénovation d’appartement",
-        "rénovation lourde d’appartement",
-        "rénovation légère",
+        "rénovation d’un appartement ancien à Erevan",
       ],
     },
   },
@@ -57,11 +48,11 @@ export const seoIntentMap = {
       fr: "services/turnkey-renovation",
     },
     primary: {
-      hy: "բնակարանի ամբողջական վերանորոգում Երևանում",
-      ru: "полный ремонт квартиры в Ереване",
-      en: "complete apartment renovation in Yerevan",
-      de: "komplette Wohnungsrenovierung in Eriwan",
-      fr: "rénovation complète d’appartement à Erevan",
+      hy: "ամբողջական վերանորոգում Երևանում",
+      ru: "ремонт под ключ в Ереване",
+      en: "turnkey renovation in Yerevan",
+      de: "schlüsselfertige Renovierung in Eriwan",
+      fr: "rénovation clé en main à Erevan",
     },
     secondary: {
       hy: [
@@ -218,11 +209,11 @@ export const seoIntentMap = {
       fr: "aménagement intérieur à Erevan",
     },
     secondary: {
-      hy: ["բնակարանի դիզայն", "բնակարանի ինտերիերի դիզայն"],
-      ru: ["дизайнер интерьера Ереван", "дизайн проект квартиры Ереван"],
-      en: ["apartment interior design Yerevan"],
-      de: ["Wohnungsinnenraumgestaltung Eriwan"],
-      fr: ["aménagement intérieur d’appartement Erevan"],
+      hy: ["ինտերիերի նախագծում", "ինտերիերի դիզայն Հայաստանում"],
+      ru: ["дизайнер интерьера Ереван", "дизайн проект интерьера Армения"],
+      en: ["interior designer Yerevan", "interior design project Armenia"],
+      de: ["Innenraumplanung Eriwan"],
+      fr: ["projet d’aménagement intérieur en Arménie"],
     },
   },
   "complete-house-construction": {
@@ -264,8 +255,8 @@ export const seoIntentMap = {
       fr: "aménagement intérieur d’appartement à Erevan",
     },
     secondary: {
-      hy: ["բնակարանի դիզայն Երևան"],
-      ru: ["дизайн квартиры Ереван"],
+      hy: ["բնակարանի դիզայն Երևան", "բնակարանի ինտերիերի դիզայն"],
+      ru: ["дизайн квартиры Ереван", "дизайн проект квартиры Ереван"],
       en: ["apartment design Yerevan"],
       de: ["Wohnungsgestaltung Eriwan"],
       fr: ["conception d’appartement Erevan"],

@@ -38,7 +38,7 @@ export function ContactMethods({ copy, onMessageClick }: ContactMethodsProps) {
   const telegramHref = getTelegramHref();
 
   const openMessageForm = () => {
-    trackEvent("cta_click", { cta_label: copy.formTitle });
+    trackEvent("cta_click", { cta_id: "message_form" });
     if (onMessageClick) {
       onMessageClick();
       return;

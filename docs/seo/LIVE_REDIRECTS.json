@@ -1,0 +1,85 @@
+{
+  "checkedAt": "2026-10-26T12:20:43.539Z",
+  "results": [
+    {
+      "input": "http://shinex.am/ru/renovation-price-per-square-meter-yerevan/?audit=seo",
+      "hops": [
+        {
+          "url": "http://shinex.am/ru/renovation-price-per-square-meter-yerevan/?audit=seo",
+          "status": 308,
+          "location": "https://shinex.am/ru/renovation-price-per-square-meter-yerevan/?audit=seo"
+        },
+        {
+          "url": "https://shinex.am/ru/renovation-price-per-square-meter-yerevan/?audit=seo",
+          "status": 308,
+          "location": "https://www.shinex.am/ru/renovation-price-per-square-meter-yerevan/?audit=seo"
+        },
+        {
+          "url": "https://www.shinex.am/ru/renovation-price-per-square-meter-yerevan/?audit=seo",
+          "status": 308,
+          "location": "/ru/prices?audit=seo"
+        },
+        {
+          "url": "https://www.shinex.am/ru/prices?audit=seo",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "input": "https://shinex.am/ru/renovation-price-per-square-meter-yerevan/?audit=seo",
+      "hops": [
+        {
+          "url": "https://shinex.am/ru/renovation-price-per-square-meter-yerevan/?audit=seo",
+          "status": 308,
+          "location": "https://www.shinex.am/ru/renovation-price-per-square-meter-yerevan/?audit=seo"
+        },
+        {
+          "url": "https://www.shinex.am/ru/renovation-price-per-square-meter-yerevan/?audit=seo",
+          "status": 308,
+          "location": "/ru/prices?audit=seo"
+        },
+        {
+          "url": "https://www.shinex.am/ru/prices?audit=seo",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "input": "http://www.shinex.am/ru/renovation-price-per-square-meter-yerevan/?audit=seo",
+      "hops": [
+        {
+          "url": "http://www.shinex.am/ru/renovation-price-per-square-meter-yerevan/?audit=seo",
+          "status": 308,
+          "location": "https://www.shinex.am/ru/renovation-price-per-square-meter-yerevan/?audit=seo"
+        },
+        {
+          "url": "https://www.shinex.am/ru/renovation-price-per-square-meter-yerevan/?audit=seo",
+          "status": 308,
+          "location": "/ru/prices?audit=seo"
+        },
+        {
+          "url": "https://www.shinex.am/ru/prices?audit=seo",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "input": "https://www.shinex.am/ru/renovation-price-per-square-meter-yerevan/?audit=seo",
+      "hops": [
+        {
+          "url": "https://www.shinex.am/ru/renovation-price-per-square-meter-yerevan/?audit=seo",
+          "status": 308,
+          "location": "/ru/prices?audit=seo"
+        },
+        {
+          "url": "https://www.shinex.am/ru/prices?audit=seo",
+          "status": 200,
+          "location": null
+        }
+      ]
+    }
+  ]
+}

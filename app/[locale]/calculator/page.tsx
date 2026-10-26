@@ -66,6 +66,7 @@ export default async function CalculatorPage({ params }: Props) {
         <CostCalculator
           copy={dictionary.constructionCalculator}
           defaultCalculationType="construction"
+          syncScenarioFromUrl
           locale={locale}
         />
       </section>

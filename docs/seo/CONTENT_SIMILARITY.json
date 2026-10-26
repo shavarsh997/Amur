@@ -1,0 +1,155 @@
+{
+  "method": "Jaccard similarity of 5-word shingles from service/landing copy, within each language; excludes layout boilerplate. Measures textual overlap, not shared search intent.",
+  "similarities": [
+    {
+      "locale": "hy",
+      "topPairs": [
+        {
+          "a": "services/capital-renovation-yerevan",
+          "b": "renovation-estimate-yerevan",
+          "jaccard": 0.013245033112582781
+        },
+        {
+          "a": "services/plumbing-work-yerevan",
+          "b": "services/electrical-work-yerevan",
+          "jaccard": 0.01160092807424594
+        },
+        {
+          "a": "services/apartment-renovation-yerevan",
+          "b": "services/new-build-renovation",
+          "jaccard": 0.011128775834658187
+        },
+        {
+          "a": "services/turnkey-renovation",
+          "b": "services/plumbing-work-yerevan",
+          "jaccard": 0.010245901639344262
+        },
+        {
+          "a": "services/office-renovation-yerevan",
+          "b": "services/cosmetic-renovation-yerevan",
+          "jaccard": 0.010075566750629723
+        }
+      ]
+    },
+    {
+      "locale": "ru",
+      "topPairs": [
+        {
+          "a": "services/plumbing-work-yerevan",
+          "b": "services/electrical-work-yerevan",
+          "jaccard": 0.011976047904191617
+        },
+        {
+          "a": "services/renovation",
+          "b": "services/house-construction",
+          "jaccard": 0.00927643784786642
+        },
+        {
+          "a": "services/turnkey-renovation",
+          "b": "services/cosmetic-renovation-yerevan",
+          "jaccard": 0.006507592190889371
+        },
+        {
+          "a": "services/house-construction",
+          "b": "services/interior-design",
+          "jaccard": 0.006289308176100629
+        },
+        {
+          "a": "services/capital-renovation-yerevan",
+          "b": "services/plumbing-work-yerevan",
+          "jaccard": 0.006172839506172839
+        }
+      ]
+    },
+    {
+      "locale": "en",
+      "topPairs": [
+        {
+          "a": "services/apartment-renovation-yerevan",
+          "b": "services/turnkey-renovation",
+          "jaccard": 0.014641288433382138
+        },
+        {
+          "a": "services/capital-renovation-yerevan",
+          "b": "services/cosmetic-renovation-yerevan",
+          "jaccard": 0.011494252873563218
+        },
+        {
+          "a": "services/capital-renovation-yerevan",
+          "b": "services/electrical-work-yerevan",
+          "jaccard": 0.009501187648456057
+        },
+        {
+          "a": "services/office-renovation-yerevan",
+          "b": "services/capital-renovation-yerevan",
+          "jaccard": 0.009433962264150943
+        },
+        {
+          "a": "services/office-renovation-yerevan",
+          "b": "services/electrical-work-yerevan",
+          "jaccard": 0.009411764705882352
+        }
+      ]
+    },
+    {
+      "locale": "de",
+      "topPairs": [
+        {
+          "a": "services/office-renovation-yerevan",
+          "b": "services/cosmetic-renovation-yerevan",
+          "jaccard": 0.007653061224489796
+        },
+        {
+          "a": "services/cosmetic-renovation-yerevan",
+          "b": "services/electrical-work-yerevan",
+          "jaccard": 0.007633587786259542
+        },
+        {
+          "a": "services/apartment-renovation-yerevan",
+          "b": "prices",
+          "jaccard": 0.007112375533428165
+        },
+        {
+          "a": "services/house-construction",
+          "b": "services/interior-design",
+          "jaccard": 0.0066518847006651885
+        },
+        {
+          "a": "services/apartment-renovation-yerevan",
+          "b": "services/turnkey-renovation",
+          "jaccard": 0.006622516556291391
+        }
+      ]
+    },
+    {
+      "locale": "fr",
+      "topPairs": [
+        {
+          "a": "services/apartment-renovation-yerevan",
+          "b": "services/plumbing-work-yerevan",
+          "jaccard": 0.0196078431372549
+        },
+        {
+          "a": "services/apartment-renovation-yerevan",
+          "b": "renovation-estimate-yerevan",
+          "jaccard": 0.01875901875901876
+        },
+        {
+          "a": "services/cosmetic-renovation-yerevan",
+          "b": "services/electrical-work-yerevan",
+          "jaccard": 0.015473887814313346
+        },
+        {
+          "a": "services/capital-renovation-yerevan",
+          "b": "services/cosmetic-renovation-yerevan",
+          "jaccard": 0.015267175572519083
+        },
+        {
+          "a": "services/cosmetic-renovation-yerevan",
+          "b": "renovation-estimate-yerevan",
+          "jaccard": 0.01509433962264151
+        }
+      ]
+    }
+  ]
+}

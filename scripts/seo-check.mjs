@@ -314,21 +314,17 @@ function checkTranslation(reference, translated, path) {
   }
 }
 const englishDictionary = await getDictionary("en");
-// The apartment page already has detailed planning sections. Every other
-// published service needs its own guidance in every supported language.
+// Every published service has practical planning guidance in every language.
 const planningSlugs = [
   ...serviceSlugs,
   ...seoLandingPages
-    .filter(
-      (page) =>
-        page.kind === "service" && page.slug !== "apartment-renovation-yerevan"
-    )
+    .filter((page) => page.kind === "service")
     .map(({ slug }) => slug),
 ];
 assert.deepEqual(
   Object.keys(servicePlanningTranslations).sort(),
   [...planningSlugs].sort(),
-  "Planning guidance must cover exactly the other published services"
+  "Planning guidance must cover all published services"
 );
 for (const locale of locales) {
   const planningTitles = new Set();

@@ -10,6 +10,58 @@ export type ServicePlanningContent = {
  * Keep estimates, deliverables and optional work subject to the agreed project.
  */
 export const servicePlanningTranslations = {
+  "apartment-renovation-yerevan": {
+    ru: {
+      title: "Как подготовить квартиру к расчёту ремонта",
+      description:
+        "Для первого обсуждения достаточно площади, адреса объекта и перечня изменений. План и фотографии помогут уточнить вопросы перед осмотром.",
+      items: [
+        "Отметьте, какие покрытия, проводку и трубы хотите сохранить. Состояние скрытых участков уточняется при осмотре и демонтаже.",
+        "Согласуйте работы, материалы и закупки отдельными пунктами сметы; обозначьте мебель и технику, которые уже выбраны.",
+        "Сообщите, будет ли квартира жилой во время работ, как организованы доступ и подъём материалов. Это влияет на последовательность и сроки.",
+      ],
+    },
+    hy: {
+      title: "Ի՞նչ պատրաստել վերանորոգման հաշվարկի համար",
+      description:
+        "Առաջին քննարկման համար նշեք բնակարանի մակերեսը, հասցեն և ցանկալի փոփոխությունները։ Հատակագիծն ու լուսանկարները կօգնեն մինչև զննումը ճշտել հարցերը։",
+      items: [
+        "Նշեք՝ որ ծածկույթները, լարերն ու խողովակներն եք ցանկանում պահպանել։ Թաքնված հատվածների վիճակը ճշտվում է զննման և ապամոնտաժման ընթացքում։",
+        "Նախահաշվում առանձին համաձայնեցրեք աշխատանքները, նյութերն ու գնումները։ Նշեք արդեն ընտրված կահույքն ու տեխնիկան։",
+        "Տեղեկացրեք՝ աշխատանքների ընթացքում բնակարանում մարդ ապրելո՞ւ է, ինչպես է կազմակերպվելու մուտքն ու նյութերի բարձրացումը։ Դրանք ազդում են հերթականության և ժամկետների վրա։",
+      ],
+    },
+    en: {
+      title: "Preparing for an apartment renovation estimate",
+      description:
+        "Start with the floor area, location and intended changes. A plan and photos help clarify questions before the survey.",
+      items: [
+        "Identify finishes, wiring and pipes you hope to keep. Hidden areas are assessed during the survey and removal work.",
+        "Agree labour, materials and purchasing as separate estimate items; identify furniture and appliances already selected.",
+        "Explain whether the apartment will be occupied and how access and material deliveries will work. These affect sequencing and timing.",
+      ],
+    },
+    de: {
+      title: "Die Kostenschätzung für eine Wohnung vorbereiten",
+      description:
+        "Nennen Sie zunächst Fläche, Lage und gewünschte Änderungen. Ein Plan und Fotos helfen, Fragen vor der Besichtigung zu klären.",
+      items: [
+        "Benennen Sie Oberflächen und Leitungen, die erhalten bleiben sollen. Verdeckte Bereiche werden bei Besichtigung und Rückbau beurteilt.",
+        "Vereinbaren Sie Arbeiten, Materialien und Beschaffung als getrennte Positionen; nennen Sie bereits ausgewählte Möbel und Geräte.",
+        "Teilen Sie mit, ob die Wohnung bewohnt bleibt und wie Zugang und Materialtransport organisiert werden. Das beeinflusst Ablauf und Dauer.",
+      ],
+    },
+    fr: {
+      title: "Préparer le devis de rénovation d’un appartement",
+      description:
+        "Indiquez la surface, l’adresse et les changements souhaités. Un plan et des photos permettent de préciser les questions avant la visite.",
+      items: [
+        "Identifiez les finitions et réseaux à conserver. Les zones cachées sont évaluées lors de la visite et de la dépose.",
+        "Distinguez travaux, matériaux et achats dans le devis ; indiquez les meubles et appareils déjà choisis.",
+        "Précisez si l’appartement restera occupé et comment seront organisés l’accès et les livraisons. Ces éléments influencent l’ordre et la durée des travaux.",
+      ],
+    },
+  },
   renovation: {
     ru: {
       title: "Как спланировать ремонт дома по частям",

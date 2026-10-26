@@ -7,8 +7,11 @@ export const extraSeoLandingPages = [
     kind: "service",
     image:
       "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1800&q=85",
-    relatedServiceSlugs: ["interior-design", "renovation"],
-    relatedLandingSlugs: ["new-build-renovation"],
+    relatedServiceSlugs: ["interior-design"],
+    relatedLandingSlugs: [
+      "apartment-renovation-yerevan",
+      "new-build-renovation",
+    ],
     translations: {
       hy: {
         eyebrow: "Բնակարանի դիզայն · Երևան",
@@ -322,7 +325,7 @@ export const extraSeoLandingPages = [
     image:
       "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1800&q=85",
     relatedServiceSlugs: ["commercial-construction", "interior-design"],
-    relatedLandingSlugs: [],
+    relatedLandingSlugs: ["electrical-work-yerevan"],
     translations: {
       hy: {
         eyebrow: "Գրասենյակների վերանորոգում · Երևան",

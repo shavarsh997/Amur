@@ -1,5 +1,7 @@
 "use client";
 
+import { Suspense, useRef } from "react";
+import { trackEvent } from "@/lib/analytics";
 import {
   FormProvider,
   useForm,
@@ -16,6 +18,7 @@ import {
   type CalculatorRequestContext,
 } from "@/lib/calculator/calculator-request";
 import { CalculateButton } from "@/components/calculator/steps/calculate-button";
+import { CalculatorUrlScenario } from "@/components/calculator/calculator-url-scenario";
 import { ConstructionExtrasStep } from "@/components/calculator/steps/construction-extras-step";
 import { ParametersStep } from "@/components/calculator/steps/parameters-step";
 import { RenovationContact } from "@/components/calculator/renovation-contact";
@@ -42,14 +45,22 @@ export function CostCalculator({
   locale,
   defaultCalculationType = "renovation",
   defaultScenarioId,
+  syncScenarioFromUrl = false,
   className = "",
 }: {
   copy: Dictionary["constructionCalculator"];
   locale: Locale;
   defaultCalculationType?: CalculationType;
   defaultScenarioId?: CalculatorScenarioId;
+  syncScenarioFromUrl?: boolean;
   className?: string;
 }) {
+  const started = useRef(false);
+  const startTracking = () => {
+    if (started.current) return;
+    started.current = true;
+    trackEvent("calculator_start", { calculation_type: calculationType });
+  };
   const form = useForm<CalculatorFormValues>({
     defaultValues: valuesForScenario(defaultCalculationType, defaultScenarioId),
     resolver: createCalculatorResolver(copy),
@@ -94,6 +105,9 @@ export function CostCalculator({
     if (values.calculationType === "renovation") return;
     const request = calculatorRequestFromValues(values);
     if (!request) return;
+    trackEvent("calculator_complete", {
+      calculation_type: request.calculationType,
+    });
     window.dispatchEvent(
       new CustomEvent<CalculatorRequestContext>(contactMessageEvent, {
         detail: {
@@ -113,7 +127,14 @@ export function CostCalculator({
 
   return (
     <FormProvider {...form}>
+      {syncScenarioFromUrl ? (
+        <Suspense fallback={null}>
+          <CalculatorUrlScenario />
+        </Suspense>
+      ) : null}
       <div
+        onChangeCapture={startTracking}
+        onClickCapture={startTracking}
         className={`w-full min-w-0 flex flex-col items-stretch gap-5 lg:grid-cols-[minmax(0,1fr)_20rem] ${className}`}
       >
         <div className="min-w-0 space-y-5">

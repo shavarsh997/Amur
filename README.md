@@ -39,6 +39,8 @@ NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
 
 The identifier is public and starts with `G-`. The tag is omitted when this variable is unset. Existing interaction events (contact clicks, forms, and calculator actions) will then be sent to GA4 as well.
 
+Before release, follow [the GA4 setup checklist](docs/seo/ANALYTICS_SETUP.md): disable automatic form measurement and history-based pageviews to avoid duplicates, register the safe attribution dimensions, and mark only acknowledged `generate_lead` as the primary enquiry event. The updated events exclude contact fields and raw URL/referrer parameters.
+
 ## SEO and multilingual checks
 
 ```bash
@@ -47,6 +49,8 @@ npm run typecheck
 npm run build
 npm run seo:check
 npm run calculator:check
+npm run leads:check
+npm run analytics:check
 ```
 
 To check rendered pages, start the production build with `npm run start`, then run:
@@ -73,7 +77,7 @@ The smoke check also evaluates robots rules for every sitemap URL, checks render
 - Missing and unpublished pages return real 404s with noindex. Technical/private content stays outside sitemap. Preview noindex never reaches a production build.
 - Organization identity and contact data agree across pages; JSON-LD is parseable and does not invent ratings. New metadata or routing changes must pass the production HTTP check before release.
 
-The HTTP check covers all 72 sitemap URLs, metadata and indexing headers, reciprocal language links, structured data, internal links, duplicate HTML IDs, 15 permanent redirects with and without trailing slashes, locale slash normalization, missing-page responses and the share image. Redirects for consolidated landing pages live in `config/seo-redirects.config.ts`; keep them when publishing future updates. Portfolio content is not published.
+The HTTP check covers all 120 sitemap URLs, metadata and indexing headers, reciprocal language links, structured data, internal links, duplicate HTML IDs, 25 permanent redirects with and without trailing slashes, root and locale slash normalization, missing-page responses and the share image. Redirects for consolidated landing pages live in `config/seo-redirects.config.ts`; keep them when publishing future updates. Portfolio content is not published. The full audit, URL inventory, migration decisions, baseline and rollout requirements are in [docs/seo](docs/seo/SEO_IMPLEMENTATION_REPORT.md).
 
 ### Production and preview indexing
 
@@ -89,9 +93,9 @@ Prefer a Domain property for `shinex.am` verified through the owner's DNS settin
 
 Submit `https://www.shinex.am/sitemap.xml` and use URL Inspection on the Armenian home, apartment renovation, new-build renovation, prices and construction pages after deploying. The code and HTTP checks establish technical eligibility; actual Google indexing, selected canonicals, traffic and Core Web Vitals require Search Console data.
 
-Renovation enquiries lead to contact methods; there is no automatic renovation estimate. Calculator checks enforce this and verify construction and design amounts across all three languages. Rates and coefficients for these calculations remain in `config/construction-calculator.config.ts`; the tests do not verify current market prices. The renovation budget guide explains quantities and estimate structure, with a contact action for discussing the project.
+Renovation enquiries lead to contact methods; there is no automatic renovation estimate. Calculator checks enforce this and verify construction and design amounts across all five languages. Rates and coefficients for these calculations remain in `config/construction-calculator.config.ts`; the tests do not verify current market prices. The renovation budget guide explains quantities and estimate structure, with a contact action for discussing the project.
 
-The owner-confirmed renovation starting rate is stored in `config/pricing.config.ts`. `lib/pricing.ts` formats it for the visible price-page introduction and search descriptions in all three languages. Keep the starting rate distinct from a final quotation; do not use it to generate automatic renovation estimates. Other service prices remain unpublished.
+The owner-confirmed renovation starting rate is stored in `config/pricing.config.ts`. `lib/pricing.ts` formats it for the visible price-page introduction and search descriptions in all five languages. Keep the starting rate distinct from a final quotation; do not use it to generate automatic renovation estimates. Other service prices remain unpublished.
 
 The site uses a system font stack without external font downloads.
 

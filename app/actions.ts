@@ -7,6 +7,7 @@ import {
 import { leadFormConfig } from "@/config/lead-form.config";
 import { defaultLocale, getDictionary, isLocale } from "@/lib/i18n";
 import { submitLead, type LeadInput } from "@/lib/leads/service";
+import { parseLeadAttribution, publicPagePath } from "@/lib/lead-attribution";
 import type { Locale } from "@/types";
 
 type LeadField = keyof Omit<LeadInput, "area" | "options"> | "area";
@@ -15,6 +16,8 @@ export type LeadActionState = {
   status: "idle" | "success" | "error";
   message: string;
   errors: Partial<Record<LeadField, string>>;
+  delivered?: boolean;
+  errorType?: "validation" | "delivery";
 };
 
 const objectTypes = new Set<string>(
@@ -65,6 +68,7 @@ export async function submitLeadAction(
     if (!calculatorRequest)
       return {
         status: "error",
+        errorType: "validation",
         message: dictionary.constructionCalculator.request.invalidParameters,
         errors: {},
       };
@@ -90,6 +94,17 @@ export async function submitLeadAction(
   const website = readString(formData, "website", 200);
   const area = Number(areaValue);
   const errors: LeadActionState["errors"] = {};
+  const submittedFrom = publicPagePath(
+    readString(formData, "submittedFrom", 120)
+  );
+  let attribution;
+  try {
+    attribution = parseLeadAttribution(
+      JSON.parse(readString(formData, "attribution", 500))
+    );
+  } catch {
+    /* Attribution is optional and must not prevent valid submissions. */
+  }
 
   // Honeypot field: bots get a neutral success response, without creating a lead.
   if (website) return { status: "success", message: copy.success, errors: {} };
@@ -114,6 +129,7 @@ export async function submitLeadAction(
   if (Object.keys(errors).length > 0) {
     return {
       status: "error",
+      errorType: "validation",
       message: dictionary.common.errors.required,
       errors,
     };
@@ -145,9 +161,18 @@ export async function submitLeadAction(
               locale
             ).map(({ label, value }) => `${label}: ${value}`)
           : options,
-        source: calculatorRequest
-          ? `${dictionary.constructionCalculator.request.title} (/${locale}/calculator)`
-          : undefined,
+        source: [
+          calculatorRequest
+            ? dictionary.constructionCalculator.request.title
+            : "Website",
+          submittedFrom ??
+            (calculatorRequest ? `/${locale}/calculator` : undefined),
+          attribution
+            ? `${attribution.source} / ${attribution.medium}; landing: ${attribution.landing_page}`
+            : undefined,
+        ]
+          .filter(Boolean)
+          .join(" | "),
         name,
         phone,
         comment,
@@ -157,12 +182,18 @@ export async function submitLeadAction(
 
     return {
       status: "success",
+      delivered: true,
       message: calculatorRequest
         ? dictionary.constructionCalculator.request.success
         : copy.success,
       errors: {},
     };
   } catch {
-    return { status: "error", message: copy.error, errors: {} };
+    return {
+      status: "error",
+      errorType: "delivery",
+      message: copy.error,
+      errors: {},
+    };
   }
 }

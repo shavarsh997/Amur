@@ -6,6 +6,7 @@ import { PageHero } from "@/components/ui/page-hero";
 import { companyConfig } from "@/config/company.config";
 import { getDictionary, isLocale } from "@/lib/i18n";
 import { buildMetadata } from "@/lib/metadata";
+import { measurementCopy } from "@/messages/measurement";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -47,7 +48,7 @@ export default async function PrivacyPage({ params }: Props) {
             </p>
           ) : null}
           <div className="mt-10 space-y-12">
-            {privacy.sections.map((section) => (
+            {[...privacy.sections, measurementCopy[locale]].map((section) => (
               <section key={section.title}>
                 <h2 className="text-2xl font-semibold text-[var(--text-primary)]">
                   {section.title}
