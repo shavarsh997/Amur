@@ -59,7 +59,13 @@ export function ServiceHero({
         />
         <h1 id="service-title">{title}</h1>
         <p className={styles.heroDescription}>{description}</p>
-        <div className={styles.actions}>
+        <div
+          className={
+            secondaryAction
+              ? `action-group ${styles.heroActions}`
+              : styles.actions
+          }
+        >
           <ContactTrigger label={contactLabel} />
           {secondaryAction ?? (
             <a className={styles.textLink} href="#service-details">

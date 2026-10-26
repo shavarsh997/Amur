@@ -87,6 +87,9 @@
   gap: 18px 26px;
   margin-top: 30px;
 }
+.heroActions {
+  margin-top: 30px;
+}
 .textLink {
   display: inline-flex;
   align-items: center;
@@ -483,6 +486,9 @@
   }
   .actions {
     gap: 12px 22px;
+    margin-top: 24px;
+  }
+  .heroActions {
     margin-top: 24px;
   }
   .sectionHeader {
