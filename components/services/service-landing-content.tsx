@@ -12,6 +12,7 @@ import {
   ServicePage,
   ServiceHero,
   ServiceSection,
+  ServiceScope,
   ServiceDetails,
   ServiceWorkGrid,
   ServiceProcess,
@@ -50,6 +51,10 @@ export function ServiceLandingContent({
     (_, index) =>
       !roles || ![roles.scope, roles.process, roles.pricing].includes(index)
   );
+  // Keep the expanded apartment guide readable without stretching the photo.
+  const standaloneSections =
+    page.slug === "apartment-renovation-yerevan" ? otherSections : [];
+  const detailSections = standaloneSections.length ? [] : otherSections;
   const supportsCalculator = page.slug === "apartment-interior-design-yerevan";
   const estimate = supportsCalculator ? (
     <section>
@@ -107,7 +112,7 @@ export function ServiceLandingContent({
         paragraphs={content.introduction}
         image={media.details}
       >
-        {otherSections.map((section) => (
+        {detailSections.map((section) => (
           <section className="mt-8" key={section.title}>
             <h3>{section.title}</h3>
             {section.paragraphs.map((p) => (
@@ -124,6 +129,33 @@ export function ServiceLandingContent({
           </section>
         ))}
       </ServiceDetails>
+      {standaloneSections.map((section) => (
+        <ServiceSection
+          key={section.title}
+          title={section.title}
+          description={
+            <>
+              {section.paragraphs.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
+            </>
+          }
+          tone={section.choices?.length ? "warm" : undefined}
+        >
+          {section.choices?.length ? (
+            <ServiceScope
+              cards={section.choices.map((choice) => ({
+                title: choice.title,
+                description: choice.description,
+                href: `/${locale}/${choice.path}`,
+              }))}
+            />
+          ) : null}
+          {section.items?.length ? (
+            <ServiceWorkGrid items={section.items} />
+          ) : null}
+        </ServiceSection>
+      ))}
       <ServicePlanning slug={page.slug} locale={locale} />
       {process ? (
         <ServiceSection

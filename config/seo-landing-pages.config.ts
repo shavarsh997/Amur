@@ -12,6 +12,8 @@ const renovationStartingPrice = {
 
 export type SeoLandingPage = {
   slug: string;
+  /** Date of the last substantial content edit, never the build date. */
+  contentUpdatedAt?: string;
   kind: "service" | "prices";
   image: string;
   relatedServiceSlugs: readonly string[];
@@ -30,6 +32,11 @@ export type SeoLandingPage = {
         title: string;
         paragraphs: readonly string[];
         items?: readonly string[];
+        choices?: readonly {
+          title: string;
+          description: string;
+          path: string;
+        }[];
       }[];
       faqs: readonly { question: string; answer: string }[];
       calculatorLabel: string;
@@ -43,6 +50,7 @@ export type SeoLandingPage = {
 const coreSeoLandingPages = [
   {
     slug: "apartment-renovation-yerevan",
+    contentUpdatedAt: "2026-10-28",
     kind: "service",
     image:
       "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1800&q=85",
@@ -63,7 +71,7 @@ const coreSeoLandingPages = [
           "От осмотра квартиры до готовой отделки: планируем работы с учётом состояния помещения, вашей планировки и выбранных материалов.",
         seoTitle: "Ремонт квартир в Ереване | SHINEX",
         seoDescription:
-          "Ремонт квартир в Ереване: подготовка помещения, электрика, сантехника и отделка. Состав работ для новостройки и вторичного жилья, расчёт стоимости.",
+          "Ремонт квартир в Ереване: новостройки и вторичное жильё, косметический и капитальный ремонт. Смета, этапы и материалы — по согласованному объёму. SHINEX.",
         introduction: [
           "Ремонт квартиры в Ереване начинаем с осмотра и замеров. Затем составляем смету и согласуем перечень работ: подготовку поверхностей, электрику, сантехнику и отделку.",
           "В новостройке проверяем, в каком состоянии застройщик передал помещение. В квартире со старым ремонтом определяем, какие покрытия и системы можно сохранить, а какие нужно заменить.",
@@ -99,11 +107,48 @@ const coreSeoLandingPages = [
             paragraphs: [
               "Для обновления покрытий может быть достаточно косметического ремонта. При изношенной проводке, трубах и основаниях нужен капитальный ремонт. Формат «под ключ» относится к организации всего проекта и отдельно определяет, какие этапы ведёт одна компания.",
             ],
+            choices: [
+              {
+                title: "Косметический ремонт квартиры",
+                description:
+                  "Подходит для обновления краски, обоев и напольных покрытий, если основания и инженерные системы пригодны для дальнейшего использования.",
+                path: "services/cosmetic-renovation-yerevan",
+              },
+              {
+                title: "Капитальный ремонт квартиры",
+                description:
+                  "Нужен, когда требуется демонтаж, восстановление оснований или замена проводки и труб. Сначала оцениваем состояние квартиры.",
+                path: "services/capital-renovation-yerevan",
+              },
+              {
+                title: "Ремонт квартиры в новостройке",
+                description:
+                  "Объём зависит от того, что передал застройщик: бетонную коробку, черновую или предчистовую отделку. Проверяем выполненные работы до составления сметы.",
+                path: "services/new-build-renovation",
+              },
+              {
+                title: "Ремонт квартиры под ключ",
+                description:
+                  "Определяет организацию проекта одной командой. Работы, закупку материалов, мебель и технику нужно отдельно перечислить в договоре.",
+                path: "services/turnkey-renovation",
+              },
+            ],
           },
           {
             title: "Как рассчитать стоимость",
             paragraphs: [
               "Для обсуждения сметы расскажите о площади и состоянии квартиры. Уточним объёмы демонтажа, электрики, сантехники и отделки. В разделе стоимости можно посмотреть структуру бюджета.",
+            ],
+          },
+          {
+            title: "Как выбрать подрядчика для ремонта квартиры",
+            paragraphs: [
+              "Сравнивайте предложения по одной планировке и одному перечню работ. Просите показать реальные объекты с похожей задачей и уточняйте, кто отвечает за каждый этап.",
+            ],
+            items: [
+              "Смета: объёмы и единицы измерения, работы, материалы и дополнительные расходы отдельными строками.",
+              "Договор: состав работ, этапы оплаты, порядок изменений и приёмки результата.",
+              "Приёмка: перечень выполненных работ и замечаний; фотографии скрытых коммуникаций, если их фиксация предусмотрена договором.",
             ],
           },
         ],
@@ -122,6 +167,21 @@ const coreSeoLandingPages = [
             question: "Что согласовывается до начала отделки?",
             answer:
               "Расстановка мебели, расположение розеток, освещения, сантехники и выбор покрытий. Это позволяет предусмотреть необходимые подключения до закрытия стен и пола.",
+          },
+          {
+            question: "Сколько стоит ремонт квартиры в Ереване?",
+            answer:
+              "Ориентир и примеры расчёта для 40, 60 и 80 м² приведены на странице цен. Для вашей квартиры нужны площадь, исходное состояние и перечень работ. Стоимость материалов и комплектацию согласуем отдельно в смете.",
+          },
+          {
+            question: "Сколько длится ремонт квартиры?",
+            answer:
+              "Срок зависит от демонтажа, инженерных работ, подготовки поверхностей и поставок. В графике нужно учитывать технологические перерывы и доступ в квартиру. После осмотра согласуем последовательность этапов и сроки для вашего объёма.",
+          },
+          {
+            question: "Можно ли заказать ремонт квартиры без дизайн-проекта?",
+            answer:
+              "Для обновления отделки полного дизайн-проекта может не потребоваться. До электрики и сантехники всё равно нужно согласовать план мебели, розеток, освещения и подключений. При изменении планировки состав проектных документов обсуждается отдельно.",
           },
         ],
         calculatorLabel: "Обсудить ремонт",
@@ -171,11 +231,48 @@ const coreSeoLandingPages = [
             paragraphs: [
               "Redecoration may be enough to refresh sound surfaces. Major renovation deals with worn wiring, pipes and surfaces. A complete renovation service describes who coordinates the project; its scope needs to specify which stages are included.",
             ],
+            choices: [
+              {
+                title: "Cosmetic apartment renovation",
+                description:
+                  "Refresh paint, wallpaper and floor finishes when the underlying surfaces and building services can be retained.",
+                path: "services/cosmetic-renovation-yerevan",
+              },
+              {
+                title: "Major apartment renovation",
+                description:
+                  "Consider this when removal work, repairs to underlying surfaces or replacement wiring and pipes are needed. The survey determines the scope.",
+                path: "services/capital-renovation-yerevan",
+              },
+              {
+                title: "New-build apartment renovation",
+                description:
+                  "The scope depends on the developer’s handover: a bare shell, initial preparation or surfaces ready for finishing. Completed work is checked before the estimate.",
+                path: "services/new-build-renovation",
+              },
+              {
+                title: "Complete apartment renovation",
+                description:
+                  "One team coordinates the agreed project. List works, material purchasing, furniture and appliances separately in the contract.",
+                path: "services/turnkey-renovation",
+              },
+            ],
           },
           {
             title: "Planning the budget",
             paragraphs: [
               "Tell us about the size and condition of your apartment so we can discuss an estimate. We will clarify the demolition, wiring, plumbing and finishing work needed. Our cost guide explains how the budget is structured.",
+            ],
+          },
+          {
+            title: "Choosing an apartment renovation contractor",
+            paragraphs: [
+              "Compare proposals using the same layout and scope. Ask to see real projects with similar requirements and clarify who is responsible for each stage.",
+            ],
+            items: [
+              "Estimate: quantities, units, labour, materials and additional costs on separate lines.",
+              "Contract: scope, payment stages, change approval and handover procedure.",
+              "Handover: a record of completed work and outstanding items; photos of concealed services where documentation is included in the contract.",
             ],
           },
         ],
@@ -194,6 +291,21 @@ const coreSeoLandingPages = [
             question: "Which decisions should be made before finishing?",
             answer:
               "Furniture positions, outlets, lighting, plumbing fixtures and finishes. Agreeing these early lets the necessary connections be planned before walls and floors are finished.",
+          },
+          {
+            question: "How much does apartment renovation in Yerevan cost?",
+            answer:
+              "The prices page shows the starting rate and examples for 40, 60 and 80 m². An estimate for your apartment requires its area, current condition and work scope. Materials and fitting out are agreed separately in the estimate.",
+          },
+          {
+            question: "How long does apartment renovation take?",
+            answer:
+              "Timing depends on removal work, building services, surface preparation and deliveries. The schedule needs to allow for drying and other technical pauses, as well as access. Stages and timing are agreed after the survey.",
+          },
+          {
+            question: "Can I renovate without a full interior design project?",
+            answer:
+              "A finish refresh may not require a full design project. Furniture, socket, lighting and plumbing layouts still need to be agreed before wiring and pipework. Documentation for layout changes is discussed separately.",
           },
         ],
         calculatorLabel: "Discuss your renovation",
@@ -243,11 +355,48 @@ const coreSeoLandingPages = [
             paragraphs: [
               "Für intakte Oberflächen kann eine Auffrischung genügen. Eine umfassende Sanierung betrifft verschlissene Kabel, Rohre und Untergründe. Eine komplette Renovierungsleistung beschreibt die Projektkoordination; welche Phasen enthalten sind, muss ausdrücklich festgelegt werden.",
             ],
+            choices: [
+              {
+                title: "Kosmetische Wohnungsrenovierung",
+                description:
+                  "Farben, Tapeten und Bodenbeläge erneuern, wenn Untergründe und technische Anlagen weiterhin genutzt werden können.",
+                path: "services/cosmetic-renovation-yerevan",
+              },
+              {
+                title: "Umfassende Wohnungssanierung",
+                description:
+                  "Bei notwendigem Rückbau, der Instandsetzung von Untergründen oder dem Austausch von Leitungen. Eine Besichtigung klärt den Umfang.",
+                path: "services/capital-renovation-yerevan",
+              },
+              {
+                title: "Renovierung einer Neubauwohnung",
+                description:
+                  "Der Umfang hängt vom Übergabezustand ab: Rohbau, vorbereitete Flächen oder Ausbauvorbereitung. Vor der Kostenschätzung werden vorhandene Arbeiten geprüft.",
+                path: "services/new-build-renovation",
+              },
+              {
+                title: "Komplette Wohnungsrenovierung",
+                description:
+                  "Ein Team koordiniert das vereinbarte Projekt. Arbeiten, Materialbeschaffung, Möbel und Geräte werden im Vertrag einzeln aufgeführt.",
+                path: "services/turnkey-renovation",
+              },
+            ],
           },
           {
             title: "Das Budget planen",
             paragraphs: [
               "Beschreiben Sie Größe und Zustand Ihrer Wohnung, damit wir eine Kostenschätzung besprechen können. Wir klären Rückbau, Elektro- und Sanitärarbeiten sowie Ausbau. Unser Kostenratgeber erläutert die Budgetstruktur.",
+            ],
+          },
+          {
+            title: "Einen Auftragnehmer für die Wohnungsrenovierung auswählen",
+            paragraphs: [
+              "Vergleichen Sie Angebote anhand desselben Grundrisses und Leistungsumfangs. Fragen Sie nach realen, vergleichbaren Projekten und den Verantwortlichen für jede Phase.",
+            ],
+            items: [
+              "Kostenvoranschlag: Mengen, Einheiten, Arbeiten, Materialien und Nebenkosten getrennt ausweisen.",
+              "Vertrag: Leistungsumfang, Zahlungsphasen, Änderungen und Abnahmeverfahren.",
+              "Abnahme: erledigte Arbeiten und offene Punkte dokumentieren; Fotos verdeckter Leitungen, sofern vertraglich vereinbart.",
             ],
           },
         ],
@@ -267,6 +416,22 @@ const coreSeoLandingPages = [
               "Welche Entscheidungen sollten vor dem Ausbau getroffen werden?",
             answer:
               "Möbelpositionen, Steckdosen, Beleuchtung, Sanitärobjekte und Oberflächen. Werden sie früh abgestimmt, können die nötigen Anschlüsse vor der Fertigstellung von Wänden und Böden geplant werden.",
+          },
+          {
+            question: "Was kostet die Renovierung einer Wohnung in Eriwan?",
+            answer:
+              "Die Preisseite zeigt den Einstiegspreis und Rechenbeispiele für 40, 60 und 80 m². Für Ihre Wohnung benötigen wir Fläche, Zustand und Arbeitsumfang. Materialien und Ausstattung werden im Kostenvoranschlag separat vereinbart.",
+          },
+          {
+            question: "Wie lange dauert eine Wohnungsrenovierung?",
+            answer:
+              "Die Dauer hängt von Rückbau, Haustechnik, Untergrundvorbereitung und Lieferungen ab. Technisch notwendige Pausen und der Zugang zur Wohnung werden berücksichtigt. Ablauf und Termine werden nach der Besichtigung vereinbart.",
+          },
+          {
+            question:
+              "Ist eine Renovierung ohne vollständige Innenraumplanung möglich?",
+            answer:
+              "Für neue Oberflächen ist nicht immer eine vollständige Planung nötig. Möbel, Steckdosen, Beleuchtung und Anschlüsse müssen vor den Installationsarbeiten festgelegt werden. Unterlagen für Grundrissänderungen werden separat besprochen.",
           },
         ],
         calculatorLabel: "Renovierung besprechen",
@@ -316,11 +481,48 @@ const coreSeoLandingPages = [
             paragraphs: [
               "Un rafraîchissement peut suffire pour des surfaces saines. Une rénovation lourde traite les câbles, canalisations et surfaces usés. Un service de rénovation complète décrit la coordination du projet ; son périmètre doit préciser les étapes incluses.",
             ],
+            choices: [
+              {
+                title: "Rénovation légère d’appartement",
+                description:
+                  "Renouveler peintures, papiers peints et revêtements de sol lorsque les supports et les réseaux peuvent être conservés.",
+                path: "services/cosmetic-renovation-yerevan",
+              },
+              {
+                title: "Rénovation lourde d’appartement",
+                description:
+                  "À envisager si une dépose, une remise en état des supports ou un remplacement des réseaux est nécessaire. La visite précise le périmètre.",
+                path: "services/capital-renovation-yerevan",
+              },
+              {
+                title: "Rénovation d’un appartement neuf",
+                description:
+                  "Le périmètre dépend de la livraison du promoteur : volume brut, préparation initiale ou supports prêts à finir. Les travaux existants sont vérifiés avant le devis.",
+                path: "services/new-build-renovation",
+              },
+              {
+                title: "Rénovation complète d’appartement",
+                description:
+                  "Une équipe coordonne le projet convenu. Travaux, achats de matériaux, mobilier et électroménager sont détaillés séparément dans le contrat.",
+                path: "services/turnkey-renovation",
+              },
+            ],
           },
           {
             title: "Préparer le budget",
             paragraphs: [
               "Indiquez la taille et l’état de votre appartement pour discuter d’une estimation. Nous préciserons la démolition, l’électricité, la plomberie et les finitions nécessaires. Notre guide des coûts explique la structure du budget.",
+            ],
+          },
+          {
+            title: "Choisir une entreprise de rénovation d’appartement",
+            paragraphs: [
+              "Comparez les propositions sur le même plan et le même périmètre. Demandez à voir des réalisations comparables et précisez le responsable de chaque étape.",
+            ],
+            items: [
+              "Devis : quantités, unités, main-d’œuvre, matériaux et frais annexes sur des lignes séparées.",
+              "Contrat : périmètre, paiements par étapes, validation des changements et réception.",
+              "Réception : liste des travaux réalisés et des réserves ; photos des réseaux cachés si leur documentation est prévue au contrat.",
             ],
           },
         ],
@@ -340,6 +542,22 @@ const coreSeoLandingPages = [
             answer:
               "L’emplacement du mobilier, les prises, l’éclairage, les équipements sanitaires et les finitions. Les définir tôt permet de prévoir les raccordements avant de terminer les murs et les sols.",
           },
+          {
+            question: "Combien coûte la rénovation d’un appartement à Erevan ?",
+            answer:
+              "La page des prix présente le tarif de départ et des exemples pour 40, 60 et 80 m². Votre devis dépend de la surface, de l’état initial et des travaux. Les matériaux et l’équipement sont convenus séparément.",
+          },
+          {
+            question: "Combien de temps dure la rénovation d’un appartement ?",
+            answer:
+              "Le délai dépend de la dépose, des réseaux, de la préparation des supports et des livraisons. Le planning tient compte des pauses techniques et de l’accès au logement. Les étapes et délais sont convenus après la visite.",
+          },
+          {
+            question:
+              "Peut-on rénover sans projet complet d’aménagement intérieur ?",
+            answer:
+              "Un rafraîchissement ne nécessite pas toujours un projet complet. Il faut néanmoins définir mobilier, prises, éclairage et raccordements avant les travaux de réseaux. Les documents liés aux changements de plan sont étudiés séparément.",
+          },
         ],
         calculatorLabel: "Discuter de votre rénovation",
         contactLabel: "Discuter de votre rénovation",
@@ -352,7 +570,7 @@ const coreSeoLandingPages = [
           "Բնակարանի վերանորոգումը պլանավորում ենք՝ հաշվի առնելով տարածքի վիճակը, ձեր նախընտրած դասավորությունն ու հարդարման նյութերը։",
         seoTitle: "Բնակարանների վերանորոգում Երևանում | SHINEX",
         seoDescription:
-          "Բնակարանների վերանորոգում Երևանում՝ տարածքի նախապատրաստում, էլեկտրական և սանտեխնիկական աշխատանքներ, հարդարում ու արժեքի հաշվարկ։",
+          "Բնակարանների վերանորոգում Երևանում՝ նորակառույց և հին բնակարաններ, կոսմետիկ ու կապիտալ աշխատանքներ։ Նախահաշիվ, փուլեր և նյութերի համաձայնեցում՝ SHINEX։",
         introduction: [
           "SHINEX-ը Երևանում բնակարանների վերանորոգումը սկսում է տարածքի զննումից ու չափագրումից։ Այնուհետև կազմում ենք նախահաշիվ և համաձայնեցնում նախապատրաստական, էլեկտրական, սանտեխնիկական ու հարդարման աշխատանքների ցանկը։",
           "Նորակառույցում ստուգում ենք կառուցապատողի հանձնած բնակարանի վիճակը։ Հին վերանորոգմամբ բնակարանում պարզում ենք՝ որ ծածկույթներն ու համակարգերը կարելի է պահպանել, և որոնք են փոխարինման կարիք ունենում։",
@@ -388,11 +606,48 @@ const coreSeoLandingPages = [
             paragraphs: [
               "Լավ վիճակում գտնվող մակերեսների հարդարումը թարմացնելու համար կարող է բավարար լինել կոսմետիկ վերանորոգումը։ Մաշված էլեկտրալարերը, խողովակներն ու մակերեսները վերականգնելու համար անհրաժեշտ է կապիտալ վերանորոգում։ Ամբողջական վերանորոգման դեպքում առանձին սահմանում ենք, թե որ փուլերն է կազմակերպում մեկ ընկերությունը։",
             ],
+            choices: [
+              {
+                title: "Բնակարանի կոսմետիկ վերանորոգում",
+                description:
+                  "Ներկի, պաստառների և հատակի ծածկույթների թարմացում, երբ հիմքերն ու ինժեներական համակարգերը պիտանի են հետագա օգտագործման համար։",
+                path: "services/cosmetic-renovation-yerevan",
+              },
+              {
+                title: "Բնակարանի կապիտալ վերանորոգում",
+                description:
+                  "Ընտրեք, երբ անհրաժեշտ են ապամոնտաժում, հիմքերի վերականգնում կամ լարերի ու խողովակների փոխարինում։ Նախ գնահատում ենք բնակարանի վիճակը։",
+                path: "services/capital-renovation-yerevan",
+              },
+              {
+                title: "Նորակառույց բնակարանի վերանորոգում",
+                description:
+                  "Ծավալը կախված է կառուցապատողի հանձնած վիճակից՝ բետոնե պատերից մինչև նախնական հարդարում։ Նախահաշվից առաջ ստուգում ենք կատարված աշխատանքները։",
+                path: "services/new-build-renovation",
+              },
+              {
+                title: "Բնակարանի ամբողջական վերանորոգում",
+                description:
+                  "Նախագծի կազմակերպում մեկ թիմի միջոցով։ Աշխատանքները, նյութերի գնումը, կահույքն ու տեխնիկան պետք է առանձին նշվեն պայմանագրում։",
+                path: "services/turnkey-renovation",
+              },
+            ],
           },
           {
             title: "Ինչպե՞ս հաշվարկել արժեքը",
             paragraphs: [
               "Նախահաշիվը քննարկելու համար նշեք բնակարանի մակերեսն ու վիճակը։ Կճշտենք ապամոնտաժման, էլեկտրական, սանտեխնիկական և հարդարման աշխատանքների ծավալները։ Արժեքի բաժնում կարող եք ծանոթանալ բյուջեի կազմին։",
+            ],
+          },
+          {
+            title: "Ինչպե՞ս ընտրել բնակարանի վերանորոգման կատարողին",
+            paragraphs: [
+              "Առաջարկները համեմատեք նույն հատակագծի և աշխատանքների նույն ցանկի հիման վրա։ Խնդրեք ցույց տալ նմանատիպ իրական աշխատանքներ և ճշտեք յուրաքանչյուր փուլի պատասխանատուին։",
+            ],
+            items: [
+              "Նախահաշիվ՝ ծավալներ, չափման միավորներ, աշխատանքներ, նյութեր և լրացուցիչ ծախսեր՝ առանձին տողերով։",
+              "Պայմանագիր՝ աշխատանքների կազմ, վճարման փուլեր, փոփոխությունների և արդյունքի ընդունման կարգ։",
+              "Ընդունում՝ կատարված աշխատանքների ու դիտողությունների ցանկ, թաքնված հաղորդակցությունների լուսանկարներ, եթե դրանց գրանցումը նախատեսված է պայմանագրով։",
             ],
           },
         ],
@@ -412,6 +667,21 @@ const coreSeoLandingPages = [
             answer:
               "Կահույքի, վարդակների, լուսավորության ու սանտեխնիկայի տեղերը և հարդարման նյութերը։ Այդպես անհրաժեշտ միացումները հնարավոր է նախատեսել մինչև պատերն ու հատակը վերջնական հարդարելը։",
           },
+          {
+            question: "Ի՞նչ արժե բնակարանի վերանորոգումը Երևանում։",
+            answer:
+              "Մեկնարկային արժեքն ու 40, 60 և 80 մ² բնակարանների հաշվարկի օրինակները ներկայացված են գների էջում։ Ձեր բնակարանի համար անհրաժեշտ են մակերեսը, սկզբնական վիճակն ու աշխատանքների ցանկը։ Նյութերի արժեքն ու համալրումը համաձայնեցնում ենք նախահաշվում առանձին։",
+          },
+          {
+            question: "Որքա՞ն է տևում բնակարանի վերանորոգումը։",
+            answer:
+              "Ժամկետը կախված է ապամոնտաժումից, ինժեներական աշխատանքներից, մակերեսների պատրաստումից և մատակարարումից։ Ժամանակացույցում հաշվի են առնվում տեխնոլոգիական դադարներն ու բնակարանի հասանելիությունը։ Զննումից հետո համաձայնեցնում ենք փուլերն ու ժամկետները։",
+          },
+          {
+            question: "Կարելի՞ է բնակարանը վերանորոգել առանց դիզայն-նախագծի։",
+            answer:
+              "Հարդարման թարմացման համար ամբողջական դիզայն-նախագիծ կարող է պետք չլինել։ Սակայն էլեկտրական և սանտեխնիկական աշխատանքներից առաջ անհրաժեշտ է համաձայնեցնել կահույքի, վարդակների, լուսավորության ու միացումների տեղերը։ Վերահատակագծման դեպքում նախագծային փաստաթղթերը քննարկվում են առանձին։",
+          },
         ],
         calculatorLabel: "Կապվել մեզ հետ",
         contactLabel: "Կապվել մեզ հետ",
@@ -421,6 +691,7 @@ const coreSeoLandingPages = [
   },
   {
     slug: "new-build-renovation",
+    contentUpdatedAt: "2026-10-28",
     kind: "service",
     image:
       "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1800&q=85",
@@ -436,9 +707,9 @@ const coreSeoLandingPages = [
         title: "Ремонт квартиры в новостройке в Ереване",
         description:
           "Ремонтируем квартиры в новостройках: от черновой подготовки и инженерии до чистовой отделки.",
-        seoTitle: "Ремонт новостройки в Ереване под ключ | SHINEX",
+        seoTitle: "Ремонт новостройки в Ереване — с нуля и White Box | SHINEX",
         seoDescription:
-          "Ремонт квартиры в новостройке в Ереване: черновые и чистовые этапы, сроки и факторы стоимости.",
+          "Ремонт квартиры в новостройке в Ереване: с нуля или после предчистовой отделки. Проверка состояния, электрика, сантехника, отделка и смета после осмотра.",
         introduction: [
           "В квартире от застройщика проверяем стены, пол, проёмы, расположение розеток и выводов воды. По результатам осмотра определяем, что нужно подготовить до чистовой отделки.",
           "Расстановку мебели, освещение и сантехнику согласовываем заранее: необходимые подключения проще предусмотреть до укладки плитки, покраски и монтажа покрытий.",
@@ -473,6 +744,13 @@ const coreSeoLandingPages = [
             title: "Сроки и стоимость",
             paragraphs: [
               "Сроки и бюджет зависят от готовности квартиры, площади, числа розеток, освещения и подключений воды, выбранных материалов и сложности решений. Точную смету можно подготовить после осмотра объекта.",
+            ],
+          },
+          {
+            title: "Ремонт с нуля: черновая и предчистовая отделка",
+            paragraphs: [
+              "Названия «чёрный каркас», «белый каркас» и White Box не гарантируют одинаковую комплектацию у разных застройщиков. Для сметы важны фактическое наличие перегородок, стяжки, штукатурки и разводки коммуникаций.",
+              "В квартире без отделки сначала определяем планировку и инженерные решения. При предчистовой отделке проверяем основания и расположение выводов: часть выполненных работ может подходить вашему проекту, а часть потребует корректировки. Передайте план и фотографии, чтобы обсудить ремонт квартиры с нуля.",
             ],
           },
         ],
@@ -541,6 +819,13 @@ const coreSeoLandingPages = [
               "Timing and budget depend on apartment readiness, area, number of service points, chosen materials, and complexity. A site survey is needed for a precise estimate.",
             ],
           },
+          {
+            title: "Renovating from a bare shell or a prepared finish",
+            paragraphs: [
+              "Labels such as black shell, white shell and White Box do not guarantee the same specification from every developer. The estimate depends on the actual partitions, screed, plaster and installed services.",
+              "For a bare apartment, layout and building services come first. For a prepared finish, we check the underlying surfaces and connection locations: some existing work may be usable, while other parts may need adjusting. Share the plan and photos to discuss renovation from scratch.",
+            ],
+          },
         ],
         faqs: [
           {
@@ -605,6 +890,13 @@ const coreSeoLandingPages = [
             title: "Dauer und Kosten",
             paragraphs: [
               "Dauer und Budget hängen vom Fertigstellungsstand, der Fläche, den Anschlusspunkten, Materialien und der Komplexität ab. Für eine genaue Kostenschätzung ist eine Besichtigung nötig.",
+            ],
+          },
+          {
+            title: "Renovierung ab Rohbau oder vorbereitetem Ausbau",
+            paragraphs: [
+              "Bezeichnungen wie Rohbau, weißer Ausbau oder White Box garantieren nicht bei jedem Bauträger denselben Umfang. Entscheidend sind vorhandene Trennwände, Estrich, Putz und Installationen.",
+              "Bei einer Wohnung ohne Ausbau werden zunächst Grundriss und Haustechnik festgelegt. Bei vorbereiteten Flächen prüfen wir Untergründe und Anschlüsse: Ein Teil kann erhalten bleiben, anderes muss angepasst werden. Ein Plan und Fotos helfen bei der ersten Abstimmung.",
             ],
           },
         ],
@@ -674,6 +966,13 @@ const coreSeoLandingPages = [
               "Les délais et le budget dépendent de l’état de livraison, de la surface, du nombre de points techniques, des matériaux et de la complexité. Une visite est nécessaire pour un devis précis.",
             ],
           },
+          {
+            title: "Rénover depuis un volume brut ou des supports préparés",
+            paragraphs: [
+              "Les appellations volume brut, finition blanche ou White Box ne garantissent pas le même contenu chez tous les promoteurs. Le devis dépend des cloisons, de la chape, des enduits et des réseaux réellement présents.",
+              "Dans un logement brut, le plan et les réseaux sont définis en premier. Si les supports sont préparés, nous vérifions leur état et les raccordements : certains travaux peuvent être conservés, d’autres adaptés. Transmettez le plan et des photos pour préparer la discussion.",
+            ],
+          },
         ],
         faqs: [
           {
@@ -703,7 +1002,7 @@ const coreSeoLandingPages = [
           "Նորակառույց բնակարանի վերանորոգում՝ պատերի ու հատակի նախապատրաստումից մինչև էլեկտրական, սանտեխնիկական և հարդարման աշխատանքներ։",
         seoTitle: "Նորակառույց բնակարանի վերանորոգում Երևանում | SHINEX",
         seoDescription:
-          "Նորակառույց բնակարանի վերանորոգում Երևանում՝ վիճակի ստուգում, նախապատրաստական ու հարդարման աշխատանքներ, փուլերի և բյուջեի պլանավորում։",
+          "Նորակառույց բնակարանի վերանորոգում Երևանում՝ «սև գործ» կամ «սպիտակ գործ» վիճակից։ Զննում, էլեկտրական և սանտեխնիկական աշխատանքներ, հարդարում ու նախահաշիվ։",
         introduction: [
           "Կառուցապատողի հանձնած բնակարանում նախ ստուգում ենք պատերի, հատակի, դռների ու պատուհանների բացվածքների և ինժեներական համակարգերի վիճակը։ Զննումից հետո որոշում ենք, թե ինչ աշխատանքներ են անհրաժեշտ մինչև վերջնական հարդարումը։",
           "Կահույքի, վարդակների, լուսավորության ու սանտեխնիկայի տեղերը ճշտում ենք նախապես։ Այդպես խողովակներն ու էլեկտրալարերը հնարավոր է անցկացնել մինչև պատրաստ մակերեսները հարդարելը։",
@@ -738,6 +1037,13 @@ const coreSeoLandingPages = [
             title: "Ժամկետ և արժեք",
             paragraphs: [
               "Ժամկետն ու բյուջեն կախված են բնակարանի պատրաստվածությունից, մակերեսից, ինժեներական կետերի քանակից, նյութերից և լուծումների բարդությունից։ Ճշգրիտ նախահաշիվը հնարավոր է կազմել զննումից հետո։",
+            ],
+          },
+          {
+            title: "Վերանորոգում զրոյից․ «սև գործ» և «սպիտակ գործ»",
+            paragraphs: [
+              "«Սև գործ», «սպիտակ գործ» կամ White Box անվանումները տարբեր կառուցապատողների մոտ նույն կազմը չեն երաշխավորում։ Նախահաշվի համար կարևոր է միջնապատերի, հատակի հարթեցման, սվաղի և հաղորդակցությունների փաստացի վիճակը։",
+              "Առանց հարդարման բնակարանում նախ որոշում ենք հատակագիծն ու ինժեներական լուծումները։ Նախնական հարդարման դեպքում ստուգում ենք հիմքերն ու միացումների տեղերը․ կատարված աշխատանքների մի մասը կարող է պահպանվել, իսկ մյուս մասը՝ փոփոխվել։ Զրոյից վերանորոգումը քննարկելու համար ուղարկեք հատակագիծն ու լուսանկարները։",
             ],
           },
         ],
@@ -1083,6 +1389,7 @@ const coreSeoLandingPages = [
   },
   {
     slug: "prices",
+    contentUpdatedAt: "2026-10-28",
     kind: "prices",
     image:
       "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1800&q=85",
@@ -1100,7 +1407,7 @@ const coreSeoLandingPages = [
         eyebrow: "Стоимость ремонта",
         title: "Стоимость ремонта квартиры в Ереване",
         description: `${renovationStartingPrice.ru ? `Ремонт квартиры ${renovationStartingPrice.ru}. ` : ""}Итоговая стоимость зависит от состояния квартиры и состава работ. Обсудите смету с SHINEX.`,
-        seoTitle: "Стоимость ремонта квартиры в Ереване: расчёт за м² | SHINEX",
+        seoTitle: "Ремонт квартир в Ереване: цены за м² и примеры | SHINEX",
         seoDescription: `${renovationStartingPrice.ru ? `Ремонт квартир в Ереване ${renovationStartingPrice.ru}. ` : ""}Примеры для 40, 60 и 80 м², состав работ и материалов. Индивидуальная смета после осмотра.`,
         introduction: [
           "Стоимость ремонта квартиры зависит от её состояния, площади и согласованного перечня работ. В SHINEX обсуждаем демонтаж, электрику, сантехнику и отделку, а точную смету составляем после осмотра и замеров.",
@@ -1154,6 +1461,17 @@ const coreSeoLandingPages = [
             question: "Что должно быть в смете?",
             answer:
               "В ней должны быть объём работ, единицы измерения, стоимость работ и отдельно оговорённые материалы или условия.",
+          },
+          {
+            question:
+              "Как рассчитать ремонт однокомнатной, двухкомнатной или трёхкомнатной квартиры?",
+            answer:
+              "Количество комнат само по себе не определяет цену. Нужны площадь и состояние квартиры, объём работ в кухне и санузлах, число инженерных точек и выбранная отделка. В примерах выше показана арифметика для 40, 60 и 80 м²; итоговую смету считаем по фактическому объёму.",
+          },
+          {
+            question: "Что уточнить, если предлагают ремонт «с материалами»?",
+            answer:
+              "Попросите перечислить черновые и чистовые материалы, их количество и характеристики, а также доставку и подъём. Отдельно проверьте, включены ли двери, сантехническое оборудование, свет, мебель и техника. Без списка комплектации две суммы за м² не сопоставимы.",
           },
         ],
         calculatorLabel: "Обсудить ремонт",
@@ -1219,6 +1537,18 @@ const coreSeoLandingPages = [
             answer:
               "It should show quantities, units, work cost, and separately agreed materials or conditions.",
           },
+          {
+            question:
+              "How is renovation priced for apartments with different room counts?",
+            answer:
+              "Room count alone does not determine the price. Floor area, condition, kitchen and bathroom work, service connections and finishes all matter. The examples above show calculations for 40, 60 and 80 m²; the final estimate uses the actual work quantities.",
+          },
+          {
+            question:
+              "What should a renovation quote including materials specify?",
+            answer:
+              "Ask for a list of preparation and finishing materials, quantities and specifications, delivery and handling. Check doors, sanitary equipment, lighting, furniture and appliances separately. Two rates per m² are not comparable without the specification.",
+          },
         ],
         calculatorLabel: "Discuss your renovation",
         contactLabel: "Discuss renovation costs",
@@ -1283,6 +1613,17 @@ const coreSeoLandingPages = [
             question: "Was sollte ein Kostenvoranschlag enthalten?",
             answer:
               "Er sollte Mengen, Einheiten, Arbeitskosten und separat vereinbarte Materialien oder Bedingungen ausweisen.",
+          },
+          {
+            question:
+              "Wie wird die Renovierung von Ein-, Zwei- oder Dreizimmerwohnungen berechnet?",
+            answer:
+              "Die Zimmerzahl allein bestimmt den Preis nicht. Fläche, Zustand, Arbeiten in Küche und Bad, Anschlüsse und Oberflächen sind entscheidend. Oben finden Sie Beispiele für 40, 60 und 80 m²; der endgültige Kostenvoranschlag beruht auf den tatsächlichen Mengen.",
+          },
+          {
+            question: "Was sollte ein Angebot inklusive Materialien enthalten?",
+            answer:
+              "Fragen Sie nach Vorbereitungsmaterialien und Belägen mit Mengen und Eigenschaften sowie Lieferung und Transport. Prüfen Sie Türen, Sanitärausstattung, Beleuchtung, Möbel und Geräte getrennt. Ohne genaue Ausstattung sind zwei Quadratmeterpreise nicht vergleichbar.",
           },
         ],
         calculatorLabel: "Renovierung besprechen",
@@ -1350,6 +1691,18 @@ const coreSeoLandingPages = [
             answer:
               "Il doit indiquer les quantités, les unités, le coût des travaux et les matériaux ou conditions convenus séparément.",
           },
+          {
+            question:
+              "Comment calculer la rénovation selon le nombre de pièces ?",
+            answer:
+              "Le nombre de pièces ne suffit pas à déterminer le prix. Surface, état, travaux en cuisine et salles d’eau, raccordements et finitions comptent aussi. Les exemples ci-dessus portent sur 40, 60 et 80 m² ; le devis définitif repose sur les quantités réelles.",
+          },
+          {
+            question:
+              "Que vérifier dans un devis de rénovation matériaux compris ?",
+            answer:
+              "Demandez la liste des matériaux de préparation et de finition, leurs quantités et caractéristiques, la livraison et la manutention. Vérifiez séparément portes, sanitaires, éclairage, mobilier et électroménager. Sans cette liste, deux prix au m² ne sont pas comparables.",
+          },
         ],
         calculatorLabel: "Discuter de votre rénovation",
         contactLabel: "Discuter du coût de rénovation",
@@ -1413,6 +1766,17 @@ const coreSeoLandingPages = [
             question: "Ի՞նչ պետք է ներառի նախահաշիվը",
             answer:
               "Այն պետք է նշի աշխատանքի ծավալները, չափման միավորները, արժեքը և առանձին համաձայնեցված նյութերը կամ պայմանները։",
+          },
+          {
+            question:
+              "Ինչպե՞ս հաշվարկել մեկ, երկու կամ երեք սենյականոց բնակարանի վերանորոգումը։",
+            answer:
+              "Միայն սենյակների քանակը գին չի որոշում։ Անհրաժեշտ են մակերեսն ու վիճակը, խոհանոցի և սանհանգույցների աշխատանքների ծավալը, ինժեներական կետերի քանակն ու ընտրված հարդարումը։ Վերևում բերված են 40, 60 և 80 մ² հաշվարկի օրինակներ, իսկ վերջնական նախահաշիվը կազմում ենք փաստացի ծավալով։",
+          },
+          {
+            question: "Ի՞նչ ճշտել «նյութերով վերանորոգում» առաջարկի դեպքում։",
+            answer:
+              "Խնդրեք թվարկել սևագործ և հարդարման նյութերը, քանակներն ու բնութագրերը, առաքումն ու բարձրացումը։ Առանձին ստուգեք՝ ներառվա՞ծ են դռները, սանտեխնիկական սարքերը, լույսերը, կահույքն ու տեխնիկան։ Առանց համալրման ցանկի մեկ մ²-ի երկու գին համեմատելի չեն։",
           },
         ],
         calculatorLabel: "Կապվել մեզ հետ",

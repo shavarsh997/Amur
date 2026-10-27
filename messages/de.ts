@@ -863,6 +863,9 @@ const dictionary = {
     description:
       "Kontaktieren Sie SHINEX telefonisch, per WhatsApp oder E-Mail, um Bau, Renovierung und Innenraumgestaltung in Eriwan und ganz Armenien zu besprechen.",
     phone: "Telefon",
+    phoneCopy: "Nummer kopieren",
+    phoneCopied: "Nummer kopiert",
+    phoneCopyError: "Markieren Sie die Nummer und kopieren Sie sie manuell.",
     email: "E-Mail",
     address: "Adresse",
     hours: "Öffnungszeiten",

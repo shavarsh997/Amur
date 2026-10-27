@@ -5,6 +5,7 @@ import { getActiveServices } from "@/config/services.config";
 import {
   getSeoLandingPath,
   seoLandingPages,
+  type SeoLandingPage,
 } from "@/config/seo-landing-pages.config";
 import { getPublishedArticles } from "@/data/blog";
 import { companyConfig } from "@/config/company.config";
@@ -26,6 +27,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return paths.flatMap((path) => {
     const suffix = path ? `/${path}` : "";
+    const landing: SeoLandingPage | undefined = seoLandingPages.find(
+      (page) => getSeoLandingPath(page) === path
+    );
     const languages = Object.fromEntries([
       ...locales.map((locale) => [
         localeLanguageTags[locale],
@@ -39,6 +43,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     return locales.map((locale) => ({
       url: getAbsoluteUrl(`/${locale}${suffix}`),
+      ...(landing?.contentUpdatedAt
+        ? { lastModified: landing.contentUpdatedAt }
+        : {}),
       changeFrequency: path ? ("monthly" as const) : ("weekly" as const),
       priority:
         path === ""

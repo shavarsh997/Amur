@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import { ContactTrigger } from "@/components/forms/contact-dialog";
+import { PhoneLink } from "@/components/forms/phone-contact";
 import {
   getServiceNavigation,
   navigationConfig,
@@ -102,12 +103,12 @@ export function Footer({ locale, dictionary }: FooterProps) {
             </h2>
             <div className="mt-5 space-y-3 text-sm">
               {phoneHref && companyConfig.contact.displayPhone ? (
-                <a
+                <PhoneLink
                   className="block rounded-sm font-semibold text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--brand-copper)]"
                   href={phoneHref}
                 >
                   {companyConfig.contact.displayPhone}
-                </a>
+                </PhoneLink>
               ) : null}
               {whatsappHref ? (
                 <a

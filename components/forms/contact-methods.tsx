@@ -4,6 +4,7 @@ import { Mail, MessageCircle, Phone, Send } from "lucide-react";
 import type { ReactNode } from "react";
 
 import { companyConfig } from "@/config/company.config";
+import { PhoneLink } from "@/components/forms/phone-contact";
 import {
   getMailHref,
   getPhoneHref,
@@ -50,7 +51,7 @@ export function ContactMethods({ copy, onMessageClick }: ContactMethodsProps) {
     <div className="layout-region">
       <div className="local-grid grid gap-3">
         {phoneHref && companyConfig.contact.displayPhone ? (
-          <a className={cardClass} href={phoneHref}>
+          <PhoneLink className={cardClass} href={phoneHref}>
             <MethodIcon>
               <Phone aria-hidden="true" className="size-4" />
             </MethodIcon>
@@ -62,7 +63,7 @@ export function ContactMethods({ copy, onMessageClick }: ContactMethodsProps) {
                 {companyConfig.contact.displayPhone}
               </span>
             </span>
-          </a>
+          </PhoneLink>
         ) : null}
         {whatsappHref ? (
           <a

@@ -8,6 +8,8 @@ import {
   contactMessageEvent,
 } from "@/components/forms/contact-methods";
 import { Button } from "@/components/ui/button";
+import { PhoneDetails } from "@/components/forms/phone-contact";
+import { contactPhoneEvent } from "@/lib/phone-contact";
 import type { ButtonSize } from "@/components/ui/button-styles";
 import type { CalculatorRequestContext } from "@/lib/calculator/calculator-request";
 import { trackEvent } from "@/lib/analytics";
@@ -78,7 +80,9 @@ export function ContactDialog({
 }) {
   const [isOpen, setIsOpen] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
-  const [view, setView] = useState<"methods" | "form" | "success">("methods");
+  const [view, setView] = useState<"methods" | "phone" | "form" | "success">(
+    "methods"
+  );
   const [calculatorContext, setCalculatorContext] =
     useState<CalculatorRequestContext | null>(null);
   const dialogRef = useRef<HTMLDivElement>(null);
@@ -113,12 +117,20 @@ export function ContactDialog({
       setView("form");
       setIsOpen(true);
     };
+    const openPhone = () => {
+      setCalculatorContext(null);
+      setIsClosing(false);
+      setView("phone");
+      setIsOpen(true);
+    };
     window.addEventListener(contactOpenEvent, openContact);
     window.addEventListener(contactMessageEvent, openMessage);
+    window.addEventListener(contactPhoneEvent, openPhone);
 
     return () => {
       window.removeEventListener(contactOpenEvent, openContact);
       window.removeEventListener(contactMessageEvent, openMessage);
+      window.removeEventListener(contactPhoneEvent, openPhone);
     };
   }, []);
 
@@ -167,6 +179,10 @@ export function ContactDialog({
   }, [isOpen]);
 
   useEffect(() => {
+    if (isOpen) dialogRef.current?.focus({ preventScroll: true });
+  }, [isOpen, view]);
+
+  useEffect(() => {
     if (!isOpen || view !== "success") return;
 
     const timeout = window.setTimeout(() => {
@@ -194,7 +210,7 @@ export function ContactDialog({
       />
       <div
         ref={dialogRef}
-        className={`relative z-10 flex max-h-[94dvh] w-full max-w-3xl flex-col overflow-hidden rounded-t-[28px] bg-[var(--background-soft)] shadow-2xl outline-none sm:rounded-[28px] ${
+        className={`relative z-10 flex max-h-[94dvh] w-full ${view === "phone" ? "max-w-md" : "max-w-3xl"} flex-col overflow-hidden rounded-t-[28px] bg-[var(--background-soft)] shadow-2xl outline-none sm:rounded-[28px] ${
           isClosing
             ? "motion-safe:animate-[contact-dialog-exit_240ms_ease-in_forwards] sm:motion-safe:animate-none"
             : "motion-safe:animate-[contact-dialog-enter_320ms_cubic-bezier(0.22,1,0.36,1)] sm:motion-safe:animate-none"
@@ -220,11 +236,13 @@ export function ContactDialog({
                 ? dictionary.calculatorRequest?.title
                 : view === "methods"
                   ? copy.methodsTitle
-                  : copy.formTitle}
+                  : view === "phone"
+                    ? copy.phone
+                    : copy.formTitle}
             </h2>
           </div>
           <div className="flex shrink-0 items-center gap-2">
-            {view === "form" && !calculatorContext ? (
+            {(view === "form" || view === "phone") && !calculatorContext ? (
               <button
                 className="inline-flex h-10 items-center gap-1.5 rounded-xl px-3 text-sm font-semibold text-[var(--text-primary)] transition hover:bg-[var(--surface-muted)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--button-primary)]"
                 onClick={() => setView("methods")}
@@ -255,6 +273,8 @@ export function ContactDialog({
                 onMessageClick={() => setView("form")}
               />
             </>
+          ) : view === "phone" ? (
+            <PhoneDetails copy={copy} />
           ) : view === "form" ? (
             <Suspense
               fallback={

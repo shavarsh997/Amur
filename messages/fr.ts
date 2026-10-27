@@ -873,6 +873,9 @@ const dictionary = {
     description:
       "Contactez SHINEX par téléphone, WhatsApp ou e-mail pour discuter de construction, de rénovation et d’aménagement intérieur à Erevan et dans toute l’Arménie.",
     phone: "Téléphone",
+    phoneCopy: "Copier le numéro",
+    phoneCopied: "Numéro copié",
+    phoneCopyError: "Sélectionnez le numéro et copiez-le manuellement.",
     email: "E-mail",
     address: "Adresse",
     hours: "Horaires",

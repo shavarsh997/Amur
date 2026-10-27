@@ -493,6 +493,9 @@ export interface Dictionary {
     title: string;
     description: string;
     phone: string;
+    phoneCopy: string;
+    phoneCopied: string;
+    phoneCopyError: string;
     email: string;
     address: string;
     hours: string;

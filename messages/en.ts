@@ -854,6 +854,9 @@ const dictionary = {
     description:
       "Contact SHINEX by phone, WhatsApp or email to discuss construction, renovation and interior design in Yerevan and across Armenia.",
     phone: "Phone",
+    phoneCopy: "Copy number",
+    phoneCopied: "Number copied",
+    phoneCopyError: "Select the number and copy it manually.",
     email: "Email",
     address: "Address",
     hours: "Working hours",

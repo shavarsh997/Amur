@@ -1,5 +1,6 @@
 import { MessageCircle, Phone } from "lucide-react";
 import { ContactTrigger } from "@/components/forms/contact-dialog";
+import { PhoneLink } from "@/components/forms/phone-contact";
 import { getPhoneHref, getWhatsAppHref } from "@/lib/company";
 import type { Dictionary } from "@/types";
 
@@ -14,13 +15,13 @@ export function MobileContactBar({ dictionary }: { dictionary: Dictionary }) {
     >
       <div className="mx-auto flex max-w-lg items-center gap-2">
         {phone ? (
-          <a
+          <PhoneLink
             className="flex min-h-12 flex-1 items-center justify-center gap-2 rounded-xl border border-[var(--border)] text-sm font-semibold"
             href={phone}
           >
             <Phone className="size-4" aria-hidden="true" />
             {dictionary.contacts.phone}
-          </a>
+          </PhoneLink>
         ) : null}
         {whatsapp ? (
           <a
@@ -33,11 +34,11 @@ export function MobileContactBar({ dictionary }: { dictionary: Dictionary }) {
             {dictionary.contacts.whatsapp}
           </a>
         ) : null}
-        <ContactTrigger
+        {/* <ContactTrigger
           className="min-h-12 flex-1 !px-3 !text-xs"
           label={dictionary.estimate.submit}
           size="compact"
-        />
+        /> */}
       </div>
     </div>
   );

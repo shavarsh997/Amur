@@ -497,6 +497,16 @@ for (const route of sitemap) {
   }
 }
 for (const page of seoLandingPages) {
+  if (page.contentUpdatedAt) {
+    assert.match(page.contentUpdatedAt, /^\d{4}-\d{2}-\d{2}$/);
+    for (const locale of locales) {
+      const entry = sitemap.find(
+        ({ url }) =>
+          new URL(url).pathname === `/${locale}/${getSeoLandingPath(page)}`
+      );
+      assert.equal(entry.lastModified, page.contentUpdatedAt);
+    }
+  }
   for (const slug of page.relatedServiceSlugs)
     assert(serviceSlugs.has(slug), `Unknown related service ${slug}`);
   for (const slug of page.relatedLandingSlugs)
@@ -516,10 +526,23 @@ for (const page of seoLandingPages) {
           section.title,
           ...section.paragraphs,
           ...(section.items ?? []),
+          ...(section.choices ?? []).flatMap((choice) => [
+            choice.title,
+            choice.description,
+          ]),
         ]),
         ...content.faqs.flatMap((item) => [item.question, item.answer]),
       ]
     );
+    for (const section of content.sections) {
+      for (const choice of section.choices ?? []) {
+        assert(choice.title.trim() && choice.description.trim());
+        assert(
+          paths.has(choice.path),
+          `Unknown renovation choice: ${page.slug}/${locale}/${choice.path}`
+        );
+      }
+    }
     const roles = serviceSectionRoles[page.slug];
     if (roles) {
       const indexes = Object.values(roles);
