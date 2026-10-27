@@ -13,12 +13,16 @@ html {
 }
 
 /* Layout responds to the reading column, rather than the entire viewport. */
-.site-page-content .site-container {
-  padding-inline: clamp(16px, 4cqw, 40px);
-}
-
 .site-page-content a:not(.action-button) {
   overflow-wrap: anywhere;
+}
+
+.site-page-content :is(h1, h2, h3) {
+  overflow-wrap: anywhere;
+}
+
+.site-page-content :is(h1, h2, h3):lang(de) {
+  hyphens: auto;
 }
 
 .site-page-content :is(input, select, textarea) {
@@ -41,7 +45,7 @@ html {
 }
 
 .site-page-content .content-panel {
-  padding: clamp(20px, 4cqw, 40px);
+  padding: var(--panel-space);
 }
 
 .site-page-content .content-hero-layout {
@@ -50,7 +54,7 @@ html {
 }
 
 .site-page-content .content-hero-copy {
-  padding: clamp(24px, 4cqw, 48px);
+  padding: var(--panel-space);
 }
 
 .site-page-content .content-hero-title {
@@ -59,19 +63,6 @@ html {
 
 .site-page-content .content-hero-image {
   min-height: clamp(220px, 34cqw, 340px);
-}
-
-.site-page-content .motion-service-card {
-  grid-template-columns: minmax(0, 1fr);
-}
-
-.site-page-content .motion-service-card > div:first-child {
-  min-height: 220px;
-}
-
-.site-page-content .motion-service-card > div:last-child {
-  min-height: 0;
-  padding: 24px;
 }
 
 .site-page-content .content-benefits > article {
@@ -118,14 +109,6 @@ html {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .site-page-content .motion-service-card {
-    grid-template-columns: 0.8fr 1.2fr;
-  }
-
-  .site-page-content .motion-service-card > div:first-child {
-    min-height: 300px;
-  }
-
   .site-page-content .content-benefits > article {
     padding: 24px;
   }
@@ -155,7 +138,7 @@ html {
   }
 }
 
-@container site-content (min-width: 1040px) {
+@container site-content (min-width: 960px) {
   .site-page-content :is(.content-grid-three, .content-process) {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -181,6 +164,97 @@ html {
     border-left-width: 1px;
     border-top: 0;
     padding: 0 0 0 32px;
+  }
+}
+
+/* Nested grids respond to their own panel, not to the page around it. */
+.layout-region {
+  container: layout-region / inline-size;
+  min-width: 0;
+}
+
+.local-grid {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+@container layout-region (min-width: 560px) {
+  .local-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@container layout-region (min-width: 800px) {
+  .local-grid-three {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.hero-benefits-region {
+  container: hero-benefits / inline-size;
+}
+
+.hero-benefits {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+@container hero-benefits (min-width: 480px) {
+  .hero-benefits {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.service-card-layout {
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: calc(var(--spacing) * 56) minmax(0, 1fr);
+}
+
+.cta-map-copy {
+  border-top: 1px solid rgb(255 255 255 / 0.1);
+  padding-top: calc(var(--spacing) * 6);
+}
+
+@container layout-region (min-width: 480px) {
+  .cta-map-layout {
+    grid-template-columns: 0.9fr 1fr;
+  }
+
+  .cta-map-copy {
+    border-top: 0;
+    border-left: 1px solid rgb(255 255 255 / 0.1);
+    padding-top: 0;
+    padding-left: calc(var(--spacing) * 6);
+  }
+}
+
+@container layout-region (min-width: 640px) {
+  .service-card-layout {
+    grid-template-columns: 0.8fr 1.2fr;
+    grid-template-rows: minmax(0, 1fr);
+  }
+}
+
+.service-catalog-copy {
+  container: layout-region / inline-size;
+  padding: var(--panel-space);
+}
+
+.service-catalog-lists {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+@container layout-region (min-width: 480px) {
+  .service-catalog-lists {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@container site-content (min-width: 960px) {
+  .site-page-content .service-catalog-card {
+    grid-template-columns: 0.7fr 1.3fr;
+  }
+
+  .site-page-content .service-catalog-card:nth-child(even) {
+    grid-template-columns: 1.3fr 0.7fr;
   }
 }
 

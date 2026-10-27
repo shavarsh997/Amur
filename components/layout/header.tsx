@@ -44,8 +44,8 @@ export function Header({ locale, dictionary }: HeaderProps) {
     label: dictionary.nav.consultation,
   };
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-[var(--border)] bg-[var(--brand-background)] px-4 text-[var(--text-primary)] sm:px-8">
-      <Container className="relative flex min-h-16 items-center justify-between gap-3 !px-0 sm:min-h-[72px] lg:!px-2">
+    <header className="sticky top-0 z-50 w-full border-b border-[var(--border)] bg-[var(--brand-background)] text-[var(--text-primary)]">
+      <Container className="relative flex min-h-16 items-center justify-between gap-4 sm:min-h-[72px]">
         <Link
           aria-label="SHINEX"
           className="inline-flex shrink-0 rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--brand-copper)]"

@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import type { CSSProperties, ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -241,8 +241,20 @@ export function ServiceProcess({
 }: {
   steps: readonly ServiceWorkflowStep[];
 }) {
+  const count = Math.max(steps.length, 1);
+  const columns = (limit: number) =>
+    Math.ceil(count / Math.ceil(count / limit));
+
   return (
-    <ol className={styles.timeline}>
+    <ol
+      className={styles.timeline}
+      style={
+        {
+          "--process-columns": columns(4),
+          "--process-columns-tablet": columns(3),
+        } as CSSProperties
+      }
+    >
       {steps.map((step, index) => (
         <li key={step.title}>
           <span className={styles.stepNumber} aria-hidden="true">

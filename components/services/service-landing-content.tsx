@@ -161,7 +161,7 @@ export function ServiceLandingContent({
           aside={estimate}
         />
       ) : (
-        <Container className="pb-12 sm:pb-16">{estimate}</Container>
+        <Container className="pb-section">{estimate}</Container>
       )}
       <ServiceFAQ title={dictionary.seo.faqTitle} items={content.faqs} />
       <RelatedServices

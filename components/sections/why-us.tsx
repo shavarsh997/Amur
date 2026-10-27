@@ -24,7 +24,7 @@ const icons: LucideIcon[] = [
 
 export function WhyUs({ dictionary }: { dictionary: Dictionary }) {
   return (
-    <section className="bg-[var(--brand-surface-warm)] py-12 sm:py-16 lg:py-20">
+    <section className="bg-[var(--brand-surface-warm)] py-section">
       <Container>
         <SectionHeading
           align="left"

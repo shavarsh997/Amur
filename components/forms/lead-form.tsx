@@ -121,7 +121,7 @@ export function LeadForm({
     <form
       ref={formRef}
       action={formAction}
-      className={`grid gap-5 content-grid md:grid-cols-2 ${className}`}
+      className={`local-grid grid gap-x-6 gap-y-5 ${className}`}
       noValidate
       onChange={() => {
         if (started.current) return;
@@ -438,8 +438,8 @@ export function LeadForm({
           aria-live="polite"
           className={
             state.status === "success"
-              ? "text-sm font-medium text-emerald-700"
-              : "text-sm font-medium text-red-700"
+              ? "empty:hidden text-sm font-medium text-emerald-700"
+              : "empty:hidden text-sm font-medium text-red-700"
           }
           role={state.status === "error" ? "alert" : "status"}
         >

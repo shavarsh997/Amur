@@ -21,7 +21,7 @@ export function ServicesSection({
 }) {
   const apartment = getSeoLandingPage(locale, "apartment-renovation-yerevan");
   return (
-    <section className="bg-[var(--brand-background)] py-12 sm:py-16 lg:py-20">
+    <section className="bg-[var(--brand-background)] py-section">
       <Container>
         <div className="content-section-header flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           <SectionHeading

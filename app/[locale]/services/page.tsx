@@ -56,10 +56,10 @@ export default async function ServicesPage({ params }: Props) {
         eyebrow={services.eyebrow}
         title={services.pageTitle}
       />
-      <Container className="space-y-5 py-12 sm:py-16 lg:py-20">
+      <Container className="space-y-8 py-section">
         {getActiveServices(locale).map(({ content, ...service }, index) => (
           <article
-            className="content-split grid overflow-hidden rounded-[24px] border border-[var(--border)] bg-white lg:grid-cols-2"
+            className="content-split service-catalog-card grid overflow-hidden rounded-[24px] border border-[var(--border)] bg-white lg:grid-cols-2"
             key={service.slug}
           >
             <div
@@ -73,14 +73,14 @@ export default async function ServicesPage({ params }: Props) {
                 src={service.image}
               />
             </div>
-            <div className="p-6 sm:p-9 lg:p-12">
+            <div className="service-catalog-copy">
               <h2 className="text-2xl font-semibold tracking-[-0.04em] text-[var(--text-primary)] sm:text-3xl">
                 {content.title}
               </h2>
               <p className="mt-4 leading-7 text-[var(--text-secondary)]">
                 {content.fullDescription}
               </p>
-              <div className="mt-7 grid gap-6 content-grid sm:grid-cols-2">
+              <div className="service-catalog-lists mt-6 grid gap-6">
                 <div>
                   <h3 className="font-semibold text-[var(--text-primary)]">
                     {services.detail.included}

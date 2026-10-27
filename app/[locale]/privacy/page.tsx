@@ -40,14 +40,16 @@ export default async function PrivacyPage({ params }: Props) {
         description={privacy.intro}
         title={privacy.title}
       />
-      <Container className="py-12 sm:py-16 lg:py-20">
+      <Container className="py-section">
         <article className="mx-auto max-w-6xl">
           {companyConfig.privacy.updatedAt ? (
             <p className="text-sm font-semibold text-[var(--brand-accent)]">
               {privacy.updated}: {companyConfig.privacy.updatedAt}
             </p>
           ) : null}
-          <div className="mt-10 space-y-12">
+          <div
+            className={`space-y-section-gap ${companyConfig.privacy.updatedAt ? "mt-8" : ""}`}
+          >
             {[...privacy.sections, measurementCopy[locale]].map((section) => (
               <section key={section.title}>
                 <h2 className="text-2xl font-semibold text-[var(--text-primary)]">

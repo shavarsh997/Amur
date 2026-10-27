@@ -126,7 +126,7 @@ export function BaseServicePage({
           />
         </ServiceSection>
       ) : null}
-      <Container className="pb-12 sm:pb-16">
+      <Container className="pb-section">
         {apartment ? (
           <p className="max-w-3xl text-sm leading-7 text-[var(--text-secondary)]">
             <Link

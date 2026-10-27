@@ -15,9 +15,9 @@ export function ConstructionExtrasStep({
   const { control } = useFormContext<CalculatorFormValues>();
 
   return (
-    <section className="rounded-[28px] border border-[var(--border)] bg-white p-5 shadow-[var(--shadow-card)] sm:p-7">
+    <section className="layout-region rounded-[28px] border border-[var(--border)] bg-white p-panel shadow-[var(--shadow-card)]">
       <StepTitle number="03" {...copy.steps.constructionExtras} />
-      <div className="mt-6 grid gap-3 content-grid sm:grid-cols-2">
+      <div className="mt-6 grid gap-3 local-grid">
         <SwitchRow
           control={control}
           label={copy.construction.extras.highCeilings}

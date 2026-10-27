@@ -10,8 +10,8 @@ export default async function GlobalNotFound() {
   return (
     <html lang={defaultLocale}>
       <body suppressHydrationWarning>
-        <main className="grid min-h-screen place-items-center bg-zinc-50 px-5 text-center">
-          <div>
+        <main className="grid min-h-screen place-items-center bg-zinc-50 px-[var(--container-gutter)] py-section text-center">
+          <div className="max-w-2xl">
             <p className="text-sm font-bold uppercase tracking-[0.2em] text-[var(--brand-accent)]">
               404
             </p>
@@ -21,18 +21,20 @@ export default async function GlobalNotFound() {
             <p className="mt-4 text-[var(--text-secondary)]">
               {dictionary.common.notFoundDescription}
             </p>
-            <Link
-              className="mt-8 inline-flex min-h-12 items-center rounded-full bg-[var(--button-primary)] px-6 py-3 text-sm font-semibold text-white"
-              href={`/${defaultLocale}`}
-            >
-              {dictionary.common.returnHome}
-            </Link>
-            <Link
-              className="ml-3 mt-8 inline-flex min-h-12 items-center rounded-full border border-[var(--border)] px-6 py-3 text-sm font-semibold text-[var(--text-primary)]"
-              href={`/${defaultLocale}/services`}
-            >
-              {dictionary.nav.services}
-            </Link>
+            <div className="mt-8 flex flex-wrap justify-center gap-3">
+              <Link
+                className="inline-flex min-h-12 items-center rounded-full bg-[var(--button-primary)] px-6 py-3 text-sm font-semibold text-white"
+                href={`/${defaultLocale}`}
+              >
+                {dictionary.common.returnHome}
+              </Link>
+              <Link
+                className="inline-flex min-h-12 items-center rounded-full border border-[var(--border)] px-6 py-3 text-sm font-semibold text-[var(--text-primary)]"
+                href={`/${defaultLocale}/services`}
+              >
+                {dictionary.nav.services}
+              </Link>
+            </div>
           </div>
         </main>
       </body>

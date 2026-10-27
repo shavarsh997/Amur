@@ -65,15 +65,15 @@ export default async function ContactsPage({ params }: Props) {
         eyebrow={copy.eyebrow}
         title={copy.title}
       />
-      <Container className="content-split grid gap-8 py-12 sm:py-16 lg:grid-cols-[0.8fr_1.2fr] lg:py-20">
-        <section className="rounded-2xl border border-[var(--border)] bg-[var(--background-soft)] p-6 sm:p-8">
+      <Container className="content-split grid items-start gap-8 py-section lg:grid-cols-[0.8fr_1.2fr]">
+        <section className="rounded-2xl border border-[var(--border)] bg-[var(--background-soft)] p-panel">
           <h2 className="text-2xl font-semibold tracking-[-0.04em] text-[var(--text-primary)]">
             {companyConfig.brand.name}
           </h2>
           <p className="mt-3 leading-7 text-[var(--text-secondary)]">
             {dictionary.footer.location}
           </p>
-          <dl className="mt-7 space-y-5 text-[var(--text-secondary)]">
+          <dl className="mt-6 space-y-5 text-[var(--text-secondary)]">
             {phoneHref && companyConfig.contact.displayPhone ? (
               <div>
                 <dt className="text-sm font-semibold text-[var(--text-primary)]">
@@ -166,11 +166,11 @@ export default async function ContactsPage({ params }: Props) {
             ))}
           </dl>
         </section>
-        <section className="rounded-2xl border border-[var(--border)] bg-white p-6 sm:p-9">
+        <section className="rounded-2xl border border-[var(--border)] bg-white p-panel">
           <h2 className="text-3xl font-semibold tracking-[-0.04em] text-[var(--text-primary)]">
             {copy.methodsTitle}
           </h2>
-          <p className="mt-4 leading-7 text-[var(--text-secondary)]">
+          <p className="mb-6 mt-4 leading-7 text-[var(--text-secondary)]">
             {copy.methodsDescription}
           </p>
           <ContactMethods copy={dictionary.contacts} />

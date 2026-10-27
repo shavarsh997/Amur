@@ -53,12 +53,16 @@ export function EstimateExample({ locale }: { locale: Locale }) {
         {copy.exampleDescription}
       </p>
       <div className="mt-6 overflow-x-auto rounded-2xl border border-[var(--border)]">
-        <table className="w-full text-left text-sm leading-6">
+        <table className="w-full table-fixed hyphens-auto text-left text-sm leading-6 [overflow-wrap:anywhere]">
           <caption className="sr-only">{copy.exampleTitle}</caption>
           <thead className="bg-[var(--background-soft)] text-[var(--text-primary)]">
             <tr>
               {[copy.work, copy.quantity, copy.amount].map((label) => (
-                <th className="p-4 font-semibold" key={label} scope="col">
+                <th
+                  className="p-3 sm:p-4 font-semibold"
+                  key={label}
+                  scope="col"
+                >
                   {label}
                 </th>
               ))}
@@ -68,15 +72,15 @@ export function EstimateExample({ locale }: { locale: Locale }) {
             {copy.rows.map((label, index) => (
               <tr className="border-t border-[var(--border)]" key={label}>
                 <th
-                  className="p-4 font-medium text-[var(--text-primary)]"
+                  className="p-3 sm:p-4 font-medium text-[var(--text-primary)]"
                   scope="row"
                 >
                   {label}
                 </th>
-                <td className="whitespace-nowrap p-4 text-[var(--text-secondary)]">
+                <td className="whitespace-nowrap p-3 sm:p-4 text-[var(--text-secondary)]">
                   {format.format(quantities[index])} {copy.squareMetres}
                 </td>
-                <td className="p-4 text-[var(--text-secondary)]">
+                <td className="p-3 sm:p-4 text-[var(--text-secondary)]">
                   {format.format(quantities[index])} × {copy.rate}
                 </td>
               </tr>

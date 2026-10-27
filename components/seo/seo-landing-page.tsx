@@ -140,8 +140,8 @@ export function SeoLandingPage({
             title={content.title}
           />
           <article>
-            <Container className="py-10 sm:py-12 lg:py-14">
-              <div className="mx-auto max-w-8xl space-y-12">
+            <Container className="py-section">
+              <div className="mx-auto max-w-6xl space-y-section-gap">
                 <section className="space-y-5 text-lg leading-8 text-[var(--text-secondary)]">
                   {content.introduction.map((paragraph) => (
                     <p key={paragraph}>{paragraph}</p>
@@ -187,7 +187,7 @@ export function SeoLandingPage({
                     />
                   </div>
                 ) : (
-                  <section className="rounded-[24px] bg-[var(--background-warm)] p-7 sm:p-10">
+                  <section className="rounded-[24px] bg-[var(--background-warm)] p-panel">
                     <h2 className="text-2xl font-semibold tracking-[-0.03em] text-[var(--text-primary)]">
                       {content.calculatorLabel}
                     </h2>

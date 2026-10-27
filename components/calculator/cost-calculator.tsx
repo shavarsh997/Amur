@@ -135,9 +135,9 @@ export function CostCalculator({
       <div
         onChangeCapture={startTracking}
         onClickCapture={startTracking}
-        className={`w-full min-w-0 flex flex-col items-stretch gap-5 lg:grid-cols-[minmax(0,1fr)_20rem] ${className}`}
+        className={`w-full min-w-0 flex flex-col items-stretch gap-6 ${className}`}
       >
-        <div className="min-w-0 space-y-5">
+        <div className="min-w-0 space-y-6">
           <ScenarioStep
             copy={copy}
             onSelectScenario={selectScenario}

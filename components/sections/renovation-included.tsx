@@ -9,7 +9,7 @@ export function RenovationIncluded({ locale }: { locale: Locale }) {
   const content = homeContent[locale].renovationIncluded;
 
   return (
-    <section className="bg-[var(--background-soft)] py-12 sm:py-16 lg:py-20">
+    <section className="bg-[var(--background-soft)] py-section">
       <Container>
         <div className="content-split grid gap-8 lg:grid-cols-[0.7fr_1.3fr] lg:gap-14">
           <SectionHeading eyebrow={content.eyebrow} title={content.title} />

@@ -5,7 +5,7 @@ import type { Dictionary } from "@/types";
 
 export function FAQSection({ dictionary }: { dictionary: Dictionary }) {
   return (
-    <section className="bg-[var(--background-soft)] py-12 sm:py-16 lg:py-20">
+    <section className="bg-[var(--background-soft)] py-section">
       <Container>
         <div className="content-split grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:gap-10">
           <SectionHeading

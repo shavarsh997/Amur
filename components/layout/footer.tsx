@@ -38,7 +38,7 @@ export function Footer({ locale, dictionary }: FooterProps) {
   return (
     <footer className="mt-auto bg-[var(--brand-navy)] py-12 text-white/70 sm:py-14">
       <Container>
-        <div className="grid gap-10 border-b border-white/15 pb-12 sm:grid-cols-2 lg:grid-cols-[0.9fr_0.9fr_1.5fr_1fr]">
+        <div className="grid gap-8 border-b border-white/15 pb-8 sm:grid-cols-2 xl:grid-cols-[0.9fr_0.9fr_1.5fr_1fr]">
           <div>
             <Link
               aria-label="SHINEX"
@@ -177,7 +177,7 @@ export function Footer({ locale, dictionary }: FooterProps) {
           </div>
         </div>
 
-        <div className="flex flex-col gap-4 pt-7 text-sm text-white/55 sm:flex-row sm:items-center sm:justify-between">
+        <div className="flex flex-col gap-4 pt-6 text-sm text-white/55 sm:flex-row sm:items-center sm:justify-between">
           <p>
             © {new Date().getFullYear()}{" "}
             {companyConfig.brand.legalName ?? companyConfig.brand.name}.{" "}

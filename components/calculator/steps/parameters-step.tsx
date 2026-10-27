@@ -20,7 +20,7 @@ export function ParametersStep({
   const isDesign = calculationType === "design";
 
   return (
-    <section className="rounded-[28px] border border-[var(--border)] bg-white p-5 shadow-[var(--shadow-card)] sm:p-7">
+    <section className="layout-region rounded-[28px] border border-[var(--border)] bg-white p-panel shadow-[var(--shadow-card)]">
       <StepTitle number="02" {...copy.steps.parameters} />
       <div className="mt-6 max-w-xs">
         <NumberField
@@ -34,13 +34,13 @@ export function ParametersStep({
       </div>
 
       {isConstruction ? (
-        <div className="mt-8 space-y-7 border-t border-[var(--border)] pt-7">
+        <div className="mt-8 space-y-6 border-t border-[var(--border)] pt-6">
           <ChoiceCards
             control={control}
             name="constructionPackage"
             options={copy.construction.packages}
           />
-          <div className="grid gap-5 content-grid lg:grid-cols-2">
+          <div className="grid gap-5 local-grid">
             <ChoiceGroup
               control={control}
               label={copy.fields.houseShape}
@@ -54,7 +54,7 @@ export function ParametersStep({
               options={copy.construction.materials}
             />
           </div>
-          <div className="grid gap-3 content-grid sm:grid-cols-2">
+          <div className="grid gap-3 local-grid">
             <OptionWithArea
               areaField="basementArea"
               areaName="basementArea"
@@ -84,7 +84,7 @@ export function ParametersStep({
       ) : null}
 
       {isDesign ? (
-        <div className="mt-8 border-t border-[var(--border)] pt-7">
+        <div className="mt-8 border-t border-[var(--border)] pt-6">
           <ChoiceCards
             control={control}
             name="designPackage"

@@ -5,7 +5,7 @@ import type { Dictionary } from "@/types";
 
 export function WorkProcess({ dictionary }: { dictionary: Dictionary }) {
   return (
-    <section className="bg-[var(--brand-navy)] py-12 text-white sm:py-16 lg:py-20">
+    <section className="bg-[var(--brand-navy)] py-section text-white">
       <Container>
         <SectionHeading
           description={dictionary.process.description}

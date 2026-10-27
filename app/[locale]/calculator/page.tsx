@@ -39,7 +39,7 @@ export default async function CalculatorPage({ params }: Props) {
   const apartment = getSeoLandingPage(locale, "apartment-renovation-yerevan");
 
   return (
-    <Container className="py-10 sm:py-16">
+    <Container className="py-section">
       <script
         dangerouslySetInnerHTML={{
           __html: serializeJsonLd(
@@ -51,7 +51,7 @@ export default async function CalculatorPage({ params }: Props) {
         }}
         type="application/ld+json"
       />
-      <div className="content-panel rounded-[28px] border border-[var(--border)] bg-[var(--background-soft)] p-7 text-center sm:p-12">
+      <div className="content-panel mx-auto max-w-4xl rounded-[28px] border border-[var(--border)] bg-[var(--background-soft)] p-7 text-center sm:p-12">
         <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[var(--brand-accent)]">
           {copy.eyebrow}
         </p>

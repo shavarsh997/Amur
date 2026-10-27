@@ -16,7 +16,7 @@ import type { Dictionary } from "@/types";
 export const contactMessageEvent = "open-project-message";
 
 const cardClass =
-  "group flex min-h-24 items-center gap-3 rounded-2xl border border-[var(--border)] bg-white p-4 text-left shadow-[0_14px_30px_-26px_rgb(24_24_27/0.55)] transition hover:-translate-y-0.5 hover:border-[var(--border-strong)] hover:shadow-[0_18px_36px_-26px_rgb(24_24_27/0.45)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--button-primary)]";
+  "group flex min-h-20 items-center gap-3 rounded-2xl border border-[var(--border)] bg-white p-4 text-left shadow-[0_14px_30px_-26px_rgb(24_24_27/0.55)] transition hover:-translate-y-0.5 hover:border-[var(--border-strong)] hover:shadow-[0_18px_36px_-26px_rgb(24_24_27/0.45)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--button-primary)]";
 
 type ContactMethodsProps = {
   copy: Dictionary["contacts"];
@@ -47,14 +47,14 @@ export function ContactMethods({ copy, onMessageClick }: ContactMethodsProps) {
   };
 
   return (
-    <div>
-      <div className="grid gap-3 content-grid sm:grid-cols-2">
+    <div className="layout-region">
+      <div className="local-grid grid gap-3">
         {phoneHref && companyConfig.contact.displayPhone ? (
           <a className={cardClass} href={phoneHref}>
             <MethodIcon>
               <Phone aria-hidden="true" className="size-4" />
             </MethodIcon>
-            <span>
+            <span className="min-w-0 break-words">
               <span className="block text-xs font-semibold uppercase tracking-[0.1em] text-[var(--text-muted)]">
                 {copy.phone}
               </span>
@@ -84,7 +84,7 @@ export function ContactMethods({ copy, onMessageClick }: ContactMethodsProps) {
             <MethodIcon>
               <Mail aria-hidden="true" className="size-4" />
             </MethodIcon>
-            <span>
+            <span className="min-w-0 break-words">
               <span className="block text-xs font-semibold uppercase tracking-[0.1em] text-[var(--text-muted)]">
                 {copy.email}
               </span>
@@ -98,7 +98,7 @@ export function ContactMethods({ copy, onMessageClick }: ContactMethodsProps) {
           <MethodIcon>
             <Send aria-hidden="true" className="size-4" />
           </MethodIcon>
-          <span>
+          <span className="min-w-0 break-words">
             <span className="block text-sm font-semibold text-[var(--text-primary)]">
               {copy.formTitle}
             </span>

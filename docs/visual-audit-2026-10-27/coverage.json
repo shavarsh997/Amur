@@ -1,0 +1,5532 @@
+{
+  "date": "2026-10-27",
+  "locales": ["hy", "ru", "en", "de", "fr"],
+  "widths": [375, 768, 1024, 1440],
+  "pages": 120,
+  "pageViewportCombinations": 480,
+  "method": "Real in-app browser navigation, full-page scrolling, screenshots, DOM geometry checks; final focused retakes for process grids, German text, and lazy images.",
+  "results": [
+    {
+      "path": "/hy",
+      "width": 375,
+      "title": "Շինարարական ընկերություն Հայաստանում | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--375.jpg"
+    },
+    {
+      "path": "/ru",
+      "width": 375,
+      "title": "Строительная компания в Армении | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--375.jpg"
+    },
+    {
+      "path": "/en",
+      "width": 375,
+      "title": "Construction and Renovation Company in Armenia | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--375.jpg"
+    },
+    {
+      "path": "/de",
+      "width": 375,
+      "title": "Bau- und Renovierungsunternehmen in Armenien | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--375.jpg"
+    },
+    {
+      "path": "/fr",
+      "width": 375,
+      "title": "Entreprise de construction et de rénovation en Arménie | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--375.jpg"
+    },
+    {
+      "path": "/hy/services",
+      "width": 375,
+      "title": "Վերանորոգման, դիզայնի և շինարարական ծառայություններ | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--services--375.jpg"
+    },
+    {
+      "path": "/ru/services",
+      "width": 375,
+      "title": "Ремонт, дизайн и строительные услуги | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--services--375.jpg"
+    },
+    {
+      "path": "/en/services",
+      "width": 375,
+      "title": "Renovation, interior design, and construction services | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--services--375.jpg"
+    },
+    {
+      "path": "/de/services",
+      "width": 375,
+      "title": "Renovierung, Innenraumgestaltung und Bauleistungen | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--services--375.jpg"
+    },
+    {
+      "path": "/fr/services",
+      "width": 375,
+      "title": "Services de rénovation, d’aménagement intérieur et de construction | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--services--375.jpg"
+    },
+    {
+      "path": "/hy/about",
+      "width": 375,
+      "title": "Վերանորոգման և շինարարության կազմակերպման հստակ ձևաչափ | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--about--375.jpg"
+    },
+    {
+      "path": "/ru/about",
+      "width": 375,
+      "title": "О компании: ремонт и строительство в Армении | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--about--375.jpg"
+    },
+    {
+      "path": "/en/about",
+      "width": 375,
+      "title": "A clear way to organize renovation and construction | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--about--375.jpg"
+    },
+    {
+      "path": "/de/about",
+      "width": 375,
+      "title": "Renovierung und Bau klar organisieren | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--about--375.jpg"
+    },
+    {
+      "path": "/fr/about",
+      "width": 375,
+      "title": "Une organisation claire pour la rénovation et la construction | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--about--375.jpg"
+    },
+    {
+      "path": "/hy/contacts",
+      "width": 375,
+      "title": "Կապ շինարարական ընկերության հետ՝ Երևանում | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--contacts--375.jpg"
+    },
+    {
+      "path": "/ru/contacts",
+      "width": 375,
+      "title": "Контакты строительной компании в Ереване | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--contacts--375.jpg"
+    },
+    {
+      "path": "/en/contacts",
+      "width": 375,
+      "title": "Contact our construction company in Yerevan | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--contacts--375.jpg"
+    },
+    {
+      "path": "/de/contacts",
+      "width": 375,
+      "title": "Kontaktieren Sie unser Bauunternehmen in Eriwan | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--contacts--375.jpg"
+    },
+    {
+      "path": "/fr/contacts",
+      "width": 375,
+      "title": "Contactez notre entreprise de construction à Erevan | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--contacts--375.jpg"
+    },
+    {
+      "path": "/hy/calculator",
+      "width": 375,
+      "title": "Շինարարության և դիզայնի արժեքի հաշվիչ | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--calculator--375.jpg"
+    },
+    {
+      "path": "/ru/calculator",
+      "width": 375,
+      "title": "Калькулятор строительства и дизайна в Армении | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--calculator--375.jpg"
+    },
+    {
+      "path": "/en/calculator",
+      "width": 375,
+      "title": "Construction and design cost calculator in Armenia | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--calculator--375.jpg"
+    },
+    {
+      "path": "/de/calculator",
+      "width": 375,
+      "title": "Bau- und Planungskostenrechner für Armenien | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--calculator--375.jpg"
+    },
+    {
+      "path": "/fr/calculator",
+      "width": 375,
+      "title": "Calculateur de coûts de construction et de conception en Arménie | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--calculator--375.jpg"
+    },
+    {
+      "path": "/hy/privacy",
+      "width": 375,
+      "title": "Գաղտնիության քաղաքականություն | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--privacy--375.jpg"
+    },
+    {
+      "path": "/ru/privacy",
+      "width": 375,
+      "title": "Политика конфиденциальности | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--privacy--375.jpg"
+    },
+    {
+      "path": "/en/privacy",
+      "width": 375,
+      "title": "Privacy policy | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--privacy--375.jpg"
+    },
+    {
+      "path": "/de/privacy",
+      "width": 375,
+      "title": "Datenschutzerklärung | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--privacy--375.jpg"
+    },
+    {
+      "path": "/fr/privacy",
+      "width": 375,
+      "title": "Politique de confidentialité | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--privacy--375.jpg"
+    },
+    {
+      "path": "/hy/services/renovation",
+      "width": 375,
+      "title": "Առանձնատների վերանորոգում Հայաստանում | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--services--renovation--375.jpg"
+    },
+    {
+      "path": "/ru/services/renovation",
+      "width": 375,
+      "title": "Ремонт частных домов в Армении | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--services--renovation--375.jpg"
+    },
+    {
+      "path": "/en/services/renovation",
+      "width": 375,
+      "title": "Private House Renovation in Armenia | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--services--renovation--375.jpg"
+    },
+    {
+      "path": "/de/services/renovation",
+      "width": 375,
+      "title": "Renovierung von Privathäusern in Armenien | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--services--renovation--375.jpg"
+    },
+    {
+      "path": "/fr/services/renovation",
+      "width": 375,
+      "title": "Rénovation de maisons individuelles en Arménie | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--services--renovation--375.jpg"
+    },
+    {
+      "path": "/hy/services/house-construction",
+      "width": 375,
+      "title": "Առանձնատների կառուցում Երևանում և ամբողջ Հայաստանում | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--services--house-construction--375.jpg"
+    },
+    {
+      "path": "/ru/services/house-construction",
+      "width": 375,
+      "title": "Строительство домов в Ереване и по всей Армении | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--services--house-construction--375.jpg"
+    },
+    {
+      "path": "/en/services/house-construction",
+      "width": 375,
+      "title": "Private House Construction in Yerevan and across Armenia | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--services--house-construction--375.jpg"
+    },
+    {
+      "path": "/de/services/house-construction",
+      "width": 375,
+      "title": "Bau von Privathäusern in Eriwan und ganz Armenien | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--services--house-construction--375.jpg"
+    },
+    {
+      "path": "/fr/services/house-construction",
+      "width": 375,
+      "title": "Construction de maisons individuelles à Erevan et en Arménie | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--services--house-construction--375.jpg"
+    },
+    {
+      "path": "/hy/services/interior-design",
+      "width": 375,
+      "title": "Ինտերիերի դիզայն Երևանում և ամբողջ Հայաստանում | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--services--interior-design--375.jpg"
+    },
+    {
+      "path": "/ru/services/interior-design",
+      "width": 375,
+      "title": "Дизайн интерьера в Ереване и по всей Армении | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--services--interior-design--375.jpg"
+    },
+    {
+      "path": "/en/services/interior-design",
+      "width": 375,
+      "title": "Interior Design in Yerevan and across Armenia | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--services--interior-design--375.jpg"
+    },
+    {
+      "path": "/de/services/interior-design",
+      "width": 375,
+      "title": "Innenraumgestaltung in Eriwan und ganz Armenien | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--services--interior-design--375.jpg"
+    },
+    {
+      "path": "/fr/services/interior-design",
+      "width": 375,
+      "title": "Aménagement intérieur à Erevan et en Arménie | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--services--interior-design--375.jpg"
+    },
+    {
+      "path": "/hy/services/commercial-construction",
+      "width": 375,
+      "title": "Առևտրային տարածքների վերանորոգում Հայաստանում | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--services--commercial-construction--375.jpg"
+    },
+    {
+      "path": "/ru/services/commercial-construction",
+      "width": 375,
+      "title": "Ремонт коммерческих помещений в Ереване | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--services--commercial-construction--375.jpg"
+    },
+    {
+      "path": "/en/services/commercial-construction",
+      "width": 375,
+      "title": "Commercial space renovation in Armenia | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--services--commercial-construction--375.jpg"
+    },
+    {
+      "path": "/de/services/commercial-construction",
+      "width": 375,
+      "title": "Gewerberenovierung in Armenien | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--services--commercial-construction--375.jpg"
+    },
+    {
+      "path": "/fr/services/commercial-construction",
+      "width": 375,
+      "title": "Rénovation de locaux professionnels en Arménie | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--services--commercial-construction--375.jpg"
+    },
+    {
+      "path": "/hy/services/design",
+      "width": 375,
+      "title": "Ճարտարապետական նախագծում Հայաստանում | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--services--design--375.jpg"
+    },
+    {
+      "path": "/ru/services/design",
+      "width": 375,
+      "title": "Архитектурное проектирование в Армении | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--services--design--375.jpg"
+    },
+    {
+      "path": "/en/services/design",
+      "width": 375,
+      "title": "Architectural design | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--services--design--375.jpg"
+    },
+    {
+      "path": "/de/services/design",
+      "width": 375,
+      "title": "Architekturplanung | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--services--design--375.jpg"
+    },
+    {
+      "path": "/fr/services/design",
+      "width": 375,
+      "title": "Conception architecturale | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--services--design--375.jpg"
+    },
+    {
+      "path": "/hy/services/monolithic-work",
+      "width": 375,
+      "title": "Մոնոլիտ աշխատանքներ Հայաստանում | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--services--monolithic-work--375.jpg"
+    },
+    {
+      "path": "/ru/services/monolithic-work",
+      "width": 375,
+      "title": "Монолитные работы в Армении | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--services--monolithic-work--375.jpg"
+    },
+    {
+      "path": "/en/services/monolithic-work",
+      "width": 375,
+      "title": "Reinforced Concrete Construction in Armenia | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--services--monolithic-work--375.jpg"
+    },
+    {
+      "path": "/de/services/monolithic-work",
+      "width": 375,
+      "title": "Stahlbetonbau in Armenien | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--services--monolithic-work--375.jpg"
+    },
+    {
+      "path": "/fr/services/monolithic-work",
+      "width": 375,
+      "title": "Construction en béton armé en Arménie | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--services--monolithic-work--375.jpg"
+    },
+    {
+      "path": "/hy/services/facade-and-roofing",
+      "width": 375,
+      "title": "Ճակատային և տանիքային աշխատանքներ Հայաստանում | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--services--facade-and-roofing--375.jpg"
+    },
+    {
+      "path": "/ru/services/facade-and-roofing",
+      "width": 375,
+      "title": "Фасадные и кровельные работы в Армении | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--services--facade-and-roofing--375.jpg"
+    },
+    {
+      "path": "/en/services/facade-and-roofing",
+      "width": 375,
+      "title": "Facade and roofing work | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--services--facade-and-roofing--375.jpg"
+    },
+    {
+      "path": "/de/services/facade-and-roofing",
+      "width": 375,
+      "title": "Fassaden- und Dacharbeiten | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--services--facade-and-roofing--375.jpg"
+    },
+    {
+      "path": "/fr/services/facade-and-roofing",
+      "width": 375,
+      "title": "Travaux de façade et de toiture | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--services--facade-and-roofing--375.jpg"
+    },
+    {
+      "path": "/hy/services/apartment-renovation-yerevan",
+      "width": 375,
+      "title": "Բնակարանների վերանորոգում Երևանում | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--services--apartment-renovation-yerevan--375.jpg"
+    },
+    {
+      "path": "/ru/services/apartment-renovation-yerevan",
+      "width": 375,
+      "title": "Ремонт квартир в Ереване | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--services--apartment-renovation-yerevan--375.jpg"
+    },
+    {
+      "path": "/en/services/apartment-renovation-yerevan",
+      "width": 375,
+      "title": "Apartment Renovation in Yerevan | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--services--apartment-renovation-yerevan--375.jpg"
+    },
+    {
+      "path": "/de/services/apartment-renovation-yerevan",
+      "width": 375,
+      "title": "Wohnungsrenovierung in Eriwan | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--services--apartment-renovation-yerevan--375.jpg"
+    },
+    {
+      "path": "/fr/services/apartment-renovation-yerevan",
+      "width": 375,
+      "title": "Rénovation d’appartement à Erevan | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--services--apartment-renovation-yerevan--375.jpg"
+    },
+    {
+      "path": "/hy/services/new-build-renovation",
+      "width": 375,
+      "title": "Նորակառույց բնակարանի վերանորոգում Երևանում | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--services--new-build-renovation--375.jpg"
+    },
+    {
+      "path": "/ru/services/new-build-renovation",
+      "width": 375,
+      "title": "Ремонт новостройки в Ереване под ключ | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--services--new-build-renovation--375.jpg"
+    },
+    {
+      "path": "/en/services/new-build-renovation",
+      "width": 375,
+      "title": "New-Build Apartment Renovation in Yerevan | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--services--new-build-renovation--375.jpg"
+    },
+    {
+      "path": "/de/services/new-build-renovation",
+      "width": 375,
+      "title": "Renovierung von Neubauwohnungen in Eriwan | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--services--new-build-renovation--375.jpg"
+    },
+    {
+      "path": "/fr/services/new-build-renovation",
+      "width": 375,
+      "title": "Rénovation d’appartement neuf à Erevan | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--services--new-build-renovation--375.jpg"
+    },
+    {
+      "path": "/hy/services/turnkey-renovation",
+      "width": 375,
+      "title": "Ամբողջական վերանորոգում Երևանում | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--services--turnkey-renovation--375.jpg"
+    },
+    {
+      "path": "/ru/services/turnkey-renovation",
+      "width": 375,
+      "title": "Ремонт под ключ в Ереване: состав и этапы | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--services--turnkey-renovation--375.jpg"
+    },
+    {
+      "path": "/en/services/turnkey-renovation",
+      "width": 375,
+      "title": "Complete Renovation Service in Yerevan | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--services--turnkey-renovation--375.jpg"
+    },
+    {
+      "path": "/de/services/turnkey-renovation",
+      "width": 375,
+      "title": "Komplette Renovierung in Eriwan | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--services--turnkey-renovation--375.jpg"
+    },
+    {
+      "path": "/fr/services/turnkey-renovation",
+      "width": 375,
+      "title": "Rénovation complète à Erevan | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--services--turnkey-renovation--375.jpg"
+    },
+    {
+      "path": "/hy/prices",
+      "width": 375,
+      "title": "Բնակարանի վերանորոգման գներ Երևանում | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--prices--375.jpg"
+    },
+    {
+      "path": "/ru/prices",
+      "width": 375,
+      "title": "Стоимость ремонта квартиры в Ереване: расчёт за м² | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--prices--375.jpg"
+    },
+    {
+      "path": "/en/prices",
+      "width": 375,
+      "title": "Apartment Renovation Cost in Yerevan | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--prices--375.jpg"
+    },
+    {
+      "path": "/de/prices",
+      "width": 375,
+      "title": "Kosten der Wohnungsrenovierung in Eriwan | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--prices--375.jpg"
+    },
+    {
+      "path": "/fr/prices",
+      "width": 375,
+      "title": "Coût de rénovation d’appartement à Erevan | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--prices--375.jpg"
+    },
+    {
+      "path": "/hy/services/apartment-interior-design-yerevan",
+      "width": 375,
+      "title": "Բնակարանի ինտերիերի դիզայն Երևանում | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--services--apartment-interior-design-yerevan--375.jpg"
+    },
+    {
+      "path": "/ru/services/apartment-interior-design-yerevan",
+      "width": 375,
+      "title": "Дизайн интерьера квартиры в Ереване | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--services--apartment-interior-design-yerevan--375.jpg"
+    },
+    {
+      "path": "/en/services/apartment-interior-design-yerevan",
+      "width": 375,
+      "title": "Apartment Interior Design in Yerevan | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--services--apartment-interior-design-yerevan--375.jpg"
+    },
+    {
+      "path": "/de/services/apartment-interior-design-yerevan",
+      "width": 375,
+      "title": "Innenraumgestaltung für Wohnungen in Eriwan | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--services--apartment-interior-design-yerevan--375.jpg"
+    },
+    {
+      "path": "/fr/services/apartment-interior-design-yerevan",
+      "width": 375,
+      "title": "Aménagement intérieur d’appartement à Erevan | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--services--apartment-interior-design-yerevan--375.jpg"
+    },
+    {
+      "path": "/hy/services/office-renovation-yerevan",
+      "width": 375,
+      "title": "Գրասենյակի վերանորոգում Երևանում | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--services--office-renovation-yerevan--375.jpg"
+    },
+    {
+      "path": "/ru/services/office-renovation-yerevan",
+      "width": 375,
+      "title": "Ремонт офиса в Ереване | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--services--office-renovation-yerevan--375.jpg"
+    },
+    {
+      "path": "/en/services/office-renovation-yerevan",
+      "width": 375,
+      "title": "Office Renovation in Yerevan | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--services--office-renovation-yerevan--375.jpg"
+    },
+    {
+      "path": "/de/services/office-renovation-yerevan",
+      "width": 375,
+      "title": "Bürorenovierung in Eriwan | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--services--office-renovation-yerevan--375.jpg"
+    },
+    {
+      "path": "/fr/services/office-renovation-yerevan",
+      "width": 375,
+      "title": "Rénovation de bureaux à Erevan | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--services--office-renovation-yerevan--375.jpg"
+    },
+    {
+      "path": "/hy/services/capital-renovation-yerevan",
+      "width": 375,
+      "title": "Կապիտալ վերանորոգում Երևանում | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--services--capital-renovation-yerevan--375.jpg"
+    },
+    {
+      "path": "/ru/services/capital-renovation-yerevan",
+      "width": 375,
+      "title": "Капитальный ремонт в Ереване | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--services--capital-renovation-yerevan--375.jpg"
+    },
+    {
+      "path": "/en/services/capital-renovation-yerevan",
+      "width": 375,
+      "title": "Major Renovation in Yerevan | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--services--capital-renovation-yerevan--375.jpg"
+    },
+    {
+      "path": "/de/services/capital-renovation-yerevan",
+      "width": 375,
+      "title": "Umfassende Sanierung in Eriwan | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--services--capital-renovation-yerevan--375.jpg"
+    },
+    {
+      "path": "/fr/services/capital-renovation-yerevan",
+      "width": 375,
+      "title": "Rénovation lourde à Erevan | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--services--capital-renovation-yerevan--375.jpg"
+    },
+    {
+      "path": "/hy/services/cosmetic-renovation-yerevan",
+      "width": 375,
+      "title": "Կոսմետիկ վերանորոգում Երևանում | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--services--cosmetic-renovation-yerevan--375.jpg"
+    },
+    {
+      "path": "/ru/services/cosmetic-renovation-yerevan",
+      "width": 375,
+      "title": "Косметический ремонт в Ереване | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--services--cosmetic-renovation-yerevan--375.jpg"
+    },
+    {
+      "path": "/en/services/cosmetic-renovation-yerevan",
+      "width": 375,
+      "title": "Cosmetic Renovation in Yerevan | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--services--cosmetic-renovation-yerevan--375.jpg"
+    },
+    {
+      "path": "/de/services/cosmetic-renovation-yerevan",
+      "width": 375,
+      "title": "Optische Renovierung in Eriwan | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--services--cosmetic-renovation-yerevan--375.jpg"
+    },
+    {
+      "path": "/fr/services/cosmetic-renovation-yerevan",
+      "width": 375,
+      "title": "Rénovation légère à Erevan | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--services--cosmetic-renovation-yerevan--375.jpg"
+    },
+    {
+      "path": "/hy/renovation-estimate-yerevan",
+      "width": 375,
+      "title": "Վերանորոգման նախահաշիվ Երևանում | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--renovation-estimate-yerevan--375.jpg"
+    },
+    {
+      "path": "/ru/renovation-estimate-yerevan",
+      "width": 375,
+      "title": "Смета на ремонт в Ереване | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--renovation-estimate-yerevan--375.jpg"
+    },
+    {
+      "path": "/en/renovation-estimate-yerevan",
+      "width": 375,
+      "title": "Renovation Estimate in Yerevan | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--renovation-estimate-yerevan--375.jpg"
+    },
+    {
+      "path": "/de/renovation-estimate-yerevan",
+      "width": 375,
+      "title": "Renovierungskostenschätzung in Eriwan | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--renovation-estimate-yerevan--375.jpg"
+    },
+    {
+      "path": "/fr/renovation-estimate-yerevan",
+      "width": 375,
+      "title": "Devis de rénovation à Erevan | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--renovation-estimate-yerevan--375.jpg"
+    },
+    {
+      "path": "/hy/services/plumbing-work-yerevan",
+      "width": 375,
+      "title": "Սանտեխնիկական աշխատանքներ Երևանում | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--services--plumbing-work-yerevan--375.jpg"
+    },
+    {
+      "path": "/ru/services/plumbing-work-yerevan",
+      "width": 375,
+      "title": "Сантехнические работы в Ереване | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--services--plumbing-work-yerevan--375.jpg"
+    },
+    {
+      "path": "/en/services/plumbing-work-yerevan",
+      "width": 375,
+      "title": "Plumbing Work in Yerevan | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--services--plumbing-work-yerevan--375.jpg"
+    },
+    {
+      "path": "/de/services/plumbing-work-yerevan",
+      "width": 375,
+      "title": "Sanitärarbeiten in Eriwan | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--services--plumbing-work-yerevan--375.jpg"
+    },
+    {
+      "path": "/fr/services/plumbing-work-yerevan",
+      "width": 375,
+      "title": "Travaux de plomberie à Erevan | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--services--plumbing-work-yerevan--375.jpg"
+    },
+    {
+      "path": "/hy/services/electrical-work-yerevan",
+      "width": 375,
+      "title": "Էլեկտրական աշխատանքներ Երևանում | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--services--electrical-work-yerevan--375.jpg"
+    },
+    {
+      "path": "/ru/services/electrical-work-yerevan",
+      "width": 375,
+      "title": "Электрические работы в Ереване | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--services--electrical-work-yerevan--375.jpg"
+    },
+    {
+      "path": "/en/services/electrical-work-yerevan",
+      "width": 375,
+      "title": "Electrical Work in Yerevan | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--services--electrical-work-yerevan--375.jpg"
+    },
+    {
+      "path": "/de/services/electrical-work-yerevan",
+      "width": 375,
+      "title": "Elektroarbeiten in Eriwan | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--services--electrical-work-yerevan--375.jpg"
+    },
+    {
+      "path": "/fr/services/electrical-work-yerevan",
+      "width": 375,
+      "title": "Travaux électriques à Erevan | SHINEX",
+      "scrollWidth": 375,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--services--electrical-work-yerevan--375.jpg"
+    },
+    {
+      "path": "/hy",
+      "width": 768,
+      "title": "Շինարարական ընկերություն Հայաստանում | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--768.jpg"
+    },
+    {
+      "path": "/ru",
+      "width": 768,
+      "title": "Строительная компания в Армении | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--768.jpg"
+    },
+    {
+      "path": "/en",
+      "width": 768,
+      "title": "Construction and Renovation Company in Armenia | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--768.jpg"
+    },
+    {
+      "path": "/de",
+      "width": 768,
+      "title": "Bau- und Renovierungsunternehmen in Armenien | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--768.jpg"
+    },
+    {
+      "path": "/fr",
+      "width": 768,
+      "title": "Entreprise de construction et de rénovation en Arménie | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--768.jpg"
+    },
+    {
+      "path": "/hy/services",
+      "width": 768,
+      "title": "Վերանորոգման, դիզայնի և շինարարական ծառայություններ | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--services--768.jpg"
+    },
+    {
+      "path": "/ru/services",
+      "width": 768,
+      "title": "Ремонт, дизайн и строительные услуги | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--services--768.jpg"
+    },
+    {
+      "path": "/en/services",
+      "width": 768,
+      "title": "Renovation, interior design, and construction services | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--services--768.jpg"
+    },
+    {
+      "path": "/de/services",
+      "width": 768,
+      "title": "Renovierung, Innenraumgestaltung und Bauleistungen | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--services--768.jpg"
+    },
+    {
+      "path": "/fr/services",
+      "width": 768,
+      "title": "Services de rénovation, d’aménagement intérieur et de construction | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--services--768.jpg"
+    },
+    {
+      "path": "/hy/about",
+      "width": 768,
+      "title": "Վերանորոգման և շինարարության կազմակերպման հստակ ձևաչափ | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--about--768.jpg"
+    },
+    {
+      "path": "/ru/about",
+      "width": 768,
+      "title": "О компании: ремонт и строительство в Армении | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--about--768.jpg"
+    },
+    {
+      "path": "/en/about",
+      "width": 768,
+      "title": "A clear way to organize renovation and construction | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--about--768.jpg"
+    },
+    {
+      "path": "/de/about",
+      "width": 768,
+      "title": "Renovierung und Bau klar organisieren | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--about--768.jpg"
+    },
+    {
+      "path": "/fr/about",
+      "width": 768,
+      "title": "Une organisation claire pour la rénovation et la construction | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--about--768.jpg"
+    },
+    {
+      "path": "/hy/contacts",
+      "width": 768,
+      "title": "Կապ շինարարական ընկերության հետ՝ Երևանում | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--contacts--768.jpg"
+    },
+    {
+      "path": "/ru/contacts",
+      "width": 768,
+      "title": "Контакты строительной компании в Ереване | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--contacts--768.jpg"
+    },
+    {
+      "path": "/en/contacts",
+      "width": 768,
+      "title": "Contact our construction company in Yerevan | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--contacts--768.jpg"
+    },
+    {
+      "path": "/de/contacts",
+      "width": 768,
+      "title": "Kontaktieren Sie unser Bauunternehmen in Eriwan | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--contacts--768.jpg"
+    },
+    {
+      "path": "/fr/contacts",
+      "width": 768,
+      "title": "Contactez notre entreprise de construction à Erevan | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--contacts--768.jpg"
+    },
+    {
+      "path": "/hy/calculator",
+      "width": 768,
+      "title": "Շինարարության և դիզայնի արժեքի հաշվիչ | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--calculator--768.jpg"
+    },
+    {
+      "path": "/ru/calculator",
+      "width": 768,
+      "title": "Калькулятор строительства и дизайна в Армении | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--calculator--768.jpg"
+    },
+    {
+      "path": "/en/calculator",
+      "width": 768,
+      "title": "Construction and design cost calculator in Armenia | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--calculator--768.jpg"
+    },
+    {
+      "path": "/de/calculator",
+      "width": 768,
+      "title": "Bau- und Planungskostenrechner für Armenien | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--calculator--768.jpg"
+    },
+    {
+      "path": "/fr/calculator",
+      "width": 768,
+      "title": "Calculateur de coûts de construction et de conception en Arménie | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--calculator--768.jpg"
+    },
+    {
+      "path": "/hy/privacy",
+      "width": 768,
+      "title": "Գաղտնիության քաղաքականություն | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--privacy--768.jpg"
+    },
+    {
+      "path": "/ru/privacy",
+      "width": 768,
+      "title": "Политика конфиденциальности | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--privacy--768.jpg"
+    },
+    {
+      "path": "/en/privacy",
+      "width": 768,
+      "title": "Privacy policy | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--privacy--768.jpg"
+    },
+    {
+      "path": "/de/privacy",
+      "width": 768,
+      "title": "Datenschutzerklärung | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--privacy--768.jpg"
+    },
+    {
+      "path": "/fr/privacy",
+      "width": 768,
+      "title": "Politique de confidentialité | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--privacy--768.jpg"
+    },
+    {
+      "path": "/hy/services/renovation",
+      "width": 768,
+      "title": "Առանձնատների վերանորոգում Հայաստանում | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--services--renovation--768.jpg"
+    },
+    {
+      "path": "/ru/services/renovation",
+      "width": 768,
+      "title": "Ремонт частных домов в Армении | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--services--renovation--768.jpg"
+    },
+    {
+      "path": "/en/services/renovation",
+      "width": 768,
+      "title": "Private House Renovation in Armenia | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--services--renovation--768.jpg"
+    },
+    {
+      "path": "/de/services/renovation",
+      "width": 768,
+      "title": "Renovierung von Privathäusern in Armenien | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--services--renovation--768.jpg"
+    },
+    {
+      "path": "/fr/services/renovation",
+      "width": 768,
+      "title": "Rénovation de maisons individuelles en Arménie | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--services--renovation--768.jpg"
+    },
+    {
+      "path": "/hy/services/house-construction",
+      "width": 768,
+      "title": "Առանձնատների կառուցում Երևանում և ամբողջ Հայաստանում | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--services--house-construction--768.jpg"
+    },
+    {
+      "path": "/ru/services/house-construction",
+      "width": 768,
+      "title": "Строительство домов в Ереване и по всей Армении | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--services--house-construction--768.jpg"
+    },
+    {
+      "path": "/en/services/house-construction",
+      "width": 768,
+      "title": "Private House Construction in Yerevan and across Armenia | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--services--house-construction--768.jpg"
+    },
+    {
+      "path": "/de/services/house-construction",
+      "width": 768,
+      "title": "Bau von Privathäusern in Eriwan und ganz Armenien | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--services--house-construction--768.jpg"
+    },
+    {
+      "path": "/fr/services/house-construction",
+      "width": 768,
+      "title": "Construction de maisons individuelles à Erevan et en Arménie | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--services--house-construction--768.jpg"
+    },
+    {
+      "path": "/hy/services/interior-design",
+      "width": 768,
+      "title": "Ինտերիերի դիզայն Երևանում և ամբողջ Հայաստանում | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--services--interior-design--768.jpg"
+    },
+    {
+      "path": "/ru/services/interior-design",
+      "width": 768,
+      "title": "Дизайн интерьера в Ереване и по всей Армении | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--services--interior-design--768.jpg"
+    },
+    {
+      "path": "/en/services/interior-design",
+      "width": 768,
+      "title": "Interior Design in Yerevan and across Armenia | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--services--interior-design--768.jpg"
+    },
+    {
+      "path": "/de/services/interior-design",
+      "width": 768,
+      "title": "Innenraumgestaltung in Eriwan und ganz Armenien | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--services--interior-design--768.jpg"
+    },
+    {
+      "path": "/fr/services/interior-design",
+      "width": 768,
+      "title": "Aménagement intérieur à Erevan et en Arménie | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--services--interior-design--768.jpg"
+    },
+    {
+      "path": "/hy/services/commercial-construction",
+      "width": 768,
+      "title": "Առևտրային տարածքների վերանորոգում Հայաստանում | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--services--commercial-construction--768.jpg"
+    },
+    {
+      "path": "/ru/services/commercial-construction",
+      "width": 768,
+      "title": "Ремонт коммерческих помещений в Ереване | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--services--commercial-construction--768.jpg"
+    },
+    {
+      "path": "/en/services/commercial-construction",
+      "width": 768,
+      "title": "Commercial space renovation in Armenia | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--services--commercial-construction--768.jpg"
+    },
+    {
+      "path": "/de/services/commercial-construction",
+      "width": 768,
+      "title": "Gewerberenovierung in Armenien | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--services--commercial-construction--768.jpg"
+    },
+    {
+      "path": "/fr/services/commercial-construction",
+      "width": 768,
+      "title": "Rénovation de locaux professionnels en Arménie | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--services--commercial-construction--768.jpg"
+    },
+    {
+      "path": "/hy/services/design",
+      "width": 768,
+      "title": "Ճարտարապետական նախագծում Հայաստանում | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--services--design--768.jpg"
+    },
+    {
+      "path": "/ru/services/design",
+      "width": 768,
+      "title": "Архитектурное проектирование в Армении | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--services--design--768.jpg"
+    },
+    {
+      "path": "/en/services/design",
+      "width": 768,
+      "title": "Architectural design | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--services--design--768.jpg"
+    },
+    {
+      "path": "/de/services/design",
+      "width": 768,
+      "title": "Architekturplanung | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--services--design--768.jpg"
+    },
+    {
+      "path": "/fr/services/design",
+      "width": 768,
+      "title": "Conception architecturale | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--services--design--768.jpg"
+    },
+    {
+      "path": "/hy/services/monolithic-work",
+      "width": 768,
+      "title": "Մոնոլիտ աշխատանքներ Հայաստանում | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--services--monolithic-work--768.jpg"
+    },
+    {
+      "path": "/ru/services/monolithic-work",
+      "width": 768,
+      "title": "Монолитные работы в Армении | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--services--monolithic-work--768.jpg"
+    },
+    {
+      "path": "/en/services/monolithic-work",
+      "width": 768,
+      "title": "Reinforced Concrete Construction in Armenia | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--services--monolithic-work--768.jpg"
+    },
+    {
+      "path": "/de/services/monolithic-work",
+      "width": 768,
+      "title": "Stahlbetonbau in Armenien | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--services--monolithic-work--768.jpg"
+    },
+    {
+      "path": "/fr/services/monolithic-work",
+      "width": 768,
+      "title": "Construction en béton armé en Arménie | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--services--monolithic-work--768.jpg"
+    },
+    {
+      "path": "/hy/services/facade-and-roofing",
+      "width": 768,
+      "title": "Ճակատային և տանիքային աշխատանքներ Հայաստանում | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--services--facade-and-roofing--768.jpg"
+    },
+    {
+      "path": "/ru/services/facade-and-roofing",
+      "width": 768,
+      "title": "Фасадные и кровельные работы в Армении | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--services--facade-and-roofing--768.jpg"
+    },
+    {
+      "path": "/en/services/facade-and-roofing",
+      "width": 768,
+      "title": "Facade and roofing work | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--services--facade-and-roofing--768.jpg"
+    },
+    {
+      "path": "/de/services/facade-and-roofing",
+      "width": 768,
+      "title": "Fassaden- und Dacharbeiten | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--services--facade-and-roofing--768.jpg"
+    },
+    {
+      "path": "/fr/services/facade-and-roofing",
+      "width": 768,
+      "title": "Travaux de façade et de toiture | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--services--facade-and-roofing--768.jpg"
+    },
+    {
+      "path": "/hy/services/apartment-renovation-yerevan",
+      "width": 768,
+      "title": "Բնակարանների վերանորոգում Երևանում | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--services--apartment-renovation-yerevan--768.jpg"
+    },
+    {
+      "path": "/ru/services/apartment-renovation-yerevan",
+      "width": 768,
+      "title": "Ремонт квартир в Ереване | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--services--apartment-renovation-yerevan--768.jpg"
+    },
+    {
+      "path": "/en/services/apartment-renovation-yerevan",
+      "width": 768,
+      "title": "Apartment Renovation in Yerevan | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--services--apartment-renovation-yerevan--768.jpg"
+    },
+    {
+      "path": "/de/services/apartment-renovation-yerevan",
+      "width": 768,
+      "title": "Wohnungsrenovierung in Eriwan | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--services--apartment-renovation-yerevan--768.jpg"
+    },
+    {
+      "path": "/fr/services/apartment-renovation-yerevan",
+      "width": 768,
+      "title": "Rénovation d’appartement à Erevan | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--services--apartment-renovation-yerevan--768.jpg"
+    },
+    {
+      "path": "/hy/services/new-build-renovation",
+      "width": 768,
+      "title": "Նորակառույց բնակարանի վերանորոգում Երևանում | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--services--new-build-renovation--768.jpg"
+    },
+    {
+      "path": "/ru/services/new-build-renovation",
+      "width": 768,
+      "title": "Ремонт новостройки в Ереване под ключ | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--services--new-build-renovation--768.jpg"
+    },
+    {
+      "path": "/en/services/new-build-renovation",
+      "width": 768,
+      "title": "New-Build Apartment Renovation in Yerevan | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--services--new-build-renovation--768.jpg"
+    },
+    {
+      "path": "/de/services/new-build-renovation",
+      "width": 768,
+      "title": "Renovierung von Neubauwohnungen in Eriwan | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--services--new-build-renovation--768.jpg"
+    },
+    {
+      "path": "/fr/services/new-build-renovation",
+      "width": 768,
+      "title": "Rénovation d’appartement neuf à Erevan | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--services--new-build-renovation--768.jpg"
+    },
+    {
+      "path": "/hy/services/turnkey-renovation",
+      "width": 768,
+      "title": "Ամբողջական վերանորոգում Երևանում | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--services--turnkey-renovation--768.jpg"
+    },
+    {
+      "path": "/ru/services/turnkey-renovation",
+      "width": 768,
+      "title": "Ремонт под ключ в Ереване: состав и этапы | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--services--turnkey-renovation--768.jpg"
+    },
+    {
+      "path": "/en/services/turnkey-renovation",
+      "width": 768,
+      "title": "Complete Renovation Service in Yerevan | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--services--turnkey-renovation--768.jpg"
+    },
+    {
+      "path": "/de/services/turnkey-renovation",
+      "width": 768,
+      "title": "Komplette Renovierung in Eriwan | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--services--turnkey-renovation--768.jpg"
+    },
+    {
+      "path": "/fr/services/turnkey-renovation",
+      "width": 768,
+      "title": "Rénovation complète à Erevan | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--services--turnkey-renovation--768.jpg"
+    },
+    {
+      "path": "/hy/prices",
+      "width": 768,
+      "title": "Բնակարանի վերանորոգման գներ Երևանում | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--prices--768.jpg"
+    },
+    {
+      "path": "/ru/prices",
+      "width": 768,
+      "title": "Стоимость ремонта квартиры в Ереване: расчёт за м² | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--prices--768.jpg"
+    },
+    {
+      "path": "/en/prices",
+      "width": 768,
+      "title": "Apartment Renovation Cost in Yerevan | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--prices--768.jpg"
+    },
+    {
+      "path": "/de/prices",
+      "width": 768,
+      "title": "Kosten der Wohnungsrenovierung in Eriwan | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--prices--768.jpg"
+    },
+    {
+      "path": "/fr/prices",
+      "width": 768,
+      "title": "Coût de rénovation d’appartement à Erevan | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--prices--768.jpg"
+    },
+    {
+      "path": "/hy/services/apartment-interior-design-yerevan",
+      "width": 768,
+      "title": "Բնակարանի ինտերիերի դիզայն Երևանում | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--services--apartment-interior-design-yerevan--768.jpg"
+    },
+    {
+      "path": "/ru/services/apartment-interior-design-yerevan",
+      "width": 768,
+      "title": "Дизайн интерьера квартиры в Ереване | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--services--apartment-interior-design-yerevan--768.jpg"
+    },
+    {
+      "path": "/en/services/apartment-interior-design-yerevan",
+      "width": 768,
+      "title": "Apartment Interior Design in Yerevan | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--services--apartment-interior-design-yerevan--768.jpg"
+    },
+    {
+      "path": "/de/services/apartment-interior-design-yerevan",
+      "width": 768,
+      "title": "Innenraumgestaltung für Wohnungen in Eriwan | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--services--apartment-interior-design-yerevan--768.jpg"
+    },
+    {
+      "path": "/fr/services/apartment-interior-design-yerevan",
+      "width": 768,
+      "title": "Aménagement intérieur d’appartement à Erevan | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--services--apartment-interior-design-yerevan--768.jpg"
+    },
+    {
+      "path": "/hy/services/office-renovation-yerevan",
+      "width": 768,
+      "title": "Գրասենյակի վերանորոգում Երևանում | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--services--office-renovation-yerevan--768.jpg"
+    },
+    {
+      "path": "/ru/services/office-renovation-yerevan",
+      "width": 768,
+      "title": "Ремонт офиса в Ереване | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--services--office-renovation-yerevan--768.jpg"
+    },
+    {
+      "path": "/en/services/office-renovation-yerevan",
+      "width": 768,
+      "title": "Office Renovation in Yerevan | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--services--office-renovation-yerevan--768.jpg"
+    },
+    {
+      "path": "/de/services/office-renovation-yerevan",
+      "width": 768,
+      "title": "Bürorenovierung in Eriwan | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--services--office-renovation-yerevan--768.jpg"
+    },
+    {
+      "path": "/fr/services/office-renovation-yerevan",
+      "width": 768,
+      "title": "Rénovation de bureaux à Erevan | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--services--office-renovation-yerevan--768.jpg"
+    },
+    {
+      "path": "/hy/services/capital-renovation-yerevan",
+      "width": 768,
+      "title": "Կապիտալ վերանորոգում Երևանում | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--services--capital-renovation-yerevan--768.jpg"
+    },
+    {
+      "path": "/ru/services/capital-renovation-yerevan",
+      "width": 768,
+      "title": "Капитальный ремонт в Ереване | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--services--capital-renovation-yerevan--768.jpg"
+    },
+    {
+      "path": "/en/services/capital-renovation-yerevan",
+      "width": 768,
+      "title": "Major Renovation in Yerevan | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--services--capital-renovation-yerevan--768.jpg"
+    },
+    {
+      "path": "/de/services/capital-renovation-yerevan",
+      "width": 768,
+      "title": "Umfassende Sanierung in Eriwan | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--services--capital-renovation-yerevan--768.jpg"
+    },
+    {
+      "path": "/fr/services/capital-renovation-yerevan",
+      "width": 768,
+      "title": "Rénovation lourde à Erevan | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--services--capital-renovation-yerevan--768.jpg"
+    },
+    {
+      "path": "/hy/services/cosmetic-renovation-yerevan",
+      "width": 768,
+      "title": "Կոսմետիկ վերանորոգում Երևանում | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--services--cosmetic-renovation-yerevan--768.jpg"
+    },
+    {
+      "path": "/ru/services/cosmetic-renovation-yerevan",
+      "width": 768,
+      "title": "Косметический ремонт в Ереване | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--services--cosmetic-renovation-yerevan--768.jpg"
+    },
+    {
+      "path": "/en/services/cosmetic-renovation-yerevan",
+      "width": 768,
+      "title": "Cosmetic Renovation in Yerevan | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--services--cosmetic-renovation-yerevan--768.jpg"
+    },
+    {
+      "path": "/de/services/cosmetic-renovation-yerevan",
+      "width": 768,
+      "title": "Optische Renovierung in Eriwan | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--services--cosmetic-renovation-yerevan--768.jpg"
+    },
+    {
+      "path": "/fr/services/cosmetic-renovation-yerevan",
+      "width": 768,
+      "title": "Rénovation légère à Erevan | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--services--cosmetic-renovation-yerevan--768.jpg"
+    },
+    {
+      "path": "/hy/renovation-estimate-yerevan",
+      "width": 768,
+      "title": "Վերանորոգման նախահաշիվ Երևանում | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--renovation-estimate-yerevan--768.jpg"
+    },
+    {
+      "path": "/ru/renovation-estimate-yerevan",
+      "width": 768,
+      "title": "Смета на ремонт в Ереване | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--renovation-estimate-yerevan--768.jpg"
+    },
+    {
+      "path": "/en/renovation-estimate-yerevan",
+      "width": 768,
+      "title": "Renovation Estimate in Yerevan | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--renovation-estimate-yerevan--768.jpg"
+    },
+    {
+      "path": "/de/renovation-estimate-yerevan",
+      "width": 768,
+      "title": "Renovierungskostenschätzung in Eriwan | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--renovation-estimate-yerevan--768.jpg"
+    },
+    {
+      "path": "/fr/renovation-estimate-yerevan",
+      "width": 768,
+      "title": "Devis de rénovation à Erevan | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--renovation-estimate-yerevan--768.jpg"
+    },
+    {
+      "path": "/hy/services/plumbing-work-yerevan",
+      "width": 768,
+      "title": "Սանտեխնիկական աշխատանքներ Երևանում | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--services--plumbing-work-yerevan--768.jpg"
+    },
+    {
+      "path": "/ru/services/plumbing-work-yerevan",
+      "width": 768,
+      "title": "Сантехнические работы в Ереване | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--services--plumbing-work-yerevan--768.jpg"
+    },
+    {
+      "path": "/en/services/plumbing-work-yerevan",
+      "width": 768,
+      "title": "Plumbing Work in Yerevan | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--services--plumbing-work-yerevan--768.jpg"
+    },
+    {
+      "path": "/de/services/plumbing-work-yerevan",
+      "width": 768,
+      "title": "Sanitärarbeiten in Eriwan | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--services--plumbing-work-yerevan--768.jpg"
+    },
+    {
+      "path": "/fr/services/plumbing-work-yerevan",
+      "width": 768,
+      "title": "Travaux de plomberie à Erevan | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--services--plumbing-work-yerevan--768.jpg"
+    },
+    {
+      "path": "/hy/services/electrical-work-yerevan",
+      "width": 768,
+      "title": "Էլեկտրական աշխատանքներ Երևանում | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--services--electrical-work-yerevan--768.jpg"
+    },
+    {
+      "path": "/ru/services/electrical-work-yerevan",
+      "width": 768,
+      "title": "Электрические работы в Ереване | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--services--electrical-work-yerevan--768.jpg"
+    },
+    {
+      "path": "/en/services/electrical-work-yerevan",
+      "width": 768,
+      "title": "Electrical Work in Yerevan | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--services--electrical-work-yerevan--768.jpg"
+    },
+    {
+      "path": "/de/services/electrical-work-yerevan",
+      "width": 768,
+      "title": "Elektroarbeiten in Eriwan | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--services--electrical-work-yerevan--768.jpg"
+    },
+    {
+      "path": "/fr/services/electrical-work-yerevan",
+      "width": 768,
+      "title": "Travaux électriques à Erevan | SHINEX",
+      "scrollWidth": 768,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--services--electrical-work-yerevan--768.jpg"
+    },
+    {
+      "path": "/hy",
+      "width": 1024,
+      "title": "Շինարարական ընկերություն Հայաստանում | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--1024.jpg"
+    },
+    {
+      "path": "/ru",
+      "width": 1024,
+      "title": "Строительная компания в Армении | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--1024.jpg"
+    },
+    {
+      "path": "/en",
+      "width": 1024,
+      "title": "Construction and Renovation Company in Armenia | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--1024.jpg"
+    },
+    {
+      "path": "/de",
+      "width": 1024,
+      "title": "Bau- und Renovierungsunternehmen in Armenien | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--1024.jpg"
+    },
+    {
+      "path": "/fr",
+      "width": 1024,
+      "title": "Entreprise de construction et de rénovation en Arménie | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--1024.jpg"
+    },
+    {
+      "path": "/hy/services",
+      "width": 1024,
+      "title": "Վերանորոգման, դիզայնի և շինարարական ծառայություններ | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--services--1024.jpg"
+    },
+    {
+      "path": "/ru/services",
+      "width": 1024,
+      "title": "Ремонт, дизайн и строительные услуги | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--services--1024.jpg"
+    },
+    {
+      "path": "/en/services",
+      "width": 1024,
+      "title": "Renovation, interior design, and construction services | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--services--1024.jpg"
+    },
+    {
+      "path": "/de/services",
+      "width": 1024,
+      "title": "Renovierung, Innenraumgestaltung und Bauleistungen | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--services--1024.jpg"
+    },
+    {
+      "path": "/fr/services",
+      "width": 1024,
+      "title": "Services de rénovation, d’aménagement intérieur et de construction | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--services--1024.jpg"
+    },
+    {
+      "path": "/hy/about",
+      "width": 1024,
+      "title": "Վերանորոգման և շինարարության կազմակերպման հստակ ձևաչափ | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--about--1024.jpg"
+    },
+    {
+      "path": "/ru/about",
+      "width": 1024,
+      "title": "О компании: ремонт и строительство в Армении | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--about--1024.jpg"
+    },
+    {
+      "path": "/en/about",
+      "width": 1024,
+      "title": "A clear way to organize renovation and construction | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--about--1024.jpg"
+    },
+    {
+      "path": "/de/about",
+      "width": 1024,
+      "title": "Renovierung und Bau klar organisieren | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--about--1024.jpg"
+    },
+    {
+      "path": "/fr/about",
+      "width": 1024,
+      "title": "Une organisation claire pour la rénovation et la construction | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--about--1024.jpg"
+    },
+    {
+      "path": "/hy/contacts",
+      "width": 1024,
+      "title": "Կապ շինարարական ընկերության հետ՝ Երևանում | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--contacts--1024.jpg"
+    },
+    {
+      "path": "/ru/contacts",
+      "width": 1024,
+      "title": "Контакты строительной компании в Ереване | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--contacts--1024.jpg"
+    },
+    {
+      "path": "/en/contacts",
+      "width": 1024,
+      "title": "Contact our construction company in Yerevan | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--contacts--1024.jpg"
+    },
+    {
+      "path": "/de/contacts",
+      "width": 1024,
+      "title": "Kontaktieren Sie unser Bauunternehmen in Eriwan | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--contacts--1024.jpg"
+    },
+    {
+      "path": "/fr/contacts",
+      "width": 1024,
+      "title": "Contactez notre entreprise de construction à Erevan | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--contacts--1024.jpg"
+    },
+    {
+      "path": "/hy/calculator",
+      "width": 1024,
+      "title": "Շինարարության և դիզայնի արժեքի հաշվիչ | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--calculator--1024.jpg"
+    },
+    {
+      "path": "/ru/calculator",
+      "width": 1024,
+      "title": "Калькулятор строительства и дизайна в Армении | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--calculator--1024.jpg"
+    },
+    {
+      "path": "/en/calculator",
+      "width": 1024,
+      "title": "Construction and design cost calculator in Armenia | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--calculator--1024.jpg"
+    },
+    {
+      "path": "/de/calculator",
+      "width": 1024,
+      "title": "Bau- und Planungskostenrechner für Armenien | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--calculator--1024.jpg"
+    },
+    {
+      "path": "/fr/calculator",
+      "width": 1024,
+      "title": "Calculateur de coûts de construction et de conception en Arménie | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--calculator--1024.jpg"
+    },
+    {
+      "path": "/hy/privacy",
+      "width": 1024,
+      "title": "Գաղտնիության քաղաքականություն | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--privacy--1024.jpg"
+    },
+    {
+      "path": "/ru/privacy",
+      "width": 1024,
+      "title": "Политика конфиденциальности | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--privacy--1024.jpg"
+    },
+    {
+      "path": "/en/privacy",
+      "width": 1024,
+      "title": "Privacy policy | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--privacy--1024.jpg"
+    },
+    {
+      "path": "/de/privacy",
+      "width": 1024,
+      "title": "Datenschutzerklärung | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--privacy--1024.jpg"
+    },
+    {
+      "path": "/fr/privacy",
+      "width": 1024,
+      "title": "Politique de confidentialité | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--privacy--1024.jpg"
+    },
+    {
+      "path": "/hy/services/renovation",
+      "width": 1024,
+      "title": "Առանձնատների վերանորոգում Հայաստանում | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--services--renovation--1024.jpg"
+    },
+    {
+      "path": "/ru/services/renovation",
+      "width": 1024,
+      "title": "Ремонт частных домов в Армении | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--services--renovation--1024.jpg"
+    },
+    {
+      "path": "/en/services/renovation",
+      "width": 1024,
+      "title": "Private House Renovation in Armenia | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--services--renovation--1024.jpg"
+    },
+    {
+      "path": "/de/services/renovation",
+      "width": 1024,
+      "title": "Renovierung von Privathäusern in Armenien | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--services--renovation--1024.jpg"
+    },
+    {
+      "path": "/fr/services/renovation",
+      "width": 1024,
+      "title": "Rénovation de maisons individuelles en Arménie | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--services--renovation--1024.jpg"
+    },
+    {
+      "path": "/hy/services/house-construction",
+      "width": 1024,
+      "title": "Առանձնատների կառուցում Երևանում և ամբողջ Հայաստանում | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--services--house-construction--1024.jpg"
+    },
+    {
+      "path": "/ru/services/house-construction",
+      "width": 1024,
+      "title": "Строительство домов в Ереване и по всей Армении | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--services--house-construction--1024.jpg"
+    },
+    {
+      "path": "/en/services/house-construction",
+      "width": 1024,
+      "title": "Private House Construction in Yerevan and across Armenia | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--services--house-construction--1024.jpg"
+    },
+    {
+      "path": "/de/services/house-construction",
+      "width": 1024,
+      "title": "Bau von Privathäusern in Eriwan und ganz Armenien | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--services--house-construction--1024.jpg"
+    },
+    {
+      "path": "/fr/services/house-construction",
+      "width": 1024,
+      "title": "Construction de maisons individuelles à Erevan et en Arménie | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--services--house-construction--1024.jpg"
+    },
+    {
+      "path": "/hy/services/interior-design",
+      "width": 1024,
+      "title": "Ինտերիերի դիզայն Երևանում և ամբողջ Հայաստանում | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--services--interior-design--1024.jpg"
+    },
+    {
+      "path": "/ru/services/interior-design",
+      "width": 1024,
+      "title": "Дизайн интерьера в Ереване и по всей Армении | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--services--interior-design--1024.jpg"
+    },
+    {
+      "path": "/en/services/interior-design",
+      "width": 1024,
+      "title": "Interior Design in Yerevan and across Armenia | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--services--interior-design--1024.jpg"
+    },
+    {
+      "path": "/de/services/interior-design",
+      "width": 1024,
+      "title": "Innenraumgestaltung in Eriwan und ganz Armenien | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--services--interior-design--1024.jpg"
+    },
+    {
+      "path": "/fr/services/interior-design",
+      "width": 1024,
+      "title": "Aménagement intérieur à Erevan et en Arménie | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--services--interior-design--1024.jpg"
+    },
+    {
+      "path": "/hy/services/commercial-construction",
+      "width": 1024,
+      "title": "Առևտրային տարածքների վերանորոգում Հայաստանում | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--services--commercial-construction--1024.jpg"
+    },
+    {
+      "path": "/ru/services/commercial-construction",
+      "width": 1024,
+      "title": "Ремонт коммерческих помещений в Ереване | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--services--commercial-construction--1024.jpg"
+    },
+    {
+      "path": "/en/services/commercial-construction",
+      "width": 1024,
+      "title": "Commercial space renovation in Armenia | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--services--commercial-construction--1024.jpg"
+    },
+    {
+      "path": "/de/services/commercial-construction",
+      "width": 1024,
+      "title": "Gewerberenovierung in Armenien | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--services--commercial-construction--1024.jpg"
+    },
+    {
+      "path": "/fr/services/commercial-construction",
+      "width": 1024,
+      "title": "Rénovation de locaux professionnels en Arménie | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--services--commercial-construction--1024.jpg"
+    },
+    {
+      "path": "/hy/services/design",
+      "width": 1024,
+      "title": "Ճարտարապետական նախագծում Հայաստանում | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--services--design--1024.jpg"
+    },
+    {
+      "path": "/ru/services/design",
+      "width": 1024,
+      "title": "Архитектурное проектирование в Армении | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--services--design--1024.jpg"
+    },
+    {
+      "path": "/en/services/design",
+      "width": 1024,
+      "title": "Architectural design | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--services--design--1024.jpg"
+    },
+    {
+      "path": "/de/services/design",
+      "width": 1024,
+      "title": "Architekturplanung | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--services--design--1024.jpg"
+    },
+    {
+      "path": "/fr/services/design",
+      "width": 1024,
+      "title": "Conception architecturale | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--services--design--1024.jpg"
+    },
+    {
+      "path": "/hy/services/monolithic-work",
+      "width": 1024,
+      "title": "Մոնոլիտ աշխատանքներ Հայաստանում | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--services--monolithic-work--1024.jpg"
+    },
+    {
+      "path": "/ru/services/monolithic-work",
+      "width": 1024,
+      "title": "Монолитные работы в Армении | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--services--monolithic-work--1024.jpg"
+    },
+    {
+      "path": "/en/services/monolithic-work",
+      "width": 1024,
+      "title": "Reinforced Concrete Construction in Armenia | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--services--monolithic-work--1024.jpg"
+    },
+    {
+      "path": "/de/services/monolithic-work",
+      "width": 1024,
+      "title": "Stahlbetonbau in Armenien | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--services--monolithic-work--1024.jpg"
+    },
+    {
+      "path": "/fr/services/monolithic-work",
+      "width": 1024,
+      "title": "Construction en béton armé en Arménie | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--services--monolithic-work--1024.jpg"
+    },
+    {
+      "path": "/hy/services/facade-and-roofing",
+      "width": 1024,
+      "title": "Ճակատային և տանիքային աշխատանքներ Հայաստանում | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--services--facade-and-roofing--1024.jpg"
+    },
+    {
+      "path": "/ru/services/facade-and-roofing",
+      "width": 1024,
+      "title": "Фасадные и кровельные работы в Армении | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--services--facade-and-roofing--1024.jpg"
+    },
+    {
+      "path": "/en/services/facade-and-roofing",
+      "width": 1024,
+      "title": "Facade and roofing work | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--services--facade-and-roofing--1024.jpg"
+    },
+    {
+      "path": "/de/services/facade-and-roofing",
+      "width": 1024,
+      "title": "Fassaden- und Dacharbeiten | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--services--facade-and-roofing--1024.jpg"
+    },
+    {
+      "path": "/fr/services/facade-and-roofing",
+      "width": 1024,
+      "title": "Travaux de façade et de toiture | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--services--facade-and-roofing--1024.jpg"
+    },
+    {
+      "path": "/hy/services/apartment-renovation-yerevan",
+      "width": 1024,
+      "title": "Բնակարանների վերանորոգում Երևանում | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--services--apartment-renovation-yerevan--1024.jpg"
+    },
+    {
+      "path": "/ru/services/apartment-renovation-yerevan",
+      "width": 1024,
+      "title": "Ремонт квартир в Ереване | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--services--apartment-renovation-yerevan--1024.jpg"
+    },
+    {
+      "path": "/en/services/apartment-renovation-yerevan",
+      "width": 1024,
+      "title": "Apartment Renovation in Yerevan | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--services--apartment-renovation-yerevan--1024.jpg"
+    },
+    {
+      "path": "/de/services/apartment-renovation-yerevan",
+      "width": 1024,
+      "title": "Wohnungsrenovierung in Eriwan | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--services--apartment-renovation-yerevan--1024.jpg"
+    },
+    {
+      "path": "/fr/services/apartment-renovation-yerevan",
+      "width": 1024,
+      "title": "Rénovation d’appartement à Erevan | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--services--apartment-renovation-yerevan--1024.jpg"
+    },
+    {
+      "path": "/hy/services/new-build-renovation",
+      "width": 1024,
+      "title": "Նորակառույց բնակարանի վերանորոգում Երևանում | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--services--new-build-renovation--1024.jpg"
+    },
+    {
+      "path": "/ru/services/new-build-renovation",
+      "width": 1024,
+      "title": "Ремонт новостройки в Ереване под ключ | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--services--new-build-renovation--1024.jpg"
+    },
+    {
+      "path": "/en/services/new-build-renovation",
+      "width": 1024,
+      "title": "New-Build Apartment Renovation in Yerevan | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--services--new-build-renovation--1024.jpg"
+    },
+    {
+      "path": "/de/services/new-build-renovation",
+      "width": 1024,
+      "title": "Renovierung von Neubauwohnungen in Eriwan | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--services--new-build-renovation--1024.jpg"
+    },
+    {
+      "path": "/fr/services/new-build-renovation",
+      "width": 1024,
+      "title": "Rénovation d’appartement neuf à Erevan | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--services--new-build-renovation--1024.jpg"
+    },
+    {
+      "path": "/hy/services/turnkey-renovation",
+      "width": 1024,
+      "title": "Ամբողջական վերանորոգում Երևանում | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--services--turnkey-renovation--1024.jpg"
+    },
+    {
+      "path": "/ru/services/turnkey-renovation",
+      "width": 1024,
+      "title": "Ремонт под ключ в Ереване: состав и этапы | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--services--turnkey-renovation--1024.jpg"
+    },
+    {
+      "path": "/en/services/turnkey-renovation",
+      "width": 1024,
+      "title": "Complete Renovation Service in Yerevan | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--services--turnkey-renovation--1024.jpg"
+    },
+    {
+      "path": "/de/services/turnkey-renovation",
+      "width": 1024,
+      "title": "Komplette Renovierung in Eriwan | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--services--turnkey-renovation--1024.jpg"
+    },
+    {
+      "path": "/fr/services/turnkey-renovation",
+      "width": 1024,
+      "title": "Rénovation complète à Erevan | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--services--turnkey-renovation--1024.jpg"
+    },
+    {
+      "path": "/hy/prices",
+      "width": 1024,
+      "title": "Բնակարանի վերանորոգման գներ Երևանում | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--prices--1024.jpg"
+    },
+    {
+      "path": "/ru/prices",
+      "width": 1024,
+      "title": "Стоимость ремонта квартиры в Ереване: расчёт за м² | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--prices--1024.jpg"
+    },
+    {
+      "path": "/en/prices",
+      "width": 1024,
+      "title": "Apartment Renovation Cost in Yerevan | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--prices--1024.jpg"
+    },
+    {
+      "path": "/de/prices",
+      "width": 1024,
+      "title": "Kosten der Wohnungsrenovierung in Eriwan | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--prices--1024.jpg"
+    },
+    {
+      "path": "/fr/prices",
+      "width": 1024,
+      "title": "Coût de rénovation d’appartement à Erevan | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--prices--1024.jpg"
+    },
+    {
+      "path": "/hy/services/apartment-interior-design-yerevan",
+      "width": 1024,
+      "title": "Բնակարանի ինտերիերի դիզայն Երևանում | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--services--apartment-interior-design-yerevan--1024.jpg"
+    },
+    {
+      "path": "/ru/services/apartment-interior-design-yerevan",
+      "width": 1024,
+      "title": "Дизайн интерьера квартиры в Ереване | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--services--apartment-interior-design-yerevan--1024.jpg"
+    },
+    {
+      "path": "/en/services/apartment-interior-design-yerevan",
+      "width": 1024,
+      "title": "Apartment Interior Design in Yerevan | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--services--apartment-interior-design-yerevan--1024.jpg"
+    },
+    {
+      "path": "/de/services/apartment-interior-design-yerevan",
+      "width": 1024,
+      "title": "Innenraumgestaltung für Wohnungen in Eriwan | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--services--apartment-interior-design-yerevan--1024.jpg"
+    },
+    {
+      "path": "/fr/services/apartment-interior-design-yerevan",
+      "width": 1024,
+      "title": "Aménagement intérieur d’appartement à Erevan | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--services--apartment-interior-design-yerevan--1024.jpg"
+    },
+    {
+      "path": "/hy/services/office-renovation-yerevan",
+      "width": 1024,
+      "title": "Գրասենյակի վերանորոգում Երևանում | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--services--office-renovation-yerevan--1024.jpg"
+    },
+    {
+      "path": "/ru/services/office-renovation-yerevan",
+      "width": 1024,
+      "title": "Ремонт офиса в Ереване | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--services--office-renovation-yerevan--1024.jpg"
+    },
+    {
+      "path": "/en/services/office-renovation-yerevan",
+      "width": 1024,
+      "title": "Office Renovation in Yerevan | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--services--office-renovation-yerevan--1024.jpg"
+    },
+    {
+      "path": "/de/services/office-renovation-yerevan",
+      "width": 1024,
+      "title": "Bürorenovierung in Eriwan | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--services--office-renovation-yerevan--1024.jpg"
+    },
+    {
+      "path": "/fr/services/office-renovation-yerevan",
+      "width": 1024,
+      "title": "Rénovation de bureaux à Erevan | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--services--office-renovation-yerevan--1024.jpg"
+    },
+    {
+      "path": "/hy/services/capital-renovation-yerevan",
+      "width": 1024,
+      "title": "Կապիտալ վերանորոգում Երևանում | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--services--capital-renovation-yerevan--1024.jpg"
+    },
+    {
+      "path": "/ru/services/capital-renovation-yerevan",
+      "width": 1024,
+      "title": "Капитальный ремонт в Ереване | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--services--capital-renovation-yerevan--1024.jpg"
+    },
+    {
+      "path": "/en/services/capital-renovation-yerevan",
+      "width": 1024,
+      "title": "Major Renovation in Yerevan | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--services--capital-renovation-yerevan--1024.jpg"
+    },
+    {
+      "path": "/de/services/capital-renovation-yerevan",
+      "width": 1024,
+      "title": "Umfassende Sanierung in Eriwan | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--services--capital-renovation-yerevan--1024.jpg"
+    },
+    {
+      "path": "/fr/services/capital-renovation-yerevan",
+      "width": 1024,
+      "title": "Rénovation lourde à Erevan | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--services--capital-renovation-yerevan--1024.jpg"
+    },
+    {
+      "path": "/hy/services/cosmetic-renovation-yerevan",
+      "width": 1024,
+      "title": "Կոսմետիկ վերանորոգում Երևանում | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--services--cosmetic-renovation-yerevan--1024.jpg"
+    },
+    {
+      "path": "/ru/services/cosmetic-renovation-yerevan",
+      "width": 1024,
+      "title": "Косметический ремонт в Ереване | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--services--cosmetic-renovation-yerevan--1024.jpg"
+    },
+    {
+      "path": "/en/services/cosmetic-renovation-yerevan",
+      "width": 1024,
+      "title": "Cosmetic Renovation in Yerevan | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--services--cosmetic-renovation-yerevan--1024.jpg"
+    },
+    {
+      "path": "/de/services/cosmetic-renovation-yerevan",
+      "width": 1024,
+      "title": "Optische Renovierung in Eriwan | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--services--cosmetic-renovation-yerevan--1024.jpg"
+    },
+    {
+      "path": "/fr/services/cosmetic-renovation-yerevan",
+      "width": 1024,
+      "title": "Rénovation légère à Erevan | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--services--cosmetic-renovation-yerevan--1024.jpg"
+    },
+    {
+      "path": "/hy/renovation-estimate-yerevan",
+      "width": 1024,
+      "title": "Վերանորոգման նախահաշիվ Երևանում | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--renovation-estimate-yerevan--1024.jpg"
+    },
+    {
+      "path": "/ru/renovation-estimate-yerevan",
+      "width": 1024,
+      "title": "Смета на ремонт в Ереване | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--renovation-estimate-yerevan--1024.jpg"
+    },
+    {
+      "path": "/en/renovation-estimate-yerevan",
+      "width": 1024,
+      "title": "Renovation Estimate in Yerevan | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--renovation-estimate-yerevan--1024.jpg"
+    },
+    {
+      "path": "/de/renovation-estimate-yerevan",
+      "width": 1024,
+      "title": "Renovierungskostenschätzung in Eriwan | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--renovation-estimate-yerevan--1024.jpg"
+    },
+    {
+      "path": "/fr/renovation-estimate-yerevan",
+      "width": 1024,
+      "title": "Devis de rénovation à Erevan | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--renovation-estimate-yerevan--1024.jpg"
+    },
+    {
+      "path": "/hy/services/plumbing-work-yerevan",
+      "width": 1024,
+      "title": "Սանտեխնիկական աշխատանքներ Երևանում | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--services--plumbing-work-yerevan--1024.jpg"
+    },
+    {
+      "path": "/ru/services/plumbing-work-yerevan",
+      "width": 1024,
+      "title": "Сантехнические работы в Ереване | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--services--plumbing-work-yerevan--1024.jpg"
+    },
+    {
+      "path": "/en/services/plumbing-work-yerevan",
+      "width": 1024,
+      "title": "Plumbing Work in Yerevan | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--services--plumbing-work-yerevan--1024.jpg"
+    },
+    {
+      "path": "/de/services/plumbing-work-yerevan",
+      "width": 1024,
+      "title": "Sanitärarbeiten in Eriwan | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--services--plumbing-work-yerevan--1024.jpg"
+    },
+    {
+      "path": "/fr/services/plumbing-work-yerevan",
+      "width": 1024,
+      "title": "Travaux de plomberie à Erevan | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--services--plumbing-work-yerevan--1024.jpg"
+    },
+    {
+      "path": "/hy/services/electrical-work-yerevan",
+      "width": 1024,
+      "title": "Էլեկտրական աշխատանքներ Երևանում | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--services--electrical-work-yerevan--1024.jpg"
+    },
+    {
+      "path": "/ru/services/electrical-work-yerevan",
+      "width": 1024,
+      "title": "Электрические работы в Ереване | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--services--electrical-work-yerevan--1024.jpg"
+    },
+    {
+      "path": "/en/services/electrical-work-yerevan",
+      "width": 1024,
+      "title": "Electrical Work in Yerevan | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--services--electrical-work-yerevan--1024.jpg"
+    },
+    {
+      "path": "/de/services/electrical-work-yerevan",
+      "width": 1024,
+      "title": "Elektroarbeiten in Eriwan | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--services--electrical-work-yerevan--1024.jpg"
+    },
+    {
+      "path": "/fr/services/electrical-work-yerevan",
+      "width": 1024,
+      "title": "Travaux électriques à Erevan | SHINEX",
+      "scrollWidth": 1024,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--services--electrical-work-yerevan--1024.jpg"
+    },
+    {
+      "path": "/hy",
+      "width": 1440,
+      "title": "Շինարարական ընկերություն Հայաստանում | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--1440.jpg"
+    },
+    {
+      "path": "/ru",
+      "width": 1440,
+      "title": "Строительная компания в Армении | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--1440.jpg"
+    },
+    {
+      "path": "/en",
+      "width": 1440,
+      "title": "Construction and Renovation Company in Armenia | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--1440.jpg"
+    },
+    {
+      "path": "/de",
+      "width": 1440,
+      "title": "Bau- und Renovierungsunternehmen in Armenien | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--1440.jpg"
+    },
+    {
+      "path": "/fr",
+      "width": 1440,
+      "title": "Entreprise de construction et de rénovation en Arménie | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--1440.jpg"
+    },
+    {
+      "path": "/hy/services",
+      "width": 1440,
+      "title": "Վերանորոգման, դիզայնի և շինարարական ծառայություններ | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--services--1440.jpg"
+    },
+    {
+      "path": "/ru/services",
+      "width": 1440,
+      "title": "Ремонт, дизайн и строительные услуги | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--services--1440.jpg"
+    },
+    {
+      "path": "/en/services",
+      "width": 1440,
+      "title": "Renovation, interior design, and construction services | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--services--1440.jpg"
+    },
+    {
+      "path": "/de/services",
+      "width": 1440,
+      "title": "Renovierung, Innenraumgestaltung und Bauleistungen | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--services--1440.jpg"
+    },
+    {
+      "path": "/fr/services",
+      "width": 1440,
+      "title": "Services de rénovation, d’aménagement intérieur et de construction | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--services--1440.jpg"
+    },
+    {
+      "path": "/hy/about",
+      "width": 1440,
+      "title": "Վերանորոգման և շինարարության կազմակերպման հստակ ձևաչափ | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--about--1440.jpg"
+    },
+    {
+      "path": "/ru/about",
+      "width": 1440,
+      "title": "О компании: ремонт и строительство в Армении | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--about--1440.jpg"
+    },
+    {
+      "path": "/en/about",
+      "width": 1440,
+      "title": "A clear way to organize renovation and construction | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--about--1440.jpg"
+    },
+    {
+      "path": "/de/about",
+      "width": 1440,
+      "title": "Renovierung und Bau klar organisieren | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--about--1440.jpg"
+    },
+    {
+      "path": "/fr/about",
+      "width": 1440,
+      "title": "Une organisation claire pour la rénovation et la construction | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--about--1440.jpg"
+    },
+    {
+      "path": "/hy/contacts",
+      "width": 1440,
+      "title": "Կապ շինարարական ընկերության հետ՝ Երևանում | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--contacts--1440.jpg"
+    },
+    {
+      "path": "/ru/contacts",
+      "width": 1440,
+      "title": "Контакты строительной компании в Ереване | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--contacts--1440.jpg"
+    },
+    {
+      "path": "/en/contacts",
+      "width": 1440,
+      "title": "Contact our construction company in Yerevan | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--contacts--1440.jpg"
+    },
+    {
+      "path": "/de/contacts",
+      "width": 1440,
+      "title": "Kontaktieren Sie unser Bauunternehmen in Eriwan | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--contacts--1440.jpg"
+    },
+    {
+      "path": "/fr/contacts",
+      "width": 1440,
+      "title": "Contactez notre entreprise de construction à Erevan | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--contacts--1440.jpg"
+    },
+    {
+      "path": "/hy/calculator",
+      "width": 1440,
+      "title": "Շինարարության և դիզայնի արժեքի հաշվիչ | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--calculator--1440.jpg"
+    },
+    {
+      "path": "/ru/calculator",
+      "width": 1440,
+      "title": "Калькулятор строительства и дизайна в Армении | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--calculator--1440.jpg"
+    },
+    {
+      "path": "/en/calculator",
+      "width": 1440,
+      "title": "Construction and design cost calculator in Armenia | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--calculator--1440.jpg"
+    },
+    {
+      "path": "/de/calculator",
+      "width": 1440,
+      "title": "Bau- und Planungskostenrechner für Armenien | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--calculator--1440.jpg"
+    },
+    {
+      "path": "/fr/calculator",
+      "width": 1440,
+      "title": "Calculateur de coûts de construction et de conception en Arménie | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--calculator--1440.jpg"
+    },
+    {
+      "path": "/hy/privacy",
+      "width": 1440,
+      "title": "Գաղտնիության քաղաքականություն | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--privacy--1440.jpg"
+    },
+    {
+      "path": "/ru/privacy",
+      "width": 1440,
+      "title": "Политика конфиденциальности | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--privacy--1440.jpg"
+    },
+    {
+      "path": "/en/privacy",
+      "width": 1440,
+      "title": "Privacy policy | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--privacy--1440.jpg"
+    },
+    {
+      "path": "/de/privacy",
+      "width": 1440,
+      "title": "Datenschutzerklärung | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--privacy--1440.jpg"
+    },
+    {
+      "path": "/fr/privacy",
+      "width": 1440,
+      "title": "Politique de confidentialité | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--privacy--1440.jpg"
+    },
+    {
+      "path": "/hy/services/renovation",
+      "width": 1440,
+      "title": "Առանձնատների վերանորոգում Հայաստանում | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--services--renovation--1440.jpg"
+    },
+    {
+      "path": "/ru/services/renovation",
+      "width": 1440,
+      "title": "Ремонт частных домов в Армении | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--services--renovation--1440.jpg"
+    },
+    {
+      "path": "/en/services/renovation",
+      "width": 1440,
+      "title": "Private House Renovation in Armenia | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--services--renovation--1440.jpg"
+    },
+    {
+      "path": "/de/services/renovation",
+      "width": 1440,
+      "title": "Renovierung von Privathäusern in Armenien | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--services--renovation--1440.jpg"
+    },
+    {
+      "path": "/fr/services/renovation",
+      "width": 1440,
+      "title": "Rénovation de maisons individuelles en Arménie | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--services--renovation--1440.jpg"
+    },
+    {
+      "path": "/hy/services/house-construction",
+      "width": 1440,
+      "title": "Առանձնատների կառուցում Երևանում և ամբողջ Հայաստանում | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--services--house-construction--1440.jpg"
+    },
+    {
+      "path": "/ru/services/house-construction",
+      "width": 1440,
+      "title": "Строительство домов в Ереване и по всей Армении | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--services--house-construction--1440.jpg"
+    },
+    {
+      "path": "/en/services/house-construction",
+      "width": 1440,
+      "title": "Private House Construction in Yerevan and across Armenia | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--services--house-construction--1440.jpg"
+    },
+    {
+      "path": "/de/services/house-construction",
+      "width": 1440,
+      "title": "Bau von Privathäusern in Eriwan und ganz Armenien | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--services--house-construction--1440.jpg"
+    },
+    {
+      "path": "/fr/services/house-construction",
+      "width": 1440,
+      "title": "Construction de maisons individuelles à Erevan et en Arménie | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--services--house-construction--1440.jpg"
+    },
+    {
+      "path": "/hy/services/interior-design",
+      "width": 1440,
+      "title": "Ինտերիերի դիզայն Երևանում և ամբողջ Հայաստանում | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--services--interior-design--1440.jpg"
+    },
+    {
+      "path": "/ru/services/interior-design",
+      "width": 1440,
+      "title": "Дизайн интерьера в Ереване и по всей Армении | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--services--interior-design--1440.jpg"
+    },
+    {
+      "path": "/en/services/interior-design",
+      "width": 1440,
+      "title": "Interior Design in Yerevan and across Armenia | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--services--interior-design--1440.jpg"
+    },
+    {
+      "path": "/de/services/interior-design",
+      "width": 1440,
+      "title": "Innenraumgestaltung in Eriwan und ganz Armenien | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--services--interior-design--1440.jpg"
+    },
+    {
+      "path": "/fr/services/interior-design",
+      "width": 1440,
+      "title": "Aménagement intérieur à Erevan et en Arménie | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--services--interior-design--1440.jpg"
+    },
+    {
+      "path": "/hy/services/commercial-construction",
+      "width": 1440,
+      "title": "Առևտրային տարածքների վերանորոգում Հայաստանում | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--services--commercial-construction--1440.jpg"
+    },
+    {
+      "path": "/ru/services/commercial-construction",
+      "width": 1440,
+      "title": "Ремонт коммерческих помещений в Ереване | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--services--commercial-construction--1440.jpg"
+    },
+    {
+      "path": "/en/services/commercial-construction",
+      "width": 1440,
+      "title": "Commercial space renovation in Armenia | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--services--commercial-construction--1440.jpg"
+    },
+    {
+      "path": "/de/services/commercial-construction",
+      "width": 1440,
+      "title": "Gewerberenovierung in Armenien | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--services--commercial-construction--1440.jpg"
+    },
+    {
+      "path": "/fr/services/commercial-construction",
+      "width": 1440,
+      "title": "Rénovation de locaux professionnels en Arménie | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--services--commercial-construction--1440.jpg"
+    },
+    {
+      "path": "/hy/services/design",
+      "width": 1440,
+      "title": "Ճարտարապետական նախագծում Հայաստանում | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--services--design--1440.jpg"
+    },
+    {
+      "path": "/ru/services/design",
+      "width": 1440,
+      "title": "Архитектурное проектирование в Армении | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--services--design--1440.jpg"
+    },
+    {
+      "path": "/en/services/design",
+      "width": 1440,
+      "title": "Architectural design | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--services--design--1440.jpg"
+    },
+    {
+      "path": "/de/services/design",
+      "width": 1440,
+      "title": "Architekturplanung | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--services--design--1440.jpg"
+    },
+    {
+      "path": "/fr/services/design",
+      "width": 1440,
+      "title": "Conception architecturale | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--services--design--1440.jpg"
+    },
+    {
+      "path": "/hy/services/monolithic-work",
+      "width": 1440,
+      "title": "Մոնոլիտ աշխատանքներ Հայաստանում | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--services--monolithic-work--1440.jpg"
+    },
+    {
+      "path": "/ru/services/monolithic-work",
+      "width": 1440,
+      "title": "Монолитные работы в Армении | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--services--monolithic-work--1440.jpg"
+    },
+    {
+      "path": "/en/services/monolithic-work",
+      "width": 1440,
+      "title": "Reinforced Concrete Construction in Armenia | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--services--monolithic-work--1440.jpg"
+    },
+    {
+      "path": "/de/services/monolithic-work",
+      "width": 1440,
+      "title": "Stahlbetonbau in Armenien | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--services--monolithic-work--1440.jpg"
+    },
+    {
+      "path": "/fr/services/monolithic-work",
+      "width": 1440,
+      "title": "Construction en béton armé en Arménie | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--services--monolithic-work--1440.jpg"
+    },
+    {
+      "path": "/hy/services/facade-and-roofing",
+      "width": 1440,
+      "title": "Ճակատային և տանիքային աշխատանքներ Հայաստանում | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--services--facade-and-roofing--1440.jpg"
+    },
+    {
+      "path": "/ru/services/facade-and-roofing",
+      "width": 1440,
+      "title": "Фасадные и кровельные работы в Армении | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--services--facade-and-roofing--1440.jpg"
+    },
+    {
+      "path": "/en/services/facade-and-roofing",
+      "width": 1440,
+      "title": "Facade and roofing work | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--services--facade-and-roofing--1440.jpg"
+    },
+    {
+      "path": "/de/services/facade-and-roofing",
+      "width": 1440,
+      "title": "Fassaden- und Dacharbeiten | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--services--facade-and-roofing--1440.jpg"
+    },
+    {
+      "path": "/fr/services/facade-and-roofing",
+      "width": 1440,
+      "title": "Travaux de façade et de toiture | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--services--facade-and-roofing--1440.jpg"
+    },
+    {
+      "path": "/hy/services/apartment-renovation-yerevan",
+      "width": 1440,
+      "title": "Բնակարանների վերանորոգում Երևանում | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--services--apartment-renovation-yerevan--1440.jpg"
+    },
+    {
+      "path": "/ru/services/apartment-renovation-yerevan",
+      "width": 1440,
+      "title": "Ремонт квартир в Ереване | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--services--apartment-renovation-yerevan--1440.jpg"
+    },
+    {
+      "path": "/en/services/apartment-renovation-yerevan",
+      "width": 1440,
+      "title": "Apartment Renovation in Yerevan | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--services--apartment-renovation-yerevan--1440.jpg"
+    },
+    {
+      "path": "/de/services/apartment-renovation-yerevan",
+      "width": 1440,
+      "title": "Wohnungsrenovierung in Eriwan | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--services--apartment-renovation-yerevan--1440.jpg"
+    },
+    {
+      "path": "/fr/services/apartment-renovation-yerevan",
+      "width": 1440,
+      "title": "Rénovation d’appartement à Erevan | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--services--apartment-renovation-yerevan--1440.jpg"
+    },
+    {
+      "path": "/hy/services/new-build-renovation",
+      "width": 1440,
+      "title": "Նորակառույց բնակարանի վերանորոգում Երևանում | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--services--new-build-renovation--1440.jpg"
+    },
+    {
+      "path": "/ru/services/new-build-renovation",
+      "width": 1440,
+      "title": "Ремонт новостройки в Ереване под ключ | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--services--new-build-renovation--1440.jpg"
+    },
+    {
+      "path": "/en/services/new-build-renovation",
+      "width": 1440,
+      "title": "New-Build Apartment Renovation in Yerevan | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--services--new-build-renovation--1440.jpg"
+    },
+    {
+      "path": "/de/services/new-build-renovation",
+      "width": 1440,
+      "title": "Renovierung von Neubauwohnungen in Eriwan | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--services--new-build-renovation--1440.jpg"
+    },
+    {
+      "path": "/fr/services/new-build-renovation",
+      "width": 1440,
+      "title": "Rénovation d’appartement neuf à Erevan | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--services--new-build-renovation--1440.jpg"
+    },
+    {
+      "path": "/hy/services/turnkey-renovation",
+      "width": 1440,
+      "title": "Ամբողջական վերանորոգում Երևանում | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--services--turnkey-renovation--1440.jpg"
+    },
+    {
+      "path": "/ru/services/turnkey-renovation",
+      "width": 1440,
+      "title": "Ремонт под ключ в Ереване: состав и этапы | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--services--turnkey-renovation--1440.jpg"
+    },
+    {
+      "path": "/en/services/turnkey-renovation",
+      "width": 1440,
+      "title": "Complete Renovation Service in Yerevan | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--services--turnkey-renovation--1440.jpg"
+    },
+    {
+      "path": "/de/services/turnkey-renovation",
+      "width": 1440,
+      "title": "Komplette Renovierung in Eriwan | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--services--turnkey-renovation--1440.jpg"
+    },
+    {
+      "path": "/fr/services/turnkey-renovation",
+      "width": 1440,
+      "title": "Rénovation complète à Erevan | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--services--turnkey-renovation--1440.jpg"
+    },
+    {
+      "path": "/hy/prices",
+      "width": 1440,
+      "title": "Բնակարանի վերանորոգման գներ Երևանում | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--prices--1440.jpg"
+    },
+    {
+      "path": "/ru/prices",
+      "width": 1440,
+      "title": "Стоимость ремонта квартиры в Ереване: расчёт за м² | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--prices--1440.jpg"
+    },
+    {
+      "path": "/en/prices",
+      "width": 1440,
+      "title": "Apartment Renovation Cost in Yerevan | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--prices--1440.jpg"
+    },
+    {
+      "path": "/de/prices",
+      "width": 1440,
+      "title": "Kosten der Wohnungsrenovierung in Eriwan | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--prices--1440.jpg"
+    },
+    {
+      "path": "/fr/prices",
+      "width": 1440,
+      "title": "Coût de rénovation d’appartement à Erevan | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--prices--1440.jpg"
+    },
+    {
+      "path": "/hy/services/apartment-interior-design-yerevan",
+      "width": 1440,
+      "title": "Բնակարանի ինտերիերի դիզայն Երևանում | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--services--apartment-interior-design-yerevan--1440.jpg"
+    },
+    {
+      "path": "/ru/services/apartment-interior-design-yerevan",
+      "width": 1440,
+      "title": "Дизайн интерьера квартиры в Ереване | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--services--apartment-interior-design-yerevan--1440.jpg"
+    },
+    {
+      "path": "/en/services/apartment-interior-design-yerevan",
+      "width": 1440,
+      "title": "Apartment Interior Design in Yerevan | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--services--apartment-interior-design-yerevan--1440.jpg"
+    },
+    {
+      "path": "/de/services/apartment-interior-design-yerevan",
+      "width": 1440,
+      "title": "Innenraumgestaltung für Wohnungen in Eriwan | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--services--apartment-interior-design-yerevan--1440.jpg"
+    },
+    {
+      "path": "/fr/services/apartment-interior-design-yerevan",
+      "width": 1440,
+      "title": "Aménagement intérieur d’appartement à Erevan | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--services--apartment-interior-design-yerevan--1440.jpg"
+    },
+    {
+      "path": "/hy/services/office-renovation-yerevan",
+      "width": 1440,
+      "title": "Գրասենյակի վերանորոգում Երևանում | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--services--office-renovation-yerevan--1440.jpg"
+    },
+    {
+      "path": "/ru/services/office-renovation-yerevan",
+      "width": 1440,
+      "title": "Ремонт офиса в Ереване | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--services--office-renovation-yerevan--1440.jpg"
+    },
+    {
+      "path": "/en/services/office-renovation-yerevan",
+      "width": 1440,
+      "title": "Office Renovation in Yerevan | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--services--office-renovation-yerevan--1440.jpg"
+    },
+    {
+      "path": "/de/services/office-renovation-yerevan",
+      "width": 1440,
+      "title": "Bürorenovierung in Eriwan | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--services--office-renovation-yerevan--1440.jpg"
+    },
+    {
+      "path": "/fr/services/office-renovation-yerevan",
+      "width": 1440,
+      "title": "Rénovation de bureaux à Erevan | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--services--office-renovation-yerevan--1440.jpg"
+    },
+    {
+      "path": "/hy/services/capital-renovation-yerevan",
+      "width": 1440,
+      "title": "Կապիտալ վերանորոգում Երևանում | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--services--capital-renovation-yerevan--1440.jpg"
+    },
+    {
+      "path": "/ru/services/capital-renovation-yerevan",
+      "width": 1440,
+      "title": "Капитальный ремонт в Ереване | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--services--capital-renovation-yerevan--1440.jpg"
+    },
+    {
+      "path": "/en/services/capital-renovation-yerevan",
+      "width": 1440,
+      "title": "Major Renovation in Yerevan | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--services--capital-renovation-yerevan--1440.jpg"
+    },
+    {
+      "path": "/de/services/capital-renovation-yerevan",
+      "width": 1440,
+      "title": "Umfassende Sanierung in Eriwan | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--services--capital-renovation-yerevan--1440.jpg"
+    },
+    {
+      "path": "/fr/services/capital-renovation-yerevan",
+      "width": 1440,
+      "title": "Rénovation lourde à Erevan | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--services--capital-renovation-yerevan--1440.jpg"
+    },
+    {
+      "path": "/hy/services/cosmetic-renovation-yerevan",
+      "width": 1440,
+      "title": "Կոսմետիկ վերանորոգում Երևանում | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--services--cosmetic-renovation-yerevan--1440.jpg"
+    },
+    {
+      "path": "/ru/services/cosmetic-renovation-yerevan",
+      "width": 1440,
+      "title": "Косметический ремонт в Ереване | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--services--cosmetic-renovation-yerevan--1440.jpg"
+    },
+    {
+      "path": "/en/services/cosmetic-renovation-yerevan",
+      "width": 1440,
+      "title": "Cosmetic Renovation in Yerevan | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--services--cosmetic-renovation-yerevan--1440.jpg"
+    },
+    {
+      "path": "/de/services/cosmetic-renovation-yerevan",
+      "width": 1440,
+      "title": "Optische Renovierung in Eriwan | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--services--cosmetic-renovation-yerevan--1440.jpg"
+    },
+    {
+      "path": "/fr/services/cosmetic-renovation-yerevan",
+      "width": 1440,
+      "title": "Rénovation légère à Erevan | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--services--cosmetic-renovation-yerevan--1440.jpg"
+    },
+    {
+      "path": "/hy/renovation-estimate-yerevan",
+      "width": 1440,
+      "title": "Վերանորոգման նախահաշիվ Երևանում | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--renovation-estimate-yerevan--1440.jpg"
+    },
+    {
+      "path": "/ru/renovation-estimate-yerevan",
+      "width": 1440,
+      "title": "Смета на ремонт в Ереване | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--renovation-estimate-yerevan--1440.jpg"
+    },
+    {
+      "path": "/en/renovation-estimate-yerevan",
+      "width": 1440,
+      "title": "Renovation Estimate in Yerevan | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--renovation-estimate-yerevan--1440.jpg"
+    },
+    {
+      "path": "/de/renovation-estimate-yerevan",
+      "width": 1440,
+      "title": "Renovierungskostenschätzung in Eriwan | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--renovation-estimate-yerevan--1440.jpg"
+    },
+    {
+      "path": "/fr/renovation-estimate-yerevan",
+      "width": 1440,
+      "title": "Devis de rénovation à Erevan | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--renovation-estimate-yerevan--1440.jpg"
+    },
+    {
+      "path": "/hy/services/plumbing-work-yerevan",
+      "width": 1440,
+      "title": "Սանտեխնիկական աշխատանքներ Երևանում | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--services--plumbing-work-yerevan--1440.jpg"
+    },
+    {
+      "path": "/ru/services/plumbing-work-yerevan",
+      "width": 1440,
+      "title": "Сантехнические работы в Ереване | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--services--plumbing-work-yerevan--1440.jpg"
+    },
+    {
+      "path": "/en/services/plumbing-work-yerevan",
+      "width": 1440,
+      "title": "Plumbing Work in Yerevan | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--services--plumbing-work-yerevan--1440.jpg"
+    },
+    {
+      "path": "/de/services/plumbing-work-yerevan",
+      "width": 1440,
+      "title": "Sanitärarbeiten in Eriwan | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--services--plumbing-work-yerevan--1440.jpg"
+    },
+    {
+      "path": "/fr/services/plumbing-work-yerevan",
+      "width": 1440,
+      "title": "Travaux de plomberie à Erevan | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--services--plumbing-work-yerevan--1440.jpg"
+    },
+    {
+      "path": "/hy/services/electrical-work-yerevan",
+      "width": 1440,
+      "title": "Էլեկտրական աշխատանքներ Երևանում | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/hy--services--electrical-work-yerevan--1440.jpg"
+    },
+    {
+      "path": "/ru/services/electrical-work-yerevan",
+      "width": 1440,
+      "title": "Электрические работы в Ереване | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/ru--services--electrical-work-yerevan--1440.jpg"
+    },
+    {
+      "path": "/en/services/electrical-work-yerevan",
+      "width": 1440,
+      "title": "Electrical Work in Yerevan | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/en--services--electrical-work-yerevan--1440.jpg"
+    },
+    {
+      "path": "/de/services/electrical-work-yerevan",
+      "width": 1440,
+      "title": "Elektroarbeiten in Eriwan | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/de--services--electrical-work-yerevan--1440.jpg"
+    },
+    {
+      "path": "/fr/services/electrical-work-yerevan",
+      "width": 1440,
+      "title": "Travaux électriques à Erevan | SHINEX",
+      "scrollWidth": 1440,
+      "h1Count": 1,
+      "overflow": [],
+      "unloadedImages": [],
+      "screenshot": "after/fr--services--electrical-work-yerevan--1440.jpg"
+    }
+  ],
+  "finalMobileTextChecks": [
+    {
+      "path": "/hy",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/ru",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/en",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/de",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/fr",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/hy/services",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/ru/services",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/en/services",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/de/services",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/fr/services",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/hy/about",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/ru/about",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/en/about",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/de/about",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/fr/about",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/hy/contacts",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/ru/contacts",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/en/contacts",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/de/contacts",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/fr/contacts",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/hy/calculator",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/ru/calculator",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/en/calculator",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/de/calculator",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/fr/calculator",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/hy/privacy",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/ru/privacy",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/en/privacy",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/de/privacy",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/fr/privacy",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/hy/services/renovation",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/ru/services/renovation",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/en/services/renovation",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/de/services/renovation",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/fr/services/renovation",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/hy/services/house-construction",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/ru/services/house-construction",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/en/services/house-construction",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/de/services/house-construction",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/fr/services/house-construction",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/hy/services/interior-design",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/ru/services/interior-design",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/en/services/interior-design",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/de/services/interior-design",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/fr/services/interior-design",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/hy/services/commercial-construction",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/ru/services/commercial-construction",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/en/services/commercial-construction",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/de/services/commercial-construction",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/fr/services/commercial-construction",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/hy/services/design",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/ru/services/design",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/en/services/design",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/de/services/design",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/fr/services/design",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/hy/services/monolithic-work",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/ru/services/monolithic-work",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/en/services/monolithic-work",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/de/services/monolithic-work",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/fr/services/monolithic-work",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/hy/services/facade-and-roofing",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/ru/services/facade-and-roofing",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/en/services/facade-and-roofing",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/de/services/facade-and-roofing",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/fr/services/facade-and-roofing",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/hy/services/apartment-renovation-yerevan",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/ru/services/apartment-renovation-yerevan",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/en/services/apartment-renovation-yerevan",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/de/services/apartment-renovation-yerevan",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/fr/services/apartment-renovation-yerevan",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/hy/services/new-build-renovation",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/ru/services/new-build-renovation",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/en/services/new-build-renovation",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/de/services/new-build-renovation",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/fr/services/new-build-renovation",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/hy/services/turnkey-renovation",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/ru/services/turnkey-renovation",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/en/services/turnkey-renovation",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/de/services/turnkey-renovation",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/fr/services/turnkey-renovation",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/hy/prices",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/ru/prices",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/en/prices",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/de/prices",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/fr/prices",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/hy/services/apartment-interior-design-yerevan",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/ru/services/apartment-interior-design-yerevan",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/en/services/apartment-interior-design-yerevan",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/de/services/apartment-interior-design-yerevan",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/fr/services/apartment-interior-design-yerevan",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/hy/services/office-renovation-yerevan",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/ru/services/office-renovation-yerevan",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/en/services/office-renovation-yerevan",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/de/services/office-renovation-yerevan",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/fr/services/office-renovation-yerevan",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/hy/services/capital-renovation-yerevan",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/ru/services/capital-renovation-yerevan",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/en/services/capital-renovation-yerevan",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/de/services/capital-renovation-yerevan",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/fr/services/capital-renovation-yerevan",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/hy/services/cosmetic-renovation-yerevan",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/ru/services/cosmetic-renovation-yerevan",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/en/services/cosmetic-renovation-yerevan",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/de/services/cosmetic-renovation-yerevan",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/fr/services/cosmetic-renovation-yerevan",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/hy/renovation-estimate-yerevan",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/ru/renovation-estimate-yerevan",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/en/renovation-estimate-yerevan",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/de/renovation-estimate-yerevan",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/fr/renovation-estimate-yerevan",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/hy/services/plumbing-work-yerevan",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/ru/services/plumbing-work-yerevan",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/en/services/plumbing-work-yerevan",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/de/services/plumbing-work-yerevan",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/fr/services/plumbing-work-yerevan",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/hy/services/electrical-work-yerevan",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/ru/services/electrical-work-yerevan",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/en/services/electrical-work-yerevan",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/de/services/electrical-work-yerevan",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    },
+    {
+      "path": "/fr/services/electrical-work-yerevan",
+      "scrollWidth": 375,
+      "textOverflow": [],
+      "width": 375
+    }
+  ]
+}

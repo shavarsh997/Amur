@@ -53,7 +53,7 @@ export default async function AboutPage({ params }: Props) {
         eyebrow={about.eyebrow}
         title={about.title}
       />
-      <Container className="space-y-12 py-12 sm:space-y-16 sm:py-16 lg:space-y-20 lg:py-20">
+      <Container className="space-y-section py-section">
         <section className="content-split grid gap-8 lg:grid-cols-[0.7fr_1.3fr]">
           <h2 className="text-3xl font-semibold tracking-[-0.04em] text-[var(--text-primary)]">
             {about.storyTitle}

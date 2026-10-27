@@ -28,13 +28,13 @@ export function Hero({
                 />
                 {dictionary.hero.eyebrow}
               </p>
-              <h1 className="content-hero-title mt-5 w-full break-words text-pretty text-[2.25rem] font-semibold leading-[1.14] tracking-[-0.055em] text-[var(--text-primary)] sm:mt-6 sm:text-[2.25rem] lg:text-[3rem]">
+              <h1 className="content-hero-title mt-5 w-full break-words text-pretty text-[2.25rem] font-semibold leading-[1.14] tracking-[-0.055em] text-[var(--text-primary)] sm:text-[2.25rem] lg:text-[3rem]">
                 {dictionary.hero.title}
               </h1>
               <p className="mt-5 max-w-full text-[15px] leading-6 text-[var(--text-secondary)] sm:text-[17px] sm:leading-7">
                 {dictionary.hero.description}
               </p>
-              <div className="action-group mt-7">
+              <div className="action-group mt-6">
                 <ContactTrigger
                   label={dictionary.hero.primaryAction}
                   variant="primary"
@@ -43,17 +43,19 @@ export function Hero({
                   {dictionary.hero.secondaryAction}
                 </ButtonLink>
               </div>
-              <ul className="mt-8 grid gap-2.5 border-t border-[var(--border)] pt-5 text-sm font-medium leading-5 text-[var(--text-secondary)] sm:grid-cols-3 sm:gap-3">
-                {dictionary.whyUs.items.slice(0, 3).map((item) => (
-                  <li className="flex items-start gap-2" key={item.title}>
-                    <Check
-                      aria-hidden="true"
-                      className="mt-0.5 size-4 shrink-0 text-[var(--brand-copper)]"
-                    />
-                    {item.title}
-                  </li>
-                ))}
-              </ul>
+              <div className="hero-benefits-region">
+                <ul className="hero-benefits mt-6 grid gap-3 border-t border-[var(--border)] pt-5 text-sm font-medium leading-5 text-[var(--text-secondary)] ">
+                  {dictionary.whyUs.items.slice(0, 3).map((item) => (
+                    <li className="flex items-start gap-2" key={item.title}>
+                      <Check
+                        aria-hidden="true"
+                        className="mt-0.5 size-4 shrink-0 text-[var(--brand-copper)]"
+                      />
+                      {item.title}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
             <div className="content-hero-image relative order-2 min-h-[280px] overflow-hidden bg-[var(--surface-muted)] lg:order-none lg:min-h-full">
               <div className="motion-photo" data-parallax="vertical">

@@ -22,9 +22,9 @@ export function ScenarioStep({
   onSelectScenario: (scenarioId: CalculatorScenarioId) => void;
 }) {
   return (
-    <section className="rounded-[28px] border border-[var(--border)] bg-white p-5 shadow-[var(--shadow-card)] sm:p-7">
+    <section className="layout-region rounded-[28px] border border-[var(--border)] bg-white p-panel shadow-[var(--shadow-card)]">
       <StepTitle number="01" {...copy.steps.scenario} />
-      <div className="mt-6 grid gap-3 content-grid sm:grid-cols-2">
+      <div className="mt-6 grid gap-3 local-grid">
         {config.quickScenarios.map((scenario) => {
           const Icon =
             scenarioIcons[scenario.id as keyof typeof scenarioIcons] ??

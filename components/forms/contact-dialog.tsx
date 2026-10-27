@@ -207,8 +207,8 @@ export function ContactDialog({
         }}
         tabIndex={-1}
       >
-        <div className="flex shrink-0 items-center justify-between border-b border-[var(--border)] bg-white px-5 py-4 sm:px-7">
-          <div>
+        <div className="flex shrink-0 items-center justify-between gap-4 border-b border-[var(--border)] bg-white px-5 py-4 sm:px-6">
+          <div className="min-w-0">
             <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[var(--brand-accent)]">
               {copy.eyebrow}
             </p>
@@ -223,7 +223,7 @@ export function ContactDialog({
                   : copy.formTitle}
             </h2>
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex shrink-0 items-center gap-2">
             {view === "form" && !calculatorContext ? (
               <button
                 className="inline-flex h-10 items-center gap-1.5 rounded-xl px-3 text-sm font-semibold text-[var(--text-primary)] transition hover:bg-[var(--surface-muted)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--button-primary)]"
@@ -244,7 +244,7 @@ export function ContactDialog({
             </button>
           </div>
         </div>
-        <div className="overflow-y-auto p-5 sm:p-7">
+        <div className="layout-region overflow-y-auto p-5 pb-[max(1.25rem,env(safe-area-inset-bottom))] sm:p-6">
           {view === "methods" ? (
             <>
               <p className="mb-5 leading-7 text-[var(--text-secondary)]">
