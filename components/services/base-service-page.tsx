@@ -8,6 +8,8 @@ import {
   seoLandingPages,
 } from "@/config/seo-landing-pages.config";
 import { getServiceMedia } from "@/config/service-media.config";
+import { getActiveServices } from "@/config/services.config";
+import { relatedBaseServices } from "@/config/related-services.config";
 import { servicePageTranslations } from "@/messages/service-pages";
 import type { Dictionary, Locale } from "@/types";
 import type { ServiceConfig, ServiceContent } from "@/types/service";
@@ -54,7 +56,9 @@ export function BaseServicePage({
     "new-build-renovation",
     "prices",
   ];
-  const links = [...related]
+  const links: { href: string; title: string; description: string }[] = [
+    ...related,
+  ]
     .sort((a, b) => {
       const rank = (slug: string) =>
         priority.includes(slug) ? priority.indexOf(slug) : priority.length;
@@ -65,6 +69,17 @@ export function BaseServicePage({
       title: page.translations[locale].title,
       description: page.translations[locale].description,
     }));
+  const adjacentSlugs =
+    relatedBaseServices[service.slug as keyof typeof relatedBaseServices] ?? [];
+  links.push(
+    ...getActiveServices(locale)
+      .filter((item) => adjacentSlugs.includes(item.slug))
+      .map((item) => ({
+        href: `/${locale}/services/${item.slug}`,
+        title: item.content.title,
+        description: item.content.shortDescription,
+      }))
+  );
   const scopePaths = [
     "#service-details",
     `/${locale}/services/electrical-work-yerevan`,

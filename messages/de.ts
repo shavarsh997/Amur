@@ -44,9 +44,9 @@ const dictionary = {
     specializedTitle: "Ergänzende Bauleistungen",
     viewAll: "Alle Leistungen",
     learnMore: "Leistung ansehen",
-    pageTitle: "Renovierung, Innenraumgestaltung und Bauleistungen",
+    pageTitle: "Renovierungs- und Bauleistungen in Eriwan",
     pageDescription:
-      "Wohnungs- und Hausrenovierung, Hausbau, Innenraumgestaltung und einzelne Bauarbeiten.",
+      "SHINEX in Eriwan: Wohnungs- und Hausrenovierung, Neubau, Innenraumgestaltung, Sanitär- und Elektroarbeiten. Leistungsumfang und Kosteninformationen vergleichen.",
     detail: {
       overview: "Leistungsübersicht",
       included: "Was die Leistung umfasst",
@@ -800,7 +800,7 @@ const dictionary = {
   },
   about: {
     eyebrow: "Über SHINEX",
-    title: "Renovierung und Bau klar organisieren",
+    title: "Über uns: Renovierung und Bau in Armenien",
     intro:
       "SHINEX entwickelt Renovierungs- und Bauleistungen in Armenien mit klarer Organisation, einer ersten Einschätzung, abgestimmten Phasen und unkomplizierter Kommunikation mit Kunden.",
     storyTitle: "So organisieren wir die Arbeiten",

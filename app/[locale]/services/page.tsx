@@ -1,5 +1,7 @@
+import { PageSchema } from "@/components/seo/page-schema";
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { ServiceGuides } from "@/components/sections/service-guides";
@@ -35,6 +37,13 @@ export default async function ServicesPage({ params }: Props) {
 
   return (
     <>
+      <PageSchema
+        locale={locale}
+        pathname="services"
+        name={services.pageTitle}
+        description={services.pageDescription}
+        type="CollectionPage"
+      />
       <script
         dangerouslySetInnerHTML={{
           __html: serializeJsonLd(
@@ -57,71 +66,56 @@ export default async function ServicesPage({ params }: Props) {
         title={services.pageTitle}
       />
       <Container className="space-y-8 py-section">
-        {getActiveServices(locale).map(({ content, ...service }, index) => (
-          <article
-            className="content-split service-catalog-card grid overflow-hidden rounded-[24px] border border-[var(--border)] bg-white lg:grid-cols-2"
-            key={service.slug}
-          >
-            <div
-              className={`relative min-h-72 bg-[var(--background-warm)] ${index % 2 ? "lg:order-2" : ""}`}
+        <ServiceGuides locale={locale} prominent />
+        <div className="space-y-8">
+          {getActiveServices(locale).map(({ content, ...service }) => (
+            <article
+              className="content-split service-catalog-card grid overflow-hidden rounded-[24px] border border-[var(--border)] bg-white lg:grid-cols-2"
+              key={service.slug}
             >
-              <Image
-                alt={getServiceImageAlt(service.image, locale)}
-                className="object-cover"
-                fill
-                sizes="(max-width: 1023px) 100vw, 50vw"
-                src={service.image}
-              />
-            </div>
-            <div className="service-catalog-copy">
-              <h2 className="text-2xl font-semibold tracking-[-0.04em] text-[var(--text-primary)] sm:text-3xl">
-                {content.title}
-              </h2>
-              <p className="mt-4 leading-7 text-[var(--text-secondary)]">
-                {content.fullDescription}
-              </p>
-              <div className="service-catalog-lists mt-6 grid gap-6">
-                <div>
-                  <h3 className="font-semibold text-[var(--text-primary)]">
-                    {services.detail.included}
-                  </h3>
-                  <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-6 text-[var(--text-secondary)]">
-                    {content.includedWorks.map((item) => (
-                      <li key={item}>{item}</li>
-                    ))}
-                  </ul>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-[var(--text-primary)]">
-                    {services.detail.stages}
-                  </h3>
-                  <ol className="mt-3 list-decimal space-y-2 pl-5 text-sm leading-6 text-[var(--text-secondary)]">
-                    {content.workflow.map((step) => (
-                      <li key={step.title}>{step.title}</li>
-                    ))}
-                  </ol>
-                </div>
+              <div className="service-catalog-image relative min-h-72 bg-[var(--background-warm)]">
+                <Image
+                  alt={getServiceImageAlt(service.image, locale)}
+                  className="object-cover"
+                  fill
+                  sizes="(max-width: 639px) calc(100vw - 32px), (max-width: 959px) calc(100vw - 48px), (max-width: 1279px) 35vw, (max-width: 1589px) 28vw, 410px"
+                  src={service.image}
+                />
               </div>
-              <div className="mt-6">
-                <h3 className="font-semibold text-[var(--text-primary)]">
-                  {services.detail.audience}
-                </h3>
-                <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-6 text-[var(--text-secondary)]">
-                  {content.suitableFor.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
+              <div className="service-catalog-copy">
+                <h2 className="text-2xl font-semibold tracking-[-0.04em] text-[var(--text-primary)] sm:text-3xl">
+                  <Link
+                    href={`/${locale}/services/${service.slug}`}
+                    className="rounded-sm hover:underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4"
+                  >
+                    {content.title}
+                  </Link>
+                </h2>
+                <p className="mt-4 leading-7 text-[var(--text-secondary)]">
+                  {content.shortDescription}
+                </p>
+                <div className="mt-6">
+                  <div>
+                    <h3 className="font-semibold text-[var(--text-primary)]">
+                      {services.detail.included}
+                    </h3>
+                    <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-6 text-[var(--text-secondary)]">
+                      {content.includedWorks.slice(0, 3).map((item) => (
+                        <li key={item}>{item}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+                <ButtonLink
+                  className="mt-8"
+                  href={`/${locale}/services/${service.slug}`}
+                >
+                  {services.learnMore}
+                </ButtonLink>
               </div>
-              <ButtonLink
-                className="mt-8"
-                href={`/${locale}/services/${service.slug}`}
-              >
-                {content.primaryCta ?? services.detail.requestEstimate}
-              </ButtonLink>
-            </div>
-          </article>
-        ))}
-        <ServiceGuides locale={locale} />
+            </article>
+          ))}
+        </div>
       </Container>
     </>
   );

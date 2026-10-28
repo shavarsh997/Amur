@@ -636,6 +636,7 @@ export const extraSeoLandingPages = [
   },
   {
     slug: "capital-renovation-yerevan",
+    contentUpdatedAt: "2026-10-28",
     kind: "service",
     image:
       "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1800&q=85",
@@ -648,12 +649,12 @@ export const extraSeoLandingPages = [
     translations: {
       hy: {
         eyebrow: "Կապիտալ վերանորոգում · Երևան",
-        title: "Կապիտալ վերանորոգում Երևանում",
+        title: "Բնակարանի կապիտալ վերանորոգում Երևանում",
         description:
           "Կապիտալ վերանորոգում Երևանում՝ հին ծածկույթների ապամոնտաժումից մինչև ինժեներական համակարգերի թարմացում և վերջնական հարդարում։",
-        seoTitle: "Կապիտալ վերանորոգում Երևանում | SHINEX",
+        seoTitle: "Բնակարանի կապիտալ վերանորոգում Երևանում | SHINEX",
         seoDescription:
-          "Կապիտալ վերանորոգում Երևանում բնակարանի կամ տան համար՝ ապամոնտաժում, էլեկտրական, սանտեխնիկական և հարդարման աշխատանքներ։",
+          "Բնակարանի կապիտալ վերանորոգում Երևանում՝ ապամոնտաժում, լարերի ու խողովակների փոխարինում ըստ զննման, հիմքերի պատրաստում և հարդարում։ SHINEX։",
         introduction: [
           "Կապիտալ վերանորոգումը ճիշտ ընտրություն է, երբ անհրաժեշտ է փոխել ոչ միայն տեսքը, այլև մաշված ինժեներական համակարգերը, պատերի ու հատակի մակերեսները կամ հատակագիծը։",
           "Մինչ մեկնարկը գնահատում ենք օբյեկտի իրական վիճակը, որպեսզի աշխատանքների հերթականությունն անվտանգ ու տրամաբանական լինի։",
@@ -676,13 +677,13 @@ export const extraSeoLandingPages = [
           {
             title: "Ինչո՞ւ է զննումը կարևոր",
             paragraphs: [
-              "Հին շենքում տեսանելի հարդարումը միշտ չէ, որ ցույց է տալիս պատերի, հատակի կամ էլեկտրալարերի ու խողովակների վիճակը։ Զննումը օգնում է նախապես բացահայտել լրացուցիչ աշխատանքների հնարավոր անհրաժեշտությունը։",
+              "Հին հարդարմամբ բնակարանում նախ որոշում են՝ ինչն է հնարավոր պահպանել։ Թաքնված հատվածների վիճակը երբեմն պարզվում է միայն ապամոնտաժումից հետո։ Լրացուցիչ աշխատանքների ծավալը, արժեքն ու ժամկետի փոփոխությունը պետք է համաձայնեցնել մինչև դրանց կատարումը։",
             ],
           },
           {
             title: "Գնի վրա ազդող հանգամանքներ",
             paragraphs: [
-              "Կապիտալ վերանորոգման արժեքը կախված է ապամոնտաժման, մակերեսների շտկման, էլեկտրական ու սանտեխնիկական աշխատանքների և նյութերի ծավալից։",
+              "Նախահաշվում առանձնացնում են ապամոնտաժումը, պատերի ու հատակի պատրաստումը, էլեկտրական, սանտեխնիկական և հարդարման աշխատանքները։ Նյութերը հաշվարկվում են աշխատանքից առանձին։ Բնակարանի մակերեսը չի ցույց տալիս լարերի երկարությունը, միացման կետերի քանակը կամ հարթեցման ծավալը։",
             ],
           },
         ],
@@ -701,7 +702,12 @@ export const extraSeoLandingPages = [
           {
             question: "Կարո՞ղ եք նախահաշիվ կազմել",
             answer:
-              "Այո, կարող ենք ներկայացնել նախնական արժեքի հաշվարկ, իսկ ճշգրիտ նախահաշիվը կազմվում է զննումից հետո։",
+              "Նախնական քննարկման համար պատրաստեք մակերեսի տվյալները, հատակագիծը, լուսանկարներն ու փոփոխությունների ցանկը։ Զննումից հետո ճշտում ենք աշխատանքների կազմն ու ծավալը․ թաքնված հատվածները երբեմն հնարավոր է ստուգել միայն ապամոնտաժումից հետո։",
+          },
+          {
+            question: "Ինչի՞ց սկսել գնված բնակարանի կապիտալ վերանորոգումը։",
+            answer:
+              "Մինչ հարդարման նյութեր գնելը որոշեք հատակագիծը, խոհանոցի, սանհանգույցի, կահույքի ու տեխնիկայի տեղերը։ Այնուհետև գնահատեք հիմքերի ու հաղորդակցությունների վիճակը և համաձայնեցրեք ապամոնտաժման, ինժեներական ու հարդարման աշխատանքների ցանկը։ Այդպես նախահաշիվը կհամապատասխանի հենց ձեր բնակարանի խնդիրներին։",
           },
         ],
         calculatorLabel: "Կապվել մեզ հետ",
@@ -710,12 +716,12 @@ export const extraSeoLandingPages = [
       },
       ru: {
         eyebrow: "Капитальный ремонт · Ереван",
-        title: "Капитальный ремонт в Ереване",
+        title: "Капитальный ремонт квартир в Ереване",
         description:
           "Капитальный ремонт в Ереване: от демонтажа старой отделки до обновления инженерных систем и чистовой отделки.",
-        seoTitle: "Капитальный ремонт в Ереване | SHINEX",
+        seoTitle: "Капитальный ремонт квартир в Ереване | SHINEX",
         seoDescription:
-          "Капитальный ремонт квартиры или дома в Ереване: демонтаж, электрика, сантехника и отделка.",
+          "Капитальный ремонт квартиры в Ереване: демонтаж, замена проводки и труб по результатам осмотра, подготовка оснований и отделка. Смета SHINEX.",
         introduction: [
           "Капитальный ремонт нужен, когда требуется обновить не только вид, но и коммуникации, основания или планировку.",
           "До начала оцениваем фактическое состояние объекта, чтобы выстроить безопасную последовательность.",
@@ -738,13 +744,13 @@ export const extraSeoLandingPages = [
           {
             title: "Почему важен осмотр",
             paragraphs: [
-              "Старая отделка не всегда показывает состояние оснований и коммуникаций; осмотр снижает риск сюрпризов.",
+              "В квартире со старой отделкой сначала определяют, что можно сохранить. Состояние скрытых участков может стать понятным только после демонтажа. Если выявлены дополнительные работы, их объём, стоимость и влияние на график нужно согласовать до выполнения.",
             ],
           },
           {
             title: "Что влияет на цену",
             paragraphs: [
-              "Важны демонтаж, выравнивание, электрика, сантехника и объём материалов.",
+              "В смете разделяют демонтаж, подготовку стен и пола, электрику, сантехнику и чистовую отделку. Материалы рассчитываются отдельно от работы. Площадь квартиры помогает оценить масштаб, но не показывает длину проводки, число подключений или объём выравнивания.",
             ],
           },
         ],
@@ -761,7 +767,14 @@ export const extraSeoLandingPages = [
           },
           {
             question: "Можно составить смету?",
-            answer: "Да, точная смета готовится после осмотра.",
+            answer:
+              "Для первого обсуждения подготовьте площадь, план квартиры, фотографии и список изменений. После осмотра уточняем объёмы и состав работ; скрытые участки могут потребовать проверки после демонтажа.",
+          },
+          {
+            question:
+              "С чего начать капитальный ремонт квартиры после покупки?",
+            answer:
+              "До покупки отделочных материалов определите планировку, расположение кухни, санузла, мебели и техники. Затем оцените состояние оснований и коммуникаций и согласуйте перечень демонтажа, инженерных работ и отделки. Так смета будет опираться на задачи конкретной квартиры.",
           },
         ],
         calculatorLabel: "Обсудить ремонт",
@@ -770,12 +783,12 @@ export const extraSeoLandingPages = [
       },
       en: {
         eyebrow: "Major renovation · Yerevan",
-        title: "Major renovation in Yerevan",
+        title: "Major apartment renovation in Yerevan",
         description:
           "Renovate an older apartment or house in Yerevan, from removing worn finishes and replacing wiring or plumbing to preparing and finishing surfaces.",
-        seoTitle: "Major Renovation in Yerevan | SHINEX",
+        seoTitle: "Major apartment renovation in Yerevan | SHINEX",
         seoDescription:
-          "Major renovation of apartments and houses in Yerevan: demolition, electrical, plumbing and finishing work.",
+          "Major apartment renovation in Yerevan: removal, wiring and pipe replacement as needed, surface preparation and finishing. Request a SHINEX estimate.",
         introduction: [
           "Major renovation may be needed when worn wiring, plumbing, walls or floors require attention alongside the visible finishes.",
           "Before work starts, we assess the actual condition to plan a safe sequence.",
@@ -798,13 +811,13 @@ export const extraSeoLandingPages = [
           {
             title: "Why a survey matters",
             paragraphs: [
-              "Existing finishes can hide damage to walls, floors, wiring or pipes. A site survey helps identify possible repairs and plan the work before new finishes are applied.",
+              "In an older apartment, first establish what can be retained. Hidden conditions may become clear only after removal. If extra work is discovered, its scope, cost and effect on the schedule should be agreed before it proceeds.",
             ],
           },
           {
             title: "What affects price",
             paragraphs: [
-              "Demolition, levelling, electrical and plumbing work, and materials all influence cost.",
+              "The estimate separates removal, wall and floor preparation, electrical work, plumbing and finishing. Materials are calculated separately from labour. Floor area indicates scale but does not reveal wiring lengths, connection counts or levelling requirements.",
             ],
           },
         ],
@@ -822,7 +835,14 @@ export const extraSeoLandingPages = [
           },
           {
             question: "Can you prepare an estimate?",
-            answer: "Yes. A precise estimate follows the property survey.",
+            answer:
+              "For an initial discussion, prepare the floor area, a plan, photographs and a list of changes. A survey refines the work quantities and scope; hidden areas may need checking after removal.",
+          },
+          {
+            question:
+              "Where should major renovation of a newly purchased apartment start?",
+            answer:
+              "Before buying finishes, decide on the layout and locations of the kitchen, bathroom, furniture and appliances. Then assess surfaces and services and agree the removal, installation and finishing work. This makes the estimate specific to the apartment.",
           },
         ],
         calculatorLabel: "Discuss your renovation",
@@ -831,12 +851,12 @@ export const extraSeoLandingPages = [
       },
       de: {
         eyebrow: "Umfassende Sanierung · Eriwan",
-        title: "Umfassende Sanierung in Eriwan",
+        title: "Umfassende Wohnungssanierung in Eriwan",
         description:
           "Sanieren Sie eine ältere Wohnung oder ein Haus in Eriwan: vom Entfernen verschlissener Oberflächen und Ersetzen von Kabeln oder Rohren bis zur Vorbereitung und zum Ausbau.",
-        seoTitle: "Umfassende Sanierung in Eriwan | SHINEX",
+        seoTitle: "Umfassende Wohnungssanierung in Eriwan | SHINEX",
         seoDescription:
-          "Umfassende Sanierung von Wohnungen und Häusern in Eriwan: Rückbau, Elektro-, Sanitär- und Ausbauarbeiten.",
+          "Umfassende Wohnungssanierung in Eriwan: Rückbau, bedarfsgerechter Austausch von Leitungen, Untergrundvorbereitung und Ausbau. Kostenvoranschlag von SHINEX.",
         introduction: [
           "Eine umfassende Sanierung kann nötig sein, wenn neben den sichtbaren Oberflächen auch verschlissene Kabel, Rohre, Wände oder Böden bearbeitet werden müssen.",
           "Vor Beginn prüfen wir den tatsächlichen Zustand, um eine sichere Arbeitsfolge zu planen.",
@@ -859,13 +879,13 @@ export const extraSeoLandingPages = [
           {
             title: "Warum eine Besichtigung wichtig ist",
             paragraphs: [
-              "Bestehende Oberflächen können Schäden an Wänden, Böden, Kabeln oder Rohren verdecken. Eine Besichtigung hilft, mögliche Reparaturen zu erkennen und vor dem neuen Ausbau zu planen.",
+              "Bei einer älteren Wohnung wird zunächst geklärt, was erhalten bleiben kann. Verdeckte Zustände zeigen sich manchmal erst nach dem Rückbau. Zusätzliche Arbeiten, ihre Kosten und Auswirkungen auf den Zeitplan sollten vor der Ausführung vereinbart werden.",
             ],
           },
           {
             title: "Was den Preis beeinflusst",
             paragraphs: [
-              "Rückbau, Ausgleichsarbeiten, Elektro- und Sanitärarbeiten sowie Materialien beeinflussen die Kosten.",
+              "Der Kostenvoranschlag trennt Rückbau, Wand- und Bodenvorbereitung, Elektroarbeiten, Sanitärarbeiten und Ausbau. Materialien werden getrennt von den Arbeiten berechnet. Die Wohnfläche allein zeigt weder Leitungslängen noch Anschlusszahlen oder den nötigen Ausgleich von Untergründen.",
             ],
           },
         ],
@@ -884,7 +904,13 @@ export const extraSeoLandingPages = [
           {
             question: "Können Sie einen Kostenvoranschlag erstellen?",
             answer:
-              "Ja. Eine genaue Kostenschätzung erfolgt nach der Besichtigung.",
+              "Halten Sie für das erste Gespräch Fläche, Grundriss, Fotos und gewünschte Änderungen bereit. Nach der Besichtigung werden Umfang und Mengen präzisiert; verdeckte Bereiche lassen sich gegebenenfalls erst nach dem Rückbau prüfen.",
+          },
+          {
+            question:
+              "Womit beginnt die Sanierung einer gerade gekauften Wohnung?",
+            answer:
+              "Legen Sie vor dem Kauf der Ausbaumaterialien den Grundriss sowie die Positionen von Küche, Bad, Möbeln und Geräten fest. Danach werden Untergründe und Haustechnik bewertet und Rückbau, Installationen und Ausbau abgestimmt. So bezieht sich der Kostenvoranschlag auf die konkrete Wohnung.",
           },
         ],
         calculatorLabel: "Renovierung besprechen",
@@ -893,12 +919,12 @@ export const extraSeoLandingPages = [
       },
       fr: {
         eyebrow: "Rénovation lourde · Erevan",
-        title: "Rénovation lourde à Erevan",
+        title: "Rénovation lourde d’appartement à Erevan",
         description:
           "Rénovez un appartement ancien ou une maison à Erevan, de la dépose des finitions usées et du remplacement des réseaux à la préparation et à la finition des surfaces.",
-        seoTitle: "Rénovation lourde à Erevan | SHINEX",
+        seoTitle: "Rénovation lourde d’appartement à Erevan | SHINEX",
         seoDescription:
-          "Rénovation lourde d’appartements et de maisons à Erevan : démolition, électricité, plomberie et finitions.",
+          "Rénovation lourde d’appartement à Erevan : dépose, remplacement des réseaux selon leur état, préparation des supports et finitions. Devis SHINEX.",
         introduction: [
           "Une rénovation lourde peut être nécessaire lorsque les câbles, la plomberie, les murs ou les sols usés demandent une intervention en plus des finitions visibles.",
           "Avant le démarrage, nous évaluons l’état réel pour planifier un ordre de travaux sûr.",
@@ -921,13 +947,13 @@ export const extraSeoLandingPages = [
           {
             title: "Pourquoi une visite est importante",
             paragraphs: [
-              "Les finitions existantes peuvent masquer des dommages aux murs, aux sols, aux câbles ou aux tuyaux. Une visite aide à repérer les réparations possibles et à préparer les travaux avant les nouvelles finitions.",
+              "Dans un appartement ancien, il faut d’abord déterminer ce qui peut être conservé. Certains défauts cachés n’apparaissent qu’après la dépose. Les travaux supplémentaires, leur coût et leur effet sur le calendrier sont à convenir avant leur réalisation.",
             ],
           },
           {
             title: "Ce qui influence le prix",
             paragraphs: [
-              "La démolition, le nivellement, l’électricité, la plomberie et les matériaux influencent le coût.",
+              "Le devis distingue dépose, préparation des murs et sols, électricité, plomberie et finitions. Les matériaux sont chiffrés séparément de la main-d’œuvre. La surface seule ne précise ni la longueur des câbles, ni le nombre de raccordements, ni les besoins de ragréage.",
             ],
           },
         ],
@@ -945,7 +971,14 @@ export const extraSeoLandingPages = [
           },
           {
             question: "Pouvez-vous établir un devis ?",
-            answer: "Oui. Un devis précis est établi après la visite du bien.",
+            answer:
+              "Pour un premier échange, préparez la surface, un plan, des photos et les changements souhaités. La visite précise les quantités et les travaux ; certaines zones cachées nécessitent une vérification après dépose.",
+          },
+          {
+            question:
+              "Par où commencer la rénovation lourde d’un appartement récemment acheté ?",
+            answer:
+              "Avant d’acheter les finitions, définissez le plan et l’emplacement de la cuisine, de la salle de bains, des meubles et des appareils. Évaluez ensuite les supports et les réseaux, puis convenez des travaux de dépose, d’installation et de finition. Le devis correspondra ainsi au logement concerné.",
           },
         ],
         calculatorLabel: "Discuter de votre rénovation",
@@ -956,6 +989,7 @@ export const extraSeoLandingPages = [
   },
   {
     slug: "cosmetic-renovation-yerevan",
+    contentUpdatedAt: "2026-10-28",
     kind: "service",
     image:
       "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1800&q=85",
@@ -968,12 +1002,12 @@ export const extraSeoLandingPages = [
     translations: {
       hy: {
         eyebrow: "Կոսմետիկ վերանորոգում · Երևան",
-        title: "Կոսմետիկ վերանորոգում Երևանում",
+        title: "Բնակարանի կոսմետիկ վերանորոգում Երևանում",
         description:
           "Կոսմետիկ վերանորոգում Երևանում՝ բնակարանի, տան կամ առանձին սենյակի հարդարումը թարմացնելու համար՝ առանց կապիտալ փոփոխությունների։",
-        seoTitle: "Կոսմետիկ վերանորոգում Երևանում | SHINEX",
+        seoTitle: "Բնակարանի կոսմետիկ վերանորոգում Երևանում | SHINEX",
         seoDescription:
-          "Կոսմետիկ վերանորոգում Երևանում՝ պատերի, առաստաղի, հատակի, սալիկի և առանձին գոտիների հարդարման թարմացում։",
+          "Բնակարանի կոսմետիկ վերանորոգում Երևանում՝ պատեր, առաստաղ, հատակ կամ մեկ սենյակ։ Թարմացում բնակվելուց կամ վարձակալության հանձնելուց առաջ։ SHINEX։",
         introduction: [
           "Կոսմետիկ վերանորոգումը հարմար է, երբ տարածքի մակերեսներն ու ինժեներական համակարգերը բավարար վիճակում են, բայց հարդարումը, գույները կամ առանձին հատվածները թարմացման կարիք ունեն։",
           "Մինչ աշխատանքը ճշտում ենք մակերեսների վիճակը, որպեսզի արտաքին թարմացումը չթաքցնի ավելի լուրջ խնդիր։",
@@ -996,13 +1030,13 @@ export const extraSeoLandingPages = [
           {
             title: "Ե՞րբ է այն բավարար",
             paragraphs: [
-              "Եթե էլեկտրական, սանտեխնիկական և կառուցվածքային խնդիրներ չկան, կոսմետիկ լուծումը կարող է արագ թարմացնել տարածքի տեսքը։",
+              "Հարդարման թարմացումը կարող է բավարար լինել բնակվելուց, վաճառքից կամ վարձակալության հանձնելուց առաջ, եթե հիմքերն ու ինժեներական համակարգերը լուրջ վերանորոգում չեն պահանջում։ Նախ որոշեք՝ որ մակերեսներն են թարմացվելու, իսկ որ ծածկույթներն են պահպանվելու։ Խոնավությունը, վնասված հիմքերն ու անսարք հաղորդակցությունները պետք է գնահատել մինչև հարդարումը։",
             ],
           },
           {
             title: "Նախնական հաշվարկ",
             paragraphs: [
-              "Գինը կախված է մակերեսից, պատերի ու հատակի վիճակից, ընտրված նյութերից և անհրաժեշտ վերականգնման աշխատանքներից։",
+              "Արժեքը հաշվարկվում է ըստ մակերեսների և գործողությունների՝ հին ծածկույթի հեռացում, նախապատրաստում, ներկում, պաստառապատում կամ հատակի տեղադրում։ Նյութերը վճարվում են առանձին։ Նախնական քննարկման համար անհրաժեշտ են սենյակների չափերը, լուսանկարներն ու հարդարման տեսակը․ միայն բնակարանի մակերեսը բավարար չէ ճշգրիտ հաշվարկի համար։",
             ],
           },
         ],
@@ -1020,7 +1054,13 @@ export const extraSeoLandingPages = [
           {
             question: "Որքա՞ն ժամանակ է տևում",
             answer:
-              "Ժամկետը կախված է մակերեսից, շերտերի չորացման ժամանակից և աշխատանքների կազմից։",
+              "Ժամկետը կախված է սենյակների քանակից, մակերեսների պատրաստումից, նյութերի չորացումից և տարածք մուտք գործելու պայմաններից։ Նախապես քննարկեք սենյակների ազատումն ու նյութերի առաքումը։ Գրաֆիկը որոշվում է աշխատանքների ցանկը ճշտելուց հետո։",
+          },
+          {
+            question:
+              "Հնարավո՞ր է կոսմետիկ վերանորոգման ընթացքում բնակվել բնակարանում։",
+            answer:
+              "Դա կախված է աշխատանքների կազմից և աշխատանքային գոտին առանձնացնելու հնարավորությունից։ Նախապես պետք է քննարկել փոշին, կահույքի տեղափոխումը, խոհանոցից ու սանհանգույցից օգտվելու պայմանները։ Սենյակ առ սենյակ աշխատելու հնարավորությունը գնահատվում է զննման ժամանակ․ ոչ բոլոր աշխատանքներն են համատեղելի բնակվելու հետ։",
           },
         ],
         calculatorLabel: "Կապվել մեզ հետ",
@@ -1029,12 +1069,12 @@ export const extraSeoLandingPages = [
       },
       ru: {
         eyebrow: "Косметический ремонт · Ереван",
-        title: "Косметический ремонт в Ереване",
+        title: "Косметический ремонт квартир в Ереване",
         description:
           "Косметический ремонт в Ереване для обновления отделки квартиры, дома или отдельной комнаты без полного обновления инженерных систем.",
-        seoTitle: "Косметический ремонт в Ереване | SHINEX",
+        seoTitle: "Косметический ремонт квартир в Ереване | SHINEX",
         seoDescription:
-          "Косметический ремонт в Ереване: обновление стен, потолка, пола, плитки и отдельных зон.",
+          "Косметический ремонт квартиры в Ереване: стены, потолок, пол или отдельная комната. Обновление перед заселением или сдачей в аренду. Смета SHINEX.",
         introduction: [
           "Косметический ремонт подходит, когда основания и системы в нормальном состоянии, но отделку или отдельные зоны нужно обновить.",
           "До начала уточняем состояние поверхностей, чтобы внешнее обновление не скрыло серьёзную проблему.",
@@ -1057,13 +1097,13 @@ export const extraSeoLandingPages = [
           {
             title: "Когда этого достаточно",
             paragraphs: [
-              "Если нет инженерных и конструктивных проблем, косметический ремонт может быстро освежить пространство.",
+              "Обновление отделки может подойти перед заселением, продажей или сдачей квартиры в аренду, если основания и инженерные системы не требуют серьёзного ремонта. Сначала определите поверхности, которые нужно обновить, и покрытия, которые можно сохранить. Влага, повреждённые основания и неисправные коммуникации требуют отдельной оценки до отделки.",
             ],
           },
           {
             title: "Предварительный расчёт",
             paragraphs: [
-              "Цена зависит от площади, состояния стен и пола, материалов и восстановительных работ.",
+              "Стоимость считают по конкретным поверхностям и операциям: снятию покрытия, подготовке, покраске, оклейке или укладке пола. Материалы оплачиваются отдельно. Для предварительного обсуждения нужны размеры комнат, фотографии и выбранный вид отделки; одна площадь квартиры не даёт точного расчёта.",
             ],
           },
         ],
@@ -1080,7 +1120,13 @@ export const extraSeoLandingPages = [
           {
             question: "Сколько это занимает?",
             answer:
-              "Срок зависит от площади, высыхания материалов и состава работ.",
+              "Срок зависит от количества комнат, подготовки поверхностей, высыхания материалов и доступа на объект. Обсудите освобождение комнат и доставку покрытий заранее. График определяют после уточнения перечня работ.",
+          },
+          {
+            question:
+              "Можно ли делать косметический ремонт, продолжая жить в квартире?",
+            answer:
+              "Это зависит от состава работ и возможности отделить рабочую зону. Нужно заранее обсудить пыль, перемещение мебели, доступ к кухне и санузлу. Возможность ремонта по комнатам оценивается при осмотре; не каждый объём работ совместим с проживанием.",
           },
         ],
         calculatorLabel: "Обсудить ремонт",
@@ -1089,12 +1135,12 @@ export const extraSeoLandingPages = [
       },
       en: {
         eyebrow: "Cosmetic renovation · Yerevan",
-        title: "Cosmetic renovation in Yerevan",
+        title: "Cosmetic apartment renovation in Yerevan",
         description:
           "Refresh the finishes in your apartment, house or a single room when the existing wiring, plumbing and surfaces are in sound condition.",
-        seoTitle: "Cosmetic Renovation in Yerevan | SHINEX",
+        seoTitle: "Cosmetic apartment renovation in Yerevan | SHINEX",
         seoDescription:
-          "Cosmetic renovation in Yerevan: painting, wallpaper, ceiling repairs and flooring updates for an apartment, house or individual room.",
+          "Cosmetic apartment renovation in Yerevan: walls, ceilings, floors or one room. Refresh before moving in or renting out. Request a SHINEX estimate.",
         introduction: [
           "Cosmetic renovation is suitable when walls, floors, wiring and plumbing are in sound condition, but the visible finishes need updating.",
           "We check surfaces first so a visual update does not conceal a more serious issue.",
@@ -1117,13 +1163,13 @@ export const extraSeoLandingPages = [
           {
             title: "When it is enough",
             paragraphs: [
-              "When wiring, plumbing and the building structure are in sound condition, updating the finishes may be enough to improve the room.",
+              "Refreshing finishes may suit an apartment before moving in, selling or renting it out if surfaces and services do not need major repairs. Identify which surfaces need updating and which finishes can stay. Moisture, damaged substrates and faulty services need separate assessment before finishing.",
             ],
           },
           {
             title: "Initial estimate",
             paragraphs: [
-              "Cost depends on area, wall and floor condition, material choices and required surface repairs.",
+              "Cost is based on surfaces and tasks: removing coverings, preparation, painting, wallpapering or flooring. Materials are paid for separately. Room dimensions, photographs and chosen finishes help the initial discussion; floor area alone cannot give an exact cost.",
             ],
           },
         ],
@@ -1140,7 +1186,12 @@ export const extraSeoLandingPages = [
           {
             question: "How long does it take?",
             answer:
-              "It depends on area, material drying time and the agreed scope.",
+              "Timing depends on room count, preparation, drying and site access. Discuss clearing rooms and delivering finishes in advance. The schedule is determined once the work list is clear.",
+          },
+          {
+            question: "Can I stay in the apartment during cosmetic renovation?",
+            answer:
+              "It depends on the work and whether the work area can be separated. Discuss dust, moving furniture and kitchen and bathroom access in advance. Room-by-room work is assessed during the survey; some scopes are incompatible with staying in the apartment.",
           },
         ],
         calculatorLabel: "Discuss your renovation",
@@ -1149,12 +1200,12 @@ export const extraSeoLandingPages = [
       },
       de: {
         eyebrow: "Optische Renovierung · Eriwan",
-        title: "Optische Renovierung in Eriwan",
+        title: "Optische Wohnungsrenovierung in Eriwan",
         description:
           "Frischen Sie Ihre Wohnung, Ihr Haus oder einen einzelnen Raum auf, wenn Kabel, Rohre und Untergründe in gutem Zustand sind.",
-        seoTitle: "Optische Renovierung in Eriwan | SHINEX",
+        seoTitle: "Optische Wohnungsrenovierung in Eriwan | SHINEX",
         seoDescription:
-          "Optische Renovierung in Eriwan: Anstriche, Tapeten, Deckenreparaturen und neue Bodenbeläge für Wohnungen, Häuser oder einzelne Räume.",
+          "Optische Wohnungsrenovierung in Eriwan: Wände, Decken, Böden oder ein Raum. Auffrischung vor Einzug oder Vermietung. Kostenvoranschlag von SHINEX.",
         introduction: [
           "Eine optische Renovierung ist geeignet, wenn Wände, Böden, Kabel und Rohre intakt sind, die sichtbaren Oberflächen aber erneuert werden sollen.",
           "Wir prüfen zuerst die Untergründe, damit eine optische Auffrischung keine ernsteren Probleme verdeckt.",
@@ -1177,13 +1228,13 @@ export const extraSeoLandingPages = [
           {
             title: "Wann eine Auffrischung ausreicht",
             paragraphs: [
-              "Sind Kabel, Rohre und Bausubstanz in gutem Zustand, kann die Erneuerung der Oberflächen ausreichen, um den Raum zu verbessern.",
+              "Vor Einzug, Verkauf oder Vermietung kann eine Auffrischung genügen, wenn Untergründe und Haustechnik keine größeren Reparaturen brauchen. Klären Sie, welche Flächen erneuert und welche Beläge erhalten werden. Feuchtigkeit, beschädigte Untergründe und defekte Leitungen müssen vor dem Ausbau gesondert bewertet werden.",
             ],
           },
           {
             title: "Erste Kostenschätzung",
             paragraphs: [
-              "Die Kosten hängen von Fläche, Wand- und Bodenzustand, Materialwahl und nötigen Untergrundreparaturen ab.",
+              "Die Kosten richten sich nach Flächen und Tätigkeiten: Beläge entfernen, vorbereiten, streichen, tapezieren oder Boden verlegen. Materialien werden separat bezahlt. Raummaße, Fotos und gewünschte Beläge helfen beim ersten Gespräch; die Wohnfläche allein erlaubt keine genaue Berechnung.",
             ],
           },
         ],
@@ -1201,7 +1252,13 @@ export const extraSeoLandingPages = [
           {
             question: "Wie lange dauert es?",
             answer:
-              "Das hängt von Fläche, Materialtrocknungszeiten und vereinbartem Umfang ab.",
+              "Die Dauer hängt von Raumzahl, Vorbereitung, Trocknung und Zugang ab. Besprechen Sie das Freiräumen der Zimmer und Materiallieferungen im Voraus. Der Zeitplan wird nach Klärung der Arbeiten festgelegt.",
+          },
+          {
+            question:
+              "Kann ich während der Renovierung in der Wohnung bleiben?",
+            answer:
+              "Das hängt von den Arbeiten und der Abtrennbarkeit des Arbeitsbereichs ab. Staub, Möbeltransport sowie Zugang zu Küche und Bad sind vorab zu besprechen. Ob raumweise gearbeitet werden kann, wird bei der Besichtigung geprüft; nicht jeder Umfang lässt sich mit dem Bewohnen vereinbaren.",
           },
         ],
         calculatorLabel: "Renovierung besprechen",
@@ -1210,12 +1267,12 @@ export const extraSeoLandingPages = [
       },
       fr: {
         eyebrow: "Rénovation légère · Erevan",
-        title: "Rénovation légère à Erevan",
+        title: "Rénovation légère d’appartement à Erevan",
         description:
           "Rafraîchissez les finitions de votre appartement, maison ou d’une seule pièce lorsque l’électricité, la plomberie et les surfaces sont en bon état.",
-        seoTitle: "Rénovation légère à Erevan | SHINEX",
+        seoTitle: "Rénovation légère d’appartement à Erevan | SHINEX",
         seoDescription:
-          "Rénovation légère à Erevan : peinture, papier peint, réparations de plafonds et renouvellement des sols pour appartement, maison ou pièce individuelle.",
+          "Rénovation légère d’appartement à Erevan : murs, plafonds, sols ou une pièce. Rafraîchissement avant emménagement ou location. Devis SHINEX.",
         introduction: [
           "Une rénovation légère convient lorsque les murs, sols, câbles et canalisations sont sains, mais que les finitions visibles ont besoin d’être renouvelées.",
           "Nous vérifions d’abord les surfaces pour qu’un rafraîchissement ne masque pas un problème plus sérieux.",
@@ -1238,13 +1295,13 @@ export const extraSeoLandingPages = [
           {
             title: "Quand un rafraîchissement suffit",
             paragraphs: [
-              "Lorsque l’électricité, la plomberie et la structure sont en bon état, renouveler les finitions peut suffire à améliorer la pièce.",
+              "Un rafraîchissement peut convenir avant un emménagement, une vente ou une mise en location si les supports et les réseaux ne nécessitent pas de réparations importantes. Déterminez les surfaces à reprendre et les revêtements à conserver. Humidité, supports dégradés et réseaux défectueux doivent être évalués avant les finitions.",
             ],
           },
           {
             title: "Première estimation",
             paragraphs: [
-              "Le coût dépend de la surface, de l’état des murs et sols, des matériaux et des réparations nécessaires.",
+              "Le coût dépend des surfaces et des tâches : dépose de revêtements, préparation, peinture, papier peint ou pose de sol. Les matériaux sont payés séparément. Dimensions, photos et finitions souhaitées aident au premier échange ; la surface de l’appartement seule ne suffit pas à un chiffrage précis.",
             ],
           },
         ],
@@ -1262,7 +1319,13 @@ export const extraSeoLandingPages = [
           {
             question: "Combien de temps cela prend-il ?",
             answer:
-              "Cela dépend de la surface, du temps de séchage des matériaux et du périmètre convenu.",
+              "La durée dépend du nombre de pièces, de la préparation, du séchage et de l’accès. Prévoyez le dégagement des pièces et la livraison des matériaux. Le calendrier est établi une fois la liste des travaux précisée.",
+          },
+          {
+            question:
+              "Puis-je habiter l’appartement pendant une rénovation légère ?",
+            answer:
+              "Cela dépend des travaux et de la possibilité de séparer la zone de chantier. Il faut discuter à l’avance de la poussière, du déplacement des meubles et de l’accès à la cuisine et à la salle de bains. La faisabilité d’un travail pièce par pièce est évaluée lors de la visite ; certains travaux ne permettent pas de rester sur place.",
           },
         ],
         calculatorLabel: "Discuter de votre rénovation",

@@ -5,7 +5,12 @@ import type { Locale } from "@/types";
 
 export function RenovationPriceExamples({ locale }: { locale: Locale }) {
   const price = getPublicServicePrice("renovation");
-  if (!price?.from || price.unit !== "sqm" || price.currency !== "AMD")
+  if (
+    !price?.from ||
+    price.materialsIncluded !== false ||
+    price.unit !== "sqm" ||
+    price.currency !== "AMD"
+  )
     return null;
   const rate = price.from;
   const copy = priceExampleCopy[locale];
@@ -23,10 +28,10 @@ export function RenovationPriceExamples({ locale }: { locale: Locale }) {
           <caption className="sr-only">{copy.title}</caption>
           <thead className="bg-[var(--background-soft)]">
             <tr>
-              <th scope="col" className="p-4">
+              <th scope="col" className="p-3 sm:p-4">
                 {copy.area}
               </th>
-              <th scope="col" className="p-4">
+              <th scope="col" className="p-3 sm:p-4">
                 {copy.calculation}
               </th>
             </tr>
@@ -34,10 +39,10 @@ export function RenovationPriceExamples({ locale }: { locale: Locale }) {
           <tbody>
             {[40, 60, 80].map((area) => (
               <tr key={area} className="border-t border-[var(--border)]">
-                <th scope="row" className="p-4 font-medium">
+                <th scope="row" className="p-3 sm:p-4 font-medium">
                   {area} {copy.unit}
                 </th>
-                <td className="p-4">
+                <td className="p-3 sm:p-4">
                   {area} × {format.format(rate)} ={" "}
                   <strong className="whitespace-nowrap">
                     {format.format(area * rate)} {copy.currency}

@@ -1,3 +1,4 @@
+import { PageSchema } from "@/components/seo/page-schema";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
@@ -32,6 +33,13 @@ export default async function AboutPage({ params }: Props) {
 
   return (
     <>
+      <PageSchema
+        locale={locale}
+        pathname="about"
+        name={about.title}
+        description={about.intro}
+        type="AboutPage"
+      />
       <script
         dangerouslySetInnerHTML={{
           __html: serializeJsonLd(

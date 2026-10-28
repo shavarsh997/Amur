@@ -1,3 +1,4 @@
+import { PageSchema } from "@/components/seo/page-schema";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
@@ -31,6 +32,13 @@ export default async function PrivacyPage({ params }: Props) {
 
   return (
     <>
+      <PageSchema
+        locale={locale}
+        pathname="privacy"
+        name={privacy.title}
+        description={privacy.intro}
+        type="WebPage"
+      />
       <PageHero
         breadcrumbsLabel={dictionary.common.breadcrumbs}
         breadcrumbs={[

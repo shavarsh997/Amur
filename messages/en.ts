@@ -44,9 +44,9 @@ const dictionary = {
     specializedTitle: "Additional construction services",
     viewAll: "All services",
     learnMore: "View service",
-    pageTitle: "Renovation, interior design, and construction services",
+    pageTitle: "Renovation and construction services in Yerevan",
     pageDescription:
-      "Apartment and house renovation, private house construction, interior design, and individual construction work.",
+      "Explore SHINEX services in Yerevan: apartment and house renovation, construction, interior design, plumbing and electrical work. Compare scope and cost guides.",
     detail: {
       overview: "Service overview",
       included: "What the service includes",
@@ -791,9 +791,9 @@ const dictionary = {
   },
   about: {
     eyebrow: "About SHINEX",
-    title: "A clear way to organize renovation and construction",
+    title: "About our renovation and construction company in Armenia",
     intro:
-      "SHINEX develops renovation and construction services in Armenia with an emphasis on clear organization, initial assessment, agreed stages, and convenient communication with clients.",
+      "Learn how SHINEX plans renovation and construction in Armenia: property assessment, an agreed scope of work, project stages, and communication with the client.",
     storyTitle: "How the work is organized",
     story: [
       "We begin by understanding the project requirements, the space, and the expected result rather than starting with a pre-made promise.",

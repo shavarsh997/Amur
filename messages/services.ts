@@ -761,9 +761,9 @@ export const serviceTranslations = {
       suitableFor: ["Offices, retail, service, and other commercial spaces"],
       primaryCta: "Discuss your project",
       secondaryCta: "Send project details",
-      seoTitle: "Commercial space renovation in Armenia — SHINEX",
+      seoTitle: "Commercial Renovation and Fit-Out in Yerevan | SHINEX",
       seoDescription:
-        "Work for offices, retail, and service spaces in Armenia.",
+        "Commercial renovation in Yerevan and Armenia: shops, offices, salons and service spaces. Plan finishes, building services and work stages around your business.",
       workflow: [
         "Discuss room function and operating hours",
         "Survey, solutions, and estimate",
@@ -804,9 +804,9 @@ export const serviceTranslations = {
       suitableFor: ["Büros, Läden, Dienstleistungs- und andere Gewerberäume"],
       primaryCta: "Projekt besprechen",
       secondaryCta: "Projektdaten senden",
-      seoTitle: "Gewerberenovierung in Armenien — SHINEX",
+      seoTitle: "Renovierung von Gewerberäumen in Eriwan | SHINEX",
       seoDescription:
-        "Arbeiten für Büros, Läden und Dienstleistungsräume in Armenien.",
+        "Gewerberenovierung in Eriwan und Armenien: Läden, Büros und Dienstleistungsräume. Ausbau, Gebäudetechnik und Arbeitsphasen passend zum Betriebsablauf planen.",
       workflow: [
         "Raumfunktion und Betriebszeiten besprechen",
         "Besichtigung, Lösungen und Kostenschätzung",
@@ -850,9 +850,9 @@ export const serviceTranslations = {
       ],
       primaryCta: "Parlons du projet",
       secondaryCta: "Envoyer les détails du projet",
-      seoTitle: "Rénovation de locaux professionnels en Arménie — SHINEX",
+      seoTitle: "Rénovation de locaux professionnels à Erevan | SHINEX",
       seoDescription:
-        "Travaux pour bureaux, commerces et espaces de service en Arménie.",
+        "Rénovation de commerces, bureaux et locaux de service à Erevan et en Arménie. Préparez les finitions, les réseaux techniques et les étapes selon votre activité.",
       workflow: [
         "Discuter de la fonction des pièces et des horaires d’activité",
         "Visite, solutions et devis",
@@ -957,6 +957,9 @@ export const serviceTranslations = {
       ],
     }),
     en: serviceContent({
+      seoDescription:
+        "Architectural design in Armenia: building layouts, site requirements and working drawings for construction or reconstruction. Discuss your project with SHINEX.",
+      seoTitle: "Architectural Design in Armenia | SHINEX",
       faq: [
         {
           question: "What information is needed for a house design?",
@@ -991,6 +994,9 @@ export const serviceTranslations = {
       ],
     }),
     de: serviceContent({
+      seoDescription:
+        "Architekturplanung in Armenien: Gebäudegrundrisse, Grundstücksanforderungen und Ausführungspläne für Bau oder Umbau. Besprechen Sie Ihr Projekt mit SHINEX.",
+      seoTitle: "Architekturplanung in Armenien | SHINEX",
       faq: [
         {
           question: "Welche Angaben sind für eine Hausplanung nötig?",
@@ -1025,6 +1031,9 @@ export const serviceTranslations = {
       ],
     }),
     fr: serviceContent({
+      seoDescription:
+        "Conception architecturale en Arménie : plans du bâtiment, étude du terrain et documents d’exécution pour construire ou transformer. Présentez votre projet à SHINEX.",
+      seoTitle: "Conception architecturale en Arménie | SHINEX",
       faq: [
         {
           question: "Quelles informations faut-il pour concevoir une maison ?",
@@ -1535,6 +1544,8 @@ export const serviceTranslations = {
       ],
     }),
     en: serviceContent({
+      seoDescription:
+        "Reinforced concrete work in Armenia: formwork, reinforcement and concrete placement to structural drawings. Estimates based on quantities and site access.",
       seoTitle: "Reinforced Concrete Construction in Armenia | SHINEX",
       faq: [
         {
@@ -1569,6 +1580,8 @@ export const serviceTranslations = {
       ],
     }),
     de: serviceContent({
+      seoDescription:
+        "Stahlbetonarbeiten in Armenien: Schalung, Bewehrung und Betonieren nach Tragwerksplanung. Kostenschätzung anhand der Mengen, Pläne und Baustellenzufahrt.",
       seoTitle: "Stahlbetonbau in Armenien | SHINEX",
       faq: [
         {
@@ -1605,6 +1618,8 @@ export const serviceTranslations = {
       ],
     }),
     fr: serviceContent({
+      seoDescription:
+        "Travaux de béton armé en Arménie : coffrage, ferraillage et coulage selon les plans de structure. Devis selon les quantités et les conditions d’accès au chantier.",
       seoTitle: "Construction en béton armé en Arménie | SHINEX",
       faq: [
         {
@@ -1715,6 +1730,9 @@ export const serviceTranslations = {
       ],
     }),
     en: serviceContent({
+      seoDescription:
+        "Facade and roofing work in Armenia: new systems and renovation, protective layers, drainage and junctions. Request an assessment of your building from SHINEX.",
+      seoTitle: "Facade and Roofing Work in Armenia | SHINEX",
       faq: [
         {
           question: "What is needed to assess roofing or facade work?",
@@ -1748,6 +1766,9 @@ export const serviceTranslations = {
       ],
     }),
     de: serviceContent({
+      seoDescription:
+        "Fassaden- und Dacharbeiten in Armenien: Neubau und Erneuerung, Schutzschichten, Entwässerung und Anschlüsse. Fragen Sie eine Einschätzung Ihres Gebäudes an.",
+      seoTitle: "Fassaden- und Dacharbeiten in Armenien | SHINEX",
       faq: [
         {
           question:
@@ -1782,6 +1803,9 @@ export const serviceTranslations = {
       ],
     }),
     fr: serviceContent({
+      seoDescription:
+        "Façades et toitures en Arménie : construction, rénovation, couches de protection, évacuation des eaux et raccords. Demandez une évaluation de votre bâtiment.",
+      seoTitle: "Travaux de façade et de toiture en Arménie | SHINEX",
       faq: [
         {
           question:

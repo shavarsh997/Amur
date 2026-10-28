@@ -80,7 +80,7 @@ export function ServiceHero({
           src={image.src}
           alt={image.alt}
           fill
-          sizes="(max-width: 767px) 100vw, (max-width: 1599px) 55vw, 880px"
+          sizes="(max-width: 959px) 100vw, (max-width: 1599px) 55vw, 880px"
           loading="eager"
           fetchPriority="high"
           className={styles.photo}
@@ -171,7 +171,7 @@ export function ServiceDetails({
             src={image.src}
             alt={image.alt}
             fill
-            sizes="(max-width: 767px) calc(100vw - 40px), (max-width: 1279px) 42vw, 520px"
+            sizes="(max-width: 639px) calc(100vw - 32px), (max-width: 959px) calc(100vw - 48px), (max-width: 1279px) 42vw, 530px"
             className={styles.photo}
           />
           <figcaption>{image.caption ?? image.alt}</figcaption>

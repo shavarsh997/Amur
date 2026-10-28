@@ -36,6 +36,7 @@ const { seoLandingPages, getSeoLandingPath } = load(
   "config/seo-landing-pages.config"
 );
 const { getActiveServices } = load("config/services.config");
+const { relatedBaseServices } = load("config/related-services.config");
 const { getServiceNavigation } = load("config/navigation.config");
 const { servicePageTranslations } = load("messages/service-pages");
 const { servicePlanningTranslations, getServicePlanning } = load(
@@ -62,6 +63,19 @@ const paths = new Set(
   sitemap.map(({ url }) => new URL(url).pathname.split("/").slice(2).join("/"))
 );
 const serviceSlugs = new Set(getActiveServices("hy").map(({ slug }) => slug));
+for (const [slug, related] of Object.entries(relatedBaseServices)) {
+  assert(serviceSlugs.has(slug));
+  assert.equal(
+    new Set(related).size,
+    related.length,
+    `Duplicate related service: ${slug}`
+  );
+  for (const target of related)
+    assert(
+      target !== slug && serviceSlugs.has(target),
+      `Invalid related service: ${slug} → ${target}`
+    );
+}
 const landingSlugs = new Set(seoLandingPages.map(({ slug }) => slug));
 const pageExpectations = {};
 function expectPage(locale, path, title, description, h1, textFragments = []) {
@@ -744,6 +758,20 @@ const schemaProps = {
 };
 assert.equal(getWebPageJsonLd(schemaProps)["@type"], "WebPage");
 assert.equal(getServiceJsonLd(schemaProps)["@type"], "Service");
+for (const locale of locales) {
+  const service = getServiceJsonLd({
+    ...schemaProps,
+    locale,
+    pathname: "services/renovation",
+  });
+  assert.equal(service.mainEntityOfPage.mainEntity["@id"], service["@id"]);
+  assert.equal(service.mainEntityOfPage.inLanguage, localeLanguageTags[locale]);
+  assert.equal(service.mainEntityOfPage.url, service.url);
+  assert.equal(
+    getWebPageJsonLd({ ...schemaProps, locale, pathname: "" }).url,
+    `https://www.shinex.am/${locale}`
+  );
+}
 console.log(
   `SEO data checks passed: ${sitemap.length} URLs, ${seoRedirects.length * locales.length} redirects with slash/host variants, production/preview indexing, metadata and route references.`
 );

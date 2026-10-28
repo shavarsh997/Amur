@@ -1,0 +1,889 @@
+Browser tab: 3, Title: "PageSpeed Insights", URL: "https://pagespeed.web.dev/analysis/https-www-shinex-am-hy-services-apartment-renovation-yerevan/q7nnwbkxup?form_factor=mobile".
+0 AXWebArea PageSpeed Insights, URL: pagespeed.web.dev/analysis/https-www-shinex-am-hy-services-apartment-renovation-yerevan/q7nnwbkxup?form_factor=mobile
+	1 container yDmH0d
+		2 container kO001e
+			3 link Description: PageSpeed Insights logo PageSpeed Insights, Value: pagespeed.web.dev/
+			46 button Скопировать ссылку
+				47 image
+				48 text Скопировать ссылку
+			4 container
+				5 link Description: Документация, Value: developers.google.com/speed/docs/insights/v5/about
+		49 container
+			50 container
+				51 text Сайт использует файлы cookie сервисов Google. Это необходимо для его стабильной работы и анализа трафика.
+				52 container
+					53 link Description: Подробнее, Value: policies.google.com/technologies/cookies
+				54 button ОК
+					55 text ОК
+				56 text Отчет от  28 окт. 2026 г., 12:05:55
+				57 text field (settable) Value: https://www.shinex.am/hy/services/apartment-renovation-yerevan, ID: c63
+				58 button Анализировать
+					59 text Анализировать
+				60 tab group
+					61 tab (selected, settable, boolean) Мобильные устройства, Value: 1, ID: mobile_tab
+					62 tab (selectable, settable, boolean) Компьютер, Value: 0, ID: desktop_tab
+				63 container Мобильные устройства
+					64 text Определяйте фактическую производительность сайта
+					65 button button
+					66 text Нет данных
+					67 text Выявляйте проблемы с производительностью
+					68 container
+						69 container
+							70 link Description: Производительность, Value: pagespeed.web.dev/#performance
+							71 link Description: Специальные возможности, Value: pagespeed.web.dev/#accessibility
+							72 link Description: Рекомендации, Value: pagespeed.web.dev/#best-practices
+							73 link Description: Поисковая оптимизация, Value: pagespeed.web.dev/#seo
+							74 link Description: 0/7 Агентный просмотр, Value: pagespeed.web.dev/#agentic-browsing
+							75 text 0–49 50–89 90–100
+						76 container performance
+							77 heading Производительность, Value: 2
+								78 container
+									79 image
+									80 text Производительность
+							81 container
+								82 text Значения приблизительные и могут изменяться. 
+								83 link Description: Уровень производительности рассчитывается, Value: developer.chrome.com/docs/lighthouse/performance/performance-scoring/?utm_source=lighthouse&utm_medium=lr
+								84 text  непосредственно на основании этих показателей.
+								85 link Description: Показать калькулятор, Value: googlechrome.github.io/lighthouse/scorecalc/#FCP=null&LCP=null&TBT=null&CLS=null&SI=null&TTI=null&device=mobile&version=13.5.0
+							86 container
+								87 checkbox (settable, integer) Description: Toggle the display of metric descriptions, Value: 1, ID: lh-metrics-toggle11
+								88 text ПОКАЗАТЕЛИ Свернуть
+								89 container first-contentful-paint
+									90 text First Contentful Paint
+									91 text Error!
+									92 text Не удалось загрузить страницу. Убедитесь, что URL введен правильно и сервер отвечает на все запросы. Подробнее: net::ERR_TIMED_OUT.
+								93 container largest-contentful-paint
+									94 text Largest Contentful Paint
+									95 text Error!
+									96 text Не удалось загрузить страницу. Убедитесь, что URL введен правильно и сервер отвечает на все запросы. Подробнее: net::ERR_TIMED_OUT.
+								97 container total-blocking-time
+									98 text Total Blocking Time
+									99 text Error!
+									100 text Не удалось загрузить страницу. Убедитесь, что URL введен правильно и сервер отвечает на все запросы. Подробнее: net::ERR_TIMED_OUT.
+								101 container cumulative-layout-shift
+									102 text Cumulative Layout Shift
+									103 text Error!
+									104 text Не удалось загрузить страницу. Убедитесь, что URL введен правильно и сервер отвечает на все запросы. Подробнее: net::ERR_TIMED_OUT.
+								105 container speed-index
+									106 text Speed Index
+									107 text Error!
+									108 text Не удалось загрузить страницу. Убедитесь, что URL введен правильно и сервер отвечает на все запросы. Подробнее: net::ERR_TIMED_OUT.
+								109 content list
+									110 text Captured at 28 окт. 2026 г., 12:05 GMT+4
+									111 text Эмуляция устройства Moto G Power with Lighthouse 13.5.0
+									112 text Сеанс с просмотром одной страницы
+									113 text Начальная загрузка страницы
+									114 text Ограничение для сети 4G с низкой скоростью
+									115 text Using HeadlessChromium 153.0.8010.36 with lr
+							116 container
+								117 text СТАТИСТИКА
+								118 button (collapsed) Выбирайте эффективный период хранения кеша —Ошибка, Secondary Actions: Expand
+									119 text Выбирайте эффективный период хранения кеша
+									902 text —
+									121 text Ошибка
+								122 button (collapsed) Причины смещения макета —Ошибка, Secondary Actions: Expand
+									123 text Причины смещения макета
+									903 text —
+									125 text Ошибка
+								126 button (collapsed) Задержка при запросе документа —Ошибка, Secondary Actions: Expand
+									127 text Задержка при запросе документа
+									904 text —
+									129 text Ошибка
+								130 button (collapsed) Оптимизация размера DOM-дерева —Ошибка, Secondary Actions: Expand
+									131 text Оптимизация размера DOM-дерева
+									905 text —
+									133 text Ошибка
+								134 button (collapsed) Используемые шрифты —Ошибка, Secondary Actions: Expand
+									135 text Используемые шрифты
+									906 text —
+									137 text Ошибка
+								138 button (collapsed) Принудительная компоновка —Ошибка, Secondary Actions: Expand
+									139 text Принудительная компоновка
+									907 text —
+									141 text Ошибка
+								142 button (collapsed) Улучшите загрузку изображений —Ошибка, Secondary Actions: Expand
+									143 text Улучшите загрузку изображений
+									908 text —
+									145 text Ошибка
+								146 button (collapsed) Обзор INP —Ошибка, Secondary Actions: Expand
+									147 text Обзор INP
+									909 text —
+									149 text Ошибка
+								150 button (collapsed) Разбивка LCP —Ошибка, Secondary Actions: Expand
+									151 text Разбивка LCP
+									910 text —
+									153 text Ошибка
+								154 button (collapsed) Информация об LCP и связанных запросах —Ошибка, Secondary Actions: Expand
+									155 text Информация об LCP и связанных запросах
+									911 text —
+									157 text Ошибка
+								158 button (collapsed) Запросы, блокирующие отрисовку страницы —Ошибка, Secondary Actions: Expand
+									159 text Запросы, блокирующие отрисовку страницы
+									912 text —
+									161 text Ошибка
+								162 button (collapsed) Сторонний код —Ошибка, Secondary Actions: Expand
+									163 text Сторонний код
+									913 text —
+									165 text Ошибка
+								166 button (collapsed) Оптимизация области просмотра для мобильных устройств —Ошибка, Secondary Actions: Expand
+									167 text Оптимизация области просмотра для мобильных устройств
+									914 text —
+									169 text Ошибка
+								170 button (collapsed) Дублирующийся код JavaScript —Ошибка, Secondary Actions: Expand
+									171 text Дублирующийся код JavaScript
+									915 text —
+									173 text Ошибка
+								174 button (collapsed) Устаревший код JavaScript —Ошибка, Secondary Actions: Expand
+									175 text Устаревший код JavaScript
+									916 text —
+									177 text Ошибка
+								178 button (collapsed) Дерево зависимостей в сети —Ошибка, Secondary Actions: Expand
+									179 text Дерево зависимостей в сети
+									917 text —
+									181 text Ошибка
+								182 text Статистические данные доступны на панели "Производительность" инструментов разработчика в Chrome. Чтобы узнавать подробную информацию, 
+								183 link Description: создайте трассировку, Value: developer.chrome.com/docs/devtools/performance/reference?utm_source=lighthouse&utm_medium=lr
+								184 text .
+							185 container
+								186 text ДИАГНОСТИКА
+								187 button (collapsed) Для изображений явным образом заданы атрибуты width и height. —Ошибка, Secondary Actions: Expand
+									188 text Для изображений явным образом заданы атрибуты 
+									189 text width
+									190 text  и 
+									191 text height
+									192 text .
+									918 text —
+									194 text Ошибка
+								195 button (collapsed) Уменьшите размер кода CSS —Ошибка, Secondary Actions: Expand
+									196 text Уменьшите размер кода CSS
+									919 text —
+									198 text Ошибка
+								199 button (collapsed) Уменьшите размер кода JavaScript —Ошибка, Secondary Actions: Expand
+									200 text Уменьшите размер кода JavaScript
+									920 text —
+									202 text Ошибка
+								203 button (collapsed) Метки и промежутки пользовательского времени —Ошибка, Secondary Actions: Expand
+									204 text Метки и промежутки пользовательского времени
+									921 text —
+									206 text Ошибка
+								207 button (collapsed) Избегайте некомбинированных анимаций —Ошибка, Secondary Actions: Expand
+									208 text Избегайте некомбинированных анимаций
+									922 text —
+									210 text Ошибка
+								211 button (collapsed) Удалите неиспользуемый код CSS —Ошибка, Secondary Actions: Expand
+									212 text Удалите неиспользуемый код CSS
+									923 text —
+									214 text Ошибка
+								215 button (collapsed) Удалите неиспользуемый код JavaScript —Ошибка, Secondary Actions: Expand
+									216 text Удалите неиспользуемый код JavaScript
+									924 text —
+									218 text Ошибка
+								219 button (collapsed) Предотвращение чрезмерной нагрузки на сеть —Ошибка, Secondary Actions: Expand
+									220 text Предотвращение чрезмерной нагрузки на сеть
+									925 text —
+									222 text Ошибка
+								223 button (collapsed) Время выполнения кода JavaScript —Ошибка, Secondary Actions: Expand
+									224 text Время выполнения кода JavaScript
+									926 text —
+									226 text Ошибка
+								227 button (collapsed) Минимизация работы в основном потоке —Ошибка, Secondary Actions: Expand
+									228 text Минимизация работы в основном потоке
+									927 text —
+									230 text Ошибка
+								231 button (collapsed) Избегайте длительных задач в основном потоке —Ошибка, Secondary Actions: Expand
+									232 text Избегайте длительных задач в основном потоке
+									928 text —
+									234 text Ошибка
+								235 text Подробная информация о производительности вашего приложения. Эти цифры не влияют на показатель производительности 
+								236 link Description: напрямую, Value: developer.chrome.com/docs/lighthouse/performance/performance-scoring/?utm_source=lighthouse&utm_medium=lr
+								237 text .
+						238 container accessibility
+							239 heading Специальные возможности, Value: 2
+								240 container
+									241 image
+									242 text Специальные возможности
+							243 container
+								244 text Узнайте, какие трудности могут возникнуть у людей с ограниченными возможностями при использовании вашего веб-приложения, и 
+								245 link Description: сделайте его доступнее, Value: developer.chrome.com/docs/lighthouse/accessibility/?utm_source=lighthouse&utm_medium=lr
+								246 text . Автоматические проверки не гарантируют доступность приложения, поэтому мы рекомендуем выполнять 
+								247 link Description: тестирование вручную, Value: web.dev/articles/how-to-review?utm_source=lighthouse&utm_medium=lr
+								248 text . Оно поможет выявить оставшиеся проблемы.
+							249 button (collapsed) Interactive controls are keyboard focusable —Ошибка, Secondary Actions: Expand
+								250 text Interactive controls are keyboard focusable
+								929 text —
+								252 text Ошибка
+							253 button (collapsed) Interactive elements indicate their purpose and state —Ошибка, Secondary Actions: Expand
+								254 text Interactive elements indicate their purpose and state
+								930 text —
+								256 text Ошибка
+							257 button (collapsed) The page has a logical tab order —Ошибка, Secondary Actions: Expand
+								258 text The page has a logical tab order
+								931 text —
+								260 text Ошибка
+							261 button (collapsed) Visual order on the page follows DOM order —Ошибка, Secondary Actions: Expand
+								262 text Visual order on the page follows DOM order
+								932 text —
+								264 text Ошибка
+							265 button (collapsed) User focus is not accidentally trapped in a region —Ошибка, Secondary Actions: Expand
+								266 text User focus is not accidentally trapped in a region
+								933 text —
+								268 text Ошибка
+							269 button (collapsed) The user's focus is directed to new content added to the page —Ошибка, Secondary Actions: Expand
+								270 text The user's focus is directed to new content added to the page
+								934 text —
+								272 text Ошибка
+							273 button (collapsed) HTML5 landmark elements are used to improve navigation —Ошибка, Secondary Actions: Expand
+								274 text HTML5 landmark elements are used to improve navigation
+								935 text —
+								276 text Ошибка
+							277 button (collapsed) Offscreen content is hidden from assistive technology —Ошибка, Secondary Actions: Expand
+								278 text Offscreen content is hidden from assistive technology
+								936 text —
+								280 text Ошибка
+							281 button (collapsed) Custom controls have associated labels —Ошибка, Secondary Actions: Expand
+								282 text Custom controls have associated labels
+								937 text —
+								284 text Ошибка
+							285 button (collapsed) Custom controls have ARIA roles —Ошибка, Secondary Actions: Expand
+								286 text Custom controls have ARIA roles
+								938 text —
+								288 text Ошибка
+							289 container
+								290 text ARIA
+								291 button (collapsed) Атрибуты [aria-*] соответствуют своим ролям —Ошибка, Secondary Actions: Expand
+									292 text Атрибуты 
+									293 text [aria-*]
+									294 text  соответствуют своим ролям
+									939 text —
+									296 text Ошибка
+								297 button (collapsed) Элемент <body> в документе не содержит атрибут [aria-hidden="true"] —Ошибка, Secondary Actions: Expand
+									298 text Элемент 
+									299 text <body>
+									300 text  в документе не содержит атрибут 
+									301 text [aria-hidden="true"]
+									940 text —
+									303 text Ошибка
+								304 button (collapsed) У элементов [role] есть все необходимые атрибуты [aria-*] —Ошибка, Secondary Actions: Expand
+									305 text У элементов 
+									306 text [role]
+									307 text  есть все необходимые атрибуты 
+									308 text [aria-*]
+									941 text —
+									310 text Ошибка
+								311 button (collapsed) Secondary Actions: Expand, В элементах с ролью ARIA [role] присутствуют все обязательные дочерние элементы, которые должны содержать определенный элемент [role]. —Ошибка
+									312 text В элементах с ролью ARIA 
+									313 text [role]
+									314 text  присутствуют все обязательные дочерние элементы, которые должны содержать определенный элемент 
+									315 text [role]
+									316 text .
+									942 text —
+									318 text Ошибка
+								319 button (collapsed) Элементы с атрибутом [role] содержатся в своих родительских элементах —Ошибка, Secondary Actions: Expand
+									320 text Элементы с атрибутом 
+									321 text [role]
+									322 text  содержатся в своих родительских элементах
+									943 text —
+									324 text Ошибка
+								325 button (collapsed) Недействительные значения атрибутов [role] отсутствуют —Ошибка, Secondary Actions: Expand
+									326 text Недействительные значения атрибутов 
+									327 text [role]
+									328 text  отсутствуют
+									944 text —
+									330 text Ошибка
+								331 button (collapsed) Недействительные значения атрибутов [aria-*] отсутствуют —Ошибка, Secondary Actions: Expand
+									332 text Недействительные значения атрибутов 
+									333 text [aria-*]
+									334 text  отсутствуют
+									945 text —
+									336 text Ошибка
+								337 button (collapsed) Атрибуты [aria-*] действительны и написаны без ошибок —Ошибка, Secondary Actions: Expand
+									338 text Атрибуты 
+									339 text [aria-*]
+									340 text  действительны и написаны без ошибок
+									946 text —
+									342 text Ошибка
+								343 button (collapsed) Идентификаторы ARIA уникальны —Ошибка, Secondary Actions: Expand
+									344 text Идентификаторы ARIA уникальны
+									947 text —
+									346 text Ошибка
+								347 button (collapsed) У элементов button, link и menuitem есть названия, доступные программам чтения с экрана —Ошибка, Secondary Actions: Expand
+									348 text У элементов 
+									349 text button
+									350 text , 
+									351 text link
+									352 text  и 
+									353 text menuitem
+									354 text  есть названия, доступные программам чтения с экрана
+									948 text —
+									356 text Ошибка
+								357 button (collapsed) Атрибуты ARIA используются так, как указано для роли элемента —Ошибка, Secondary Actions: Expand
+									358 text Атрибуты ARIA используются так, как указано для роли элемента
+									949 text —
+									360 text Ошибка
+								361 button (collapsed) У элементов с атрибутом role="dialog" или role="alertdialog" есть доступные названия —Ошибка, Secondary Actions: Expand
+									362 text У элементов с атрибутом 
+									363 text role="dialog"
+									364 text  или 
+									365 text role="alertdialog"
+									366 text  есть доступные названия
+									950 text —
+									368 text Ошибка
+								369 button (collapsed) Secondary Actions: Expand, Элементы, к которым применен атрибут [aria-hidden="true"], не содержат активных дочерних элементов —Ошибка
+									370 text Элементы, к которым применен атрибут 
+									371 text [aria-hidden="true"]
+									372 text , не содержат активных дочерних элементов
+									951 text —
+									374 text Ошибка
+								375 button (collapsed) У полей ввода ARIA есть доступные названия —Ошибка, Secondary Actions: Expand
+									376 text У полей ввода ARIA есть доступные названия
+									952 text —
+									378 text Ошибка
+								379 button (collapsed) У элементов meter ARIA есть названия, доступные программам чтения с экрана —Ошибка, Secondary Actions: Expand
+									380 text У элементов 
+									381 text meter
+									382 text  ARIA есть названия, доступные программам чтения с экрана
+									953 text —
+									384 text Ошибка
+								385 button (collapsed) У элементов progressbar ARIA есть названия, доступные программам чтения с экрана —Ошибка, Secondary Actions: Expand
+									386 text У элементов 
+									387 text progressbar
+									388 text  ARIA есть названия, доступные программам чтения с экрана
+									954 text —
+									390 text Ошибка
+								391 button (collapsed) В элементах используются только разрешенные атрибуты ARIA —Ошибка, Secondary Actions: Expand
+									392 text В элементах используются только разрешенные атрибуты ARIA
+									955 text —
+									394 text Ошибка
+								395 button (collapsed) У элементов атрибута role=text нет фокусируемых потомков —Ошибка, Secondary Actions: Expand
+									396 text У элементов атрибута 
+									397 text role=text
+									398 text  нет фокусируемых потомков
+									956 text —
+									400 text Ошибка
+								401 button (collapsed) У переключателей ARIA есть доступные названия —Ошибка, Secondary Actions: Expand
+									402 text У переключателей ARIA есть доступные названия
+									957 text —
+									404 text Ошибка
+								405 button (collapsed) У элементов tooltip ARIA есть названия, доступные программам чтения с экрана —Ошибка, Secondary Actions: Expand
+									406 text У элементов 
+									407 text tooltip
+									408 text  ARIA есть названия, доступные программам чтения с экрана
+									958 text —
+									410 text Ошибка
+								411 button (collapsed) У элементов treeitem ARIA есть названия, доступные программам чтения с экрана —Ошибка, Secondary Actions: Expand
+									412 text У элементов 
+									413 text treeitem
+									414 text  ARIA есть названия, доступные программам чтения с экрана
+									959 text —
+									416 text Ошибка
+								417 button (collapsed) Устаревшие роли ARIA не использовались —Ошибка, Secondary Actions: Expand
+									418 text Устаревшие роли ARIA не использовались
+									960 text —
+									420 text Ошибка
+								421 text Проверьте, правильно ли заданы атрибуты ARIA. Они облегчают работу с вашим приложением пользователям с ограниченными возможностями.
+							422 container
+								423 text НАЗВАНИЯ И ЯРЛЫКИ
+								424 button (collapsed) Названия кнопок доступны программам чтения с экрана —Ошибка, Secondary Actions: Expand
+									425 text Названия кнопок доступны программам чтения с экрана
+									961 text —
+									427 text Ошибка
+								428 button (collapsed) У элементов изображений есть атрибут [alt] —Ошибка, Secondary Actions: Expand
+									429 text У элементов изображений есть атрибут 
+									430 text [alt]
+									962 text —
+									432 text Ошибка
+								433 button (collapsed) Текст кнопок ввода легко различим —Ошибка, Secondary Actions: Expand
+									434 text Текст кнопок ввода легко различим
+									963 text —
+									436 text Ошибка
+								437 button (collapsed) Элементы <input type="image"> содержат атрибут [alt] —Ошибка, Secondary Actions: Expand
+									438 text Элементы 
+									439 text <input type="image">
+									440 text  содержат атрибут 
+									441 text [alt]
+									964 text —
+									443 text Ошибка
+								444 button (collapsed) Элементам формы присвоены соответствующие ярлыки —Ошибка, Secondary Actions: Expand
+									445 text Элементам формы присвоены соответствующие ярлыки
+									965 text —
+									447 text Ошибка
+								448 button (collapsed) У элементов select есть связанные элементы label —Ошибка, Secondary Actions: Expand
+									449 text У элементов select есть связанные элементы label
+									966 text —
+									451 text Ошибка
+								452 button (collapsed) Документ содержит элемент <title> —Ошибка, Secondary Actions: Expand
+									453 text Документ содержит элемент 
+									454 text <title>
+									967 text —
+									456 text Ошибка
+								457 button (collapsed) У элементов <frame> и <iframe> есть атрибут title —Ошибка, Secondary Actions: Expand
+									458 text У элементов 
+									459 text <frame>
+									460 text  и 
+									461 text <iframe>
+									462 text  есть атрибут title
+									968 text —
+									464 text Ошибка
+								465 button (collapsed) Текст ссылок различим для программ чтения с экрана —Ошибка, Secondary Actions: Expand
+									466 text Текст ссылок различим для программ чтения с экрана
+									969 text —
+									468 text Ошибка
+								469 button (collapsed) У элементов <object> есть альтернативный текст —Ошибка, Secondary Actions: Expand
+									470 text У элементов 
+									471 text <object>
+									472 text  есть альтернативный текст
+									970 text —
+									474 text Ошибка
+								475 button (collapsed) В форме нет полей с несколькими ярлыками —Ошибка, Secondary Actions: Expand
+									476 text В форме нет полей с несколькими ярлыками
+									971 text —
+									478 text Ошибка
+								479 button (collapsed) Ссылки для пропуска контента фокусируемые —Ошибка, Secondary Actions: Expand
+									480 text Ссылки для пропуска контента фокусируемые
+									972 text —
+									482 text Ошибка
+								483 button (collapsed) У изображений нет атрибутов [alt], представляющих собой избыточный текст —Ошибка, Secondary Actions: Expand
+									484 text У изображений нет атрибутов 
+									485 text [alt]
+									486 text , представляющих собой избыточный текст
+									973 text —
+									488 text Ошибка
+								489 text Проверьте, насколько элементы управления в вашем приложении различимы для программ чтения с экрана.
+							490 container
+								491 text РЕКОМЕНДАЦИИ
+								492 button (collapsed) В документе не используется метатег <meta http-equiv="refresh"> —Ошибка, Secondary Actions: Expand
+									493 text В документе не используется метатег 
+									494 text <meta http-equiv="refresh">
+									974 text —
+									496 text Ошибка
+								497 button (collapsed) Secondary Actions: Expand, Атрибут [user-scalable="no"] не используется в элементе <meta name="viewport">, и значение атрибута [maximum-scale] больше или равно 5 —Ошибка
+									498 text Атрибут 
+									499 text [user-scalable="no"]
+									500 text  не используется в элементе 
+									501 text <meta name="viewport">
+									502 text , и значение атрибута 
+									503 text [maximum-scale]
+									504 text  больше или равно 5
+									975 text —
+									506 text Ошибка
+								507 button (collapsed) Области прикосновения и расстояние между ними достаточно большие —Ошибка, Secondary Actions: Expand
+									508 text Области прикосновения и расстояние между ними достаточно большие
+									976 text —
+									510 text Ошибка
+								511 button (collapsed) В документе есть ориентир main —Ошибка, Secondary Actions: Expand
+									512 text В документе есть ориентир main
+									977 text —
+									514 text Ошибка
+								515 button (collapsed) Атрибуты autocomplete используются правильно —Ошибка, Secondary Actions: Expand
+									516 text Атрибуты 
+									517 text autocomplete
+									518 text  используются правильно
+									978 text —
+									520 text Ошибка
+								521 button (collapsed) У элементов с атрибутом role="none" (или role="presentation") нет конфликтов —Ошибка, Secondary Actions: Expand
+									522 text У элементов с атрибутом 
+									523 text role="none"
+									524 text  (или 
+									525 text role="presentation"
+									526 text ) нет конфликтов
+									979 text —
+									528 text Ошибка
+								529 button (collapsed) У SVG-элементов с ролью img есть доступный альтернативный текст —Ошибка, Secondary Actions: Expand
+									530 text У SVG-элементов с ролью 
+									531 text img
+									532 text  есть доступный альтернативный текст
+									980 text —
+									534 text Ошибка
+								535 button (collapsed) В таблицах указаны разные значения для атрибута summary и элемента <caption> —Ошибка, Secondary Actions: Expand
+									536 text В таблицах указаны разные значения для атрибута summary и элемента 
+									537 text <caption>
+									981 text —
+									539 text Ошибка
+								540 button (collapsed) Во всех элементах заголовка есть содержимое —Ошибка, Secondary Actions: Expand
+									541 text Во всех элементах заголовка есть содержимое
+									982 text —
+									543 text Ошибка
+								544 button (collapsed) Роли ARIA назначены только совместимым элементам —Ошибка, Secondary Actions: Expand
+									545 text Роли ARIA назначены только совместимым элементам
+									983 text —
+									547 text Ошибка
+								548 button (collapsed) У одинаковых ссылок одно назначение —Ошибка, Secondary Actions: Expand
+									549 text У одинаковых ссылок одно назначение
+									984 text —
+									551 text Ошибка
+								552 text Проверьте, соответствует ли ваш сайт рекомендациям по оптимизации для поисковых систем.
+							553 container
+								554 text АУДИО И ВИДЕО
+								555 button (collapsed) Элементы <video> содержат элемент <track> с атрибутом [kind="captions"] —Ошибка, Secondary Actions: Expand
+									556 text Элементы 
+									557 text <video>
+									558 text  содержат элемент 
+									559 text <track>
+									560 text  с атрибутом 
+									561 text [kind="captions"]
+									985 text —
+									563 text Ошибка
+								564 text Проверьте, доступны ли на вашем сайте описания для аудио- и видеоконтента. Это сделает сайт удобнее для пользователей с нарушениями зрения и слуха.
+							565 container
+								566 text НАВИГАЦИЯ
+								567 button (collapsed) [accesskey]: значения уникальны —Ошибка, Secondary Actions: Expand
+									568 text [accesskey]
+									569 text : значения уникальны
+									986 text —
+									571 text Ошибка
+								572 button (collapsed) Страница содержит заголовок, ссылку для пропуска контента или указание региона —Ошибка, Secondary Actions: Expand
+									573 text Страница содержит заголовок, ссылку для пропуска контента или указание региона
+									987 text —
+									575 text Ошибка
+								576 button (collapsed) Нет элементов со значением атрибута [tabindex] выше 0 —Ошибка, Secondary Actions: Expand
+									577 text Нет элементов со значением атрибута 
+									578 text [tabindex]
+									579 text  выше 0
+									988 text —
+									581 text Ошибка
+								582 button (collapsed) Элементы заголовков расположены последовательно в порядке убывания —Ошибка, Secondary Actions: Expand
+									583 text Элементы заголовков расположены последовательно в порядке убывания
+									989 text —
+									585 text Ошибка
+								586 text Проверьте, удобно ли пользователям перемещаться по вашему приложению с помощью клавиатуры.
+							587 container
+								588 text КОНТРАСТНОСТЬ
+								589 button (collapsed) Цвета фона и переднего плана достаточно контрастны —Ошибка, Secondary Actions: Expand
+									590 text Цвета фона и переднего плана достаточно контрастны
+									990 text —
+									592 text Ошибка
+								593 button (collapsed) Ссылки можно различить, не опираясь на цвет —Ошибка, Secondary Actions: Expand
+									594 text Ссылки можно различить, не опираясь на цвет
+									991 text —
+									596 text Ошибка
+								597 text Проверьте, хорошо ли виден ваш текст.
+							598 container
+								599 text ТАБЛИЦЫ И СПИСКИ
+								600 button (collapsed) Secondary Actions: Expand, Элементы <dl> содержат только правильно размещенные группы <dt> и <dd> и элементы <script>, <template> или <div>. —Ошибка
+									601 text Элементы 
+									602 text <dl>
+									603 text  содержат только правильно размещенные группы 
+									604 text <dt>
+									605 text  и 
+									606 text <dd>
+									607 text  и элементы 
+									608 text <script>
+									609 text , 
+									610 text <template>
+									611 text  или 
+									612 text <div>
+									613 text .
+									992 text —
+									615 text Ошибка
+								616 button (collapsed) Элементы списков определений расположены внутри элементов <dl> —Ошибка, Secondary Actions: Expand
+									617 text Элементы списков определений расположены внутри элементов 
+									618 text <dl>
+									993 text —
+									620 text Ошибка
+								621 button (collapsed) Secondary Actions: Expand, В списках содержатся только элементы <li> и элементы поддержки скрипта (<script> и <template>) —Ошибка
+									622 text В списках содержатся только элементы 
+									623 text <li>
+									624 text  и элементы поддержки скрипта (
+									625 text <script>
+									626 text  и 
+									627 text <template>
+									628 text )
+									994 text —
+									630 text Ошибка
+								631 button (collapsed) Элементы списка (<li>) расположены внутри родительских элементов <ul>, <ol> или <menu> —Ошибка, Secondary Actions: Expand
+									632 text Элементы списка (
+									633 text <li>
+									634 text ) расположены внутри родительских элементов 
+									635 text <ul>
+									636 text , 
+									637 text <ol>
+									638 text  или 
+									639 text <menu>
+									995 text —
+									641 text Ошибка
+								642 button (collapsed) Secondary Actions: Expand, Ячейки внутри элемента <table>, в которых используется атрибут [headers], ссылаются на ячейки той же таблицы. —Ошибка
+									643 text Ячейки внутри элемента 
+									644 text <table>
+									645 text , в которых используется атрибут 
+									646 text [headers]
+									647 text , ссылаются на ячейки той же таблицы.
+									996 text —
+									649 text Ошибка
+								650 button (collapsed) Secondary Actions: Expand, В элементах <th> и элементах с атрибутом [role="columnheader"/"rowheader"] есть описываемые ими ячейки с данными —Ошибка
+									651 text В элементах 
+									652 text <th>
+									653 text  и элементах с атрибутом 
+									654 text [role="columnheader"/"rowheader"]
+									655 text  есть описываемые ими ячейки с данными
+									997 text —
+									657 text Ошибка
+								658 text Проверьте, насколько эффективно программы чтения с экрана распознают данные в таблицах и списках на вашем сайте.
+							659 container
+								660 text ИНТЕРНАЦИОНАЛИЗАЦИЯ И ЛОКАЛИЗАЦИЯ
+								661 button (collapsed) Элемент <html> содержит атрибут [lang] —Ошибка, Secondary Actions: Expand
+									662 text Элемент 
+									663 text <html>
+									664 text  содержит атрибут 
+									665 text [lang]
+									998 text —
+									667 text Ошибка
+								668 button (collapsed) Для элемента <html> указано действительное значение атрибута [lang] —Ошибка, Secondary Actions: Expand
+									669 text Для элемента 
+									670 text <html>
+									671 text  указано действительное значение атрибута 
+									672 text [lang]
+									999 text —
+									674 text Ошибка
+								675 button (collapsed) Недействительные значения атрибутов [lang] отсутствуют —Ошибка, Secondary Actions: Expand
+									676 text Недействительные значения атрибутов 
+									677 text [lang]
+									678 text  отсутствуют
+									1000 text —
+									680 text Ошибка
+								681 button (collapsed) Secondary Actions: Expand, У элемента <html> есть атрибут [xml:lang], основной язык которого совпадает с языком в атрибуте [lang] —Ошибка
+									682 text У элемента 
+									683 text <html>
+									684 text  есть атрибут 
+									685 text [xml:lang]
+									686 text , основной язык которого совпадает с языком в атрибуте 
+									687 text [lang]
+									1001 text —
+									689 text Ошибка
+								690 text Проверьте, правильно ли заданы атрибуты языков для программ чтения с экрана.
+						691 container best-practices
+							692 heading Рекомендации, Value: 2
+								693 container
+									694 image
+									695 text Рекомендации
+							696 container
+								697 text НАДЕЖНОСТЬ И БЕЗОПАСНОСТЬ
+								698 button (collapsed) Используется протокол HTTPS —Ошибка, Secondary Actions: Expand
+									699 text Используется протокол HTTPS
+									1002 text —
+									701 text Ошибка
+								702 button (collapsed) Перенаправляет трафик с HTTP на HTTPS —Ошибка, Secondary Actions: Expand
+									703 text Перенаправляет трафик с HTTP на HTTPS
+									1003 text —
+									705 text Ошибка
+								706 button (collapsed) Разрешение на определение местоположения не запрашивается при загрузке страницы —Ошибка, Secondary Actions: Expand
+									707 text Разрешение на определение местоположения не запрашивается при загрузке страницы
+									1004 text —
+									709 text Ошибка
+								710 button (collapsed) Разрешение на отправку уведомлений не запрашивается при загрузке страницы —Ошибка, Secondary Actions: Expand
+									711 text Разрешение на отправку уведомлений не запрашивается при загрузке страницы
+									1005 text —
+									713 text Ошибка
+								714 button (collapsed) Убедитесь, что политика CSP эффективна против атак XSS —Ошибка, Secondary Actions: Expand
+									715 text Убедитесь, что политика CSP эффективна против атак XSS
+									1006 text —
+									717 text Ошибка
+								718 button (collapsed) Использование строгого механизма HSTS —Ошибка, Secondary Actions: Expand
+									719 text Использование строгого механизма HSTS
+									1007 text —
+									721 text Ошибка
+								722 button (collapsed) Обеспечьте надлежащую изоляцию источников с помощью COOP —Ошибка, Secondary Actions: Expand
+									723 text Обеспечьте надлежащую изоляцию источников с помощью COOP
+									1008 text —
+									725 text Ошибка
+								726 button (collapsed) Защита от кликджекинга с использованием заголовка XFO или CSP —Ошибка, Secondary Actions: Expand
+									727 text Защита от кликджекинга с использованием заголовка XFO или CSP
+									1009 text —
+									729 text Ошибка
+								730 button (collapsed) Используйте Trusted Types для предотвращения XSS-атак на основе DOM —Ошибка, Secondary Actions: Expand
+									731 text Используйте Trusted Types для предотвращения XSS-атак на основе DOM
+									1010 text —
+									733 text Ошибка
+							734 container
+								735 text ОБЩИЕ РЕКОМЕНДАЦИИ
+								736 button (collapsed) Устаревшие API не используются —Ошибка, Secondary Actions: Expand
+									737 text Устаревшие API не используются
+									1011 text —
+									739 text Ошибка
+								740 button (collapsed) Сторонние файлы cookie не используются —Ошибка, Secondary Actions: Expand
+									741 text Сторонние файлы cookie не используются
+									1012 text —
+									743 text Ошибка
+								744 button (collapsed) В журнале консоли нет ошибок браузера —Ошибка, Secondary Actions: Expand
+									745 text В журнале консоли нет ошибок браузера
+									1013 text —
+									747 text Ошибка
+								748 button (collapsed) Нет записей ошибок на панели Issues в инструментах разработчика в Chrome —Ошибка, Secondary Actions: Expand
+									749 text Нет записей ошибок на панели 
+									750 text Issues
+									751 text  в инструментах разработчика в Chrome
+									1014 text —
+									753 text Ошибка
+								754 button (collapsed) Обнаруженные библиотеки JavaScript —Ошибка, Secondary Actions: Expand
+									755 text Обнаруженные библиотеки JavaScript
+									1015 text —
+									757 text Ошибка
+								758 button (collapsed) У страницы правильные карты исходного кода —Ошибка, Secondary Actions: Expand
+									759 text У страницы правильные карты исходного кода
+									1016 text —
+									761 text Ошибка
+							762 container
+								763 text УДОБСТВО ДЛЯ ПОЛЬЗОВАТЕЛЕЙ
+								764 button (collapsed) Вставка контента в поля ввода разрешена —Ошибка, Secondary Actions: Expand
+									765 text Вставка контента в поля ввода разрешена
+									1017 text —
+									767 text Ошибка
+								768 button (collapsed) Отсутствуют изображения с некорректным соотношением сторон —Ошибка, Secondary Actions: Expand
+									769 text Отсутствуют изображения с некорректным соотношением сторон
+									1018 text —
+									771 text Ошибка
+								772 button (collapsed) Изображения показываются в нужном разрешении —Ошибка, Secondary Actions: Expand
+									773 text Изображения показываются в нужном разрешении
+									1019 text —
+									775 text Ошибка
+							776 container
+								777 text СОВМЕСТИМОСТЬ С БРАУЗЕРАМИ
+								778 button (collapsed) Тип страницы (DOCTYPE): HTML —Ошибка, Secondary Actions: Expand
+									779 text Тип страницы (DOCTYPE): HTML
+									1020 text —
+									781 text Ошибка
+								782 button (collapsed) Правильно заданный набор символов —Ошибка, Secondary Actions: Expand
+									783 text Правильно заданный набор символов
+									1021 text —
+									785 text Ошибка
+								786 button (collapsed) Функции Baseline —Ошибка, Secondary Actions: Expand
+									787 text Функции Baseline
+									1022 text —
+									789 text Ошибка
+						790 container seo
+							791 heading Поисковая оптимизация, Value: 2
+								792 container
+									793 image
+									794 text Поисковая оптимизация
+							795 container
+								796 text Эти проверки позволяют узнать, соответствует ли страница основным рекомендациям к поисковой оптимизации. Lighthouse оценивает не все факторы, которые могут повлиять на позицию сайта в результатах поиска (например, производительность по 
+								797 link Description: основным интернет-показателям, Value: web.dev/explore/vitals?utm_source=lighthouse&utm_medium=lr
+								798 text ). Подробнее 
+								799 link Description: о факторах, важных для Google Поиска, Value: support.google.com/webmasters/answer/35769
+								800 text …
+							801 button (collapsed) Структурированные данные действительны —Ошибка, Secondary Actions: Expand
+								802 text Структурированные данные действительны
+								1023 text —
+								804 text Ошибка
+							805 container
+								806 text СКАНИРОВАНИЕ И ИНДЕКСИРОВАНИЕ
+								807 button (collapsed) Страница доступна для индексации —Ошибка, Secondary Actions: Expand
+									808 text Страница доступна для индексации
+									1024 text —
+									810 text Ошибка
+								811 button (collapsed) Код статуса HTTP действителен —Ошибка, Secondary Actions: Expand
+									812 text Код статуса HTTP действителен
+									1025 text —
+									814 text Ошибка
+								815 button (collapsed) Ссылки можно просканировать —Ошибка, Secondary Actions: Expand
+									816 text Ссылки можно просканировать
+									1026 text —
+									818 text Ошибка
+								819 button (collapsed) Файл robots.txt действителен —Ошибка, Secondary Actions: Expand
+									820 text Файл robots.txt действителен
+									1027 text —
+									822 text Ошибка
+								823 text Чтобы ваше приложение появлялось в результатах поиска, предоставьте доступ к нему поисковым роботам.
+							824 container
+								825 text РЕКОМЕНДАЦИИ В ОТНОШЕНИИ КОНТЕНТА
+								826 button (collapsed) Документ содержит элемент <title> —Ошибка, Secondary Actions: Expand
+									827 text Документ содержит элемент 
+									828 text <title>
+									1028 text —
+									830 text Ошибка
+								831 button (collapsed) В документе есть метаописание —Ошибка, Secondary Actions: Expand
+									832 text В документе есть метаописание
+									1029 text —
+									834 text Ошибка
+								835 button (collapsed) У ссылок есть описания —Ошибка, Secondary Actions: Expand
+									836 text У ссылок есть описания
+									1030 text —
+									838 text Ошибка
+								839 button (collapsed) У элементов изображений есть атрибут [alt] —Ошибка, Secondary Actions: Expand
+									840 text У элементов изображений есть атрибут 
+									841 text [alt]
+									1031 text —
+									843 text Ошибка
+								844 button (collapsed) Для документа указан действительный атрибут hreflang —Ошибка, Secondary Actions: Expand
+									845 text Для документа указан действительный атрибут 
+									846 text hreflang
+									1032 text —
+									848 text Ошибка
+								849 button (collapsed) Для документа указан действительный атрибут rel=canonical —Ошибка, Secondary Actions: Expand
+									850 text Для документа указан действительный атрибут 
+									851 text rel=canonical
+									1033 text —
+									853 text Ошибка
+								854 text Оптимизируйте HTML-код, чтобы поисковые роботы могли лучше проанализировать контент приложения.
+						855 container agentic-browsing
+							856 heading 0/7 Агентный просмотр, Value: 2
+								857 container
+									858 text 0/7 Агентный просмотр
+							859 container
+								860 text Эти проверки гарантируют высокое качество 
+								861 link Description: сайтов для ИИ-агентов, Value: goo.gle/lighthouse-agentic-web
+								862 text  и правильность интеграции WebMCP. Эта категория находится на этапе разработки и может быть изменена.
+							863 button (collapsed) Cumulative Layout Shift —Ошибка, Secondary Actions: Expand
+								864 text Cumulative Layout Shift
+								1034 text —
+								866 text Ошибка
+							867 container
+								868 text ДОСТУПНОСТЬ АГЕНТА
+								869 button (collapsed) Дерево доступности сформировано корректно —Ошибка, Secondary Actions: Expand
+									870 text Дерево доступности сформировано корректно
+									1035 text —
+									872 text Ошибка
+								873 text Эти проверки помогут вам улучшить доступность сайта для ИИ-агентов.
+							874 container
+								875 text WEBMCP
+								876 button (collapsed) Покрытие форм WebMCP —Ошибка, Secondary Actions: Expand
+									877 text Покрытие форм WebMCP
+									1036 text —
+									879 text Ошибка
+								880 button (collapsed) Зарегистрированные инструменты WebMCP —Ошибка, Secondary Actions: Expand
+									881 text Зарегистрированные инструменты WebMCP
+									1037 text —
+									883 text Ошибка
+								884 button (collapsed) Схемы WebMCP действительны —Ошибка, Secondary Actions: Expand
+									885 text Схемы WebMCP действительны
+									1038 text —
+									887 text Ошибка
+								888 text Проверки интеграции WebMCP.
+							889 container
+								890 text ДОСТУПНОСТЬ ДЛЯ АГЕНТОВ
+								891 button (collapsed) Файл llms.txt соответствует рекомендациям —Ошибка, Secondary Actions: Expand
+									892 text Файл llms.txt соответствует рекомендациям
+									1039 text —
+									894 text Ошибка
+								895 button (collapsed) Схема ai-catalog.json действительна —Ошибка, Secondary Actions: Expand
+									896 text Схема 
+									897 text ai-catalog.json
+									898 text  действительна
+									1040 text —
+									900 text Ошибка
+								901 text Эти проверки позволяют определить, предоставляют ли сайты ресурсы, документацию и каталоги, доступные ИИ-агентам.
+		22 container ZCHFDb
+			23 text Подробные сведения о PageSpeed Insights
+			24 link Description: Что нового, Value: developers.google.com/speed/docs/insights/release_notes
+			25 link Description: Документация, Value: developers.google.com/speed/docs/insights/v5/about
+			26 link Description: Данные о скорости загрузки страниц, Value: developers.google.com/speed
+			27 link Description: Задайте вопросы в Stack Overflow, Value: stackoverflow.com/questions/tagged/pagespeed-insights
+			28 link Description: Список рассылки, Value: groups.google.com/g/pagespeed-insights-discuss
+			29 text Похожий контент
+			30 link Description: Обновления, Value: developer.chrome.com/blog
+			31 link Description: Основы веб-дизайна, Value: developers.google.com/focus/web-development
+			32 link Description: Примеры использования, Value: web.dev/case-studies
+			33 link Description: Подкасты, Value: web.dev/shows
+			34 text Связь
+			35 link Description: Twitter, Value: twitter.com/ChromiumDev
+			36 link Description: YouTube, Value: youtube.com/user/ChromeDevelopers
+			37 link Description: Google Developers Logo, Value: developers.google.com/
+			38 link Description: Chrome, Value: developer.chrome.com/
+			39 link Description: Firebase, Value: firebase.google.com/
+			40 link Description: Все продукты, Value: developers.google.com/products/
+			41 link Description: Условия и политика конфиденциальности, Value: policies.google.com/
+			42 container
+				43 text Чтобы узнать больше, прочитайте 
+				44 link Description: правила сайта Google Developers, Value: developers.google.com/terms/site-policies
+				45 text .
+
+The focused UI element is 0 AXWebArea PageSpeed Insights, URL: pagespeed.web.dev/analysis/https-www-shinex-am-hy-services-apartment-renovation-yerevan/q7nnwbkxup?form_factor=mobile

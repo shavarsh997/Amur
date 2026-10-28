@@ -1,5 +1,4 @@
 import { MessageCircle, Phone } from "lucide-react";
-import { ContactTrigger } from "@/components/forms/contact-dialog";
 import { PhoneLink } from "@/components/forms/phone-contact";
 import { getPhoneHref, getWhatsAppHref } from "@/lib/company";
 import type { Dictionary } from "@/types";

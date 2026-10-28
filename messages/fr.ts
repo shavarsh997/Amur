@@ -44,10 +44,9 @@ const dictionary = {
     specializedTitle: "Travaux de construction complémentaires",
     viewAll: "Tous les services",
     learnMore: "Voir le service",
-    pageTitle:
-      "Services de rénovation, d’aménagement intérieur et de construction",
+    pageTitle: "Services de rénovation et de construction à Erevan",
     pageDescription:
-      "Rénovation d’appartements et de maisons, construction de maisons, aménagement intérieur et travaux spécifiques.",
+      "Découvrez les services SHINEX à Erevan : rénovation, construction, aménagement intérieur, plomberie et électricité. Comparez les travaux et préparez votre budget.",
     detail: {
       overview: "Présentation du service",
       included: "Ce que comprend le service",
@@ -810,7 +809,7 @@ const dictionary = {
   },
   about: {
     eyebrow: "À propos de SHINEX",
-    title: "Une organisation claire pour la rénovation et la construction",
+    title: "À propos : rénovation et construction en Arménie",
     intro:
       "SHINEX développe ses services de rénovation et de construction en Arménie autour d’une organisation claire, d’une première évaluation, d’étapes convenues et d’échanges simples avec les clients.",
     storyTitle: "Comment les travaux sont organisés",

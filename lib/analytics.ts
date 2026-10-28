@@ -1,4 +1,5 @@
 import { getLeadAttribution, publicPagePath } from "@/lib/lead-attribution";
+import { CANONICAL_SITE_URL } from "@/lib/site-url";
 
 export type AnalyticsEventName =
   | "page_view"
@@ -29,7 +30,7 @@ declare global {
   interface Window {
     gtag?: (
       command: "event",
-      event: AnalyticsEventName,
+      event: AnalyticsEventName | "web_vital",
       params: Record<string, string | number | boolean | undefined>
     ) => void;
   }
@@ -40,7 +41,11 @@ export function trackEvent(
   event: AnalyticsEventName,
   params: AnalyticsParams = {}
 ): void {
-  if (typeof window === "undefined" || typeof window.gtag !== "function")
+  if (
+    typeof window === "undefined" ||
+    window.location.origin !== CANONICAL_SITE_URL ||
+    typeof window.gtag !== "function"
+  )
     return;
   const pagePath = publicPagePath(window.location.pathname);
   if (!pagePath) return;

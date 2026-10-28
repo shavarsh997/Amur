@@ -51,7 +51,12 @@ export function ServiceCard({
             {String(service.order).padStart(2, "0")}
           </span>
           <h3 className="mt-4 text-xl font-semibold leading-[1.15] tracking-[-0.035em] text-[var(--text-primary)] sm:text-2xl">
-            {content.title}
+            <Link
+              href={href}
+              className="rounded-sm hover:underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4"
+            >
+              {content.title}
+            </Link>
           </h3>
           <p className="mt-3 line-clamp-4 flex-1 text-sm leading-6 text-[var(--text-secondary)] sm:text-[15px]">
             {content.shortDescription}

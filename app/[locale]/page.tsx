@@ -1,3 +1,4 @@
+import { PageSchema } from "@/components/seo/page-schema";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
@@ -37,12 +38,19 @@ export default async function LocaleHome({ params }: Props) {
 
   return (
     <>
+      <PageSchema
+        locale={locale}
+        pathname=""
+        name={dictionary.metadata.title}
+        description={dictionary.metadata.description}
+        type="WebPage"
+      />
       <Hero dictionary={dictionary} locale={locale} />
       {/* <EstimateSection dictionary={dictionary} locale={locale} /> */}
       <ServicesSection dictionary={dictionary} locale={locale} />
       <RenovationIncluded locale={locale} />
       <WorkProcess dictionary={dictionary} />
-      <WhyUs dictionary={dictionary} />
+      <WhyUs dictionary={dictionary} locale={locale} />
       <SpecializedServices dictionary={dictionary} locale={locale} />
       <ServiceArea locale={locale} />
       <FAQSection dictionary={dictionary} />

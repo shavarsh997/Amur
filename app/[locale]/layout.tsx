@@ -5,6 +5,7 @@ import Script from "next/script";
 
 import { Footer } from "@/components/layout/footer";
 import { ConversionTracking } from "@/components/analytics/conversion-tracking";
+import { WebVitals } from "@/components/analytics/web-vitals";
 import { Header } from "@/components/layout/header";
 import { MobileContactBar } from "@/components/layout/mobile-contact-bar";
 import { ContactDialog } from "@/components/forms/contact-dialog";
@@ -13,6 +14,8 @@ import { ConstructionBackdrop } from "@/components/motion/construction-backdrop"
 import { companyConfig } from "@/config/company.config";
 import { seoConfig } from "@/config/seo.config";
 import { getSiteOrigin } from "@/lib/company";
+import { CANONICAL_SITE_URL } from "@/lib/site-url";
+import { shouldPreventIndexing } from "@/lib/seo-environment";
 import {
   getDictionary,
   isLocale,
@@ -31,11 +34,10 @@ import "@/components/motion/construction-backdrop.css";
 import "@/components/motion/content-layout.css";
 
 const configuredMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? "";
-const googleAnalyticsMeasurementId = /^G-[A-Z0-9]+$/.test(
-  configuredMeasurementId
-)
-  ? configuredMeasurementId
-  : undefined;
+const googleAnalyticsMeasurementId =
+  !shouldPreventIndexing() && /^G-[A-Z0-9]+$/.test(configuredMeasurementId)
+    ? configuredMeasurementId
+    : undefined;
 
 export const metadata: Metadata = {
   metadataBase: new URL(getSiteOrigin()),
@@ -130,21 +132,24 @@ export default async function LocaleLayout({
         </div>
         {googleAnalyticsMeasurementId ? (
           <>
+            <WebVitals />
             <Script
               src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsMeasurementId}`}
               strategy="lazyOnload"
             />
             <Script id="google-analytics" strategy="afterInteractive">
               {`
+                if (window.location.origin === ${JSON.stringify(CANONICAL_SITE_URL)}) {
                 window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', ${JSON.stringify(googleAnalyticsMeasurementId)}, {
+                window.gtag = function(){window.dataLayer.push(arguments);};
+                window.gtag('js', new Date());
+                window.gtag('config', ${JSON.stringify(googleAnalyticsMeasurementId)}, {
                   send_page_view: false,
                   page_location: window.location.origin,
                   page_referrer: ''
                 });
                 window.dispatchEvent(new Event('shinex-analytics-ready'));
+                }
               `}
             </Script>
           </>

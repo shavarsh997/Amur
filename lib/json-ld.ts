@@ -118,13 +118,22 @@ export function getServiceJsonLd({
   description: string;
   pathname: string;
 }): JsonLd {
+  const url = getAbsoluteUrl(`/${locale}/${pathname.replace(/^\//, "")}`);
   return {
     "@context": "https://schema.org",
     "@type": "Service",
+    "@id": `${url}#service`,
     name,
     description,
     serviceType: name,
-    url: getAbsoluteUrl(`/${locale}/${pathname.replace(/^\//, "")}`),
+    url,
+    mainEntityOfPage: getWebPageJsonLd({
+      locale,
+      name,
+      description,
+      pathname,
+      mainEntityId: `${url}#service`,
+    }),
     areaServed: companyConfig.business.serviceArea.map((name) => ({
       "@type": "Place",
       name,
@@ -138,21 +147,27 @@ export function getWebPageJsonLd({
   name,
   description,
   pathname,
+  type = "WebPage",
+  mainEntityId,
 }: {
   locale: Locale;
   name: string;
   description: string;
   pathname: string;
+  type?: "WebPage" | "AboutPage" | "ContactPage" | "CollectionPage";
+  mainEntityId?: string;
 }): JsonLd {
-  const url = getAbsoluteUrl(`/${locale}/${pathname.replace(/^\//, "")}`);
+  const path = pathname.replace(/^\/|\/$/g, "");
+  const url = getAbsoluteUrl(`/${locale}${path ? `/${path}` : ""}`);
   return {
     "@context": "https://schema.org",
-    "@type": "WebPage",
+    "@type": type,
     "@id": `${url}#webpage`,
     url,
     name,
     description,
-    inLanguage: locale,
+    inLanguage: localeLanguageTags[locale],
+    ...(mainEntityId ? { mainEntity: { "@id": mainEntityId } } : {}),
     isPartOf: { "@id": getAbsoluteUrl("/#website") },
     publisher: { "@id": getAbsoluteUrl("/#organization") },
   };

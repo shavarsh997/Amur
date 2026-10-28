@@ -6,6 +6,7 @@ export function getRenovationStartingPrice(locale: Locale): string | null {
   const price = getPublicServicePrice("renovation");
   if (
     price?.from === undefined ||
+    price.materialsIncluded !== false ||
     price.unit !== "sqm" ||
     price.currency !== "AMD"
   ) {

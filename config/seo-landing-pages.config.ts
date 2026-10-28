@@ -1147,7 +1147,7 @@ const coreSeoLandingPages = [
         title: "Complete renovation service in Yerevan",
         description:
           "Bring the renovation stages together with one company, an agreed scope and decisions made before work begins.",
-        seoTitle: "Complete Renovation Service in Yerevan | SHINEX",
+        seoTitle: "Turnkey Renovation in Yerevan | SHINEX",
         seoDescription:
           "A complete renovation service in Yerevan. Plan the work, materials, responsibilities and handover with SHINEX.",
         introduction: [
@@ -1406,9 +1406,9 @@ const coreSeoLandingPages = [
       ru: {
         eyebrow: "Стоимость ремонта",
         title: "Стоимость ремонта квартиры в Ереване",
-        description: `${renovationStartingPrice.ru ? `Ремонт квартиры ${renovationStartingPrice.ru}. ` : ""}Итоговая стоимость зависит от состояния квартиры и состава работ. Обсудите смету с SHINEX.`,
+        description: `${renovationStartingPrice.ru ? `Работа по ремонту квартиры ${renovationStartingPrice.ru}. ` : ""}Материалы оплачиваются отдельно. Точную стоимость работ определяем после осмотра и согласования сметы.`,
         seoTitle: "Ремонт квартир в Ереване: цены за м² и примеры | SHINEX",
-        seoDescription: `${renovationStartingPrice.ru ? `Ремонт квартир в Ереване ${renovationStartingPrice.ru}. ` : ""}Примеры для 40, 60 и 80 м², состав работ и материалов. Индивидуальная смета после осмотра.`,
+        seoDescription: `${renovationStartingPrice.ru ? `Ремонт квартир в Ереване: работа ${renovationStartingPrice.ru}. ` : ""}Материалы отдельно. Примеры для 40, 60 и 80 м². Смета после осмотра — SHINEX.`,
         introduction: [
           "Стоимость ремонта квартиры зависит от её состояния, площади и согласованного перечня работ. В SHINEX обсуждаем демонтаж, электрику, сантехнику и отделку, а точную смету составляем после осмотра и замеров.",
           "Ниже показано, как различаются площадь пола и площадь отделки и что уточнить в предложении подрядчика. Свяжитесь с нами, чтобы обсудить смету для вашего объекта.",
@@ -1450,7 +1450,7 @@ const coreSeoLandingPages = [
           {
             question: "Сколько стоит ремонт квартиры с материалами?",
             answer:
-              "Для расчёта нужны объёмы работ и выбранные материалы. Попросите отдельно указать работы, черновые и отделочные материалы, доставку и вывоз мусора. Общую сумму можно сравнивать с другой сметой только при одинаковом составе.",
+              "Опубликованная стартовая ставка SHINEX включает только работу. Материалы оплачиваются отдельно: их стоимость зависит от количества и выбранной отделки. Для общего бюджета отдельно учитывают работы, черновые и чистовые материалы, доставку и вывоз мусора.",
           },
           {
             question: "Можно ли узнать точную цену ремонта по телефону?",
@@ -1481,9 +1481,9 @@ const coreSeoLandingPages = [
       en: {
         eyebrow: "Renovation costs",
         title: "Apartment renovation costs in Yerevan",
-        description: `${renovationStartingPrice.en ? `Apartment renovation ${renovationStartingPrice.en}. ` : ""}The final cost depends on your apartment's condition and the agreed work. Discuss your estimate with SHINEX.`,
+        description: `${renovationStartingPrice.en ? `Apartment renovation labour ${renovationStartingPrice.en}. ` : ""}Materials are paid for separately. The exact labour cost is agreed after a survey and a detailed estimate.`,
         seoTitle: "Apartment Renovation Cost in Yerevan | SHINEX",
-        seoDescription: `${renovationStartingPrice.en ? `Apartment renovation in Yerevan ${renovationStartingPrice.en}. ` : ""}Understand labour and materials costs per m². Get an accurate estimate after a survey with SHINEX.`,
+        seoDescription: `${renovationStartingPrice.en ? `Apartment renovation in Yerevan: labour ${renovationStartingPrice.en}. ` : ""}Materials extra. Examples for 40, 60 and 80 m². Request a SHINEX estimate.`,
         introduction: [
           "Apartment renovation cost depends on the property's condition, area and agreed work. At SHINEX, we discuss demolition, electrical work, plumbing and finishes, then prepare an accurate estimate after a survey and measurements.",
           "Below, we explain how floor area differs from finishing area and what to check in a quotation. Contact us to discuss an estimate for your property.",
@@ -1525,7 +1525,7 @@ const coreSeoLandingPages = [
           {
             question: "How much does apartment renovation with materials cost?",
             answer:
-              "A calculation needs work quantities and material choices. Ask for labour, preparation and finishing materials, delivery and waste removal to be listed separately. Compare totals only when quotations include the same scope.",
+              "The published SHINEX starting rate covers labour only. Materials are paid for separately and depend on quantities and chosen finishes. The overall budget lists labour, preparation and finishing materials, delivery and waste removal separately.",
           },
           {
             question: "Can I get an exact renovation price by phone?",
@@ -1557,9 +1557,9 @@ const coreSeoLandingPages = [
       de: {
         eyebrow: "Renovierungskosten",
         title: "Kosten der Wohnungsrenovierung in Eriwan",
-        description: `${renovationStartingPrice.de ? `Wohnungsrenovierung ${renovationStartingPrice.de}. ` : ""}Die endgültigen Kosten hängen vom Wohnungszustand und den vereinbarten Arbeiten ab. Besprechen Sie Ihre Kostenschätzung mit SHINEX.`,
+        description: `${renovationStartingPrice.de ? `Arbeitskosten für Wohnungsrenovierung ${renovationStartingPrice.de}. ` : ""}Materialien werden separat bezahlt. Die genauen Arbeitskosten vereinbaren wir nach Besichtigung und Kostenvoranschlag.`,
         seoTitle: "Kosten der Wohnungsrenovierung in Eriwan | SHINEX",
-        seoDescription: `${renovationStartingPrice.de ? `Wohnungsrenovierung in Eriwan ${renovationStartingPrice.de}. ` : ""}Verstehen Sie Arbeits- und Materialkosten je m². Erhalten Sie nach einer Besichtigung eine genaue Kostenschätzung von SHINEX.`,
+        seoDescription: `${renovationStartingPrice.de ? `Wohnungsrenovierung in Eriwan ${renovationStartingPrice.de}. ` : ""}Nur Arbeitskosten, Material extra. Beispiele für 40, 60 und 80 m². Kostenvoranschlag von SHINEX.`,
         introduction: [
           "Die Kosten einer Wohnungsrenovierung hängen von Zustand, Fläche und vereinbarten Arbeiten ab. Bei SHINEX besprechen wir Rückbau, Elektro- und Sanitärarbeiten sowie Ausbau und erstellen nach Besichtigung und Aufmaß eine genaue Kostenschätzung.",
           "Nachfolgend erklären wir den Unterschied zwischen Boden- und Bearbeitungsfläche und worauf Sie in einem Angebot achten sollten. Kontaktieren Sie uns für eine Kostenschätzung Ihres Objekts.",
@@ -1601,7 +1601,7 @@ const coreSeoLandingPages = [
           {
             question: "Was kostet eine Wohnungsrenovierung mit Materialien?",
             answer:
-              "Für die Berechnung werden Arbeitsmengen und Materialauswahl benötigt. Lassen Sie Arbeitskosten, Vorbereitungs- und Ausbaumaterialien, Lieferung und Entsorgung getrennt aufführen. Vergleichen Sie Summen nur bei gleichem Leistungsumfang.",
+              "Der veröffentlichte SHINEX-Einstiegspreis umfasst nur die Arbeiten. Materialien werden separat bezahlt; ihre Kosten hängen von Mengen und gewählter Ausstattung ab. Im Gesamtbudget werden Arbeiten, Vorbereitungs- und Ausbaumaterialien, Lieferung und Entsorgung getrennt aufgeführt.",
           },
           {
             question:
@@ -1633,9 +1633,9 @@ const coreSeoLandingPages = [
       fr: {
         eyebrow: "Coûts de rénovation",
         title: "Coût de rénovation d’appartement à Erevan",
-        description: `${renovationStartingPrice.fr ? `Rénovation d’appartement ${renovationStartingPrice.fr}. ` : ""}Le coût final dépend de l’état de votre appartement et des travaux convenus. Discutez de votre devis avec SHINEX.`,
+        description: `${renovationStartingPrice.fr ? `Main-d’œuvre pour rénovation d’appartement ${renovationStartingPrice.fr}. ` : ""}Les matériaux sont payés séparément. Le coût exact des travaux est défini après une visite et un devis détaillé.`,
         seoTitle: "Coût de rénovation d’appartement à Erevan | SHINEX",
-        seoDescription: `${renovationStartingPrice.fr ? `Rénovation d’appartement à Erevan ${renovationStartingPrice.fr}. ` : ""}Comprenez le coût de la main-d’œuvre et des matériaux au m². Obtenez un devis précis après une visite avec SHINEX.`,
+        seoDescription: `${renovationStartingPrice.fr ? `Rénovation d’appartement à Erevan ${renovationStartingPrice.fr}. ` : ""}Main-d’œuvre seule, matériaux en supplément. Exemples pour 40, 60 et 80 m². Devis SHINEX.`,
         introduction: [
           "Le coût de rénovation dépend de l’état du bien, de sa surface et des travaux convenus. Chez SHINEX, nous discutons de la démolition, de l’électricité, de la plomberie et des finitions, puis établissons un devis précis après visite et mesures.",
           "Nous expliquons ci-dessous la différence entre surface au sol et surface à traiter, ainsi que les points à vérifier dans un devis. Contactez-nous pour discuter d’une estimation de votre bien.",
@@ -1678,7 +1678,7 @@ const coreSeoLandingPages = [
             question:
               "Combien coûte une rénovation d’appartement avec matériaux ?",
             answer:
-              "Le calcul nécessite les quantités de travaux et le choix des matériaux. Demandez des postes séparés pour la main-d’œuvre, les matériaux de préparation et de finition, la livraison et l’évacuation. Comparez les totaux uniquement à périmètre égal.",
+              "Le tarif de départ publié par SHINEX comprend uniquement la main-d’œuvre. Les matériaux sont payés séparément selon les quantités et les finitions choisies. Le budget total distingue travaux, matériaux de préparation et de finition, livraison et évacuation.",
           },
           {
             question:
@@ -1711,9 +1711,9 @@ const coreSeoLandingPages = [
       hy: {
         eyebrow: "Վերանորոգման արժեք",
         title: "Բնակարանի վերանորոգման արժեքը Երևանում",
-        description: `${renovationStartingPrice.hy ? `Բնակարանի վերանորոգում՝ ${renovationStartingPrice.hy}։ ` : ""}Վերջնական արժեքը կախված է բնակարանի վիճակից և աշխատանքների կազմից։ Քննարկեք ձեր նախահաշիվը SHINEX-ի հետ։`,
+        description: `${renovationStartingPrice.hy ? `Բնակարանի վերանորոգման աշխատանքներ՝ ${renovationStartingPrice.hy}։ ` : ""}Նյութերը վճարվում են առանձին։ Աշխատանքի ճշգրիտ արժեքը որոշվում է զննումից և նախահաշվի համաձայնեցումից հետո։`,
         seoTitle: "Բնակարանի վերանորոգման գներ Երևանում | SHINEX",
-        seoDescription: `${renovationStartingPrice.hy ? `Վերանորոգում Երևանում՝ ${renovationStartingPrice.hy}։ ` : ""}40, 60 և 80 մ² բնակարանների հաշվարկի օրինակներ, աշխատանքների ու նյութերի կազմ։ Անհատական նախահաշիվ՝ զննումից հետո։`,
+        seoDescription: `${renovationStartingPrice.hy ? `Բնակարանի վերանորոգում Երևանում՝ ${renovationStartingPrice.hy}։ ` : ""}Միայն աշխատանքը, նյութերն առանձին։ 40, 60 և 80 մ²-ի օրինակներ։ Նախահաշիվ՝ SHINEX-ից։`,
         introduction: [
           "Բնակարանի վերանորոգման գինը կախված է տարածքի վիճակից, մակերեսից և համաձայնեցված աշխատանքներից։ SHINEX-ում քննարկում ենք ապամոնտաժումը, էլեկտրական ու սանտեխնիկական աշխատանքները և հարդարումը, իսկ ճշգրիտ նախահաշիվը կազմում ենք զննումից ու չափագրումից հետո։",
           "Ստորև կտեսնեք՝ ինչով է հատակի մակերեսը տարբերվում հարդարման մակերեսից և ինչ ճշտել գնային առաջարկում։ Ձեր տարածքի նախահաշիվը քննարկելու համար կապվեք մեզ հետ։",
@@ -1755,7 +1755,7 @@ const coreSeoLandingPages = [
           {
             question: "Որքա՞ն արժե բնակարանի վերանորոգումը նյութերով",
             answer:
-              "Հաշվարկի համար անհրաժեշտ են աշխատանքների ծավալներն ու ընտրված նյութերը։ Խնդրեք առանձին նշել աշխատանքները, նախապատրաստական ու հարդարման նյութերը, առաքումն ու աղբի տեղափոխումը։ Ընդհանուր գումարները համեմատելի են, երբ առաջարկների կազմը նույնն է։",
+              "SHINEX-ի հրապարակված մեկնարկային գինը ներառում է միայն աշխատանքը։ Նյութերը վճարվում են առանձին․ դրանց արժեքը կախված է քանակից և ընտրված հարդարումից։ Ընդհանուր բյուջեում առանձին նշվում են աշխատանքները, նախապատրաստական ու հարդարման նյութերը, առաքումն ու աղբի տեղափոխումը։",
           },
           {
             question: "Հնարավո՞ր է հեռախոսով իմանալ ճշգրիտ գինը",

@@ -95,9 +95,9 @@
       "inSitemap": true,
       "status": 200,
       "canonical": "https://www.shinex.am/de/about",
-      "title": "Renovierung und Bau klar organisieren | SHINEX",
+      "title": "Über uns: Renovierung und Bau in Armenien | SHINEX",
       "description": "SHINEX entwickelt Renovierungs- und Bauleistungen in Armenien mit klarer Organisation, einer ersten Einschätzung, abgestimmten Phasen und unkomplizierter Kommunikation mit Kunden.",
-      "h1": "Renovierung und Bau klar organisieren",
+      "h1": "Über uns: Renovierung und Bau in Armenien",
       "incomingPages": 23
     },
     {
@@ -184,7 +184,7 @@
       "status": 200,
       "canonical": "https://www.shinex.am/de/prices",
       "title": "Kosten der Wohnungsrenovierung in Eriwan | SHINEX",
-      "description": "Wohnungsrenovierung in Eriwan ab 55.000 AMD/m². Verstehen Sie Arbeits- und Materialkosten je m². Erhalten Sie nach einer Besichtigung eine genaue Kostenschätzung von SHINEX.",
+      "description": "Wohnungsrenovierung in Eriwan ab 55.000 AMD/m². Nur Arbeitskosten, Material extra. Beispiele für 40, 60 und 80 m². Kostenvoranschlag von SHINEX.",
       "h1": "Kosten der Wohnungsrenovierung in Eriwan",
       "incomingPages": 23
     },
@@ -386,9 +386,9 @@
       "inSitemap": true,
       "status": 200,
       "canonical": "https://www.shinex.am/de/services",
-      "title": "Renovierung, Innenraumgestaltung und Bauleistungen | SHINEX",
-      "description": "Wohnungs- und Hausrenovierung, Hausbau, Innenraumgestaltung und einzelne Bauarbeiten.",
-      "h1": "Renovierung, Innenraumgestaltung und Bauleistungen",
+      "title": "Renovierungs- und Bauleistungen in Eriwan | SHINEX",
+      "description": "SHINEX in Eriwan: Wohnungs- und Hausrenovierung, Neubau, Innenraumgestaltung, Sanitär- und Elektroarbeiten. Leistungsumfang und Kosteninformationen vergleichen.",
+      "h1": "Renovierungs- und Bauleistungen in Eriwan",
       "incomingPages": 23
     },
     {
@@ -443,7 +443,7 @@
       "locale": "de",
       "intent": "capital-renovation",
       "queries": [
-        "umfassende Sanierung in Eriwan",
+        "umfassende Wohnungssanierung in Eriwan",
         "umfassende Wohnungssanierung Eriwan"
       ],
       "clicks": null,
@@ -456,9 +456,9 @@
       "inSitemap": true,
       "status": 200,
       "canonical": "https://www.shinex.am/de/services/capital-renovation-yerevan",
-      "title": "Umfassende Sanierung in Eriwan | SHINEX",
-      "description": "Umfassende Sanierung von Wohnungen und Häusern in Eriwan: Rückbau, Elektro-, Sanitär- und Ausbauarbeiten.",
-      "h1": "Umfassende Sanierung in Eriwan",
+      "title": "Umfassende Wohnungssanierung in Eriwan | SHINEX",
+      "description": "Umfassende Wohnungssanierung in Eriwan: Rückbau, bedarfsgerechter Austausch von Leitungen, Untergrundvorbereitung und Ausbau. Kostenvoranschlag von SHINEX.",
+      "h1": "Umfassende Wohnungssanierung in Eriwan",
       "incomingPages": 10
     },
     {
@@ -480,8 +480,8 @@
       "inSitemap": true,
       "status": 200,
       "canonical": "https://www.shinex.am/de/services/commercial-construction",
-      "title": "Gewerberenovierung in Armenien | SHINEX",
-      "description": "Arbeiten für Büros, Läden und Dienstleistungsräume in Armenien.",
+      "title": "Renovierung von Gewerberäumen in Eriwan | SHINEX",
+      "description": "Gewerberenovierung in Eriwan und Armenien: Läden, Büros und Dienstleistungsräume. Ausbau, Gebäudetechnik und Arbeitsphasen passend zum Betriebsablauf planen.",
       "h1": "Renovierung von Gewerberäumen",
       "incomingPages": 23
     },
@@ -530,7 +530,7 @@
       "locale": "de",
       "intent": "cosmetic-renovation",
       "queries": [
-        "optische Renovierung in Eriwan",
+        "optische Wohnungsrenovierung in Eriwan",
         "optische Wohnungsrenovierung Eriwan"
       ],
       "clicks": 0,
@@ -543,9 +543,9 @@
       "inSitemap": true,
       "status": 200,
       "canonical": "https://www.shinex.am/de/services/cosmetic-renovation-yerevan",
-      "title": "Optische Renovierung in Eriwan | SHINEX",
-      "description": "Optische Renovierung in Eriwan: Anstriche, Tapeten, Deckenreparaturen und neue Bodenbeläge für Wohnungen, Häuser oder einzelne Räume.",
-      "h1": "Optische Renovierung in Eriwan",
+      "title": "Optische Wohnungsrenovierung in Eriwan | SHINEX",
+      "description": "Optische Wohnungsrenovierung in Eriwan: Wände, Decken, Böden oder ein Raum. Auffrischung vor Einzug oder Vermietung. Kostenvoranschlag von SHINEX.",
+      "h1": "Optische Wohnungsrenovierung in Eriwan",
       "incomingPages": 6
     },
     {
@@ -565,8 +565,8 @@
       "inSitemap": true,
       "status": 200,
       "canonical": "https://www.shinex.am/de/services/design",
-      "title": "Architekturplanung | SHINEX",
-      "description": "Wir entwickeln architektonische Lösungen nach Projektziel, Grundstückseigenschaften, geltenden Anforderungen und späterer Ausführung, damit die Arbeiten auf abgestimmten Unterlagen beruhen.",
+      "title": "Architekturplanung in Armenien | SHINEX",
+      "description": "Architekturplanung in Armenien: Gebäudegrundrisse, Grundstücksanforderungen und Ausführungspläne für Bau oder Umbau. Besprechen Sie Ihr Projekt mit SHINEX.",
       "h1": "Architekturplanung",
       "incomingPages": 23
     },
@@ -611,8 +611,8 @@
       "inSitemap": true,
       "status": 200,
       "canonical": "https://www.shinex.am/de/services/facade-and-roofing",
-      "title": "Fassaden- und Dacharbeiten | SHINEX",
-      "description": "Wir planen Fassaden- und Dacharbeiten nach Entwurf, Entwässerung, Schutzschichten und Anschlüssen und berücksichtigen dabei den Zustand des Bestands.",
+      "title": "Fassaden- und Dacharbeiten in Armenien | SHINEX",
+      "description": "Fassaden- und Dacharbeiten in Armenien: Neubau und Erneuerung, Schutzschichten, Entwässerung und Anschlüsse. Fragen Sie eine Einschätzung Ihres Gebäudes an.",
       "h1": "Fassaden- und Dacharbeiten",
       "incomingPages": 23
     },
@@ -723,7 +723,7 @@
       "status": 200,
       "canonical": "https://www.shinex.am/de/services/monolithic-work",
       "title": "Stahlbetonbau in Armenien | SHINEX",
-      "description": "Wir führen Stahlbetonarbeiten nach der Tragwerksplanung aus und achten auf Maße, Baufolge und die in jeder Phase nötigen Prüfungen.",
+      "description": "Stahlbetonarbeiten in Armenien: Schalung, Bewehrung und Betonieren nach Tragwerksplanung. Kostenschätzung anhand der Mengen, Pläne und Baustellenzufahrt.",
       "h1": "Stahlbetonbau",
       "incomingPages": 23
     },
@@ -881,9 +881,9 @@
       "inSitemap": true,
       "status": 200,
       "canonical": "https://www.shinex.am/en/about",
-      "title": "A clear way to organize renovation and construction | SHINEX",
-      "description": "SHINEX develops renovation and construction services in Armenia with an emphasis on clear organization, initial assessment, agreed stages, and convenient communication with clients.",
-      "h1": "A clear way to organize renovation and construction",
+      "title": "About our renovation and construction company in Armenia | SHINEX",
+      "description": "Learn how SHINEX plans renovation and construction in Armenia: property assessment, an agreed scope of work, project stages, and communication with the client.",
+      "h1": "About our renovation and construction company in Armenia",
       "incomingPages": 23
     },
     {
@@ -970,7 +970,7 @@
       "status": 200,
       "canonical": "https://www.shinex.am/en/prices",
       "title": "Apartment Renovation Cost in Yerevan | SHINEX",
-      "description": "Apartment renovation in Yerevan from AMD 55,000/m². Understand labour and materials costs per m². Get an accurate estimate after a survey with SHINEX.",
+      "description": "Apartment renovation in Yerevan: labour from AMD 55,000/m². Materials extra. Examples for 40, 60 and 80 m². Request a SHINEX estimate.",
       "h1": "Apartment renovation costs in Yerevan",
       "incomingPages": 23
     },
@@ -1172,9 +1172,9 @@
       "inSitemap": true,
       "status": 200,
       "canonical": "https://www.shinex.am/en/services",
-      "title": "Renovation, interior design, and construction services | SHINEX",
-      "description": "Apartment and house renovation, private house construction, interior design, and individual construction work.",
-      "h1": "Renovation, interior design, and construction services",
+      "title": "Renovation and construction services in Yerevan | SHINEX",
+      "description": "Explore SHINEX services in Yerevan: apartment and house renovation, construction, interior design, plumbing and electrical work. Compare scope and cost guides.",
+      "h1": "Renovation and construction services in Yerevan",
       "incomingPages": 23
     },
     {
@@ -1230,7 +1230,7 @@
       "locale": "en",
       "intent": "capital-renovation",
       "queries": [
-        "major renovation in Yerevan",
+        "major apartment renovation in Yerevan",
         "major apartment renovation Yerevan"
       ],
       "clicks": 0,
@@ -1243,9 +1243,9 @@
       "inSitemap": true,
       "status": 200,
       "canonical": "https://www.shinex.am/en/services/capital-renovation-yerevan",
-      "title": "Major Renovation in Yerevan | SHINEX",
-      "description": "Major renovation of apartments and houses in Yerevan: demolition, electrical, plumbing and finishing work.",
-      "h1": "Major renovation in Yerevan",
+      "title": "Major apartment renovation in Yerevan | SHINEX",
+      "description": "Major apartment renovation in Yerevan: removal, wiring and pipe replacement as needed, surface preparation and finishing. Request a SHINEX estimate.",
+      "h1": "Major apartment renovation in Yerevan",
       "incomingPages": 10
     },
     {
@@ -1267,8 +1267,8 @@
       "inSitemap": true,
       "status": 200,
       "canonical": "https://www.shinex.am/en/services/commercial-construction",
-      "title": "Commercial space renovation in Armenia | SHINEX",
-      "description": "Work for offices, retail, and service spaces in Armenia.",
+      "title": "Commercial Renovation and Fit-Out in Yerevan | SHINEX",
+      "description": "Commercial renovation in Yerevan and Armenia: shops, offices, salons and service spaces. Plan finishes, building services and work stages around your business.",
       "h1": "Commercial space renovation",
       "incomingPages": 23
     },
@@ -1317,7 +1317,7 @@
       "locale": "en",
       "intent": "cosmetic-renovation",
       "queries": [
-        "cosmetic renovation in Yerevan",
+        "cosmetic apartment renovation in Yerevan",
         "cosmetic apartment renovation Yerevan"
       ],
       "clicks": 0,
@@ -1330,9 +1330,9 @@
       "inSitemap": true,
       "status": 200,
       "canonical": "https://www.shinex.am/en/services/cosmetic-renovation-yerevan",
-      "title": "Cosmetic Renovation in Yerevan | SHINEX",
-      "description": "Cosmetic renovation in Yerevan: painting, wallpaper, ceiling repairs and flooring updates for an apartment, house or individual room.",
-      "h1": "Cosmetic renovation in Yerevan",
+      "title": "Cosmetic apartment renovation in Yerevan | SHINEX",
+      "description": "Cosmetic apartment renovation in Yerevan: walls, ceilings, floors or one room. Refresh before moving in or renting out. Request a SHINEX estimate.",
+      "h1": "Cosmetic apartment renovation in Yerevan",
       "incomingPages": 6
     },
     {
@@ -1352,8 +1352,8 @@
       "inSitemap": true,
       "status": 200,
       "canonical": "https://www.shinex.am/en/services/design",
-      "title": "Architectural design | SHINEX",
-      "description": "We develop architectural solutions around the project purpose, site characteristics, applicable requirements, and future construction so work starts from agreed documentation.",
+      "title": "Architectural Design in Armenia | SHINEX",
+      "description": "Architectural design in Armenia: building layouts, site requirements and working drawings for construction or reconstruction. Discuss your project with SHINEX.",
       "h1": "Architectural design",
       "incomingPages": 23
     },
@@ -1398,8 +1398,8 @@
       "inSitemap": true,
       "status": 200,
       "canonical": "https://www.shinex.am/en/services/facade-and-roofing",
-      "title": "Facade and roofing work | SHINEX",
-      "description": "We plan facade and roofing work around the design, drainage, protective layers and junctions, taking the condition of the existing structure into account.",
+      "title": "Facade and Roofing Work in Armenia | SHINEX",
+      "description": "Facade and roofing work in Armenia: new systems and renovation, protective layers, drainage and junctions. Request an assessment of your building from SHINEX.",
       "h1": "Facade and roofing work",
       "incomingPages": 23
     },
@@ -1511,7 +1511,7 @@
       "status": 200,
       "canonical": "https://www.shinex.am/en/services/monolithic-work",
       "title": "Reinforced Concrete Construction in Armenia | SHINEX",
-      "description": "We carry out reinforced concrete work according to the structural design, with attention to dimensions, construction sequence and the checks required at each stage.",
+      "description": "Reinforced concrete work in Armenia: formwork, reinforcement and concrete placement to structural drawings. Estimates based on quantities and site access.",
       "h1": "Reinforced concrete construction",
       "incomingPages": 23
     },
@@ -1627,7 +1627,7 @@
       "inSitemap": true,
       "status": 200,
       "canonical": "https://www.shinex.am/en/services/turnkey-renovation",
-      "title": "Complete Renovation Service in Yerevan | SHINEX",
+      "title": "Turnkey Renovation in Yerevan | SHINEX",
       "description": "A complete renovation service in Yerevan. Plan the work, materials, responsibilities and handover with SHINEX.",
       "h1": "Complete renovation service in Yerevan",
       "incomingPages": 8
@@ -1669,9 +1669,9 @@
       "inSitemap": true,
       "status": 200,
       "canonical": "https://www.shinex.am/fr/about",
-      "title": "Une organisation claire pour la rénovation et la construction | SHINEX",
+      "title": "À propos : rénovation et construction en Arménie | SHINEX",
       "description": "SHINEX développe ses services de rénovation et de construction en Arménie autour d’une organisation claire, d’une première évaluation, d’étapes convenues et d’échanges simples avec les clients.",
-      "h1": "Une organisation claire pour la rénovation et la construction",
+      "h1": "À propos : rénovation et construction en Arménie",
       "incomingPages": 23
     },
     {
@@ -1758,7 +1758,7 @@
       "status": 200,
       "canonical": "https://www.shinex.am/fr/prices",
       "title": "Coût de rénovation d’appartement à Erevan | SHINEX",
-      "description": "Rénovation d’appartement à Erevan à partir de 55 000 AMD/m². Comprenez le coût de la main-d’œuvre et des matériaux au m². Obtenez un devis précis après une visite avec SHINEX.",
+      "description": "Rénovation d’appartement à Erevan à partir de 55 000 AMD/m². Main-d’œuvre seule, matériaux en supplément. Exemples pour 40, 60 et 80 m². Devis SHINEX.",
       "h1": "Coût de rénovation d’appartement à Erevan",
       "incomingPages": 23
     },
@@ -1960,9 +1960,9 @@
       "inSitemap": true,
       "status": 200,
       "canonical": "https://www.shinex.am/fr/services",
-      "title": "Services de rénovation, d’aménagement intérieur et de construction | SHINEX",
-      "description": "Rénovation d’appartements et de maisons, construction de maisons, aménagement intérieur et travaux spécifiques.",
-      "h1": "Services de rénovation, d’aménagement intérieur et de construction",
+      "title": "Services de rénovation et de construction à Erevan | SHINEX",
+      "description": "Découvrez les services SHINEX à Erevan : rénovation, construction, aménagement intérieur, plomberie et électricité. Comparez les travaux et préparez votre budget.",
+      "h1": "Services de rénovation et de construction à Erevan",
       "incomingPages": 23
     },
     {
@@ -2017,7 +2017,7 @@
       "locale": "fr",
       "intent": "capital-renovation",
       "queries": [
-        "rénovation lourde à Erevan",
+        "rénovation lourde d’appartement à Erevan",
         "rénovation lourde d’appartement Erevan"
       ],
       "clicks": null,
@@ -2030,9 +2030,9 @@
       "inSitemap": true,
       "status": 200,
       "canonical": "https://www.shinex.am/fr/services/capital-renovation-yerevan",
-      "title": "Rénovation lourde à Erevan | SHINEX",
-      "description": "Rénovation lourde d’appartements et de maisons à Erevan : démolition, électricité, plomberie et finitions.",
-      "h1": "Rénovation lourde à Erevan",
+      "title": "Rénovation lourde d’appartement à Erevan | SHINEX",
+      "description": "Rénovation lourde d’appartement à Erevan : dépose, remplacement des réseaux selon leur état, préparation des supports et finitions. Devis SHINEX.",
+      "h1": "Rénovation lourde d’appartement à Erevan",
       "incomingPages": 10
     },
     {
@@ -2054,8 +2054,8 @@
       "inSitemap": true,
       "status": 200,
       "canonical": "https://www.shinex.am/fr/services/commercial-construction",
-      "title": "Rénovation de locaux professionnels en Arménie | SHINEX",
-      "description": "Travaux pour bureaux, commerces et espaces de service en Arménie.",
+      "title": "Rénovation de locaux professionnels à Erevan | SHINEX",
+      "description": "Rénovation de commerces, bureaux et locaux de service à Erevan et en Arménie. Préparez les finitions, les réseaux techniques et les étapes selon votre activité.",
       "h1": "Rénovation de locaux professionnels",
       "incomingPages": 23
     },
@@ -2104,7 +2104,7 @@
       "locale": "fr",
       "intent": "cosmetic-renovation",
       "queries": [
-        "rénovation légère à Erevan",
+        "rénovation légère d’appartement à Erevan",
         "rafraîchissement d’appartement Erevan"
       ],
       "clicks": null,
@@ -2117,9 +2117,9 @@
       "inSitemap": true,
       "status": 200,
       "canonical": "https://www.shinex.am/fr/services/cosmetic-renovation-yerevan",
-      "title": "Rénovation légère à Erevan | SHINEX",
-      "description": "Rénovation légère à Erevan : peinture, papier peint, réparations de plafonds et renouvellement des sols pour appartement, maison ou pièce individuelle.",
-      "h1": "Rénovation légère à Erevan",
+      "title": "Rénovation légère d’appartement à Erevan | SHINEX",
+      "description": "Rénovation légère d’appartement à Erevan : murs, plafonds, sols ou une pièce. Rafraîchissement avant emménagement ou location. Devis SHINEX.",
+      "h1": "Rénovation légère d’appartement à Erevan",
       "incomingPages": 6
     },
     {
@@ -2139,8 +2139,8 @@
       "inSitemap": true,
       "status": 200,
       "canonical": "https://www.shinex.am/fr/services/design",
-      "title": "Conception architecturale | SHINEX",
-      "description": "Nous élaborons les solutions architecturales selon l’objectif du projet, les caractéristiques du terrain, les exigences applicables et la future construction, pour démarrer les travaux sur la base de documents convenus.",
+      "title": "Conception architecturale en Arménie | SHINEX",
+      "description": "Conception architecturale en Arménie : plans du bâtiment, étude du terrain et documents d’exécution pour construire ou transformer. Présentez votre projet à SHINEX.",
       "h1": "Conception architecturale",
       "incomingPages": 23
     },
@@ -2185,8 +2185,8 @@
       "inSitemap": true,
       "status": 200,
       "canonical": "https://www.shinex.am/fr/services/facade-and-roofing",
-      "title": "Travaux de façade et de toiture | SHINEX",
-      "description": "Nous planifions les travaux de façade et de toiture selon le projet, l’évacuation des eaux, les protections et les raccords, en tenant compte de l’état de la structure existante.",
+      "title": "Travaux de façade et de toiture en Arménie | SHINEX",
+      "description": "Façades et toitures en Arménie : construction, rénovation, couches de protection, évacuation des eaux et raccords. Demandez une évaluation de votre bâtiment.",
       "h1": "Travaux de façade et de toiture",
       "incomingPages": 23
     },
@@ -2297,7 +2297,7 @@
       "status": 200,
       "canonical": "https://www.shinex.am/fr/services/monolithic-work",
       "title": "Construction en béton armé en Arménie | SHINEX",
-      "description": "Nous réalisons les travaux de béton armé selon les plans de structure, en respectant les dimensions, l’ordre de construction et les contrôles nécessaires à chaque étape.",
+      "description": "Travaux de béton armé en Arménie : coffrage, ferraillage et coulage selon les plans de structure. Devis selon les quantités et les conditions d’accès au chantier.",
       "h1": "Construction en béton armé",
       "incomingPages": 23
     },
@@ -2456,9 +2456,9 @@
       "inSitemap": true,
       "status": 200,
       "canonical": "https://www.shinex.am/hy/about",
-      "title": "Վերանորոգման և շինարարության կազմակերպման հստակ ձևաչափ | SHINEX",
+      "title": "Մեր մասին․ վերանորոգում և շինարարություն Հայաստանում | SHINEX",
       "description": "SHINEX-ը իրականացնում է վերանորոգման և շինարարական աշխատանքներ ամբողջ Հայաստանում՝ կենտրոնանալով աշխատանքի հստակ կազմակերպման, նախնական հաշվարկի և պատվիրատուի հետ թափանցիկ համագործակցության վրա։",
-      "h1": "Վերանորոգման և շինարարության կազմակերպման հստակ ձևաչափ",
+      "h1": "Մեր մասին․ վերանորոգում և շինարարություն Հայաստանում",
       "incomingPages": 23
     },
     {
@@ -2548,7 +2548,7 @@
       "status": 200,
       "canonical": "https://www.shinex.am/hy/prices",
       "title": "Բնակարանի վերանորոգման գներ Երևանում | SHINEX",
-      "description": "Վերանորոգում Երևանում՝ 55 000 դրամ/մ²-ից։ 40, 60 և 80 մ² բնակարանների հաշվարկի օրինակներ, աշխատանքների ու նյութերի կազմ։ Անհատական նախահաշիվ՝ զննումից հետո։",
+      "description": "Բնակարանի վերանորոգում Երևանում՝ 55 000 դրամ/մ²-ից։ Միայն աշխատանքը, նյութերն առանձին։ 40, 60 և 80 մ²-ի օրինակներ։ Նախահաշիվ՝ SHINEX-ից։",
       "h1": "Բնակարանի վերանորոգման արժեքը Երևանում",
       "incomingPages": 23
     },
@@ -2750,9 +2750,9 @@
       "inSitemap": true,
       "status": 200,
       "canonical": "https://www.shinex.am/hy/services",
-      "title": "Վերանորոգման, դիզայնի և շինարարական ծառայություններ | SHINEX",
-      "description": "Բնակարանների և տների վերանորոգում, առանձնատների կառուցում, ինտերիերի դիզայն և առանձին շինարարական աշխատանքներ։",
-      "h1": "Վերանորոգման, դիզայնի և շինարարական ծառայություններ",
+      "title": "Վերանորոգման և շինարարական ծառայություններ Երևանում | SHINEX",
+      "description": "Ընտրեք SHINEX-ի ծառայությունը Երևանում՝ բնակարանի կամ տան վերանորոգում, շինարարություն, ինտերիերի դիզայն կամ առանձին աշխատանքներ։ Ծավալներ և գնային ուղեցույցներ։",
+      "h1": "Վերանորոգման և շինարարական ծառայություններ Երևանում",
       "incomingPages": 23
     },
     {
@@ -2809,7 +2809,8 @@
       "locale": "hy",
       "intent": "capital-renovation",
       "queries": [
-        "կապիտալ վերանորոգում Երևանում",
+        "բնակարանի կապիտալ վերանորոգում Երևանում",
+        "կապիտալ վերանորոգում",
         "բնակարանի կապիտալ վերանորոգում"
       ],
       "clicks": 3,
@@ -2822,9 +2823,9 @@
       "inSitemap": true,
       "status": 200,
       "canonical": "https://www.shinex.am/hy/services/capital-renovation-yerevan",
-      "title": "Կապիտալ վերանորոգում Երևանում | SHINEX",
-      "description": "Կապիտալ վերանորոգում Երևանում բնակարանի կամ տան համար՝ ապամոնտաժում, էլեկտրական, սանտեխնիկական և հարդարման աշխատանքներ։",
-      "h1": "Կապիտալ վերանորոգում Երևանում",
+      "title": "Բնակարանի կապիտալ վերանորոգում Երևանում | SHINEX",
+      "description": "Բնակարանի կապիտալ վերանորոգում Երևանում՝ ապամոնտաժում, լարերի ու խողովակների փոխարինում ըստ զննման, հիմքերի պատրաստում և հարդարում։ SHINEX։",
+      "h1": "Բնակարանի կապիտալ վերանորոգում Երևանում",
       "incomingPages": 10
     },
     {
@@ -2896,7 +2897,8 @@
       "locale": "hy",
       "intent": "cosmetic-renovation",
       "queries": [
-        "կոսմետիկ վերանորոգում Երևանում",
+        "բնակարանի կոսմետիկ վերանորոգում Երևանում",
+        "կոսմետիկ վերանորոգում",
         "բնակարանի կոսմետիկ վերանորոգում"
       ],
       "clicks": 3,
@@ -2909,9 +2911,9 @@
       "inSitemap": true,
       "status": 200,
       "canonical": "https://www.shinex.am/hy/services/cosmetic-renovation-yerevan",
-      "title": "Կոսմետիկ վերանորոգում Երևանում | SHINEX",
-      "description": "Կոսմետիկ վերանորոգում Երևանում՝ պատերի, առաստաղի, հատակի, սալիկի և առանձին գոտիների հարդարման թարմացում։",
-      "h1": "Կոսմետիկ վերանորոգում Երևանում",
+      "title": "Բնակարանի կոսմետիկ վերանորոգում Երևանում | SHINEX",
+      "description": "Բնակարանի կոսմետիկ վերանորոգում Երևանում՝ պատեր, առաստաղ, հատակ կամ մեկ սենյակ։ Թարմացում բնակվելուց կամ վարձակալության հանձնելուց առաջ։ SHINEX։",
+      "h1": "Բնակարանի կոսմետիկ վերանորոգում Երևանում",
       "incomingPages": 6
     },
     {
@@ -3405,7 +3407,7 @@
       "status": 200,
       "canonical": "https://www.shinex.am/ru/prices",
       "title": "Ремонт квартир в Ереване: цены за м² и примеры | SHINEX",
-      "description": "Ремонт квартир в Ереване от 55 000 драм/м². Примеры для 40, 60 и 80 м², состав работ и материалов. Индивидуальная смета после осмотра.",
+      "description": "Ремонт квартир в Ереване: работа от 55 000 драм/м². Материалы отдельно. Примеры для 40, 60 и 80 м². Смета после осмотра — SHINEX.",
       "h1": "Стоимость ремонта квартиры в Ереване",
       "incomingPages": 23
     },
@@ -3607,9 +3609,9 @@
       "inSitemap": true,
       "status": 200,
       "canonical": "https://www.shinex.am/ru/services",
-      "title": "Ремонт, дизайн и строительные услуги | SHINEX",
-      "description": "Ремонт квартир и домов, строительство частных домов, дизайн интерьера и отдельные строительные работы.",
-      "h1": "Ремонт, дизайн и строительные услуги",
+      "title": "Услуги ремонта и строительства в Ереване | SHINEX",
+      "description": "Выберите услуги SHINEX в Ереване: ремонт квартир и домов, строительство, дизайн интерьера, сантехника и электрика. Состав работ и ориентиры стоимости.",
+      "h1": "Услуги ремонта и строительства в Ереване",
       "incomingPages": 23
     },
     {
@@ -3667,8 +3669,10 @@
       "locale": "ru",
       "intent": "capital-renovation",
       "queries": [
-        "капитальный ремонт в Ереване",
-        "капитальный ремонт квартиры Ереван"
+        "капитальный ремонт квартир в Ереване",
+        "капитальный ремонт квартиры Ереван",
+        "капитальный ремонт с заменой проводки",
+        "ремонт квартиры после покупки"
       ],
       "clicks": 0,
       "impressions": 6,
@@ -3680,9 +3684,9 @@
       "inSitemap": true,
       "status": 200,
       "canonical": "https://www.shinex.am/ru/services/capital-renovation-yerevan",
-      "title": "Капитальный ремонт в Ереване | SHINEX",
-      "description": "Капитальный ремонт квартиры или дома в Ереване: демонтаж, электрика, сантехника и отделка.",
-      "h1": "Капитальный ремонт в Ереване",
+      "title": "Капитальный ремонт квартир в Ереване | SHINEX",
+      "description": "Капитальный ремонт квартиры в Ереване: демонтаж, замена проводки и труб по результатам осмотра, подготовка оснований и отделка. Смета SHINEX.",
+      "h1": "Капитальный ремонт квартир в Ереване",
       "incomingPages": 10
     },
     {
@@ -3754,8 +3758,10 @@
       "locale": "ru",
       "intent": "cosmetic-renovation",
       "queries": [
-        "косметический ремонт в Ереване",
-        "косметический ремонт квартиры Ереван"
+        "косметический ремонт квартир в Ереване",
+        "косметический ремонт квартиры Ереван",
+        "ремонт квартиры перед сдачей в аренду",
+        "косметический ремонт одной комнаты"
       ],
       "clicks": 0,
       "impressions": 20,
@@ -3767,9 +3773,9 @@
       "inSitemap": true,
       "status": 200,
       "canonical": "https://www.shinex.am/ru/services/cosmetic-renovation-yerevan",
-      "title": "Косметический ремонт в Ереване | SHINEX",
-      "description": "Косметический ремонт в Ереване: обновление стен, потолка, пола, плитки и отдельных зон.",
-      "h1": "Косметический ремонт в Ереване",
+      "title": "Косметический ремонт квартир в Ереване | SHINEX",
+      "description": "Косметический ремонт квартиры в Ереване: стены, потолок, пол или отдельная комната. Обновление перед заселением или сдачей в аренду. Смета SHINEX.",
+      "h1": "Косметический ремонт квартир в Ереване",
       "incomingPages": 6
     },
     {

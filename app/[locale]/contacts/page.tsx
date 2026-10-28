@@ -1,3 +1,4 @@
+import { PageSchema } from "@/components/seo/page-schema";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
@@ -44,6 +45,13 @@ export default async function ContactsPage({ params }: Props) {
 
   return (
     <>
+      <PageSchema
+        locale={locale}
+        pathname="contacts"
+        name={copy.title}
+        description={copy.description}
+        type="ContactPage"
+      />
       <script
         dangerouslySetInnerHTML={{
           __html: serializeJsonLd(

@@ -65,7 +65,7 @@ export function Hero({
                   fill
                   preload
                   quality={82}
-                  sizes="(max-width: 1279px) 100vw, (max-width: 1333px) 78vw, 620px"
+                  sizes="(max-width: 639px) calc(100vw - 32px), (max-width: 959px) calc(100vw - 48px), (max-width: 1279px) 53vw, (max-width: 1589px) 41vw, 620px"
                   src={content.heroVisual.image}
                 />
               </div>

@@ -1,0 +1,217 @@
+{
+  "checkedAt": "2026-10-28T07:56:49.399Z",
+  "base": "http://127.0.0.1:3104",
+  "checks": [
+    {
+      "h1": 1,
+      "path": "/hy/prices",
+      "scrollWidth": 320,
+      "tableOverflow": 0,
+      "width": 320
+    },
+    {
+      "h1": 1,
+      "path": "/hy/services/capital-renovation-yerevan",
+      "scrollWidth": 320,
+      "tableOverflow": 0,
+      "width": 320
+    },
+    {
+      "h1": 1,
+      "path": "/hy/services/cosmetic-renovation-yerevan",
+      "scrollWidth": 320,
+      "tableOverflow": 0,
+      "width": 320
+    },
+    {
+      "h1": 1,
+      "path": "/ru/prices",
+      "scrollWidth": 320,
+      "tableOverflow": 0,
+      "width": 320
+    },
+    {
+      "h1": 1,
+      "path": "/ru/services/capital-renovation-yerevan",
+      "scrollWidth": 320,
+      "tableOverflow": 0,
+      "width": 320
+    },
+    {
+      "h1": 1,
+      "path": "/ru/services/cosmetic-renovation-yerevan",
+      "scrollWidth": 320,
+      "tableOverflow": 0,
+      "width": 320
+    },
+    {
+      "h1": 1,
+      "path": "/en/prices",
+      "scrollWidth": 320,
+      "tableOverflow": 0,
+      "width": 320
+    },
+    {
+      "h1": 1,
+      "path": "/en/services/capital-renovation-yerevan",
+      "scrollWidth": 320,
+      "tableOverflow": 0,
+      "width": 320
+    },
+    {
+      "h1": 1,
+      "path": "/en/services/cosmetic-renovation-yerevan",
+      "scrollWidth": 320,
+      "tableOverflow": 0,
+      "width": 320
+    },
+    {
+      "h1": 1,
+      "path": "/de/prices",
+      "scrollWidth": 320,
+      "tableOverflow": 0,
+      "width": 320
+    },
+    {
+      "h1": 1,
+      "path": "/de/services/capital-renovation-yerevan",
+      "scrollWidth": 320,
+      "tableOverflow": 0,
+      "width": 320
+    },
+    {
+      "h1": 1,
+      "path": "/de/services/cosmetic-renovation-yerevan",
+      "scrollWidth": 320,
+      "tableOverflow": 0,
+      "width": 320
+    },
+    {
+      "h1": 1,
+      "path": "/fr/prices",
+      "scrollWidth": 320,
+      "tableOverflow": 0,
+      "width": 320
+    },
+    {
+      "h1": 1,
+      "path": "/fr/services/capital-renovation-yerevan",
+      "scrollWidth": 320,
+      "tableOverflow": 0,
+      "width": 320
+    },
+    {
+      "h1": 1,
+      "path": "/fr/services/cosmetic-renovation-yerevan",
+      "scrollWidth": 320,
+      "tableOverflow": 0,
+      "width": 320
+    },
+    {
+      "h1": 1,
+      "path": "/hy/prices",
+      "scrollWidth": 1440,
+      "tableOverflow": 0,
+      "width": 1440
+    },
+    {
+      "h1": 1,
+      "path": "/hy/services/capital-renovation-yerevan",
+      "scrollWidth": 1440,
+      "tableOverflow": 0,
+      "width": 1440
+    },
+    {
+      "h1": 1,
+      "path": "/hy/services/cosmetic-renovation-yerevan",
+      "scrollWidth": 1440,
+      "tableOverflow": 0,
+      "width": 1440
+    },
+    {
+      "h1": 1,
+      "path": "/ru/prices",
+      "scrollWidth": 1440,
+      "tableOverflow": 0,
+      "width": 1440
+    },
+    {
+      "h1": 1,
+      "path": "/ru/services/capital-renovation-yerevan",
+      "scrollWidth": 1440,
+      "tableOverflow": 0,
+      "width": 1440
+    },
+    {
+      "h1": 1,
+      "path": "/ru/services/cosmetic-renovation-yerevan",
+      "scrollWidth": 1440,
+      "tableOverflow": 0,
+      "width": 1440
+    },
+    {
+      "h1": 1,
+      "path": "/en/prices",
+      "scrollWidth": 1440,
+      "tableOverflow": 0,
+      "width": 1440
+    },
+    {
+      "h1": 1,
+      "path": "/en/services/capital-renovation-yerevan",
+      "scrollWidth": 1440,
+      "tableOverflow": 0,
+      "width": 1440
+    },
+    {
+      "h1": 1,
+      "path": "/en/services/cosmetic-renovation-yerevan",
+      "scrollWidth": 1440,
+      "tableOverflow": 0,
+      "width": 1440
+    },
+    {
+      "h1": 1,
+      "path": "/de/prices",
+      "scrollWidth": 1440,
+      "tableOverflow": 0,
+      "width": 1440
+    },
+    {
+      "h1": 1,
+      "path": "/de/services/capital-renovation-yerevan",
+      "scrollWidth": 1440,
+      "tableOverflow": 0,
+      "width": 1440
+    },
+    {
+      "h1": 1,
+      "path": "/de/services/cosmetic-renovation-yerevan",
+      "scrollWidth": 1440,
+      "tableOverflow": 0,
+      "width": 1440
+    },
+    {
+      "h1": 1,
+      "path": "/fr/prices",
+      "scrollWidth": 1440,
+      "tableOverflow": 0,
+      "width": 1440
+    },
+    {
+      "h1": 1,
+      "path": "/fr/services/capital-renovation-yerevan",
+      "scrollWidth": 1440,
+      "tableOverflow": 0,
+      "width": 1440
+    },
+    {
+      "h1": 1,
+      "path": "/fr/services/cosmetic-renovation-yerevan",
+      "scrollWidth": 1440,
+      "tableOverflow": 0,
+      "width": 1440
+    }
+  ],
+  "cosmeticFaqOpened": true
+}

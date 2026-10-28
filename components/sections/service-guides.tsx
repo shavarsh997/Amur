@@ -6,9 +6,19 @@ import {
 } from "@/config/service-guides.config";
 import type { Locale } from "@/types";
 
-export function ServiceGuides({ locale }: { locale: Locale }) {
+export function ServiceGuides({
+  locale,
+  prominent = false,
+}: {
+  locale: Locale;
+  prominent?: boolean;
+}) {
   return (
-    <section className="mt-12 border-t border-[var(--border)] pt-8">
+    <section
+      className={
+        prominent ? "pb-4" : "mt-12 border-t border-[var(--border)] pt-8"
+      }
+    >
       <h2 className="text-2xl font-semibold tracking-tight text-[var(--text-primary)]">
         {serviceGuidesTitle[locale]}
       </h2>

@@ -18,7 +18,7 @@ function attributes(tag) {
     )
   );
 }
-function parse(html) {
+export function parseSeoHtml(html) {
   const document = html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, "");
   const tags = (name) =>
     [...document.matchAll(new RegExp(`<${name}\\b[^>]*>`, "gi"))].map(([tag]) =>
@@ -89,7 +89,7 @@ export async function crawlSeo({
       redirect: "manual",
       signal: AbortSignal.timeout(30_000),
     });
-    return { response, page: parse(await response.text()) };
+    return { response, page: parseSeoHtml(await response.text()) };
   };
   const pages = new Map();
   // Keep the crawler gentle on both local development and a public preview.
@@ -364,12 +364,38 @@ export async function crawlSeo({
       organizationsByLocale[path.split("/")[1]],
       `Incorrect organization definition: ${path}`
     );
-    for (const service of schemasOfType("Service"))
+    for (const service of schemasOfType("Service")) {
       assert.equal(
         service.url,
         `${publicOrigin}${path}`,
         `Service schema URL: ${path}`
       );
+      assert.equal(service["@id"], `${publicOrigin}${path}#service`);
+      assert.equal(
+        service.mainEntityOfPage?.mainEntity?.["@id"],
+        service["@id"]
+      );
+    }
+    const pageEntities = page.jsonLd.flatMap((schema) =>
+      ["WebPage", "AboutPage", "ContactPage", "CollectionPage"].includes(
+        schema["@type"]
+      )
+        ? [schema]
+        : schema["@type"] === "Service"
+          ? [schema.mainEntityOfPage]
+          : []
+    );
+    assert.equal(pageEntities.length, 1, `Exactly one page entity: ${path}`);
+    assert.equal(
+      pageEntities[0]?.url,
+      `${publicOrigin}${path}`,
+      `Page entity canonical: ${path}`
+    );
+    assert.equal(
+      pageEntities[0]?.inLanguage,
+      page.lang,
+      `Page entity language: ${path}`
+    );
     const ids = page.jsonLd.map((schema) => schema["@id"]).filter(Boolean);
     assert.equal(
       new Set(ids).size,

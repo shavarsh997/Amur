@@ -1,3 +1,4 @@
+import { PageSchema } from "@/components/seo/page-schema";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
@@ -40,6 +41,13 @@ export default async function CalculatorPage({ params }: Props) {
 
   return (
     <Container className="py-section">
+      <PageSchema
+        locale={locale}
+        pathname="calculator"
+        name={seo.title}
+        description={seo.description}
+        type="WebPage"
+      />
       <script
         dangerouslySetInnerHTML={{
           __html: serializeJsonLd(

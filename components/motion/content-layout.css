@@ -238,16 +238,6 @@ html {
   padding: var(--panel-space);
 }
 
-.service-catalog-lists {
-  grid-template-columns: minmax(0, 1fr);
-}
-
-@container layout-region (min-width: 480px) {
-  .service-catalog-lists {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
 @container site-content (min-width: 960px) {
   .site-page-content .service-catalog-card {
     grid-template-columns: 0.7fr 1.3fr;
@@ -255,6 +245,12 @@ html {
 
   .site-page-content .service-catalog-card:nth-child(even) {
     grid-template-columns: 1.3fr 0.7fr;
+  }
+
+  .site-page-content
+    .service-catalog-card:nth-child(even)
+    .service-catalog-image {
+    order: 2;
   }
 }
 

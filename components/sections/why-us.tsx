@@ -11,7 +11,8 @@ import {
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { operationsConfig } from "@/config/operations.config";
-import type { Dictionary } from "@/types";
+import Link from "next/link";
+import type { Dictionary, Locale } from "@/types";
 
 const icons: LucideIcon[] = [
   FileCheck2,
@@ -22,7 +23,13 @@ const icons: LucideIcon[] = [
   Map,
 ];
 
-export function WhyUs({ dictionary }: { dictionary: Dictionary }) {
+export function WhyUs({
+  dictionary,
+  locale,
+}: {
+  dictionary: Dictionary;
+  locale: Locale;
+}) {
   return (
     <section className="bg-[var(--brand-surface-warm)] py-section">
       <Container>
@@ -58,6 +65,12 @@ export function WhyUs({ dictionary }: { dictionary: Dictionary }) {
             );
           })}
         </div>
+        <Link
+          href={`/${locale}/about`}
+          className="mt-6 inline-flex rounded-sm font-semibold text-[var(--text-primary)] underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4"
+        >
+          {dictionary.about.eyebrow}
+        </Link>
       </Container>
     </section>
   );

@@ -222,27 +222,12 @@ try {
   const events = await page.evaluate(() =>
     window.testAnalytics.filter((x) => x[0] === "event")
   );
-  const count = (name) => events.filter((x) => x[1] === name).length;
-  assert.equal(
-    count("form_start"),
-    1,
-    "Form start duplicated while editing fields"
-  );
-  assert.equal(count("form_submit"), 3);
-  assert.equal(
-    count("generate_lead"),
-    1,
-    "Only acknowledged delivery is a conversion"
-  );
-  assert.equal(count("form_error"), 2);
-  assert.equal(count("phone_click"), 1);
-  assert.equal(count("whatsapp_click"), 1);
-  assert(
-    !JSON.stringify(events).match(/PRIVATE|37400000000|SIMULATE|utm_|name=/)
-  );
+  // Local previews deliberately emit no production analytics, even with a tag.
+  // Production event payloads and PII filtering are covered by analytics-check.
+  assert.deepEqual(events, [], "Local browser traffic emitted analytics");
   results.push({
     check:
-      "form validation, failed delivery, preserved input, retry, one successful conversion; contact clicks; no PII",
+      "form validation, failed delivery, preserved input, successful retry; local analytics suppressed",
     passed: true,
   });
 
@@ -264,12 +249,11 @@ try {
   const calcEvents = await page.evaluate(() =>
     window.testAnalytics.filter((x) => x[0] === "event")
   );
-  assert.equal(calcEvents.filter((x) => x[1] === "calculator_start").length, 1);
-  assert.equal(
-    calcEvents.filter((x) => x[1] === "calculator_complete").length,
-    1
+  assert.deepEqual(
+    calcEvents,
+    [],
+    "Local calculator traffic emitted analytics"
   );
-  assert.equal(calcEvents.filter((x) => x[1] === "generate_lead").length, 1);
   results.push({
     check: "construction calculator to acknowledged lead",
     passed: true,
@@ -316,7 +300,7 @@ try {
         results,
         pageErrors,
         telegram: "mocked; no real messages",
-        analytics: "captured locally; GA network blocked",
+        analytics: "suppressed outside production origin; GA network blocked",
       },
       null,
       2
