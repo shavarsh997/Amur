@@ -1,0 +1,3366 @@
+{
+  "checkedAt": "2026-10-29T08:12:35.292Z",
+  "checkedBase": "http://127.0.0.1:3106",
+  "pages": [
+    {
+      "url": "https://www.shinex.am/en",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Construction and Renovation Company in Armenia | SHINEX",
+      "description": "SHINEX builds homes, renovates residential and commercial properties, and designs interiors in Yerevan and across Armenia. Discuss your project with us.",
+      "h1": "Construction, renovation and interior design in Armenia",
+      "canonical": "https://www.shinex.am/en",
+      "locale": "en",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy",
+        "ru-AM": "https://www.shinex.am/ru",
+        "en": "https://www.shinex.am/en",
+        "de": "https://www.shinex.am/de",
+        "fr": "https://www.shinex.am/fr",
+        "x-default": "https://www.shinex.am/hy"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 7656,
+      "incomingPages": 23
+    },
+    {
+      "url": "https://www.shinex.am/de",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Bau- und Renovierungsunternehmen in Armenien | SHINEX",
+      "description": "SHINEX baut Häuser, renoviert Wohn- und Gewerbeimmobilien und gestaltet Innenräume in Eriwan und ganz Armenien. Besprechen Sie Ihr Projekt mit uns.",
+      "h1": "Bau, Renovierung und Innenraumgestaltung in Armenien",
+      "canonical": "https://www.shinex.am/de",
+      "locale": "de",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy",
+        "ru-AM": "https://www.shinex.am/ru",
+        "en": "https://www.shinex.am/en",
+        "de": "https://www.shinex.am/de",
+        "fr": "https://www.shinex.am/fr",
+        "x-default": "https://www.shinex.am/hy"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 8154,
+      "incomingPages": 23
+    },
+    {
+      "url": "https://www.shinex.am/ru",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Строительная компания в Армении | SHINEX",
+      "description": "SHINEX: строительство частных домов, ремонт жилья и коммерческих помещений, дизайн интерьера в Ереване и по всей Армении. Обсудите проект и состав работ.",
+      "h1": "Строительство, ремонт и дизайн в Армении",
+      "canonical": "https://www.shinex.am/ru",
+      "locale": "ru-AM",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy",
+        "ru-AM": "https://www.shinex.am/ru",
+        "en": "https://www.shinex.am/en",
+        "de": "https://www.shinex.am/de",
+        "fr": "https://www.shinex.am/fr",
+        "x-default": "https://www.shinex.am/hy"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 7347,
+      "incomingPages": 23
+    },
+    {
+      "url": "https://www.shinex.am/hy",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Շինարարական ընկերություն Հայաստանում | SHINEX",
+      "description": "SHINEX՝ առանձնատների կառուցում, բնակարանների և բիզնես տարածքների վերանորոգում, ինտերիերի դիզայն Երևանում ու Հայաստանի մարզերում։ Քննարկենք ձեր նախագիծը։",
+      "h1": "Շինարարություն, վերանորոգում և ինտերիերի դիզայն",
+      "canonical": "https://www.shinex.am/hy",
+      "locale": "hy-AM",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy",
+        "ru-AM": "https://www.shinex.am/ru",
+        "en": "https://www.shinex.am/en",
+        "de": "https://www.shinex.am/de",
+        "fr": "https://www.shinex.am/fr",
+        "x-default": "https://www.shinex.am/hy"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 9076,
+      "incomingPages": 23
+    },
+    {
+      "url": "https://www.shinex.am/hy/services",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Վերանորոգման և շինարարական ծառայություններ Երևանում | SHINEX",
+      "description": "Ընտրեք SHINEX-ի ծառայությունը Երևանում՝ բնակարանի կամ տան վերանորոգում, շինարարություն, ինտերիերի դիզայն կամ առանձին աշխատանքներ։ Ծավալներ և գնային ուղեցույցներ։",
+      "h1": "Վերանորոգման և շինարարական ծառայություններ Երևանում",
+      "canonical": "https://www.shinex.am/hy/services",
+      "locale": "hy-AM",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services",
+        "ru-AM": "https://www.shinex.am/ru/services",
+        "en": "https://www.shinex.am/en/services",
+        "de": "https://www.shinex.am/de/services",
+        "fr": "https://www.shinex.am/fr/services",
+        "x-default": "https://www.shinex.am/hy/services"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 4022,
+      "incomingPages": 23
+    },
+    {
+      "url": "https://www.shinex.am/ru/services",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Услуги ремонта и строительства в Ереване | SHINEX",
+      "description": "Выберите услуги SHINEX в Ереване: ремонт квартир и домов, строительство, дизайн интерьера, сантехника и электрика. Состав работ и ориентиры стоимости.",
+      "h1": "Услуги ремонта и строительства в Ереване",
+      "canonical": "https://www.shinex.am/ru/services",
+      "locale": "ru-AM",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services",
+        "ru-AM": "https://www.shinex.am/ru/services",
+        "en": "https://www.shinex.am/en/services",
+        "de": "https://www.shinex.am/de/services",
+        "fr": "https://www.shinex.am/fr/services",
+        "x-default": "https://www.shinex.am/hy/services"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 3440,
+      "incomingPages": 23
+    },
+    {
+      "url": "https://www.shinex.am/en/services",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Renovation and construction services in Yerevan | SHINEX",
+      "description": "Explore SHINEX services in Yerevan: apartment and house renovation, construction, interior design, plumbing and electrical work. Compare scope and cost guides.",
+      "h1": "Renovation and construction services in Yerevan",
+      "canonical": "https://www.shinex.am/en/services",
+      "locale": "en",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services",
+        "ru-AM": "https://www.shinex.am/ru/services",
+        "en": "https://www.shinex.am/en/services",
+        "de": "https://www.shinex.am/de/services",
+        "fr": "https://www.shinex.am/fr/services",
+        "x-default": "https://www.shinex.am/hy/services"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 3700,
+      "incomingPages": 23
+    },
+    {
+      "url": "https://www.shinex.am/fr",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Entreprise de construction et de rénovation en Arménie | SHINEX",
+      "description": "SHINEX construit des maisons, rénove des logements et des locaux professionnels et conçoit des intérieurs à Erevan et dans toute l’Arménie. Parlons de votre projet.",
+      "h1": "Construction, rénovation et aménagement intérieur en Arménie",
+      "canonical": "https://www.shinex.am/fr",
+      "locale": "fr",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy",
+        "ru-AM": "https://www.shinex.am/ru",
+        "en": "https://www.shinex.am/en",
+        "de": "https://www.shinex.am/de",
+        "fr": "https://www.shinex.am/fr",
+        "x-default": "https://www.shinex.am/hy"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 8903,
+      "incomingPages": 23
+    },
+    {
+      "url": "https://www.shinex.am/de/services",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Renovierungs- und Bauleistungen in Eriwan | SHINEX",
+      "description": "SHINEX in Eriwan: Wohnungs- und Hausrenovierung, Neubau, Innenraumgestaltung, Sanitär- und Elektroarbeiten. Leistungsumfang und Kosteninformationen vergleichen.",
+      "h1": "Renovierungs- und Bauleistungen in Eriwan",
+      "canonical": "https://www.shinex.am/de/services",
+      "locale": "de",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services",
+        "ru-AM": "https://www.shinex.am/ru/services",
+        "en": "https://www.shinex.am/en/services",
+        "de": "https://www.shinex.am/de/services",
+        "fr": "https://www.shinex.am/fr/services",
+        "x-default": "https://www.shinex.am/hy/services"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 3731,
+      "incomingPages": 23
+    },
+    {
+      "url": "https://www.shinex.am/hy/about",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Մեր մասին․ վերանորոգում և շինարարություն Հայաստանում | SHINEX",
+      "description": "SHINEX-ը իրականացնում է վերանորոգման և շինարարական աշխատանքներ ամբողջ Հայաստանում՝ կենտրոնանալով աշխատանքի հստակ կազմակերպման, նախնական հաշվարկի և պատվիրատուի հետ թափանցիկ համագործակցության վրա։",
+      "h1": "Մեր մասին․ վերանորոգում և շինարարություն Հայաստանում",
+      "canonical": "https://www.shinex.am/hy/about",
+      "locale": "hy-AM",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/about",
+        "ru-AM": "https://www.shinex.am/ru/about",
+        "en": "https://www.shinex.am/en/about",
+        "de": "https://www.shinex.am/de/about",
+        "fr": "https://www.shinex.am/fr/about",
+        "x-default": "https://www.shinex.am/hy/about"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 1753,
+      "incomingPages": 23
+    },
+    {
+      "url": "https://www.shinex.am/ru/about",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "О компании: ремонт и строительство в Армении | SHINEX",
+      "description": "SHINEX — ремонт, строительство и проектирование в Армении. Узнайте, как мы оцениваем задачи, согласуем этапы работ и поддерживаем связь с заказчиком.",
+      "h1": "О компании: ремонт и строительство в Армении",
+      "canonical": "https://www.shinex.am/ru/about",
+      "locale": "ru-AM",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/about",
+        "ru-AM": "https://www.shinex.am/ru/about",
+        "en": "https://www.shinex.am/en/about",
+        "de": "https://www.shinex.am/de/about",
+        "fr": "https://www.shinex.am/fr/about",
+        "x-default": "https://www.shinex.am/hy/about"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 1414,
+      "incomingPages": 23
+    },
+    {
+      "url": "https://www.shinex.am/fr/services",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Services de rénovation et de construction à Erevan | SHINEX",
+      "description": "Découvrez les services SHINEX à Erevan : rénovation, construction, aménagement intérieur, plomberie et électricité. Comparez les travaux et préparez votre budget.",
+      "h1": "Services de rénovation et de construction à Erevan",
+      "canonical": "https://www.shinex.am/fr/services",
+      "locale": "fr",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services",
+        "ru-AM": "https://www.shinex.am/ru/services",
+        "en": "https://www.shinex.am/en/services",
+        "de": "https://www.shinex.am/de/services",
+        "fr": "https://www.shinex.am/fr/services",
+        "x-default": "https://www.shinex.am/hy/services"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 4040,
+      "incomingPages": 23
+    },
+    {
+      "url": "https://www.shinex.am/de/about",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Über uns: Renovierung und Bau in Armenien | SHINEX",
+      "description": "SHINEX entwickelt Renovierungs- und Bauleistungen in Armenien mit klarer Organisation, einer ersten Einschätzung, abgestimmten Phasen und unkomplizierter Kommunikation mit Kunden.",
+      "h1": "Über uns: Renovierung und Bau in Armenien",
+      "canonical": "https://www.shinex.am/de/about",
+      "locale": "de",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/about",
+        "ru-AM": "https://www.shinex.am/ru/about",
+        "en": "https://www.shinex.am/en/about",
+        "de": "https://www.shinex.am/de/about",
+        "fr": "https://www.shinex.am/fr/about",
+        "x-default": "https://www.shinex.am/hy/about"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 1624,
+      "incomingPages": 23
+    },
+    {
+      "url": "https://www.shinex.am/en/about",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "About our renovation and construction company in Armenia | SHINEX",
+      "description": "Learn how SHINEX plans renovation and construction in Armenia: property assessment, an agreed scope of work, project stages, and communication with the client.",
+      "h1": "About our renovation and construction company in Armenia",
+      "canonical": "https://www.shinex.am/en/about",
+      "locale": "en",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/about",
+        "ru-AM": "https://www.shinex.am/ru/about",
+        "en": "https://www.shinex.am/en/about",
+        "de": "https://www.shinex.am/de/about",
+        "fr": "https://www.shinex.am/fr/about",
+        "x-default": "https://www.shinex.am/hy/about"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 1479,
+      "incomingPages": 23
+    },
+    {
+      "url": "https://www.shinex.am/hy/contacts",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Կապ շինարարական ընկերության հետ՝ Երևանում | SHINEX",
+      "description": "Կապվեք SHINEX-ի հետ հեռախոսով, WhatsApp-ով կամ էլեկտրոնային փոստով։ Քննարկենք ձեր շինարարության, վերանորոգման կամ ինտերիերի դիզայնի նախագիծը։",
+      "h1": "Կապ շինարարական ընկերության հետ՝ Երևանում",
+      "canonical": "https://www.shinex.am/hy/contacts",
+      "locale": "hy-AM",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/contacts",
+        "ru-AM": "https://www.shinex.am/ru/contacts",
+        "en": "https://www.shinex.am/en/contacts",
+        "de": "https://www.shinex.am/de/contacts",
+        "fr": "https://www.shinex.am/fr/contacts",
+        "x-default": "https://www.shinex.am/hy/contacts"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 866,
+      "incomingPages": 23
+    },
+    {
+      "url": "https://www.shinex.am/fr/about",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "À propos : rénovation et construction en Arménie | SHINEX",
+      "description": "SHINEX développe ses services de rénovation et de construction en Arménie autour d’une organisation claire, d’une première évaluation, d’étapes convenues et d’échanges simples avec les clients.",
+      "h1": "À propos : rénovation et construction en Arménie",
+      "canonical": "https://www.shinex.am/fr/about",
+      "locale": "fr",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/about",
+        "ru-AM": "https://www.shinex.am/ru/about",
+        "en": "https://www.shinex.am/en/about",
+        "de": "https://www.shinex.am/de/about",
+        "fr": "https://www.shinex.am/fr/about",
+        "x-default": "https://www.shinex.am/hy/about"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 1814,
+      "incomingPages": 23
+    },
+    {
+      "url": "https://www.shinex.am/fr/contacts",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Contactez notre entreprise de construction à Erevan | SHINEX",
+      "description": "Contactez SHINEX par téléphone, WhatsApp ou e-mail pour discuter de construction, de rénovation et d’aménagement intérieur à Erevan et dans toute l’Arménie.",
+      "h1": "Contactez notre entreprise de construction à Erevan",
+      "canonical": "https://www.shinex.am/fr/contacts",
+      "locale": "fr",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/contacts",
+        "ru-AM": "https://www.shinex.am/ru/contacts",
+        "en": "https://www.shinex.am/en/contacts",
+        "de": "https://www.shinex.am/de/contacts",
+        "fr": "https://www.shinex.am/fr/contacts",
+        "x-default": "https://www.shinex.am/hy/contacts"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 917,
+      "incomingPages": 23
+    },
+    {
+      "url": "https://www.shinex.am/en/contacts",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Contact our construction company in Yerevan | SHINEX",
+      "description": "Contact SHINEX by phone, WhatsApp or email to discuss construction, renovation and interior design in Yerevan and across Armenia.",
+      "h1": "Contact our construction company in Yerevan",
+      "canonical": "https://www.shinex.am/en/contacts",
+      "locale": "en",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/contacts",
+        "ru-AM": "https://www.shinex.am/ru/contacts",
+        "en": "https://www.shinex.am/en/contacts",
+        "de": "https://www.shinex.am/de/contacts",
+        "fr": "https://www.shinex.am/fr/contacts",
+        "x-default": "https://www.shinex.am/hy/contacts"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 830,
+      "incomingPages": 23
+    },
+    {
+      "url": "https://www.shinex.am/de/contacts",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Kontaktieren Sie unser Bauunternehmen in Eriwan | SHINEX",
+      "description": "Kontaktieren Sie SHINEX telefonisch, per WhatsApp oder E-Mail, um Bau, Renovierung und Innenraumgestaltung in Eriwan und ganz Armenien zu besprechen.",
+      "h1": "Kontaktieren Sie unser Bauunternehmen in Eriwan",
+      "canonical": "https://www.shinex.am/de/contacts",
+      "locale": "de",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/contacts",
+        "ru-AM": "https://www.shinex.am/ru/contacts",
+        "en": "https://www.shinex.am/en/contacts",
+        "de": "https://www.shinex.am/de/contacts",
+        "fr": "https://www.shinex.am/fr/contacts",
+        "x-default": "https://www.shinex.am/hy/contacts"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 912,
+      "incomingPages": 23
+    },
+    {
+      "url": "https://www.shinex.am/ru/contacts",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Контакты строительной компании в Ереване | SHINEX",
+      "description": "Свяжитесь с SHINEX: телефон, WhatsApp и электронная почта. Обсудим строительство, ремонт или дизайн в Ереване и других городах Армении.",
+      "h1": "Контакты строительной компании в Ереване",
+      "canonical": "https://www.shinex.am/ru/contacts",
+      "locale": "ru-AM",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/contacts",
+        "ru-AM": "https://www.shinex.am/ru/contacts",
+        "en": "https://www.shinex.am/en/contacts",
+        "de": "https://www.shinex.am/de/contacts",
+        "fr": "https://www.shinex.am/fr/contacts",
+        "x-default": "https://www.shinex.am/hy/contacts"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 814,
+      "incomingPages": 23
+    },
+    {
+      "url": "https://www.shinex.am/de/calculator",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Bau- und Planungskostenrechner für Armenien | SHINEX",
+      "description": "Fordern Sie eine Kostenschätzung für Hausbau oder Innenraumplanung in Armenien an. Senden Sie Projektdaten und Kontaktdaten für eine persönliche Bewertung.",
+      "h1": "Bau- und Planungskostenrechner für Armenien",
+      "canonical": "https://www.shinex.am/de/calculator",
+      "locale": "de",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/calculator",
+        "ru-AM": "https://www.shinex.am/ru/calculator",
+        "en": "https://www.shinex.am/en/calculator",
+        "de": "https://www.shinex.am/de/calculator",
+        "fr": "https://www.shinex.am/fr/calculator",
+        "x-default": "https://www.shinex.am/hy/calculator"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 2372,
+      "incomingPages": 5
+    },
+    {
+      "url": "https://www.shinex.am/ru/calculator",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Калькулятор строительства и дизайна в Армении | SHINEX",
+      "description": "Запросите расчёт стоимости строительства дома и дизайна интерьера в Армении. Оставьте параметры и контакты. Для ремонта автоматический расчёт недоступен.",
+      "h1": "Калькулятор строительства и дизайна в Армении",
+      "canonical": "https://www.shinex.am/ru/calculator",
+      "locale": "ru-AM",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/calculator",
+        "ru-AM": "https://www.shinex.am/ru/calculator",
+        "en": "https://www.shinex.am/en/calculator",
+        "de": "https://www.shinex.am/de/calculator",
+        "fr": "https://www.shinex.am/fr/calculator",
+        "x-default": "https://www.shinex.am/hy/calculator"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 2276,
+      "incomingPages": 5
+    },
+    {
+      "url": "https://www.shinex.am/en/calculator",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Construction and design cost calculator in Armenia | SHINEX",
+      "description": "Request a house construction or interior design estimate in Armenia. Send your project parameters and contact details for a personal cost assessment.",
+      "h1": "Construction and design cost calculator in Armenia",
+      "canonical": "https://www.shinex.am/en/calculator",
+      "locale": "en",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/calculator",
+        "ru-AM": "https://www.shinex.am/ru/calculator",
+        "en": "https://www.shinex.am/en/calculator",
+        "de": "https://www.shinex.am/de/calculator",
+        "fr": "https://www.shinex.am/fr/calculator",
+        "x-default": "https://www.shinex.am/hy/calculator"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 2284,
+      "incomingPages": 5
+    },
+    {
+      "url": "https://www.shinex.am/hy/calculator",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Շինարարության և դիզայնի արժեքի հաշվիչ | SHINEX",
+      "description": "Հարցրեք տան կառուցման կամ ինտերիերի դիզայնի արժեքը Հայաստանում։ Ուղարկեք նախագծի և կոնտակտային տվյալները՝ անհատական հաշվարկի համար։",
+      "h1": "Շինարարության և դիզայնի արժեքի հաշվիչ",
+      "canonical": "https://www.shinex.am/hy/calculator",
+      "locale": "hy-AM",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/calculator",
+        "ru-AM": "https://www.shinex.am/ru/calculator",
+        "en": "https://www.shinex.am/en/calculator",
+        "de": "https://www.shinex.am/de/calculator",
+        "fr": "https://www.shinex.am/fr/calculator",
+        "x-default": "https://www.shinex.am/hy/calculator"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 2220,
+      "incomingPages": 5
+    },
+    {
+      "url": "https://www.shinex.am/fr/calculator",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Calculateur de coûts de construction et de conception en Arménie | SHINEX",
+      "description": "Demandez une estimation de construction de maison ou de conception intérieure en Arménie. Envoyez les paramètres du projet et vos coordonnées.",
+      "h1": "Calculateur de coûts de construction et de conception en Arménie",
+      "canonical": "https://www.shinex.am/fr/calculator",
+      "locale": "fr",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/calculator",
+        "ru-AM": "https://www.shinex.am/ru/calculator",
+        "en": "https://www.shinex.am/en/calculator",
+        "de": "https://www.shinex.am/de/calculator",
+        "fr": "https://www.shinex.am/fr/calculator",
+        "x-default": "https://www.shinex.am/hy/calculator"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 2562,
+      "incomingPages": 5
+    },
+    {
+      "url": "https://www.shinex.am/hy/privacy",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Գաղտնիության քաղաքականություն | SHINEX",
+      "description": "Այս քաղաքականությունը բացատրում է, թե ինչպես կարող են մշակվել կայքի ձևերի միջոցով ուղարկված տվյալները։",
+      "h1": "Գաղտնիության քաղաքականություն",
+      "canonical": "https://www.shinex.am/hy/privacy",
+      "locale": "hy-AM",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/privacy",
+        "ru-AM": "https://www.shinex.am/ru/privacy",
+        "en": "https://www.shinex.am/en/privacy",
+        "de": "https://www.shinex.am/de/privacy",
+        "fr": "https://www.shinex.am/fr/privacy",
+        "x-default": "https://www.shinex.am/hy/privacy"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 1684,
+      "incomingPages": 23
+    },
+    {
+      "url": "https://www.shinex.am/ru/privacy",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Политика конфиденциальности | SHINEX",
+      "description": "Эта политика объясняет, как могут обрабатываться данные, отправленные через формы сайта.",
+      "h1": "Политика конфиденциальности",
+      "canonical": "https://www.shinex.am/ru/privacy",
+      "locale": "ru-AM",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/privacy",
+        "ru-AM": "https://www.shinex.am/ru/privacy",
+        "en": "https://www.shinex.am/en/privacy",
+        "de": "https://www.shinex.am/de/privacy",
+        "fr": "https://www.shinex.am/fr/privacy",
+        "x-default": "https://www.shinex.am/hy/privacy"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 1566,
+      "incomingPages": 23
+    },
+    {
+      "url": "https://www.shinex.am/en/privacy",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Privacy policy | SHINEX",
+      "description": "This policy explains how information submitted through the website's forms may be processed.",
+      "h1": "Privacy policy",
+      "canonical": "https://www.shinex.am/en/privacy",
+      "locale": "en",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/privacy",
+        "ru-AM": "https://www.shinex.am/ru/privacy",
+        "en": "https://www.shinex.am/en/privacy",
+        "de": "https://www.shinex.am/de/privacy",
+        "fr": "https://www.shinex.am/fr/privacy",
+        "x-default": "https://www.shinex.am/hy/privacy"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 1502,
+      "incomingPages": 23
+    },
+    {
+      "url": "https://www.shinex.am/de/privacy",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Datenschutzerklärung | SHINEX",
+      "description": "Diese Erklärung erläutert, wie Angaben aus den Formularen dieser Website verarbeitet werden können.",
+      "h1": "Datenschutzerklärung",
+      "canonical": "https://www.shinex.am/de/privacy",
+      "locale": "de",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/privacy",
+        "ru-AM": "https://www.shinex.am/ru/privacy",
+        "en": "https://www.shinex.am/en/privacy",
+        "de": "https://www.shinex.am/de/privacy",
+        "fr": "https://www.shinex.am/fr/privacy",
+        "x-default": "https://www.shinex.am/hy/privacy"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 1762,
+      "incomingPages": 23
+    },
+    {
+      "url": "https://www.shinex.am/hy/services/renovation",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Առանձնատների վերանորոգում Հայաստանում | SHINEX",
+      "description": "Առանձնատների վերանորոգում Երևանում և ամբողջ Հայաստանում՝ հարդարում, էլեկտրական ու սանտեխնիկական աշխատանքներ։ Ճակատն ու տանիքը գնահատում ենք առանձին՝ նախահաշվի համար։",
+      "h1": "Առանձնատների վերանորոգում Հայաստանում",
+      "canonical": "https://www.shinex.am/hy/services/renovation",
+      "locale": "hy-AM",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/renovation",
+        "ru-AM": "https://www.shinex.am/ru/services/renovation",
+        "en": "https://www.shinex.am/en/services/renovation",
+        "de": "https://www.shinex.am/de/services/renovation",
+        "fr": "https://www.shinex.am/fr/services/renovation",
+        "x-default": "https://www.shinex.am/hy/services/renovation"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 6636,
+      "incomingPages": 23
+    },
+    {
+      "url": "https://www.shinex.am/fr/privacy",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Politique de confidentialité | SHINEX",
+      "description": "Cette politique explique comment les informations transmises via les formulaires du site peuvent être traitées.",
+      "h1": "Politique de confidentialité",
+      "canonical": "https://www.shinex.am/fr/privacy",
+      "locale": "fr",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/privacy",
+        "ru-AM": "https://www.shinex.am/ru/privacy",
+        "en": "https://www.shinex.am/en/privacy",
+        "de": "https://www.shinex.am/de/privacy",
+        "fr": "https://www.shinex.am/fr/privacy",
+        "x-default": "https://www.shinex.am/hy/privacy"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 1773,
+      "incomingPages": 23
+    },
+    {
+      "url": "https://www.shinex.am/ru/services/renovation",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Ремонт частных домов в Армении | SHINEX",
+      "description": "Ремонт частных домов в Ереване и по всей Армении: отделка, электрика и сантехника. Состояние фасада и кровли учитываем отдельно при осмотре и подготовке сметы.",
+      "h1": "Ремонт частных домов в Армении",
+      "canonical": "https://www.shinex.am/ru/services/renovation",
+      "locale": "ru-AM",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/renovation",
+        "ru-AM": "https://www.shinex.am/ru/services/renovation",
+        "en": "https://www.shinex.am/en/services/renovation",
+        "de": "https://www.shinex.am/de/services/renovation",
+        "fr": "https://www.shinex.am/fr/services/renovation",
+        "x-default": "https://www.shinex.am/hy/services/renovation"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 5575,
+      "incomingPages": 23
+    },
+    {
+      "url": "https://www.shinex.am/hy/services/house-construction",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Առանձնատների կառուցում Երևանում և ամբողջ Հայաստանում | SHINEX",
+      "description": "Առանձնատների կառուցում Երևանում և ամբողջ Հայաստանում՝ հողամասի ու նախագծի ուսումնասիրությունից մինչև հիմք, կառուցվածքներ, ինժեներական համակարգեր և հանձնում։",
+      "h1": "Առանձնատների կառուցում Երևանում և ամբողջ Հայաստանում",
+      "canonical": "https://www.shinex.am/hy/services/house-construction",
+      "locale": "hy-AM",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/house-construction",
+        "ru-AM": "https://www.shinex.am/ru/services/house-construction",
+        "en": "https://www.shinex.am/en/services/house-construction",
+        "de": "https://www.shinex.am/de/services/house-construction",
+        "fr": "https://www.shinex.am/fr/services/house-construction",
+        "x-default": "https://www.shinex.am/hy/services/house-construction"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 4138,
+      "incomingPages": 23
+    },
+    {
+      "url": "https://www.shinex.am/de/services/renovation",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Renovierung von Privathäusern in Armenien | SHINEX",
+      "description": "Hausrenovierung in Eriwan und Armenien: Innenausbau, Elektro- und Sanitärarbeiten. Fassade und Dach werden für den Kostenvoranschlag gesondert geprüft.",
+      "h1": "Renovierung von Privathäusern in Armenien",
+      "canonical": "https://www.shinex.am/de/services/renovation",
+      "locale": "de",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/renovation",
+        "ru-AM": "https://www.shinex.am/ru/services/renovation",
+        "en": "https://www.shinex.am/en/services/renovation",
+        "de": "https://www.shinex.am/de/services/renovation",
+        "fr": "https://www.shinex.am/fr/services/renovation",
+        "x-default": "https://www.shinex.am/hy/services/renovation"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 6149,
+      "incomingPages": 23
+    },
+    {
+      "url": "https://www.shinex.am/fr/services/renovation",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Rénovation de maisons individuelles en Arménie | SHINEX",
+      "description": "Rénovation de maisons à Erevan et en Arménie : finitions, électricité et plomberie. Façade et toiture évaluées séparément pour préparer le devis.",
+      "h1": "Rénovation de maisons individuelles en Arménie",
+      "canonical": "https://www.shinex.am/fr/services/renovation",
+      "locale": "fr",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/renovation",
+        "ru-AM": "https://www.shinex.am/ru/services/renovation",
+        "en": "https://www.shinex.am/en/services/renovation",
+        "de": "https://www.shinex.am/de/services/renovation",
+        "fr": "https://www.shinex.am/fr/services/renovation",
+        "x-default": "https://www.shinex.am/hy/services/renovation"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 6596,
+      "incomingPages": 23
+    },
+    {
+      "url": "https://www.shinex.am/en/services/renovation",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Private House Renovation in Armenia | SHINEX",
+      "description": "Private house renovation in Yerevan and Armenia: finishes, electrical and plumbing work. Facade and roof condition assessed separately for the estimate.",
+      "h1": "Private house renovation in Armenia",
+      "canonical": "https://www.shinex.am/en/services/renovation",
+      "locale": "en",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/renovation",
+        "ru-AM": "https://www.shinex.am/ru/services/renovation",
+        "en": "https://www.shinex.am/en/services/renovation",
+        "de": "https://www.shinex.am/de/services/renovation",
+        "fr": "https://www.shinex.am/fr/services/renovation",
+        "x-default": "https://www.shinex.am/hy/services/renovation"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 5751,
+      "incomingPages": 23
+    },
+    {
+      "url": "https://www.shinex.am/ru/services/house-construction",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Строительство домов в Ереване и по всей Армении | SHINEX",
+      "description": "Строительство частных домов в Ереване и по всей Армении: участок, проект, фундамент, конструкции, инженерные системы и согласованные этапы работ.",
+      "h1": "Строительство частных домов в Ереване и по всей Армении",
+      "canonical": "https://www.shinex.am/ru/services/house-construction",
+      "locale": "ru-AM",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/house-construction",
+        "ru-AM": "https://www.shinex.am/ru/services/house-construction",
+        "en": "https://www.shinex.am/en/services/house-construction",
+        "de": "https://www.shinex.am/de/services/house-construction",
+        "fr": "https://www.shinex.am/fr/services/house-construction",
+        "x-default": "https://www.shinex.am/hy/services/house-construction"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 3230,
+      "incomingPages": 23
+    },
+    {
+      "url": "https://www.shinex.am/fr/services/house-construction",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Construction de maisons individuelles à Erevan et en Arménie | SHINEX",
+      "description": "Construction de maisons à Erevan et dans toute l’Arménie : étude du terrain et du projet, fondations, structure, réseaux techniques et étapes convenues.",
+      "h1": "Construction de maisons à Erevan et dans toute l’Arménie",
+      "canonical": "https://www.shinex.am/fr/services/house-construction",
+      "locale": "fr",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/house-construction",
+        "ru-AM": "https://www.shinex.am/ru/services/house-construction",
+        "en": "https://www.shinex.am/en/services/house-construction",
+        "de": "https://www.shinex.am/de/services/house-construction",
+        "fr": "https://www.shinex.am/fr/services/house-construction",
+        "x-default": "https://www.shinex.am/hy/services/house-construction"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 3762,
+      "incomingPages": 23
+    },
+    {
+      "url": "https://www.shinex.am/en/services/house-construction",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Private House Construction in Yerevan and across Armenia | SHINEX",
+      "description": "Private house construction in Yerevan and across Armenia: site and design review, foundations, structure, building services, and agreed work stages.",
+      "h1": "House construction in Yerevan and across Armenia",
+      "canonical": "https://www.shinex.am/en/services/house-construction",
+      "locale": "en",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/house-construction",
+        "ru-AM": "https://www.shinex.am/ru/services/house-construction",
+        "en": "https://www.shinex.am/en/services/house-construction",
+        "de": "https://www.shinex.am/de/services/house-construction",
+        "fr": "https://www.shinex.am/fr/services/house-construction",
+        "x-default": "https://www.shinex.am/hy/services/house-construction"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 3267,
+      "incomingPages": 23
+    },
+    {
+      "url": "https://www.shinex.am/de/services/house-construction",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Bau von Privathäusern in Eriwan und ganz Armenien | SHINEX",
+      "description": "Bau von Privathäusern in Eriwan und ganz Armenien: Grundstücks- und Planungsprüfung, Fundamente, Tragwerk, Gebäudetechnik und abgestimmte Bauphasen.",
+      "h1": "Hausbau in Eriwan und ganz Armenien",
+      "canonical": "https://www.shinex.am/de/services/house-construction",
+      "locale": "de",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/house-construction",
+        "ru-AM": "https://www.shinex.am/ru/services/house-construction",
+        "en": "https://www.shinex.am/en/services/house-construction",
+        "de": "https://www.shinex.am/de/services/house-construction",
+        "fr": "https://www.shinex.am/fr/services/house-construction",
+        "x-default": "https://www.shinex.am/hy/services/house-construction"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 3384,
+      "incomingPages": 23
+    },
+    {
+      "url": "https://www.shinex.am/en/services/interior-design",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Interior Design in Yerevan and across Armenia | SHINEX",
+      "description": "Interior design for apartments, private homes, and commercial spaces in Yerevan and across Armenia: layouts, concepts, materials, and working drawings.",
+      "h1": "Interior design in Yerevan and across Armenia",
+      "canonical": "https://www.shinex.am/en/services/interior-design",
+      "locale": "en",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/interior-design",
+        "ru-AM": "https://www.shinex.am/ru/services/interior-design",
+        "en": "https://www.shinex.am/en/services/interior-design",
+        "de": "https://www.shinex.am/de/services/interior-design",
+        "fr": "https://www.shinex.am/fr/services/interior-design",
+        "x-default": "https://www.shinex.am/hy/services/interior-design"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 4314,
+      "incomingPages": 23
+    },
+    {
+      "url": "https://www.shinex.am/de/services/interior-design",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Innenraumgestaltung in Eriwan und ganz Armenien | SHINEX",
+      "description": "Innenraumgestaltung für Wohnungen, Privathäuser und Gewerberäume in Eriwan und ganz Armenien: Grundrisse, Konzepte, Materialien und Ausführungspläne.",
+      "h1": "Innenraumgestaltung in Eriwan und ganz Armenien",
+      "canonical": "https://www.shinex.am/de/services/interior-design",
+      "locale": "de",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/interior-design",
+        "ru-AM": "https://www.shinex.am/ru/services/interior-design",
+        "en": "https://www.shinex.am/en/services/interior-design",
+        "de": "https://www.shinex.am/de/services/interior-design",
+        "fr": "https://www.shinex.am/fr/services/interior-design",
+        "x-default": "https://www.shinex.am/hy/services/interior-design"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 4708,
+      "incomingPages": 23
+    },
+    {
+      "url": "https://www.shinex.am/ru/services/interior-design",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Дизайн интерьера в Ереване и по всей Армении | SHINEX",
+      "description": "Дизайн интерьера квартир, частных домов и коммерческих пространств в Ереване и по всей Армении: планировка, концепция, материалы и рабочие чертежи.",
+      "h1": "Дизайн интерьера в Ереване и по всей Армении",
+      "canonical": "https://www.shinex.am/ru/services/interior-design",
+      "locale": "ru-AM",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/interior-design",
+        "ru-AM": "https://www.shinex.am/ru/services/interior-design",
+        "en": "https://www.shinex.am/en/services/interior-design",
+        "de": "https://www.shinex.am/de/services/interior-design",
+        "fr": "https://www.shinex.am/fr/services/interior-design",
+        "x-default": "https://www.shinex.am/hy/services/interior-design"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 4214,
+      "incomingPages": 23
+    },
+    {
+      "url": "https://www.shinex.am/hy/services/interior-design",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Ինտերիերի դիզայն Երևանում և ամբողջ Հայաստանում | SHINEX",
+      "description": "Բնակարանների, առանձնատների և առևտրային տարածքների ինտերիերի դիզայն Երևանում և ամբողջ Հայաստանում՝ հատակագիծ, հայեցակարգ, նյութեր և աշխատանքային գծագրեր։",
+      "h1": "Ինտերիերի դիզայն Երևանում և ամբողջ Հայաստանում",
+      "canonical": "https://www.shinex.am/hy/services/interior-design",
+      "locale": "hy-AM",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/interior-design",
+        "ru-AM": "https://www.shinex.am/ru/services/interior-design",
+        "en": "https://www.shinex.am/en/services/interior-design",
+        "de": "https://www.shinex.am/de/services/interior-design",
+        "fr": "https://www.shinex.am/fr/services/interior-design",
+        "x-default": "https://www.shinex.am/hy/services/interior-design"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 5268,
+      "incomingPages": 23
+    },
+    {
+      "url": "https://www.shinex.am/ru/services/commercial-construction",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Ремонт коммерческих помещений в Ереване | SHINEX",
+      "description": "Ремонт офисов, магазинов и салонов в Ереване и по всей Армении. Согласуем состав работ, смету и этапы с учётом режима вашего бизнеса.",
+      "h1": "Ремонт коммерческих помещений",
+      "canonical": "https://www.shinex.am/ru/services/commercial-construction",
+      "locale": "ru-AM",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/commercial-construction",
+        "ru-AM": "https://www.shinex.am/ru/services/commercial-construction",
+        "en": "https://www.shinex.am/en/services/commercial-construction",
+        "de": "https://www.shinex.am/de/services/commercial-construction",
+        "fr": "https://www.shinex.am/fr/services/commercial-construction",
+        "x-default": "https://www.shinex.am/hy/services/commercial-construction"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 3253,
+      "incomingPages": 23
+    },
+    {
+      "url": "https://www.shinex.am/en/services/commercial-construction",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Commercial Renovation and Fit-Out in Yerevan | SHINEX",
+      "description": "Commercial renovation in Yerevan and Armenia: shops, offices, salons and service spaces. Plan finishes, building services and work stages around your business.",
+      "h1": "Commercial space renovation",
+      "canonical": "https://www.shinex.am/en/services/commercial-construction",
+      "locale": "en",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/commercial-construction",
+        "ru-AM": "https://www.shinex.am/ru/services/commercial-construction",
+        "en": "https://www.shinex.am/en/services/commercial-construction",
+        "de": "https://www.shinex.am/de/services/commercial-construction",
+        "fr": "https://www.shinex.am/fr/services/commercial-construction",
+        "x-default": "https://www.shinex.am/hy/services/commercial-construction"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 3355,
+      "incomingPages": 23
+    },
+    {
+      "url": "https://www.shinex.am/hy/services/commercial-construction",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Առևտրային տարածքների վերանորոգում Հայաստանում | SHINEX",
+      "description": "Գրասենյակների, խանութների և սպասարկման տարածքների վերանորոգում Երևանում ու Հայաստանում։ Աշխատանքների կազմն ու փուլերը համաձայնեցնում ենք բիզնեսի աշխատանքային ռեժիմին համապատասխան։",
+      "h1": "Առևտրային տարածքների վերանորոգում",
+      "canonical": "https://www.shinex.am/hy/services/commercial-construction",
+      "locale": "hy-AM",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/commercial-construction",
+        "ru-AM": "https://www.shinex.am/ru/services/commercial-construction",
+        "en": "https://www.shinex.am/en/services/commercial-construction",
+        "de": "https://www.shinex.am/de/services/commercial-construction",
+        "fr": "https://www.shinex.am/fr/services/commercial-construction",
+        "x-default": "https://www.shinex.am/hy/services/commercial-construction"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 4121,
+      "incomingPages": 23
+    },
+    {
+      "url": "https://www.shinex.am/fr/services/interior-design",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Aménagement intérieur à Erevan et en Arménie | SHINEX",
+      "description": "Aménagement intérieur d’appartements, de maisons et de locaux professionnels à Erevan et en Arménie : plans, concepts, matériaux et dessins d’exécution.",
+      "h1": "Aménagement intérieur à Erevan et dans toute l’Arménie",
+      "canonical": "https://www.shinex.am/fr/services/interior-design",
+      "locale": "fr",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/interior-design",
+        "ru-AM": "https://www.shinex.am/ru/services/interior-design",
+        "en": "https://www.shinex.am/en/services/interior-design",
+        "de": "https://www.shinex.am/de/services/interior-design",
+        "fr": "https://www.shinex.am/fr/services/interior-design",
+        "x-default": "https://www.shinex.am/hy/services/interior-design"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 4903,
+      "incomingPages": 23
+    },
+    {
+      "url": "https://www.shinex.am/de/services/commercial-construction",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Renovierung von Gewerberäumen in Eriwan | SHINEX",
+      "description": "Gewerberenovierung in Eriwan und Armenien: Läden, Büros und Dienstleistungsräume. Ausbau, Gebäudetechnik und Arbeitsphasen passend zum Betriebsablauf planen.",
+      "h1": "Renovierung von Gewerberäumen",
+      "canonical": "https://www.shinex.am/de/services/commercial-construction",
+      "locale": "de",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/commercial-construction",
+        "ru-AM": "https://www.shinex.am/ru/services/commercial-construction",
+        "en": "https://www.shinex.am/en/services/commercial-construction",
+        "de": "https://www.shinex.am/de/services/commercial-construction",
+        "fr": "https://www.shinex.am/fr/services/commercial-construction",
+        "x-default": "https://www.shinex.am/hy/services/commercial-construction"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 3606,
+      "incomingPages": 23
+    },
+    {
+      "url": "https://www.shinex.am/ru/services/design",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Архитектурное проектирование в Армении | SHINEX",
+      "description": "Архитектурные проекты для строительства и реконструкции в Армении: планировка здания, рабочие чертежи и документация с учётом участка и задач проекта.",
+      "h1": "Архитектурное проектирование",
+      "canonical": "https://www.shinex.am/ru/services/design",
+      "locale": "ru-AM",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/design",
+        "ru-AM": "https://www.shinex.am/ru/services/design",
+        "en": "https://www.shinex.am/en/services/design",
+        "de": "https://www.shinex.am/de/services/design",
+        "fr": "https://www.shinex.am/fr/services/design",
+        "x-default": "https://www.shinex.am/hy/services/design"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 3213,
+      "incomingPages": 23
+    },
+    {
+      "url": "https://www.shinex.am/hy/services/design",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Ճարտարապետական նախագծում Հայաստանում | SHINEX",
+      "description": "Շենքերի ճարտարապետական նախագծում Հայաստանում՝ հողամասի ուսումնասիրություն, հատակագծային լուծումներ և աշխատանքային գծագրեր։ Նախագծի կազմը համաձայնեցնում ենք նախապես։",
+      "h1": "Ճարտարապետական նախագծում",
+      "canonical": "https://www.shinex.am/hy/services/design",
+      "locale": "hy-AM",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/design",
+        "ru-AM": "https://www.shinex.am/ru/services/design",
+        "en": "https://www.shinex.am/en/services/design",
+        "de": "https://www.shinex.am/de/services/design",
+        "fr": "https://www.shinex.am/fr/services/design",
+        "x-default": "https://www.shinex.am/hy/services/design"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 3520,
+      "incomingPages": 23
+    },
+    {
+      "url": "https://www.shinex.am/fr/services/commercial-construction",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Rénovation de locaux professionnels à Erevan | SHINEX",
+      "description": "Rénovation de commerces, bureaux et locaux de service à Erevan et en Arménie. Préparez les finitions, les réseaux techniques et les étapes selon votre activité.",
+      "h1": "Rénovation de locaux professionnels",
+      "canonical": "https://www.shinex.am/fr/services/commercial-construction",
+      "locale": "fr",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/commercial-construction",
+        "ru-AM": "https://www.shinex.am/ru/services/commercial-construction",
+        "en": "https://www.shinex.am/en/services/commercial-construction",
+        "de": "https://www.shinex.am/de/services/commercial-construction",
+        "fr": "https://www.shinex.am/fr/services/commercial-construction",
+        "x-default": "https://www.shinex.am/hy/services/commercial-construction"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 3923,
+      "incomingPages": 23
+    },
+    {
+      "url": "https://www.shinex.am/de/services/design",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Architekturplanung in Armenien | SHINEX",
+      "description": "Architekturplanung in Armenien: Gebäudegrundrisse, Grundstücksanforderungen und Ausführungspläne für Bau oder Umbau. Besprechen Sie Ihr Projekt mit SHINEX.",
+      "h1": "Architekturplanung",
+      "canonical": "https://www.shinex.am/de/services/design",
+      "locale": "de",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/design",
+        "ru-AM": "https://www.shinex.am/ru/services/design",
+        "en": "https://www.shinex.am/en/services/design",
+        "de": "https://www.shinex.am/de/services/design",
+        "fr": "https://www.shinex.am/fr/services/design",
+        "x-default": "https://www.shinex.am/hy/services/design"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 3364,
+      "incomingPages": 23
+    },
+    {
+      "url": "https://www.shinex.am/hy/services/monolithic-work",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Մոնոլիտ աշխատանքներ Հայաստանում | SHINEX",
+      "description": "Մոնոլիտ աշխատանքներ Երևանում և Հայաստանում՝ կաղապարում, ամրանավորում ու բետոնացում՝ ըստ նախագծի։ Նախահաշվի համար ուսումնասիրում ենք գծագրերը, ծավալներն ու տարածքի հասանելիությունը։",
+      "h1": "Մոնոլիտ աշխատանքներ",
+      "canonical": "https://www.shinex.am/hy/services/monolithic-work",
+      "locale": "hy-AM",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/monolithic-work",
+        "ru-AM": "https://www.shinex.am/ru/services/monolithic-work",
+        "en": "https://www.shinex.am/en/services/monolithic-work",
+        "de": "https://www.shinex.am/de/services/monolithic-work",
+        "fr": "https://www.shinex.am/fr/services/monolithic-work",
+        "x-default": "https://www.shinex.am/hy/services/monolithic-work"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 2570,
+      "incomingPages": 23
+    },
+    {
+      "url": "https://www.shinex.am/en/services/design",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Architectural Design in Armenia | SHINEX",
+      "description": "Architectural design in Armenia: building layouts, site requirements and working drawings for construction or reconstruction. Discuss your project with SHINEX.",
+      "h1": "Architectural design",
+      "canonical": "https://www.shinex.am/en/services/design",
+      "locale": "en",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/design",
+        "ru-AM": "https://www.shinex.am/ru/services/design",
+        "en": "https://www.shinex.am/en/services/design",
+        "de": "https://www.shinex.am/de/services/design",
+        "fr": "https://www.shinex.am/fr/services/design",
+        "x-default": "https://www.shinex.am/hy/services/design"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 3211,
+      "incomingPages": 23
+    },
+    {
+      "url": "https://www.shinex.am/fr/services/design",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Conception architecturale en Arménie | SHINEX",
+      "description": "Conception architecturale en Arménie : plans du bâtiment, étude du terrain et documents d’exécution pour construire ou transformer. Présentez votre projet à SHINEX.",
+      "h1": "Conception architecturale",
+      "canonical": "https://www.shinex.am/fr/services/design",
+      "locale": "fr",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/design",
+        "ru-AM": "https://www.shinex.am/ru/services/design",
+        "en": "https://www.shinex.am/en/services/design",
+        "de": "https://www.shinex.am/de/services/design",
+        "fr": "https://www.shinex.am/fr/services/design",
+        "x-default": "https://www.shinex.am/hy/services/design"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 3746,
+      "incomingPages": 23
+    },
+    {
+      "url": "https://www.shinex.am/de/services/monolithic-work",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Stahlbetonbau in Armenien | SHINEX",
+      "description": "Stahlbetonarbeiten in Armenien: Schalung, Bewehrung und Betonieren nach Tragwerksplanung. Kostenschätzung anhand der Mengen, Pläne und Baustellenzufahrt.",
+      "h1": "Stahlbetonbau",
+      "canonical": "https://www.shinex.am/de/services/monolithic-work",
+      "locale": "de",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/monolithic-work",
+        "ru-AM": "https://www.shinex.am/ru/services/monolithic-work",
+        "en": "https://www.shinex.am/en/services/monolithic-work",
+        "de": "https://www.shinex.am/de/services/monolithic-work",
+        "fr": "https://www.shinex.am/fr/services/monolithic-work",
+        "x-default": "https://www.shinex.am/hy/services/monolithic-work"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 2443,
+      "incomingPages": 23
+    },
+    {
+      "url": "https://www.shinex.am/en/services/monolithic-work",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Reinforced Concrete Construction in Armenia | SHINEX",
+      "description": "Reinforced concrete work in Armenia: formwork, reinforcement and concrete placement to structural drawings. Estimates based on quantities and site access.",
+      "h1": "Reinforced concrete construction",
+      "canonical": "https://www.shinex.am/en/services/monolithic-work",
+      "locale": "en",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/monolithic-work",
+        "ru-AM": "https://www.shinex.am/ru/services/monolithic-work",
+        "en": "https://www.shinex.am/en/services/monolithic-work",
+        "de": "https://www.shinex.am/de/services/monolithic-work",
+        "fr": "https://www.shinex.am/fr/services/monolithic-work",
+        "x-default": "https://www.shinex.am/hy/services/monolithic-work"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 2407,
+      "incomingPages": 23
+    },
+    {
+      "url": "https://www.shinex.am/ru/services/monolithic-work",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Монолитные работы в Армении | SHINEX",
+      "description": "Монолитные работы в Ереване и Армении: опалубка, армирование и бетонирование по конструктивному проекту. Для сметы изучаем чертежи, объёмы и доступ к участку.",
+      "h1": "Монолитные работы",
+      "canonical": "https://www.shinex.am/ru/services/monolithic-work",
+      "locale": "ru-AM",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/monolithic-work",
+        "ru-AM": "https://www.shinex.am/ru/services/monolithic-work",
+        "en": "https://www.shinex.am/en/services/monolithic-work",
+        "de": "https://www.shinex.am/de/services/monolithic-work",
+        "fr": "https://www.shinex.am/fr/services/monolithic-work",
+        "x-default": "https://www.shinex.am/hy/services/monolithic-work"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 2279,
+      "incomingPages": 23
+    },
+    {
+      "url": "https://www.shinex.am/fr/services/monolithic-work",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Construction en béton armé en Arménie | SHINEX",
+      "description": "Travaux de béton armé en Arménie : coffrage, ferraillage et coulage selon les plans de structure. Devis selon les quantités et les conditions d’accès au chantier.",
+      "h1": "Construction en béton armé",
+      "canonical": "https://www.shinex.am/fr/services/monolithic-work",
+      "locale": "fr",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/monolithic-work",
+        "ru-AM": "https://www.shinex.am/ru/services/monolithic-work",
+        "en": "https://www.shinex.am/en/services/monolithic-work",
+        "de": "https://www.shinex.am/de/services/monolithic-work",
+        "fr": "https://www.shinex.am/fr/services/monolithic-work",
+        "x-default": "https://www.shinex.am/hy/services/monolithic-work"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 2764,
+      "incomingPages": 23
+    },
+    {
+      "url": "https://www.shinex.am/hy/services/facade-and-roofing",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Ճակատային և տանիքային աշխատանքներ Հայաստանում | SHINEX",
+      "description": "Ճակատի և տանիքի կառուցում ու նորոգում Հայաստանում։ Զննում ենք հիմքը, պաշտպանական շերտերն ու ջրահեռացումը և համաձայնեցնում արտաքին աշխատանքների կազմը։",
+      "h1": "Ճակատային և տանիքային աշխատանքներ",
+      "canonical": "https://www.shinex.am/hy/services/facade-and-roofing",
+      "locale": "hy-AM",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/facade-and-roofing",
+        "ru-AM": "https://www.shinex.am/ru/services/facade-and-roofing",
+        "en": "https://www.shinex.am/en/services/facade-and-roofing",
+        "de": "https://www.shinex.am/de/services/facade-and-roofing",
+        "fr": "https://www.shinex.am/fr/services/facade-and-roofing",
+        "x-default": "https://www.shinex.am/hy/services/facade-and-roofing"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 2536,
+      "incomingPages": 23
+    },
+    {
+      "url": "https://www.shinex.am/en/services/facade-and-roofing",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Facade and Roofing Work in Armenia | SHINEX",
+      "description": "Facade and roofing work in Armenia: new systems and renovation, protective layers, drainage and junctions. Request an assessment of your building from SHINEX.",
+      "h1": "Facade and roofing work",
+      "canonical": "https://www.shinex.am/en/services/facade-and-roofing",
+      "locale": "en",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/facade-and-roofing",
+        "ru-AM": "https://www.shinex.am/ru/services/facade-and-roofing",
+        "en": "https://www.shinex.am/en/services/facade-and-roofing",
+        "de": "https://www.shinex.am/de/services/facade-and-roofing",
+        "fr": "https://www.shinex.am/fr/services/facade-and-roofing",
+        "x-default": "https://www.shinex.am/hy/services/facade-and-roofing"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 2317,
+      "incomingPages": 23
+    },
+    {
+      "url": "https://www.shinex.am/de/services/facade-and-roofing",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Fassaden- und Dacharbeiten in Armenien | SHINEX",
+      "description": "Fassaden- und Dacharbeiten in Armenien: Neubau und Erneuerung, Schutzschichten, Entwässerung und Anschlüsse. Fragen Sie eine Einschätzung Ihres Gebäudes an.",
+      "h1": "Fassaden- und Dacharbeiten",
+      "canonical": "https://www.shinex.am/de/services/facade-and-roofing",
+      "locale": "de",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/facade-and-roofing",
+        "ru-AM": "https://www.shinex.am/ru/services/facade-and-roofing",
+        "en": "https://www.shinex.am/en/services/facade-and-roofing",
+        "de": "https://www.shinex.am/de/services/facade-and-roofing",
+        "fr": "https://www.shinex.am/fr/services/facade-and-roofing",
+        "x-default": "https://www.shinex.am/hy/services/facade-and-roofing"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 2510,
+      "incomingPages": 23
+    },
+    {
+      "url": "https://www.shinex.am/ru/services/facade-and-roofing",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Фасадные и кровельные работы в Армении | SHINEX",
+      "description": "Устройство и обновление фасадов и кровли в Армении. Оцениваем основание, защитные слои, водоотведение и примыкания, согласуем состав наружных работ.",
+      "h1": "Фасадные и кровельные работы",
+      "canonical": "https://www.shinex.am/ru/services/facade-and-roofing",
+      "locale": "ru-AM",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/facade-and-roofing",
+        "ru-AM": "https://www.shinex.am/ru/services/facade-and-roofing",
+        "en": "https://www.shinex.am/en/services/facade-and-roofing",
+        "de": "https://www.shinex.am/de/services/facade-and-roofing",
+        "fr": "https://www.shinex.am/fr/services/facade-and-roofing",
+        "x-default": "https://www.shinex.am/hy/services/facade-and-roofing"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 2269,
+      "incomingPages": 23
+    },
+    {
+      "url": "https://www.shinex.am/fr/services/facade-and-roofing",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Travaux de façade et de toiture en Arménie | SHINEX",
+      "description": "Façades et toitures en Arménie : construction, rénovation, couches de protection, évacuation des eaux et raccords. Demandez une évaluation de votre bâtiment.",
+      "h1": "Travaux de façade et de toiture",
+      "canonical": "https://www.shinex.am/fr/services/facade-and-roofing",
+      "locale": "fr",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/facade-and-roofing",
+        "ru-AM": "https://www.shinex.am/ru/services/facade-and-roofing",
+        "en": "https://www.shinex.am/en/services/facade-and-roofing",
+        "de": "https://www.shinex.am/de/services/facade-and-roofing",
+        "fr": "https://www.shinex.am/fr/services/facade-and-roofing",
+        "x-default": "https://www.shinex.am/hy/services/facade-and-roofing"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 2824,
+      "incomingPages": 23
+    },
+    {
+      "url": "https://www.shinex.am/en/services/apartment-renovation-yerevan",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Apartment Renovation in Yerevan | SHINEX",
+      "description": "Apartment renovation in Yerevan, from property assessment to electrical work, plumbing and finishes. Explore the work involved and plan your budget.",
+      "h1": "Apartment renovation in Yerevan",
+      "canonical": "https://www.shinex.am/en/services/apartment-renovation-yerevan",
+      "locale": "en",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/apartment-renovation-yerevan",
+        "ru-AM": "https://www.shinex.am/ru/services/apartment-renovation-yerevan",
+        "en": "https://www.shinex.am/en/services/apartment-renovation-yerevan",
+        "de": "https://www.shinex.am/de/services/apartment-renovation-yerevan",
+        "fr": "https://www.shinex.am/fr/services/apartment-renovation-yerevan",
+        "x-default": "https://www.shinex.am/hy/services/apartment-renovation-yerevan"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 7515,
+      "incomingPages": 23
+    },
+    {
+      "url": "https://www.shinex.am/hy/services/apartment-renovation-yerevan",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Բնակարանների վերանորոգում Երևանում | SHINEX",
+      "description": "Բնակարանների վերանորոգում Երևանում՝ նորակառույց և հին բնակարաններ, կոսմետիկ ու կապիտալ աշխատանքներ։ Նախահաշիվ, փուլեր և նյութերի համաձայնեցում՝ SHINEX։",
+      "h1": "Բնակարանների վերանորոգում Երևանում",
+      "canonical": "https://www.shinex.am/hy/services/apartment-renovation-yerevan",
+      "locale": "hy-AM",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/apartment-renovation-yerevan",
+        "ru-AM": "https://www.shinex.am/ru/services/apartment-renovation-yerevan",
+        "en": "https://www.shinex.am/en/services/apartment-renovation-yerevan",
+        "de": "https://www.shinex.am/de/services/apartment-renovation-yerevan",
+        "fr": "https://www.shinex.am/fr/services/apartment-renovation-yerevan",
+        "x-default": "https://www.shinex.am/hy/services/apartment-renovation-yerevan"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 8230,
+      "incomingPages": 23
+    },
+    {
+      "url": "https://www.shinex.am/ru/services/apartment-renovation-yerevan",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Ремонт квартир в Ереване | SHINEX",
+      "description": "Ремонт квартир в Ереване: новостройки и вторичное жильё, косметический и капитальный ремонт. Смета, этапы и материалы — по согласованному объёму. SHINEX.",
+      "h1": "Ремонт квартир в Ереване",
+      "canonical": "https://www.shinex.am/ru/services/apartment-renovation-yerevan",
+      "locale": "ru-AM",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/apartment-renovation-yerevan",
+        "ru-AM": "https://www.shinex.am/ru/services/apartment-renovation-yerevan",
+        "en": "https://www.shinex.am/en/services/apartment-renovation-yerevan",
+        "de": "https://www.shinex.am/de/services/apartment-renovation-yerevan",
+        "fr": "https://www.shinex.am/fr/services/apartment-renovation-yerevan",
+        "x-default": "https://www.shinex.am/hy/services/apartment-renovation-yerevan"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 7218,
+      "incomingPages": 23
+    },
+    {
+      "url": "https://www.shinex.am/ru/services/new-build-renovation",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Ремонт новостройки в Ереване — с нуля и White Box | SHINEX",
+      "description": "Ремонт квартиры в новостройке в Ереване: с нуля или после предчистовой отделки. Проверка состояния, электрика, сантехника, отделка и смета после осмотра.",
+      "h1": "Ремонт квартиры в новостройке в Ереване",
+      "canonical": "https://www.shinex.am/ru/services/new-build-renovation",
+      "locale": "ru-AM",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/new-build-renovation",
+        "ru-AM": "https://www.shinex.am/ru/services/new-build-renovation",
+        "en": "https://www.shinex.am/en/services/new-build-renovation",
+        "de": "https://www.shinex.am/de/services/new-build-renovation",
+        "fr": "https://www.shinex.am/fr/services/new-build-renovation",
+        "x-default": "https://www.shinex.am/hy/services/new-build-renovation"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 5088,
+      "incomingPages": 10
+    },
+    {
+      "url": "https://www.shinex.am/hy/services/new-build-renovation",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Նորակառույց բնակարանի վերանորոգում Երևանում | SHINEX",
+      "description": "Նորակառույց բնակարանի վերանորոգում Երևանում՝ «սև գործ» կամ «սպիտակ գործ» վիճակից։ Զննում, էլեկտրական և սանտեխնիկական աշխատանքներ, հարդարում ու նախահաշիվ։",
+      "h1": "Նորակառույց բնակարանի վերանորոգում Երևանում",
+      "canonical": "https://www.shinex.am/hy/services/new-build-renovation",
+      "locale": "hy-AM",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/new-build-renovation",
+        "ru-AM": "https://www.shinex.am/ru/services/new-build-renovation",
+        "en": "https://www.shinex.am/en/services/new-build-renovation",
+        "de": "https://www.shinex.am/de/services/new-build-renovation",
+        "fr": "https://www.shinex.am/fr/services/new-build-renovation",
+        "x-default": "https://www.shinex.am/hy/services/new-build-renovation"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 5630,
+      "incomingPages": 10
+    },
+    {
+      "url": "https://www.shinex.am/fr/services/apartment-renovation-yerevan",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Rénovation d’appartement à Erevan | SHINEX",
+      "description": "Rénovation d’appartement à Erevan, de l’évaluation du bien à l’électricité, la plomberie et les finitions. Découvrez les travaux et préparez votre budget.",
+      "h1": "Rénovation d’appartement à Erevan",
+      "canonical": "https://www.shinex.am/fr/services/apartment-renovation-yerevan",
+      "locale": "fr",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/apartment-renovation-yerevan",
+        "ru-AM": "https://www.shinex.am/ru/services/apartment-renovation-yerevan",
+        "en": "https://www.shinex.am/en/services/apartment-renovation-yerevan",
+        "de": "https://www.shinex.am/de/services/apartment-renovation-yerevan",
+        "fr": "https://www.shinex.am/fr/services/apartment-renovation-yerevan",
+        "x-default": "https://www.shinex.am/hy/services/apartment-renovation-yerevan"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 8089,
+      "incomingPages": 23
+    },
+    {
+      "url": "https://www.shinex.am/de/services/apartment-renovation-yerevan",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Wohnungsrenovierung in Eriwan | SHINEX",
+      "description": "Wohnungsrenovierung in Eriwan: von der Bestandsaufnahme über Elektro- und Sanitärarbeiten bis zum Ausbau. Informieren Sie sich über die Arbeiten und planen Sie Ihr Budget.",
+      "h1": "Wohnungsrenovierung in Eriwan",
+      "canonical": "https://www.shinex.am/de/services/apartment-renovation-yerevan",
+      "locale": "de",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/apartment-renovation-yerevan",
+        "ru-AM": "https://www.shinex.am/ru/services/apartment-renovation-yerevan",
+        "en": "https://www.shinex.am/en/services/apartment-renovation-yerevan",
+        "de": "https://www.shinex.am/de/services/apartment-renovation-yerevan",
+        "fr": "https://www.shinex.am/fr/services/apartment-renovation-yerevan",
+        "x-default": "https://www.shinex.am/hy/services/apartment-renovation-yerevan"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 7864,
+      "incomingPages": 23
+    },
+    {
+      "url": "https://www.shinex.am/hy/services/turnkey-renovation",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Ամբողջական վերանորոգում Երևանում | SHINEX",
+      "description": "Ամբողջական վերանորոգում Երևանում՝ աշխատանքների ցանկի, նյութերի, փուլերի և հանձնման պայմանների նախնական համաձայնեցմամբ։",
+      "h1": "Ամբողջական վերանորոգում Երևանում",
+      "canonical": "https://www.shinex.am/hy/services/turnkey-renovation",
+      "locale": "hy-AM",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/turnkey-renovation",
+        "ru-AM": "https://www.shinex.am/ru/services/turnkey-renovation",
+        "en": "https://www.shinex.am/en/services/turnkey-renovation",
+        "de": "https://www.shinex.am/de/services/turnkey-renovation",
+        "fr": "https://www.shinex.am/fr/services/turnkey-renovation",
+        "x-default": "https://www.shinex.am/hy/services/turnkey-renovation"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 5041,
+      "incomingPages": 9
+    },
+    {
+      "url": "https://www.shinex.am/fr/services/new-build-renovation",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Rénovation d’appartement neuf à Erevan | SHINEX",
+      "description": "Rénovation d’appartement neuf à Erevan : préparation, finitions, délais et facteurs de coût avec SHINEX.",
+      "h1": "Rénovation d’appartement neuf à Erevan",
+      "canonical": "https://www.shinex.am/fr/services/new-build-renovation",
+      "locale": "fr",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/new-build-renovation",
+        "ru-AM": "https://www.shinex.am/ru/services/new-build-renovation",
+        "en": "https://www.shinex.am/en/services/new-build-renovation",
+        "de": "https://www.shinex.am/de/services/new-build-renovation",
+        "fr": "https://www.shinex.am/fr/services/new-build-renovation",
+        "x-default": "https://www.shinex.am/hy/services/new-build-renovation"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 5647,
+      "incomingPages": 10
+    },
+    {
+      "url": "https://www.shinex.am/de/services/new-build-renovation",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Renovierung von Neubauwohnungen in Eriwan | SHINEX",
+      "description": "Neubauwohnungsrenovierung in Eriwan: Vorbereitungs- und Ausbauphasen, Zeitplanung und Kostenfaktoren bei SHINEX.",
+      "h1": "Renovierung von Neubauwohnungen in Eriwan",
+      "canonical": "https://www.shinex.am/de/services/new-build-renovation",
+      "locale": "de",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/new-build-renovation",
+        "ru-AM": "https://www.shinex.am/ru/services/new-build-renovation",
+        "en": "https://www.shinex.am/en/services/new-build-renovation",
+        "de": "https://www.shinex.am/de/services/new-build-renovation",
+        "fr": "https://www.shinex.am/fr/services/new-build-renovation",
+        "x-default": "https://www.shinex.am/hy/services/new-build-renovation"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 5427,
+      "incomingPages": 10
+    },
+    {
+      "url": "https://www.shinex.am/en/services/new-build-renovation",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "New-Build Apartment Renovation in Yerevan | SHINEX",
+      "description": "New apartment renovation in Yerevan: base and finishing stages, timing, and cost factors from SHINEX.",
+      "h1": "New-build apartment renovation in Yerevan",
+      "canonical": "https://www.shinex.am/en/services/new-build-renovation",
+      "locale": "en",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/new-build-renovation",
+        "ru-AM": "https://www.shinex.am/ru/services/new-build-renovation",
+        "en": "https://www.shinex.am/en/services/new-build-renovation",
+        "de": "https://www.shinex.am/de/services/new-build-renovation",
+        "fr": "https://www.shinex.am/fr/services/new-build-renovation",
+        "x-default": "https://www.shinex.am/hy/services/new-build-renovation"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 5146,
+      "incomingPages": 10
+    },
+    {
+      "url": "https://www.shinex.am/en/services/turnkey-renovation",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Turnkey Renovation in Yerevan | SHINEX",
+      "description": "A complete renovation service in Yerevan. Plan the work, materials, responsibilities and handover with SHINEX.",
+      "h1": "Complete renovation service in Yerevan",
+      "canonical": "https://www.shinex.am/en/services/turnkey-renovation",
+      "locale": "en",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/turnkey-renovation",
+        "ru-AM": "https://www.shinex.am/ru/services/turnkey-renovation",
+        "en": "https://www.shinex.am/en/services/turnkey-renovation",
+        "de": "https://www.shinex.am/de/services/turnkey-renovation",
+        "fr": "https://www.shinex.am/fr/services/turnkey-renovation",
+        "x-default": "https://www.shinex.am/hy/services/turnkey-renovation"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 4681,
+      "incomingPages": 9
+    },
+    {
+      "url": "https://www.shinex.am/de/services/turnkey-renovation",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Komplette Renovierung in Eriwan | SHINEX",
+      "description": "Komplette Renovierung in Eriwan. Planen Sie Arbeiten, Materialien, Verantwortlichkeiten und Übergabe mit SHINEX.",
+      "h1": "Komplette Renovierung in Eriwan",
+      "canonical": "https://www.shinex.am/de/services/turnkey-renovation",
+      "locale": "de",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/turnkey-renovation",
+        "ru-AM": "https://www.shinex.am/ru/services/turnkey-renovation",
+        "en": "https://www.shinex.am/en/services/turnkey-renovation",
+        "de": "https://www.shinex.am/de/services/turnkey-renovation",
+        "fr": "https://www.shinex.am/fr/services/turnkey-renovation",
+        "x-default": "https://www.shinex.am/hy/services/turnkey-renovation"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 4990,
+      "incomingPages": 9
+    },
+    {
+      "url": "https://www.shinex.am/fr/services/turnkey-renovation",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Rénovation complète à Erevan | SHINEX",
+      "description": "Service de rénovation complète à Erevan. Préparez les travaux, les matériaux, les responsabilités et la livraison avec SHINEX.",
+      "h1": "Service de rénovation complète à Erevan",
+      "canonical": "https://www.shinex.am/fr/services/turnkey-renovation",
+      "locale": "fr",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/turnkey-renovation",
+        "ru-AM": "https://www.shinex.am/ru/services/turnkey-renovation",
+        "en": "https://www.shinex.am/en/services/turnkey-renovation",
+        "de": "https://www.shinex.am/de/services/turnkey-renovation",
+        "fr": "https://www.shinex.am/fr/services/turnkey-renovation",
+        "x-default": "https://www.shinex.am/hy/services/turnkey-renovation"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 5145,
+      "incomingPages": 9
+    },
+    {
+      "url": "https://www.shinex.am/ru/services/turnkey-renovation",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Ремонт под ключ в Ереване: состав и этапы | SHINEX",
+      "description": "Ремонт под ключ в Ереване: какие работы включить, как согласовать материалы, этапы и изменения. Подготовьте проект к работе с SHINEX.",
+      "h1": "Ремонт под ключ в Ереване",
+      "canonical": "https://www.shinex.am/ru/services/turnkey-renovation",
+      "locale": "ru-AM",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/turnkey-renovation",
+        "ru-AM": "https://www.shinex.am/ru/services/turnkey-renovation",
+        "en": "https://www.shinex.am/en/services/turnkey-renovation",
+        "de": "https://www.shinex.am/de/services/turnkey-renovation",
+        "fr": "https://www.shinex.am/fr/services/turnkey-renovation",
+        "x-default": "https://www.shinex.am/hy/services/turnkey-renovation"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 4544,
+      "incomingPages": 9
+    },
+    {
+      "url": "https://www.shinex.am/en/prices",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Apartment Renovation Cost in Yerevan | SHINEX",
+      "description": "Apartment renovation in Yerevan: labour from AMD 55,000/m². Materials extra. Examples for 40, 60 and 80 m². Request a SHINEX estimate.",
+      "h1": "Apartment renovation costs in Yerevan",
+      "canonical": "https://www.shinex.am/en/prices",
+      "locale": "en",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/prices",
+        "ru-AM": "https://www.shinex.am/ru/prices",
+        "en": "https://www.shinex.am/en/prices",
+        "de": "https://www.shinex.am/de/prices",
+        "fr": "https://www.shinex.am/fr/prices",
+        "x-default": "https://www.shinex.am/hy/prices"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 6988,
+      "incomingPages": 23
+    },
+    {
+      "url": "https://www.shinex.am/de/prices",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Kosten der Wohnungsrenovierung in Eriwan | SHINEX",
+      "description": "Wohnungsrenovierung in Eriwan ab 55.000 AMD/m². Nur Arbeitskosten, Material extra. Beispiele für 40, 60 und 80 m². Kostenvoranschlag von SHINEX.",
+      "h1": "Kosten der Wohnungsrenovierung in Eriwan",
+      "canonical": "https://www.shinex.am/de/prices",
+      "locale": "de",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/prices",
+        "ru-AM": "https://www.shinex.am/ru/prices",
+        "en": "https://www.shinex.am/en/prices",
+        "de": "https://www.shinex.am/de/prices",
+        "fr": "https://www.shinex.am/fr/prices",
+        "x-default": "https://www.shinex.am/hy/prices"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 7487,
+      "incomingPages": 23
+    },
+    {
+      "url": "https://www.shinex.am/hy/prices",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Բնակարանի վերանորոգման գներ Երևանում | SHINEX",
+      "description": "Բնակարանի վերանորոգում Երևանում՝ 55 000 դրամ/մ²-ից։ Միայն աշխատանքը, նյութերն առանձին։ 40, 60 և 80 մ²-ի օրինակներ։ Նախահաշիվ՝ SHINEX-ից։",
+      "h1": "Բնակարանի վերանորոգման արժեքը Երևանում",
+      "canonical": "https://www.shinex.am/hy/prices",
+      "locale": "hy-AM",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/prices",
+        "ru-AM": "https://www.shinex.am/ru/prices",
+        "en": "https://www.shinex.am/en/prices",
+        "de": "https://www.shinex.am/de/prices",
+        "fr": "https://www.shinex.am/fr/prices",
+        "x-default": "https://www.shinex.am/hy/prices"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 7502,
+      "incomingPages": 23
+    },
+    {
+      "url": "https://www.shinex.am/ru/prices",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Ремонт квартир в Ереване: цены за м² и примеры | SHINEX",
+      "description": "Ремонт квартир в Ереване: работа от 55 000 драм/м². Материалы отдельно. Примеры для 40, 60 и 80 м². Смета после осмотра — SHINEX.",
+      "h1": "Стоимость ремонта квартиры в Ереване",
+      "canonical": "https://www.shinex.am/ru/prices",
+      "locale": "ru-AM",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/prices",
+        "ru-AM": "https://www.shinex.am/ru/prices",
+        "en": "https://www.shinex.am/en/prices",
+        "de": "https://www.shinex.am/de/prices",
+        "fr": "https://www.shinex.am/fr/prices",
+        "x-default": "https://www.shinex.am/hy/prices"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 6800,
+      "incomingPages": 23
+    },
+    {
+      "url": "https://www.shinex.am/fr/prices",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Coût de rénovation d’appartement à Erevan | SHINEX",
+      "description": "Rénovation d’appartement à Erevan à partir de 55 000 AMD/m². Main-d’œuvre seule, matériaux en supplément. Exemples pour 40, 60 et 80 m². Devis SHINEX.",
+      "h1": "Coût de rénovation d’appartement à Erevan",
+      "canonical": "https://www.shinex.am/fr/prices",
+      "locale": "fr",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/prices",
+        "ru-AM": "https://www.shinex.am/ru/prices",
+        "en": "https://www.shinex.am/en/prices",
+        "de": "https://www.shinex.am/de/prices",
+        "fr": "https://www.shinex.am/fr/prices",
+        "x-default": "https://www.shinex.am/hy/prices"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 7559,
+      "incomingPages": 23
+    },
+    {
+      "url": "https://www.shinex.am/ru/services/apartment-interior-design-yerevan",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Дизайн интерьера квартиры в Ереване | SHINEX",
+      "description": "Дизайн интерьера квартиры в Ереване: планировка, хранение, мебель, освещение и точки подключения. Согласуем решения и состав чертежей до ремонта.",
+      "h1": "Дизайн интерьера квартиры в Ереване",
+      "canonical": "https://www.shinex.am/ru/services/apartment-interior-design-yerevan",
+      "locale": "ru-AM",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/apartment-interior-design-yerevan",
+        "ru-AM": "https://www.shinex.am/ru/services/apartment-interior-design-yerevan",
+        "en": "https://www.shinex.am/en/services/apartment-interior-design-yerevan",
+        "de": "https://www.shinex.am/de/services/apartment-interior-design-yerevan",
+        "fr": "https://www.shinex.am/fr/services/apartment-interior-design-yerevan",
+        "x-default": "https://www.shinex.am/hy/services/apartment-interior-design-yerevan"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 3231,
+      "incomingPages": 6
+    },
+    {
+      "url": "https://www.shinex.am/en/services/apartment-interior-design-yerevan",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Apartment Interior Design in Yerevan | SHINEX",
+      "description": "Apartment interior design in Yerevan: layout, furniture, lighting and practical renovation decisions.",
+      "h1": "Apartment interior design in Yerevan",
+      "canonical": "https://www.shinex.am/en/services/apartment-interior-design-yerevan",
+      "locale": "en",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/apartment-interior-design-yerevan",
+        "ru-AM": "https://www.shinex.am/ru/services/apartment-interior-design-yerevan",
+        "en": "https://www.shinex.am/en/services/apartment-interior-design-yerevan",
+        "de": "https://www.shinex.am/de/services/apartment-interior-design-yerevan",
+        "fr": "https://www.shinex.am/fr/services/apartment-interior-design-yerevan",
+        "x-default": "https://www.shinex.am/hy/services/apartment-interior-design-yerevan"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 3432,
+      "incomingPages": 6
+    },
+    {
+      "url": "https://www.shinex.am/hy/services/apartment-interior-design-yerevan",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Բնակարանի ինտերիերի դիզայն Երևանում | SHINEX",
+      "description": "Բնակարանի ինտերիերի դիզայն Երևանում՝ տարածքի պլանավորում, կահույքի ու լուսավորության տեղաբաշխում, վերանորոգման համար լուծումներ։",
+      "h1": "Բնակարանի ինտերիերի դիզայն Երևանում",
+      "canonical": "https://www.shinex.am/hy/services/apartment-interior-design-yerevan",
+      "locale": "hy-AM",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/apartment-interior-design-yerevan",
+        "ru-AM": "https://www.shinex.am/ru/services/apartment-interior-design-yerevan",
+        "en": "https://www.shinex.am/en/services/apartment-interior-design-yerevan",
+        "de": "https://www.shinex.am/de/services/apartment-interior-design-yerevan",
+        "fr": "https://www.shinex.am/fr/services/apartment-interior-design-yerevan",
+        "x-default": "https://www.shinex.am/hy/services/apartment-interior-design-yerevan"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 4133,
+      "incomingPages": 6
+    },
+    {
+      "url": "https://www.shinex.am/hy/services/office-renovation-yerevan",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Գրասենյակի վերանորոգում Երևանում | SHINEX",
+      "description": "Գրասենյակի վերանորոգում Երևանում՝ հարդարում, աշխատատեղերի կազմակերպում, էլեկտրական ու լուսավորության լուծումներ։",
+      "h1": "Գրասենյակի վերանորոգում Երևանում",
+      "canonical": "https://www.shinex.am/hy/services/office-renovation-yerevan",
+      "locale": "hy-AM",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/office-renovation-yerevan",
+        "ru-AM": "https://www.shinex.am/ru/services/office-renovation-yerevan",
+        "en": "https://www.shinex.am/en/services/office-renovation-yerevan",
+        "de": "https://www.shinex.am/de/services/office-renovation-yerevan",
+        "fr": "https://www.shinex.am/fr/services/office-renovation-yerevan",
+        "x-default": "https://www.shinex.am/hy/services/office-renovation-yerevan"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 4322,
+      "incomingPages": 5
+    },
+    {
+      "url": "https://www.shinex.am/de/services/apartment-interior-design-yerevan",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Innenraumgestaltung für Wohnungen in Eriwan | SHINEX",
+      "description": "Innenraumgestaltung für Wohnungen in Eriwan: Grundriss, Möbel, Beleuchtung und praktische Renovierungsentscheidungen.",
+      "h1": "Innenraumgestaltung für Wohnungen in Eriwan",
+      "canonical": "https://www.shinex.am/de/services/apartment-interior-design-yerevan",
+      "locale": "de",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/apartment-interior-design-yerevan",
+        "ru-AM": "https://www.shinex.am/ru/services/apartment-interior-design-yerevan",
+        "en": "https://www.shinex.am/en/services/apartment-interior-design-yerevan",
+        "de": "https://www.shinex.am/de/services/apartment-interior-design-yerevan",
+        "fr": "https://www.shinex.am/fr/services/apartment-interior-design-yerevan",
+        "x-default": "https://www.shinex.am/hy/services/apartment-interior-design-yerevan"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 3653,
+      "incomingPages": 6
+    },
+    {
+      "url": "https://www.shinex.am/fr/services/apartment-interior-design-yerevan",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Aménagement intérieur d’appartement à Erevan | SHINEX",
+      "description": "Aménagement intérieur d’appartement à Erevan : agencement, mobilier, éclairage et choix pratiques pour la rénovation.",
+      "h1": "Aménagement intérieur d’appartement à Erevan",
+      "canonical": "https://www.shinex.am/fr/services/apartment-interior-design-yerevan",
+      "locale": "fr",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/apartment-interior-design-yerevan",
+        "ru-AM": "https://www.shinex.am/ru/services/apartment-interior-design-yerevan",
+        "en": "https://www.shinex.am/en/services/apartment-interior-design-yerevan",
+        "de": "https://www.shinex.am/de/services/apartment-interior-design-yerevan",
+        "fr": "https://www.shinex.am/fr/services/apartment-interior-design-yerevan",
+        "x-default": "https://www.shinex.am/hy/services/apartment-interior-design-yerevan"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 4016,
+      "incomingPages": 6
+    },
+    {
+      "url": "https://www.shinex.am/ru/services/office-renovation-yerevan",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Ремонт офиса в Ереване | SHINEX",
+      "description": "Ремонт офиса в Ереване: отделка, организация рабочих мест, электрические и световые решения.",
+      "h1": "Ремонт офиса в Ереване",
+      "canonical": "https://www.shinex.am/ru/services/office-renovation-yerevan",
+      "locale": "ru-AM",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/office-renovation-yerevan",
+        "ru-AM": "https://www.shinex.am/ru/services/office-renovation-yerevan",
+        "en": "https://www.shinex.am/en/services/office-renovation-yerevan",
+        "de": "https://www.shinex.am/de/services/office-renovation-yerevan",
+        "fr": "https://www.shinex.am/fr/services/office-renovation-yerevan",
+        "x-default": "https://www.shinex.am/hy/services/office-renovation-yerevan"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 3478,
+      "incomingPages": 5
+    },
+    {
+      "url": "https://www.shinex.am/en/services/office-renovation-yerevan",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Office Renovation in Yerevan | SHINEX",
+      "description": "Office renovation in Yerevan: finishes, workplace organisation, electrical and lighting solutions.",
+      "h1": "Office renovation in Yerevan",
+      "canonical": "https://www.shinex.am/en/services/office-renovation-yerevan",
+      "locale": "en",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/office-renovation-yerevan",
+        "ru-AM": "https://www.shinex.am/ru/services/office-renovation-yerevan",
+        "en": "https://www.shinex.am/en/services/office-renovation-yerevan",
+        "de": "https://www.shinex.am/de/services/office-renovation-yerevan",
+        "fr": "https://www.shinex.am/fr/services/office-renovation-yerevan",
+        "x-default": "https://www.shinex.am/hy/services/office-renovation-yerevan"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 3761,
+      "incomingPages": 5
+    },
+    {
+      "url": "https://www.shinex.am/hy/services/capital-renovation-yerevan",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Բնակարանի կապիտալ վերանորոգում Երևանում | SHINEX",
+      "description": "Բնակարանի կապիտալ վերանորոգում Երևանում՝ ապամոնտաժում, լարերի ու խողովակների փոխարինում ըստ զննման, հիմքերի պատրաստում և հարդարում։ SHINEX։",
+      "h1": "Բնակարանի կապիտալ վերանորոգում Երևանում",
+      "canonical": "https://www.shinex.am/hy/services/capital-renovation-yerevan",
+      "locale": "hy-AM",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/capital-renovation-yerevan",
+        "ru-AM": "https://www.shinex.am/ru/services/capital-renovation-yerevan",
+        "en": "https://www.shinex.am/en/services/capital-renovation-yerevan",
+        "de": "https://www.shinex.am/de/services/capital-renovation-yerevan",
+        "fr": "https://www.shinex.am/fr/services/capital-renovation-yerevan",
+        "x-default": "https://www.shinex.am/hy/services/capital-renovation-yerevan"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 4943,
+      "incomingPages": 11
+    },
+    {
+      "url": "https://www.shinex.am/de/services/office-renovation-yerevan",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Bürorenovierung in Eriwan | SHINEX",
+      "description": "Bürorenovierung in Eriwan: Ausbau, Arbeitsplatzgestaltung, Elektro- und Beleuchtungslösungen.",
+      "h1": "Bürorenovierung in Eriwan",
+      "canonical": "https://www.shinex.am/de/services/office-renovation-yerevan",
+      "locale": "de",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/office-renovation-yerevan",
+        "ru-AM": "https://www.shinex.am/ru/services/office-renovation-yerevan",
+        "en": "https://www.shinex.am/en/services/office-renovation-yerevan",
+        "de": "https://www.shinex.am/de/services/office-renovation-yerevan",
+        "fr": "https://www.shinex.am/fr/services/office-renovation-yerevan",
+        "x-default": "https://www.shinex.am/hy/services/office-renovation-yerevan"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 4161,
+      "incomingPages": 5
+    },
+    {
+      "url": "https://www.shinex.am/fr/services/office-renovation-yerevan",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Rénovation de bureaux à Erevan | SHINEX",
+      "description": "Rénovation de bureaux à Erevan : finitions, organisation des postes, électricité et éclairage.",
+      "h1": "Rénovation de bureaux à Erevan",
+      "canonical": "https://www.shinex.am/fr/services/office-renovation-yerevan",
+      "locale": "fr",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/office-renovation-yerevan",
+        "ru-AM": "https://www.shinex.am/ru/services/office-renovation-yerevan",
+        "en": "https://www.shinex.am/en/services/office-renovation-yerevan",
+        "de": "https://www.shinex.am/de/services/office-renovation-yerevan",
+        "fr": "https://www.shinex.am/fr/services/office-renovation-yerevan",
+        "x-default": "https://www.shinex.am/hy/services/office-renovation-yerevan"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 4412,
+      "incomingPages": 5
+    },
+    {
+      "url": "https://www.shinex.am/de/services/capital-renovation-yerevan",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Umfassende Wohnungssanierung in Eriwan | SHINEX",
+      "description": "Umfassende Wohnungssanierung in Eriwan: Rückbau, bedarfsgerechter Austausch von Leitungen, Untergrundvorbereitung und Ausbau. Kostenvoranschlag von SHINEX.",
+      "h1": "Umfassende Wohnungssanierung in Eriwan",
+      "canonical": "https://www.shinex.am/de/services/capital-renovation-yerevan",
+      "locale": "de",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/capital-renovation-yerevan",
+        "ru-AM": "https://www.shinex.am/ru/services/capital-renovation-yerevan",
+        "en": "https://www.shinex.am/en/services/capital-renovation-yerevan",
+        "de": "https://www.shinex.am/de/services/capital-renovation-yerevan",
+        "fr": "https://www.shinex.am/fr/services/capital-renovation-yerevan",
+        "x-default": "https://www.shinex.am/hy/services/capital-renovation-yerevan"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 4924,
+      "incomingPages": 11
+    },
+    {
+      "url": "https://www.shinex.am/ru/services/capital-renovation-yerevan",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Капитальный ремонт квартир в Ереване | SHINEX",
+      "description": "Капитальный ремонт квартиры в Ереване: демонтаж, замена проводки и труб по результатам осмотра, подготовка оснований и отделка. Смета SHINEX.",
+      "h1": "Капитальный ремонт квартир в Ереване",
+      "canonical": "https://www.shinex.am/ru/services/capital-renovation-yerevan",
+      "locale": "ru-AM",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/capital-renovation-yerevan",
+        "ru-AM": "https://www.shinex.am/ru/services/capital-renovation-yerevan",
+        "en": "https://www.shinex.am/en/services/capital-renovation-yerevan",
+        "de": "https://www.shinex.am/de/services/capital-renovation-yerevan",
+        "fr": "https://www.shinex.am/fr/services/capital-renovation-yerevan",
+        "x-default": "https://www.shinex.am/hy/services/capital-renovation-yerevan"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 4223,
+      "incomingPages": 11
+    },
+    {
+      "url": "https://www.shinex.am/en/services/capital-renovation-yerevan",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Major apartment renovation in Yerevan | SHINEX",
+      "description": "Major apartment renovation in Yerevan: removal, wiring and pipe replacement as needed, surface preparation and finishing. Request a SHINEX estimate.",
+      "h1": "Major apartment renovation in Yerevan",
+      "canonical": "https://www.shinex.am/en/services/capital-renovation-yerevan",
+      "locale": "en",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/capital-renovation-yerevan",
+        "ru-AM": "https://www.shinex.am/ru/services/capital-renovation-yerevan",
+        "en": "https://www.shinex.am/en/services/capital-renovation-yerevan",
+        "de": "https://www.shinex.am/de/services/capital-renovation-yerevan",
+        "fr": "https://www.shinex.am/fr/services/capital-renovation-yerevan",
+        "x-default": "https://www.shinex.am/hy/services/capital-renovation-yerevan"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 4390,
+      "incomingPages": 11
+    },
+    {
+      "url": "https://www.shinex.am/fr/services/capital-renovation-yerevan",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Rénovation lourde d’appartement à Erevan | SHINEX",
+      "description": "Rénovation lourde d’appartement à Erevan : dépose, remplacement des réseaux selon leur état, préparation des supports et finitions. Devis SHINEX.",
+      "h1": "Rénovation lourde d’appartement à Erevan",
+      "canonical": "https://www.shinex.am/fr/services/capital-renovation-yerevan",
+      "locale": "fr",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/capital-renovation-yerevan",
+        "ru-AM": "https://www.shinex.am/ru/services/capital-renovation-yerevan",
+        "en": "https://www.shinex.am/en/services/capital-renovation-yerevan",
+        "de": "https://www.shinex.am/de/services/capital-renovation-yerevan",
+        "fr": "https://www.shinex.am/fr/services/capital-renovation-yerevan",
+        "x-default": "https://www.shinex.am/hy/services/capital-renovation-yerevan"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 4951,
+      "incomingPages": 11
+    },
+    {
+      "url": "https://www.shinex.am/en/services/cosmetic-renovation-yerevan",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Cosmetic apartment renovation in Yerevan | SHINEX",
+      "description": "Cosmetic apartment renovation in Yerevan: walls, ceilings, floors or one room. Refresh before moving in or renting out. Request a SHINEX estimate.",
+      "h1": "Cosmetic apartment renovation in Yerevan",
+      "canonical": "https://www.shinex.am/en/services/cosmetic-renovation-yerevan",
+      "locale": "en",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/cosmetic-renovation-yerevan",
+        "ru-AM": "https://www.shinex.am/ru/services/cosmetic-renovation-yerevan",
+        "en": "https://www.shinex.am/en/services/cosmetic-renovation-yerevan",
+        "de": "https://www.shinex.am/de/services/cosmetic-renovation-yerevan",
+        "fr": "https://www.shinex.am/fr/services/cosmetic-renovation-yerevan",
+        "x-default": "https://www.shinex.am/hy/services/cosmetic-renovation-yerevan"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 4246,
+      "incomingPages": 8
+    },
+    {
+      "url": "https://www.shinex.am/ru/services/cosmetic-renovation-yerevan",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Косметический ремонт квартир в Ереване | SHINEX",
+      "description": "Косметический ремонт квартиры в Ереване: стены, потолок, пол или отдельная комната. Обновление перед заселением или сдачей в аренду. Смета SHINEX.",
+      "h1": "Косметический ремонт квартир в Ереване",
+      "canonical": "https://www.shinex.am/ru/services/cosmetic-renovation-yerevan",
+      "locale": "ru-AM",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/cosmetic-renovation-yerevan",
+        "ru-AM": "https://www.shinex.am/ru/services/cosmetic-renovation-yerevan",
+        "en": "https://www.shinex.am/en/services/cosmetic-renovation-yerevan",
+        "de": "https://www.shinex.am/de/services/cosmetic-renovation-yerevan",
+        "fr": "https://www.shinex.am/fr/services/cosmetic-renovation-yerevan",
+        "x-default": "https://www.shinex.am/hy/services/cosmetic-renovation-yerevan"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 4205,
+      "incomingPages": 8
+    },
+    {
+      "url": "https://www.shinex.am/de/services/cosmetic-renovation-yerevan",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Optische Wohnungsrenovierung in Eriwan | SHINEX",
+      "description": "Optische Wohnungsrenovierung in Eriwan: Wände, Decken, Böden oder ein Raum. Auffrischung vor Einzug oder Vermietung. Kostenvoranschlag von SHINEX.",
+      "h1": "Optische Wohnungsrenovierung in Eriwan",
+      "canonical": "https://www.shinex.am/de/services/cosmetic-renovation-yerevan",
+      "locale": "de",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/cosmetic-renovation-yerevan",
+        "ru-AM": "https://www.shinex.am/ru/services/cosmetic-renovation-yerevan",
+        "en": "https://www.shinex.am/en/services/cosmetic-renovation-yerevan",
+        "de": "https://www.shinex.am/de/services/cosmetic-renovation-yerevan",
+        "fr": "https://www.shinex.am/fr/services/cosmetic-renovation-yerevan",
+        "x-default": "https://www.shinex.am/hy/services/cosmetic-renovation-yerevan"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 4645,
+      "incomingPages": 8
+    },
+    {
+      "url": "https://www.shinex.am/hy/services/cosmetic-renovation-yerevan",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Բնակարանի կոսմետիկ վերանորոգում Երևանում | SHINEX",
+      "description": "Բնակարանի կոսմետիկ վերանորոգում Երևանում՝ պատեր, առաստաղ, հատակ կամ մեկ սենյակ։ Թարմացում բնակվելուց կամ վարձակալության հանձնելուց առաջ։ SHINEX։",
+      "h1": "Բնակարանի կոսմետիկ վերանորոգում Երևանում",
+      "canonical": "https://www.shinex.am/hy/services/cosmetic-renovation-yerevan",
+      "locale": "hy-AM",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/cosmetic-renovation-yerevan",
+        "ru-AM": "https://www.shinex.am/ru/services/cosmetic-renovation-yerevan",
+        "en": "https://www.shinex.am/en/services/cosmetic-renovation-yerevan",
+        "de": "https://www.shinex.am/de/services/cosmetic-renovation-yerevan",
+        "fr": "https://www.shinex.am/fr/services/cosmetic-renovation-yerevan",
+        "x-default": "https://www.shinex.am/hy/services/cosmetic-renovation-yerevan"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 4767,
+      "incomingPages": 8
+    },
+    {
+      "url": "https://www.shinex.am/hy/renovation-estimate-yerevan",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Վերանորոգման նախահաշիվ Երևանում | SHINEX",
+      "description": "Վերանորոգման նախահաշվի կազմում Երևանում՝ զննումից հետո աշխատանքների ցանկ, ծավալներ և արժեքի ճշգրիտ հաշվարկ։",
+      "h1": "Վերանորոգման նախահաշիվ Երևանում",
+      "canonical": "https://www.shinex.am/hy/renovation-estimate-yerevan",
+      "locale": "hy-AM",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/renovation-estimate-yerevan",
+        "ru-AM": "https://www.shinex.am/ru/renovation-estimate-yerevan",
+        "en": "https://www.shinex.am/en/renovation-estimate-yerevan",
+        "de": "https://www.shinex.am/de/renovation-estimate-yerevan",
+        "fr": "https://www.shinex.am/fr/renovation-estimate-yerevan",
+        "x-default": "https://www.shinex.am/hy/renovation-estimate-yerevan"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 4461,
+      "incomingPages": 11
+    },
+    {
+      "url": "https://www.shinex.am/ru/renovation-estimate-yerevan",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Смета на ремонт в Ереване | SHINEX",
+      "description": "Составление сметы на ремонт в Ереване: перечень работ, объёмы и точный расчёт после осмотра.",
+      "h1": "Смета на ремонт в Ереване",
+      "canonical": "https://www.shinex.am/ru/renovation-estimate-yerevan",
+      "locale": "ru-AM",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/renovation-estimate-yerevan",
+        "ru-AM": "https://www.shinex.am/ru/renovation-estimate-yerevan",
+        "en": "https://www.shinex.am/en/renovation-estimate-yerevan",
+        "de": "https://www.shinex.am/de/renovation-estimate-yerevan",
+        "fr": "https://www.shinex.am/fr/renovation-estimate-yerevan",
+        "x-default": "https://www.shinex.am/hy/renovation-estimate-yerevan"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 3816,
+      "incomingPages": 11
+    },
+    {
+      "url": "https://www.shinex.am/fr/services/cosmetic-renovation-yerevan",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Rénovation légère d’appartement à Erevan | SHINEX",
+      "description": "Rénovation légère d’appartement à Erevan : murs, plafonds, sols ou une pièce. Rafraîchissement avant emménagement ou location. Devis SHINEX.",
+      "h1": "Rénovation légère d’appartement à Erevan",
+      "canonical": "https://www.shinex.am/fr/services/cosmetic-renovation-yerevan",
+      "locale": "fr",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/cosmetic-renovation-yerevan",
+        "ru-AM": "https://www.shinex.am/ru/services/cosmetic-renovation-yerevan",
+        "en": "https://www.shinex.am/en/services/cosmetic-renovation-yerevan",
+        "de": "https://www.shinex.am/de/services/cosmetic-renovation-yerevan",
+        "fr": "https://www.shinex.am/fr/services/cosmetic-renovation-yerevan",
+        "x-default": "https://www.shinex.am/hy/services/cosmetic-renovation-yerevan"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 4920,
+      "incomingPages": 8
+    },
+    {
+      "url": "https://www.shinex.am/en/renovation-estimate-yerevan",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Renovation Estimate in Yerevan | SHINEX",
+      "description": "Renovation estimates in Yerevan: work list, quantities and a precise calculation after a survey.",
+      "h1": "Renovation estimate in Yerevan",
+      "canonical": "https://www.shinex.am/en/renovation-estimate-yerevan",
+      "locale": "en",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/renovation-estimate-yerevan",
+        "ru-AM": "https://www.shinex.am/ru/renovation-estimate-yerevan",
+        "en": "https://www.shinex.am/en/renovation-estimate-yerevan",
+        "de": "https://www.shinex.am/de/renovation-estimate-yerevan",
+        "fr": "https://www.shinex.am/fr/renovation-estimate-yerevan",
+        "x-default": "https://www.shinex.am/hy/renovation-estimate-yerevan"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 4182,
+      "incomingPages": 11
+    },
+    {
+      "url": "https://www.shinex.am/de/renovation-estimate-yerevan",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Renovierungskostenschätzung in Eriwan | SHINEX",
+      "description": "Renovierungskostenschätzungen in Eriwan: Arbeitsliste, Mengen und genaue Berechnung nach Besichtigung.",
+      "h1": "Renovierungskostenschätzung in Eriwan",
+      "canonical": "https://www.shinex.am/de/renovation-estimate-yerevan",
+      "locale": "de",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/renovation-estimate-yerevan",
+        "ru-AM": "https://www.shinex.am/ru/renovation-estimate-yerevan",
+        "en": "https://www.shinex.am/en/renovation-estimate-yerevan",
+        "de": "https://www.shinex.am/de/renovation-estimate-yerevan",
+        "fr": "https://www.shinex.am/fr/renovation-estimate-yerevan",
+        "x-default": "https://www.shinex.am/hy/renovation-estimate-yerevan"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 4582,
+      "incomingPages": 11
+    },
+    {
+      "url": "https://www.shinex.am/fr/renovation-estimate-yerevan",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Devis de rénovation à Erevan | SHINEX",
+      "description": "Devis de rénovation à Erevan : liste des travaux, quantités et calcul précis après une visite.",
+      "h1": "Devis de rénovation à Erevan",
+      "canonical": "https://www.shinex.am/fr/renovation-estimate-yerevan",
+      "locale": "fr",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/renovation-estimate-yerevan",
+        "ru-AM": "https://www.shinex.am/ru/renovation-estimate-yerevan",
+        "en": "https://www.shinex.am/en/renovation-estimate-yerevan",
+        "de": "https://www.shinex.am/de/renovation-estimate-yerevan",
+        "fr": "https://www.shinex.am/fr/renovation-estimate-yerevan",
+        "x-default": "https://www.shinex.am/hy/renovation-estimate-yerevan"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 4603,
+      "incomingPages": 11
+    },
+    {
+      "url": "https://www.shinex.am/ru/services/plumbing-work-yerevan",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Сантехнические работы в Ереване | SHINEX",
+      "description": "Сантехнические работы в Ереване: водоснабжение, канализация, точки ванной и кухни в ходе ремонта.",
+      "h1": "Сантехнические работы в Ереване",
+      "canonical": "https://www.shinex.am/ru/services/plumbing-work-yerevan",
+      "locale": "ru-AM",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/plumbing-work-yerevan",
+        "ru-AM": "https://www.shinex.am/ru/services/plumbing-work-yerevan",
+        "en": "https://www.shinex.am/en/services/plumbing-work-yerevan",
+        "de": "https://www.shinex.am/de/services/plumbing-work-yerevan",
+        "fr": "https://www.shinex.am/fr/services/plumbing-work-yerevan",
+        "x-default": "https://www.shinex.am/hy/services/plumbing-work-yerevan"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 3226,
+      "incomingPages": 4
+    },
+    {
+      "url": "https://www.shinex.am/hy/services/plumbing-work-yerevan",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Սանտեխնիկական աշխատանքներ Երևանում | SHINEX",
+      "description": "Սանտեխնիկական աշխատանքներ Երևանում՝ ջրամատակարարման ու ջրահեռացման խողովակներ, խոհանոցի և սանհանգույցի սարքավորումների միացում։",
+      "h1": "Սանտեխնիկական աշխատանքներ Երևանում",
+      "canonical": "https://www.shinex.am/hy/services/plumbing-work-yerevan",
+      "locale": "hy-AM",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/plumbing-work-yerevan",
+        "ru-AM": "https://www.shinex.am/ru/services/plumbing-work-yerevan",
+        "en": "https://www.shinex.am/en/services/plumbing-work-yerevan",
+        "de": "https://www.shinex.am/de/services/plumbing-work-yerevan",
+        "fr": "https://www.shinex.am/fr/services/plumbing-work-yerevan",
+        "x-default": "https://www.shinex.am/hy/services/plumbing-work-yerevan"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 4097,
+      "incomingPages": 4
+    },
+    {
+      "url": "https://www.shinex.am/en/services/plumbing-work-yerevan",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Plumbing Work in Yerevan | SHINEX",
+      "description": "Plumbing work in Yerevan: water supply and drainage pipes, kitchen and bathroom connections, installation and testing during renovation.",
+      "h1": "Plumbing work in Yerevan",
+      "canonical": "https://www.shinex.am/en/services/plumbing-work-yerevan",
+      "locale": "en",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/plumbing-work-yerevan",
+        "ru-AM": "https://www.shinex.am/ru/services/plumbing-work-yerevan",
+        "en": "https://www.shinex.am/en/services/plumbing-work-yerevan",
+        "de": "https://www.shinex.am/de/services/plumbing-work-yerevan",
+        "fr": "https://www.shinex.am/fr/services/plumbing-work-yerevan",
+        "x-default": "https://www.shinex.am/hy/services/plumbing-work-yerevan"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 3653,
+      "incomingPages": 4
+    },
+    {
+      "url": "https://www.shinex.am/fr/services/plumbing-work-yerevan",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Travaux de plomberie à Erevan | SHINEX",
+      "description": "Plomberie à Erevan : conduites d’eau et d’évacuation, raccordements de cuisine et de salle de bains, installation et essais pendant la rénovation.",
+      "h1": "Travaux de plomberie à Erevan",
+      "canonical": "https://www.shinex.am/fr/services/plumbing-work-yerevan",
+      "locale": "fr",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/plumbing-work-yerevan",
+        "ru-AM": "https://www.shinex.am/ru/services/plumbing-work-yerevan",
+        "en": "https://www.shinex.am/en/services/plumbing-work-yerevan",
+        "de": "https://www.shinex.am/de/services/plumbing-work-yerevan",
+        "fr": "https://www.shinex.am/fr/services/plumbing-work-yerevan",
+        "x-default": "https://www.shinex.am/hy/services/plumbing-work-yerevan"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 4222,
+      "incomingPages": 4
+    },
+    {
+      "url": "https://www.shinex.am/hy/services/electrical-work-yerevan",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Էլեկտրական աշխատանքներ Երևանում | SHINEX",
+      "description": "Էլեկտրական աշխատանքներ Երևանում բնակարանի, տան և գրասենյակի համար՝ վարդակներ, լուսավորություն, սարքավորումների ու ցանցի կետերի պլանավորում։",
+      "h1": "Էլեկտրական աշխատանքներ Երևանում",
+      "canonical": "https://www.shinex.am/hy/services/electrical-work-yerevan",
+      "locale": "hy-AM",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/electrical-work-yerevan",
+        "ru-AM": "https://www.shinex.am/ru/services/electrical-work-yerevan",
+        "en": "https://www.shinex.am/en/services/electrical-work-yerevan",
+        "de": "https://www.shinex.am/de/services/electrical-work-yerevan",
+        "fr": "https://www.shinex.am/fr/services/electrical-work-yerevan",
+        "x-default": "https://www.shinex.am/hy/services/electrical-work-yerevan"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 3977,
+      "incomingPages": 5
+    },
+    {
+      "url": "https://www.shinex.am/de/services/plumbing-work-yerevan",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Sanitärarbeiten in Eriwan | SHINEX",
+      "description": "Sanitärarbeiten in Eriwan: Wasser- und Abwasserleitungen, Küchen- und Badanschlüsse, Installation und Prüfung bei Renovierungen.",
+      "h1": "Sanitärarbeiten in Eriwan",
+      "canonical": "https://www.shinex.am/de/services/plumbing-work-yerevan",
+      "locale": "de",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/plumbing-work-yerevan",
+        "ru-AM": "https://www.shinex.am/ru/services/plumbing-work-yerevan",
+        "en": "https://www.shinex.am/en/services/plumbing-work-yerevan",
+        "de": "https://www.shinex.am/de/services/plumbing-work-yerevan",
+        "fr": "https://www.shinex.am/fr/services/plumbing-work-yerevan",
+        "x-default": "https://www.shinex.am/hy/services/plumbing-work-yerevan"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 3963,
+      "incomingPages": 4
+    },
+    {
+      "url": "https://www.shinex.am/de/services/electrical-work-yerevan",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Elektroarbeiten in Eriwan | SHINEX",
+      "description": "Elektroinstallation in Eriwan: Steckdosen, Beleuchtung, Verkabelung und Geräteanschlüsse passend zu Ihrem Renovierungs- oder Bauprojekt.",
+      "h1": "Elektroarbeiten in Eriwan",
+      "canonical": "https://www.shinex.am/de/services/electrical-work-yerevan",
+      "locale": "de",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/electrical-work-yerevan",
+        "ru-AM": "https://www.shinex.am/ru/services/electrical-work-yerevan",
+        "en": "https://www.shinex.am/en/services/electrical-work-yerevan",
+        "de": "https://www.shinex.am/de/services/electrical-work-yerevan",
+        "fr": "https://www.shinex.am/fr/services/electrical-work-yerevan",
+        "x-default": "https://www.shinex.am/hy/services/electrical-work-yerevan"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 3737,
+      "incomingPages": 5
+    },
+    {
+      "url": "https://www.shinex.am/en/services/electrical-work-yerevan",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Electrical Work in Yerevan | SHINEX",
+      "description": "Electrical installation in Yerevan: sockets, lighting, wiring and appliance connections planned around your renovation or construction project.",
+      "h1": "Electrical work in Yerevan",
+      "canonical": "https://www.shinex.am/en/services/electrical-work-yerevan",
+      "locale": "en",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/electrical-work-yerevan",
+        "ru-AM": "https://www.shinex.am/ru/services/electrical-work-yerevan",
+        "en": "https://www.shinex.am/en/services/electrical-work-yerevan",
+        "de": "https://www.shinex.am/de/services/electrical-work-yerevan",
+        "fr": "https://www.shinex.am/fr/services/electrical-work-yerevan",
+        "x-default": "https://www.shinex.am/hy/services/electrical-work-yerevan"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 3503,
+      "incomingPages": 5
+    },
+    {
+      "url": "https://www.shinex.am/fr/services/electrical-work-yerevan",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Travaux électriques à Erevan | SHINEX",
+      "description": "Installation électrique à Erevan : prises, éclairage, câblage et raccordements prévus selon votre projet de rénovation ou de construction.",
+      "h1": "Travaux électriques à Erevan",
+      "canonical": "https://www.shinex.am/fr/services/electrical-work-yerevan",
+      "locale": "fr",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/electrical-work-yerevan",
+        "ru-AM": "https://www.shinex.am/ru/services/electrical-work-yerevan",
+        "en": "https://www.shinex.am/en/services/electrical-work-yerevan",
+        "de": "https://www.shinex.am/de/services/electrical-work-yerevan",
+        "fr": "https://www.shinex.am/fr/services/electrical-work-yerevan",
+        "x-default": "https://www.shinex.am/hy/services/electrical-work-yerevan"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 3997,
+      "incomingPages": 5
+    },
+    {
+      "url": "https://www.shinex.am/ru/services/electrical-work-yerevan",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "location": null,
+        "x-robots-tag": null
+      },
+      "title": "Электрические работы в Ереване | SHINEX",
+      "description": "Электрические работы в Ереване для квартиры, дома и офиса: розетки, освещение, точки техники и сети.",
+      "h1": "Электрические работы в Ереване",
+      "canonical": "https://www.shinex.am/ru/services/electrical-work-yerevan",
+      "locale": "ru-AM",
+      "hreflang": {
+        "hy-AM": "https://www.shinex.am/hy/services/electrical-work-yerevan",
+        "ru-AM": "https://www.shinex.am/ru/services/electrical-work-yerevan",
+        "en": "https://www.shinex.am/en/services/electrical-work-yerevan",
+        "de": "https://www.shinex.am/de/services/electrical-work-yerevan",
+        "fr": "https://www.shinex.am/fr/services/electrical-work-yerevan",
+        "x-default": "https://www.shinex.am/hy/services/electrical-work-yerevan"
+      },
+      "robots": [
+        "max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+      ],
+      "mainTextLength": 3102,
+      "incomingPages": 5
+    }
+  ]
+}

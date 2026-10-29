@@ -2,6 +2,7 @@ import Link from "next/link";
 
 import {
   serviceGuideGroups,
+  serviceGuidesDescription,
   serviceGuidesTitle,
 } from "@/config/service-guides.config";
 import type { Locale } from "@/types";
@@ -22,6 +23,9 @@ export function ServiceGuides({
       <h2 className="text-2xl font-semibold tracking-tight text-[var(--text-primary)]">
         {serviceGuidesTitle[locale]}
       </h2>
+      <p className="mt-4 max-w-4xl leading-7 text-[var(--text-secondary)]">
+        {serviceGuidesDescription[locale]}
+      </p>
       <div className="content-grid-three mt-6 grid gap-5 md:grid-cols-3">
         {serviceGuideGroups.map((group) => (
           <div
@@ -32,7 +36,7 @@ export function ServiceGuides({
               {group.title[locale]}
             </h3>
             <ul className="mt-4 space-y-3">
-              {group.links.map(({ path, label }) => (
+              {group.links.map(({ path, label, description }) => (
                 <li key={path}>
                   <Link
                     className="text-sm leading-6 text-[var(--text-secondary)] underline decoration-[var(--border)] underline-offset-4 hover:text-[var(--text-primary)] focus-visible:outline-2 focus-visible:outline-offset-4"
@@ -40,6 +44,9 @@ export function ServiceGuides({
                   >
                     {label[locale]}
                   </Link>
+                  <p className="mt-1 text-sm leading-6 text-[var(--text-secondary)]">
+                    {description[locale]}
+                  </p>
                 </li>
               ))}
             </ul>

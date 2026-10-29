@@ -23,6 +23,9 @@ export const seoIntentMap = {
     secondary: {
       hy: [
         "բնակարանի վերանորոգում",
+        "բնակարանների վերանորոգում",
+        "bnakarani veranorogum",
+        "veranorogum bnakarani",
         "բնակարանի հարդարում Երևանում",
         "վերանորոգման աշխատանքներ Երևանում",
       ],
@@ -121,6 +124,8 @@ export const seoIntentMap = {
     secondary: {
       hy: [
         "բնակարանի վերանորոգման արժեք",
+        "բնակարանի վերանորոգման գներ",
+        "վերանորոգում 1քմ",
         "ինչ արժե բնակարանի վերանորոգումը",
         "բնակարանի վերանորոգում նյութերով",
         "60 քմ բնակարանի վերանորոգում",
@@ -153,21 +158,11 @@ export const seoIntentMap = {
       fr: "construction de maison à Erevan",
     },
     secondary: {
-      hy: ["տան կառուցում", "շինարարական ընկերություն Երևանում"],
-      ru: [
-        "построить дом в Армении",
-        "дом под ключ Ереван",
-        "строительная компания Ереван",
-      ],
-      en: [
-        "private house construction Armenia",
-        "construction company Yerevan",
-      ],
-      de: ["Bau von Privathäusern in Armenien", "Bauunternehmen Eriwan"],
-      fr: [
-        "construction de maison individuelle en Arménie",
-        "entreprise de construction Erevan",
-      ],
+      hy: ["տան կառուցում", "առանձնատների կառուցում"],
+      ru: ["построить дом в Армении", "дом под ключ Ереван"],
+      en: ["private house construction Armenia"],
+      de: ["Bau von Privathäusern in Armenien"],
+      fr: ["construction de maison individuelle en Arménie"],
     },
   },
   "house-renovation": {
@@ -477,6 +472,98 @@ export const seoIntentMap = {
       fr: ["électricien Erevan", "électricité d’appartement Erevan"],
     },
   },
+  "architectural-design": {
+    paths: {
+      hy: "services/design",
+      ru: "services/design",
+      en: "services/design",
+      de: "services/design",
+      fr: "services/design",
+    },
+    primary: {
+      hy: "ճարտարապետական նախագծում Հայաստանում",
+      ru: "архитектурное проектирование в Армении",
+      en: "architectural design in Armenia",
+      de: "Architekturplanung in Armenien",
+      fr: "conception architecturale en Arménie",
+    },
+    secondary: {
+      hy: ["տան նախագիծ", "ճարտարապետական նախագիծ"],
+      ru: ["проект частного дома Армения", "архитектурный проект дома"],
+      en: ["house architectural plans Armenia"],
+      de: ["Hausplanung Armenien"],
+      fr: ["plans architecturaux de maison Arménie"],
+    },
+  },
+  "monolithic-work": {
+    paths: {
+      hy: "services/monolithic-work",
+      ru: "services/monolithic-work",
+      en: "services/monolithic-work",
+      de: "services/monolithic-work",
+      fr: "services/monolithic-work",
+    },
+    primary: {
+      hy: "մոնոլիտ աշխատանքներ",
+      ru: "монолитные работы в Армении",
+      en: "reinforced concrete work in Armenia",
+      de: "Stahlbetonarbeiten in Armenien",
+      fr: "travaux en béton armé en Arménie",
+    },
+    secondary: {
+      hy: ["բետոնային աշխատանքներ Երևանում"],
+      ru: ["бетонные работы", "армирование и бетонирование Ереван"],
+      en: ["concrete formwork Yerevan"],
+      de: ["Betonarbeiten Eriwan"],
+      fr: ["coffrage et bétonnage Erevan"],
+    },
+  },
+  "facade-and-roofing": {
+    paths: {
+      hy: "services/facade-and-roofing",
+      ru: "services/facade-and-roofing",
+      en: "services/facade-and-roofing",
+      de: "services/facade-and-roofing",
+      fr: "services/facade-and-roofing",
+    },
+    primary: {
+      hy: "ճակատային և տանիքի աշխատանքներ Հայաստանում",
+      ru: "фасадные и кровельные работы в Армении",
+      en: "facade and roofing work in Armenia",
+      de: "Fassaden- und Dacharbeiten in Armenien",
+      fr: "travaux de façade et toiture en Arménie",
+    },
+    secondary: {
+      hy: ["տանիքի վերանորոգում", "ճակատի հարդարում"],
+      ru: ["ремонт кровли Ереван", "отделка фасада дома"],
+      en: ["roof renovation Yerevan"],
+      de: ["Dachrenovierung Eriwan"],
+      fr: ["rénovation de toiture Erevan"],
+    },
+  },
+  "design-calculation": {
+    paths: {
+      hy: "calculator",
+      ru: "calculator",
+      en: "calculator",
+      de: "calculator",
+      fr: "calculator",
+    },
+    primary: {
+      hy: "դիզայնի արժեքի հաշվարկ",
+      ru: "калькулятор стоимости дизайна",
+      en: "design cost calculator",
+      de: "Planungskostenrechner",
+      fr: "calculateur du coût de conception",
+    },
+    secondary: {
+      hy: ["դիզայնի հաշվարկի հայտ"],
+      ru: ["заявка на расчёт дизайна"],
+      en: ["request a design calculation"],
+      de: ["Planungskosten berechnen lassen"],
+      fr: ["demande de calcul pour un projet de conception"],
+    },
+  },
   company: {
     paths: { hy: "", ru: "", en: "", de: "", fr: "" },
     primary: {
@@ -487,11 +574,11 @@ export const seoIntentMap = {
       fr: "entreprise de construction Erevan",
     },
     secondary: {
-      hy: ["շինարարական աշխատանքներ Երևանում"],
-      ru: ["строительная компания Армения"],
-      en: ["construction company Yerevan"],
-      de: ["Bauunternehmen Eriwan"],
-      fr: ["entreprise de construction Erevan"],
+      hy: ["շինարարական աշխատանքներ Երևանում", "SHINEX"],
+      ru: ["строительная компания Армения", "SHINEX"],
+      en: ["construction company Armenia", "SHINEX"],
+      de: ["Bauunternehmen Armenien", "SHINEX"],
+      fr: ["entreprise de construction Arménie", "SHINEX"],
     },
   },
 } as const satisfies Record<

@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-29",
+  "baseUrl": "http://127.0.0.1:3106",
+  "method": "Codex in-app browser through cua_repl; rendered DOM and visual inspection",
+  "locales": ["hy", "ru", "en", "de", "fr"],
+  "widths": [320, 1280],
+  "templates": ["", "services", "services/apartment-interior-design-yerevan", "services/office-renovation-yerevan", "renovation-estimate-yerevan"],
+  "checks": 50,
+  "finalEstimateCopyRechecks": 10,
+  "finalEstimateCopyRecheckFailures": [],
+  "oneH1OnEveryPage": true,
+  "documentHorizontalOverflowFailures": [],
+  "observedConsoleErrors": [],
+  "visualChecks": ["Russian service catalog at desktop width", "German service comparison at 320px"],
+  "verifiedJourney": ["Russian service catalog", "Major apartment renovation", "Renovation prices", "Renovation estimate", "Contact method dialog", "Loaded request form"],
+  "formSubmitted": false,
+  "limitations": ["No real lead sent", "No Google indexing or field performance measurement"]
+}

@@ -45,7 +45,9 @@ const { servicePlanningTranslations, getServicePlanning } = load(
 const { serviceMedia, getServiceMedia } = load("config/service-media.config");
 const { serviceSectionRoles } = load("config/service-presentation.config");
 const { blogArticles } = load("data/blog");
-const { serviceGuideGroups } = load("config/service-guides.config");
+const { serviceGuideGroups, serviceGuidesDescription } = load(
+  "config/service-guides.config"
+);
 const { seoIntentMap } = load("config/seo-intents.config");
 const { seoRedirects } = load("config/seo-redirects.config");
 const { createPageMetadata, getRobotsMetadata } = load("lib/metadata");
@@ -370,6 +372,22 @@ for (const locale of locales) {
   );
   expectPage(
     locale,
+    "services",
+    dictionary.services.pageTitle,
+    dictionary.services.pageDescription,
+    dictionary.services.pageTitle,
+    [
+      serviceGuidesDescription[locale],
+      ...serviceGuideGroups.flatMap((group) =>
+        group.links.flatMap((link) => [
+          link.label[locale],
+          link.description[locale],
+        ])
+      ),
+    ]
+  );
+  expectPage(
+    locale,
     "calculator",
     dictionary.calculatorPage.title,
     dictionary.calculatorPage.description,
@@ -557,6 +575,17 @@ for (const page of seoLandingPages) {
         );
       }
     }
+    pageExpectations[
+      `/${locale}/${getSeoLandingPath(page)}`
+    ].requiredMainLinks = [
+      ...page.relatedLandingSlugs.map(
+        (slug) =>
+          `/${locale}/${getSeoLandingPath(seoLandingPages.find((landing) => landing.slug === slug))}`
+      ),
+      ...content.sections.flatMap((section) =>
+        (section.choices ?? []).map((choice) => `/${locale}/${choice.path}`)
+      ),
+    ];
     const roles = serviceSectionRoles[page.slug];
     if (roles) {
       const indexes = Object.values(roles);
@@ -605,9 +634,39 @@ for (const page of seoLandingPages) {
     );
   }
 }
-for (const group of serviceGuideGroups)
-  for (const link of group.links)
+for (const group of serviceGuideGroups) {
+  for (const link of group.links) {
     assert(paths.has(link.path), `Guide points to missing route: ${link.path}`);
+    for (const locale of locales) {
+      assert(
+        link.label[locale]?.trim(),
+        `Missing guide label: ${link.path}/${locale}`
+      );
+      assert(
+        link.description[locale]?.trim(),
+        `Missing guide explanation: ${link.path}/${locale}`
+      );
+    }
+  }
+}
+for (const locale of locales) {
+  const queryOwners = new Map();
+  for (const [intent, entry] of Object.entries(seoIntentMap)) {
+    for (const query of [entry.primary[locale], ...entry.secondary[locale]]) {
+      const normalized = query
+        .normalize("NFKC")
+        .toLocaleLowerCase()
+        .replace(/\s+/g, " ")
+        .trim();
+      const previous = queryOwners.get(normalized);
+      assert(
+        !previous || previous.path === entry.paths[locale],
+        `Conflicting query target: ${locale}/${query}: ${previous?.intent} and ${intent}`
+      );
+      queryOwners.set(normalized, { path: entry.paths[locale], intent });
+    }
+  }
+}
 for (const intent of Object.values(seoIntentMap))
   for (const path of Object.values(intent.paths))
     assert(paths.has(path), `Intent points to retired route: ${path}`);

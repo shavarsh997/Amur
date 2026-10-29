@@ -3,14 +3,23 @@
 Usage: python3 scripts/seo-gsc-baseline.py export.xlsx
 Requires pandas and its Excel reader (the bundled workspace runtime has both).
 """
+import argparse
+from datetime import date
 import hashlib
 import json
 from pathlib import Path
-import sys
+import re
 
 import pandas as pd
 
-source = Path(sys.argv[1])
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument("source", type=Path)
+parser.add_argument("--output", type=Path, default=Path("docs/seo/GSC_BASELINE.json"))
+parser.add_argument("--export-date", type=date.fromisoformat)
+args = parser.parse_args()
+source = args.source
+filename_date = re.search(r"(\d{4}-\d{2}-\d{2})\.xlsx$", source.name)
+export_date = args.export_date or (date.fromisoformat(filename_date[1]) if filename_date else None)
 sheets = pd.read_excel(source, sheet_name=None)
 data = {}
 for name, frame in sheets.items():
@@ -23,11 +32,11 @@ for name, frame in sheets.items():
                           "ctr": clicks / impressions if impressions else None}
     data[name] = item
 report = {"source": source.name, "sha256": hashlib.sha256(source.read_bytes()).hexdigest(),
-          "exportDate": "2026-10-26", "sheets": data,
+          "exportDate": export_date.isoformat() if export_date else None, "sheets": data,
           "limitations": ["Separate query and page reports cannot establish query + page overlap.",
                           "Missing rows are unavailable, not zero. Do not sum dimensions together.",
                           "No lead, conversion, backlink or field Core Web Vitals data supplied."]}
-target = Path("docs/seo/GSC_BASELINE.json")
+target = args.output
 target.parent.mkdir(parents=True, exist_ok=True)
 target.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n")
 print(json.dumps({name: {"rowCount": item["rowCount"], "totals": item.get("totals"),

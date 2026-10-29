@@ -1,4 +1,10 @@
-import { readFileSync, writeFileSync, readdirSync, existsSync } from "node:fs";
+import {
+  readFileSync,
+  writeFileSync,
+  readdirSync,
+  existsSync,
+  mkdirSync,
+} from "node:fs";
 import { join } from "node:path";
 import { createTypeScriptLoader } from "./lib/load-typescript.mjs";
 
@@ -12,7 +18,10 @@ const { seoLandingPages, getSeoLandingPath } = load(
   "config/seo-landing-pages.config"
 );
 const { getActiveServices } = load("config/services.config");
-const source = JSON.parse(readFileSync("docs/seo/GSC_BASELINE.json", "utf8"));
+const sourcePath = process.argv[3] ?? "docs/seo/GSC_BASELINE.json";
+const outputDirectory = process.argv[4] ?? "docs/seo";
+mkdirSync(outputDirectory, { recursive: true });
+const source = JSON.parse(readFileSync(sourcePath, "utf8"));
 const gsc = new Map(
   source.sheets["Страницы"].rows.map((row) => [row["Популярные страницы"], row])
 );
@@ -111,7 +120,7 @@ const similarities = locales.map((locale) => {
   };
 });
 writeFileSync(
-  "docs/seo/CONTENT_SIMILARITY.json",
+  join(outputDirectory, "CONTENT_SIMILARITY.json"),
   JSON.stringify(
     {
       method:
@@ -209,6 +218,8 @@ const rows = [...urls].sort().map((url) => {
         : [],
     clicks: metrics?.["Kлики"] ?? null,
     impressions: metrics?.["Показы"] ?? null,
+    ctr: metrics?.["CTR"] ?? null,
+    position: metrics?.["Позиция"] ?? null,
     cannibalizationRisk: suspect.has(path)
       ? "Возможное пересечение; не доказано"
       : "Не доказана; разные назначения",
@@ -234,15 +245,19 @@ const rows = [...urls].sort().map((url) => {
   };
 });
 writeFileSync(
-  "docs/seo/URL_INVENTORY.json",
-  JSON.stringify({ templates, rows }, null, 2) + "\n"
+  join(outputDirectory, "URL_INVENTORY.json"),
+  JSON.stringify(
+    { source: sourcePath, exportDate: source.exportDate, templates, rows },
+    null,
+    2
+  ) + "\n"
 );
 const cell = (value) =>
   String(value ?? "нет строки")
     .replaceAll("|", "\\|")
     .replaceAll("\n", " ");
 writeFileSync(
-  "docs/seo/URL_INVENTORY.md",
+  join(outputDirectory, "URL_INVENTORY.md"),
   `# Автоматический инвентарь URL\n\nКоманда: \`node scripts/seo-inventory.mjs [HTTP-report.json]\`. ${sitemap.length} URL в sitemap. Метрики — точные строки листа «Страницы»; отсутствие строки не равно нулю. Решение REDIRECT означает сохранение существующего правила. INVESTIGATE не меняет статус. Raw metadata, canonical, входящие страницы и статусы — в JSON; null означает, что HTTP-проверка ещё не приложена.\n\n## Файлы маршрутов\n\n${templates.map((x) => `- \`${x}\``).join("\n")}\n\nДинамические параметры раскрыты из активных услуг, landing pages, sitemap, GSC и каталога демо-проектов. Неограниченные неизвестные slug не перечисляются; проверяются репрезентативными 404. API отсутствует; формы используют Server Actions.\n\n## Решения\n\n| URL | Язык | Основной поисковый интент | Целевые запросы | Клики | Показы | Риск каннибализации | Решение | Целевой URL | Обоснование | Риск миграции |\n| --- | --- | --- | --- | ---: | ---: | --- | --- | --- | --- | --- |\n${rows
     .map((x) =>
       [

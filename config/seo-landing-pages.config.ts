@@ -62,6 +62,7 @@ const coreSeoLandingPages = [
       "capital-renovation-yerevan",
       "cosmetic-renovation-yerevan",
       "renovation-estimate-yerevan",
+      "apartment-interior-design-yerevan",
     ],
     translations: {
       ru: {
@@ -700,6 +701,8 @@ const coreSeoLandingPages = [
       "apartment-renovation-yerevan",
       "turnkey-renovation",
       "prices",
+      "apartment-interior-design-yerevan",
+      "renovation-estimate-yerevan",
     ],
     translations: {
       ru: {
@@ -1080,6 +1083,9 @@ const coreSeoLandingPages = [
       "apartment-renovation-yerevan",
       "new-build-renovation",
       "prices",
+      "capital-renovation-yerevan",
+      "cosmetic-renovation-yerevan",
+      "renovation-estimate-yerevan",
     ],
     translations: {
       ru: {

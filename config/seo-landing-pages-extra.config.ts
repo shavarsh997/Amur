@@ -4,6 +4,7 @@ import type { SeoLandingPage } from "@/config/seo-landing-pages.config";
 export const extraSeoLandingPages = [
   {
     slug: "apartment-interior-design-yerevan",
+    contentUpdatedAt: "2026-10-29",
     kind: "service",
     image:
       "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1800&q=85",
@@ -44,6 +45,12 @@ export const extraSeoLandingPages = [
             title: "Նախագիծը մինչև վերանորոգումը",
             paragraphs: [
               "Նախապես հաստատված դասավորությունը թույլ է տալիս էլեկտրիկին, սանտեխնիկին և հարդարողներին աշխատել նույն որոշումների հիման վրա։",
+              "Մինչև նախագծումը համաձայնեցրեք անհրաժեշտ գծագրերի ցանկը։ Բնակարանի համար կարևոր է, որ կահույքի, անցումների և միացումների չափերը համընկնեն բոլոր պլաններում։",
+            ],
+            items: [
+              "Կահույքի և պահարանների տեղաբաշխում՝ չափերով և դռների բացման համար անհրաժեշտ տարածքով։",
+              "Խոհանոցի տեխնիկայի և սանհանգույցի սարքերի միացումներ՝ ըստ ընտրված դասավորության։",
+              "Վարդակների, անջատիչների և լուսավորության պլան՝ կապված կահույքի հետ։ Վիզուալիզացիաներն ու հեղինակային ուղեկցումը համաձայնեցվում են առանձին։",
             ],
           },
           {
@@ -105,6 +112,12 @@ export const extraSeoLandingPages = [
             title: "Проект до ремонта",
             paragraphs: [
               "Согласованная планировка помогает всем исполнителям работать на основе одних решений.",
+              "До проектирования согласуйте перечень нужных чертежей. Для квартиры важно, чтобы размеры мебели, проходов и подключений совпадали на всех планах.",
+            ],
+            items: [
+              "План мебели и хранения с размерами и местом для открывания дверей и шкафов.",
+              "Привязки кухонной техники и сантехнических приборов к выбранной планировке.",
+              "План розеток, выключателей и освещения, связанный с мебелью. Визуализации и авторское сопровождение согласуются отдельно.",
             ],
           },
           {
@@ -166,6 +179,12 @@ export const extraSeoLandingPages = [
             title: "Design before renovation",
             paragraphs: [
               "An agreed plan shows electricians, plumbers and decorators where furniture, fittings and equipment will go.",
+              "Agree the required drawings before design begins. Furniture dimensions, clearances and connection positions need to be consistent across the apartment plans.",
+            ],
+            items: [
+              "A dimensioned furniture and storage plan with room to open doors and cupboards.",
+              "Kitchen appliance and bathroom fitting connections matched to the chosen layout.",
+              "A socket, switch and lighting plan coordinated with furniture. Visualisations and design supervision are agreed separately.",
             ],
           },
           {
@@ -226,6 +245,12 @@ export const extraSeoLandingPages = [
             title: "Planung vor der Renovierung",
             paragraphs: [
               "Ein abgestimmter Plan zeigt Elektrikern, Installateuren und Ausbaugewerken, wo Möbel, Einbauten und Geräte vorgesehen sind.",
+              "Vereinbaren Sie vor Planungsbeginn die benötigten Zeichnungen. Möbelmaße, Bewegungsflächen und Anschlusspunkte müssen in allen Wohnungsplänen übereinstimmen.",
+            ],
+            items: [
+              "Ein bemaßter Möbel- und Stauraumplan mit Platz zum Öffnen von Türen und Schränken.",
+              "Anschlüsse für Küchengeräte und Sanitärobjekte passend zum gewählten Grundriss.",
+              "Ein mit den Möbeln abgestimmter Steckdosen-, Schalter- und Beleuchtungsplan. Visualisierungen und gestalterische Begleitung werden gesondert vereinbart.",
             ],
           },
           {
@@ -287,6 +312,12 @@ export const extraSeoLandingPages = [
             title: "Concevoir avant de rénover",
             paragraphs: [
               "Un plan convenu indique aux électriciens, plombiers et professionnels des finitions où se trouveront les meubles, équipements et appareils.",
+              "Convenez des plans nécessaires avant la conception. Les dimensions du mobilier, les dégagements et les raccordements doivent correspondre sur tous les plans de l’appartement.",
+            ],
+            items: [
+              "Un plan coté du mobilier et des rangements, avec l’espace nécessaire pour ouvrir portes et placards.",
+              "Les raccordements des appareils de cuisine et des équipements sanitaires selon l’agencement retenu.",
+              "Un plan des prises, interrupteurs et éclairages coordonné au mobilier. Les visualisations et le suivi de conception sont convenus séparément.",
             ],
           },
           {
@@ -321,11 +352,15 @@ export const extraSeoLandingPages = [
   },
   {
     slug: "office-renovation-yerevan",
+    contentUpdatedAt: "2026-10-29",
     kind: "service",
     image:
       "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1800&q=85",
     relatedServiceSlugs: ["commercial-construction", "interior-design"],
-    relatedLandingSlugs: ["electrical-work-yerevan"],
+    relatedLandingSlugs: [
+      "electrical-work-yerevan",
+      "renovation-estimate-yerevan",
+    ],
     translations: {
       hy: {
         eyebrow: "Գրասենյակների վերանորոգում · Երևան",
@@ -359,6 +394,12 @@ export const extraSeoLandingPages = [
               "Աշխատանքների պլանավորում՝ ըստ գրասենյակի աշխատանքային ռեժիմի",
             paragraphs: [
               "Գործող գրասենյակի համար կարող ենք քննարկել հերթականությունը՝ որպեսզի աղմկոտ կամ խոչընդոտող փուլերը պլանավորվեն հարմար ժամանակ։",
+              "Թիմի վերադարձը յուրաքանչյուր գոտի պլանավորեք ըստ դրա պատրաստվածության։ Մինչև աշխատանքների սկիզբը համաձայնեցրեք ստուգումների ցանկն ու պատասխանատուներին։",
+            ],
+            items: [
+              "Նշեք համակարգիչների, տպիչների և ցանցային սարքավորումների տեղերը, ինչպես նաև էլեկտրականության կամ ցանցի անջատման ընդունելի ժամանակը։",
+              "Սահմանեք սարքավորումների տեղափոխման և աշխատակիցների անցումների կազմակերպման պատասխանատուներին։",
+              "Մինչև գոտու օգտագործումը ստուգեք համաձայնեցված լուսավորությունը, վարդակներն ու ցանցային կետերը՝ շինարարական և ՏՏ աշխատանքների պատասխանատվությունն առանձնացնելով։",
             ],
           },
           {
@@ -421,6 +462,12 @@ export const extraSeoLandingPages = [
             title: "Учёт рабочего режима",
             paragraphs: [
               "Для работающего офиса согласуем порядок работ, чтобы шумные этапы проходили в подходящее время.",
+              "Возвращение команды в каждую зону планируйте по её готовности. До начала работ согласуйте список проверок и ответственных за них.",
+            ],
+            items: [
+              "Отметьте компьютеры, принтеры и сетевое оборудование, а также допустимое время отключения электричества или сети.",
+              "Определите, кто переносит оборудование и организует проходы для сотрудников.",
+              "Перед использованием зоны проверьте согласованные свет, розетки и сетевые точки, разделив ответственность за строительные и ИТ-работы.",
             ],
           },
           {
@@ -481,6 +528,12 @@ export const extraSeoLandingPages = [
             title: "Scheduling work in an occupied office",
             paragraphs: [
               "If work can be carried out safely while the office remains in use, we discuss the sequence and timing of noisy or disruptive tasks.",
+              "Plan the team’s return to each area around its readiness. Agree the handover checks and who is responsible before work starts.",
+            ],
+            items: [
+              "Identify computers, printers and network equipment, along with acceptable power or network downtime.",
+              "Establish who moves equipment and arranges access routes for staff.",
+              "Before using an area, check the agreed lighting, sockets and network points, with separate responsibilities for building work and IT work.",
             ],
           },
           {
@@ -541,6 +594,12 @@ export const extraSeoLandingPages = [
             title: "Arbeiten im genutzten Büro planen",
             paragraphs: [
               "Können die Arbeiten während der Büronutzung sicher ausgeführt werden, besprechen wir Reihenfolge und Zeiten lauter oder störender Tätigkeiten.",
+              "Planen Sie die Rückkehr des Teams in jeden Bereich nach dessen Fertigstellung. Vereinbaren Sie Prüfungen und Zuständigkeiten vor Arbeitsbeginn.",
+            ],
+            items: [
+              "Erfassen Sie Computer, Drucker und Netzwerkgeräte sowie zulässige Strom- oder Netzwerkausfallzeiten.",
+              "Klären Sie, wer Geräte versetzt und Zugangswege für Mitarbeitende organisiert.",
+              "Prüfen Sie vor der Nutzung die vereinbarte Beleuchtung, Steckdosen und Netzwerkanschlüsse; Zuständigkeiten für Bau- und IT-Arbeiten werden getrennt festgelegt.",
             ],
           },
           {
@@ -602,6 +661,12 @@ export const extraSeoLandingPages = [
             title: "Planifier les travaux dans des bureaux occupés",
             paragraphs: [
               "Si les travaux peuvent être réalisés en sécurité pendant l’occupation des bureaux, nous discutons de l’ordre et des horaires des interventions bruyantes ou perturbantes.",
+              "Planifiez le retour de l’équipe dans chaque zone selon son état d’achèvement. Convenez des vérifications et des responsables avant le début des travaux.",
+            ],
+            items: [
+              "Repérez ordinateurs, imprimantes et équipements réseau, ainsi que les créneaux acceptables de coupure électrique ou réseau.",
+              "Définissez qui déplace les équipements et organise les passages du personnel.",
+              "Avant de réutiliser une zone, vérifiez l’éclairage, les prises et les points réseau convenus, en distinguant les responsabilités des travaux et de l’informatique.",
             ],
           },
           {
@@ -645,6 +710,7 @@ export const extraSeoLandingPages = [
       "apartment-renovation-yerevan",
       "cosmetic-renovation-yerevan",
       "renovation-estimate-yerevan",
+      "prices",
     ],
     translations: {
       hy: {
@@ -998,6 +1064,7 @@ export const extraSeoLandingPages = [
       "apartment-renovation-yerevan",
       "capital-renovation-yerevan",
       "renovation-estimate-yerevan",
+      "prices",
     ],
     translations: {
       hy: {
@@ -1336,11 +1403,19 @@ export const extraSeoLandingPages = [
   },
   {
     slug: "renovation-estimate-yerevan",
+    contentUpdatedAt: "2026-10-29",
     kind: "prices",
     image:
       "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1800&q=85",
     relatedServiceSlugs: ["renovation"],
-    relatedLandingSlugs: ["prices", "capital-renovation-yerevan"],
+    relatedLandingSlugs: [
+      "prices",
+      "apartment-renovation-yerevan",
+      "capital-renovation-yerevan",
+      "cosmetic-renovation-yerevan",
+      "new-build-renovation",
+      "turnkey-renovation",
+    ],
     translations: {
       hy: {
         eyebrow: "Վերանորոգման նախահաշիվ · Երևան",
@@ -1358,7 +1433,7 @@ export const extraSeoLandingPages = [
           {
             title: "Ի՞նչ պետք է ներառի նախահաշիվը",
             paragraphs: [
-              "Յուրաքանչյուր տողում պետք է նշված լինեն աշխատանքը, չափված ծավալը և միավորի գինը։ Նյութերն ու լրացուցիչ ծախսերը ներկայացվում են առանձին։ Ստորև բերված օրինակը կօգնի ստուգել առաջարկի կազմը։",
+              "Յուրաքանչյուր տողում պետք է նշված լինեն աշխատանքը, չափված ծավալը և միավորի գինը։ Նյութերն ու լրացուցիչ ծախսերը ներկայացվում են առանձին։ Այս էջի օրինակը կօգնի ստուգել առաջարկի կազմը։",
             ],
             items: [
               "Աշխատանքների անվանումներ",
@@ -1373,6 +1448,12 @@ export const extraSeoLandingPages = [
             title: "Ինչպե՞ս ստանալ ճշգրիտ հաշվարկ",
             paragraphs: [
               "Սկզբում հավաքում ենք բնակարանի կամ տարածքի հիմնական տվյալները, ապա զննման և չափագրության հիման վրա ճշտում ենք աշխատանքների կազմը։",
+              "Էջի կապի կոճակով թողեք հայտ կամ կապվեք հեռախոսով։ Նշեք տարածքի տեսակը, մակերեսն ու ցանկալի աշխատանքները։ Լուսանկարների և հատակագծի փոխանցման եղանակը կհամաձայնեցնենք կապի ընթացքում։",
+            ],
+            items: [
+              "Մինչև զննումը նշեք՝ ինչն եք ցանկանում պահպանել, փոխարինել կամ ավելացնել, և կա՞ պատրաստի նախագիծ։",
+              "Չափագրությունից հետո համաձայնեցրեք սենյակները, աշխատանքների ծավալներն ու չափման միավորները։ Նյութերը, առաքումն ու բացառությունները նշվում են առանձին։",
+              "Նախահաշվի փոփոխությունները համաձայնեցրեք մինչև լրացուցիչ աշխատանքը՝ հստակեցնելով գումարի և ժամկետի փոփոխությունը։",
             ],
           },
           {
@@ -1419,7 +1500,7 @@ export const extraSeoLandingPages = [
           {
             title: "Что должна включать смета",
             paragraphs: [
-              "Каждая строка связывает конкретную работу, измеренный объём и цену за единицу. Отдельно указываются материалы и дополнительные расходы. Ниже — пример структуры, по которой удобно проверить предложение.",
+              "Каждая строка связывает конкретную работу, измеренный объём и цену за единицу. Отдельно указываются материалы и дополнительные расходы. Пример на этой странице помогает проверить структуру предложения.",
             ],
             items: [
               "Наименования работ",
@@ -1434,6 +1515,12 @@ export const extraSeoLandingPages = [
             title: "Как получить точный расчёт",
             paragraphs: [
               "Сначала собираем основные данные, затем уточняем состав работ после осмотра и замеров.",
+              "Оставьте заявку через кнопку связи на странице или позвоните. Укажите тип объекта, площадь и нужные работы. Способ передачи фотографий и планировки согласуем при общении.",
+            ],
+            items: [
+              "До осмотра отметьте, что хотите сохранить, заменить или добавить, и есть ли готовый проект.",
+              "После замеров согласуйте помещения, объёмы и единицы работ. Материалы, доставку и исключения перечислите отдельно.",
+              "Изменения сметы согласуйте до дополнительных работ, уточнив влияние на сумму и сроки.",
             ],
           },
           {
@@ -1479,7 +1566,7 @@ export const extraSeoLandingPages = [
           {
             title: "What an estimate should include",
             paragraphs: [
-              "Each line should identify the task, measured quantity and unit rate. Materials and additional costs should be listed separately. The example below shows a structure you can use to review a quotation.",
+              "Each line should identify the task, measured quantity and unit rate. Materials and additional costs should be listed separately. The example on this page shows a structure you can use to review a quotation.",
             ],
             items: [
               "Individual tasks",
@@ -1494,6 +1581,12 @@ export const extraSeoLandingPages = [
             title: "Getting a precise calculation",
             paragraphs: [
               "We collect the starting information, then refine the scope after a survey and measurements.",
+              "Use the contact button on this page or call us. Include the property type, floor area and intended work. We will agree how to share photos and plans when we speak.",
+            ],
+            items: [
+              "Before the survey, identify what you want to retain, replace or add, and whether a design is available.",
+              "After measurements, agree the rooms, quantities and units of work. List materials, delivery and exclusions separately.",
+              "Agree estimate revisions before additional work, including their effect on cost and timing.",
             ],
           },
           {
@@ -1539,7 +1632,7 @@ export const extraSeoLandingPages = [
           {
             title: "Was ein Kostenvoranschlag enthalten sollte",
             paragraphs: [
-              "Jede Position sollte Arbeit, gemessene Menge und Einheitspreis nennen. Materialien und Zusatzkosten sollten separat stehen. Das folgende Beispiel zeigt eine Struktur zur Angebotsprüfung.",
+              "Jede Position sollte Arbeit, gemessene Menge und Einheitspreis nennen. Materialien und Zusatzkosten sollten separat stehen. Das Beispiel auf dieser Seite zeigt eine Struktur zur Angebotsprüfung.",
             ],
             items: [
               "Einzelne Tätigkeiten",
@@ -1554,6 +1647,12 @@ export const extraSeoLandingPages = [
             title: "Eine genaue Berechnung erhalten",
             paragraphs: [
               "Wir sammeln die Ausgangsdaten und präzisieren den Umfang nach Besichtigung und Aufmaß.",
+              "Nutzen Sie die Kontakt-Schaltfläche dieser Seite oder rufen Sie an. Nennen Sie Objektart, Fläche und gewünschte Arbeiten. Wie Sie Fotos und Pläne übermitteln, klären wir im Gespräch.",
+            ],
+            items: [
+              "Notieren Sie vor der Besichtigung, was erhalten, ersetzt oder ergänzt werden soll und ob eine Planung vorliegt.",
+              "Stimmen Sie nach dem Aufmaß Räume, Mengen und Einheiten ab. Materialien, Lieferung und ausgeschlossene Leistungen werden separat aufgeführt.",
+              "Vereinbaren Sie Änderungen der Kostenschätzung vor zusätzlichen Arbeiten einschließlich der Auswirkungen auf Kosten und Termine.",
             ],
           },
           {
@@ -1599,7 +1698,7 @@ export const extraSeoLandingPages = [
           {
             title: "Ce qu’un devis doit contenir",
             paragraphs: [
-              "Chaque ligne doit préciser la tâche, la quantité mesurée et le prix unitaire. Les matériaux et frais supplémentaires doivent être séparés. L’exemple ci-dessous propose une structure pour examiner un devis.",
+              "Chaque ligne doit préciser la tâche, la quantité mesurée et le prix unitaire. Les matériaux et frais supplémentaires doivent être séparés. L’exemple de cette page propose une structure pour examiner un devis.",
             ],
             items: [
               "Tâches individuelles",
@@ -1614,6 +1713,12 @@ export const extraSeoLandingPages = [
             title: "Obtenir un calcul précis",
             paragraphs: [
               "Nous réunissons les informations initiales, puis affinons le périmètre après visite et mesures.",
+              "Utilisez le bouton de contact de cette page ou appelez-nous. Indiquez le type de bien, sa surface et les travaux souhaités. Nous conviendrons ensemble du moyen de transmettre photos et plans.",
+            ],
+            items: [
+              "Avant la visite, indiquez ce que vous souhaitez conserver, remplacer ou ajouter, et si un projet est déjà disponible.",
+              "Après les mesures, convenez des pièces, quantités et unités de travaux. Distinguez matériaux, livraison et exclusions.",
+              "Validez les modifications du devis avant les travaux supplémentaires, en précisant leurs effets sur le coût et les délais.",
             ],
           },
           {

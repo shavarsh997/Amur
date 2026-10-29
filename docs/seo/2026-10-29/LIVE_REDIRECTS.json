@@ -1,0 +1,165 @@
+{
+  "checkedAt": "2026-10-29T07:57:25.404Z",
+  "results": [
+    {
+      "start": "http://shinex.am/",
+      "steps": [
+        {
+          "url": "http://shinex.am/",
+          "status": 308,
+          "location": "https://shinex.am/"
+        },
+        {
+          "url": "https://shinex.am/",
+          "status": 308,
+          "location": "https://www.shinex.am/"
+        },
+        {
+          "url": "https://www.shinex.am/",
+          "status": 308,
+          "location": "/hy"
+        },
+        {
+          "url": "https://www.shinex.am/hy",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "start": "http://shinex.am/ru/services/house-construction-yerevan/?utm_source=seo-audit",
+      "steps": [
+        {
+          "url": "http://shinex.am/ru/services/house-construction-yerevan/?utm_source=seo-audit",
+          "status": 308,
+          "location": "https://shinex.am/ru/services/house-construction-yerevan/?utm_source=seo-audit"
+        },
+        {
+          "url": "https://shinex.am/ru/services/house-construction-yerevan/?utm_source=seo-audit",
+          "status": 308,
+          "location": "https://www.shinex.am/ru/services/house-construction-yerevan/?utm_source=seo-audit"
+        },
+        {
+          "url": "https://www.shinex.am/ru/services/house-construction-yerevan/?utm_source=seo-audit",
+          "status": 308,
+          "location": "/ru/services/house-construction?utm_source=seo-audit"
+        },
+        {
+          "url": "https://www.shinex.am/ru/services/house-construction?utm_source=seo-audit",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "start": "https://shinex.am/",
+      "steps": [
+        {
+          "url": "https://shinex.am/",
+          "status": 308,
+          "location": "https://www.shinex.am/"
+        },
+        {
+          "url": "https://www.shinex.am/",
+          "status": 308,
+          "location": "/hy"
+        },
+        {
+          "url": "https://www.shinex.am/hy",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "start": "https://shinex.am/ru/services/house-construction-yerevan/?utm_source=seo-audit",
+      "steps": [
+        {
+          "url": "https://shinex.am/ru/services/house-construction-yerevan/?utm_source=seo-audit",
+          "status": 308,
+          "location": "https://www.shinex.am/ru/services/house-construction-yerevan/?utm_source=seo-audit"
+        },
+        {
+          "url": "https://www.shinex.am/ru/services/house-construction-yerevan/?utm_source=seo-audit",
+          "status": 308,
+          "location": "/ru/services/house-construction?utm_source=seo-audit"
+        },
+        {
+          "url": "https://www.shinex.am/ru/services/house-construction?utm_source=seo-audit",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "start": "http://www.shinex.am/",
+      "steps": [
+        {
+          "url": "http://www.shinex.am/",
+          "status": 308,
+          "location": "https://www.shinex.am/"
+        },
+        {
+          "url": "https://www.shinex.am/",
+          "status": 308,
+          "location": "/hy"
+        },
+        {
+          "url": "https://www.shinex.am/hy",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "start": "http://www.shinex.am/ru/services/house-construction-yerevan/?utm_source=seo-audit",
+      "steps": [
+        {
+          "url": "http://www.shinex.am/ru/services/house-construction-yerevan/?utm_source=seo-audit",
+          "status": 308,
+          "location": "https://www.shinex.am/ru/services/house-construction-yerevan/?utm_source=seo-audit"
+        },
+        {
+          "url": "https://www.shinex.am/ru/services/house-construction-yerevan/?utm_source=seo-audit",
+          "status": 308,
+          "location": "/ru/services/house-construction?utm_source=seo-audit"
+        },
+        {
+          "url": "https://www.shinex.am/ru/services/house-construction?utm_source=seo-audit",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "start": "https://www.shinex.am/",
+      "steps": [
+        {
+          "url": "https://www.shinex.am/",
+          "status": 308,
+          "location": "/hy"
+        },
+        {
+          "url": "https://www.shinex.am/hy",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "start": "https://www.shinex.am/ru/services/house-construction-yerevan/?utm_source=seo-audit",
+      "steps": [
+        {
+          "url": "https://www.shinex.am/ru/services/house-construction-yerevan/?utm_source=seo-audit",
+          "status": 308,
+          "location": "/ru/services/house-construction?utm_source=seo-audit"
+        },
+        {
+          "url": "https://www.shinex.am/ru/services/house-construction?utm_source=seo-audit",
+          "status": 200,
+          "location": null
+        }
+      ]
+    }
+  ]
+}

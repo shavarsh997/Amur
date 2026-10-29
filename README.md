@@ -43,6 +43,8 @@ Before release, follow [the GA4 setup checklist](docs/seo/ANALYTICS_SETUP.md): d
 
 ## SEO and multilingual checks
 
+The latest preservation audit is [29 October 2026](docs/seo/2026-10-29/IMPLEMENTATION.md), with the [query-to-page map and risks](docs/seo/2026-10-29/AUDIT_AND_PLAN.md) and [GSC measurement plan](docs/seo/2026-10-29/GSC_MONITORING.md). The SEO check also rejects one exact query assigned to different URLs in the same language and verifies contextual landing-page links in rendered HTML.
+
 ```bash
 npm run lint
 npm run typecheck

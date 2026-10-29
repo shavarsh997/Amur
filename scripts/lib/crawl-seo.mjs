@@ -140,6 +140,19 @@ export async function crawlSeo({
             expected.h1,
             `Rendered H1 differs from configured copy: ${path}`
           );
+          const mainHtml =
+            page.document.match(/<main\b[^>]*>([\s\S]*?)<\/main>/i)?.[1] ?? "";
+          const mainDestinations = new Set(
+            parseSeoHtml(mainHtml)
+              .anchors.filter((anchor) => anchor.href)
+              .map((anchor) => new URL(anchor.href, route.url).href)
+          );
+          for (const destination of expected.requiredMainLinks ?? []) {
+            assert(
+              mainDestinations.has(new URL(destination, route.url).href),
+              `Missing contextual intent link: ${path} → ${destination}`
+            );
+          }
           if (expected.serviceMedia) {
             const hero = page.document.match(
               /<section\b[^>]*aria-labelledby="service-title"[^>]*>[\s\S]*?<\/section>/i
