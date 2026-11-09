@@ -1,5 +1,8 @@
 import type { CSSProperties, ReactNode } from "react";
-import Image from "next/image";
+import {
+  ArchitecturalImage,
+  type ArchitecturalPhoto,
+} from "@/components/ui/architectural-image";
 import Link from "next/link";
 import { ArrowDown, ArrowUpRight, Plus } from "lucide-react";
 
@@ -13,7 +16,7 @@ import type { ServiceWorkflowStep } from "@/types/service";
 import styles from "./service-page.module.css";
 
 export type ServiceLink = { href: string; title: string; description: string };
-export type ServicePhoto = { src: string; alt: string; caption?: string };
+export type ServicePhoto = ArchitecturalPhoto;
 
 export function ServicePage({
   children,
@@ -26,6 +29,7 @@ export function ServicePage({
     <div
       className={styles.page}
       data-service-page
+      data-service-slug={slug}
       data-service-visual={getServiceVisual(slug)}
     >
       {children}
@@ -79,16 +83,14 @@ export function ServiceHero({
         </div>
       </div>
       <figure className={styles.heroPhoto}>
-        <Image
-          src={image.src}
-          alt={image.alt}
-          fill
-          sizes="(max-width: 959px) 100vw, (max-width: 1599px) 55vw, 880px"
-          loading="eager"
-          fetchPriority="high"
-          className={styles.photo}
+        <ArchitecturalImage
+          image={image}
+          eager
+          sizes={
+            image.sizes ??
+            "(max-width: 959px) 100vw, (max-width: 1799px) 60vw, 1080px"
+          }
         />
-        <figcaption>{image.caption ?? image.alt}</figcaption>
       </figure>
     </section>
   );
@@ -170,14 +172,10 @@ export function ServiceDetails({
     <section className={styles.details} id="service-details">
       <Container className={styles.detailsGrid}>
         <figure className={styles.detailPhoto}>
-          <Image
-            src={image.src}
-            alt={image.alt}
-            fill
-            sizes="(max-width: 639px) calc(100vw - 32px), (max-width: 959px) calc(100vw - 48px), (max-width: 1279px) 42vw, 530px"
-            className={styles.photo}
+          <ArchitecturalImage
+            image={image}
+            sizes="(max-width: 959px) 100vw, 45vw"
           />
-          <figcaption>{image.caption ?? image.alt}</figcaption>
         </figure>
         <div className={styles.detailsCopy}>
           <p className={styles.eyebrow}>{eyebrow}</p>
@@ -268,6 +266,30 @@ export function ServiceProcess({
         </li>
       ))}
     </ol>
+  );
+}
+
+export function ServiceProcessGallery({
+  images,
+}: {
+  images: readonly ServicePhoto[];
+}) {
+  if (!images.length) return null;
+  return (
+    <div className={styles.processGallery}>
+      {images.map((image, index) => (
+        <figure key={image.src}>
+          <div className={styles.processPhoto}>
+            <ArchitecturalImage
+              image={image}
+              sizes="(max-width: 639px) 100vw, (max-width: 959px) 48vw, 45vw"
+            />
+            <span aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
+          </div>
+          <figcaption>{image.alt}</figcaption>
+        </figure>
+      ))}
+    </div>
   );
 }
 

@@ -1,0 +1,14 @@
+{
+  "pages": 120,
+  "viewports": [
+    390,
+    1440
+  ],
+  "renderedCaptionElementsRemoved": 285,
+  "remainingCaptionElements": 0,
+  "assetFilesUnchanged": 56,
+  "imagesAltSourcesSizesLoadingPreserved": true,
+  "serviceTitlesAndProcessCaptionsPreserved": true,
+  "issues": [],
+  "passed": true
+}

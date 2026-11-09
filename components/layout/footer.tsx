@@ -7,6 +7,7 @@ import {
   navigationConfig,
 } from "@/config/navigation.config";
 import { companyConfig } from "@/config/company.config";
+import { imageDisclosure } from "@/config/image-disclosure.config";
 import {
   getGoogleMapsHref,
   getMailHref,
@@ -17,6 +18,7 @@ import {
 import { BrandMark } from "@/components/ui/brand-mark";
 import { Container } from "@/components/ui/container";
 import type { Dictionary, Locale } from "@/types";
+import { LanguageSwitcher } from "@/components/layout/language-switcher";
 
 type FooterProps = {
   locale: Locale;
@@ -181,6 +183,7 @@ export function Footer({ locale, dictionary }: FooterProps) {
           </div>
         </div>
 
+        <p className="footer-image-note">{imageDisclosure[locale]}</p>
         <div className="flex flex-col gap-4 pt-6 text-sm text-white/55 sm:flex-row sm:items-center sm:justify-between">
           <p>
             © {new Date().getFullYear()}{" "}
@@ -193,6 +196,12 @@ export function Footer({ locale, dictionary }: FooterProps) {
           >
             {dictionary.footer.privacy}
           </Link>
+          <LanguageSwitcher
+            locale={locale}
+            label={dictionary.nav.language}
+            inverted
+            placement="top"
+          />
         </div>
       </Container>
     </footer>

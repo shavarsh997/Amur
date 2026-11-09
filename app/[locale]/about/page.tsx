@@ -2,6 +2,7 @@ import { PageSchema } from "@/components/seo/page-schema";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
+import { getServiceMedia } from "@/config/service-media.config";
 import { FinalCta } from "@/components/sections/final-cta";
 import { Container } from "@/components/ui/container";
 import { PageHero } from "@/components/ui/page-hero";
@@ -60,6 +61,7 @@ export default async function AboutPage({ params }: Props) {
         description={about.intro}
         eyebrow={about.eyebrow}
         title={about.title}
+        image={getServiceMedia("design", locale).hero}
       />
       <Container className="space-y-section py-section">
         <section className="content-split grid gap-8 lg:grid-cols-[0.7fr_1.3fr]">

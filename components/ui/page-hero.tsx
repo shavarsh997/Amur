@@ -11,7 +11,7 @@ type PageHeroProps = {
   breadcrumbs?: readonly BreadcrumbItem[];
   breadcrumbsLabel?: string;
   actions?: ReactNode;
-  image?: { src: string; alt: string; caption?: string };
+  image?: { src: string; alt: string };
 };
 
 export function PageHero({
@@ -67,7 +67,6 @@ export function PageHero({
               quality={82}
               sizes="(max-width: 639px) calc(100vw - 32px), (max-width: 959px) calc(100vw - 48px), (max-width: 1439px) 52vw, 720px"
             />
-            {image.caption ? <figcaption>{image.caption}</figcaption> : null}
           </figure>
         ) : null}
       </Container>

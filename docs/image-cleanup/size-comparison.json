@@ -1,0 +1,13 @@
+{
+  "metric": "All emitted static JS/CSS files, gzip bytes; not per-route transfer or Core Web Vitals",
+  "before": {
+    "js": 386296,
+    "css": 20297
+  },
+  "after": {
+    "js": 386283,
+    "css": 20015
+  },
+  "htmlBytesBefore": 15535521,
+  "htmlBytesAfter": 15530668
+}

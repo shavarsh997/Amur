@@ -1,0 +1,140 @@
+diff --git a/components/layout/premium-layout.css b/components/layout/premium-layout.css
+index 7199db5..44fde65 100644
+--- a/components/layout/premium-layout.css
++++ b/components/layout/premium-layout.css
+@@ -9,6 +9,9 @@ body {
+ .site-page-content :is(h1, h2, h3) {
+   text-wrap: balance;
+ }
++.site-page-content :is(p, li, summary, th, td) {
++  text-wrap: pretty;
++}
+ :lang(hy) {
+   font-family: "Noto Sans Armenian", "Arial Armenian", system-ui, sans-serif;
+ }
+@@ -45,7 +48,7 @@ body {
+   background: currentColor;
+ }
+ .site-page-content .content-heading {
+-  font-size: clamp(2rem, 3.7vw, 3.4rem);
++  font-size: clamp(1.75rem, 3.7vw, 3.4rem);
+   font-weight: 500;
+   line-height: 1.14;
+ }
+@@ -74,9 +77,13 @@ body {
+   background: #d2d8d2;
+   pointer-events: none;
+ }
+-.page-hero h1 {
++/* Split heroes size their title against the copy column, not the viewport. */
++.site-page-content .page-hero h1 {
+   max-width: 22ch;
+-  font-size: clamp(2.3rem, 4.6vw, 4.5rem) !important;
++  font-size: clamp(1.75rem, 8cqi, 3.75rem);
++}
++.site-page-content .page-hero--with-image h1 {
++  max-width: none;
+ }
+ .page-hero p {
+   max-width: 62ch;
+@@ -95,6 +102,7 @@ body {
+ }
+ .page-hero__copy {
+   min-width: 0;
++  container-type: inline-size;
+ }
+ .page-hero__image {
+   position: relative;
+@@ -311,6 +319,9 @@ body {
+ .service-catalog-copy {
+   padding: clamp(1.5rem, 4vw, 4rem);
+ }
++.service-catalog-copy h2:lang(hy) {
++  font-size: clamp(1.25rem, 5.5cqi, 2rem);
++}
+ .technical-services {
+   background: #e9ece8;
+ }
+diff --git a/components/seo/renovation-budget.tsx b/components/seo/renovation-budget.tsx
+index 4f01b78..8533978 100644
+--- a/components/seo/renovation-budget.tsx
++++ b/components/seo/renovation-budget.tsx
+@@ -52,8 +52,13 @@ export function EstimateExample({ locale }: { locale: Locale }) {
+       <p className="mt-4 leading-7 text-[var(--text-secondary)]">
+         {copy.exampleDescription}
+       </p>
+-      <div className="mt-6 overflow-x-auto rounded-2xl border border-[var(--border)]">
+-        <table className="w-full table-fixed hyphens-auto text-left text-sm leading-6 [overflow-wrap:anywhere]">
++      <div
++        aria-label={copy.exampleTitle}
++        className="mt-6 overflow-x-auto rounded-2xl border border-[var(--border)]"
++        role="region"
++        tabIndex={0}
++      >
++        <table className="w-full min-w-[36rem] text-left text-sm leading-6">
+           <caption className="sr-only">{copy.exampleTitle}</caption>
+           <thead className="bg-[var(--background-soft)] text-[var(--text-primary)]">
+             <tr>
+diff --git a/components/services/service-page.module.css b/components/services/service-page.module.css
+index f4fe33e..b3bd5f5 100644
+--- a/components/services/service-page.module.css
++++ b/components/services/service-page.module.css
+@@ -8,7 +8,7 @@
+   overflow-wrap: anywhere;
+ }
+ .page h2 {
+-  font-size: clamp(1.75rem, 2.8vw, 2.6rem);
++  font-size: clamp(1.625rem, 2.8vw, 2.6rem);
+   line-height: 1.12;
+   letter-spacing: -0.045em;
+ }
+@@ -39,6 +39,7 @@
+   background: var(--background-soft);
+ }
+ .heroCopy {
++  container-type: inline-size;
+   padding: var(--section-gap) var(--panel-space) var(--section-gap)
+     max(
+       var(--container-gutter),
+@@ -65,7 +66,7 @@
+ }
+ .hero h1 {
+   max-width: 13em;
+-  font-size: clamp(2.2rem, 4.1vw, 4.2rem);
++  font-size: clamp(1.75rem, 8.5cqi, 4.2rem);
+   line-height: 1.12;
+   letter-spacing: -0.055em;
+ }
+@@ -662,15 +663,8 @@ p + .facts {
+   }
+ }
+ 
+-@media (min-width: 768px) and (max-width: 1100px) {
+-  .hero h1 {
+-    font-size: clamp(2.15rem, 4.25vw, 3.2rem);
+-  }
+-}
+-
+ @media (max-width: 767px) {
+   .hero h1 {
+-    font-size: clamp(2.15rem, 7vw, 3.2rem);
+     max-width: 16em;
+   }
+ }
+@@ -759,7 +753,7 @@ p + .facts {
+   pointer-events: none;
+ }
+ .hero h1:lang(hy) {
+-  font-size: clamp(2rem, 3.5vw, 3.6rem);
++  font-size: clamp(1.6rem, 8.5cqi, 3.6rem);
+   letter-spacing: -0.015em;
+   line-height: 1.28;
+ }
+@@ -850,7 +844,4 @@ p + .facts {
+     left: -3px;
+     top: 0;
+   }
+-  .hero h1:lang(hy) {
+-    font-size: clamp(2rem, 5.3vw, 3.5rem);
+-  }
+ }

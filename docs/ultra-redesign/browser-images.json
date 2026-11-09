@@ -1,0 +1,1267 @@
+[
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fultra%2Fhome-dusk.webp&w=1920&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/hy"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fultra%2Fhome-dusk.webp&w=1920&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/ru"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fultra%2Fhome-dusk.webp&w=1920&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/en"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fultra%2Fhome-dusk.webp&w=1920&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/de"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fultra%2Fhome-dusk.webp&w=1920&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/fr"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fservices%2Fmonolithic-work-details.webp&w=750&q=82"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/hy/services"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fservices%2Fmonolithic-work-details.webp&w=750&q=82"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/ru/services"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fservices%2Fmonolithic-work-details.webp&w=750&q=82"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/en/services"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fservices%2Fmonolithic-work-details.webp&w=750&q=82"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/de/services"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fservices%2Fmonolithic-work-details.webp&w=750&q=82"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/fr/services"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fultra%2Fdesign-hero.webp&w=750&q=82"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/hy/about"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fultra%2Fdesign-hero.webp&w=750&q=82"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/ru/about"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fultra%2Fdesign-hero.webp&w=750&q=82"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/en/about"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fultra%2Fdesign-hero.webp&w=750&q=82"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/de/about"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fultra%2Fdesign-hero.webp&w=750&q=82"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/fr/about"
+  },
+  {
+    "eager": [],
+    "missingAlt": 0,
+    "path": "/hy/contacts"
+  },
+  {
+    "eager": [],
+    "missingAlt": 0,
+    "path": "/ru/contacts"
+  },
+  {
+    "eager": [],
+    "missingAlt": 0,
+    "path": "/en/contacts"
+  },
+  {
+    "eager": [],
+    "missingAlt": 0,
+    "path": "/de/contacts"
+  },
+  {
+    "eager": [],
+    "missingAlt": 0,
+    "path": "/fr/contacts"
+  },
+  {
+    "eager": [],
+    "missingAlt": 0,
+    "path": "/hy/calculator"
+  },
+  {
+    "eager": [],
+    "missingAlt": 0,
+    "path": "/ru/calculator"
+  },
+  {
+    "eager": [],
+    "missingAlt": 0,
+    "path": "/en/calculator"
+  },
+  {
+    "eager": [],
+    "missingAlt": 0,
+    "path": "/de/calculator"
+  },
+  {
+    "eager": [],
+    "missingAlt": 0,
+    "path": "/fr/calculator"
+  },
+  {
+    "eager": [],
+    "missingAlt": 0,
+    "path": "/hy/privacy"
+  },
+  {
+    "eager": [],
+    "missingAlt": 0,
+    "path": "/ru/privacy"
+  },
+  {
+    "eager": [],
+    "missingAlt": 0,
+    "path": "/en/privacy"
+  },
+  {
+    "eager": [],
+    "missingAlt": 0,
+    "path": "/de/privacy"
+  },
+  {
+    "eager": [],
+    "missingAlt": 0,
+    "path": "/fr/privacy"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fservices%2Frenovation-hero.webp&w=1080&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/hy/services/renovation"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fservices%2Frenovation-hero.webp&w=1080&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/ru/services/renovation"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fservices%2Frenovation-hero.webp&w=1080&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/en/services/renovation"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fservices%2Frenovation-hero.webp&w=1080&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/de/services/renovation"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fservices%2Frenovation-hero.webp&w=1080&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/fr/services/renovation"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fultra%2Fhouse-hero.webp&w=1080&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/hy/services/house-construction"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fultra%2Fhouse-hero.webp&w=1080&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/ru/services/house-construction"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fultra%2Fhouse-hero.webp&w=1080&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/en/services/house-construction"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fultra%2Fhouse-hero.webp&w=1080&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/de/services/house-construction"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fultra%2Fhouse-hero.webp&w=1080&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/fr/services/house-construction"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fultra%2Finterior-hero.webp&w=1080&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/hy/services/interior-design"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fultra%2Finterior-hero.webp&w=1080&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/ru/services/interior-design"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fultra%2Finterior-hero.webp&w=1080&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/en/services/interior-design"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fultra%2Finterior-hero.webp&w=1080&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/de/services/interior-design"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fultra%2Finterior-hero.webp&w=1080&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/fr/services/interior-design"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fultra%2Fcommercial-hero.webp&w=1080&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/hy/services/commercial-construction"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fultra%2Fcommercial-hero.webp&w=1080&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/ru/services/commercial-construction"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fultra%2Fcommercial-hero.webp&w=1080&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/en/services/commercial-construction"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fultra%2Fcommercial-hero.webp&w=1080&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/de/services/commercial-construction"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fultra%2Fcommercial-hero.webp&w=1080&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/fr/services/commercial-construction"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fultra%2Fdesign-hero.webp&w=1080&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/hy/services/design"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fultra%2Fdesign-hero.webp&w=1080&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/ru/services/design"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fultra%2Fdesign-hero.webp&w=1080&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/en/services/design"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fultra%2Fdesign-hero.webp&w=1080&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/de/services/design"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fultra%2Fdesign-hero.webp&w=1080&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/fr/services/design"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fultra%2Fmonolithic-hero.webp&w=1920&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/hy/services/monolithic-work"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fultra%2Fmonolithic-hero.webp&w=1920&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/ru/services/monolithic-work"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fultra%2Fmonolithic-hero.webp&w=1920&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/en/services/monolithic-work"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fultra%2Fmonolithic-hero.webp&w=1920&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/de/services/monolithic-work"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fultra%2Fmonolithic-hero.webp&w=1920&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/fr/services/monolithic-work"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fservices%2Ffacade-and-roofing-hero.webp&w=1080&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/hy/services/facade-and-roofing"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fservices%2Ffacade-and-roofing-hero.webp&w=1080&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/ru/services/facade-and-roofing"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fservices%2Ffacade-and-roofing-hero.webp&w=1080&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/en/services/facade-and-roofing"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fservices%2Ffacade-and-roofing-hero.webp&w=1080&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/de/services/facade-and-roofing"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fservices%2Ffacade-and-roofing-hero.webp&w=1080&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/fr/services/facade-and-roofing"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fultra%2Fapartment-hero.webp&w=1080&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/hy/services/apartment-renovation-yerevan"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fultra%2Fapartment-hero.webp&w=1080&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/ru/services/apartment-renovation-yerevan"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fultra%2Fapartment-hero.webp&w=1080&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/en/services/apartment-renovation-yerevan"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fultra%2Fapartment-hero.webp&w=1080&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/de/services/apartment-renovation-yerevan"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fultra%2Fapartment-hero.webp&w=1080&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/fr/services/apartment-renovation-yerevan"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fservices%2Fnew-build-renovation-details.webp&w=1080&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/hy/services/new-build-renovation"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fservices%2Fnew-build-renovation-details.webp&w=1080&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/ru/services/new-build-renovation"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fservices%2Fnew-build-renovation-details.webp&w=1080&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/en/services/new-build-renovation"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fservices%2Fnew-build-renovation-details.webp&w=1080&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/de/services/new-build-renovation"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fservices%2Fnew-build-renovation-details.webp&w=1080&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/fr/services/new-build-renovation"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fservices%2Fturnkey-renovation-hero.webp&w=1080&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/hy/services/turnkey-renovation"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fservices%2Fturnkey-renovation-hero.webp&w=1080&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/ru/services/turnkey-renovation"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fservices%2Fturnkey-renovation-hero.webp&w=1080&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/en/services/turnkey-renovation"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fservices%2Fturnkey-renovation-hero.webp&w=1080&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/de/services/turnkey-renovation"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fservices%2Fturnkey-renovation-hero.webp&w=1080&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/fr/services/turnkey-renovation"
+  },
+  {
+    "eager": [],
+    "missingAlt": 0,
+    "path": "/hy/prices"
+  },
+  {
+    "eager": [],
+    "missingAlt": 0,
+    "path": "/ru/prices"
+  },
+  {
+    "eager": [],
+    "missingAlt": 0,
+    "path": "/en/prices"
+  },
+  {
+    "eager": [],
+    "missingAlt": 0,
+    "path": "/de/prices"
+  },
+  {
+    "eager": [],
+    "missingAlt": 0,
+    "path": "/fr/prices"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fservices%2Fapartment-interior-design-yerevan-hero.webp&w=1080&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/hy/services/apartment-interior-design-yerevan"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fservices%2Fapartment-interior-design-yerevan-hero.webp&w=1080&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/ru/services/apartment-interior-design-yerevan"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fservices%2Fapartment-interior-design-yerevan-hero.webp&w=1080&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/en/services/apartment-interior-design-yerevan"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fservices%2Fapartment-interior-design-yerevan-hero.webp&w=1080&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/de/services/apartment-interior-design-yerevan"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fservices%2Fapartment-interior-design-yerevan-hero.webp&w=1080&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/fr/services/apartment-interior-design-yerevan"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fservices%2Foffice-renovation-yerevan-hero.webp&w=1080&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/hy/services/office-renovation-yerevan"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fservices%2Foffice-renovation-yerevan-hero.webp&w=1080&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/ru/services/office-renovation-yerevan"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fservices%2Foffice-renovation-yerevan-hero.webp&w=1080&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/en/services/office-renovation-yerevan"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fservices%2Foffice-renovation-yerevan-hero.webp&w=1080&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/de/services/office-renovation-yerevan"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fservices%2Foffice-renovation-yerevan-hero.webp&w=1080&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/fr/services/office-renovation-yerevan"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fservices%2Fcapital-renovation-yerevan-hero.webp&w=1080&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/hy/services/capital-renovation-yerevan"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fservices%2Fcapital-renovation-yerevan-hero.webp&w=1080&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/ru/services/capital-renovation-yerevan"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fservices%2Fcapital-renovation-yerevan-hero.webp&w=1080&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/en/services/capital-renovation-yerevan"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fservices%2Fcapital-renovation-yerevan-hero.webp&w=1080&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/de/services/capital-renovation-yerevan"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fservices%2Fcapital-renovation-yerevan-hero.webp&w=1080&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/fr/services/capital-renovation-yerevan"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fservices%2Fcosmetic-renovation-yerevan-hero.webp&w=1080&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/hy/services/cosmetic-renovation-yerevan"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fservices%2Fcosmetic-renovation-yerevan-hero.webp&w=1080&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/ru/services/cosmetic-renovation-yerevan"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fservices%2Fcosmetic-renovation-yerevan-hero.webp&w=1080&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/en/services/cosmetic-renovation-yerevan"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fservices%2Fcosmetic-renovation-yerevan-hero.webp&w=1080&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/de/services/cosmetic-renovation-yerevan"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fservices%2Fcosmetic-renovation-yerevan-hero.webp&w=1080&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/fr/services/cosmetic-renovation-yerevan"
+  },
+  {
+    "eager": [],
+    "missingAlt": 0,
+    "path": "/hy/renovation-estimate-yerevan"
+  },
+  {
+    "eager": [],
+    "missingAlt": 0,
+    "path": "/ru/renovation-estimate-yerevan"
+  },
+  {
+    "eager": [],
+    "missingAlt": 0,
+    "path": "/en/renovation-estimate-yerevan"
+  },
+  {
+    "eager": [],
+    "missingAlt": 0,
+    "path": "/de/renovation-estimate-yerevan"
+  },
+  {
+    "eager": [],
+    "missingAlt": 0,
+    "path": "/fr/renovation-estimate-yerevan"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fservices%2Fplumbing-work-yerevan-hero.webp&w=1080&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/hy/services/plumbing-work-yerevan"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fservices%2Fplumbing-work-yerevan-hero.webp&w=1080&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/ru/services/plumbing-work-yerevan"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fservices%2Fplumbing-work-yerevan-hero.webp&w=1080&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/en/services/plumbing-work-yerevan"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fservices%2Fplumbing-work-yerevan-hero.webp&w=1080&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/de/services/plumbing-work-yerevan"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fservices%2Fplumbing-work-yerevan-hero.webp&w=1080&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/fr/services/plumbing-work-yerevan"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fultra%2Felectrical-hero.webp&w=1080&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/hy/services/electrical-work-yerevan"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fultra%2Felectrical-hero.webp&w=1080&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/ru/services/electrical-work-yerevan"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fultra%2Felectrical-hero.webp&w=1080&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/en/services/electrical-work-yerevan"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fultra%2Felectrical-hero.webp&w=1080&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/de/services/electrical-work-yerevan"
+  },
+  {
+    "eager": [
+      {
+        "alt": true,
+        "loaded": true,
+        "priority": "high",
+        "src": "http://127.0.0.1:3102/_next/image?url=%2Fimages%2Fultra%2Felectrical-hero.webp&w=1080&q=75"
+      }
+    ],
+    "missingAlt": 0,
+    "path": "/fr/services/electrical-work-yerevan"
+  }
+]

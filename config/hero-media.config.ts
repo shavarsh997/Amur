@@ -1,4 +1,3 @@
-import { generatedCaption } from "@/config/service-media.config";
 import type { Locale } from "@/types";
 
 const homeHeroAlt: Record<Locale, string> = {
@@ -11,8 +10,10 @@ const homeHeroAlt: Record<Locale, string> = {
 
 export function getHomeHeroMedia(locale: Locale) {
   return {
-    src: "/images/home/residential-construction-hero.webp",
+    src: "/images/ultra/home-dusk.webp",
     alt: homeHeroAlt[locale],
-    caption: generatedCaption[locale],
+    focalPoint: "60% 50%",
+    mobileFocalPoint: "50% 50%",
+    mobileSrc: "/images/ultra/home-dusk-mobile.webp",
   };
 }

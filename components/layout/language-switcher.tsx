@@ -140,7 +140,7 @@ export function LanguageSwitcher({
       </button>
       <nav
         aria-label={label}
-        className={`absolute z-10 w-44 rounded-xl border border-[var(--border)] bg-white p-1.5 text-[var(--text-primary)] shadow-lg ${placement === "top" ? "left-0 bottom-full mb-2" : "right-0 top-full mt-2"}`}
+        className={`language-menu absolute z-10 w-44 rounded-xl border border-[var(--border)] bg-white p-1.5 text-[var(--text-primary)] shadow-lg ${placement === "top" ? "left-0 bottom-full mb-2" : "right-0 top-full mt-2"}`}
         hidden={!open}
         id={panelId}
       >

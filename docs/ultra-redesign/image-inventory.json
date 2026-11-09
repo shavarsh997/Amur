@@ -1,0 +1,949 @@
+{
+  "files": [
+    {
+      "path": "public/images/ultra/apartment-hero-mobile.webp",
+      "width": 768,
+      "height": 960,
+      "bytes": 54354,
+      "origin": "built-in image_gen conceptual illustration",
+      "disclosure": "Localized in hy, ru, en, de, fr"
+    },
+    {
+      "path": "public/images/ultra/apartment-hero.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 171646,
+      "origin": "built-in image_gen conceptual illustration",
+      "disclosure": "Localized in hy, ru, en, de, fr"
+    },
+    {
+      "path": "public/images/ultra/commercial-hero-mobile.webp",
+      "width": 768,
+      "height": 960,
+      "bytes": 34546,
+      "origin": "built-in image_gen conceptual illustration",
+      "disclosure": "Localized in hy, ru, en, de, fr"
+    },
+    {
+      "path": "public/images/ultra/commercial-hero.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 141970,
+      "origin": "built-in image_gen conceptual illustration",
+      "disclosure": "Localized in hy, ru, en, de, fr"
+    },
+    {
+      "path": "public/images/ultra/concrete-pour.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 228778,
+      "origin": "built-in image_gen conceptual illustration",
+      "disclosure": "Localized in hy, ru, en, de, fr"
+    },
+    {
+      "path": "public/images/ultra/design-hero-mobile.webp",
+      "width": 768,
+      "height": 960,
+      "bytes": 43816,
+      "origin": "built-in image_gen conceptual illustration",
+      "disclosure": "Localized in hy, ru, en, de, fr"
+    },
+    {
+      "path": "public/images/ultra/design-hero.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 130022,
+      "origin": "built-in image_gen conceptual illustration",
+      "disclosure": "Localized in hy, ru, en, de, fr"
+    },
+    {
+      "path": "public/images/ultra/electrical-hero-mobile.webp",
+      "width": 768,
+      "height": 960,
+      "bytes": 63148,
+      "origin": "built-in image_gen conceptual illustration",
+      "disclosure": "Localized in hy, ru, en, de, fr"
+    },
+    {
+      "path": "public/images/ultra/electrical-hero.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 175602,
+      "origin": "built-in image_gen conceptual illustration",
+      "disclosure": "Localized in hy, ru, en, de, fr"
+    },
+    {
+      "path": "public/images/ultra/facade-installation.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 218118,
+      "origin": "built-in image_gen conceptual illustration",
+      "disclosure": "Localized in hy, ru, en, de, fr"
+    },
+    {
+      "path": "public/images/ultra/formwork.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 189068,
+      "origin": "built-in image_gen conceptual illustration",
+      "disclosure": "Localized in hy, ru, en, de, fr"
+    },
+    {
+      "path": "public/images/ultra/geometry-control.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 120468,
+      "origin": "built-in image_gen conceptual illustration",
+      "disclosure": "Localized in hy, ru, en, de, fr"
+    },
+    {
+      "path": "public/images/ultra/home-dusk-mobile.webp",
+      "width": 1000,
+      "height": 750,
+      "bytes": 63542,
+      "origin": "built-in image_gen conceptual illustration",
+      "disclosure": "Localized in hy, ru, en, de, fr"
+    },
+    {
+      "path": "public/images/ultra/home-dusk.webp",
+      "width": 1672,
+      "height": 941,
+      "bytes": 141264,
+      "origin": "built-in image_gen conceptual illustration",
+      "disclosure": "Localized in hy, ru, en, de, fr"
+    },
+    {
+      "path": "public/images/ultra/house-hero-mobile.webp",
+      "width": 1000,
+      "height": 750,
+      "bytes": 81462,
+      "origin": "built-in image_gen conceptual illustration",
+      "disclosure": "Localized in hy, ru, en, de, fr"
+    },
+    {
+      "path": "public/images/ultra/house-hero.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 228762,
+      "origin": "built-in image_gen conceptual illustration",
+      "disclosure": "Localized in hy, ru, en, de, fr"
+    },
+    {
+      "path": "public/images/ultra/interior-hero-mobile.webp",
+      "width": 768,
+      "height": 960,
+      "bytes": 44844,
+      "origin": "built-in image_gen conceptual illustration",
+      "disclosure": "Localized in hy, ru, en, de, fr"
+    },
+    {
+      "path": "public/images/ultra/interior-hero.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 185752,
+      "origin": "built-in image_gen conceptual illustration",
+      "disclosure": "Localized in hy, ru, en, de, fr"
+    },
+    {
+      "path": "public/images/ultra/monolithic-hero-mobile.webp",
+      "width": 768,
+      "height": 960,
+      "bytes": 77838,
+      "origin": "built-in image_gen conceptual illustration",
+      "disclosure": "Localized in hy, ru, en, de, fr"
+    },
+    {
+      "path": "public/images/ultra/monolithic-hero.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 225838,
+      "origin": "built-in image_gen conceptual illustration",
+      "disclosure": "Localized in hy, ru, en, de, fr"
+    },
+    {
+      "path": "public/images/ultra/slab-preparation.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 275674,
+      "origin": "built-in image_gen conceptual illustration",
+      "disclosure": "Localized in hy, ru, en, de, fr"
+    }
+  ],
+  "totalBytes": 2896512,
+  "services": [
+    {
+      "slug": "renovation",
+      "hero": {
+        "src": "/images/services/renovation-hero.webp",
+        "alt": "Stone private house with a garden",
+        "caption": "AI-generated service illustration",
+        "type": "generated-concept",
+        "disclosure": "AI-generated service illustration",
+        "focalPoint": "50% 50%",
+        "mobileFocalPoint": "50% 50%"
+      },
+      "card": {
+        "src": "/images/services/renovation-hero.webp",
+        "alt": "Stone private house with a garden",
+        "caption": "AI-generated service illustration",
+        "type": "generated-concept",
+        "disclosure": "AI-generated service illustration",
+        "focalPoint": "50% 50%",
+        "mobileFocalPoint": "50% 50%"
+      },
+      "details": {
+        "src": "/images/services/renovation-details.webp",
+        "alt": "House interior refurbishment with timber beams",
+        "caption": "AI-generated service illustration",
+        "type": "generated-concept",
+        "disclosure": "AI-generated service illustration",
+        "focalPoint": "50% 50%",
+        "mobileFocalPoint": "50% 50%"
+      },
+      "process": [],
+      "quality": {
+        "src": "/images/services/renovation-details.webp",
+        "alt": "House interior refurbishment with timber beams",
+        "caption": "AI-generated service illustration",
+        "type": "generated-concept",
+        "disclosure": "AI-generated service illustration",
+        "focalPoint": "50% 50%",
+        "mobileFocalPoint": "50% 50%"
+      }
+    },
+    {
+      "slug": "house-construction",
+      "hero": {
+        "src": "/images/ultra/house-hero.webp",
+        "alt": "Two-story house under construction",
+        "caption": "AI-generated service illustration",
+        "type": "generated-concept",
+        "disclosure": "AI-generated service illustration",
+        "focalPoint": "50% 50%",
+        "mobileFocalPoint": "50% 50%",
+        "mobileSrc": "/images/ultra/house-hero-mobile.webp"
+      },
+      "card": {
+        "src": "/images/ultra/house-hero.webp",
+        "alt": "Two-story house under construction",
+        "caption": "AI-generated service illustration",
+        "type": "generated-concept",
+        "disclosure": "AI-generated service illustration",
+        "focalPoint": "50% 50%",
+        "mobileFocalPoint": "50% 50%",
+        "mobileSrc": "/images/ultra/house-hero-mobile.webp"
+      },
+      "details": {
+        "src": "/images/services/house-construction-details.webp",
+        "alt": "Walls and structure of a house under construction",
+        "caption": "AI-generated service illustration",
+        "type": "generated-concept",
+        "disclosure": "AI-generated service illustration",
+        "focalPoint": "50% 50%",
+        "mobileFocalPoint": "50% 50%"
+      },
+      "process": [
+        {
+          "src": "/images/ultra/slab-preparation.webp",
+          "alt": "Foundation slab prepared for concrete",
+          "caption": "AI-generated service illustration",
+          "type": "generated-concept",
+          "disclosure": "AI-generated service illustration",
+          "focalPoint": "50% 50%",
+          "mobileFocalPoint": "50% 50%"
+        },
+        {
+          "src": "/images/services/house-construction-details.webp",
+          "alt": "Walls and structure of a house under construction",
+          "caption": "AI-generated service illustration",
+          "type": "generated-concept",
+          "disclosure": "AI-generated service illustration",
+          "focalPoint": "50% 50%",
+          "mobileFocalPoint": "50% 50%"
+        },
+        {
+          "src": "/images/services/facade-and-roofing-details.webp",
+          "alt": "Roof junction, gutter and stone facade",
+          "caption": "AI-generated service illustration",
+          "type": "generated-concept",
+          "disclosure": "AI-generated service illustration",
+          "focalPoint": "50% 50%",
+          "mobileFocalPoint": "50% 50%"
+        },
+        {
+          "src": "/images/ultra/facade-installation.webp",
+          "alt": "Stone facade installation",
+          "caption": "AI-generated service illustration",
+          "type": "generated-concept",
+          "disclosure": "AI-generated service illustration",
+          "focalPoint": "50% 50%",
+          "mobileFocalPoint": "50% 50%"
+        },
+        {
+          "src": "/images/services/facade-and-roofing-hero.webp",
+          "alt": "Stone house facade, pitched roof and gutters",
+          "caption": "AI-generated service illustration",
+          "type": "generated-concept",
+          "disclosure": "AI-generated service illustration",
+          "focalPoint": "50% 50%",
+          "mobileFocalPoint": "50% 50%"
+        }
+      ],
+      "quality": {
+        "src": "/images/services/house-construction-details.webp",
+        "alt": "Walls and structure of a house under construction",
+        "caption": "AI-generated service illustration",
+        "type": "generated-concept",
+        "disclosure": "AI-generated service illustration",
+        "focalPoint": "50% 50%",
+        "mobileFocalPoint": "50% 50%"
+      }
+    },
+    {
+      "slug": "interior-design",
+      "hero": {
+        "src": "/images/ultra/interior-hero.webp",
+        "alt": "Materials and plans for a contemporary interior",
+        "caption": "AI-generated service illustration",
+        "type": "generated-concept",
+        "disclosure": "AI-generated service illustration",
+        "focalPoint": "50% 50%",
+        "mobileFocalPoint": "50% 50%",
+        "mobileSrc": "/images/ultra/interior-hero-mobile.webp"
+      },
+      "card": {
+        "src": "/images/services/apartment-interior-design-yerevan-hero.webp",
+        "alt": "Compact apartment kitchen and dining layout",
+        "caption": "AI-generated service illustration",
+        "type": "generated-concept",
+        "disclosure": "AI-generated service illustration",
+        "focalPoint": "50% 50%",
+        "mobileFocalPoint": "50% 50%"
+      },
+      "details": {
+        "src": "/images/services/interior-design-details.webp",
+        "alt": "Interior plan and finish material samples",
+        "caption": "AI-generated service illustration",
+        "type": "generated-concept",
+        "disclosure": "AI-generated service illustration",
+        "focalPoint": "50% 50%",
+        "mobileFocalPoint": "50% 50%"
+      },
+      "process": [],
+      "quality": {
+        "src": "/images/services/interior-design-details.webp",
+        "alt": "Interior plan and finish material samples",
+        "caption": "AI-generated service illustration",
+        "type": "generated-concept",
+        "disclosure": "AI-generated service illustration",
+        "focalPoint": "50% 50%",
+        "mobileFocalPoint": "50% 50%"
+      }
+    },
+    {
+      "slug": "commercial-construction",
+      "hero": {
+        "src": "/images/ultra/commercial-hero.webp",
+        "alt": "Business interior with concrete columns and glass partitions",
+        "caption": "AI-generated service illustration",
+        "type": "generated-concept",
+        "disclosure": "AI-generated service illustration",
+        "focalPoint": "50% 50%",
+        "mobileFocalPoint": "50% 50%",
+        "mobileSrc": "/images/ultra/commercial-hero-mobile.webp"
+      },
+      "card": {
+        "src": "/images/ultra/commercial-hero.webp",
+        "alt": "Business interior with concrete columns and glass partitions",
+        "caption": "AI-generated service illustration",
+        "type": "generated-concept",
+        "disclosure": "AI-generated service illustration",
+        "focalPoint": "50% 50%",
+        "mobileFocalPoint": "50% 50%",
+        "mobileSrc": "/images/ultra/commercial-hero-mobile.webp"
+      },
+      "details": {
+        "src": "/images/services/commercial-construction-details.webp",
+        "alt": "Retail space during fit-out",
+        "caption": "AI-generated service illustration",
+        "type": "generated-concept",
+        "disclosure": "AI-generated service illustration",
+        "focalPoint": "50% 50%",
+        "mobileFocalPoint": "50% 50%"
+      },
+      "process": [],
+      "quality": {
+        "src": "/images/services/commercial-construction-details.webp",
+        "alt": "Retail space during fit-out",
+        "caption": "AI-generated service illustration",
+        "type": "generated-concept",
+        "disclosure": "AI-generated service illustration",
+        "focalPoint": "50% 50%",
+        "mobileFocalPoint": "50% 50%"
+      }
+    },
+    {
+      "slug": "design",
+      "hero": {
+        "src": "/images/ultra/design-hero.webp",
+        "alt": "Architectural model, drawings and material samples",
+        "caption": "AI-generated service illustration",
+        "type": "generated-concept",
+        "disclosure": "AI-generated service illustration",
+        "focalPoint": "50% 50%",
+        "mobileFocalPoint": "50% 50%",
+        "mobileSrc": "/images/ultra/design-hero-mobile.webp"
+      },
+      "card": {
+        "src": "/images/ultra/design-hero.webp",
+        "alt": "Architectural model, drawings and material samples",
+        "caption": "AI-generated service illustration",
+        "type": "generated-concept",
+        "disclosure": "AI-generated service illustration",
+        "focalPoint": "50% 50%",
+        "mobileFocalPoint": "50% 50%",
+        "mobileSrc": "/images/ultra/design-hero-mobile.webp"
+      },
+      "details": {
+        "src": "/images/services/design-details.webp",
+        "alt": "Architectural house and site model",
+        "caption": "AI-generated service illustration",
+        "type": "generated-concept",
+        "disclosure": "AI-generated service illustration",
+        "focalPoint": "50% 50%",
+        "mobileFocalPoint": "50% 50%"
+      },
+      "process": [],
+      "quality": {
+        "src": "/images/services/design-details.webp",
+        "alt": "Architectural house and site model",
+        "caption": "AI-generated service illustration",
+        "type": "generated-concept",
+        "disclosure": "AI-generated service illustration",
+        "focalPoint": "50% 50%",
+        "mobileFocalPoint": "50% 50%"
+      }
+    },
+    {
+      "slug": "monolithic-work",
+      "hero": {
+        "src": "/images/ultra/monolithic-hero.webp",
+        "alt": "Reinforced concrete frame and slab formwork",
+        "caption": "AI-generated service illustration",
+        "type": "generated-concept",
+        "disclosure": "AI-generated service illustration",
+        "focalPoint": "50% 50%",
+        "mobileFocalPoint": "50% 50%",
+        "mobileSrc": "/images/ultra/monolithic-hero-mobile.webp",
+        "sizes": "100vw"
+      },
+      "card": {
+        "src": "/images/ultra/monolithic-hero.webp",
+        "alt": "Reinforced concrete frame and slab formwork",
+        "caption": "AI-generated service illustration",
+        "type": "generated-concept",
+        "disclosure": "AI-generated service illustration",
+        "focalPoint": "50% 50%",
+        "mobileFocalPoint": "50% 50%",
+        "mobileSrc": "/images/ultra/monolithic-hero-mobile.webp"
+      },
+      "details": {
+        "src": "/images/services/monolithic-work-details.webp",
+        "alt": "Reinforcement and formwork for concrete construction",
+        "caption": "AI-generated service illustration",
+        "type": "generated-concept",
+        "disclosure": "AI-generated service illustration",
+        "focalPoint": "50% 50%",
+        "mobileFocalPoint": "50% 50%"
+      },
+      "process": [
+        {
+          "src": "/images/services/monolithic-work-details.webp",
+          "alt": "Reinforcement and formwork for concrete construction",
+          "caption": "AI-generated service illustration",
+          "type": "generated-concept",
+          "disclosure": "AI-generated service illustration",
+          "focalPoint": "50% 50%",
+          "mobileFocalPoint": "50% 50%"
+        },
+        {
+          "src": "/images/ultra/formwork.webp",
+          "alt": "Formwork installation",
+          "caption": "AI-generated service illustration",
+          "type": "generated-concept",
+          "disclosure": "AI-generated service illustration",
+          "focalPoint": "50% 50%",
+          "mobileFocalPoint": "50% 50%"
+        },
+        {
+          "src": "/images/ultra/slab-preparation.webp",
+          "alt": "Foundation slab prepared for concrete",
+          "caption": "AI-generated service illustration",
+          "type": "generated-concept",
+          "disclosure": "AI-generated service illustration",
+          "focalPoint": "50% 50%",
+          "mobileFocalPoint": "50% 50%"
+        },
+        {
+          "src": "/images/ultra/concrete-pour.webp",
+          "alt": "Foundation concrete placement",
+          "caption": "AI-generated service illustration",
+          "type": "generated-concept",
+          "disclosure": "AI-generated service illustration",
+          "focalPoint": "50% 50%",
+          "mobileFocalPoint": "50% 50%"
+        },
+        {
+          "src": "/images/ultra/geometry-control.webp",
+          "alt": "Surveying instrument for geometry checks",
+          "caption": "AI-generated service illustration",
+          "type": "generated-concept",
+          "disclosure": "AI-generated service illustration",
+          "focalPoint": "50% 50%",
+          "mobileFocalPoint": "50% 50%"
+        }
+      ],
+      "quality": {
+        "src": "/images/ultra/geometry-control.webp",
+        "alt": "Surveying instrument for geometry checks",
+        "caption": "AI-generated service illustration",
+        "type": "generated-concept",
+        "disclosure": "AI-generated service illustration",
+        "focalPoint": "50% 50%",
+        "mobileFocalPoint": "50% 50%"
+      }
+    },
+    {
+      "slug": "facade-and-roofing",
+      "hero": {
+        "src": "/images/services/facade-and-roofing-hero.webp",
+        "alt": "Stone house facade, pitched roof and gutters",
+        "caption": "AI-generated service illustration",
+        "type": "generated-concept",
+        "disclosure": "AI-generated service illustration",
+        "focalPoint": "50% 50%",
+        "mobileFocalPoint": "50% 50%"
+      },
+      "card": {
+        "src": "/images/services/facade-and-roofing-hero.webp",
+        "alt": "Stone house facade, pitched roof and gutters",
+        "caption": "AI-generated service illustration",
+        "type": "generated-concept",
+        "disclosure": "AI-generated service illustration",
+        "focalPoint": "50% 50%",
+        "mobileFocalPoint": "50% 50%"
+      },
+      "details": {
+        "src": "/images/services/facade-and-roofing-details.webp",
+        "alt": "Roof junction, gutter and stone facade",
+        "caption": "AI-generated service illustration",
+        "type": "generated-concept",
+        "disclosure": "AI-generated service illustration",
+        "focalPoint": "50% 50%",
+        "mobileFocalPoint": "50% 50%"
+      },
+      "process": [],
+      "quality": {
+        "src": "/images/services/facade-and-roofing-details.webp",
+        "alt": "Roof junction, gutter and stone facade",
+        "caption": "AI-generated service illustration",
+        "type": "generated-concept",
+        "disclosure": "AI-generated service illustration",
+        "focalPoint": "50% 50%",
+        "mobileFocalPoint": "50% 50%"
+      }
+    },
+    {
+      "slug": "apartment-renovation-yerevan",
+      "hero": {
+        "src": "/images/ultra/apartment-hero.webp",
+        "alt": "Apartment interior with stone finishes and oak panels",
+        "caption": "AI-generated service illustration",
+        "type": "generated-concept",
+        "disclosure": "AI-generated service illustration",
+        "focalPoint": "50% 50%",
+        "mobileFocalPoint": "50% 50%",
+        "mobileSrc": "/images/ultra/apartment-hero-mobile.webp"
+      },
+      "card": {
+        "src": "/images/ultra/apartment-hero.webp",
+        "alt": "Apartment interior with stone finishes and oak panels",
+        "caption": "AI-generated service illustration",
+        "type": "generated-concept",
+        "disclosure": "AI-generated service illustration",
+        "focalPoint": "50% 50%",
+        "mobileFocalPoint": "50% 50%",
+        "mobileSrc": "/images/ultra/apartment-hero-mobile.webp"
+      },
+      "details": {
+        "src": "/images/services/apartment-renovation-yerevan-details.webp",
+        "alt": "Tile preparation and installation in an apartment renovation",
+        "caption": "AI-generated service illustration",
+        "type": "generated-concept",
+        "disclosure": "AI-generated service illustration",
+        "focalPoint": "50% 50%",
+        "mobileFocalPoint": "50% 50%"
+      },
+      "process": [
+        {
+          "src": "/images/services/apartment-renovation-yerevan-details.webp",
+          "alt": "Tile preparation and installation in an apartment renovation",
+          "caption": "AI-generated service illustration",
+          "type": "generated-concept",
+          "disclosure": "AI-generated service illustration",
+          "focalPoint": "50% 50%",
+          "mobileFocalPoint": "50% 50%"
+        },
+        {
+          "src": "/images/services/turnkey-renovation-details.webp",
+          "alt": "Finished entrance hall with built-in storage",
+          "caption": "AI-generated service illustration",
+          "type": "generated-concept",
+          "disclosure": "AI-generated service illustration",
+          "focalPoint": "50% 50%",
+          "mobileFocalPoint": "50% 50%"
+        },
+        {
+          "src": "/images/services/electrical-work-yerevan-details.webp",
+          "alt": "Outlets and a switch beside a workspace",
+          "caption": "AI-generated service illustration",
+          "type": "generated-concept",
+          "disclosure": "AI-generated service illustration",
+          "focalPoint": "50% 50%",
+          "mobileFocalPoint": "50% 50%"
+        }
+      ],
+      "quality": {
+        "src": "/images/services/apartment-renovation-yerevan-details.webp",
+        "alt": "Tile preparation and installation in an apartment renovation",
+        "caption": "AI-generated service illustration",
+        "type": "generated-concept",
+        "disclosure": "AI-generated service illustration",
+        "focalPoint": "50% 50%",
+        "mobileFocalPoint": "50% 50%"
+      }
+    },
+    {
+      "slug": "new-build-renovation",
+      "hero": {
+        "src": "/images/services/new-build-renovation-details.webp",
+        "alt": "New-build apartment before finishing work",
+        "caption": "AI-generated service illustration",
+        "type": "generated-concept",
+        "disclosure": "AI-generated service illustration",
+        "focalPoint": "50% 50%",
+        "mobileFocalPoint": "50% 50%"
+      },
+      "card": {
+        "src": "/images/services/new-build-renovation-details.webp",
+        "alt": "New-build apartment before finishing work",
+        "caption": "AI-generated service illustration",
+        "type": "generated-concept",
+        "disclosure": "AI-generated service illustration",
+        "focalPoint": "50% 50%",
+        "mobileFocalPoint": "50% 50%"
+      },
+      "details": {
+        "src": "/images/services/new-build-renovation-hero.webp",
+        "alt": "Finished living room in a new apartment",
+        "caption": "AI-generated service illustration",
+        "type": "generated-concept",
+        "disclosure": "AI-generated service illustration",
+        "focalPoint": "50% 50%",
+        "mobileFocalPoint": "50% 50%"
+      },
+      "process": [],
+      "quality": {
+        "src": "/images/services/new-build-renovation-hero.webp",
+        "alt": "Finished living room in a new apartment",
+        "caption": "AI-generated service illustration",
+        "type": "generated-concept",
+        "disclosure": "AI-generated service illustration",
+        "focalPoint": "50% 50%",
+        "mobileFocalPoint": "50% 50%"
+      }
+    },
+    {
+      "slug": "turnkey-renovation",
+      "hero": {
+        "src": "/images/services/turnkey-renovation-hero.webp",
+        "alt": "Bedroom after a complete apartment fit-out",
+        "caption": "AI-generated service illustration",
+        "type": "generated-concept",
+        "disclosure": "AI-generated service illustration",
+        "focalPoint": "50% 50%",
+        "mobileFocalPoint": "50% 50%"
+      },
+      "card": {
+        "src": "/images/services/turnkey-renovation-hero.webp",
+        "alt": "Bedroom after a complete apartment fit-out",
+        "caption": "AI-generated service illustration",
+        "type": "generated-concept",
+        "disclosure": "AI-generated service illustration",
+        "focalPoint": "50% 50%",
+        "mobileFocalPoint": "50% 50%"
+      },
+      "details": {
+        "src": "/images/services/turnkey-renovation-details.webp",
+        "alt": "Finished entrance hall with built-in storage",
+        "caption": "AI-generated service illustration",
+        "type": "generated-concept",
+        "disclosure": "AI-generated service illustration",
+        "focalPoint": "50% 50%",
+        "mobileFocalPoint": "50% 50%"
+      },
+      "process": [],
+      "quality": {
+        "src": "/images/services/turnkey-renovation-details.webp",
+        "alt": "Finished entrance hall with built-in storage",
+        "caption": "AI-generated service illustration",
+        "type": "generated-concept",
+        "disclosure": "AI-generated service illustration",
+        "focalPoint": "50% 50%",
+        "mobileFocalPoint": "50% 50%"
+      }
+    },
+    {
+      "slug": "apartment-interior-design-yerevan",
+      "hero": {
+        "src": "/images/services/apartment-interior-design-yerevan-hero.webp",
+        "alt": "Compact apartment kitchen and dining layout",
+        "caption": "AI-generated service illustration",
+        "type": "generated-concept",
+        "disclosure": "AI-generated service illustration",
+        "focalPoint": "50% 50%",
+        "mobileFocalPoint": "50% 50%"
+      },
+      "card": {
+        "src": "/images/services/apartment-interior-design-yerevan-hero.webp",
+        "alt": "Compact apartment kitchen and dining layout",
+        "caption": "AI-generated service illustration",
+        "type": "generated-concept",
+        "disclosure": "AI-generated service illustration",
+        "focalPoint": "50% 50%",
+        "mobileFocalPoint": "50% 50%"
+      },
+      "details": {
+        "src": "/images/services/apartment-interior-design-yerevan-details.webp",
+        "alt": "Workspace and storage in a compact apartment",
+        "caption": "AI-generated service illustration",
+        "type": "generated-concept",
+        "disclosure": "AI-generated service illustration",
+        "focalPoint": "50% 50%",
+        "mobileFocalPoint": "50% 50%"
+      },
+      "process": [],
+      "quality": {
+        "src": "/images/services/apartment-interior-design-yerevan-details.webp",
+        "alt": "Workspace and storage in a compact apartment",
+        "caption": "AI-generated service illustration",
+        "type": "generated-concept",
+        "disclosure": "AI-generated service illustration",
+        "focalPoint": "50% 50%",
+        "mobileFocalPoint": "50% 50%"
+      }
+    },
+    {
+      "slug": "office-renovation-yerevan",
+      "hero": {
+        "src": "/images/services/office-renovation-yerevan-hero.webp",
+        "alt": "Office with meeting rooms and glass partitions",
+        "caption": "AI-generated service illustration",
+        "type": "generated-concept",
+        "disclosure": "AI-generated service illustration",
+        "focalPoint": "50% 50%",
+        "mobileFocalPoint": "50% 50%"
+      },
+      "card": {
+        "src": "/images/services/office-renovation-yerevan-hero.webp",
+        "alt": "Office with meeting rooms and glass partitions",
+        "caption": "AI-generated service illustration",
+        "type": "generated-concept",
+        "disclosure": "AI-generated service illustration",
+        "focalPoint": "50% 50%",
+        "mobileFocalPoint": "50% 50%"
+      },
+      "details": {
+        "src": "/images/services/office-renovation-yerevan-details.webp",
+        "alt": "Office partitions and cable routes during fit-out",
+        "caption": "AI-generated service illustration",
+        "type": "generated-concept",
+        "disclosure": "AI-generated service illustration",
+        "focalPoint": "50% 50%",
+        "mobileFocalPoint": "50% 50%"
+      },
+      "process": [],
+      "quality": {
+        "src": "/images/services/office-renovation-yerevan-details.webp",
+        "alt": "Office partitions and cable routes during fit-out",
+        "caption": "AI-generated service illustration",
+        "type": "generated-concept",
+        "disclosure": "AI-generated service illustration",
+        "focalPoint": "50% 50%",
+        "mobileFocalPoint": "50% 50%"
+      }
+    },
+    {
+      "slug": "capital-renovation-yerevan",
+      "hero": {
+        "src": "/images/services/capital-renovation-yerevan-hero.webp",
+        "alt": "Apartment after removal of old finishes",
+        "caption": "AI-generated service illustration",
+        "type": "generated-concept",
+        "disclosure": "AI-generated service illustration",
+        "focalPoint": "50% 50%",
+        "mobileFocalPoint": "50% 50%"
+      },
+      "card": {
+        "src": "/images/services/capital-renovation-yerevan-hero.webp",
+        "alt": "Apartment after removal of old finishes",
+        "caption": "AI-generated service illustration",
+        "type": "generated-concept",
+        "disclosure": "AI-generated service illustration",
+        "focalPoint": "50% 50%",
+        "mobileFocalPoint": "50% 50%"
+      },
+      "details": {
+        "src": "/images/services/capital-renovation-yerevan-details.webp",
+        "alt": "Wall and doorway preparation before finishing",
+        "caption": "AI-generated service illustration",
+        "type": "generated-concept",
+        "disclosure": "AI-generated service illustration",
+        "focalPoint": "50% 50%",
+        "mobileFocalPoint": "50% 50%"
+      },
+      "process": [],
+      "quality": {
+        "src": "/images/services/capital-renovation-yerevan-details.webp",
+        "alt": "Wall and doorway preparation before finishing",
+        "caption": "AI-generated service illustration",
+        "type": "generated-concept",
+        "disclosure": "AI-generated service illustration",
+        "focalPoint": "50% 50%",
+        "mobileFocalPoint": "50% 50%"
+      }
+    },
+    {
+      "slug": "cosmetic-renovation-yerevan",
+      "hero": {
+        "src": "/images/services/cosmetic-renovation-yerevan-hero.webp",
+        "alt": "Bedroom wall redecoration",
+        "caption": "AI-generated service illustration",
+        "type": "generated-concept",
+        "disclosure": "AI-generated service illustration",
+        "focalPoint": "50% 50%",
+        "mobileFocalPoint": "50% 50%"
+      },
+      "card": {
+        "src": "/images/services/cosmetic-renovation-yerevan-hero.webp",
+        "alt": "Bedroom wall redecoration",
+        "caption": "AI-generated service illustration",
+        "type": "generated-concept",
+        "disclosure": "AI-generated service illustration",
+        "focalPoint": "50% 50%",
+        "mobileFocalPoint": "50% 50%"
+      },
+      "details": {
+        "src": "/images/services/cosmetic-renovation-yerevan-details.webp",
+        "alt": "Materials and tools for refreshing finishes",
+        "caption": "AI-generated service illustration",
+        "type": "generated-concept",
+        "disclosure": "AI-generated service illustration",
+        "focalPoint": "50% 50%",
+        "mobileFocalPoint": "50% 50%"
+      },
+      "process": [],
+      "quality": {
+        "src": "/images/services/cosmetic-renovation-yerevan-details.webp",
+        "alt": "Materials and tools for refreshing finishes",
+        "caption": "AI-generated service illustration",
+        "type": "generated-concept",
+        "disclosure": "AI-generated service illustration",
+        "focalPoint": "50% 50%",
+        "mobileFocalPoint": "50% 50%"
+      }
+    },
+    {
+      "slug": "plumbing-work-yerevan",
+      "hero": {
+        "src": "/images/services/plumbing-work-yerevan-hero.webp",
+        "alt": "Water supply and drainage before bathroom finishing",
+        "caption": "AI-generated service illustration",
+        "type": "generated-concept",
+        "disclosure": "AI-generated service illustration",
+        "focalPoint": "50% 50%",
+        "mobileFocalPoint": "50% 50%"
+      },
+      "card": {
+        "src": "/images/services/plumbing-work-yerevan-hero.webp",
+        "alt": "Water supply and drainage before bathroom finishing",
+        "caption": "AI-generated service illustration",
+        "type": "generated-concept",
+        "disclosure": "AI-generated service illustration",
+        "focalPoint": "50% 50%",
+        "mobileFocalPoint": "50% 50%"
+      },
+      "details": {
+        "src": "/images/services/plumbing-work-yerevan-details.webp",
+        "alt": "Water connections and drain beneath a basin",
+        "caption": "AI-generated service illustration",
+        "type": "generated-concept",
+        "disclosure": "AI-generated service illustration",
+        "focalPoint": "50% 50%",
+        "mobileFocalPoint": "50% 50%"
+      },
+      "process": [],
+      "quality": {
+        "src": "/images/services/plumbing-work-yerevan-details.webp",
+        "alt": "Water connections and drain beneath a basin",
+        "caption": "AI-generated service illustration",
+        "type": "generated-concept",
+        "disclosure": "AI-generated service illustration",
+        "focalPoint": "50% 50%",
+        "mobileFocalPoint": "50% 50%"
+      }
+    },
+    {
+      "slug": "electrical-work-yerevan",
+      "hero": {
+        "src": "/images/ultra/electrical-hero.webp",
+        "alt": "Electrical conduits and closed distribution enclosure",
+        "caption": "AI-generated service illustration",
+        "type": "generated-concept",
+        "disclosure": "AI-generated service illustration",
+        "focalPoint": "50% 50%",
+        "mobileFocalPoint": "50% 50%",
+        "mobileSrc": "/images/ultra/electrical-hero-mobile.webp"
+      },
+      "card": {
+        "src": "/images/ultra/electrical-hero.webp",
+        "alt": "Electrical conduits and closed distribution enclosure",
+        "caption": "AI-generated service illustration",
+        "type": "generated-concept",
+        "disclosure": "AI-generated service illustration",
+        "focalPoint": "50% 50%",
+        "mobileFocalPoint": "50% 50%",
+        "mobileSrc": "/images/ultra/electrical-hero-mobile.webp"
+      },
+      "details": {
+        "src": "/images/services/electrical-work-yerevan-details.webp",
+        "alt": "Outlets and a switch beside a workspace",
+        "caption": "AI-generated service illustration",
+        "type": "generated-concept",
+        "disclosure": "AI-generated service illustration",
+        "focalPoint": "50% 50%",
+        "mobileFocalPoint": "50% 50%"
+      },
+      "process": [],
+      "quality": {
+        "src": "/images/services/electrical-work-yerevan-details.webp",
+        "alt": "Outlets and a switch beside a workspace",
+        "caption": "AI-generated service illustration",
+        "type": "generated-concept",
+        "disclosure": "AI-generated service illustration",
+        "focalPoint": "50% 50%",
+        "mobileFocalPoint": "50% 50%"
+      }
+    }
+  ]
+}

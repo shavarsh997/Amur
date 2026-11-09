@@ -1,0 +1,450 @@
+[
+  {
+    "file": "public/brand/shinex-logo.png",
+    "sha256": "2ab626f1417b05f4c92d5bc05e01067399356dee21a40cf77451732e9dd23aad",
+    "bytes": 383503,
+    "width": 1250,
+    "height": 380,
+    "format": "png"
+  },
+  {
+    "file": "public/brand/shinex-symbol.png",
+    "sha256": "fb25e52ad18b43c64d1bfe60f94e475c709d9004760ecb95546e82fbcafc5406",
+    "bytes": 432958,
+    "width": 720,
+    "height": 720,
+    "format": "png"
+  },
+  {
+    "file": "public/file.svg",
+    "sha256": "2b67812c325c199a02536cdbeea0c593a72f707d323b72ee3e08dbab06753bd4",
+    "bytes": 391,
+    "width": 16,
+    "height": 16,
+    "format": "svg"
+  },
+  {
+    "file": "public/globe.svg",
+    "sha256": "b614b9bf183925957661ac851498fe1d8029fd43a62fbfed86f9e2624a57e7cf",
+    "bytes": 1035,
+    "width": 16,
+    "height": 16,
+    "format": "svg"
+  },
+  {
+    "file": "public/illustrations/armenia-map-cutout.png",
+    "sha256": "03c24fc5f3aadd39de323be1b614ef0cda9c4f4ca4ea314e9373c82b7e3f9179",
+    "bytes": 28257,
+    "width": 900,
+    "height": 912,
+    "format": "png"
+  },
+  {
+    "file": "public/images/home/residential-construction-hero.webp",
+    "sha256": "eb5a273e1d0396821bd2c084d3cc792b593ce86efc868db7e47bb160e62a5a74",
+    "bytes": 270454,
+    "width": 1536,
+    "height": 1024,
+    "format": "webp"
+  },
+  {
+    "file": "public/images/services/apartment-interior-design-yerevan-details.webp",
+    "sha256": "2641574f40b9ec089e5ee6b231988f49d27083e881b817480427eae122bab6c3",
+    "bytes": 223014,
+    "width": 1536,
+    "height": 1024,
+    "format": "webp"
+  },
+  {
+    "file": "public/images/services/apartment-interior-design-yerevan-hero.webp",
+    "sha256": "65ddc8ae526a8b7da39864aa0e42988c6e5d810c918ae3ec86f182c0c418d568",
+    "bytes": 169024,
+    "width": 1536,
+    "height": 1024,
+    "format": "webp"
+  },
+  {
+    "file": "public/images/services/apartment-renovation-yerevan-details.webp",
+    "sha256": "8c05f94255b9a862794623c40e6519361ac652f2e2e51d1a46132011f9b28fff",
+    "bytes": 159538,
+    "width": 1536,
+    "height": 1024,
+    "format": "webp"
+  },
+  {
+    "file": "public/images/services/capital-renovation-yerevan-details.webp",
+    "sha256": "dae3ef2bffb04e2031d89ed48801e0cb5702c79f443e6f1adbcb7058e781c5ee",
+    "bytes": 241232,
+    "width": 1536,
+    "height": 1024,
+    "format": "webp"
+  },
+  {
+    "file": "public/images/services/capital-renovation-yerevan-hero.webp",
+    "sha256": "f85947529a3178a8bf6f163345f49b2bf03517502b2a55d7d3a9950abae8f381",
+    "bytes": 232458,
+    "width": 1536,
+    "height": 1024,
+    "format": "webp"
+  },
+  {
+    "file": "public/images/services/commercial-construction-details.webp",
+    "sha256": "12a91cec457464b12b0387d3e70875c6a6fb1b9a56e2ac8908995cd8e26874d4",
+    "bytes": 221880,
+    "width": 1536,
+    "height": 1024,
+    "format": "webp"
+  },
+  {
+    "file": "public/images/services/cosmetic-renovation-yerevan-details.webp",
+    "sha256": "dbc2e32a6b9b45f69e3172f24f32d89c2cadd7ca3eb2d84a8d1adca6d1c55028",
+    "bytes": 201566,
+    "width": 1536,
+    "height": 1024,
+    "format": "webp"
+  },
+  {
+    "file": "public/images/services/cosmetic-renovation-yerevan-hero.webp",
+    "sha256": "1d0976cd186b0bc2d82e708d29292b99d99af75e67a1b7e0983aeaa24317bb5d",
+    "bytes": 132422,
+    "width": 1536,
+    "height": 1024,
+    "format": "webp"
+  },
+  {
+    "file": "public/images/services/design-details.webp",
+    "sha256": "454548137ead901b4dfa3bee6d7083934ccf538f1a075c67ed30b29d6f92433b",
+    "bytes": 119214,
+    "width": 1536,
+    "height": 1024,
+    "format": "webp"
+  },
+  {
+    "file": "public/images/services/electrical-work-yerevan-details.webp",
+    "sha256": "3a1d411ae7d02d5e5c95b3a9f1ddb0477c0f937594d38152f3ef830aa36ad7ac",
+    "bytes": 151014,
+    "width": 1536,
+    "height": 1024,
+    "format": "webp"
+  },
+  {
+    "file": "public/images/services/electrical-work-yerevan-hero.webp",
+    "sha256": "acabaccc96f8291b68494f9f5e9ce3038ff7b1b57d17588bf567af1a2a1e4464",
+    "bytes": 132900,
+    "width": 1536,
+    "height": 1024,
+    "format": "webp"
+  },
+  {
+    "file": "public/images/services/facade-and-roofing-details.webp",
+    "sha256": "f0ddebd3b399ad8306641bd159c3dd95717c03b94cacde30dc5598ab889aa0fe",
+    "bytes": 200724,
+    "width": 1536,
+    "height": 1024,
+    "format": "webp"
+  },
+  {
+    "file": "public/images/services/facade-and-roofing-hero.webp",
+    "sha256": "009fd9946098832e063f6c7135c8539ee5bfec8e002de309523effcadf14063f",
+    "bytes": 305644,
+    "width": 1536,
+    "height": 1024,
+    "format": "webp"
+  },
+  {
+    "file": "public/images/services/house-construction-details.webp",
+    "sha256": "ea7cc8b795d2795f0cd2e1382ccd57a91a8d849833538660e9dd3c81894263d3",
+    "bytes": 339124,
+    "width": 1536,
+    "height": 1024,
+    "format": "webp"
+  },
+  {
+    "file": "public/images/services/interior-design-details.webp",
+    "sha256": "679c7ec71ae91b447514bc5a5f83917239bff41be9b0dcec819df6ac306ee002",
+    "bytes": 321538,
+    "width": 1536,
+    "height": 1024,
+    "format": "webp"
+  },
+  {
+    "file": "public/images/services/monolithic-work-details.webp",
+    "sha256": "cf2a690c004a876669c6473c5ef0330aaa38c13f55d27c6ac40abbd4c842d4a6",
+    "bytes": 378216,
+    "width": 1536,
+    "height": 1024,
+    "format": "webp"
+  },
+  {
+    "file": "public/images/services/new-build-renovation-details.webp",
+    "sha256": "177a62b1b4993b95d84a46e7a184c12d8301846e54c2b24221411594b9f870e0",
+    "bytes": 166932,
+    "width": 1536,
+    "height": 1024,
+    "format": "webp"
+  },
+  {
+    "file": "public/images/services/new-build-renovation-hero.webp",
+    "sha256": "d560411dc8711d2b18dd3cba83d08246b337c193e5751bdfff02c0ad627c3a66",
+    "bytes": 224586,
+    "width": 1536,
+    "height": 1024,
+    "format": "webp"
+  },
+  {
+    "file": "public/images/services/office-renovation-yerevan-details.webp",
+    "sha256": "0f3f0611a9fbf64a4b76bc07013abbe296666dbe03f815a2a80d7b353171b80b",
+    "bytes": 221864,
+    "width": 1536,
+    "height": 1024,
+    "format": "webp"
+  },
+  {
+    "file": "public/images/services/office-renovation-yerevan-hero.webp",
+    "sha256": "264eea764d5cffe5f771ae122dce28277c5a19f60c90acd22d5a8872d6e39c86",
+    "bytes": 186094,
+    "width": 1536,
+    "height": 1024,
+    "format": "webp"
+  },
+  {
+    "file": "public/images/services/plumbing-work-yerevan-details.webp",
+    "sha256": "f03e10344960a9b08a0dc10787b9c1522bfac583a8ae42805a4be27b7af427eb",
+    "bytes": 75792,
+    "width": 1536,
+    "height": 1024,
+    "format": "webp"
+  },
+  {
+    "file": "public/images/services/plumbing-work-yerevan-hero.webp",
+    "sha256": "b81947fd419326bd6d57a30cf90d92937d421286002a076bef7396f3d791c686",
+    "bytes": 155238,
+    "width": 1536,
+    "height": 1024,
+    "format": "webp"
+  },
+  {
+    "file": "public/images/services/renovation-details.webp",
+    "sha256": "94fa48d9e01d39840a1dec3dbd16a86e8aaf970d99b958d961d7f9df75860420",
+    "bytes": 270784,
+    "width": 1536,
+    "height": 1024,
+    "format": "webp"
+  },
+  {
+    "file": "public/images/services/renovation-hero.webp",
+    "sha256": "3f42b1bb25f0f44d32831747ee95b0b82f2afeb4e1efef46178ac90f3bbaaa95",
+    "bytes": 390620,
+    "width": 1536,
+    "height": 1024,
+    "format": "webp"
+  },
+  {
+    "file": "public/images/services/turnkey-renovation-details.webp",
+    "sha256": "902c764295bfa03cd041891e0dd27785fa1ae4660e74f520a7f8d48764d44416",
+    "bytes": 174090,
+    "width": 1536,
+    "height": 1024,
+    "format": "webp"
+  },
+  {
+    "file": "public/images/services/turnkey-renovation-hero.webp",
+    "sha256": "eda0b0e0455d368a62a98571b9c6186fc74512bd7d8d1aad27767cdcc5c77246",
+    "bytes": 140270,
+    "width": 1536,
+    "height": 1024,
+    "format": "webp"
+  },
+  {
+    "file": "public/images/ultra/apartment-hero-mobile.webp",
+    "sha256": "7b39541a1e27f74b236436a47a4a022dd7e2e597cdbb40f1400e42d84fcf7e2d",
+    "bytes": 54354,
+    "width": 768,
+    "height": 960,
+    "format": "webp"
+  },
+  {
+    "file": "public/images/ultra/apartment-hero.webp",
+    "sha256": "461afe555ad16e6e256ca4b56222f918ff1b1d06cc37569593bb1938c0366270",
+    "bytes": 171646,
+    "width": 1536,
+    "height": 1024,
+    "format": "webp"
+  },
+  {
+    "file": "public/images/ultra/commercial-hero-mobile.webp",
+    "sha256": "45bf05b32d85cde940193a1f9b98e4e62b5a5c0544fc7d93e7c51a1a5569c281",
+    "bytes": 34546,
+    "width": 768,
+    "height": 960,
+    "format": "webp"
+  },
+  {
+    "file": "public/images/ultra/commercial-hero.webp",
+    "sha256": "9e549ac8c3ffb1603b9fb52561d660a26acd02b9d0bb2b6c96bdb2eb35566d24",
+    "bytes": 141970,
+    "width": 1536,
+    "height": 1024,
+    "format": "webp"
+  },
+  {
+    "file": "public/images/ultra/concrete-pour.webp",
+    "sha256": "90111a78ba95921534884ee3aaebd05fe8515398c007b12ff5510e6495161502",
+    "bytes": 228778,
+    "width": 1536,
+    "height": 1024,
+    "format": "webp"
+  },
+  {
+    "file": "public/images/ultra/design-hero-mobile.webp",
+    "sha256": "78b3d979d37bba3a4b9b60b54413e3f843fcf2334167bb6272c018781696386e",
+    "bytes": 43816,
+    "width": 768,
+    "height": 960,
+    "format": "webp"
+  },
+  {
+    "file": "public/images/ultra/design-hero.webp",
+    "sha256": "b5b3ba10d466209fd5e4128ce6fc5c6b729a40c82c25a49b34d8b0edb77a37cb",
+    "bytes": 130022,
+    "width": 1536,
+    "height": 1024,
+    "format": "webp"
+  },
+  {
+    "file": "public/images/ultra/electrical-hero-mobile.webp",
+    "sha256": "ef6468d2ff68ad7f20b85a4c078f78468473f69770b906acbb4fa1339336126c",
+    "bytes": 63148,
+    "width": 768,
+    "height": 960,
+    "format": "webp"
+  },
+  {
+    "file": "public/images/ultra/electrical-hero.webp",
+    "sha256": "3bac1d886af374dde5782e2c97a00f7330b250fb798721b150a0040259cc8b45",
+    "bytes": 175602,
+    "width": 1536,
+    "height": 1024,
+    "format": "webp"
+  },
+  {
+    "file": "public/images/ultra/facade-installation.webp",
+    "sha256": "0a904ab5b24033ed542ea4589868b42392a492c21872b7b18b2c22ce072b23fe",
+    "bytes": 218118,
+    "width": 1536,
+    "height": 1024,
+    "format": "webp"
+  },
+  {
+    "file": "public/images/ultra/formwork.webp",
+    "sha256": "afe23718717a60f2e7025a4e88ff7b36f721b438b873d6bf4d6a03d7be040b5e",
+    "bytes": 189068,
+    "width": 1536,
+    "height": 1024,
+    "format": "webp"
+  },
+  {
+    "file": "public/images/ultra/geometry-control.webp",
+    "sha256": "eafc2588ad86a2a8467c93aea4b80501da68b3d9848ec3a1a7f578cea3bcb307",
+    "bytes": 120468,
+    "width": 1536,
+    "height": 1024,
+    "format": "webp"
+  },
+  {
+    "file": "public/images/ultra/home-dusk-mobile.webp",
+    "sha256": "d99647e51db91919d6fa9a9fa8bc874961db6647ba9f96f6793c34dcee60d495",
+    "bytes": 63542,
+    "width": 1000,
+    "height": 750,
+    "format": "webp"
+  },
+  {
+    "file": "public/images/ultra/home-dusk.webp",
+    "sha256": "1a0f30edab6e7e69a159acaffa1832c77b656a2d57e01262a0071f0ee90b7145",
+    "bytes": 141264,
+    "width": 1672,
+    "height": 941,
+    "format": "webp"
+  },
+  {
+    "file": "public/images/ultra/house-hero-mobile.webp",
+    "sha256": "3ee011b6782dd6b5ea0347c3a368afbb51ccea2bf570225a5ce98862c3ee6410",
+    "bytes": 81462,
+    "width": 1000,
+    "height": 750,
+    "format": "webp"
+  },
+  {
+    "file": "public/images/ultra/house-hero.webp",
+    "sha256": "e68c785dbbfcbf0ea8a7fc143c78fa6246d970776f4a7bb6b85d35477db53090",
+    "bytes": 228762,
+    "width": 1536,
+    "height": 1024,
+    "format": "webp"
+  },
+  {
+    "file": "public/images/ultra/interior-hero-mobile.webp",
+    "sha256": "8b319d1debf6009b182b2f0a6c218f6a176d51355ff6109db47eac7c59b804a0",
+    "bytes": 44844,
+    "width": 768,
+    "height": 960,
+    "format": "webp"
+  },
+  {
+    "file": "public/images/ultra/interior-hero.webp",
+    "sha256": "dde9f87c53ea7ba8a9dc0fb907a5710c575ed361505fe67982bbb7bd0b7a500d",
+    "bytes": 185752,
+    "width": 1536,
+    "height": 1024,
+    "format": "webp"
+  },
+  {
+    "file": "public/images/ultra/monolithic-hero-mobile.webp",
+    "sha256": "e4e9eaa6f77c4b43472a43309ccd6b6b7224c5f3c08c21aef04c1efaba4dc3c4",
+    "bytes": 77838,
+    "width": 768,
+    "height": 960,
+    "format": "webp"
+  },
+  {
+    "file": "public/images/ultra/monolithic-hero.webp",
+    "sha256": "bba351b5f9c8a83e00d2f26a8203b2a7b14303ea935f6b3a9226e240d2233a89",
+    "bytes": 225838,
+    "width": 1536,
+    "height": 1024,
+    "format": "webp"
+  },
+  {
+    "file": "public/images/ultra/slab-preparation.webp",
+    "sha256": "c7e7477ea031f86f964ec5b44132ba2bb035711a490ded1649b54c024bfb3755",
+    "bytes": 275674,
+    "width": 1536,
+    "height": 1024,
+    "format": "webp"
+  },
+  {
+    "file": "public/next.svg",
+    "sha256": "55995dfad6ecb4945a1e856ddca03c5e16aa5bf13fd21b4df6a74ae79357bcfc",
+    "bytes": 1375,
+    "width": 394,
+    "height": 80,
+    "format": "svg"
+  },
+  {
+    "file": "public/vercel.svg",
+    "sha256": "f081337b2fee635b455b63275406a3e7f39d6a014e25ad90dab5a67e62a12ac4",
+    "bytes": 128,
+    "width": 1155,
+    "height": 1000,
+    "format": "svg"
+  },
+  {
+    "file": "public/window.svg",
+    "sha256": "644768c4aaeb4767bce293344eeb0c125fb804a94d801440424072202d85e3a1",
+    "bytes": 385,
+    "width": 16,
+    "height": 16,
+    "format": "svg"
+  }
+]

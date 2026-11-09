@@ -16,6 +16,7 @@ import {
   ServiceDetails,
   ServiceWorkGrid,
   ServiceProcess,
+  ServiceProcessGallery,
   ServicePricing,
   ServiceFAQ,
   ServiceCTA,
@@ -189,6 +190,11 @@ export function ServiceLandingContent({
         </ServiceSection>
       )}
       <ServiceQuality dictionary={dictionary} />
+      {media.process.length ? (
+        <Container className="pb-section">
+          <ServiceProcessGallery images={media.process} />
+        </Container>
+      ) : null}
       {pricing ? (
         <ServicePricing
           title={pricing.title}

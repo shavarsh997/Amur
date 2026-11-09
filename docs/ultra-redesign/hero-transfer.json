@@ -1,0 +1,41 @@
+{
+  "method": "Production Next image optimizer, AVIF negotiation. Representative candidates derived from sizes at 1440px/390px DPR 1; old desktop hero occupied 54vw, current hero occupies 100vw. Not a Core Web Vitals measurement.",
+  "results": [
+    {
+      "name": "previous-desktop",
+      "src": "/images/home/residential-construction-hero.webp",
+      "width": 828,
+      "quality": 82,
+      "status": 200,
+      "format": "image/avif",
+      "bytes": 77121
+    },
+    {
+      "name": "current-desktop",
+      "src": "/images/ultra/home-dusk.webp",
+      "width": 1920,
+      "quality": 75,
+      "status": 200,
+      "format": "image/avif",
+      "bytes": 88955
+    },
+    {
+      "name": "previous-mobile",
+      "src": "/images/home/residential-construction-hero.webp",
+      "width": 640,
+      "quality": 82,
+      "status": 200,
+      "format": "image/avif",
+      "bytes": 46347
+    },
+    {
+      "name": "current-mobile",
+      "src": "/images/ultra/home-dusk-mobile.webp",
+      "width": 640,
+      "quality": 75,
+      "status": 200,
+      "format": "image/avif",
+      "bytes": 19912
+    }
+  ]
+}

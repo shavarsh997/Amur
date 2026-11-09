@@ -43,6 +43,13 @@ const { servicePlanningTranslations, getServicePlanning } = load(
   "messages/service-planning"
 );
 const { serviceMedia, getServiceMedia } = load("config/service-media.config");
+const { imageDisclosure } = load("config/image-disclosure.config");
+for (const locale of locales) {
+  assert(
+    imageDisclosure[locale]?.trim(),
+    `Missing site-wide illustration disclosure: ${locale}`
+  );
+}
 const { serviceSectionRoles } = load("config/service-presentation.config");
 const { blogArticles } = load("data/blog");
 const { serviceGuideGroups, serviceGuidesDescription } = load(
@@ -148,19 +155,15 @@ for (const slug of publishedServiceSlugs) {
     for (const locale of locales) {
       const image = getServiceMedia(slug, locale)[slot];
       assert(image.alt.trim(), `Missing image alt: ${slug}/${slot}/${locale}`);
-      assert(
-        image.caption.trim(),
-        `Missing caption: ${slug}/${slot}/${locale}`
-      );
       if (asset.generated) {
         assert(
           asset.alt[locale]?.trim(),
           `Untranslated image: ${slug}/${slot}/${locale}`
         );
-        assert.notEqual(
-          image.caption,
-          image.alt,
-          `Missing illustration disclosure: ${slug}/${slot}/${locale}`
+        assert.equal(
+          image.type,
+          "generated-concept",
+          `Missing illustration provenance: ${slug}/${slot}/${locale}`
         );
       }
     }
@@ -852,6 +855,7 @@ if (baseIndex !== -1) {
       ])
     ),
     pageExpectations,
+    imageDisclosure,
   });
   const reportIndex = process.argv.indexOf("--report");
   if (reportIndex !== -1) {

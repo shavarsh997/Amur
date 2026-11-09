@@ -1,0 +1,21 @@
+{
+  "home": 50,
+  "services": 5,
+  "about": 5,
+  "services/renovation": 10,
+  "services/house-construction": 35,
+  "services/interior-design": 10,
+  "services/commercial-construction": 10,
+  "services/design": 10,
+  "services/monolithic-work": 35,
+  "services/facade-and-roofing": 10,
+  "services/apartment-renovation-yerevan": 25,
+  "services/new-build-renovation": 10,
+  "services/turnkey-renovation": 10,
+  "services/apartment-interior-design-yerevan": 10,
+  "services/office-renovation-yerevan": 10,
+  "services/capital-renovation-yerevan": 10,
+  "services/cosmetic-renovation-yerevan": 10,
+  "services/plumbing-work-yerevan": 10,
+  "services/electrical-work-yerevan": 10
+}

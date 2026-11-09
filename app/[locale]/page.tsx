@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 
 import { FAQSection } from "@/components/sections/faq";
 import { FinalCta } from "@/components/sections/final-cta";
+import { CompanyIntroduction } from "@/components/sections/company-introduction";
 import { Hero } from "@/components/sections/hero";
 import { RenovationIncluded } from "@/components/sections/renovation-included";
 import { ServiceArea } from "@/components/sections/service-area";
@@ -46,10 +47,10 @@ export default async function LocaleHome({ params }: Props) {
         type="WebPage"
       />
       <Hero dictionary={dictionary} locale={locale} />
-      {/* <EstimateSection dictionary={dictionary} locale={locale} /> */}
+      <CompanyIntroduction dictionary={dictionary} locale={locale} />
       <ServicesSection dictionary={dictionary} locale={locale} />
       <RenovationIncluded locale={locale} />
-      <WorkProcess dictionary={dictionary} />
+      <WorkProcess dictionary={dictionary} locale={locale} />
       <WhyUs dictionary={dictionary} locale={locale} />
       <SpecializedServices dictionary={dictionary} locale={locale} />
       <ServiceArea locale={locale} />

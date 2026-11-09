@@ -1,0 +1,34 @@
+{
+  "sourceFiles": 169,
+  "technicalMatches": [],
+  "cssContent": [
+    {
+      "file": "app/globals.css",
+      "value": "\"\""
+    },
+    {
+      "file": "components/layout/premium-layout.css",
+      "value": "\"\""
+    },
+    {
+      "file": "components/layout/premium-layout.css",
+      "value": "\"\""
+    },
+    {
+      "file": "components/layout/premium-layout.css",
+      "value": "\"\""
+    },
+    {
+      "file": "components/sections/editorial.module.css",
+      "value": "\"\""
+    },
+    {
+      "file": "components/services/service-page.module.css",
+      "value": "\"\""
+    },
+    {
+      "file": "components/services/service-page.module.css",
+      "value": "\"\""
+    }
+  ]
+}

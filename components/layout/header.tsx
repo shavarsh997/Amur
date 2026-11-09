@@ -50,7 +50,7 @@ export function Header({ locale, dictionary }: HeaderProps) {
           className="inline-flex shrink-0 rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--brand-copper)]"
           href={prefix}
         >
-          <BrandMark className=" h-9 w-auto" preload />
+          <BrandMark className="header-brand h-9 w-auto" preload />
         </Link>
 
         <nav

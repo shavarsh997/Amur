@@ -1,39 +1,47 @@
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { operationsConfig } from "@/config/operations.config";
-import type { Dictionary } from "@/types";
+import { ArchitecturalImage } from "@/components/ui/architectural-image";
+import { getServiceMedia } from "@/config/service-media.config";
+import styles from "./editorial.module.css";
+import type { Dictionary, Locale } from "@/types";
 
-export function WorkProcess({ dictionary }: { dictionary: Dictionary }) {
+export function WorkProcess({
+  dictionary,
+  locale,
+}: {
+  dictionary: Dictionary;
+  locale: Locale;
+}) {
+  const image = getServiceMedia("monolithic-work", locale).hero;
   return (
-    <section className="bg-[var(--brand-navy)] py-section text-white">
-      <Container>
-        <SectionHeading
-          description={dictionary.process.description}
-          eyebrow={dictionary.process.eyebrow}
-          inverted
-          title={dictionary.process.title}
-        />
-        <ol className="content-process relative mt-8 grid gap-x-0 gap-y-0 before:absolute before:bottom-4 before:left-4 before:top-4 before:w-px before:bg-white/20 md:grid-cols-2 md:gap-y-7 md:before:hidden lg:grid-cols-3">
+    <section className={styles.process}>
+      <Container className={styles.processGrid}>
+        <div className={styles.processIntro}>
+          <SectionHeading
+            description={dictionary.process.description}
+            eyebrow={dictionary.process.eyebrow}
+            inverted
+            title={dictionary.process.title}
+          />
+          <figure className={styles.processImage}>
+            <ArchitecturalImage
+              image={image}
+              sizes="(max-width: 767px) 100vw, 45vw"
+            />
+          </figure>
+        </div>
+        <ol className={styles.processSteps}>
           {operationsConfig.workflow.map((workflowKey, index) => {
             const step = dictionary.process.steps[index];
             if (!step) return null;
 
             return (
-              <li
-                className="motion-process-step relative grid grid-cols-[2rem_1fr] gap-x-3 py-4 first:pt-0 last:pb-0 md:block md:border-t md:border-white/20 md:pt-5 md:first:pt-5 lg:pr-8"
-                data-motion="process"
-                key={workflowKey}
-              >
-                <span className="relative z-10 inline-flex size-8 items-center justify-center text-sm font-bold text-[var(--brand-copper-on-dark)]">
-                  {step.number}
-                </span>
+              <li key={workflowKey}>
+                <span aria-hidden="true">{step.number}</span>
                 <div>
-                  <h3 className="text-base font-semibold tracking-[-0.02em] text-white md:mt-4 md:text-lg">
-                    {step.title}
-                  </h3>
-                  <p className="mt-1 text-sm leading-6 text-white/70 md:mt-2 md:text-base md:leading-7">
-                    {step.description}
-                  </p>
+                  <h3>{step.title}</h3>
+                  <p>{step.description}</p>
                 </div>
               </li>
             );

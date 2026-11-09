@@ -5,14 +5,9 @@ type ServiceAsset = {
   src: string;
   alt?: Record<Locale, string>;
   generated?: boolean;
-};
-
-export const generatedCaption: Record<Locale, string> = {
-  ru: "Иллюстрация услуги, созданная с ИИ",
-  en: "AI-generated service illustration",
-  hy: "ԱԲ-ով ստեղծված ծառայության պատկեր",
-  de: "KI-generierte Illustration der Leistung",
-  fr: "Illustration du service générée par IA",
+  focalPoint?: string;
+  mobileFocalPoint?: string;
+  mobileSrc?: string;
 };
 
 function generated(
@@ -24,15 +19,9 @@ function generated(
   fr: string
 ): ServiceAsset {
   return {
-    src: `/images/services/${name}.webp`,
+    src: `/images/${name.includes("/") ? name : `services/${name}`}.webp`,
     generated: true,
     alt: { ru, en, hy, de, fr },
-  };
-}
-
-function stock(photo: string): ServiceAsset {
-  return {
-    src: `https://images.unsplash.com/${photo}?auto=format&fit=crop&w=1600&q=85`,
   };
 }
 
@@ -63,7 +52,14 @@ export const serviceMedia: Record<
     ),
   },
   "house-construction": {
-    hero: stock("photo-1600585154340-be6161a56a0c"),
+    hero: generated(
+      "ultra/house-hero",
+      "Двухэтажный дом в процессе строительства",
+      "Two-story house under construction",
+      "Կառուցվող երկհարկ առանձնատուն",
+      "Zweigeschossiges Haus im Bau",
+      "Maison de deux niveaux en construction"
+    ),
     details: generated(
       "house-construction-details",
       "Возведение стен и конструкций частного дома",
@@ -74,7 +70,14 @@ export const serviceMedia: Record<
     ),
   },
   "interior-design": {
-    hero: stock("photo-1616486338812-3dadae4b4ace"),
+    hero: generated(
+      "ultra/interior-hero",
+      "Материалы и план современного интерьера",
+      "Materials and plans for a contemporary interior",
+      "Ժամանակակից ինտերիերի նյութեր և հատակագիծ",
+      "Materialien und Grundriss für einen modernen Innenraum",
+      "Matériaux et plan d’un intérieur contemporain"
+    ),
     details: generated(
       "interior-design-details",
       "План интерьера и образцы отделочных материалов",
@@ -85,7 +88,14 @@ export const serviceMedia: Record<
     ),
   },
   "commercial-construction": {
-    hero: stock("photo-1556761175-b413da4baf72"),
+    hero: generated(
+      "ultra/commercial-hero",
+      "Деловое пространство с бетонными колоннами и стеклянными перегородками",
+      "Business interior with concrete columns and glass partitions",
+      "Բիզնես տարածք՝ բետոնե սյուներով և ապակե միջնապատերով",
+      "Geschäftsraum mit Betonsäulen und Glastrennwänden",
+      "Espace professionnel avec colonnes en béton et cloisons vitrées"
+    ),
     details: generated(
       "commercial-construction-details",
       "Обустройство торгового пространства",
@@ -96,7 +106,14 @@ export const serviceMedia: Record<
     ),
   },
   design: {
-    hero: stock("photo-1503387762-592deb58ef4e"),
+    hero: generated(
+      "ultra/design-hero",
+      "Архитектурный макет, чертежи и образцы материалов",
+      "Architectural model, drawings and material samples",
+      "Ճարտարապետական մակետ, գծագրեր և նյութերի նմուշներ",
+      "Architekturmodell, Zeichnungen und Materialmuster",
+      "Maquette architecturale, plans et échantillons de matériaux"
+    ),
     details: generated(
       "design-details",
       "Архитектурный макет дома и участка",
@@ -107,7 +124,14 @@ export const serviceMedia: Record<
     ),
   },
   "monolithic-work": {
-    hero: stock("photo-1504307651254-35680f356dfd"),
+    hero: generated(
+      "ultra/monolithic-hero",
+      "Железобетонный каркас и опалубка перекрытия",
+      "Reinforced concrete frame and slab formwork",
+      "Երկաթբետոնե հիմնակմախք և ծածկի կաղապար",
+      "Stahlbetontragwerk und Deckenschalung",
+      "Ossature en béton armé et coffrage de dalle"
+    ),
     details: generated(
       "monolithic-work-details",
       "Армирование и опалубка железобетонной конструкции",
@@ -136,7 +160,14 @@ export const serviceMedia: Record<
     ),
   },
   "apartment-renovation-yerevan": {
-    hero: stock("photo-1600210492486-724fe5c67fb0"),
+    hero: generated(
+      "ultra/apartment-hero",
+      "Интерьер квартиры с каменной отделкой и дубовыми панелями",
+      "Apartment interior with stone finishes and oak panels",
+      "Բնակարանի ինտերիեր՝ քարե հարդարմամբ և կաղնու պանելներով",
+      "Wohnungsinterieur mit Steinoberflächen und Eichenpaneelen",
+      "Intérieur d’appartement avec pierre et panneaux de chêne"
+    ),
     details: generated(
       "apartment-renovation-yerevan-details",
       "Подготовка и укладка плитки при ремонте квартиры",
@@ -147,7 +178,7 @@ export const serviceMedia: Record<
     ),
   },
   "new-build-renovation": {
-    hero: generated(
+    details: generated(
       "new-build-renovation-hero",
       "Гостиная в новой квартире с готовой отделкой",
       "Finished living room in a new apartment",
@@ -155,7 +186,7 @@ export const serviceMedia: Record<
       "Fertig ausgebautes Wohnzimmer in einer Neubauwohnung",
       "Salon aménagé dans un appartement neuf"
     ),
-    details: generated(
+    hero: generated(
       "new-build-renovation-details",
       "Квартира в новостройке до начала отделки",
       "New-build apartment before finishing work",
@@ -274,12 +305,12 @@ export const serviceMedia: Record<
   },
   "electrical-work-yerevan": {
     hero: generated(
-      "electrical-work-yerevan-hero",
-      "Кабельные трассы и подрозетники до отделки",
-      "Cable routes and outlet boxes before finishing",
-      "Մալուխային ուղիներ և վարդակների տուփեր՝ մինչև հարդարումը",
-      "Kabelwege und Steckdosendosen vor dem Ausbau",
-      "Cheminements de câbles et boîtiers avant les finitions"
+      "ultra/electrical-hero",
+      "Электрические трубы и закрытый распределительный щит",
+      "Electrical conduits and closed distribution enclosure",
+      "Էլեկտրական խողովակներ և փակ բաշխիչ վահանակ",
+      "Elektroinstallationsrohre und geschlossener Verteilerkasten",
+      "Conduits électriques et coffret de distribution fermé"
     ),
     details: generated(
       "electrical-work-yerevan-details",
@@ -292,18 +323,112 @@ export const serviceMedia: Record<
   },
 };
 
+const processAssets = {
+  formwork: generated(
+    "ultra/formwork",
+    "Монтаж опалубки",
+    "Formwork installation",
+    "Կաղապարի տեղադրում",
+    "Montage der Schalung",
+    "Installation du coffrage"
+  ),
+  preparation: generated(
+    "ultra/slab-preparation",
+    "Подготовка фундаментной плиты к бетонированию",
+    "Foundation slab prepared for concrete",
+    "Հիմնային սալի նախապատրաստում բետոնացմանը",
+    "Fundamentplatte vor dem Betonieren",
+    "Préparation du radier avant bétonnage"
+  ),
+  pouring: generated(
+    "ultra/concrete-pour",
+    "Бетонирование фундамента",
+    "Foundation concrete placement",
+    "Հիմքի բետոնացում",
+    "Betonieren des Fundaments",
+    "Bétonnage des fondations"
+  ),
+  quality: generated(
+    "ultra/geometry-control",
+    "Геодезический инструмент для контроля геометрии",
+    "Surveying instrument for geometry checks",
+    "Գեոդեզիական գործիք՝ երկրաչափության ստուգման համար",
+    "Vermessungsgerät zur Geometriekontrolle",
+    "Instrument de mesure pour le contrôle géométrique"
+  ),
+  facade: generated(
+    "ultra/facade-installation",
+    "Монтаж каменной облицовки фасада",
+    "Stone facade installation",
+    "Ճակատի քարե երեսպատման տեղադրում",
+    "Montage der Steinfassade",
+    "Pose d’un parement de façade en pierre"
+  ),
+};
+
+function localize(asset: ServiceAsset, locale: Locale) {
+  const alt = asset.alt?.[locale] ?? getServiceImageAlt(asset.src, locale);
+  const isNewHero =
+    asset.src.startsWith("/images/ultra/") && asset.src.endsWith("-hero.webp");
+  return {
+    src: asset.src,
+    alt,
+    type: asset.generated
+      ? ("generated-concept" as const)
+      : ("licensed-illustration" as const),
+    focalPoint: asset.focalPoint ?? "50% 50%",
+    mobileFocalPoint: asset.mobileFocalPoint ?? "50% 50%",
+    mobileSrc:
+      asset.mobileSrc ??
+      (isNewHero ? asset.src.replace(".webp", "-mobile.webp") : undefined),
+  };
+}
+
 export function getServiceMedia(slug: string, locale: Locale) {
   const media = Object.hasOwn(serviceMedia, slug)
     ? serviceMedia[slug]
     : undefined;
   if (!media) throw new Error(`Missing service media: ${slug}`);
-  const localize = (asset: ServiceAsset) => {
-    const alt = asset.alt?.[locale] ?? getServiceImageAlt(asset.src, locale);
-    return {
-      src: asset.src,
-      alt,
-      caption: asset.generated ? generatedCaption[locale] : alt,
-    };
+  const processes: ServiceAsset[] =
+    slug === "monolithic-work"
+      ? [
+          media.details,
+          processAssets.formwork,
+          processAssets.preparation,
+          processAssets.pouring,
+          processAssets.quality,
+        ]
+      : slug === "house-construction"
+        ? [
+            processAssets.preparation,
+            media.details,
+            serviceMedia["facade-and-roofing"].details,
+            processAssets.facade,
+            serviceMedia["facade-and-roofing"].hero,
+          ]
+        : slug === "apartment-renovation-yerevan"
+          ? [
+              media.details,
+              serviceMedia["turnkey-renovation"].details,
+              serviceMedia["electrical-work-yerevan"].details,
+            ]
+          : [];
+  return {
+    hero: {
+      ...localize(media.hero, locale),
+      sizes: slug === "monolithic-work" ? "100vw" : undefined,
+    },
+    card: localize(
+      slug === "interior-design"
+        ? serviceMedia["apartment-interior-design-yerevan"].hero
+        : media.hero,
+      locale
+    ),
+    details: localize(media.details, locale),
+    process: processes.map((asset) => localize(asset, locale)),
+    quality: localize(
+      slug === "monolithic-work" ? processAssets.quality : media.details,
+      locale
+    ),
   };
-  return { hero: localize(media.hero), details: localize(media.details) };
 }

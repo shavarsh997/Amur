@@ -8,7 +8,7 @@
   overflow-wrap: anywhere;
 }
 .page h2 {
-  font-size: clamp(1.75rem, 2.8vw, 2.6rem);
+  font-size: clamp(1.625rem, 2.8vw, 2.6rem);
   line-height: 1.12;
   letter-spacing: -0.045em;
 }
@@ -39,6 +39,7 @@
   background: var(--background-soft);
 }
 .heroCopy {
+  container-type: inline-size;
   padding: var(--section-gap) var(--panel-space) var(--section-gap)
     max(
       var(--container-gutter),
@@ -65,7 +66,7 @@
 }
 .hero h1 {
   max-width: 13em;
-  font-size: clamp(2.2rem, 4.1vw, 4.2rem);
+  font-size: clamp(1.75rem, 8.5cqi, 4.2rem);
   line-height: 1.12;
   letter-spacing: -0.055em;
 }
@@ -108,20 +109,6 @@
 }
 .photo {
   object-fit: cover;
-}
-.heroPhoto figcaption,
-.detailPhoto figcaption {
-  position: absolute;
-  inset: auto 0 0;
-  padding: calc(var(--spacing) * 6) calc(var(--spacing) * 6)
-    calc(var(--spacing) * 4);
-  background: linear-gradient(transparent, rgb(0 0 0 / 0.58));
-  color: white;
-  font-size: 11px;
-  line-height: 1.5;
-}
-.heroPhoto figcaption {
-  text-align: right;
 }
 .section {
   padding-block: var(--section-space);
@@ -662,15 +649,8 @@ p + .facts {
   }
 }
 
-@media (min-width: 768px) and (max-width: 1100px) {
-  .hero h1 {
-    font-size: clamp(2.15rem, 4.25vw, 3.2rem);
-  }
-}
-
 @media (max-width: 767px) {
   .hero h1 {
-    font-size: clamp(2.15rem, 7vw, 3.2rem);
     max-width: 16em;
   }
 }
@@ -759,7 +739,7 @@ p + .facts {
   pointer-events: none;
 }
 .hero h1:lang(hy) {
-  font-size: clamp(2rem, 3.5vw, 3.6rem);
+  font-size: clamp(1.6rem, 8.5cqi, 3.6rem);
   letter-spacing: -0.015em;
   line-height: 1.28;
 }
@@ -850,7 +830,230 @@ p + .facts {
     left: -3px;
     top: 0;
   }
-  .hero h1:lang(hy) {
-    font-size: clamp(2rem, 5.3vw, 3.5rem);
+}
+
+/* Material-led compositions share readable, content-sized typography. */
+.page {
+  --service-accent: #796044;
+  --service-tint: #eeebe5;
+}
+.page[data-service-visual="engineering"] {
+  --service-accent: #65716b;
+  --service-tint: #e5e6e1;
+}
+.page[data-service-visual="commercial"] {
+  --service-accent: #596970;
+  --service-tint: #e4e7e6;
+}
+.page[data-service-visual="architecture"] {
+  --service-accent: #796044;
+  --service-tint: #e5e1da;
+}
+.hero {
+  grid-template-columns: 43% 57%;
+}
+.heroPhoto {
+  min-height: 650px;
+}
+.heroPhoto::after {
+  display: none;
+}
+.page[data-service-visual="engineering"] .hero,
+.page[data-service-visual="commercial"] .hero {
+  background: var(--dark-secondary);
+}
+.page[data-service-visual="architecture"] .hero {
+  background: var(--brand-surface-warm);
+}
+.page[data-service-visual="interior"] .hero {
+  background: var(--brand-background);
+}
+.page[data-service-visual="engineering"] .heroCopy {
+  background-image: none;
+}
+.page:is(
+    [data-service-visual="engineering"],
+    [data-service-visual="commercial"]
+  )
+  .hero
+  :global(.action-button--primary) {
+  background: var(--text-on-dark);
+  color: var(--brand-navy);
+}
+.page:is(
+    [data-service-visual="engineering"],
+    [data-service-visual="commercial"]
+  )
+  .hero
+  :global(.action-button--secondary) {
+  background: transparent;
+  color: var(--text-on-dark);
+  border-color: #8a9191;
+}
+.page[data-service-slug="monolithic-work"] .hero {
+  position: relative;
+  isolation: isolate;
+  max-width: none;
+  min-height: min(56rem, 85svh);
+  grid-template-columns: minmax(0, 1fr);
+}
+.page[data-service-slug="monolithic-work"] .heroCopy {
+  z-index: 1;
+  width: min(100%, 90rem);
+  margin-inline: auto;
+  padding-left: var(--container-gutter);
+  padding-right: min(45vw, 40rem);
+  container-type: normal;
+}
+.page[data-service-slug="monolithic-work"] .hero h1 {
+  font-size: clamp(2rem, 4.2vw, 4.2rem);
+}
+.page[data-service-slug="monolithic-work"] .hero h1:lang(hy) {
+  font-size: clamp(1.8rem, 3.7vw, 3.6rem);
+}
+.page[data-service-slug="monolithic-work"] .heroPhoto {
+  position: absolute;
+  inset: 0;
+  min-height: 0;
+  z-index: -1;
+}
+.page[data-service-slug="monolithic-work"] .heroPhoto::after {
+  display: block;
+  inset: 0;
+  border: 0;
+  background: linear-gradient(90deg, #111416f5, #111416b8 35%, #11141610 80%);
+}
+.page[data-service-slug="house-construction"] .heroPhoto {
+  min-height: 720px;
+}
+.page[data-service-slug="apartment-renovation-yerevan"] .heroPhoto {
+  margin: 2rem 2rem 2rem 0;
+  min-height: 620px;
+}
+.detailsGrid {
+  align-items: start;
+}
+.detailPhoto {
+  aspect-ratio: 4/5;
+  min-height: 0;
+}
+.quality {
+  background: var(--dark-secondary);
+  color: var(--text-on-dark);
+  --text-secondary: #b6bdbe;
+  --border: #ffffff24;
+  --service-accent: #cbb395;
+}
+.quality .prose {
+  max-width: 42ch;
+}
+.cta {
+  background: var(--brand-navy);
+}
+.cta h2 {
+  font-size: clamp(2rem, 3.5vw, 3.5rem);
+}
+.processGallery {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 2.5rem 1.5rem;
+  margin-top: 3.5rem;
+}
+.processGallery > figure {
+  grid-column: span 2;
+}
+.processGallery > figure:nth-child(-n + 2) {
+  grid-column: span 3;
+}
+.processGallery > figure:only-child {
+  grid-column: 1/-1;
+}
+.processPhoto {
+  position: relative;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  background: var(--brand-surface-warm);
+}
+.processPhoto > span {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  background: #111416da;
+  color: white;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.7rem;
+}
+.processGallery figcaption {
+  padding-top: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+@media (max-width: 959px) {
+  .hero {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .heroPhoto,
+  .page[data-service-slug="house-construction"] .heroPhoto {
+    min-height: 0;
+    aspect-ratio: 16/10;
+  }
+  .page[data-service-slug="apartment-renovation-yerevan"] .heroPhoto {
+    margin: 0;
+    min-height: 0;
+  }
+  .page[data-service-slug="monolithic-work"] .hero {
+    min-height: 0;
+  }
+  .page[data-service-slug="monolithic-work"] .heroCopy {
+    padding: 2rem var(--container-gutter);
+    container-type: inline-size;
+  }
+  .page[data-service-slug="monolithic-work"] .hero h1 {
+    font-size: clamp(1.75rem, 8.5cqi, 4.2rem);
+  }
+  .page[data-service-slug="monolithic-work"] .hero h1:lang(hy) {
+    font-size: clamp(1.6rem, 8.5cqi, 3.6rem);
+  }
+  .page[data-service-slug="monolithic-work"] .heroPhoto {
+    position: relative;
+    z-index: 0;
+    aspect-ratio: 16/10;
+  }
+  .page[data-service-slug="monolithic-work"] .heroPhoto::after {
+    display: none;
+  }
+  .detailPhoto {
+    aspect-ratio: 4/3;
+  }
+  .processGallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .processGallery > figure,
+  .processGallery > figure:nth-child(-n + 2) {
+    grid-column: auto;
+  }
+  .processGallery > figure:last-child:nth-child(odd) {
+    grid-column: 1/-1;
+  }
+}
+@media (max-width: 639px) {
+  .heroPhoto,
+  .page[data-service-slug="house-construction"] .heroPhoto {
+    aspect-ratio: 4/5;
+  }
+  .page[data-service-slug="monolithic-work"] .heroPhoto {
+    aspect-ratio: 4/5;
+  }
+  .processGallery {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2rem;
+  }
+  .processGallery > figure {
+    grid-column: auto;
+  }
+}
+@media (max-width: 639px) {
+  .page[data-service-slug="house-construction"] .heroPhoto {
+    aspect-ratio: 4/3;
   }
 }

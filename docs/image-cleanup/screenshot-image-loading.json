@@ -1,0 +1,166 @@
+[
+  {
+    "name": "home",
+    "label": "desktop",
+    "images": [
+      {
+        "alt": "Կառուցվող եռահարկ բնակելի շենք՝ երկաթբետոնե կառուցվածքով և քարե ճակատով",
+        "complete": true,
+        "width": 1254
+      }
+    ]
+  },
+  {
+    "name": "services",
+    "label": "desktop",
+    "images": [
+      {
+        "alt": "Երկաթբետոնե կառուցվածքի ամրանավորում և կաղապար",
+        "complete": true,
+        "width": 720
+      }
+    ]
+  },
+  {
+    "name": "house",
+    "label": "desktop",
+    "images": [
+      {
+        "alt": "Կառուցվող երկհարկ առանձնատուն",
+        "complete": true,
+        "width": 864
+      }
+    ]
+  },
+  {
+    "name": "monolithic",
+    "label": "desktop",
+    "images": [
+      {
+        "alt": "Երկաթբետոնե հիմնակմախք և ծածկի կաղապար",
+        "complete": true,
+        "width": 1152
+      }
+    ]
+  },
+  {
+    "name": "apartment",
+    "label": "desktop",
+    "images": [
+      {
+        "alt": "Բնակարանի ինտերիեր՝ քարե հարդարմամբ և կաղնու պանելներով",
+        "complete": true,
+        "width": 864
+      }
+    ]
+  },
+  {
+    "name": "commercial",
+    "label": "desktop",
+    "images": [
+      {
+        "alt": "Բիզնես տարածք՝ բետոնե սյուներով և ապակե միջնապատերով",
+        "complete": true,
+        "width": 864
+      }
+    ]
+  },
+  {
+    "name": "about",
+    "label": "desktop",
+    "images": [
+      {
+        "alt": "Ճարտարապետական մակետ, գծագրեր և նյութերի նմուշներ",
+        "complete": true,
+        "width": 720
+      }
+    ]
+  },
+  {
+    "name": "prices",
+    "label": "desktop",
+    "images": []
+  },
+  {
+    "name": "home",
+    "label": "mobile",
+    "images": [
+      {
+        "alt": "Կառուցվող եռահարկ բնակելի շենք՝ երկաթբետոնե կառուցվածքով և քարե ճակատով",
+        "complete": true,
+        "width": 390
+      }
+    ]
+  },
+  {
+    "name": "services",
+    "label": "mobile",
+    "images": [
+      {
+        "alt": "Երկաթբետոնե կառուցվածքի ամրանավորում և կաղապար",
+        "complete": true,
+        "width": 358
+      }
+    ]
+  },
+  {
+    "name": "house",
+    "label": "mobile",
+    "images": [
+      {
+        "alt": "Կառուցվող երկհարկ առանձնատուն",
+        "complete": true,
+        "width": 390
+      }
+    ]
+  },
+  {
+    "name": "monolithic",
+    "label": "mobile",
+    "images": [
+      {
+        "alt": "Երկաթբետոնե հիմնակմախք և ծածկի կաղապար",
+        "complete": true,
+        "width": 390
+      }
+    ]
+  },
+  {
+    "name": "apartment",
+    "label": "mobile",
+    "images": [
+      {
+        "alt": "Բնակարանի ինտերիեր՝ քարե հարդարմամբ և կաղնու պանելներով",
+        "complete": true,
+        "width": 390
+      }
+    ]
+  },
+  {
+    "name": "commercial",
+    "label": "mobile",
+    "images": [
+      {
+        "alt": "Բիզնես տարածք՝ բետոնե սյուներով և ապակե միջնապատերով",
+        "complete": true,
+        "width": 390
+      }
+    ]
+  },
+  {
+    "name": "about",
+    "label": "mobile",
+    "images": [
+      {
+        "alt": "Ճարտարապետական մակետ, գծագրեր և նյութերի նմուշներ",
+        "complete": true,
+        "width": 357
+      }
+    ]
+  },
+  {
+    "name": "prices",
+    "label": "mobile",
+    "images": []
+  }
+]

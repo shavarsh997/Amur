@@ -1,0 +1,3338 @@
+[
+  {
+    "checked": 132,
+    "issues": [
+      {
+        "classes": "content-heading mt-5 max-w-xl text-balance text-3xl font-semibold leading-[1.14] tracking-[-0.04em] text-[var(--text-primary)] sm:text-4xl",
+        "font": "32px",
+        "lines": [
+          "Վերանորոգում",
+          "և",
+          "շինարարությու",
+          "ն ամբողջ",
+          "Հայաստանում"
+        ],
+        "shortLines": [
+          "և"
+        ],
+        "splitWords": [
+          "շինարարություն"
+        ],
+        "tag": "H2",
+        "text": "Վերանորոգում և շինարարություն ամբողջ Հայաստանում",
+        "width": 248
+      },
+      {
+        "classes": "content-heading max-w-3xl text-pretty text-[clamp(2rem,4vw,3.5rem)] font-semibold leading-[1.14] tracking-[-0.055em] text-[var(--text-primary)]",
+        "font": "32px",
+        "lines": [
+          "Նախատեսո՞ւմ",
+          "եք",
+          "վերանորոգում",
+          "կամ",
+          "շինարարությու",
+          "ն"
+        ],
+        "shortLines": [
+          "եք",
+          "ն"
+        ],
+        "splitWords": [
+          "շինարարություն"
+        ],
+        "tag": "H2",
+        "text": "Նախատեսո՞ւմ եք վերանորոգում կամ շինարարություն",
+        "width": 246
+      }
+    ],
+    "overflow": false,
+    "path": "/hy",
+    "width": 320
+  },
+  {
+    "checked": 69,
+    "issues": [
+      {
+        "classes": "content-heading text-pretty text-4xl font-semibold leading-[1.14] tracking-[-0.05em] text-[var(--text-primary)] sm:text-5xl lg:text-6xl",
+        "font": "36.8px",
+        "lines": [
+          "Վերանորոգմա",
+          "ն և",
+          "շինարարական",
+          "ծառայությունն",
+          "եր Երևանում"
+        ],
+        "shortLines": [
+          "ն և"
+        ],
+        "splitWords": [
+          "Վերանորոգման",
+          "ծառայություններ"
+        ],
+        "tag": "H1",
+        "text": "Վերանորոգման և շինարարական ծառայություններ Երևանում",
+        "width": 288
+      },
+      {
+        "classes": "text-2xl font-semibold tracking-[-0.04em] text-[var(--text-primary)] sm:text-3xl",
+        "font": "24px",
+        "lines": [
+          "Ճարտարապետակ",
+          "ան նախագծում"
+        ],
+        "shortLines": [],
+        "splitWords": [
+          "Ճարտարապետական"
+        ],
+        "tag": "H2",
+        "text": "Ճարտարապետական նախագծում",
+        "width": 238
+      }
+    ],
+    "overflow": false,
+    "path": "/hy/services",
+    "width": 320
+  },
+  {
+    "checked": 44,
+    "issues": [
+      {
+        "classes": "content-heading text-pretty text-4xl font-semibold leading-[1.14] tracking-[-0.05em] text-[var(--text-primary)] sm:text-5xl lg:text-6xl",
+        "font": "36.8px",
+        "lines": [
+          "Մեր մասին․",
+          "վերանորոգում",
+          "և",
+          "շինարարությու",
+          "ն",
+          "Հայաստանում"
+        ],
+        "shortLines": [
+          "և",
+          "ն"
+        ],
+        "splitWords": [
+          "շինարարություն"
+        ],
+        "tag": "H1",
+        "text": "Մեր մասին․ վերանորոգում և շինարարություն Հայաստանում",
+        "width": 288
+      },
+      {
+        "classes": "content-heading max-w-3xl text-pretty text-[clamp(2rem,4vw,3.5rem)] font-semibold leading-[1.14] tracking-[-0.055em] text-[var(--text-primary)]",
+        "font": "32px",
+        "lines": [
+          "Նախատեսո՞ւմ",
+          "եք",
+          "վերանորոգում",
+          "կամ",
+          "շինարարությու",
+          "ն"
+        ],
+        "shortLines": [
+          "եք",
+          "ն"
+        ],
+        "splitWords": [
+          "շինարարություն"
+        ],
+        "tag": "H2",
+        "text": "Նախատեսո՞ւմ եք վերանորոգում կամ շինարարություն",
+        "width": 246
+      }
+    ],
+    "overflow": false,
+    "path": "/hy/about",
+    "width": 320
+  },
+  {
+    "checked": 28,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/contacts",
+    "width": 320
+  },
+  {
+    "checked": 43,
+    "issues": [
+      {
+        "classes": "content-heading mx-auto mt-3 max-w-2xl text-3xl font-semibold tracking-[-0.05em] text-[var(--text-primary)] sm:text-5xl",
+        "font": "32px",
+        "lines": [
+          "Շինարարությա",
+          "ն և դիզայնի",
+          "արժեքի հաշվիչ"
+        ],
+        "shortLines": [],
+        "splitWords": [
+          "Շինարարության"
+        ],
+        "tag": "H1",
+        "text": "Շինարարության և դիզայնի արժեքի հաշվիչ",
+        "width": 246
+      }
+    ],
+    "overflow": false,
+    "path": "/hy/calculator",
+    "width": 320
+  },
+  {
+    "checked": 35,
+    "issues": [
+      {
+        "classes": "content-heading text-pretty text-4xl font-semibold leading-[1.14] tracking-[-0.05em] text-[var(--text-primary)] sm:text-5xl lg:text-6xl",
+        "font": "36.8px",
+        "lines": [
+          "Գաղտնիության",
+          "քաղաքականու",
+          "թյուն"
+        ],
+        "shortLines": [],
+        "splitWords": [
+          "քաղաքականություն"
+        ],
+        "tag": "H1",
+        "text": "Գաղտնիության քաղաքականություն",
+        "width": 288
+      }
+    ],
+    "overflow": false,
+    "path": "/hy/privacy",
+    "width": 320
+  },
+  {
+    "checked": 113,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/services/renovation",
+    "width": 320
+  },
+  {
+    "checked": 86,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/services/house-construction",
+    "width": 320
+  },
+  {
+    "checked": 93,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/services/interior-design",
+    "width": 320
+  },
+  {
+    "checked": 81,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/services/commercial-construction",
+    "width": 320
+  },
+  {
+    "checked": 77,
+    "issues": [
+      {
+        "classes": "",
+        "font": "32px",
+        "lines": [
+          "Ճարտարապետա",
+          "կան նախագծում"
+        ],
+        "shortLines": [],
+        "splitWords": [
+          "Ճարտարապետական"
+        ],
+        "tag": "H1",
+        "text": "Ճարտարապետական նախագծում",
+        "width": 288
+      }
+    ],
+    "overflow": false,
+    "path": "/hy/services/design",
+    "width": 320
+  },
+  {
+    "checked": 68,
+    "issues": [
+      {
+        "classes": "",
+        "font": "28px",
+        "lines": [
+          "Մոնոլիտ",
+          "աշխատանքների",
+          "քննարկման",
+          "նախապատրաստու",
+          "մ"
+        ],
+        "shortLines": [
+          "մ"
+        ],
+        "splitWords": [
+          "նախապատրաստում"
+        ],
+        "tag": "H2",
+        "text": "Մոնոլիտ աշխատանքների քննարկման նախապատրաստում",
+        "width": 288
+      }
+    ],
+    "overflow": false,
+    "path": "/hy/services/monolithic-work",
+    "width": 320
+  },
+  {
+    "checked": 66,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/services/facade-and-roofing",
+    "width": 320
+  },
+  {
+    "checked": 121,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/services/apartment-renovation-yerevan",
+    "width": 320
+  },
+  {
+    "checked": 99,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/services/new-build-renovation",
+    "width": 320
+  },
+  {
+    "checked": 106,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/services/turnkey-renovation",
+    "width": 320
+  },
+  {
+    "checked": 86,
+    "issues": [
+      {
+        "classes": "content-heading text-pretty text-4xl font-semibold leading-[1.14] tracking-[-0.05em] text-[var(--text-primary)] sm:text-5xl lg:text-6xl",
+        "font": "36.8px",
+        "lines": [
+          "Բնակարանի",
+          "վերանորոգմա",
+          "ն արժեքը",
+          "Երևանում"
+        ],
+        "shortLines": [],
+        "splitWords": [
+          "վերանորոգման"
+        ],
+        "tag": "H1",
+        "text": "Բնակարանի վերանորոգման արժեքը Երևանում",
+        "width": 288
+      }
+    ],
+    "overflow": false,
+    "path": "/hy/prices",
+    "width": 320
+  },
+  {
+    "checked": 100,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/services/apartment-interior-design-yerevan",
+    "width": 320
+  },
+  {
+    "checked": 102,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/services/office-renovation-yerevan",
+    "width": 320
+  },
+  {
+    "checked": 105,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/services/capital-renovation-yerevan",
+    "width": 320
+  },
+  {
+    "checked": 103,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/services/cosmetic-renovation-yerevan",
+    "width": 320
+  },
+  {
+    "checked": 63,
+    "issues": [
+      {
+        "classes": "content-heading text-pretty text-4xl font-semibold leading-[1.14] tracking-[-0.05em] text-[var(--text-primary)] sm:text-5xl lg:text-6xl",
+        "font": "36.8px",
+        "lines": [
+          "Վերանորոգմա",
+          "ն նախահաշիվ",
+          "Երևանում"
+        ],
+        "shortLines": [],
+        "splitWords": [
+          "Վերանորոգման"
+        ],
+        "tag": "H1",
+        "text": "Վերանորոգման նախահաշիվ Երևանում",
+        "width": 288
+      }
+    ],
+    "overflow": false,
+    "path": "/hy/renovation-estimate-yerevan",
+    "width": 320
+  },
+  {
+    "checked": 100,
+    "issues": [
+      {
+        "classes": "",
+        "font": "32px",
+        "lines": [
+          "Սանտեխնիկակա",
+          "ն աշխատանքներ",
+          "Երևանում"
+        ],
+        "shortLines": [],
+        "splitWords": [
+          "Սանտեխնիկական"
+        ],
+        "tag": "H1",
+        "text": "Սանտեխնիկական աշխատանքներ Երևանում",
+        "width": 288
+      }
+    ],
+    "overflow": false,
+    "path": "/hy/services/plumbing-work-yerevan",
+    "width": 320
+  },
+  {
+    "checked": 100,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/services/electrical-work-yerevan",
+    "width": 320
+  },
+  {
+    "checked": 132,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy",
+    "width": 1920
+  },
+  {
+    "checked": 69,
+    "issues": [
+      {
+        "classes": "content-heading text-pretty text-4xl font-semibold leading-[1.14] tracking-[-0.05em] text-[var(--text-primary)] sm:text-5xl lg:text-6xl",
+        "font": "72px",
+        "lines": [
+          "Վերանորոգման",
+          "և",
+          "շինարարական",
+          "ծառայություննե",
+          "ր Երևանում"
+        ],
+        "shortLines": [
+          "և"
+        ],
+        "splitWords": [
+          "ծառայություններ"
+        ],
+        "tag": "H1",
+        "text": "Վերանորոգման և շինարարական ծառայություններ Երևանում",
+        "width": 583
+      }
+    ],
+    "overflow": false,
+    "path": "/hy/services",
+    "width": 1920
+  },
+  {
+    "checked": 44,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/about",
+    "width": 1920
+  },
+  {
+    "checked": 28,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/contacts",
+    "width": 1920
+  },
+  {
+    "checked": 43,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/calculator",
+    "width": 1920
+  },
+  {
+    "checked": 35,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/privacy",
+    "width": 1920
+  },
+  {
+    "checked": 113,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/services/renovation",
+    "width": 1920
+  },
+  {
+    "checked": 86,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/services/house-construction",
+    "width": 1920
+  },
+  {
+    "checked": 93,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/services/interior-design",
+    "width": 1920
+  },
+  {
+    "checked": 81,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/services/commercial-construction",
+    "width": 1920
+  },
+  {
+    "checked": 77,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/services/design",
+    "width": 1920
+  },
+  {
+    "checked": 68,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/services/monolithic-work",
+    "width": 1920
+  },
+  {
+    "checked": 66,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/services/facade-and-roofing",
+    "width": 1920
+  },
+  {
+    "checked": 121,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/services/apartment-renovation-yerevan",
+    "width": 1920
+  },
+  {
+    "checked": 99,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/services/new-build-renovation",
+    "width": 1920
+  },
+  {
+    "checked": 106,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/services/turnkey-renovation",
+    "width": 1920
+  },
+  {
+    "checked": 86,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/prices",
+    "width": 1920
+  },
+  {
+    "checked": 100,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/services/apartment-interior-design-yerevan",
+    "width": 1920
+  },
+  {
+    "checked": 102,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/services/office-renovation-yerevan",
+    "width": 1920
+  },
+  {
+    "checked": 105,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/services/capital-renovation-yerevan",
+    "width": 1920
+  },
+  {
+    "checked": 103,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/services/cosmetic-renovation-yerevan",
+    "width": 1920
+  },
+  {
+    "checked": 63,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/renovation-estimate-yerevan",
+    "width": 1920
+  },
+  {
+    "checked": 100,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/services/plumbing-work-yerevan",
+    "width": 1920
+  },
+  {
+    "checked": 100,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/services/electrical-work-yerevan",
+    "width": 1920
+  },
+  {
+    "checked": 132,
+    "issues": [],
+    "overflow": false,
+    "path": "/ru",
+    "width": 320
+  },
+  {
+    "checked": 132,
+    "issues": [],
+    "overflow": false,
+    "path": "/en",
+    "width": 320
+  },
+  {
+    "checked": 132,
+    "issues": [
+      {
+        "classes": "mt-1 text-xs leading-5 text-[var(--text-secondary)] sm:mt-2 sm:text-sm sm:leading-6",
+        "font": "14px",
+        "lines": [
+          "Müssen sich Umfang oder Lösungen",
+          "während der Arbeiten ändern,",
+          "stimmen wir dies zuerst mit Ihnen",
+          "ab."
+        ],
+        "shortLines": [
+          "ab."
+        ],
+        "splitWords": [],
+        "tag": "P",
+        "text": "Müssen sich Umfang oder Lösungen während der Arbeiten ändern, stimmen wir dies zuerst mit Ihnen ab.",
+        "width": 240
+      }
+    ],
+    "overflow": false,
+    "path": "/de",
+    "width": 320
+  },
+  {
+    "checked": 132,
+    "issues": [
+      {
+        "classes": "flex cursor-pointer list-none items-center justify-between gap-4 py-5 text-sm font-semibold text-[var(--text-primary)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--brand-copper)]  sm:text-base [&::-webkit-details-marker]:hidden",
+        "font": "14px",
+        "lines": [
+          "Puis-je commander certaines",
+          "étapes de rénovation seulement",
+          "?"
+        ],
+        "shortLines": [
+          "?"
+        ],
+        "splitWords": [],
+        "tag": "SUMMARY",
+        "text": "Puis-je commander certaines étapes de rénovation seulement ?",
+        "width": 256
+      }
+    ],
+    "overflow": false,
+    "path": "/fr",
+    "width": 320
+  },
+  {
+    "checked": 69,
+    "issues": [],
+    "overflow": false,
+    "path": "/ru/services",
+    "width": 320
+  },
+  {
+    "checked": 69,
+    "issues": [],
+    "overflow": false,
+    "path": "/en/services",
+    "width": 320
+  },
+  {
+    "checked": 69,
+    "issues": [],
+    "overflow": false,
+    "path": "/de/services",
+    "width": 320
+  },
+  {
+    "checked": 69,
+    "issues": [],
+    "overflow": false,
+    "path": "/fr/services",
+    "width": 320
+  },
+  {
+    "checked": 44,
+    "issues": [],
+    "overflow": false,
+    "path": "/ru/about",
+    "width": 320
+  },
+  {
+    "checked": 44,
+    "issues": [],
+    "overflow": false,
+    "path": "/en/about",
+    "width": 320
+  },
+  {
+    "checked": 44,
+    "issues": [],
+    "overflow": false,
+    "path": "/de/about",
+    "width": 320
+  },
+  {
+    "checked": 44,
+    "issues": [],
+    "overflow": false,
+    "path": "/fr/about",
+    "width": 320
+  },
+  {
+    "checked": 28,
+    "issues": [],
+    "overflow": false,
+    "path": "/ru/contacts",
+    "width": 320
+  },
+  {
+    "checked": 28,
+    "issues": [],
+    "overflow": false,
+    "path": "/en/contacts",
+    "width": 320
+  },
+  {
+    "checked": 28,
+    "issues": [],
+    "overflow": false,
+    "path": "/de/contacts",
+    "width": 320
+  },
+  {
+    "checked": 28,
+    "issues": [],
+    "overflow": false,
+    "path": "/fr/contacts",
+    "width": 320
+  },
+  {
+    "checked": 43,
+    "issues": [],
+    "overflow": false,
+    "path": "/ru/calculator",
+    "width": 320
+  },
+  {
+    "checked": 43,
+    "issues": [],
+    "overflow": false,
+    "path": "/en/calculator",
+    "width": 320
+  },
+  {
+    "checked": 43,
+    "issues": [],
+    "overflow": false,
+    "path": "/de/calculator",
+    "width": 320
+  },
+  {
+    "checked": 43,
+    "issues": [],
+    "overflow": false,
+    "path": "/fr/calculator",
+    "width": 320
+  },
+  {
+    "checked": 35,
+    "issues": [
+      {
+        "classes": "content-heading text-pretty text-4xl font-semibold leading-[1.14] tracking-[-0.05em] text-[var(--text-primary)] sm:text-5xl lg:text-6xl",
+        "font": "36.8px",
+        "lines": [
+          "Политика",
+          "конфиденциально",
+          "сти"
+        ],
+        "shortLines": [],
+        "splitWords": [
+          "конфиденциальности"
+        ],
+        "tag": "H1",
+        "text": "Политика конфиденциальности",
+        "width": 288
+      }
+    ],
+    "overflow": false,
+    "path": "/ru/privacy",
+    "width": 320
+  },
+  {
+    "checked": 35,
+    "issues": [],
+    "overflow": false,
+    "path": "/en/privacy",
+    "width": 320
+  },
+  {
+    "checked": 35,
+    "issues": [],
+    "overflow": false,
+    "path": "/de/privacy",
+    "width": 320
+  },
+  {
+    "checked": 35,
+    "issues": [],
+    "overflow": false,
+    "path": "/fr/privacy",
+    "width": 320
+  },
+  {
+    "checked": 107,
+    "issues": [],
+    "overflow": false,
+    "path": "/ru/services/renovation",
+    "width": 320
+  },
+  {
+    "checked": 107,
+    "issues": [],
+    "overflow": false,
+    "path": "/en/services/renovation",
+    "width": 320
+  },
+  {
+    "checked": 107,
+    "issues": [],
+    "overflow": false,
+    "path": "/de/services/renovation",
+    "width": 320
+  },
+  {
+    "checked": 107,
+    "issues": [],
+    "overflow": false,
+    "path": "/fr/services/renovation",
+    "width": 320
+  },
+  {
+    "checked": 79,
+    "issues": [],
+    "overflow": false,
+    "path": "/ru/services/house-construction",
+    "width": 320
+  },
+  {
+    "checked": 79,
+    "issues": [],
+    "overflow": false,
+    "path": "/en/services/house-construction",
+    "width": 320
+  },
+  {
+    "checked": 79,
+    "issues": [
+      {
+        "classes": "service-page_prose__wTred",
+        "font": "15px",
+        "lines": [
+          "Wir organisieren und kontrollieren jede",
+          "Bauphase eines Hauses in Eriwan und",
+          "ganz Armenien, von der abgestimmten",
+          "Planung bis zur Prüfung und Übergabe.",
+          "Umfang und Kosten hängen vom",
+          "Grundstück, der Planung und dem",
+          "vorgesehenen Bau- und Ausbaustandard",
+          "ab."
+        ],
+        "shortLines": [
+          "ab."
+        ],
+        "splitWords": [],
+        "tag": "P",
+        "text": "Wir organisieren und kontrollieren jede Bauphase eines Hauses in Eriwan und ganz Armenien, von der abgestimmten Planung bis zur Prüfung und Übergabe. Umfang und Kosten hängen vom Grundstück, der Planu",
+        "width": 288
+      }
+    ],
+    "overflow": false,
+    "path": "/de/services/house-construction",
+    "width": 320
+  },
+  {
+    "checked": 79,
+    "issues": [],
+    "overflow": false,
+    "path": "/fr/services/house-construction",
+    "width": 320
+  },
+  {
+    "checked": 89,
+    "issues": [],
+    "overflow": false,
+    "path": "/ru/services/interior-design",
+    "width": 320
+  },
+  {
+    "checked": 89,
+    "issues": [],
+    "overflow": false,
+    "path": "/en/services/interior-design",
+    "width": 320
+  },
+  {
+    "checked": 89,
+    "issues": [],
+    "overflow": false,
+    "path": "/de/services/interior-design",
+    "width": 320
+  },
+  {
+    "checked": 89,
+    "issues": [],
+    "overflow": false,
+    "path": "/fr/services/interior-design",
+    "width": 320
+  },
+  {
+    "checked": 77,
+    "issues": [],
+    "overflow": false,
+    "path": "/ru/services/commercial-construction",
+    "width": 320
+  },
+  {
+    "checked": 77,
+    "issues": [],
+    "overflow": false,
+    "path": "/en/services/commercial-construction",
+    "width": 320
+  },
+  {
+    "checked": 77,
+    "issues": [],
+    "overflow": false,
+    "path": "/de/services/commercial-construction",
+    "width": 320
+  },
+  {
+    "checked": 77,
+    "issues": [],
+    "overflow": false,
+    "path": "/fr/services/commercial-construction",
+    "width": 320
+  },
+  {
+    "checked": 77,
+    "issues": [],
+    "overflow": false,
+    "path": "/ru/services/design",
+    "width": 320
+  },
+  {
+    "checked": 77,
+    "issues": [],
+    "overflow": false,
+    "path": "/en/services/design",
+    "width": 320
+  },
+  {
+    "checked": 77,
+    "issues": [],
+    "overflow": false,
+    "path": "/de/services/design",
+    "width": 320
+  },
+  {
+    "checked": 77,
+    "issues": [],
+    "overflow": false,
+    "path": "/fr/services/design",
+    "width": 320
+  },
+  {
+    "checked": 68,
+    "issues": [],
+    "overflow": false,
+    "path": "/ru/services/monolithic-work",
+    "width": 320
+  },
+  {
+    "checked": 68,
+    "issues": [],
+    "overflow": false,
+    "path": "/en/services/monolithic-work",
+    "width": 320
+  },
+  {
+    "checked": 68,
+    "issues": [],
+    "overflow": false,
+    "path": "/de/services/monolithic-work",
+    "width": 320
+  },
+  {
+    "checked": 68,
+    "issues": [],
+    "overflow": false,
+    "path": "/fr/services/monolithic-work",
+    "width": 320
+  },
+  {
+    "checked": 66,
+    "issues": [],
+    "overflow": false,
+    "path": "/ru/services/facade-and-roofing",
+    "width": 320
+  },
+  {
+    "checked": 66,
+    "issues": [],
+    "overflow": false,
+    "path": "/en/services/facade-and-roofing",
+    "width": 320
+  },
+  {
+    "checked": 66,
+    "issues": [],
+    "overflow": false,
+    "path": "/de/services/facade-and-roofing",
+    "width": 320
+  },
+  {
+    "checked": 66,
+    "issues": [],
+    "overflow": false,
+    "path": "/fr/services/facade-and-roofing",
+    "width": 320
+  },
+  {
+    "checked": 121,
+    "issues": [],
+    "overflow": false,
+    "path": "/ru/services/apartment-renovation-yerevan",
+    "width": 320
+  },
+  {
+    "checked": 121,
+    "issues": [],
+    "overflow": false,
+    "path": "/en/services/apartment-renovation-yerevan",
+    "width": 320
+  },
+  {
+    "checked": 121,
+    "issues": [],
+    "overflow": false,
+    "path": "/de/services/apartment-renovation-yerevan",
+    "width": 320
+  },
+  {
+    "checked": 121,
+    "issues": [],
+    "overflow": false,
+    "path": "/fr/services/apartment-renovation-yerevan",
+    "width": 320
+  },
+  {
+    "checked": 99,
+    "issues": [],
+    "overflow": false,
+    "path": "/ru/services/new-build-renovation",
+    "width": 320
+  },
+  {
+    "checked": 99,
+    "issues": [
+      {
+        "classes": "service-page_heroDescription__NOiGO",
+        "font": "15px",
+        "lines": [
+          "Finish your new-build apartment with the",
+          "wiring, plumbing, surface preparation and",
+          "interior finishes planned before you move",
+          "in."
+        ],
+        "shortLines": [
+          "in."
+        ],
+        "splitWords": [],
+        "tag": "P",
+        "text": "Finish your new-build apartment with the wiring, plumbing, surface preparation and interior finishes planned before you move in.",
+        "width": 288
+      }
+    ],
+    "overflow": false,
+    "path": "/en/services/new-build-renovation",
+    "width": 320
+  },
+  {
+    "checked": 99,
+    "issues": [],
+    "overflow": false,
+    "path": "/de/services/new-build-renovation",
+    "width": 320
+  },
+  {
+    "checked": 99,
+    "issues": [],
+    "overflow": false,
+    "path": "/fr/services/new-build-renovation",
+    "width": 320
+  },
+  {
+    "checked": 106,
+    "issues": [],
+    "overflow": false,
+    "path": "/ru/services/turnkey-renovation",
+    "width": 320
+  },
+  {
+    "checked": 106,
+    "issues": [],
+    "overflow": false,
+    "path": "/en/services/turnkey-renovation",
+    "width": 320
+  },
+  {
+    "checked": 106,
+    "issues": [],
+    "overflow": false,
+    "path": "/de/services/turnkey-renovation",
+    "width": 320
+  },
+  {
+    "checked": 106,
+    "issues": [],
+    "overflow": false,
+    "path": "/fr/services/turnkey-renovation",
+    "width": 320
+  },
+  {
+    "checked": 86,
+    "issues": [],
+    "overflow": false,
+    "path": "/ru/prices",
+    "width": 320
+  },
+  {
+    "checked": 86,
+    "issues": [],
+    "overflow": false,
+    "path": "/en/prices",
+    "width": 320
+  },
+  {
+    "checked": 86,
+    "issues": [],
+    "overflow": false,
+    "path": "/de/prices",
+    "width": 320
+  },
+  {
+    "checked": 86,
+    "issues": [],
+    "overflow": false,
+    "path": "/fr/prices",
+    "width": 320
+  },
+  {
+    "checked": 100,
+    "issues": [],
+    "overflow": false,
+    "path": "/ru/services/apartment-interior-design-yerevan",
+    "width": 320
+  },
+  {
+    "checked": 100,
+    "issues": [],
+    "overflow": false,
+    "path": "/en/services/apartment-interior-design-yerevan",
+    "width": 320
+  },
+  {
+    "checked": 100,
+    "issues": [],
+    "overflow": false,
+    "path": "/de/services/apartment-interior-design-yerevan",
+    "width": 320
+  },
+  {
+    "checked": 100,
+    "issues": [],
+    "overflow": false,
+    "path": "/fr/services/apartment-interior-design-yerevan",
+    "width": 320
+  },
+  {
+    "checked": 102,
+    "issues": [],
+    "overflow": false,
+    "path": "/ru/services/office-renovation-yerevan",
+    "width": 320
+  },
+  {
+    "checked": 102,
+    "issues": [],
+    "overflow": false,
+    "path": "/en/services/office-renovation-yerevan",
+    "width": 320
+  },
+  {
+    "checked": 102,
+    "issues": [],
+    "overflow": false,
+    "path": "/de/services/office-renovation-yerevan",
+    "width": 320
+  },
+  {
+    "checked": 102,
+    "issues": [],
+    "overflow": false,
+    "path": "/fr/services/office-renovation-yerevan",
+    "width": 320
+  },
+  {
+    "checked": 105,
+    "issues": [],
+    "overflow": false,
+    "path": "/ru/services/capital-renovation-yerevan",
+    "width": 320
+  },
+  {
+    "checked": 105,
+    "issues": [],
+    "overflow": false,
+    "path": "/en/services/capital-renovation-yerevan",
+    "width": 320
+  },
+  {
+    "checked": 105,
+    "issues": [],
+    "overflow": false,
+    "path": "/de/services/capital-renovation-yerevan",
+    "width": 320
+  },
+  {
+    "checked": 105,
+    "issues": [],
+    "overflow": false,
+    "path": "/fr/services/capital-renovation-yerevan",
+    "width": 320
+  },
+  {
+    "checked": 103,
+    "issues": [],
+    "overflow": false,
+    "path": "/ru/services/cosmetic-renovation-yerevan",
+    "width": 320
+  },
+  {
+    "checked": 103,
+    "issues": [],
+    "overflow": false,
+    "path": "/en/services/cosmetic-renovation-yerevan",
+    "width": 320
+  },
+  {
+    "checked": 103,
+    "issues": [],
+    "overflow": false,
+    "path": "/de/services/cosmetic-renovation-yerevan",
+    "width": 320
+  },
+  {
+    "checked": 103,
+    "issues": [],
+    "overflow": false,
+    "path": "/fr/services/cosmetic-renovation-yerevan",
+    "width": 320
+  },
+  {
+    "checked": 63,
+    "issues": [],
+    "overflow": false,
+    "path": "/ru/renovation-estimate-yerevan",
+    "width": 320
+  },
+  {
+    "checked": 63,
+    "issues": [],
+    "overflow": false,
+    "path": "/en/renovation-estimate-yerevan",
+    "width": 320
+  },
+  {
+    "checked": 63,
+    "issues": [],
+    "overflow": false,
+    "path": "/de/renovation-estimate-yerevan",
+    "width": 320
+  },
+  {
+    "checked": 63,
+    "issues": [
+      {
+        "classes": "flex cursor-pointer list-none items-center justify-between gap-4 py-5 text-sm font-semibold text-[var(--text-primary)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--brand-copper)]  sm:text-base [&::-webkit-details-marker]:hidden",
+        "font": "14px",
+        "lines": [
+          "Que faut-il pour établir un devis",
+          "?"
+        ],
+        "shortLines": [
+          "?"
+        ],
+        "splitWords": [],
+        "tag": "SUMMARY",
+        "text": "Que faut-il pour établir un devis ?",
+        "width": 256
+      }
+    ],
+    "overflow": false,
+    "path": "/fr/renovation-estimate-yerevan",
+    "width": 320
+  },
+  {
+    "checked": 100,
+    "issues": [],
+    "overflow": false,
+    "path": "/ru/services/plumbing-work-yerevan",
+    "width": 320
+  },
+  {
+    "checked": 100,
+    "issues": [],
+    "overflow": false,
+    "path": "/en/services/plumbing-work-yerevan",
+    "width": 320
+  },
+  {
+    "checked": 100,
+    "issues": [],
+    "overflow": false,
+    "path": "/de/services/plumbing-work-yerevan",
+    "width": 320
+  },
+  {
+    "checked": 100,
+    "issues": [],
+    "overflow": false,
+    "path": "/fr/services/plumbing-work-yerevan",
+    "width": 320
+  },
+  {
+    "checked": 100,
+    "issues": [],
+    "overflow": false,
+    "path": "/ru/services/electrical-work-yerevan",
+    "width": 320
+  },
+  {
+    "checked": 100,
+    "issues": [],
+    "overflow": false,
+    "path": "/en/services/electrical-work-yerevan",
+    "width": 320
+  },
+  {
+    "checked": 100,
+    "issues": [],
+    "overflow": false,
+    "path": "/de/services/electrical-work-yerevan",
+    "width": 320
+  },
+  {
+    "checked": 100,
+    "issues": [],
+    "overflow": false,
+    "path": "/fr/services/electrical-work-yerevan",
+    "width": 320
+  },
+  {
+    "checked": 132,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy",
+    "width": 768
+  },
+  {
+    "checked": 132,
+    "issues": [],
+    "overflow": false,
+    "path": "/ru",
+    "width": 768
+  },
+  {
+    "checked": 132,
+    "issues": [],
+    "overflow": false,
+    "path": "/en",
+    "width": 768
+  },
+  {
+    "checked": 132,
+    "issues": [],
+    "overflow": false,
+    "path": "/de",
+    "width": 768
+  },
+  {
+    "checked": 132,
+    "issues": [],
+    "overflow": false,
+    "path": "/fr",
+    "width": 768
+  },
+  {
+    "checked": 69,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/services",
+    "width": 768
+  },
+  {
+    "checked": 69,
+    "issues": [],
+    "overflow": false,
+    "path": "/ru/services",
+    "width": 768
+  },
+  {
+    "checked": 69,
+    "issues": [],
+    "overflow": false,
+    "path": "/en/services",
+    "width": 768
+  },
+  {
+    "checked": 69,
+    "issues": [],
+    "overflow": false,
+    "path": "/de/services",
+    "width": 768
+  },
+  {
+    "checked": 69,
+    "issues": [],
+    "overflow": false,
+    "path": "/fr/services",
+    "width": 768
+  },
+  {
+    "checked": 44,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/about",
+    "width": 768
+  },
+  {
+    "checked": 44,
+    "issues": [],
+    "overflow": false,
+    "path": "/ru/about",
+    "width": 768
+  },
+  {
+    "checked": 44,
+    "issues": [],
+    "overflow": false,
+    "path": "/en/about",
+    "width": 768
+  },
+  {
+    "checked": 44,
+    "issues": [],
+    "overflow": false,
+    "path": "/de/about",
+    "width": 768
+  },
+  {
+    "checked": 44,
+    "issues": [],
+    "overflow": false,
+    "path": "/fr/about",
+    "width": 768
+  },
+  {
+    "checked": 28,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/contacts",
+    "width": 768
+  },
+  {
+    "checked": 28,
+    "issues": [],
+    "overflow": false,
+    "path": "/ru/contacts",
+    "width": 768
+  },
+  {
+    "checked": 28,
+    "issues": [],
+    "overflow": false,
+    "path": "/en/contacts",
+    "width": 768
+  },
+  {
+    "checked": 28,
+    "issues": [],
+    "overflow": false,
+    "path": "/de/contacts",
+    "width": 768
+  },
+  {
+    "checked": 28,
+    "issues": [],
+    "overflow": false,
+    "path": "/fr/contacts",
+    "width": 768
+  },
+  {
+    "checked": 43,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/calculator",
+    "width": 768
+  },
+  {
+    "checked": 43,
+    "issues": [],
+    "overflow": false,
+    "path": "/ru/calculator",
+    "width": 768
+  },
+  {
+    "checked": 43,
+    "issues": [],
+    "overflow": false,
+    "path": "/en/calculator",
+    "width": 768
+  },
+  {
+    "checked": 43,
+    "issues": [],
+    "overflow": false,
+    "path": "/de/calculator",
+    "width": 768
+  },
+  {
+    "checked": 43,
+    "issues": [],
+    "overflow": false,
+    "path": "/fr/calculator",
+    "width": 768
+  },
+  {
+    "checked": 35,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/privacy",
+    "width": 768
+  },
+  {
+    "checked": 35,
+    "issues": [],
+    "overflow": false,
+    "path": "/ru/privacy",
+    "width": 768
+  },
+  {
+    "checked": 35,
+    "issues": [],
+    "overflow": false,
+    "path": "/en/privacy",
+    "width": 768
+  },
+  {
+    "checked": 35,
+    "issues": [],
+    "overflow": false,
+    "path": "/de/privacy",
+    "width": 768
+  },
+  {
+    "checked": 35,
+    "issues": [],
+    "overflow": false,
+    "path": "/fr/privacy",
+    "width": 768
+  },
+  {
+    "checked": 113,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/services/renovation",
+    "width": 768
+  },
+  {
+    "checked": 107,
+    "issues": [],
+    "overflow": false,
+    "path": "/ru/services/renovation",
+    "width": 768
+  },
+  {
+    "checked": 107,
+    "issues": [],
+    "overflow": false,
+    "path": "/en/services/renovation",
+    "width": 768
+  },
+  {
+    "checked": 107,
+    "issues": [
+      {
+        "classes": "",
+        "font": "14.4px",
+        "lines": [
+          "Müssen sich Umfang oder Lösungen während der Arbeiten ändern, stimmen wir dies zuerst mit Ihnen",
+          "ab."
+        ],
+        "shortLines": [
+          "ab."
+        ],
+        "splitWords": [],
+        "tag": "P",
+        "text": "Müssen sich Umfang oder Lösungen während der Arbeiten ändern, stimmen wir dies zuerst mit Ihnen ab.",
+        "width": 673
+      }
+    ],
+    "overflow": false,
+    "path": "/de/services/renovation",
+    "width": 768
+  },
+  {
+    "checked": 107,
+    "issues": [],
+    "overflow": false,
+    "path": "/fr/services/renovation",
+    "width": 768
+  },
+  {
+    "checked": 86,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/services/house-construction",
+    "width": 768
+  },
+  {
+    "checked": 79,
+    "issues": [],
+    "overflow": false,
+    "path": "/ru/services/house-construction",
+    "width": 768
+  },
+  {
+    "checked": 79,
+    "issues": [],
+    "overflow": false,
+    "path": "/en/services/house-construction",
+    "width": 768
+  },
+  {
+    "checked": 79,
+    "issues": [
+      {
+        "classes": "",
+        "font": "14.4px",
+        "lines": [
+          "Müssen sich Umfang oder Lösungen während der Arbeiten ändern, stimmen wir dies zuerst mit Ihnen",
+          "ab."
+        ],
+        "shortLines": [
+          "ab."
+        ],
+        "splitWords": [],
+        "tag": "P",
+        "text": "Müssen sich Umfang oder Lösungen während der Arbeiten ändern, stimmen wir dies zuerst mit Ihnen ab.",
+        "width": 673
+      }
+    ],
+    "overflow": false,
+    "path": "/de/services/house-construction",
+    "width": 768
+  },
+  {
+    "checked": 79,
+    "issues": [],
+    "overflow": false,
+    "path": "/fr/services/house-construction",
+    "width": 768
+  },
+  {
+    "checked": 93,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/services/interior-design",
+    "width": 768
+  },
+  {
+    "checked": 89,
+    "issues": [],
+    "overflow": false,
+    "path": "/ru/services/interior-design",
+    "width": 768
+  },
+  {
+    "checked": 89,
+    "issues": [],
+    "overflow": false,
+    "path": "/en/services/interior-design",
+    "width": 768
+  },
+  {
+    "checked": 89,
+    "issues": [
+      {
+        "classes": "",
+        "font": "14.4px",
+        "lines": [
+          "Müssen sich Umfang oder Lösungen während der Arbeiten ändern, stimmen wir dies zuerst mit Ihnen",
+          "ab."
+        ],
+        "shortLines": [
+          "ab."
+        ],
+        "splitWords": [],
+        "tag": "P",
+        "text": "Müssen sich Umfang oder Lösungen während der Arbeiten ändern, stimmen wir dies zuerst mit Ihnen ab.",
+        "width": 673
+      }
+    ],
+    "overflow": false,
+    "path": "/de/services/interior-design",
+    "width": 768
+  },
+  {
+    "checked": 89,
+    "issues": [],
+    "overflow": false,
+    "path": "/fr/services/interior-design",
+    "width": 768
+  },
+  {
+    "checked": 81,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/services/commercial-construction",
+    "width": 768
+  },
+  {
+    "checked": 77,
+    "issues": [],
+    "overflow": false,
+    "path": "/ru/services/commercial-construction",
+    "width": 768
+  },
+  {
+    "checked": 77,
+    "issues": [],
+    "overflow": false,
+    "path": "/en/services/commercial-construction",
+    "width": 768
+  },
+  {
+    "checked": 77,
+    "issues": [
+      {
+        "classes": "",
+        "font": "14.4px",
+        "lines": [
+          "Müssen sich Umfang oder Lösungen während der Arbeiten ändern, stimmen wir dies zuerst mit Ihnen",
+          "ab."
+        ],
+        "shortLines": [
+          "ab."
+        ],
+        "splitWords": [],
+        "tag": "P",
+        "text": "Müssen sich Umfang oder Lösungen während der Arbeiten ändern, stimmen wir dies zuerst mit Ihnen ab.",
+        "width": 673
+      }
+    ],
+    "overflow": false,
+    "path": "/de/services/commercial-construction",
+    "width": 768
+  },
+  {
+    "checked": 77,
+    "issues": [],
+    "overflow": false,
+    "path": "/fr/services/commercial-construction",
+    "width": 768
+  },
+  {
+    "checked": 77,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/services/design",
+    "width": 768
+  },
+  {
+    "checked": 77,
+    "issues": [],
+    "overflow": false,
+    "path": "/ru/services/design",
+    "width": 768
+  },
+  {
+    "checked": 77,
+    "issues": [],
+    "overflow": false,
+    "path": "/en/services/design",
+    "width": 768
+  },
+  {
+    "checked": 77,
+    "issues": [
+      {
+        "classes": "",
+        "font": "14.4px",
+        "lines": [
+          "Müssen sich Umfang oder Lösungen während der Arbeiten ändern, stimmen wir dies zuerst mit Ihnen",
+          "ab."
+        ],
+        "shortLines": [
+          "ab."
+        ],
+        "splitWords": [],
+        "tag": "P",
+        "text": "Müssen sich Umfang oder Lösungen während der Arbeiten ändern, stimmen wir dies zuerst mit Ihnen ab.",
+        "width": 673
+      }
+    ],
+    "overflow": false,
+    "path": "/de/services/design",
+    "width": 768
+  },
+  {
+    "checked": 77,
+    "issues": [],
+    "overflow": false,
+    "path": "/fr/services/design",
+    "width": 768
+  },
+  {
+    "checked": 68,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/services/monolithic-work",
+    "width": 768
+  },
+  {
+    "checked": 68,
+    "issues": [],
+    "overflow": false,
+    "path": "/ru/services/monolithic-work",
+    "width": 768
+  },
+  {
+    "checked": 68,
+    "issues": [],
+    "overflow": false,
+    "path": "/en/services/monolithic-work",
+    "width": 768
+  },
+  {
+    "checked": 68,
+    "issues": [
+      {
+        "classes": "",
+        "font": "14.4px",
+        "lines": [
+          "Müssen sich Umfang oder Lösungen während der Arbeiten ändern, stimmen wir dies zuerst mit Ihnen",
+          "ab."
+        ],
+        "shortLines": [
+          "ab."
+        ],
+        "splitWords": [],
+        "tag": "P",
+        "text": "Müssen sich Umfang oder Lösungen während der Arbeiten ändern, stimmen wir dies zuerst mit Ihnen ab.",
+        "width": 673
+      }
+    ],
+    "overflow": false,
+    "path": "/de/services/monolithic-work",
+    "width": 768
+  },
+  {
+    "checked": 68,
+    "issues": [],
+    "overflow": false,
+    "path": "/fr/services/monolithic-work",
+    "width": 768
+  },
+  {
+    "checked": 66,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/services/facade-and-roofing",
+    "width": 768
+  },
+  {
+    "checked": 66,
+    "issues": [],
+    "overflow": false,
+    "path": "/ru/services/facade-and-roofing",
+    "width": 768
+  },
+  {
+    "checked": 66,
+    "issues": [],
+    "overflow": false,
+    "path": "/en/services/facade-and-roofing",
+    "width": 768
+  },
+  {
+    "checked": 66,
+    "issues": [
+      {
+        "classes": "",
+        "font": "14.4px",
+        "lines": [
+          "Müssen sich Umfang oder Lösungen während der Arbeiten ändern, stimmen wir dies zuerst mit Ihnen",
+          "ab."
+        ],
+        "shortLines": [
+          "ab."
+        ],
+        "splitWords": [],
+        "tag": "P",
+        "text": "Müssen sich Umfang oder Lösungen während der Arbeiten ändern, stimmen wir dies zuerst mit Ihnen ab.",
+        "width": 673
+      }
+    ],
+    "overflow": false,
+    "path": "/de/services/facade-and-roofing",
+    "width": 768
+  },
+  {
+    "checked": 66,
+    "issues": [],
+    "overflow": false,
+    "path": "/fr/services/facade-and-roofing",
+    "width": 768
+  },
+  {
+    "checked": 121,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/services/apartment-renovation-yerevan",
+    "width": 768
+  },
+  {
+    "checked": 121,
+    "issues": [],
+    "overflow": false,
+    "path": "/ru/services/apartment-renovation-yerevan",
+    "width": 768
+  },
+  {
+    "checked": 121,
+    "issues": [],
+    "overflow": false,
+    "path": "/en/services/apartment-renovation-yerevan",
+    "width": 768
+  },
+  {
+    "checked": 121,
+    "issues": [
+      {
+        "classes": "",
+        "font": "14.4px",
+        "lines": [
+          "Müssen sich Umfang oder Lösungen während der Arbeiten ändern, stimmen wir dies zuerst mit Ihnen",
+          "ab."
+        ],
+        "shortLines": [
+          "ab."
+        ],
+        "splitWords": [],
+        "tag": "P",
+        "text": "Müssen sich Umfang oder Lösungen während der Arbeiten ändern, stimmen wir dies zuerst mit Ihnen ab.",
+        "width": 673
+      }
+    ],
+    "overflow": false,
+    "path": "/de/services/apartment-renovation-yerevan",
+    "width": 768
+  },
+  {
+    "checked": 121,
+    "issues": [],
+    "overflow": false,
+    "path": "/fr/services/apartment-renovation-yerevan",
+    "width": 768
+  },
+  {
+    "checked": 99,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/services/new-build-renovation",
+    "width": 768
+  },
+  {
+    "checked": 99,
+    "issues": [],
+    "overflow": false,
+    "path": "/ru/services/new-build-renovation",
+    "width": 768
+  },
+  {
+    "checked": 99,
+    "issues": [],
+    "overflow": false,
+    "path": "/en/services/new-build-renovation",
+    "width": 768
+  },
+  {
+    "checked": 99,
+    "issues": [
+      {
+        "classes": "",
+        "font": "14.4px",
+        "lines": [
+          "Müssen sich Umfang oder Lösungen während der Arbeiten ändern, stimmen wir dies zuerst mit Ihnen",
+          "ab."
+        ],
+        "shortLines": [
+          "ab."
+        ],
+        "splitWords": [],
+        "tag": "P",
+        "text": "Müssen sich Umfang oder Lösungen während der Arbeiten ändern, stimmen wir dies zuerst mit Ihnen ab.",
+        "width": 673
+      }
+    ],
+    "overflow": false,
+    "path": "/de/services/new-build-renovation",
+    "width": 768
+  },
+  {
+    "checked": 99,
+    "issues": [],
+    "overflow": false,
+    "path": "/fr/services/new-build-renovation",
+    "width": 768
+  },
+  {
+    "checked": 106,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/services/turnkey-renovation",
+    "width": 768
+  },
+  {
+    "checked": 106,
+    "issues": [],
+    "overflow": false,
+    "path": "/ru/services/turnkey-renovation",
+    "width": 768
+  },
+  {
+    "checked": 106,
+    "issues": [],
+    "overflow": false,
+    "path": "/en/services/turnkey-renovation",
+    "width": 768
+  },
+  {
+    "checked": 106,
+    "issues": [
+      {
+        "classes": "",
+        "font": "14.4px",
+        "lines": [
+          "Müssen sich Umfang oder Lösungen während der Arbeiten ändern, stimmen wir dies zuerst mit Ihnen",
+          "ab."
+        ],
+        "shortLines": [
+          "ab."
+        ],
+        "splitWords": [],
+        "tag": "P",
+        "text": "Müssen sich Umfang oder Lösungen während der Arbeiten ändern, stimmen wir dies zuerst mit Ihnen ab.",
+        "width": 673
+      }
+    ],
+    "overflow": false,
+    "path": "/de/services/turnkey-renovation",
+    "width": 768
+  },
+  {
+    "checked": 106,
+    "issues": [],
+    "overflow": false,
+    "path": "/fr/services/turnkey-renovation",
+    "width": 768
+  },
+  {
+    "checked": 86,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/prices",
+    "width": 768
+  },
+  {
+    "checked": 86,
+    "issues": [],
+    "overflow": false,
+    "path": "/ru/prices",
+    "width": 768
+  },
+  {
+    "checked": 86,
+    "issues": [],
+    "overflow": false,
+    "path": "/en/prices",
+    "width": 768
+  },
+  {
+    "checked": 86,
+    "issues": [],
+    "overflow": false,
+    "path": "/de/prices",
+    "width": 768
+  },
+  {
+    "checked": 86,
+    "issues": [],
+    "overflow": false,
+    "path": "/fr/prices",
+    "width": 768
+  },
+  {
+    "checked": 100,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/services/apartment-interior-design-yerevan",
+    "width": 768
+  },
+  {
+    "checked": 100,
+    "issues": [],
+    "overflow": false,
+    "path": "/ru/services/apartment-interior-design-yerevan",
+    "width": 768
+  },
+  {
+    "checked": 100,
+    "issues": [],
+    "overflow": false,
+    "path": "/en/services/apartment-interior-design-yerevan",
+    "width": 768
+  },
+  {
+    "checked": 100,
+    "issues": [
+      {
+        "classes": "",
+        "font": "14.4px",
+        "lines": [
+          "Müssen sich Umfang oder Lösungen während der Arbeiten ändern, stimmen wir dies zuerst mit Ihnen",
+          "ab."
+        ],
+        "shortLines": [
+          "ab."
+        ],
+        "splitWords": [],
+        "tag": "P",
+        "text": "Müssen sich Umfang oder Lösungen während der Arbeiten ändern, stimmen wir dies zuerst mit Ihnen ab.",
+        "width": 673
+      }
+    ],
+    "overflow": false,
+    "path": "/de/services/apartment-interior-design-yerevan",
+    "width": 768
+  },
+  {
+    "checked": 100,
+    "issues": [],
+    "overflow": false,
+    "path": "/fr/services/apartment-interior-design-yerevan",
+    "width": 768
+  },
+  {
+    "checked": 102,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/services/office-renovation-yerevan",
+    "width": 768
+  },
+  {
+    "checked": 102,
+    "issues": [],
+    "overflow": false,
+    "path": "/ru/services/office-renovation-yerevan",
+    "width": 768
+  },
+  {
+    "checked": 102,
+    "issues": [],
+    "overflow": false,
+    "path": "/en/services/office-renovation-yerevan",
+    "width": 768
+  },
+  {
+    "checked": 102,
+    "issues": [
+      {
+        "classes": "",
+        "font": "14.4px",
+        "lines": [
+          "Müssen sich Umfang oder Lösungen während der Arbeiten ändern, stimmen wir dies zuerst mit Ihnen",
+          "ab."
+        ],
+        "shortLines": [
+          "ab."
+        ],
+        "splitWords": [],
+        "tag": "P",
+        "text": "Müssen sich Umfang oder Lösungen während der Arbeiten ändern, stimmen wir dies zuerst mit Ihnen ab.",
+        "width": 673
+      },
+      {
+        "classes": "max-w-2xl pb-5 pr-9 text-sm leading-6 text-[var(--text-secondary)]  sm:text-base sm:leading-7",
+        "font": "14px",
+        "lines": [
+          "Der Zeitplan hängt von Bürogröße, nötigen Arbeiten und möglichen Einschränkungen der Arbeitszeiten",
+          "ab."
+        ],
+        "shortLines": [
+          "ab."
+        ],
+        "splitWords": [],
+        "tag": "P",
+        "text": "Der Zeitplan hängt von Bürogröße, nötigen Arbeiten und möglichen Einschränkungen der Arbeitszeiten ab.",
+        "width": 720
+      }
+    ],
+    "overflow": false,
+    "path": "/de/services/office-renovation-yerevan",
+    "width": 768
+  },
+  {
+    "checked": 102,
+    "issues": [],
+    "overflow": false,
+    "path": "/fr/services/office-renovation-yerevan",
+    "width": 768
+  },
+  {
+    "checked": 105,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/services/capital-renovation-yerevan",
+    "width": 768
+  },
+  {
+    "checked": 105,
+    "issues": [],
+    "overflow": false,
+    "path": "/ru/services/capital-renovation-yerevan",
+    "width": 768
+  },
+  {
+    "checked": 105,
+    "issues": [],
+    "overflow": false,
+    "path": "/en/services/capital-renovation-yerevan",
+    "width": 768
+  },
+  {
+    "checked": 105,
+    "issues": [
+      {
+        "classes": "",
+        "font": "14.4px",
+        "lines": [
+          "Müssen sich Umfang oder Lösungen während der Arbeiten ändern, stimmen wir dies zuerst mit Ihnen",
+          "ab."
+        ],
+        "shortLines": [
+          "ab."
+        ],
+        "splitWords": [],
+        "tag": "P",
+        "text": "Müssen sich Umfang oder Lösungen während der Arbeiten ändern, stimmen wir dies zuerst mit Ihnen ab.",
+        "width": 673
+      }
+    ],
+    "overflow": false,
+    "path": "/de/services/capital-renovation-yerevan",
+    "width": 768
+  },
+  {
+    "checked": 105,
+    "issues": [],
+    "overflow": false,
+    "path": "/fr/services/capital-renovation-yerevan",
+    "width": 768
+  },
+  {
+    "checked": 103,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/services/cosmetic-renovation-yerevan",
+    "width": 768
+  },
+  {
+    "checked": 103,
+    "issues": [],
+    "overflow": false,
+    "path": "/ru/services/cosmetic-renovation-yerevan",
+    "width": 768
+  },
+  {
+    "checked": 103,
+    "issues": [],
+    "overflow": false,
+    "path": "/en/services/cosmetic-renovation-yerevan",
+    "width": 768
+  },
+  {
+    "checked": 103,
+    "issues": [
+      {
+        "classes": "",
+        "font": "14.4px",
+        "lines": [
+          "Müssen sich Umfang oder Lösungen während der Arbeiten ändern, stimmen wir dies zuerst mit Ihnen",
+          "ab."
+        ],
+        "shortLines": [
+          "ab."
+        ],
+        "splitWords": [],
+        "tag": "P",
+        "text": "Müssen sich Umfang oder Lösungen während der Arbeiten ändern, stimmen wir dies zuerst mit Ihnen ab.",
+        "width": 673
+      }
+    ],
+    "overflow": false,
+    "path": "/de/services/cosmetic-renovation-yerevan",
+    "width": 768
+  },
+  {
+    "checked": 103,
+    "issues": [],
+    "overflow": false,
+    "path": "/fr/services/cosmetic-renovation-yerevan",
+    "width": 768
+  },
+  {
+    "checked": 63,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/renovation-estimate-yerevan",
+    "width": 768
+  },
+  {
+    "checked": 63,
+    "issues": [],
+    "overflow": false,
+    "path": "/ru/renovation-estimate-yerevan",
+    "width": 768
+  },
+  {
+    "checked": 63,
+    "issues": [],
+    "overflow": false,
+    "path": "/en/renovation-estimate-yerevan",
+    "width": 768
+  },
+  {
+    "checked": 63,
+    "issues": [],
+    "overflow": false,
+    "path": "/de/renovation-estimate-yerevan",
+    "width": 768
+  },
+  {
+    "checked": 63,
+    "issues": [],
+    "overflow": false,
+    "path": "/fr/renovation-estimate-yerevan",
+    "width": 768
+  },
+  {
+    "checked": 100,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/services/plumbing-work-yerevan",
+    "width": 768
+  },
+  {
+    "checked": 100,
+    "issues": [],
+    "overflow": false,
+    "path": "/ru/services/plumbing-work-yerevan",
+    "width": 768
+  },
+  {
+    "checked": 100,
+    "issues": [],
+    "overflow": false,
+    "path": "/en/services/plumbing-work-yerevan",
+    "width": 768
+  },
+  {
+    "checked": 100,
+    "issues": [
+      {
+        "classes": "",
+        "font": "14.4px",
+        "lines": [
+          "Müssen sich Umfang oder Lösungen während der Arbeiten ändern, stimmen wir dies zuerst mit Ihnen",
+          "ab."
+        ],
+        "shortLines": [
+          "ab."
+        ],
+        "splitWords": [],
+        "tag": "P",
+        "text": "Müssen sich Umfang oder Lösungen während der Arbeiten ändern, stimmen wir dies zuerst mit Ihnen ab.",
+        "width": 673
+      }
+    ],
+    "overflow": false,
+    "path": "/de/services/plumbing-work-yerevan",
+    "width": 768
+  },
+  {
+    "checked": 100,
+    "issues": [],
+    "overflow": false,
+    "path": "/fr/services/plumbing-work-yerevan",
+    "width": 768
+  },
+  {
+    "checked": 100,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/services/electrical-work-yerevan",
+    "width": 768
+  },
+  {
+    "checked": 100,
+    "issues": [],
+    "overflow": false,
+    "path": "/ru/services/electrical-work-yerevan",
+    "width": 768
+  },
+  {
+    "checked": 100,
+    "issues": [],
+    "overflow": false,
+    "path": "/en/services/electrical-work-yerevan",
+    "width": 768
+  },
+  {
+    "checked": 100,
+    "issues": [
+      {
+        "classes": "",
+        "font": "14.4px",
+        "lines": [
+          "Müssen sich Umfang oder Lösungen während der Arbeiten ändern, stimmen wir dies zuerst mit Ihnen",
+          "ab."
+        ],
+        "shortLines": [
+          "ab."
+        ],
+        "splitWords": [],
+        "tag": "P",
+        "text": "Müssen sich Umfang oder Lösungen während der Arbeiten ändern, stimmen wir dies zuerst mit Ihnen ab.",
+        "width": 673
+      }
+    ],
+    "overflow": false,
+    "path": "/de/services/electrical-work-yerevan",
+    "width": 768
+  },
+  {
+    "checked": 100,
+    "issues": [],
+    "overflow": false,
+    "path": "/fr/services/electrical-work-yerevan",
+    "width": 768
+  },
+  {
+    "checked": 132,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy",
+    "width": 1440
+  },
+  {
+    "checked": 132,
+    "issues": [],
+    "overflow": false,
+    "path": "/ru",
+    "width": 1440
+  },
+  {
+    "checked": 132,
+    "issues": [],
+    "overflow": false,
+    "path": "/en",
+    "width": 1440
+  },
+  {
+    "checked": 132,
+    "issues": [],
+    "overflow": false,
+    "path": "/de",
+    "width": 1440
+  },
+  {
+    "checked": 132,
+    "issues": [],
+    "overflow": false,
+    "path": "/fr",
+    "width": 1440
+  },
+  {
+    "checked": 69,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/services",
+    "width": 1440
+  },
+  {
+    "checked": 69,
+    "issues": [],
+    "overflow": false,
+    "path": "/ru/services",
+    "width": 1440
+  },
+  {
+    "checked": 69,
+    "issues": [],
+    "overflow": false,
+    "path": "/en/services",
+    "width": 1440
+  },
+  {
+    "checked": 69,
+    "issues": [],
+    "overflow": false,
+    "path": "/de/services",
+    "width": 1440
+  },
+  {
+    "checked": 69,
+    "issues": [],
+    "overflow": false,
+    "path": "/fr/services",
+    "width": 1440
+  },
+  {
+    "checked": 44,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/about",
+    "width": 1440
+  },
+  {
+    "checked": 44,
+    "issues": [],
+    "overflow": false,
+    "path": "/ru/about",
+    "width": 1440
+  },
+  {
+    "checked": 44,
+    "issues": [],
+    "overflow": false,
+    "path": "/en/about",
+    "width": 1440
+  },
+  {
+    "checked": 44,
+    "issues": [],
+    "overflow": false,
+    "path": "/de/about",
+    "width": 1440
+  },
+  {
+    "checked": 44,
+    "issues": [],
+    "overflow": false,
+    "path": "/fr/about",
+    "width": 1440
+  },
+  {
+    "checked": 28,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/contacts",
+    "width": 1440
+  },
+  {
+    "checked": 28,
+    "issues": [],
+    "overflow": false,
+    "path": "/ru/contacts",
+    "width": 1440
+  },
+  {
+    "checked": 28,
+    "issues": [],
+    "overflow": false,
+    "path": "/en/contacts",
+    "width": 1440
+  },
+  {
+    "checked": 28,
+    "issues": [],
+    "overflow": false,
+    "path": "/de/contacts",
+    "width": 1440
+  },
+  {
+    "checked": 28,
+    "issues": [],
+    "overflow": false,
+    "path": "/fr/contacts",
+    "width": 1440
+  },
+  {
+    "checked": 43,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/calculator",
+    "width": 1440
+  },
+  {
+    "checked": 43,
+    "issues": [],
+    "overflow": false,
+    "path": "/ru/calculator",
+    "width": 1440
+  },
+  {
+    "checked": 43,
+    "issues": [],
+    "overflow": false,
+    "path": "/en/calculator",
+    "width": 1440
+  },
+  {
+    "checked": 43,
+    "issues": [],
+    "overflow": false,
+    "path": "/de/calculator",
+    "width": 1440
+  },
+  {
+    "checked": 43,
+    "issues": [],
+    "overflow": false,
+    "path": "/fr/calculator",
+    "width": 1440
+  },
+  {
+    "checked": 35,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/privacy",
+    "width": 1440
+  },
+  {
+    "checked": 35,
+    "issues": [],
+    "overflow": false,
+    "path": "/ru/privacy",
+    "width": 1440
+  },
+  {
+    "checked": 35,
+    "issues": [],
+    "overflow": false,
+    "path": "/en/privacy",
+    "width": 1440
+  },
+  {
+    "checked": 35,
+    "issues": [],
+    "overflow": false,
+    "path": "/de/privacy",
+    "width": 1440
+  },
+  {
+    "checked": 35,
+    "issues": [],
+    "overflow": false,
+    "path": "/fr/privacy",
+    "width": 1440
+  },
+  {
+    "checked": 113,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/services/renovation",
+    "width": 1440
+  },
+  {
+    "checked": 107,
+    "issues": [],
+    "overflow": false,
+    "path": "/ru/services/renovation",
+    "width": 1440
+  },
+  {
+    "checked": 107,
+    "issues": [],
+    "overflow": false,
+    "path": "/en/services/renovation",
+    "width": 1440
+  },
+  {
+    "checked": 107,
+    "issues": [],
+    "overflow": false,
+    "path": "/de/services/renovation",
+    "width": 1440
+  },
+  {
+    "checked": 107,
+    "issues": [],
+    "overflow": false,
+    "path": "/fr/services/renovation",
+    "width": 1440
+  },
+  {
+    "checked": 86,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/services/house-construction",
+    "width": 1440
+  },
+  {
+    "checked": 79,
+    "issues": [],
+    "overflow": false,
+    "path": "/ru/services/house-construction",
+    "width": 1440
+  },
+  {
+    "checked": 79,
+    "issues": [],
+    "overflow": false,
+    "path": "/en/services/house-construction",
+    "width": 1440
+  },
+  {
+    "checked": 79,
+    "issues": [],
+    "overflow": false,
+    "path": "/de/services/house-construction",
+    "width": 1440
+  },
+  {
+    "checked": 79,
+    "issues": [],
+    "overflow": false,
+    "path": "/fr/services/house-construction",
+    "width": 1440
+  },
+  {
+    "checked": 93,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/services/interior-design",
+    "width": 1440
+  },
+  {
+    "checked": 89,
+    "issues": [],
+    "overflow": false,
+    "path": "/ru/services/interior-design",
+    "width": 1440
+  },
+  {
+    "checked": 89,
+    "issues": [],
+    "overflow": false,
+    "path": "/en/services/interior-design",
+    "width": 1440
+  },
+  {
+    "checked": 89,
+    "issues": [],
+    "overflow": false,
+    "path": "/de/services/interior-design",
+    "width": 1440
+  },
+  {
+    "checked": 89,
+    "issues": [],
+    "overflow": false,
+    "path": "/fr/services/interior-design",
+    "width": 1440
+  },
+  {
+    "checked": 81,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/services/commercial-construction",
+    "width": 1440
+  },
+  {
+    "checked": 77,
+    "issues": [],
+    "overflow": false,
+    "path": "/ru/services/commercial-construction",
+    "width": 1440
+  },
+  {
+    "checked": 77,
+    "issues": [],
+    "overflow": false,
+    "path": "/en/services/commercial-construction",
+    "width": 1440
+  },
+  {
+    "checked": 77,
+    "issues": [],
+    "overflow": false,
+    "path": "/de/services/commercial-construction",
+    "width": 1440
+  },
+  {
+    "checked": 77,
+    "issues": [],
+    "overflow": false,
+    "path": "/fr/services/commercial-construction",
+    "width": 1440
+  },
+  {
+    "checked": 77,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/services/design",
+    "width": 1440
+  },
+  {
+    "checked": 77,
+    "issues": [],
+    "overflow": false,
+    "path": "/ru/services/design",
+    "width": 1440
+  },
+  {
+    "checked": 77,
+    "issues": [],
+    "overflow": false,
+    "path": "/en/services/design",
+    "width": 1440
+  },
+  {
+    "checked": 77,
+    "issues": [],
+    "overflow": false,
+    "path": "/de/services/design",
+    "width": 1440
+  },
+  {
+    "checked": 77,
+    "issues": [],
+    "overflow": false,
+    "path": "/fr/services/design",
+    "width": 1440
+  },
+  {
+    "checked": 68,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/services/monolithic-work",
+    "width": 1440
+  },
+  {
+    "checked": 68,
+    "issues": [],
+    "overflow": false,
+    "path": "/ru/services/monolithic-work",
+    "width": 1440
+  },
+  {
+    "checked": 68,
+    "issues": [],
+    "overflow": false,
+    "path": "/en/services/monolithic-work",
+    "width": 1440
+  },
+  {
+    "checked": 68,
+    "issues": [],
+    "overflow": false,
+    "path": "/de/services/monolithic-work",
+    "width": 1440
+  },
+  {
+    "checked": 68,
+    "issues": [],
+    "overflow": false,
+    "path": "/fr/services/monolithic-work",
+    "width": 1440
+  },
+  {
+    "checked": 66,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/services/facade-and-roofing",
+    "width": 1440
+  },
+  {
+    "checked": 66,
+    "issues": [],
+    "overflow": false,
+    "path": "/ru/services/facade-and-roofing",
+    "width": 1440
+  },
+  {
+    "checked": 66,
+    "issues": [],
+    "overflow": false,
+    "path": "/en/services/facade-and-roofing",
+    "width": 1440
+  },
+  {
+    "checked": 66,
+    "issues": [],
+    "overflow": false,
+    "path": "/de/services/facade-and-roofing",
+    "width": 1440
+  },
+  {
+    "checked": 66,
+    "issues": [],
+    "overflow": false,
+    "path": "/fr/services/facade-and-roofing",
+    "width": 1440
+  },
+  {
+    "checked": 121,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/services/apartment-renovation-yerevan",
+    "width": 1440
+  },
+  {
+    "checked": 121,
+    "issues": [],
+    "overflow": false,
+    "path": "/ru/services/apartment-renovation-yerevan",
+    "width": 1440
+  },
+  {
+    "checked": 121,
+    "issues": [],
+    "overflow": false,
+    "path": "/en/services/apartment-renovation-yerevan",
+    "width": 1440
+  },
+  {
+    "checked": 121,
+    "issues": [],
+    "overflow": false,
+    "path": "/de/services/apartment-renovation-yerevan",
+    "width": 1440
+  },
+  {
+    "checked": 121,
+    "issues": [],
+    "overflow": false,
+    "path": "/fr/services/apartment-renovation-yerevan",
+    "width": 1440
+  },
+  {
+    "checked": 99,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/services/new-build-renovation",
+    "width": 1440
+  },
+  {
+    "checked": 99,
+    "issues": [],
+    "overflow": false,
+    "path": "/ru/services/new-build-renovation",
+    "width": 1440
+  },
+  {
+    "checked": 99,
+    "issues": [],
+    "overflow": false,
+    "path": "/en/services/new-build-renovation",
+    "width": 1440
+  },
+  {
+    "checked": 99,
+    "issues": [],
+    "overflow": false,
+    "path": "/de/services/new-build-renovation",
+    "width": 1440
+  },
+  {
+    "checked": 99,
+    "issues": [],
+    "overflow": false,
+    "path": "/fr/services/new-build-renovation",
+    "width": 1440
+  },
+  {
+    "checked": 106,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/services/turnkey-renovation",
+    "width": 1440
+  },
+  {
+    "checked": 106,
+    "issues": [],
+    "overflow": false,
+    "path": "/ru/services/turnkey-renovation",
+    "width": 1440
+  },
+  {
+    "checked": 106,
+    "issues": [],
+    "overflow": false,
+    "path": "/en/services/turnkey-renovation",
+    "width": 1440
+  },
+  {
+    "checked": 106,
+    "issues": [],
+    "overflow": false,
+    "path": "/de/services/turnkey-renovation",
+    "width": 1440
+  },
+  {
+    "checked": 106,
+    "issues": [],
+    "overflow": false,
+    "path": "/fr/services/turnkey-renovation",
+    "width": 1440
+  },
+  {
+    "checked": 86,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/prices",
+    "width": 1440
+  },
+  {
+    "checked": 86,
+    "issues": [],
+    "overflow": false,
+    "path": "/ru/prices",
+    "width": 1440
+  },
+  {
+    "checked": 86,
+    "issues": [],
+    "overflow": false,
+    "path": "/en/prices",
+    "width": 1440
+  },
+  {
+    "checked": 86,
+    "issues": [],
+    "overflow": false,
+    "path": "/de/prices",
+    "width": 1440
+  },
+  {
+    "checked": 86,
+    "issues": [],
+    "overflow": false,
+    "path": "/fr/prices",
+    "width": 1440
+  },
+  {
+    "checked": 100,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/services/apartment-interior-design-yerevan",
+    "width": 1440
+  },
+  {
+    "checked": 100,
+    "issues": [],
+    "overflow": false,
+    "path": "/ru/services/apartment-interior-design-yerevan",
+    "width": 1440
+  },
+  {
+    "checked": 100,
+    "issues": [],
+    "overflow": false,
+    "path": "/en/services/apartment-interior-design-yerevan",
+    "width": 1440
+  },
+  {
+    "checked": 100,
+    "issues": [],
+    "overflow": false,
+    "path": "/de/services/apartment-interior-design-yerevan",
+    "width": 1440
+  },
+  {
+    "checked": 100,
+    "issues": [],
+    "overflow": false,
+    "path": "/fr/services/apartment-interior-design-yerevan",
+    "width": 1440
+  },
+  {
+    "checked": 102,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/services/office-renovation-yerevan",
+    "width": 1440
+  },
+  {
+    "checked": 102,
+    "issues": [],
+    "overflow": false,
+    "path": "/ru/services/office-renovation-yerevan",
+    "width": 1440
+  },
+  {
+    "checked": 102,
+    "issues": [],
+    "overflow": false,
+    "path": "/en/services/office-renovation-yerevan",
+    "width": 1440
+  },
+  {
+    "checked": 102,
+    "issues": [],
+    "overflow": false,
+    "path": "/de/services/office-renovation-yerevan",
+    "width": 1440
+  },
+  {
+    "checked": 102,
+    "issues": [],
+    "overflow": false,
+    "path": "/fr/services/office-renovation-yerevan",
+    "width": 1440
+  },
+  {
+    "checked": 105,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/services/capital-renovation-yerevan",
+    "width": 1440
+  },
+  {
+    "checked": 105,
+    "issues": [],
+    "overflow": false,
+    "path": "/ru/services/capital-renovation-yerevan",
+    "width": 1440
+  },
+  {
+    "checked": 105,
+    "issues": [],
+    "overflow": false,
+    "path": "/en/services/capital-renovation-yerevan",
+    "width": 1440
+  },
+  {
+    "checked": 105,
+    "issues": [],
+    "overflow": false,
+    "path": "/de/services/capital-renovation-yerevan",
+    "width": 1440
+  },
+  {
+    "checked": 105,
+    "issues": [],
+    "overflow": false,
+    "path": "/fr/services/capital-renovation-yerevan",
+    "width": 1440
+  },
+  {
+    "checked": 103,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/services/cosmetic-renovation-yerevan",
+    "width": 1440
+  },
+  {
+    "checked": 103,
+    "issues": [],
+    "overflow": false,
+    "path": "/ru/services/cosmetic-renovation-yerevan",
+    "width": 1440
+  },
+  {
+    "checked": 103,
+    "issues": [],
+    "overflow": false,
+    "path": "/en/services/cosmetic-renovation-yerevan",
+    "width": 1440
+  },
+  {
+    "checked": 103,
+    "issues": [],
+    "overflow": false,
+    "path": "/de/services/cosmetic-renovation-yerevan",
+    "width": 1440
+  },
+  {
+    "checked": 103,
+    "issues": [],
+    "overflow": false,
+    "path": "/fr/services/cosmetic-renovation-yerevan",
+    "width": 1440
+  },
+  {
+    "checked": 63,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/renovation-estimate-yerevan",
+    "width": 1440
+  },
+  {
+    "checked": 63,
+    "issues": [],
+    "overflow": false,
+    "path": "/ru/renovation-estimate-yerevan",
+    "width": 1440
+  },
+  {
+    "checked": 63,
+    "issues": [],
+    "overflow": false,
+    "path": "/en/renovation-estimate-yerevan",
+    "width": 1440
+  },
+  {
+    "checked": 63,
+    "issues": [],
+    "overflow": false,
+    "path": "/de/renovation-estimate-yerevan",
+    "width": 1440
+  },
+  {
+    "checked": 63,
+    "issues": [],
+    "overflow": false,
+    "path": "/fr/renovation-estimate-yerevan",
+    "width": 1440
+  },
+  {
+    "checked": 100,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/services/plumbing-work-yerevan",
+    "width": 1440
+  },
+  {
+    "checked": 100,
+    "issues": [],
+    "overflow": false,
+    "path": "/ru/services/plumbing-work-yerevan",
+    "width": 1440
+  },
+  {
+    "checked": 100,
+    "issues": [],
+    "overflow": false,
+    "path": "/en/services/plumbing-work-yerevan",
+    "width": 1440
+  },
+  {
+    "checked": 100,
+    "issues": [],
+    "overflow": false,
+    "path": "/de/services/plumbing-work-yerevan",
+    "width": 1440
+  },
+  {
+    "checked": 100,
+    "issues": [],
+    "overflow": false,
+    "path": "/fr/services/plumbing-work-yerevan",
+    "width": 1440
+  },
+  {
+    "checked": 100,
+    "issues": [],
+    "overflow": false,
+    "path": "/hy/services/electrical-work-yerevan",
+    "width": 1440
+  },
+  {
+    "checked": 100,
+    "issues": [],
+    "overflow": false,
+    "path": "/ru/services/electrical-work-yerevan",
+    "width": 1440
+  },
+  {
+    "checked": 100,
+    "issues": [],
+    "overflow": false,
+    "path": "/en/services/electrical-work-yerevan",
+    "width": 1440
+  },
+  {
+    "checked": 100,
+    "issues": [],
+    "overflow": false,
+    "path": "/de/services/electrical-work-yerevan",
+    "width": 1440
+  },
+  {
+    "checked": 100,
+    "issues": [],
+    "overflow": false,
+    "path": "/fr/services/electrical-work-yerevan",
+    "width": 1440
+  }
+]

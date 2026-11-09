@@ -75,6 +75,7 @@ export async function crawlSeo({
   locales,
   organizationsByLocale,
   pageExpectations = {},
+  imageDisclosure,
 }) {
   const robotsResponse = await fetch(new URL("/robots.txt", base));
   assert.equal(robotsResponse.status, 200, "robots.txt status");
@@ -213,10 +214,6 @@ export async function crawlSeo({
                 image.alt,
                 `Incorrect ${slot} alt: ${path}`
               );
-              assert(
-                section[0].includes(image.caption),
-                `Missing ${slot} caption: ${path}`
-              );
               if (slot === "hero") {
                 assert.equal(
                   photo.loading,
@@ -273,6 +270,12 @@ export async function crawlSeo({
         const footer =
           page.document.match(/<footer\b[^>]*>([\s\S]*?)<\/footer>/i)?.[1] ??
           "";
+        assert(
+          parseSeoHtml(`<main>${footer}</main>`).mainText.includes(
+            imageDisclosure[language]
+          ),
+          `Missing site-wide illustration disclosure: ${path}`
+        );
         for (const destination of [apartmentPath, housePath]) {
           assert(
             footer.includes(`href="${destination}"`),
@@ -291,7 +294,7 @@ export async function crawlSeo({
           if (path === `/${language}`) {
             const firstServiceCard =
               main.match(
-                /<article\b[^>]*class="[^"]*motion-service-card[^"]*"[^>]*>([\s\S]*?)<\/article>/i
+                /<article\b[^>]*data-service-card="[^"]+"[^>]*>([\s\S]*?)<\/article>/i
               )?.[1] ?? "";
             assert(
               firstServiceCard.includes(`href="${apartmentPath}"`),

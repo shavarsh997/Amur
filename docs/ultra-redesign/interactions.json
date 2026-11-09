@@ -1,0 +1,18 @@
+{
+  "menuCta": {
+    "bodyOverflow": "hidden",
+    "contactLinks": [
+      "tel:+37455156615",
+      "https://wa.me/37455156615",
+      "mailto:info@shinex.am"
+    ],
+    "dialogs": 1
+  },
+  "contactDialogClosed": true,
+  "menuFocusWrap": true,
+  "menuEscapeRestoresFocus": true,
+  "backgroundScrollLocked": true,
+  "faqKeyboardToggle": true,
+  "localeLinksPreserveServicePath": true,
+  "noLiveFormSubmitted": true
+}

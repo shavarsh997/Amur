@@ -1,5 +1,5 @@
 import { ArrowUpRight } from "lucide-react";
-import Image from "next/image";
+import { ArchitecturalImage } from "@/components/ui/architectural-image";
 import Link from "next/link";
 import { Container } from "@/components/ui/container";
 import { getActiveServices } from "@/config/services.config";
@@ -22,7 +22,7 @@ export function SpecializedServices({
         <div className="technical-services__grid">
           {getActiveServices(locale)
             .filter((service) => service.category === "additional")
-            .map((service) => {
+            .map((service, index) => {
               const photo = getServiceMedia(service.slug, locale).details;
               return (
                 <Link
@@ -31,15 +31,17 @@ export function SpecializedServices({
                   key={service.slug}
                 >
                   <div className="technical-service__photo">
-                    <Image
-                      src={photo.src}
-                      alt={photo.alt}
-                      fill
-                      sizes="(max-width: 959px) calc(100vw - 48px), 30vw"
-                      className="object-cover"
+                    <ArchitecturalImage
+                      image={photo}
+                      sizes="(max-width: 767px) 100vw, 45vw"
                     />
-                    <span className="media-caption">{photo.caption}</span>
                   </div>
+                  <span
+                    className="technical-service__number"
+                    aria-hidden="true"
+                  >
+                    0{index + 1}
+                  </span>
                   <h3>{service.content.title}</h3>
                   <p>{service.content.shortDescription}</p>
                   <span className="technical-service__link">

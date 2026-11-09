@@ -1,27 +1,11 @@
-import {
-  BadgeCheck,
-  CalendarCheck,
-  FileCheck2,
-  Map,
-  ReceiptText,
-  ShieldCheck,
-  type LucideIcon,
-} from "lucide-react";
-
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
+import { ArchitecturalImage } from "@/components/ui/architectural-image";
+import { getServiceMedia } from "@/config/service-media.config";
+import styles from "./editorial.module.css";
 import { operationsConfig } from "@/config/operations.config";
 import Link from "next/link";
 import type { Dictionary, Locale } from "@/types";
-
-const icons: LucideIcon[] = [
-  FileCheck2,
-  ReceiptText,
-  CalendarCheck,
-  BadgeCheck,
-  ShieldCheck,
-  Map,
-];
 
 export function WhyUs({
   dictionary,
@@ -30,47 +14,43 @@ export function WhyUs({
   dictionary: Dictionary;
   locale: Locale;
 }) {
+  const image = getServiceMedia("monolithic-work", locale).quality;
   return (
-    <section className="bg-[var(--brand-surface-warm)] py-section">
-      <Container>
-        <SectionHeading
-          align="left"
-          description={dictionary.whyUs.description}
-          eyebrow={dictionary.whyUs.eyebrow}
-          title={dictionary.whyUs.title}
-        />
-        <div className="content-benefits content-grid-three mt-8 grid border-t border-[var(--border)] sm:grid-cols-2 lg:grid-cols-3">
+    <section className={styles.why}>
+      <Container className={styles.whyGrid}>
+        <div>
+          <SectionHeading
+            align="left"
+            description={dictionary.whyUs.description}
+            eyebrow={dictionary.whyUs.eyebrow}
+            title={dictionary.whyUs.title}
+          />
+          <figure className={styles.whyPhoto}>
+            <ArchitecturalImage
+              image={image}
+              sizes="(max-width: 767px) 100vw, 45vw"
+            />
+          </figure>
+        </div>
+        <div className={styles.benefits}>
           {operationsConfig.benefits.map((benefitKey, index) => {
             const item = dictionary.whyUs.items[index];
             if (!item) return null;
-            const Icon = icons[index] ?? BadgeCheck;
 
             return (
-              <article
-                className="flex gap-3 border-b border-[var(--border)] py-5 sm:block sm:p-6 lg:[&:nth-child(3n+2)]:border-x lg:[&:nth-child(3n+2)]:px-7"
-                key={benefitKey}
-              >
-                <span className="grid size-9 shrink-0 place-items-center text-[var(--brand-copper)] sm:size-10">
-                  <Icon aria-hidden="true" className="size-5 stroke-[1.35]" />
-                </span>
+              <article key={benefitKey}>
+                <span aria-hidden="true">0{index + 1}</span>
                 <div>
-                  <h3 className="text-[15px] font-semibold tracking-[-0.02em] text-[var(--text-primary)] sm:mt-3 sm:text-lg">
-                    {item.title}
-                  </h3>
-                  <p className="mt-1 text-xs leading-5 text-[var(--text-secondary)] sm:mt-2 sm:text-sm sm:leading-6">
-                    {item.description}
-                  </p>
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
                 </div>
               </article>
             );
           })}
+          <Link href={`/${locale}/about`} className={styles.aboutLink}>
+            {dictionary.about.eyebrow}
+          </Link>
         </div>
-        <Link
-          href={`/${locale}/about`}
-          className="mt-6 inline-flex rounded-sm font-semibold text-[var(--text-primary)] underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4"
-        >
-          {dictionary.about.eyebrow}
-        </Link>
       </Container>
     </section>
   );

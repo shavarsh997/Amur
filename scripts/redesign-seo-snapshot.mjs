@@ -9,7 +9,7 @@ import { createTypeScriptLoader } from "./lib/load-typescript.mjs";
 // Usage: node scripts/redesign-seo-snapshot.mjs before|after
 const phase = process.argv[2];
 assert(["before", "after"].includes(phase));
-const directory = "docs/redesign";
+const directory = process.argv[3] ?? "docs/redesign";
 const load = createTypeScriptLoader(process.cwd());
 const sitemap = load("app/sitemap").default();
 const digest = (value) => createHash("sha256").update(value).digest("hex");

@@ -6,6 +6,7 @@ import Link from "next/link";
 import { ContactTrigger } from "@/components/forms/contact-dialog";
 import type { Locale } from "@/types";
 import type { ServiceConfig, ServiceContent } from "@/types/service";
+import { ArchitecturalImage } from "@/components/ui/architectural-image";
 
 type ServiceCardProps = {
   service: ServiceConfig;
@@ -15,6 +16,7 @@ type ServiceCardProps = {
   contactLabel: string;
   href?: string;
   mediaSlug?: string;
+  gallery?: boolean;
 };
 
 export function ServiceCard({
@@ -25,9 +27,48 @@ export function ServiceCard({
   contactLabel,
   href = `/${locale}/services/${service.slug}`,
   mediaSlug = service.slug,
+  gallery = false,
 }: ServiceCardProps) {
   const ctaLabel = content.primaryCta ?? learnMore;
   const media = getServiceMedia(mediaSlug, locale);
+  if (gallery) {
+    return (
+      <article className="direction-card" data-service-card={mediaSlug}>
+        <Link className="direction-card__visual" href={href}>
+          <ArchitecturalImage
+            image={media.card}
+            sizes="(max-width: 767px) 100vw, (max-width: 1439px) 58vw, 780px"
+          />
+          <span className="direction-card__number" aria-hidden="true">
+            {String(service.order).padStart(2, "0")}
+          </span>
+          <ArrowRight
+            className="direction-card__arrow"
+            aria-hidden="true"
+            size={28}
+            strokeWidth={1}
+          />
+          <div className="direction-card__title">
+            <h3>{content.title}</h3>
+          </div>
+        </Link>
+        <div className="direction-card__copy">
+          <p>{content.shortDescription}</p>
+          {service.ctaKind === "calculator" || service.ctaKind === "contact" ? (
+            <ContactTrigger
+              size="compact"
+              label={content.primaryCta ?? contactLabel}
+            />
+          ) : (
+            <Link href={href}>
+              {ctaLabel}
+              <ArrowRight aria-hidden="true" size={16} />
+            </Link>
+          )}
+        </div>
+      </article>
+    );
+  }
   const photo =
     ["apartment-renovation-yerevan", "interior-design"].includes(mediaSlug) ||
     media.hero.src.startsWith("/")
@@ -36,6 +77,7 @@ export function ServiceCard({
 
   return (
     <article
+      data-service-card={mediaSlug}
       className="motion-service-card layout-region group h-full overflow-hidden rounded-xl border border-[var(--border)] bg-white transition-colors hover:border-[var(--border-strong)]"
       data-motion="reveal"
     >
@@ -53,7 +95,6 @@ export function ServiceCard({
               src={photo.src}
             />
           </div>
-          <span className="media-caption">{photo.caption}</span>
         </div>
         <div className="service-card-copy flex flex-col items-start">
           <span className="text-sm font-bold tracking-[0.14em] text-[var(--brand-copper-text)]">

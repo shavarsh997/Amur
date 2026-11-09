@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-11-09T22:23:09.170Z",
+  "capturedAt": "2026-11-09T23:21:42.046Z",
   "method": "Next.js production prerendered HTML",
   "sitemap": [
     {
@@ -2003,6 +2003,7 @@
         }
       ],
       "internalLinks": [
+        "#company-introduction",
         "#main-content",
         "/de",
         "/en",
@@ -2035,6 +2036,7 @@
       ],
       "textBlocks": [
         "Վերանորոգման և շինարարական ծառայություններ",
+        "Վերանորոգում, ինտերիերի դիզայն և շինարարություն Հայաստանում։",
         "Կառուցում ենք առանձնատներ, վերանորոգում բնակարաններ ու բիզնես տարածքներ, մշակում ինտերիերի դիզայն։ Աշխատում ենք Երևանում և Հայաստանի մարզերում։ Սկզբում ուսումնասիրում ենք տարածքն ու ձեր պահանջները, ապա որոշում աշխատանքների ծավալը և կազմում նախնական հաշվարկ։",
         "Հիմնական ծառայություններ",
         "Ծառայություններ բնակարանի, տան և բիզնես տարածքի համար",
@@ -2135,8 +2137,8 @@
         "Նախատեսո՞ւմ եք վերանորոգում կամ շինարարություն",
         "Ուղարկեք նախագծի հիմնական տվյալները, և կառաջարկենք՝ սկսել նախնական հաշվարկից, թե օբյեկտի զննումից։"
       ],
-      "htmlBytes": 228633,
-      "mainTextLength": 9466
+      "htmlBytes": 234004,
+      "mainTextLength": 9664
     },
     {
       "path": "/ru",
@@ -2253,6 +2255,7 @@
         }
       ],
       "internalLinks": [
+        "#company-introduction",
         "#main-content",
         "/de",
         "/en",
@@ -2285,6 +2288,7 @@
       ],
       "textBlocks": [
         "Услуги ремонта и строительства",
+        "Ремонт, дизайн интерьера и строительство в Армении.",
         "Строим частные дома, ремонтируем квартиры и помещения для бизнеса, разрабатываем интерьеры. Начинаем с вашей задачи: изучаем объект, определяем необходимые работы и готовим предварительный расчёт.",
         "Основные услуги",
         "Услуги для квартиры, дома и бизнеса",
@@ -2386,8 +2390,8 @@
         "Планируете ремонт или строительство?",
         "Отправьте основные данные проекта, и мы определим подходящий следующий шаг: расчёт или осмотр."
       ],
-      "htmlBytes": 220528,
-      "mainTextLength": 7736
+      "htmlBytes": 225936,
+      "mainTextLength": 7926
     },
     {
       "path": "/en",
@@ -2504,6 +2508,7 @@
         }
       ],
       "internalLinks": [
+        "#company-introduction",
         "#main-content",
         "/de",
         "/en",
@@ -2536,6 +2541,7 @@
       ],
       "textBlocks": [
         "Renovation and construction services",
+        "Renovation, interior design, and construction in Armenia.",
         "From building a home to renovating an apartment or business premises, SHINEX helps plan and carry out your project. We start by reviewing the property and the work you need, then prepare an initial estimate.",
         "Main services",
         "Services for apartments, homes, and businesses",
@@ -2637,8 +2643,8 @@
         "Planning renovation or construction?",
         "Send the key project details and we will identify the right next step: an estimate or a site survey."
       ],
-      "htmlBytes": 202782,
-      "mainTextLength": 8051
+      "htmlBytes": 207904,
+      "mainTextLength": 8236
     },
     {
       "path": "/de",
@@ -2755,6 +2761,7 @@
         }
       ],
       "internalLinks": [
+        "#company-introduction",
         "#main-content",
         "/de",
         "/de/about",
@@ -2787,6 +2794,7 @@
       ],
       "textBlocks": [
         "Renovierungs- und Bauleistungen",
+        "Renovierung, Innenraumgestaltung und Bau in Armenien.",
         "Vom Hausbau bis zur Renovierung einer Wohnung oder von Geschäftsräumen begleitet SHINEX die Planung und Umsetzung Ihres Projekts. Zunächst prüfen wir das Objekt und Ihren Bedarf, dann erstellen wir eine erste Kostenschätzung.",
         "Unsere Hauptleistungen",
         "Leistungen für Wohnungen, Häuser und Unternehmen",
@@ -2888,8 +2896,8 @@
         "Planen Sie Renovierungs- oder Bauarbeiten?",
         "Senden Sie die wichtigsten Projektdaten. Wir bestimmen den passenden nächsten Schritt: eine Kostenschätzung oder eine Besichtigung."
       ],
-      "htmlBytes": 204409,
-      "mainTextLength": 8578
+      "htmlBytes": 209213,
+      "mainTextLength": 8776
     },
     {
       "path": "/fr",
@@ -3006,6 +3014,7 @@
         }
       ],
       "internalLinks": [
+        "#company-introduction",
         "#main-content",
         "/de",
         "/en",
@@ -3038,6 +3047,7 @@
       ],
       "textBlocks": [
         "Services de rénovation et de construction",
+        "Rénovation, aménagement intérieur et construction en Arménie.",
         "De la construction d’une maison à la rénovation d’un appartement ou de locaux professionnels, SHINEX vous accompagne dans la préparation et la réalisation de votre projet. Nous étudions d’abord le bien et les travaux souhaités, puis établissons une première estimation.",
         "Nos principaux services",
         "Des services pour les appartements, les maisons et les entreprises",
@@ -3139,8 +3149,8 @@
         "Vous prévoyez des travaux de rénovation ou de construction ?",
         "Envoyez les informations essentielles du projet ; nous définirons la prochaine étape adaptée : estimation ou visite sur place."
       ],
-      "htmlBytes": 207480,
-      "mainTextLength": 9360
+      "htmlBytes": 212448,
+      "mainTextLength": 9566
     },
     {
       "path": "/hy/services",
@@ -3340,7 +3350,7 @@
         "Ճակատային և տանիքային աշխատանքներ",
         "Շենքի ճակատի, տանիքի և պաշտպանական հանգույցների կառուցում ու նորոգում։"
       ],
-      "htmlBytes": 143665,
+      "htmlBytes": 148860,
       "mainTextLength": 4056
     },
     {
@@ -3541,7 +3551,7 @@
         "Фасадные и кровельные работы",
         "Устройство и обновление фасадов, кровли и защитных узлов здания."
       ],
-      "htmlBytes": 139875,
+      "htmlBytes": 145059,
       "mainTextLength": 3475
     },
     {
@@ -3742,7 +3752,7 @@
         "Facade and roofing work",
         "Construction and renewal of facades, roofs, and protective building details."
       ],
-      "htmlBytes": 129188,
+      "htmlBytes": 134596,
       "mainTextLength": 3734
     },
     {
@@ -3943,7 +3953,7 @@
         "Fassaden- und Dacharbeiten",
         "Bau und Erneuerung von Fassaden, Dächern und schützenden Gebäudedetails."
       ],
-      "htmlBytes": 129578,
+      "htmlBytes": 134751,
       "mainTextLength": 3771
     },
     {
@@ -4144,7 +4154,7 @@
         "Travaux de façade et de toiture",
         "Construction et rénovation de façades, de toitures et d’éléments de protection du bâtiment."
       ],
-      "htmlBytes": 131102,
+      "htmlBytes": 136275,
       "mainTextLength": 4079
     },
     {
@@ -4320,8 +4330,8 @@
         "Նախատեսո՞ւմ եք վերանորոգում կամ շինարարություն",
         "Ուղարկեք նախագծի հիմնական տվյալները, և կառաջարկենք՝ սկսել նախնական հաշվարկից, թե օբյեկտի զննումից։"
       ],
-      "htmlBytes": 88490,
-      "mainTextLength": 1753
+      "htmlBytes": 93745,
+      "mainTextLength": 1796
     },
     {
       "path": "/ru/about",
@@ -4496,8 +4506,8 @@
         "Планируете ремонт или строительство?",
         "Отправьте основные данные проекта, и мы определим подходящий следующий шаг: расчёт или осмотр."
       ],
-      "htmlBytes": 85299,
-      "mainTextLength": 1414
+      "htmlBytes": 90558,
+      "mainTextLength": 1458
     },
     {
       "path": "/en/about",
@@ -4672,8 +4682,8 @@
         "Planning renovation or construction?",
         "Send the key project details and we will identify the right next step: an estimate or a site survey."
       ],
-      "htmlBytes": 78629,
-      "mainTextLength": 1479
+      "htmlBytes": 83955,
+      "mainTextLength": 1522
     },
     {
       "path": "/de/about",
@@ -4848,8 +4858,8 @@
         "Planen Sie Renovierungs- oder Bauarbeiten?",
         "Senden Sie die wichtigsten Projektdaten. Wir bestimmen den passenden nächsten Schritt: eine Kostenschätzung oder eine Besichtigung."
       ],
-      "htmlBytes": 79250,
-      "mainTextLength": 1624
+      "htmlBytes": 84351,
+      "mainTextLength": 1673
     },
     {
       "path": "/fr/about",
@@ -5024,8 +5034,8 @@
         "Vous prévoyez des travaux de rénovation ou de construction ?",
         "Envoyez les informations essentielles du projet ; nous définirons la prochaine étape adaptée : estimation ou visite sur place."
       ],
-      "htmlBytes": 80455,
-      "mainTextLength": 1814
+      "htmlBytes": 85528,
+      "mainTextLength": 1862
     },
     {
       "path": "/hy/contacts",
@@ -5187,7 +5197,7 @@
         "Ընտրեք կապի հարմար տարբերակը",
         "Զանգահարեք, գրեք WhatsApp-ով կամ հաղորդագրություն ուղարկեք կայքի միջոցով։"
       ],
-      "htmlBytes": 83686,
+      "htmlBytes": 88881,
       "mainTextLength": 866
     },
     {
@@ -5350,7 +5360,7 @@
         "Выберите удобный способ связи",
         "Позвоните, напишите в WhatsApp или отправьте сообщение через сайт."
       ],
-      "htmlBytes": 82620,
+      "htmlBytes": 87804,
       "mainTextLength": 814
     },
     {
@@ -5513,7 +5523,7 @@
         "Choose a convenient way to contact us",
         "Call, message us on WhatsApp, or send us a message through the website."
       ],
-      "htmlBytes": 77552,
+      "htmlBytes": 82960,
       "mainTextLength": 830
     },
     {
@@ -5676,7 +5686,7 @@
         "Wählen Sie Ihren bevorzugten Kontaktweg",
         "Rufen Sie uns an, schreiben Sie über WhatsApp oder senden Sie eine Nachricht über die Website."
       ],
-      "htmlBytes": 78180,
+      "htmlBytes": 83353,
       "mainTextLength": 912
     },
     {
@@ -5839,7 +5849,7 @@
         "Choisissez le moyen de contact qui vous convient",
         "Appelez-nous, écrivez-nous sur WhatsApp ou envoyez un message via le site."
       ],
-      "htmlBytes": 78723,
+      "htmlBytes": 83896,
       "mainTextLength": 917
     },
     {
@@ -6017,7 +6027,7 @@
         "Ընտրեք տան կառուցում կամ ինտերիերի դիզայն և լրացրեք նախագծի տվյալները։ Հաշվարկի հարցման կոճակը կբացի կոնտակտային ձևը։ Ուղարկեք հայտը, և SHINEX-ը կուսումնասիրի այն ու կկապվի ձեզ հետ։ Հաշվիչն ավտոմատ գին չի ցուցադրում։",
         "Վերանորոգման գներ"
       ],
-      "htmlBytes": 107596,
+      "htmlBytes": 112851,
       "mainTextLength": 2220
     },
     {
@@ -6195,7 +6205,7 @@
         "Автоматический расчёт ремонта недоступен. Сообщите SHINEX площадь и состояние объекта, приложите план или фотографии и перечислите желаемые работы. Смету составляем после обсуждения проекта и осмотра объекта.",
         "Цены на ремонт"
       ],
-      "htmlBytes": 107074,
+      "htmlBytes": 112318,
       "mainTextLength": 2276
     },
     {
@@ -6373,7 +6383,7 @@
         "Select house construction or interior design and enter your project parameters. The request button opens a contact form. Submit your details and SHINEX will review the project and contact you about the estimate. The calculator does not display an automatic price.",
         "Renovation prices"
       ],
-      "htmlBytes": 96350,
+      "htmlBytes": 101818,
       "mainTextLength": 2284
     },
     {
@@ -6551,7 +6561,7 @@
         "Wählen Sie Hausbau oder Innenraumplanung und geben Sie Ihre Projektdaten ein. Die Schaltfläche zur Kostenanfrage öffnet ein Kontaktformular. Senden Sie die Anfrage; SHINEX prüft sie und meldet sich bei Ihnen. Der Rechner zeigt keinen automatischen Preis an.",
         "Renovierungspreise"
       ],
-      "htmlBytes": 97421,
+      "htmlBytes": 102654,
       "mainTextLength": 2372
     },
     {
@@ -6729,7 +6739,7 @@
         "Sélectionnez la construction de maison ou la conception intérieure et renseignez les paramètres. Le bouton de demande ouvre un formulaire de contact. Envoyez votre demande : SHINEX l’étudiera et vous contactera au sujet de l’estimation. Le calculateur n’affiche aucun prix automatique.",
         "Tarifs de rénovation"
       ],
-      "htmlBytes": 98545,
+      "htmlBytes": 103778,
       "mainTextLength": 2562
     },
     {
@@ -6882,7 +6892,7 @@
         "Եթե կայքին միացված է Google Analytics-ը, վիճակագրության մեջ գրանցվում են էջերի դիտումները և գործողությունները՝ կապի միջոցի ընտրությունը, ձևի լրացման սկիզբը, ուղարկման փորձը և հաստատված առաքումը։ Անունը, հեռախոսահամարը, նախագծի նկարագրությունը, անցման աղբյուրի ամբողջ հասցեն և URL-ի պարամետրերը չեն փոխանցվում այս իրադարձությունների հետ։",
         "Փոխանցվում են նաև էջի բեռնման արագության, արձագանքի և կայունության տեխնիկական ցուցանիշները (LCP, INP, CLS)։ Դրանց համար օգտագործվում է սկզբնական էջի հասցեն՝ առանց պարամետրերի․ ձևի դաշտերի բովանդակությունը և էջի տարրերը չեն ուղարկվում։"
       ],
-      "htmlBytes": 79937,
+      "htmlBytes": 85127,
       "mainTextLength": 1684
     },
     {
@@ -7035,7 +7045,7 @@
         "Если на сайте подключён Google Analytics, в статистику передаются просмотры страниц и события взаимодействия: контакт, начало заполнения, попытка отправки и подтверждённая доставка заявки. Имя, телефон, описание проекта, полный адрес источника перехода и параметры URL в эти события не передаются.",
         "Также передаются технические показатели скорости загрузки, отклика и стабильности страницы (LCP, INP, CLS). Для них используется адрес исходной страницы без параметров; содержимое полей формы и элементы страницы не отправляются."
       ],
-      "htmlBytes": 78255,
+      "htmlBytes": 83434,
       "mainTextLength": 1566
     },
     {
@@ -7188,7 +7198,7 @@
         "If Google Analytics is enabled, page views and interactions are recorded: contact clicks, form starts, submission attempts and acknowledged delivery. Names, phone numbers, project descriptions, full referrer addresses and URL parameters are not sent in these events.",
         "Technical measures of loading speed, responsiveness and page stability (LCP, INP, CLS) are also sent. They use the initial page address without URL parameters; form-field contents and page elements are not sent."
       ],
-      "htmlBytes": 70377,
+      "htmlBytes": 75780,
       "mainTextLength": 1502
     },
     {
@@ -7341,7 +7351,7 @@
         "Wenn Google Analytics aktiviert ist, werden Seitenaufrufe und Interaktionen erfasst: Kontaktklicks, Formularbeginn, Sendeversuche und bestätigte Zustellung. Namen, Telefonnummern, Projektbeschreibungen, vollständige Verweisadressen und URL-Parameter werden in diesen Ereignissen nicht übertragen.",
         "Zusätzlich werden technische Kennzahlen zu Ladegeschwindigkeit, Reaktionszeit und Seitenstabilität (LCP, INP, CLS) übermittelt. Verwendet wird die ursprüngliche Seitenadresse ohne URL-Parameter; Formularinhalte und Seitenelemente werden nicht gesendet."
       ],
-      "htmlBytes": 71591,
+      "htmlBytes": 76759,
       "mainTextLength": 1762
     },
     {
@@ -7494,7 +7504,7 @@
         "Si Google Analytics est activé, les pages vues et interactions sont enregistrées : clics de contact, début de formulaire, tentatives d’envoi et livraison confirmée. Les noms, numéros de téléphone, descriptions de projet, adresses complètes de provenance et paramètres d’URL ne sont pas transmis dans ces événements.",
         "Des indicateurs techniques de chargement, de réactivité et de stabilité de la page (LCP, INP, CLS) sont également transmis. Ils utilisent l’adresse initiale sans paramètres ; le contenu des formulaires et les éléments de la page ne sont pas envoyés."
       ],
-      "htmlBytes": 72241,
+      "htmlBytes": 77409,
       "mainTextLength": 1773
     },
     {
@@ -7776,7 +7786,7 @@
         "Աշխատանք Երևանում և մարզերում",
         "Աշխատում ենք ամբողջ Հայաստանում՝ Երևանում և բոլոր մարզերում։ Աշխատանքի պայմաններն ու արժեքը որոշվում են՝ հաշվի առնելով օբյեկտի գտնվելու վայրը և աշխատանքների ծավալը։"
       ],
-      "htmlBytes": 154590,
+      "htmlBytes": 161391,
       "mainTextLength": 7132
     },
     {
@@ -8052,7 +8062,7 @@
         "Работаем по всей Армении",
         "Принимаем проекты по всей Армении, включая Ереван, с учётом расположения объекта и объёма работ."
       ],
-      "htmlBytes": 148387,
+      "htmlBytes": 155134,
       "mainTextLength": 6016
     },
     {
@@ -8328,7 +8338,7 @@
         "Working across Armenia",
         "We accept projects across Armenia, including Yerevan, taking account of the property location and scope."
       ],
-      "htmlBytes": 132120,
+      "htmlBytes": 139091,
       "mainTextLength": 6156
     },
     {
@@ -8604,7 +8614,7 @@
         "In ganz Armenien tätig",
         "Wir übernehmen Projekte in ganz Armenien, einschließlich Eriwan, und berücksichtigen dabei Standort und Umfang."
       ],
-      "htmlBytes": 133873,
+      "htmlBytes": 140609,
       "mainTextLength": 6636
     },
     {
@@ -8880,7 +8890,7 @@
         "Interventions dans toute l’Arménie",
         "Nous prenons en charge des projets dans toute l’Arménie, notamment à Erevan, en tenant compte de la localisation du bien et des travaux prévus."
       ],
-      "htmlBytes": 136023,
+      "htmlBytes": 142759,
       "mainTextLength": 7129
     },
     {
@@ -9127,8 +9137,8 @@
         "Աշխատանք Երևանում և մարզերում",
         "Աշխատում ենք ամբողջ Հայաստանում՝ Երևանում և բոլոր մարզերում։ Աշխատանքի պայմաններն ու արժեքը որոշվում են՝ հաշվի առնելով օբյեկտի գտնվելու վայրը և աշխատանքների ծավալը։"
       ],
-      "htmlBytes": 130941,
-      "mainTextLength": 4622
+      "htmlBytes": 157167,
+      "mainTextLength": 5011
     },
     {
       "path": "/ru/services/house-construction",
@@ -9367,8 +9377,8 @@
         "Работаем по всей Армении",
         "Принимаем проекты по всей Армении, включая Ереван, с учётом расположения объекта и объёма работ."
       ],
-      "htmlBytes": 125479,
-      "mainTextLength": 3655
+      "htmlBytes": 151703,
+      "mainTextLength": 4050
     },
     {
       "path": "/en/services/house-construction",
@@ -9607,8 +9617,8 @@
         "Working across Armenia",
         "We accept projects across Armenia, including Yerevan, taking account of the property location and scope."
       ],
-      "htmlBytes": 113033,
-      "mainTextLength": 3657
+      "htmlBytes": 138374,
+      "mainTextLength": 4022
     },
     {
       "path": "/de/services/house-construction",
@@ -9847,8 +9857,8 @@
         "In ganz Armenien tätig",
         "Wir übernehmen Projekte in ganz Armenien, einschließlich Eriwan, und berücksichtigen dabei Standort und Umfang."
       ],
-      "htmlBytes": 113826,
-      "mainTextLength": 3847
+      "htmlBytes": 139004,
+      "mainTextLength": 4250
     },
     {
       "path": "/fr/services/house-construction",
@@ -10087,8 +10097,8 @@
         "Interventions dans toute l’Arménie",
         "Nous prenons en charge des projets dans toute l’Arménie, notamment à Erevan, en tenant compte de la localisation du bien et des travaux prévus."
       ],
-      "htmlBytes": 115769,
-      "mainTextLength": 4288
+      "htmlBytes": 141156,
+      "mainTextLength": 4713
     },
     {
       "path": "/hy/services/interior-design",
@@ -10346,8 +10356,8 @@
         "Աշխատանք Երևանում և մարզերում",
         "Աշխատում ենք ամբողջ Հայաստանում՝ Երևանում և բոլոր մարզերում։ Աշխատանքի պայմաններն ու արժեքը որոշվում են՝ հաշվի առնելով օբյեկտի գտնվելու վայրը և աշխատանքների ծավալը։"
       ],
-      "htmlBytes": 139835,
-      "mainTextLength": 5749
+      "htmlBytes": 147081,
+      "mainTextLength": 5747
     },
     {
       "path": "/ru/services/interior-design",
@@ -10601,8 +10611,8 @@
         "Работаем по всей Армении",
         "Принимаем проекты по всей Армении, включая Ереван, с учётом расположения объекта и объёма работ."
       ],
-      "htmlBytes": 133701,
-      "mainTextLength": 4631
+      "htmlBytes": 140937,
+      "mainTextLength": 4633
     },
     {
       "path": "/en/services/interior-design",
@@ -10856,8 +10866,8 @@
         "Working across Armenia",
         "We accept projects across Armenia, including Yerevan, taking account of the property location and scope."
       ],
-      "htmlBytes": 119693,
-      "mainTextLength": 4702
+      "htmlBytes": 127179,
+      "mainTextLength": 4708
     },
     {
       "path": "/de/services/interior-design",
@@ -11111,8 +11121,8 @@
         "In ganz Armenien tätig",
         "Wir übernehmen Projekte in ganz Armenien, einschließlich Eriwan, und berücksichtigen dabei Standort und Umfang."
       ],
-      "htmlBytes": 121304,
-      "mainTextLength": 5176
+      "htmlBytes": 128547,
+      "mainTextLength": 5180
     },
     {
       "path": "/fr/services/interior-design",
@@ -11366,8 +11376,8 @@
         "Interventions dans toute l’Arménie",
         "Nous prenons en charge des projets dans toute l’Arménie, notamment à Erevan, en tenant compte de la localisation du bien et des travaux prévus."
       ],
-      "htmlBytes": 122838,
-      "mainTextLength": 5414
+      "htmlBytes": 130041,
+      "mainTextLength": 5412
     },
     {
       "path": "/hy/services/commercial-construction",
@@ -11614,8 +11624,8 @@
         "Աշխատանք Երևանում և մարզերում",
         "Աշխատում ենք ամբողջ Հայաստանում՝ Երևանում և բոլոր մարզերում։ Աշխատանքի պայմաններն ու արժեքը որոշվում են՝ հաշվի առնելով օբյեկտի գտնվելու վայրը և աշխատանքների ծավալը։"
       ],
-      "htmlBytes": 127223,
-      "mainTextLength": 4608
+      "htmlBytes": 134749,
+      "mainTextLength": 4603
     },
     {
       "path": "/ru/services/commercial-construction",
@@ -11858,8 +11868,8 @@
         "Работаем по всей Армении",
         "Принимаем проекты по всей Армении, включая Ереван, с учётом расположения объекта и объёма работ."
       ],
-      "htmlBytes": 121122,
-      "mainTextLength": 3675
+      "htmlBytes": 128680,
+      "mainTextLength": 3669
     },
     {
       "path": "/en/services/commercial-construction",
@@ -12102,8 +12112,8 @@
         "Working across Armenia",
         "We accept projects across Armenia, including Yerevan, taking account of the property location and scope."
       ],
-      "htmlBytes": 109595,
-      "mainTextLength": 3745
+      "htmlBytes": 117267,
+      "mainTextLength": 3725
     },
     {
       "path": "/de/services/commercial-construction",
@@ -12346,8 +12356,8 @@
         "In ganz Armenien tätig",
         "Wir übernehmen Projekte in ganz Armenien, einschließlich Eriwan, und berücksichtigen dabei Standort und Umfang."
       ],
-      "htmlBytes": 110833,
-      "mainTextLength": 4070
+      "htmlBytes": 118254,
+      "mainTextLength": 4054
     },
     {
       "path": "/fr/services/commercial-construction",
@@ -12590,8 +12600,8 @@
         "Interventions dans toute l’Arménie",
         "Nous prenons en charge des projets dans toute l’Arménie, notamment à Erevan, en tenant compte de la localisation du bien et des travaux prévus."
       ],
-      "htmlBytes": 112466,
-      "mainTextLength": 4441
+      "htmlBytes": 119913,
+      "mainTextLength": 4423
     },
     {
       "path": "/hy/services/design",
@@ -12833,8 +12843,8 @@
         "Աշխատանք Երևանում և մարզերում",
         "Աշխատում ենք ամբողջ Հայաստանում՝ Երևանում և բոլոր մարզերում։ Աշխատանքի պայմաններն ու արժեքը որոշվում են՝ հաշվի առնելով օբյեկտի գտնվելու վայրը և աշխատանքների ծավալը։"
       ],
-      "htmlBytes": 122289,
-      "mainTextLength": 4004
+      "htmlBytes": 129334,
+      "mainTextLength": 3995
     },
     {
       "path": "/ru/services/design",
@@ -13076,8 +13086,8 @@
         "Работаем по всей Армении",
         "Принимаем проекты по всей Армении, включая Ереван, с учётом расположения объекта и объёма работ."
       ],
-      "htmlBytes": 119694,
-      "mainTextLength": 3642
+      "htmlBytes": 126747,
+      "mainTextLength": 3635
     },
     {
       "path": "/en/services/design",
@@ -13319,7 +13329,7 @@
         "Working across Armenia",
         "We accept projects across Armenia, including Yerevan, taking account of the property location and scope."
       ],
-      "htmlBytes": 107293,
+      "htmlBytes": 114601,
       "mainTextLength": 3604
     },
     {
@@ -13562,8 +13572,8 @@
         "In ganz Armenien tätig",
         "Wir übernehmen Projekte in ganz Armenien, einschließlich Eriwan, und berücksichtigen dabei Standort und Umfang."
       ],
-      "htmlBytes": 108307,
-      "mainTextLength": 3839
+      "htmlBytes": 115382,
+      "mainTextLength": 3843
     },
     {
       "path": "/fr/services/design",
@@ -13805,8 +13815,8 @@
         "Interventions dans toute l’Arménie",
         "Nous prenons en charge des projets dans toute l’Arménie, notamment à Erevan, en tenant compte de la localisation du bien et des travaux prévus."
       ],
-      "htmlBytes": 110265,
-      "mainTextLength": 4267
+      "htmlBytes": 117344,
+      "mainTextLength": 4264
     },
     {
       "path": "/hy/services/monolithic-work",
@@ -14037,8 +14047,8 @@
         "Աշխատանք Երևանում և մարզերում",
         "Աշխատում ենք ամբողջ Հայաստանում՝ Երևանում և բոլոր մարզերում։ Աշխատանքի պայմաններն ու արժեքը որոշվում են՝ հաշվի առնելով օբյեկտի գտնվելու վայրը և աշխատանքների ծավալը։"
       ],
-      "htmlBytes": 114708,
-      "mainTextLength": 3054
+      "htmlBytes": 139339,
+      "mainTextLength": 3404
     },
     {
       "path": "/ru/services/monolithic-work",
@@ -14269,8 +14279,8 @@
         "Работаем по всей Армении",
         "Принимаем проекты по всей Армении, включая Ереван, с учётом расположения объекта и объёма работ."
       ],
-      "htmlBytes": 111634,
-      "mainTextLength": 2708
+      "htmlBytes": 136462,
+      "mainTextLength": 3087
     },
     {
       "path": "/en/services/monolithic-work",
@@ -14501,8 +14511,8 @@
         "Working across Armenia",
         "We accept projects across Armenia, including Yerevan, taking account of the property location and scope."
       ],
-      "htmlBytes": 101816,
-      "mainTextLength": 2800
+      "htmlBytes": 125861,
+      "mainTextLength": 3172
     },
     {
       "path": "/de/services/monolithic-work",
@@ -14733,8 +14743,8 @@
         "In ganz Armenien tätig",
         "Wir übernehmen Projekte in ganz Armenien, einschließlich Eriwan, und berücksichtigen dabei Standort und Umfang."
       ],
-      "htmlBytes": 102139,
-      "mainTextLength": 2918
+      "htmlBytes": 125974,
+      "mainTextLength": 3313
     },
     {
       "path": "/fr/services/monolithic-work",
@@ -14965,8 +14975,8 @@
         "Interventions dans toute l’Arménie",
         "Nous prenons en charge des projets dans toute l’Arménie, notamment à Erevan, en tenant compte de la localisation du bien et des travaux prévus."
       ],
-      "htmlBytes": 104010,
-      "mainTextLength": 3285
+      "htmlBytes": 127924,
+      "mainTextLength": 3679
     },
     {
       "path": "/hy/services/facade-and-roofing",
@@ -15195,7 +15205,7 @@
         "Աշխատանք Երևանում և մարզերում",
         "Աշխատում ենք ամբողջ Հայաստանում՝ Երևանում և բոլոր մարզերում։ Աշխատանքի պայմաններն ու արժեքը որոշվում են՝ հաշվի առնելով օբյեկտի գտնվելու վայրը և աշխատանքների ծավալը։"
       ],
-      "htmlBytes": 111974,
+      "htmlBytes": 118860,
       "mainTextLength": 3020
     },
     {
@@ -15425,7 +15435,7 @@
         "Работаем по всей Армении",
         "Принимаем проекты по всей Армении, включая Ереван, с учётом расположения объекта и объёма работ."
       ],
-      "htmlBytes": 109620,
+      "htmlBytes": 116495,
       "mainTextLength": 2698
     },
     {
@@ -15655,7 +15665,7 @@
         "Working across Armenia",
         "We accept projects across Armenia, including Yerevan, taking account of the property location and scope."
       ],
-      "htmlBytes": 99353,
+      "htmlBytes": 106508,
       "mainTextLength": 2710
     },
     {
@@ -15885,7 +15895,7 @@
         "In ganz Armenien tätig",
         "Wir übernehmen Projekte in ganz Armenien, einschließlich Eriwan, und berücksichtigen dabei Standort und Umfang."
       ],
-      "htmlBytes": 100541,
+      "htmlBytes": 107392,
       "mainTextLength": 2985
     },
     {
@@ -16115,7 +16125,7 @@
         "Interventions dans toute l’Arménie",
         "Nous prenons en charge des projets dans toute l’Arménie, notamment à Erevan, en tenant compte de la localisation du bien et des travaux prévus."
       ],
-      "htmlBytes": 102036,
+      "htmlBytes": 108900,
       "mainTextLength": 3345
     },
     {
@@ -16401,8 +16411,8 @@
         "Աշխատանք Երևանում և մարզերում",
         "Աշխատում ենք ամբողջ Հայաստանում՝ Երևանում և բոլոր մարզերում։ Աշխատանքի պայմաններն ու արժեքը որոշվում են՝ հաշվի առնելով օբյեկտի գտնվելու վայրը և աշխատանքների ծավալը։"
       ],
-      "htmlBytes": 167323,
-      "mainTextLength": 8717
+      "htmlBytes": 187489,
+      "mainTextLength": 8966
     },
     {
       "path": "/ru/services/apartment-renovation-yerevan",
@@ -16687,8 +16697,8 @@
         "Работаем по всей Армении",
         "Принимаем проекты по всей Армении, включая Ереван, с учётом расположения объекта и объёма работ."
       ],
-      "htmlBytes": 160770,
-      "mainTextLength": 7643
+      "htmlBytes": 180855,
+      "mainTextLength": 7888
     },
     {
       "path": "/en/services/apartment-renovation-yerevan",
@@ -16973,8 +16983,8 @@
         "Working across Armenia",
         "We accept projects across Armenia, including Yerevan, taking account of the property location and scope."
       ],
-      "htmlBytes": 141541,
-      "mainTextLength": 7920
+      "htmlBytes": 161174,
+      "mainTextLength": 8160
     },
     {
       "path": "/de/services/apartment-renovation-yerevan",
@@ -17259,8 +17269,8 @@
         "In ganz Armenien tätig",
         "Wir übernehmen Projekte in ganz Armenien, einschließlich Eriwan, und berücksichtigen dabei Standort und Umfang."
       ],
-      "htmlBytes": 143363,
-      "mainTextLength": 8343
+      "htmlBytes": 162799,
+      "mainTextLength": 8602
     },
     {
       "path": "/fr/services/apartment-renovation-yerevan",
@@ -17545,8 +17555,8 @@
         "Interventions dans toute l’Arménie",
         "Nous prenons en charge des projets dans toute l’Arménie, notamment à Erevan, en tenant compte de la localisation du bien et des travaux prévus."
       ],
-      "htmlBytes": 145113,
-      "mainTextLength": 8618
+      "htmlBytes": 164617,
+      "mainTextLength": 8879
     },
     {
       "path": "/hy/services/new-build-renovation",
@@ -17807,7 +17817,7 @@
         "Աշխատանք Երևանում և մարզերում",
         "Աշխատում ենք ամբողջ Հայաստանում՝ Երևանում և բոլոր մարզերում։ Աշխատանքի պայմաններն ու արժեքը որոշվում են՝ հաշվի առնելով օբյեկտի գտնվելու վայրը և աշխատանքների ծավալը։"
       ],
-      "htmlBytes": 141011,
+      "htmlBytes": 147940,
       "mainTextLength": 6105
     },
     {
@@ -18069,7 +18079,7 @@
         "Работаем по всей Армении",
         "Принимаем проекты по всей Армении, включая Ереван, с учётом расположения объекта и объёма работ."
       ],
-      "htmlBytes": 137034,
+      "htmlBytes": 143939,
       "mainTextLength": 5501
     },
     {
@@ -18331,7 +18341,7 @@
         "Working across Armenia",
         "We accept projects across Armenia, including Yerevan, taking account of the property location and scope."
       ],
-      "htmlBytes": 120383,
+      "htmlBytes": 127512,
       "mainTextLength": 5539
     },
     {
@@ -18593,7 +18603,7 @@
         "In ganz Armenien tätig",
         "Wir übernehmen Projekte in ganz Armenien, einschließlich Eriwan, und berücksichtigen dabei Standort und Umfang."
       ],
-      "htmlBytes": 121810,
+      "htmlBytes": 128704,
       "mainTextLength": 5894
     },
     {
@@ -18855,7 +18865,7 @@
         "Interventions dans toute l’Arménie",
         "Nous prenons en charge des projets dans toute l’Arménie, notamment à Erevan, en tenant compte de la localisation du bien et des travaux prévus."
       ],
-      "htmlBytes": 123164,
+      "htmlBytes": 130058,
       "mainTextLength": 6164
     },
     {
@@ -19127,7 +19137,7 @@
         "Աշխատանք Երևանում և մարզերում",
         "Աշխատում ենք ամբողջ Հայաստանում՝ Երևանում և բոլոր մարզերում։ Աշխատանքի պայմաններն ու արժեքը որոշվում են՝ հաշվի առնելով օբյեկտի գտնվելու վայրը և աշխատանքների ծավալը։"
       ],
-      "htmlBytes": 139650,
+      "htmlBytes": 146534,
       "mainTextLength": 6377
     },
     {
@@ -19399,7 +19409,7 @@
         "Работаем по всей Армении",
         "Принимаем проекты по всей Армении, включая Ереван, с учётом расположения объекта и объёма работ."
       ],
-      "htmlBytes": 135794,
+      "htmlBytes": 142667,
       "mainTextLength": 5734
     },
     {
@@ -19671,7 +19681,7 @@
         "Working across Armenia",
         "We accept projects across Armenia, including Yerevan, taking account of the property location and scope."
       ],
-      "htmlBytes": 119958,
+      "htmlBytes": 127042,
       "mainTextLength": 5853
     },
     {
@@ -19943,7 +19953,7 @@
         "In ganz Armenien tätig",
         "Wir übernehmen Projekte in ganz Armenien, einschließlich Eriwan, und berücksichtigen dabei Standort und Umfang."
       ],
-      "htmlBytes": 121650,
+      "htmlBytes": 128512,
       "mainTextLength": 6382
     },
     {
@@ -20215,7 +20225,7 @@
         "Interventions dans toute l’Arménie",
         "Nous prenons en charge des projets dans toute l’Arménie, notamment à Erevan, en tenant compte de la localisation du bien et des travaux prévus."
       ],
-      "htmlBytes": 123125,
+      "htmlBytes": 129987,
       "mainTextLength": 6551
     },
     {
@@ -20438,7 +20448,7 @@
         "Ճարտարապետական նախագծում",
         "Ճարտարապետական լուծումներ, շենքի հատակագիծ և աշխատանքային փաստաթղթեր՝ շինարարությանը նախապատրաստվելու համար։"
       ],
-      "htmlBytes": 134270,
+      "htmlBytes": 139278,
       "mainTextLength": 7502
     },
     {
@@ -20661,7 +20671,7 @@
         "Архитектурное проектирование",
         "Архитектурные решения, планировка здания и рабочая документация для подготовки к строительству."
       ],
-      "htmlBytes": 129883,
+      "htmlBytes": 134880,
       "mainTextLength": 6800
     },
     {
@@ -20884,7 +20894,7 @@
         "Architectural design",
         "Architectural solutions, building layouts, and working documentation to prepare for construction."
       ],
-      "htmlBytes": 113151,
+      "htmlBytes": 118372,
       "mainTextLength": 6988
     },
     {
@@ -21107,7 +21117,7 @@
         "Architekturplanung",
         "Architektonische Lösungen, Gebäudegrundrisse und Ausführungsunterlagen zur Bauvorbereitung."
       ],
-      "htmlBytes": 115020,
+      "htmlBytes": 120006,
       "mainTextLength": 7487
     },
     {
@@ -21330,7 +21340,7 @@
         "Conception architecturale",
         "Solutions architecturales, plans du bâtiment et documents d’exécution pour préparer la construction."
       ],
-      "htmlBytes": 116385,
+      "htmlBytes": 121371,
       "mainTextLength": 7559
     },
     {
@@ -21592,7 +21602,7 @@
         "Աշխատանք Երևանում և մարզերում",
         "Աշխատում ենք ամբողջ Հայաստանում՝ Երևանում և բոլոր մարզերում։ Աշխատանքի պայմաններն ու արժեքը որոշվում են՝ հաշվի առնելով օբյեկտի գտնվելու վայրը և աշխատանքների ծավալը։"
       ],
-      "htmlBytes": 134207,
+      "htmlBytes": 141417,
       "mainTextLength": 5470
     },
     {
@@ -21854,7 +21864,7 @@
         "Работаем по всей Армении",
         "Принимаем проекты по всей Армении, включая Ереван, с учётом расположения объекта и объёма работ."
       ],
-      "htmlBytes": 128496,
+      "htmlBytes": 135695,
       "mainTextLength": 4421
     },
     {
@@ -22116,7 +22126,7 @@
         "Working across Armenia",
         "We accept projects across Armenia, including Yerevan, taking account of the property location and scope."
       ],
-      "htmlBytes": 114727,
+      "htmlBytes": 122150,
       "mainTextLength": 4594
     },
     {
@@ -22378,7 +22388,7 @@
         "In ganz Armenien tätig",
         "Wir übernehmen Projekte in ganz Armenien, einschließlich Eriwan, und berücksichtigen dabei Standort und Umfang."
       ],
-      "htmlBytes": 116552,
+      "htmlBytes": 123753,
       "mainTextLength": 5047
     },
     {
@@ -22640,7 +22650,7 @@
         "Interventions dans toute l’Arménie",
         "Nous prenons en charge des projets dans toute l’Arménie, notamment à Erevan, en tenant compte de la localisation du bien et des travaux prévus."
       ],
-      "htmlBytes": 118260,
+      "htmlBytes": 125461,
       "mainTextLength": 5413
     },
     {
@@ -22906,7 +22916,7 @@
         "Աշխատանք Երևանում և մարզերում",
         "Աշխատում ենք ամբողջ Հայաստանում՝ Երևանում և բոլոր մարզերում։ Աշխատանքի պայմաններն ու արժեքը որոշվում են՝ հաշվի առնելով օբյեկտի գտնվելու վայրը և աշխատանքների ծավալը։"
       ],
-      "htmlBytes": 135913,
+      "htmlBytes": 142909,
       "mainTextLength": 5658
     },
     {
@@ -23172,7 +23182,7 @@
         "Работаем по всей Армении",
         "Принимаем проекты по всей Армении, включая Ереван, с учётом расположения объекта и объёма работ."
       ],
-      "htmlBytes": 129358,
+      "htmlBytes": 136343,
       "mainTextLength": 4668
     },
     {
@@ -23438,7 +23448,7 @@
         "Working across Armenia",
         "We accept projects across Armenia, including Yerevan, taking account of the property location and scope."
       ],
-      "htmlBytes": 116496,
+      "htmlBytes": 123761,
       "mainTextLength": 4933
     },
     {
@@ -23704,7 +23714,7 @@
         "In ganz Armenien tätig",
         "Wir übernehmen Projekte in ganz Armenien, einschließlich Eriwan, und berücksichtigen dabei Standort und Umfang."
       ],
-      "htmlBytes": 118490,
+      "htmlBytes": 125464,
       "mainTextLength": 5553
     },
     {
@@ -23970,7 +23980,7 @@
         "Interventions dans toute l’Arménie",
         "Nous prenons en charge des projets dans toute l’Arménie, notamment à Erevan, en tenant compte de la localisation du bien et des travaux prévus."
       ],
-      "htmlBytes": 119945,
+      "htmlBytes": 126906,
       "mainTextLength": 5818
     },
     {
@@ -24237,7 +24247,7 @@
         "Աշխատանք Երևանում և մարզերում",
         "Աշխատում ենք ամբողջ Հայաստանում՝ Երևանում և բոլոր մարզերում։ Աշխատանքի պայմաններն ու արժեքը որոշվում են՝ հաշվի առնելով օբյեկտի գտնվելու վայրը և աշխատանքների ծավալը։"
       ],
-      "htmlBytes": 141398,
+      "htmlBytes": 148410,
       "mainTextLength": 6279
     },
     {
@@ -24504,7 +24514,7 @@
         "Работаем по всей Армении",
         "Принимаем проекты по всей Армении, включая Ереван, с учётом расположения объекта и объёма работ."
       ],
-      "htmlBytes": 136343,
+      "htmlBytes": 143344,
       "mainTextLength": 5413
     },
     {
@@ -24771,7 +24781,7 @@
         "Working across Armenia",
         "We accept projects across Armenia, including Yerevan, taking account of the property location and scope."
       ],
-      "htmlBytes": 121405,
+      "htmlBytes": 128630,
       "mainTextLength": 5562
     },
     {
@@ -25038,7 +25048,7 @@
         "In ganz Armenien tätig",
         "Wir übernehmen Projekte in ganz Armenien, einschließlich Eriwan, und berücksichtigen dabei Standort und Umfang."
       ],
-      "htmlBytes": 123737,
+      "htmlBytes": 130740,
       "mainTextLength": 6316
     },
     {
@@ -25305,7 +25315,7 @@
         "Interventions dans toute l’Arménie",
         "Nous prenons en charge des projets dans toute l’Arménie, notamment à Erevan, en tenant compte de la localisation du bien et des travaux prévus."
       ],
-      "htmlBytes": 124718,
+      "htmlBytes": 131721,
       "mainTextLength": 6357
     },
     {
@@ -25570,7 +25580,7 @@
         "Աշխատանք Երևանում և մարզերում",
         "Աշխատում ենք ամբողջ Հայաստանում՝ Երևանում և բոլոր մարզերում։ Աշխատանքի պայմաններն ու արժեքը որոշվում են՝ հաշվի առնելով օբյեկտի գտնվելու վայրը և աշխատանքների ծավալը։"
       ],
-      "htmlBytes": 140151,
+      "htmlBytes": 147192,
       "mainTextLength": 6103
     },
     {
@@ -25835,7 +25845,7 @@
         "Работаем по всей Армении",
         "Принимаем проекты по всей Армении, включая Ереван, с учётом расположения объекта и объёма работ."
       ],
-      "htmlBytes": 135850,
+      "htmlBytes": 142867,
       "mainTextLength": 5395
     },
     {
@@ -26100,7 +26110,7 @@
         "Working across Armenia",
         "We accept projects across Armenia, including Yerevan, taking account of the property location and scope."
       ],
-      "htmlBytes": 120337,
+      "htmlBytes": 127578,
       "mainTextLength": 5418
     },
     {
@@ -26365,7 +26375,7 @@
         "In ganz Armenien tätig",
         "Wir übernehmen Projekte in ganz Armenien, einschließlich Eriwan, und berücksichtigen dabei Standort und Umfang."
       ],
-      "htmlBytes": 122283,
+      "htmlBytes": 129289,
       "mainTextLength": 6037
     },
     {
@@ -26630,7 +26640,7 @@
         "Interventions dans toute l’Arménie",
         "Nous prenons en charge des projets dans toute l’Arménie, notamment à Erevan, en tenant compte de la localisation du bien et des travaux prévus."
       ],
-      "htmlBytes": 123970,
+      "htmlBytes": 130989,
       "mainTextLength": 6326
     },
     {
@@ -26831,7 +26841,7 @@
         "Առանձնատների վերանորոգում Հայաստանում",
         "Վերանորոգում ենք առանձնատներ՝ ամբողջությամբ կամ առանձին փուլերով՝ ապամոնտաժումից ու ինժեներական աշխատանքներից մինչև վերջնական հարդարում։ Աշխատանքների կազմը որոշում ենք տան զննումից հետո։"
       ],
-      "htmlBytes": 115369,
+      "htmlBytes": 120624,
       "mainTextLength": 4461
     },
     {
@@ -27032,7 +27042,7 @@
         "Ремонт частных домов в Армении",
         "Ремонтируем частные дома полностью или отдельными этапами: от демонтажа и инженерных работ до чистовой отделки. Состав работ определяем после осмотра дома."
       ],
-      "htmlBytes": 111032,
+      "htmlBytes": 116244,
       "mainTextLength": 3816
     },
     {
@@ -27233,7 +27243,7 @@
         "Private house renovation in Armenia",
         "We renovate private houses in full or in stages, from demolition and building services to final finishes. We define the scope after inspecting the house."
       ],
-      "htmlBytes": 100639,
+      "htmlBytes": 106045,
       "mainTextLength": 4182
     },
     {
@@ -27434,7 +27444,7 @@
         "Renovierung von Privathäusern in Armenien",
         "Wir renovieren Privathäuser komplett oder in einzelnen Phasen, vom Rückbau und der Haustechnik bis zum Endausbau. Den Umfang legen wir nach einer Besichtigung fest."
       ],
-      "htmlBytes": 102079,
+      "htmlBytes": 107280,
       "mainTextLength": 4582
     },
     {
@@ -27635,7 +27645,7 @@
         "Rénovation de maisons individuelles en Arménie",
         "Nous rénovons les maisons individuelles entièrement ou par étapes, de la démolition et des réseaux techniques aux finitions. Le périmètre est défini après une visite de la maison."
       ],
-      "htmlBytes": 102690,
+      "htmlBytes": 107853,
       "mainTextLength": 4603
     },
     {
@@ -27899,7 +27909,7 @@
         "Աշխատանք Երևանում և մարզերում",
         "Աշխատում ենք ամբողջ Հայաստանում՝ Երևանում և բոլոր մարզերում։ Աշխատանքի պայմաններն ու արժեքը որոշվում են՝ հաշվի առնելով օբյեկտի գտնվելու վայրը և աշխատանքների ծավալը։"
       ],
-      "htmlBytes": 134269,
+      "htmlBytes": 141201,
       "mainTextLength": 5433
     },
     {
@@ -28163,7 +28173,7 @@
         "Работаем по всей Армении",
         "Принимаем проекты по всей Армении, включая Ереван, с учётом расположения объекта и объёма работ."
       ],
-      "htmlBytes": 127758,
+      "htmlBytes": 134692,
       "mainTextLength": 4416
     },
     {
@@ -28427,7 +28437,7 @@
         "Working across Armenia",
         "We accept projects across Armenia, including Yerevan, taking account of the property location and scope."
       ],
-      "htmlBytes": 116097,
+      "htmlBytes": 123229,
       "mainTextLength": 4825
     },
     {
@@ -28691,7 +28701,7 @@
         "In ganz Armenien tätig",
         "Wir übernehmen Projekte in ganz Armenien, einschließlich Eriwan, und berücksichtigen dabei Standort und Umfang."
       ],
-      "htmlBytes": 117808,
+      "htmlBytes": 124705,
       "mainTextLength": 5355
     },
     {
@@ -28955,7 +28965,7 @@
         "Interventions dans toute l’Arménie",
         "Nous prenons en charge des projets dans toute l’Arménie, notamment à Erevan, en tenant compte de la localisation du bien et des travaux prévus."
       ],
-      "htmlBytes": 119444,
+      "htmlBytes": 126354,
       "mainTextLength": 5628
     },
     {
@@ -29220,7 +29230,7 @@
         "Աշխատանք Երևանում և մարզերում",
         "Աշխատում ենք ամբողջ Հայաստանում՝ Երևանում և բոլոր մարզերում։ Աշխատանքի պայմաններն ու արժեքը որոշվում են՝ հաշվի առնելով օբյեկտի գտնվելու վայրը և աշխատանքների ծավալը։"
       ],
-      "htmlBytes": 133948,
+      "htmlBytes": 142534,
       "mainTextLength": 5313
     },
     {
@@ -29485,7 +29495,7 @@
         "Работаем по всей Армении",
         "Принимаем проекты по всей Армении, включая Ереван, с учётом расположения объекта и объёма работ."
       ],
-      "htmlBytes": 127271,
+      "htmlBytes": 135940,
       "mainTextLength": 4292
     },
     {
@@ -29750,7 +29760,7 @@
         "Working across Armenia",
         "We accept projects across Armenia, including Yerevan, taking account of the property location and scope."
       ],
-      "htmlBytes": 115973,
+      "htmlBytes": 124840,
       "mainTextLength": 4675
     },
     {
@@ -30015,7 +30025,7 @@
         "In ganz Armenien tätig",
         "Wir übernehmen Projekte in ganz Armenien, einschließlich Eriwan, und berücksichtigen dabei Standort und Umfang."
       ],
-      "htmlBytes": 117337,
+      "htmlBytes": 125985,
       "mainTextLength": 5129
     },
     {
@@ -30280,7 +30290,7 @@
         "Interventions dans toute l’Arménie",
         "Nous prenons en charge des projets dans toute l’Arménie, notamment à Erevan, en tenant compte de la localisation du bien et des travaux prévus."
       ],
-      "htmlBytes": 118860,
+      "htmlBytes": 127476,
       "mainTextLength": 5403
     }
   ]

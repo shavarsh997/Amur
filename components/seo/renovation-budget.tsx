@@ -52,8 +52,13 @@ export function EstimateExample({ locale }: { locale: Locale }) {
       <p className="mt-4 leading-7 text-[var(--text-secondary)]">
         {copy.exampleDescription}
       </p>
-      <div className="mt-6 overflow-x-auto rounded-2xl border border-[var(--border)]">
-        <table className="w-full table-fixed hyphens-auto text-left text-sm leading-6 [overflow-wrap:anywhere]">
+      <div
+        aria-label={copy.exampleTitle}
+        className="mt-6 overflow-x-auto rounded-2xl border border-[var(--border)]"
+        role="region"
+        tabIndex={0}
+      >
+        <table className="w-full min-w-[36rem] text-left text-sm leading-6">
           <caption className="sr-only">{copy.exampleTitle}</caption>
           <thead className="bg-[var(--background-soft)] text-[var(--text-primary)]">
             <tr>

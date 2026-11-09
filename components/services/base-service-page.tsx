@@ -23,6 +23,7 @@ import {
   ServiceList,
   ServiceFacts,
   ServiceProcess,
+  ServiceProcessGallery,
   ServicePricing,
   ServiceFAQ,
   RelatedServices,
@@ -165,6 +166,7 @@ export function BaseServicePage({
       </Container>
       <ServiceSection id="service-process" title={copy.stages} tone="warm">
         <ServiceProcess steps={content.workflow} />
+        <ServiceProcessGallery images={media.process} />
       </ServiceSection>
       <ServiceQuality dictionary={dictionary} />
       {content.priceFactors.length || content.estimateRequirements?.length ? (

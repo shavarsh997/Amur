@@ -37,7 +37,7 @@ export function ServicesSection({
             <ArrowRight aria-hidden="true" className="size-4" />
           </Link>
         </div>
-        <div className="content-cards mt-8 grid gap-4 lg:grid-cols-2">
+        <div className="directions-gallery">
           {getActiveServices(locale)
             .filter((service) => service.category === "primary")
             .map(({ content, ...service }) => {
@@ -45,6 +45,7 @@ export function ServicesSection({
                 service.slug === "renovation" && apartment;
               return (
                 <ServiceCard
+                  gallery
                   contactLabel={dictionary.nav.contacts}
                   content={
                     featuredApartment
