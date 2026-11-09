@@ -11,7 +11,7 @@ export function EstimateLoadingState({ message }: { message: string }) {
     <div
       aria-busy="true"
       aria-live="polite"
-      className="estimate-loading mt-7 overflow-hidden rounded-[24px] border border-[var(--border)] bg-[var(--background-warm)] p-5 sm:p-6"
+      className="estimate-loading mt-7 overflow-hidden rounded-card border border-[var(--border)] bg-[var(--background-warm)] p-5 sm:p-6"
     >
       <div className="flex items-start gap-4">
         <div className="relative grid size-14 shrink-0 place-items-center rounded-2xl bg-white shadow-[0_12px_24px_-18px_rgb(24_33_42/0.35)]">

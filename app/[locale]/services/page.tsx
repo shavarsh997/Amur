@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 
 import { ServiceGuides } from "@/components/sections/service-guides";
 import { getServiceImageAlt } from "@/config/service-images.config";
+import { getServiceMedia } from "@/config/service-media.config";
 import { ButtonLink } from "@/components/ui/button-link";
 import { Container } from "@/components/ui/container";
 import { PageHero } from "@/components/ui/page-hero";
@@ -64,13 +65,14 @@ export default async function ServicesPage({ params }: Props) {
         description={services.pageDescription}
         eyebrow={services.eyebrow}
         title={services.pageTitle}
+        image={getServiceMedia("monolithic-work", locale).details}
       />
       <Container className="space-y-8 py-section">
         <ServiceGuides locale={locale} prominent />
         <div className="space-y-8">
           {getActiveServices(locale).map(({ content, ...service }) => (
             <article
-              className="content-split service-catalog-card grid overflow-hidden rounded-[24px] border border-[var(--border)] bg-white lg:grid-cols-2"
+              className="content-split service-catalog-card grid overflow-hidden rounded-card border border-[var(--border)] bg-white lg:grid-cols-2"
               key={service.slug}
             >
               <div className="service-catalog-image relative min-h-72 bg-[var(--background-warm)]">

@@ -1,0 +1,114 @@
+{
+  "checks": [
+    {
+      "alt": "Կառուցվող եռահարկ բնակելի շենք՝ երկաթբետոնե կառուցվածքով և քարե ճակատով",
+      "h1Count": 1,
+      "imageHeight": 293,
+      "imagePresent": true,
+      "imageWidth": 390,
+      "overflow": false,
+      "path": "/hy",
+      "width": 390
+    },
+    {
+      "alt": "Կառուցվող եռահարկ բնակելի շենք՝ երկաթբետոնե կառուցվածքով և քարե ճակատով",
+      "h1Count": 1,
+      "imageHeight": 432,
+      "imagePresent": true,
+      "imageWidth": 768,
+      "overflow": false,
+      "path": "/hy",
+      "width": 768
+    },
+    {
+      "alt": "Երկաթբետոնե կառուցվածքի ամրանավորում և կաղապար",
+      "h1Count": 1,
+      "imageHeight": 180,
+      "imagePresent": true,
+      "imageWidth": 288,
+      "overflow": false,
+      "path": "/hy/services",
+      "width": 320
+    },
+    {
+      "alt": "Երկաթբետոնե կառուցվածքի ամրանավորում և կաղապար",
+      "h1Count": 1,
+      "imageHeight": 224,
+      "imagePresent": true,
+      "imageWidth": 358,
+      "overflow": false,
+      "path": "/hy/services",
+      "width": 390
+    },
+    {
+      "alt": "Երկաթբետոնե կառուցվածքի ամրանավորում և կաղապար",
+      "h1Count": 1,
+      "imageHeight": 450,
+      "imagePresent": true,
+      "imageWidth": 720,
+      "overflow": false,
+      "path": "/hy/services",
+      "width": 768
+    },
+    {
+      "alt": "Երկաթբետոնե կառուցվածքի ամրանավորում և կաղապար",
+      "h1Count": 1,
+      "imageHeight": 360,
+      "imagePresent": true,
+      "imageWidth": 480,
+      "overflow": false,
+      "path": "/hy/services",
+      "width": 960
+    },
+    {
+      "alt": "Армирование и опалубка железобетонной конструкции",
+      "h1Count": 1,
+      "imageHeight": 224,
+      "imagePresent": true,
+      "imageWidth": 358,
+      "overflow": false,
+      "path": "/ru/services",
+      "width": 390
+    },
+    {
+      "alt": "Reinforcement and formwork for concrete construction",
+      "h1Count": 1,
+      "imageHeight": 224,
+      "imagePresent": true,
+      "imageWidth": 358,
+      "overflow": false,
+      "path": "/en/services",
+      "width": 390
+    },
+    {
+      "alt": "Bewehrung und Schalung einer Betonkonstruktion",
+      "h1Count": 1,
+      "imageHeight": 224,
+      "imagePresent": true,
+      "imageWidth": 358,
+      "overflow": false,
+      "path": "/de/services",
+      "width": 390
+    },
+    {
+      "alt": "Armatures et coffrage d’une structure en béton",
+      "h1Count": 1,
+      "imageHeight": 224,
+      "imagePresent": true,
+      "imageWidth": 358,
+      "overflow": false,
+      "path": "/fr/services",
+      "width": 390
+    }
+  ],
+  "desktop": {
+    "width": 1440,
+    "paths": [
+      "/hy",
+      "/hy/services"
+    ],
+    "imagesLoaded": true,
+    "overflow": false
+  },
+  "consoleErrors": []
+}

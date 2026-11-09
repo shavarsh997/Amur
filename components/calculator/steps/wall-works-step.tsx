@@ -19,7 +19,7 @@ export function WallWorksStep({
   const { control } = useFormContext<CalculatorFormValues>();
 
   return (
-    <section className="layout-region rounded-[28px] border border-[var(--border)] bg-white p-panel shadow-[var(--shadow-card)]">
+    <section className="layout-region rounded-card border border-[var(--border)] bg-white p-panel shadow-[var(--shadow-card)]">
       <StepTitle number="04" {...copy.steps.wallWorks} />
       <Controller
         control={control}

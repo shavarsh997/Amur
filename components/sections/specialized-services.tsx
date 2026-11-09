@@ -1,21 +1,10 @@
-import {
-  ArrowRight,
-  Blocks,
-  PanelsTopLeft,
-  Ruler,
-  type LucideIcon,
-} from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
-
 import { Container } from "@/components/ui/container";
 import { getActiveServices } from "@/config/services.config";
+import { getServiceMedia } from "@/config/service-media.config";
 import type { Dictionary, Locale } from "@/types";
-
-const specializedIcons: Record<string, LucideIcon> = {
-  blocks: Blocks,
-  "panels-top-left": PanelsTopLeft,
-  ruler: Ruler,
-};
 
 export function SpecializedServices({
   dictionary,
@@ -25,44 +14,41 @@ export function SpecializedServices({
   locale: Locale;
 }) {
   return (
-    <section className="bg-white py-section">
+    <section className="technical-services py-section">
       <Container>
-        <div className="min-w-0">
-          <h2 className="text-2xl font-semibold tracking-[-0.03em] text-[var(--text-primary)] sm:text-3xl">
-            {dictionary.services.specializedTitle}
-          </h2>
-          <div className="content-grid-three mt-8 grid gap-4 sm:grid-cols-3">
-            {getActiveServices(locale)
-              .filter((service) => service.category === "additional")
-              .map(({ content, ...service }) => {
-                const Icon = specializedIcons[service.icon] ?? Ruler;
-                return (
-                  <Link
-                    className="group flex flex-col items-start rounded-xl border border-[var(--border)] bg-[var(--background-soft)] p-5 transition-colors hover:border-[var(--border-strong)] hover:bg-white"
-                    href={`/${locale}/services/${service.slug}`}
-                    key={service.slug}
-                  >
-                    <Icon
-                      aria-hidden="true"
-                      className="size-5 stroke-[1.4] text-[var(--brand-copper)]"
+        <h2 className="content-heading">
+          {dictionary.services.specializedTitle}
+        </h2>
+        <div className="technical-services__grid">
+          {getActiveServices(locale)
+            .filter((service) => service.category === "additional")
+            .map((service) => {
+              const photo = getServiceMedia(service.slug, locale).details;
+              return (
+                <Link
+                  className="technical-service"
+                  href={`/${locale}/services/${service.slug}`}
+                  key={service.slug}
+                >
+                  <div className="technical-service__photo">
+                    <Image
+                      src={photo.src}
+                      alt={photo.alt}
+                      fill
+                      sizes="(max-width: 959px) calc(100vw - 48px), 30vw"
+                      className="object-cover"
                     />
-                    <h3 className="mt-4 font-semibold text-[var(--text-primary)]">
-                      {content.title}
-                    </h3>
-                    <p className="mt-3 flex-1 line-clamp-3 text-sm leading-6 text-[var(--text-secondary)]">
-                      {content.shortDescription}
-                    </p>
-                    <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--text-primary)] transition-colors group-hover:text-[var(--brand-copper)]">
-                      {dictionary.services.learnMore}
-                      <ArrowRight
-                        aria-hidden="true"
-                        className="size-3.5 transition-transform group-hover:translate-x-0.5"
-                      />
-                    </span>
-                  </Link>
-                );
-              })}
-          </div>
+                    <span className="media-caption">{photo.caption}</span>
+                  </div>
+                  <h3>{service.content.title}</h3>
+                  <p>{service.content.shortDescription}</p>
+                  <span className="technical-service__link">
+                    {dictionary.services.learnMore}
+                    <ArrowUpRight aria-hidden="true" size={18} />
+                  </span>
+                </Link>
+              );
+            })}
         </div>
       </Container>
     </section>

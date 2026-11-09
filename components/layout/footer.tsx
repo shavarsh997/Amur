@@ -37,8 +37,11 @@ export function Footer({ locale, dictionary }: FooterProps) {
   const services = getServiceNavigation(locale);
 
   return (
-    <footer className="mt-auto bg-[var(--brand-navy)] py-12 text-white/70 sm:py-14">
+    <footer className="site-footer mt-auto bg-[var(--brand-navy)] py-12 text-white/70 sm:py-14">
       <Container>
+        <div className="footer-wordmark" aria-hidden="true">
+          SHINEX<span>↗</span>
+        </div>
         <div className="grid gap-8 border-b border-white/15 pb-8 sm:grid-cols-2 xl:grid-cols-[0.9fr_0.9fr_1.5fr_1fr]">
           <div>
             <Link
@@ -75,7 +78,7 @@ export function Footer({ locale, dictionary }: FooterProps) {
             <h2 className="font-semibold text-white">
               {dictionary.footer.services}
             </h2>
-            <ul className="mt-5 grid grid-cols-2 gap-x-5 gap-y-3 text-sm">
+            <ul className="mt-5 grid grid-cols-1 gap-x-5 gap-y-3 text-sm sm:grid-cols-2">
               {services.map(({ path, label }) => (
                 <li key={path}>
                   <Link
@@ -86,7 +89,7 @@ export function Footer({ locale, dictionary }: FooterProps) {
                   </Link>
                 </li>
               ))}
-              <li className="col-span-2 pt-1">
+              <li className="col-span-full pt-1">
                 <Link
                   className="rounded-sm font-semibold text-white transition-colors hover:text-[var(--brand-copper)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--brand-copper)]"
                   href={`${prefix}/services`}

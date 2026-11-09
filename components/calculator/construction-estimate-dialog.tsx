@@ -101,7 +101,7 @@ export function ConstructionEstimateDialog({
         onClick={onClose}
         type="button"
       />
-      <div className="relative z-10 max-h-[calc(100vh-2rem)] w-full max-w-xl overflow-y-auto rounded-[28px] bg-white p-6 shadow-2xl sm:p-8">
+      <div className="relative z-10 max-h-[calc(100vh-2rem)] w-full max-w-xl overflow-y-auto rounded-card bg-white p-6 shadow-2xl sm:p-8">
         <div className="flex items-start justify-between gap-5">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[var(--brand-accent)]">

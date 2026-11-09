@@ -9,7 +9,6 @@ import { MobileNav, type NavigationItem } from "@/components/layout/mobile-nav";
 import { ContactTrigger } from "@/components/forms/contact-dialog";
 import { BrandMark } from "@/components/ui/brand-mark";
 import { Container } from "@/components/ui/container";
-import { ConstructionBackdrop } from "@/components/motion/construction-backdrop";
 import type { Dictionary, Locale } from "@/types";
 
 type HeaderProps = {
@@ -44,7 +43,7 @@ export function Header({ locale, dictionary }: HeaderProps) {
     label: dictionary.nav.consultation,
   };
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-[var(--border)] bg-[var(--brand-background)] text-[var(--text-primary)]">
+    <header className="site-header sticky top-0 z-50 w-full border-b border-[var(--border)] bg-[var(--brand-background)] text-[var(--text-primary)]">
       <Container className="relative flex min-h-16 items-center justify-between gap-4 sm:min-h-[72px]">
         <Link
           aria-label="SHINEX"
@@ -82,7 +81,6 @@ export function Header({ locale, dictionary }: HeaderProps) {
         </div>
 
         <div className="flex shrink-0 items-center gap-2 xl:hidden">
-          <ConstructionBackdrop placement="header" />
           <MobileNav
             closeLabel={dictionary.nav.closeMenu}
             cta={cta}

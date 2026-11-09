@@ -27,6 +27,7 @@ import {
   ServiceFAQ,
   RelatedServices,
   ServiceCTA,
+  ServiceQuality,
 } from "./service-page";
 
 export function BaseServicePage({
@@ -88,7 +89,7 @@ export function BaseServicePage({
   ];
 
   return (
-    <ServicePage>
+    <ServicePage slug={service.slug}>
       <ServiceHero
         breadcrumbs={[
           { label: dictionary.common.home, href: `/${locale}` },
@@ -165,6 +166,7 @@ export function BaseServicePage({
       <ServiceSection id="service-process" title={copy.stages} tone="warm">
         <ServiceProcess steps={content.workflow} />
       </ServiceSection>
+      <ServiceQuality dictionary={dictionary} />
       {content.priceFactors.length || content.estimateRequirements?.length ? (
         <ServicePricing
           title={copy.priceFactors}
@@ -183,7 +185,7 @@ export function BaseServicePage({
         links={links}
         moreLabel={presentation.moreServices}
       />
-      <ServiceCTA dictionary={dictionary} />
+      <ServiceCTA dictionary={dictionary} contactLabel={primaryCta} />
     </ServicePage>
   );
 }

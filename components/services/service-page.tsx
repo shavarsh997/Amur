@@ -1,30 +1,33 @@
 import type { CSSProperties, ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import {
-  ArrowDown,
-  ArrowUpRight,
-  Cable,
-  House,
-  Paintbrush,
-  PanelsTopLeft,
-  Plus,
-} from "lucide-react";
+import { ArrowDown, ArrowUpRight, Plus } from "lucide-react";
 
 import { ContactTrigger } from "@/components/forms/contact-dialog";
 import { Breadcrumbs, type BreadcrumbItem } from "@/components/ui/breadcrumbs";
 import { Container } from "@/components/ui/container";
 import { FAQAccordion } from "@/components/ui/faq-accordion";
 import type { Dictionary } from "@/types";
+import { getServiceVisual } from "@/config/service-visuals";
 import type { ServiceWorkflowStep } from "@/types/service";
 import styles from "./service-page.module.css";
 
 export type ServiceLink = { href: string; title: string; description: string };
 export type ServicePhoto = { src: string; alt: string; caption?: string };
 
-export function ServicePage({ children }: { children: ReactNode }) {
+export function ServicePage({
+  children,
+  slug,
+}: {
+  children: ReactNode;
+  slug: string;
+}) {
   return (
-    <div className={styles.page} data-service-page>
+    <div
+      className={styles.page}
+      data-service-page
+      data-service-visual={getServiceVisual(slug)}
+    >
       {children}
     </div>
   );
@@ -127,15 +130,15 @@ export function ServiceSection({
   );
 }
 
-const scopeIcons = [Paintbrush, Cable, House, PanelsTopLeft];
 export function ServiceScope({ cards }: { cards: readonly ServiceLink[] }) {
   return (
     <div className={styles.scopeGrid}>
       {cards.map((card, index) => {
-        const Icon = scopeIcons[index % scopeIcons.length];
         return (
           <Link className={styles.scopeCard} href={card.href} key={card.title}>
-            <Icon aria-hidden="true" size={30} strokeWidth={1.2} />
+            <span className={styles.stepNumber} aria-hidden="true">
+              {String(index + 1).padStart(2, "0")}
+            </span>
             <h3>{card.title}</h3>
             <p>{card.description}</p>
             <ArrowUpRight
@@ -392,7 +395,42 @@ export function RelatedServices({
   );
 }
 
-export function ServiceCTA({ dictionary }: { dictionary: Dictionary }) {
+export function ServiceQuality({ dictionary }: { dictionary: Dictionary }) {
+  const quality = dictionary.whyUs.items[3];
+  return (
+    <section className={styles.quality} aria-labelledby="service-quality-title">
+      <Container className={styles.qualityGrid}>
+        <div>
+          <p className={styles.eyebrow}>{dictionary.whyUs.eyebrow}</p>
+          <h2 id="service-quality-title">{quality.title}</h2>
+          <p className={styles.prose}>{quality.description}</p>
+        </div>
+        <ol className={styles.qualityChecks}>
+          {[0, 2, 4].map((index, position) => {
+            const item = dictionary.whyUs.items[index];
+            return (
+              <li key={item.title}>
+                <span aria-hidden="true">0{position + 1}</span>
+                <div>
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
+                </div>
+              </li>
+            );
+          })}
+        </ol>
+      </Container>
+    </section>
+  );
+}
+
+export function ServiceCTA({
+  dictionary,
+  contactLabel,
+}: {
+  dictionary: Dictionary;
+  contactLabel: string;
+}) {
   return (
     <section className={styles.cta}>
       <Container className={styles.ctaGrid}>
@@ -401,10 +439,7 @@ export function ServiceCTA({ dictionary }: { dictionary: Dictionary }) {
           <h2>{dictionary.cta.title}</h2>
           <p>{dictionary.cta.description}</p>
           <div className={styles.actions}>
-            <ContactTrigger
-              label={dictionary.cta.primaryAction}
-              variant="secondary"
-            />
+            <ContactTrigger label={contactLabel} variant="secondary" />
           </div>
         </div>
         <aside>

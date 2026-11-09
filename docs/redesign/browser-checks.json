@@ -1,0 +1,804 @@
+{
+  "checks": [
+    {
+      "path": "/hy",
+      "width": 390,
+      "h1": "Շինարարություն, վերանորոգում և ինտերիերի դիզայն",
+      "h1Count": 1,
+      "overflow": false
+    },
+    {
+      "path": "/ru",
+      "width": 390,
+      "h1": "Строительство, ремонт и дизайн в Армении",
+      "h1Count": 1,
+      "overflow": false
+    },
+    {
+      "path": "/en",
+      "width": 390,
+      "h1": "Construction, renovation and interior design in Armenia",
+      "h1Count": 1,
+      "overflow": false
+    },
+    {
+      "path": "/de",
+      "width": 390,
+      "h1": "Bau, Renovierung und Innenraumgestaltung in Armenien",
+      "h1Count": 1,
+      "overflow": false
+    },
+    {
+      "path": "/fr",
+      "width": 390,
+      "h1": "Construction, rénovation et aménagement intérieur en Arménie",
+      "h1Count": 1,
+      "overflow": false
+    },
+    {
+      "path": "/hy/services/renovation",
+      "width": 390,
+      "h1Count": 1,
+      "overflow": false,
+      "process": true,
+      "quality": true
+    },
+    {
+      "path": "/hy/services/house-construction",
+      "width": 390,
+      "h1Count": 1,
+      "overflow": false,
+      "process": true,
+      "quality": true
+    },
+    {
+      "path": "/hy/services/interior-design",
+      "width": 390,
+      "h1Count": 1,
+      "overflow": false,
+      "process": true,
+      "quality": true
+    },
+    {
+      "path": "/hy/services/commercial-construction",
+      "width": 390,
+      "h1Count": 1,
+      "overflow": false,
+      "process": true,
+      "quality": true
+    },
+    {
+      "path": "/hy/services/design",
+      "width": 390,
+      "h1Count": 1,
+      "overflow": false,
+      "process": true,
+      "quality": true
+    },
+    {
+      "path": "/hy/services/monolithic-work",
+      "width": 390,
+      "h1Count": 1,
+      "overflow": false,
+      "process": true,
+      "quality": true
+    },
+    {
+      "path": "/hy/services/facade-and-roofing",
+      "width": 390,
+      "h1Count": 1,
+      "overflow": false,
+      "process": true,
+      "quality": true
+    },
+    {
+      "path": "/hy/services/apartment-renovation-yerevan",
+      "width": 390,
+      "h1Count": 1,
+      "overflow": false,
+      "process": true,
+      "quality": true
+    },
+    {
+      "path": "/hy/services/new-build-renovation",
+      "width": 390,
+      "h1Count": 1,
+      "overflow": false,
+      "process": true,
+      "quality": true
+    },
+    {
+      "path": "/hy/services/turnkey-renovation",
+      "width": 390,
+      "h1Count": 1,
+      "overflow": false,
+      "process": true,
+      "quality": true
+    },
+    {
+      "path": "/hy/services/apartment-interior-design-yerevan",
+      "width": 390,
+      "h1Count": 1,
+      "overflow": false,
+      "process": true,
+      "quality": true
+    },
+    {
+      "path": "/hy/services/office-renovation-yerevan",
+      "width": 390,
+      "h1Count": 1,
+      "overflow": false,
+      "process": true,
+      "quality": true
+    },
+    {
+      "path": "/hy/services/capital-renovation-yerevan",
+      "width": 390,
+      "h1Count": 1,
+      "overflow": false,
+      "process": true,
+      "quality": true
+    },
+    {
+      "path": "/hy/services/cosmetic-renovation-yerevan",
+      "width": 390,
+      "h1Count": 1,
+      "overflow": false,
+      "process": true,
+      "quality": true
+    },
+    {
+      "path": "/hy/services/plumbing-work-yerevan",
+      "width": 390,
+      "h1Count": 1,
+      "overflow": false,
+      "process": true,
+      "quality": true
+    },
+    {
+      "path": "/hy/services/electrical-work-yerevan",
+      "width": 390,
+      "h1Count": 1,
+      "overflow": false,
+      "process": true,
+      "quality": true
+    },
+    {
+      "path": "/hy/services",
+      "width": 768,
+      "production": true,
+      "h1Count": 1,
+      "overflow": false
+    },
+    {
+      "path": "/ru/prices",
+      "width": 390,
+      "production": true,
+      "h1Count": 1,
+      "overflow": false
+    },
+    {
+      "path": "/hy/about",
+      "width": 390,
+      "production": true,
+      "h1Count": 1,
+      "overflow": false
+    },
+    {
+      "path": "/de/contacts",
+      "width": 390,
+      "production": true,
+      "h1Count": 1,
+      "overflow": false
+    },
+    {
+      "path": "/en/calculator",
+      "width": 768,
+      "production": true,
+      "h1Count": 1,
+      "overflow": false
+    },
+    {
+      "path": "/fr/privacy",
+      "width": 390,
+      "production": true,
+      "h1Count": 1,
+      "overflow": false
+    },
+    {
+      "path": "/hy",
+      "width": 320,
+      "production": true,
+      "h1Count": 1,
+      "overflow": true
+    },
+    {
+      "path": "/de/services/house-construction",
+      "width": 768,
+      "production": true,
+      "h1Count": 1,
+      "overflow": false
+    },
+    {
+      "path": "/ru/services/commercial-construction",
+      "width": 1440,
+      "production": true,
+      "h1Count": 1,
+      "overflow": false
+    },
+    {
+      "path": "/hy/services/facade-and-roofing",
+      "width": 1440,
+      "production": true,
+      "h1Count": 1,
+      "overflow": false
+    },
+    {
+      "path": "/hy",
+      "width": 320,
+      "production": true,
+      "recheck": true,
+      "h1Count": 1,
+      "overflow": false
+    },
+    {
+      "path": "/hy",
+      "width": 320,
+      "production": true,
+      "final": true,
+      "h1Count": 1,
+      "overflow": false
+    },
+    {
+      "path": "/ru",
+      "width": 320,
+      "production": true,
+      "final": true,
+      "h1Count": 1,
+      "overflow": false
+    },
+    {
+      "path": "/en",
+      "width": 320,
+      "production": true,
+      "final": true,
+      "h1Count": 1,
+      "overflow": false
+    },
+    {
+      "path": "/de",
+      "width": 320,
+      "production": true,
+      "final": true,
+      "h1Count": 1,
+      "overflow": false
+    },
+    {
+      "path": "/fr",
+      "width": 320,
+      "production": true,
+      "final": true,
+      "h1Count": 1,
+      "overflow": false
+    },
+    {
+      "path": "/hy/services/house-construction",
+      "width": 320,
+      "production": true,
+      "final": true,
+      "h1Count": 1,
+      "overflow": false
+    },
+    {
+      "path": "/hy/services/monolithic-work",
+      "width": 320,
+      "production": true,
+      "final": true,
+      "h1Count": 1,
+      "overflow": false
+    },
+    {
+      "h1Count": 1,
+      "heroFirstWordLines": 1,
+      "heroTextWidth": 544,
+      "imageLoaded": false,
+      "overflow": false,
+      "path": "/hy",
+      "width": 2560
+    },
+    {
+      "h1Count": 1,
+      "heroFirstWordLines": 1,
+      "heroTextWidth": 544,
+      "imageLoaded": false,
+      "overflow": false,
+      "path": "/hy",
+      "width": 1920
+    },
+    {
+      "h1Count": 1,
+      "heroFirstWordLines": 1,
+      "heroTextWidth": 572,
+      "imageLoaded": true,
+      "overflow": false,
+      "path": "/hy",
+      "width": 1440
+    },
+    {
+      "h1Count": 1,
+      "heroFirstWordLines": 1,
+      "heroTextWidth": 504,
+      "imageLoaded": true,
+      "overflow": false,
+      "path": "/hy",
+      "width": 1280
+    },
+    {
+      "h1Count": 1,
+      "heroFirstWordLines": 1,
+      "heroTextWidth": 384,
+      "imageLoaded": true,
+      "overflow": false,
+      "path": "/hy",
+      "width": 960
+    },
+    {
+      "h1Count": 1,
+      "heroFirstWordLines": 1,
+      "heroTextWidth": 720,
+      "imageLoaded": true,
+      "overflow": false,
+      "path": "/hy",
+      "width": 768
+    },
+    {
+      "h1Count": 1,
+      "heroFirstWordLines": 1,
+      "heroTextWidth": 358,
+      "imageLoaded": true,
+      "overflow": false,
+      "path": "/hy",
+      "width": 390
+    },
+    {
+      "h1Count": 1,
+      "heroFirstWordLines": 1,
+      "heroTextWidth": 288,
+      "imageLoaded": true,
+      "overflow": false,
+      "path": "/hy",
+      "width": 320
+    },
+    {
+      "h1Count": 1,
+      "heroTextWidth": 544,
+      "overflow": false,
+      "path": "/ru",
+      "width": 2560
+    },
+    {
+      "h1Count": 1,
+      "heroTextWidth": 544,
+      "overflow": false,
+      "path": "/en",
+      "width": 2560
+    },
+    {
+      "h1Count": 1,
+      "heroTextWidth": 544,
+      "overflow": false,
+      "path": "/de",
+      "width": 2560
+    },
+    {
+      "h1Count": 1,
+      "heroTextWidth": 544,
+      "overflow": false,
+      "path": "/fr",
+      "width": 2560
+    },
+    {
+      "h1Count": 1,
+      "heroTextWidth": 544,
+      "overflow": false,
+      "path": "/hy",
+      "width": 2560
+    }
+  ],
+  "latestChecks": [
+    {
+      "path": "/hy",
+      "width": 390,
+      "h1": "Շինարարություն, վերանորոգում և ինտերիերի դիզայն",
+      "h1Count": 1,
+      "overflow": false,
+      "heroFirstWordLines": 1,
+      "heroTextWidth": 358,
+      "imageLoaded": true
+    },
+    {
+      "path": "/ru",
+      "width": 390,
+      "h1": "Строительство, ремонт и дизайн в Армении",
+      "h1Count": 1,
+      "overflow": false
+    },
+    {
+      "path": "/en",
+      "width": 390,
+      "h1": "Construction, renovation and interior design in Armenia",
+      "h1Count": 1,
+      "overflow": false
+    },
+    {
+      "path": "/de",
+      "width": 390,
+      "h1": "Bau, Renovierung und Innenraumgestaltung in Armenien",
+      "h1Count": 1,
+      "overflow": false
+    },
+    {
+      "path": "/fr",
+      "width": 390,
+      "h1": "Construction, rénovation et aménagement intérieur en Arménie",
+      "h1Count": 1,
+      "overflow": false
+    },
+    {
+      "path": "/hy/services/renovation",
+      "width": 390,
+      "h1Count": 1,
+      "overflow": false,
+      "process": true,
+      "quality": true
+    },
+    {
+      "path": "/hy/services/house-construction",
+      "width": 390,
+      "h1Count": 1,
+      "overflow": false,
+      "process": true,
+      "quality": true
+    },
+    {
+      "path": "/hy/services/interior-design",
+      "width": 390,
+      "h1Count": 1,
+      "overflow": false,
+      "process": true,
+      "quality": true
+    },
+    {
+      "path": "/hy/services/commercial-construction",
+      "width": 390,
+      "h1Count": 1,
+      "overflow": false,
+      "process": true,
+      "quality": true
+    },
+    {
+      "path": "/hy/services/design",
+      "width": 390,
+      "h1Count": 1,
+      "overflow": false,
+      "process": true,
+      "quality": true
+    },
+    {
+      "path": "/hy/services/monolithic-work",
+      "width": 390,
+      "h1Count": 1,
+      "overflow": false,
+      "process": true,
+      "quality": true
+    },
+    {
+      "path": "/hy/services/facade-and-roofing",
+      "width": 390,
+      "h1Count": 1,
+      "overflow": false,
+      "process": true,
+      "quality": true
+    },
+    {
+      "path": "/hy/services/apartment-renovation-yerevan",
+      "width": 390,
+      "h1Count": 1,
+      "overflow": false,
+      "process": true,
+      "quality": true
+    },
+    {
+      "path": "/hy/services/new-build-renovation",
+      "width": 390,
+      "h1Count": 1,
+      "overflow": false,
+      "process": true,
+      "quality": true
+    },
+    {
+      "path": "/hy/services/turnkey-renovation",
+      "width": 390,
+      "h1Count": 1,
+      "overflow": false,
+      "process": true,
+      "quality": true
+    },
+    {
+      "path": "/hy/services/apartment-interior-design-yerevan",
+      "width": 390,
+      "h1Count": 1,
+      "overflow": false,
+      "process": true,
+      "quality": true
+    },
+    {
+      "path": "/hy/services/office-renovation-yerevan",
+      "width": 390,
+      "h1Count": 1,
+      "overflow": false,
+      "process": true,
+      "quality": true
+    },
+    {
+      "path": "/hy/services/capital-renovation-yerevan",
+      "width": 390,
+      "h1Count": 1,
+      "overflow": false,
+      "process": true,
+      "quality": true
+    },
+    {
+      "path": "/hy/services/cosmetic-renovation-yerevan",
+      "width": 390,
+      "h1Count": 1,
+      "overflow": false,
+      "process": true,
+      "quality": true
+    },
+    {
+      "path": "/hy/services/plumbing-work-yerevan",
+      "width": 390,
+      "h1Count": 1,
+      "overflow": false,
+      "process": true,
+      "quality": true
+    },
+    {
+      "path": "/hy/services/electrical-work-yerevan",
+      "width": 390,
+      "h1Count": 1,
+      "overflow": false,
+      "process": true,
+      "quality": true
+    },
+    {
+      "path": "/hy/services",
+      "width": 768,
+      "production": true,
+      "h1Count": 1,
+      "overflow": false
+    },
+    {
+      "path": "/ru/prices",
+      "width": 390,
+      "production": true,
+      "h1Count": 1,
+      "overflow": false
+    },
+    {
+      "path": "/hy/about",
+      "width": 390,
+      "production": true,
+      "h1Count": 1,
+      "overflow": false
+    },
+    {
+      "path": "/de/contacts",
+      "width": 390,
+      "production": true,
+      "h1Count": 1,
+      "overflow": false
+    },
+    {
+      "path": "/en/calculator",
+      "width": 768,
+      "production": true,
+      "h1Count": 1,
+      "overflow": false
+    },
+    {
+      "path": "/fr/privacy",
+      "width": 390,
+      "production": true,
+      "h1Count": 1,
+      "overflow": false
+    },
+    {
+      "path": "/hy",
+      "width": 320,
+      "production": true,
+      "final": true,
+      "h1Count": 1,
+      "overflow": false,
+      "heroFirstWordLines": 1,
+      "heroTextWidth": 288,
+      "imageLoaded": true
+    },
+    {
+      "path": "/de/services/house-construction",
+      "width": 768,
+      "production": true,
+      "h1Count": 1,
+      "overflow": false
+    },
+    {
+      "path": "/ru/services/commercial-construction",
+      "width": 1440,
+      "production": true,
+      "h1Count": 1,
+      "overflow": false
+    },
+    {
+      "path": "/hy/services/facade-and-roofing",
+      "width": 1440,
+      "production": true,
+      "h1Count": 1,
+      "overflow": false
+    },
+    {
+      "path": "/ru",
+      "width": 320,
+      "production": true,
+      "final": true,
+      "h1Count": 1,
+      "overflow": false
+    },
+    {
+      "path": "/en",
+      "width": 320,
+      "production": true,
+      "final": true,
+      "h1Count": 1,
+      "overflow": false
+    },
+    {
+      "path": "/de",
+      "width": 320,
+      "production": true,
+      "final": true,
+      "h1Count": 1,
+      "overflow": false
+    },
+    {
+      "path": "/fr",
+      "width": 320,
+      "production": true,
+      "final": true,
+      "h1Count": 1,
+      "overflow": false
+    },
+    {
+      "path": "/hy/services/house-construction",
+      "width": 320,
+      "production": true,
+      "final": true,
+      "h1Count": 1,
+      "overflow": false
+    },
+    {
+      "path": "/hy/services/monolithic-work",
+      "width": 320,
+      "production": true,
+      "final": true,
+      "h1Count": 1,
+      "overflow": false
+    },
+    {
+      "h1Count": 1,
+      "heroFirstWordLines": 1,
+      "heroTextWidth": 544,
+      "imageLoaded": false,
+      "overflow": false,
+      "path": "/hy",
+      "width": 2560
+    },
+    {
+      "h1Count": 1,
+      "heroFirstWordLines": 1,
+      "heroTextWidth": 544,
+      "imageLoaded": false,
+      "overflow": false,
+      "path": "/hy",
+      "width": 1920
+    },
+    {
+      "h1Count": 1,
+      "heroFirstWordLines": 1,
+      "heroTextWidth": 572,
+      "imageLoaded": true,
+      "overflow": false,
+      "path": "/hy",
+      "width": 1440
+    },
+    {
+      "h1Count": 1,
+      "heroFirstWordLines": 1,
+      "heroTextWidth": 504,
+      "imageLoaded": true,
+      "overflow": false,
+      "path": "/hy",
+      "width": 1280
+    },
+    {
+      "h1Count": 1,
+      "heroFirstWordLines": 1,
+      "heroTextWidth": 384,
+      "imageLoaded": true,
+      "overflow": false,
+      "path": "/hy",
+      "width": 960
+    },
+    {
+      "h1Count": 1,
+      "heroFirstWordLines": 1,
+      "heroTextWidth": 720,
+      "imageLoaded": true,
+      "overflow": false,
+      "path": "/hy",
+      "width": 768
+    },
+    {
+      "h1Count": 1,
+      "heroTextWidth": 544,
+      "overflow": false,
+      "path": "/ru",
+      "width": 2560
+    },
+    {
+      "h1Count": 1,
+      "heroTextWidth": 544,
+      "overflow": false,
+      "path": "/en",
+      "width": 2560
+    },
+    {
+      "h1Count": 1,
+      "heroTextWidth": 544,
+      "overflow": false,
+      "path": "/de",
+      "width": 2560
+    },
+    {
+      "h1Count": 1,
+      "heroTextWidth": 544,
+      "overflow": false,
+      "path": "/fr",
+      "width": 2560
+    }
+  ],
+  "interactions": [
+    "Mobile menu opens/closes",
+    "Mobile language switch retains service path after alignment fix",
+    "Desktop language switch retains service path",
+    "Contact dialog opens/closes",
+    "FAQ expands",
+    "Production contact form loads all localized fields",
+    "Escape closes contact dialog"
+  ],
+  "continuation": {
+    "before": {
+      "path": "/hy",
+      "width": 2560,
+      "heroTextWidth": 164
+    },
+    "after": {
+      "path": "/hy",
+      "width": 2560,
+      "heroTextWidth": 544,
+      "heroFirstWordLines": 1,
+      "imageLoaded": true
+    },
+    "consoleErrors": []
+  }
+}

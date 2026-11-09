@@ -12,7 +12,7 @@ export function EstimateSection({
   return (
     <section className="bg-[var(--background-soft)] py-section" id="estimate">
       <Container>
-        <div className="rounded-[28px] border border-[var(--border)] bg-white p-6 sm:p-9 lg:p-12">
+        <div className="rounded-card border border-[var(--border)] bg-white p-6 sm:p-9 lg:p-12">
           <div className="content-split grid items-center gap-7 lg:grid-cols-[0.9fr_1.1fr] lg:gap-10">
             <div>
               <SectionHeading

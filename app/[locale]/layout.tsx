@@ -9,8 +9,6 @@ import { WebVitals } from "@/components/analytics/web-vitals";
 import { Header } from "@/components/layout/header";
 import { MobileContactBar } from "@/components/layout/mobile-contact-bar";
 import { ContactDialog } from "@/components/forms/contact-dialog";
-import { SiteMotion } from "@/components/motion/site-motion";
-import { ConstructionBackdrop } from "@/components/motion/construction-backdrop";
 import { companyConfig } from "@/config/company.config";
 import { seoConfig } from "@/config/seo.config";
 import { getSiteOrigin } from "@/lib/company";
@@ -30,8 +28,8 @@ import {
 } from "@/lib/json-ld";
 
 import "../globals.css";
-import "@/components/motion/construction-backdrop.css";
 import "@/components/motion/content-layout.css";
+import "@/components/layout/premium-layout.css";
 
 const configuredMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? "";
 const googleAnalyticsMeasurementId =
@@ -108,9 +106,7 @@ export default async function LocaleLayout({
           </a>
           <Header dictionary={dictionary} locale={locale} />
           <main className="flex-1" id="main-content">
-            <SiteMotion backdrop={<ConstructionBackdrop />}>
-              {children}
-            </SiteMotion>
+            <div className="site-page-content">{children}</div>
           </main>
           <Footer dictionary={dictionary} locale={locale} />
           <MobileContactBar dictionary={dictionary} />

@@ -1,6 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
-import { getServiceImageAlt } from "@/config/service-images.config";
+import { getServiceMedia } from "@/config/service-media.config";
 import Link from "next/link";
 
 import { ContactTrigger } from "@/components/forms/contact-dialog";
@@ -14,6 +14,7 @@ type ServiceCardProps = {
   learnMore: string;
   contactLabel: string;
   href?: string;
+  mediaSlug?: string;
 };
 
 export function ServiceCard({
@@ -23,8 +24,15 @@ export function ServiceCard({
   learnMore,
   contactLabel,
   href = `/${locale}/services/${service.slug}`,
+  mediaSlug = service.slug,
 }: ServiceCardProps) {
   const ctaLabel = content.primaryCta ?? learnMore;
+  const media = getServiceMedia(mediaSlug, locale);
+  const photo =
+    ["apartment-renovation-yerevan", "interior-design"].includes(mediaSlug) ||
+    media.hero.src.startsWith("/")
+      ? media.hero
+      : media.details;
 
   return (
     <article
@@ -32,21 +40,22 @@ export function ServiceCard({
       data-motion="reveal"
     >
       <div className="service-card-layout grid h-full">
-        <div className="relative min-h-56 overflow-hidden bg-[var(--background-warm)]">
+        <div className="service-card-image relative overflow-hidden bg-[var(--background-warm)]">
           <div
             className="motion-photo"
             data-parallax={service.order % 2 ? "left" : "right"}
           >
             <Image
-              alt={getServiceImageAlt(service.image, locale)}
+              alt={photo.alt}
               className="motion-service-photo object-cover"
               fill
-              sizes="(max-width: 639px) 100vw, (max-width: 959px) 45vw, (max-width: 1279px) 50vw, 600px"
-              src={service.image}
+              sizes="(max-width: 959px) calc(100vw - 48px), (max-width: 1439px) 46vw, 660px"
+              src={photo.src}
             />
           </div>
+          <span className="media-caption">{photo.caption}</span>
         </div>
-        <div className="flex flex-col items-start p-5 sm:p-6">
+        <div className="service-card-copy flex flex-col items-start">
           <span className="text-sm font-bold tracking-[0.14em] text-[var(--brand-copper-text)]">
             {String(service.order).padStart(2, "0")}
           </span>

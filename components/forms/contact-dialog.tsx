@@ -210,7 +210,7 @@ export function ContactDialog({
       />
       <div
         ref={dialogRef}
-        className={`relative z-10 flex max-h-[94dvh] w-full ${view === "phone" ? "max-w-md" : "max-w-3xl"} flex-col overflow-hidden rounded-t-[28px] bg-[var(--background-soft)] shadow-2xl outline-none sm:rounded-[28px] ${
+        className={`relative z-10 flex max-h-[94dvh] w-full ${view === "phone" ? "max-w-md" : "max-w-3xl"} flex-col overflow-hidden rounded-t-[28px] bg-[var(--background-soft)] shadow-2xl outline-none sm:rounded-card ${
           isClosing
             ? "motion-safe:animate-[contact-dialog-exit_240ms_ease-in_forwards] sm:motion-safe:animate-none"
             : "motion-safe:animate-[contact-dialog-enter_320ms_cubic-bezier(0.22,1,0.36,1)] sm:motion-safe:animate-none"

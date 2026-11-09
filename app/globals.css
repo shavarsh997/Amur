@@ -1,27 +1,27 @@
 @import "tailwindcss";
 
 :root {
-  --brand-navy: #102a43;
-  --brand-navy-hover: #163b5c;
-  --brand-copper: #c96f45;
-  --brand-copper-text: #9f4f2d;
-  --brand-copper-on-dark: #db875e;
-  --brand-background: #faf8f4;
-  --brand-surface-warm: #f3e9e2;
+  --brand-navy: #232a2c;
+  --brand-navy-hover: #3a4447;
+  --brand-copper: #a69578;
+  --brand-copper-text: #75664f;
+  --brand-copper-on-dark: #d1c3aa;
+  --brand-background: #f5f4f0;
+  --brand-surface-warm: #e9e7e0;
   --brand-surface: #ffffff;
-  --brand-text: #102a43;
-  --brand-text-secondary: #52606d;
-  --brand-border: #dde2e6;
+  --brand-text: #232a2c;
+  --brand-text-secondary: #566064;
+  --brand-border: #d5d8d4;
   --background: var(--brand-background);
   --background-soft: var(--brand-background);
   --background-warm: var(--brand-surface-warm);
   --surface: var(--brand-surface);
-  --surface-muted: #f7f5f1;
+  --surface-muted: #eeefeb;
   --text-primary: var(--brand-text);
   --text-secondary: var(--brand-text-secondary);
-  --text-muted: #5b6b7b;
+  --text-muted: #626d70;
   --border: var(--brand-border);
-  --border-strong: #b9c5cf;
+  --border-strong: #9aa5a4;
   --button-primary: var(--brand-navy);
   --button-primary-hover: var(--brand-navy-hover);
   --button-text: #ffffff;
@@ -32,12 +32,12 @@
   --foreground: var(--text-primary);
   --surface: #ffffff;
   --muted: var(--surface-muted);
-  --radius-card: 0.75rem;
-  --radius-control: 0.5rem;
+  --radius-card: 0.125rem;
+  --radius-control: 0.125rem;
   --shadow-card: 0 12px 30px -26px rgb(16 42 67 / 0.22);
-  --container-width: 80rem;
+  --container-width: 90rem;
   --container-gutter: calc(var(--spacing) * 4);
-  --section-space: calc(var(--spacing) * 12);
+  --section-space: calc(var(--spacing) * 16);
   --section-gap: calc(var(--spacing) * 8);
   --panel-space: calc(var(--spacing) * 5);
   --motion-ease: cubic-bezier(0.22, 1, 0.36, 1);
@@ -48,6 +48,10 @@
   --color-foreground: var(--foreground);
   --font-sans:
     system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --radius-lg: 0.25rem;
+  --radius-xl: 0.25rem;
+  --radius-2xl: 0.25rem;
+  --radius-3xl: 0.25rem;
   --radius-card: var(--radius-card);
   --radius-control: var(--radius-control);
   --shadow-card: var(--shadow-card);
@@ -70,7 +74,7 @@
 @media (min-width: 1024px) {
   :root {
     --container-gutter: calc(var(--spacing) * 8);
-    --section-space: calc(var(--spacing) * 20);
+    --section-space: calc(var(--spacing) * 26);
     --section-gap: calc(var(--spacing) * 12);
     --panel-space: calc(var(--spacing) * 8);
   }

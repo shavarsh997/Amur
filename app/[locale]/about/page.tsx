@@ -92,7 +92,7 @@ export default async function AboutPage({ params }: Props) {
             ))}
           </div>
         </section>
-        <section className="content-split content-panel grid gap-6 rounded-[28px] bg-[var(--background-warm)] p-8 sm:p-12 lg:grid-cols-2">
+        <section className="content-split content-panel grid gap-6 rounded-card bg-[var(--background-warm)] p-8 sm:p-12 lg:grid-cols-2">
           <div>
             <h2 className="text-3xl font-semibold tracking-[-0.04em] text-[var(--text-primary)]">
               {about.approachTitle}

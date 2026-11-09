@@ -7,7 +7,7 @@ type ServiceAsset = {
   generated?: boolean;
 };
 
-const generatedCaption: Record<Locale, string> = {
+export const generatedCaption: Record<Locale, string> = {
   ru: "Иллюстрация услуги, созданная с ИИ",
   en: "AI-generated service illustration",
   hy: "ԱԲ-ով ստեղծված ծառայության պատկեր",

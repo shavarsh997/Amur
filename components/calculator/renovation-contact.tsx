@@ -7,7 +7,7 @@ export function RenovationContact({
   copy: Dictionary["constructionCalculator"]["renovationContact"];
 }) {
   return (
-    <section className="rounded-[24px] border border-[var(--border)] bg-[var(--background-warm)] p-panel">
+    <section className="rounded-card border border-[var(--border)] bg-[var(--background-warm)] p-panel">
       <h2 className="text-2xl font-semibold tracking-tight text-[var(--text-primary)]">
         {copy.title}
       </h2>

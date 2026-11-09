@@ -19,6 +19,7 @@ import {
   ServicePricing,
   ServiceFAQ,
   ServiceCTA,
+  ServiceQuality,
   RelatedServices,
   type ServiceLink,
 } from "./service-page";
@@ -78,7 +79,7 @@ export function ServiceLandingContent({
   );
 
   return (
-    <ServicePage>
+    <ServicePage slug={page.slug}>
       <ServiceHero
         title={content.title}
         description={content.description}
@@ -177,7 +178,17 @@ export function ServiceLandingContent({
             }))}
           />
         </ServiceSection>
-      ) : null}
+      ) : (
+        <ServiceSection
+          id="service-process"
+          title={dictionary.process.title}
+          description={<p>{dictionary.process.description}</p>}
+          tone="warm"
+        >
+          <ServiceProcess steps={dictionary.process.steps} />
+        </ServiceSection>
+      )}
+      <ServiceQuality dictionary={dictionary} />
       {pricing ? (
         <ServicePricing
           title={pricing.title}
@@ -201,7 +212,7 @@ export function ServiceLandingContent({
         links={relatedLinks}
         moreLabel={presentation.moreServices}
       />
-      <ServiceCTA dictionary={dictionary} />
+      <ServiceCTA dictionary={dictionary} contactLabel={content.contactLabel} />
     </ServicePage>
   );
 }

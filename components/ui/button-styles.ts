@@ -11,7 +11,7 @@ const variants = {
 } as const;
 
 const sizes = {
-  default: "min-h-12 px-5 py-3",
+  default: "min-h-13 px-6 py-3.5",
   compact: "min-h-11 px-4 py-2.5",
 } as const;
 
@@ -20,5 +20,5 @@ export function buttonStyles(
   size: ButtonSize,
   className: string
 ) {
-  return `action-button inline-flex max-w-full min-w-0 items-center justify-center gap-2 rounded-xl border text-center text-sm font-semibold leading-5 transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--brand-copper)] disabled:cursor-not-allowed disabled:opacity-60 ${variants[variant]} ${sizes[size]} ${className}`;
+  return `action-button action-button--${variant} inline-flex max-w-full min-w-0 items-center justify-center gap-2 rounded-control border text-center text-sm font-semibold leading-5 transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--brand-copper)] disabled:cursor-not-allowed disabled:opacity-60 ${variants[variant]} ${sizes[size]} ${className}`;
 }

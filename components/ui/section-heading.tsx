@@ -22,7 +22,7 @@ export function SectionHeading({
 
   return (
     <div
-      className={`flex max-w-3xl flex-col gap-4 ${alignment} ${className}`}
+      className={`section-heading flex max-w-3xl flex-col gap-4 ${alignment} ${className}`}
       data-motion="reveal"
     >
       <p

@@ -1,9 +1,11 @@
-import { Check } from "lucide-react";
+import { ArrowDownRight, ArrowUpRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 import { ButtonLink } from "@/components/ui/button-link";
 import { Container } from "@/components/ui/container";
 import { homeContent } from "@/config/home-content.config";
+import { getHomeHeroMedia } from "@/config/hero-media.config";
 import type { Dictionary, Locale } from "@/types";
 import { ContactTrigger } from "@/components/forms/contact-dialog";
 
@@ -15,67 +17,74 @@ export function Hero({
   dictionary: Dictionary;
 }) {
   const content = homeContent[locale];
+  const image = getHomeHeroMedia(locale);
+  const destinations = [
+    "apartment-renovation-yerevan",
+    "house-construction",
+    "interior-design",
+    "commercial-construction",
+  ];
   return (
-    <section className="overflow-hidden bg-[var(--brand-background)]">
-      <Container className="py-4 sm:py-7 lg:py-8">
-        <div className="relative overflow-hidden rounded-2xl border border-[var(--border)] bg-white">
-          <div className="content-hero-layout grid lg:min-h-[590px] lg:grid-cols-[0.9fr_1.1fr]">
-            <div className="content-hero-copy relative z-10 flex flex-col justify-center px-4 py-7 sm:px-9 sm:py-14 lg:px-12 lg:py-16">
-              <p className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.13em] text-[var(--text-secondary)]">
-                <span
-                  aria-hidden="true"
-                  className="h-px w-8 bg-[var(--brand-copper)]"
-                />
-                {dictionary.hero.eyebrow}
-              </p>
-              <h1 className="content-hero-title mt-5 w-full break-words text-pretty text-[2.25rem] font-semibold leading-[1.14] tracking-[-0.055em] text-[var(--text-primary)] sm:text-[2.25rem] lg:text-[3rem]">
-                {dictionary.hero.title}
-              </h1>
-              <p className="mt-5 max-w-full text-[15px] leading-6 text-[var(--text-secondary)] sm:text-[17px] sm:leading-7">
-                {dictionary.hero.description}
-              </p>
-              <div className="action-group mt-6">
-                <ContactTrigger
-                  label={dictionary.hero.primaryAction}
-                  variant="primary"
-                />
-                <ButtonLink href={`/${locale}/services`} variant="secondary">
-                  {dictionary.hero.secondaryAction}
-                </ButtonLink>
-              </div>
-              <div className="hero-benefits-region">
-                <ul className="hero-benefits mt-6 grid gap-3 border-t border-[var(--border)] pt-5 text-sm font-medium leading-5 text-[var(--text-secondary)] ">
-                  {dictionary.whyUs.items.slice(0, 3).map((item) => (
-                    <li className="flex items-start gap-2" key={item.title}>
-                      <Check
-                        aria-hidden="true"
-                        className="mt-0.5 size-4 shrink-0 text-[var(--brand-copper)]"
-                      />
-                      {item.title}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-            <div className="content-hero-image relative order-2 min-h-[280px] overflow-hidden bg-[var(--surface-muted)] lg:order-none lg:min-h-full">
-              <div className="motion-photo" data-parallax="vertical">
-                <Image
-                  alt={content.heroVisual.alt}
-                  className="object-cover object-center"
-                  fill
-                  preload
-                  quality={82}
-                  sizes="(max-width: 639px) calc(100vw - 32px), (max-width: 959px) calc(100vw - 48px), (max-width: 1279px) 53vw, (max-width: 1589px) 41vw, 620px"
-                  src={content.heroVisual.image}
-                />
-              </div>
-              <span
-                aria-hidden="true"
-                className="motion-hero-rule absolute bottom-5 left-5 h-12 w-1 bg-[var(--brand-copper)] sm:bottom-7 sm:left-7"
-                data-motion="rule"
-              />
-            </div>
+    <section className="home-hero">
+      <div className="home-hero__layout">
+        <div className="home-hero__copy">
+          <p className="home-hero__eyebrow">
+            <span aria-hidden="true" />
+            {dictionary.hero.eyebrow}
+          </p>
+          <h1>{dictionary.hero.title}</h1>
+          <p className="home-hero__description">
+            {dictionary.hero.description}
+          </p>
+          <div className="action-group mt-8">
+            <ContactTrigger
+              label={dictionary.hero.primaryAction}
+              variant="primary"
+            />
+            <ButtonLink href={`/${locale}/services`} variant="secondary">
+              {dictionary.hero.secondaryAction}
+            </ButtonLink>
           </div>
+          <ul className="home-hero__benefits">
+            {dictionary.whyUs.items.slice(0, 3).map((item, index) => (
+              <li key={item.title}>
+                <span aria-hidden="true">0{index + 1}</span>
+                {item.title}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <figure className="home-hero__image">
+          <Image
+            alt={image.alt}
+            className="object-cover"
+            fill
+            loading="eager"
+            fetchPriority="high"
+            quality={82}
+            sizes="(max-width: 959px) 100vw, (max-width: 1800px) 54vw, 972px"
+            src={image.src}
+          />
+          <div className="home-hero__image-rule" aria-hidden="true">
+            <ArrowDownRight size={30} strokeWidth={1} />
+          </div>
+          <figcaption>{image.caption}</figcaption>
+        </figure>
+      </div>
+      <Container>
+        <div className="home-directions">
+          {content.heroDirections.map((direction, index) => (
+            <Link
+              key={direction}
+              href={`/${locale}/services/${destinations[index]}`}
+            >
+              <span aria-hidden="true" className="home-directions__number">
+                0{index + 1}
+              </span>
+              <span>{direction}</span>
+              <ArrowUpRight aria-hidden="true" size={18} />
+            </Link>
+          ))}
         </div>
       </Container>
     </section>

@@ -187,7 +187,7 @@ export function SeoLandingPage({
                     />
                   </div>
                 ) : (
-                  <section className="rounded-[24px] bg-[var(--background-warm)] p-panel">
+                  <section className="rounded-card bg-[var(--background-warm)] p-panel">
                     <h2 className="text-2xl font-semibold tracking-[-0.03em] text-[var(--text-primary)]">
                       {content.calculatorLabel}
                     </h2>
