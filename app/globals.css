@@ -31,10 +31,10 @@
   --button-primary-hover: var(--brand-navy-hover);
   --button-text: #ffffff;
   /* CTA colors stay independent of the page and form-control palettes. */
-  --action-primary: #776048;
-  --action-primary-hover: #80664c;
-  --action-primary-active: #69533f;
-  --action-primary-border: #8f7659;
+  --action-primary: #536864;
+  --action-primary-hover: #586d68;
+  --action-primary-active: #465956;
+  --action-primary-border: #7b8b86;
   --action-secondary: rgb(34 40 43 / 0.94);
   --action-secondary-hover: #30383b;
   --action-secondary-active: #191d1f;
