@@ -126,7 +126,7 @@ export function LanguageSwitcher({
         aria-controls={panelId}
         aria-expanded={open}
         aria-label={`${label}: ${languageNames[locale]}`}
-        className={`inline-flex min-h-11 items-center justify-center gap-2 rounded-lg border px-3 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--brand-copper)] ${inverted ? "border-white/30 text-white hover:bg-white/10" : "border-[var(--border)] text-[var(--text-primary)] hover:bg-[var(--surface-muted)]"}`}
+        className={`cta-control action-button--outline inline-flex min-h-11 items-center justify-center gap-2 rounded-lg border px-3 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--brand-copper)] ${inverted ? "border-white/30 text-white hover:bg-white/10" : "border-[var(--border)] text-[var(--text-primary)] hover:bg-[var(--surface-muted)]"}`}
         onClick={() => setOpen((value) => !value)}
         ref={buttonRef}
         title={label}

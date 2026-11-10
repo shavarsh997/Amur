@@ -62,7 +62,7 @@ export function PhoneDetails({ copy }: { copy: Dictionary["contacts"] }) {
         value={phone}
       />
       <button
-        className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-[var(--button-primary)] px-5 py-3 text-sm font-semibold text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--button-primary)]"
+        className="cta-control action-button--primary inline-flex min-h-12 items-center justify-center gap-2 rounded-xl px-5 py-3 text-sm font-semibold"
         onClick={copyNumber}
         type="button"
       >

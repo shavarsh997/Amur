@@ -15,7 +15,7 @@ export function MobileContactBar({ dictionary }: { dictionary: Dictionary }) {
       <div className="mx-auto flex max-w-lg items-center gap-2">
         {phone ? (
           <PhoneLink
-            className="flex min-h-12 flex-1 items-center justify-center gap-2 rounded-xl border border-[var(--border)] text-sm font-semibold"
+            className="cta-control action-button--secondary flex min-h-12 flex-1 items-center justify-center gap-2 rounded-xl border text-sm font-semibold"
             href={phone}
           >
             <Phone className="size-4" aria-hidden="true" />
@@ -24,7 +24,7 @@ export function MobileContactBar({ dictionary }: { dictionary: Dictionary }) {
         ) : null}
         {whatsapp ? (
           <a
-            className="flex min-h-12 flex-1 items-center justify-center gap-2 rounded-xl border border-[var(--border)] text-sm font-semibold"
+            className="cta-control action-button--primary flex min-h-12 flex-1 items-center justify-center gap-2 rounded-xl border text-sm font-semibold"
             href={whatsapp}
             target="_blank"
             rel="noreferrer"

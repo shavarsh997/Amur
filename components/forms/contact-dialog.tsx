@@ -34,7 +34,7 @@ export function ContactTrigger({
   label: string;
   className?: string;
   onClick?: () => void;
-  variant?: "primary" | "link" | "secondary";
+  variant?: "primary" | "link" | "secondary" | "outline";
   size?: ButtonSize;
 }) {
   const openContact = () => {
@@ -47,7 +47,7 @@ export function ContactTrigger({
     return (
       <button
         aria-haspopup="dialog"
-        className={`inline-flex items-center rounded-sm text-sm font-medium transition-colors hover:text-[var(--text-secondary)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--button-primary)] ${className}`}
+        className={`cta-text-control inline-flex items-center rounded-sm text-sm font-medium transition-colors hover:text-[var(--text-secondary)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--button-primary)] ${className}`}
         onClick={openContact}
         type="button"
       >
@@ -244,7 +244,7 @@ export function ContactDialog({
           <div className="flex shrink-0 items-center gap-2">
             {(view === "form" || view === "phone") && !calculatorContext ? (
               <button
-                className="inline-flex h-10 items-center gap-1.5 rounded-xl px-3 text-sm font-semibold text-[var(--text-primary)] transition hover:bg-[var(--surface-muted)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--button-primary)]"
+                className="cta-control action-button--outline inline-flex h-10 items-center gap-1.5 rounded-xl px-3 text-sm font-semibold text-[var(--text-primary)] transition hover:bg-[var(--surface-muted)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--button-primary)]"
                 onClick={() => setView("methods")}
                 type="button"
               >
@@ -254,7 +254,7 @@ export function ContactDialog({
             ) : null}
             <button
               aria-label={dictionary.nav.closeMenu}
-              className="grid size-10 place-items-center rounded-xl border border-[var(--border)] text-[var(--text-primary)] transition hover:bg-[var(--surface-muted)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--button-primary)]"
+              className="cta-control action-button--outline grid size-10 place-items-center rounded-xl border border-[var(--border)] text-[var(--text-primary)] transition hover:bg-[var(--surface-muted)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--button-primary)]"
               onClick={closeDialog}
               type="button"
             >

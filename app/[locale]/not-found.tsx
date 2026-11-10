@@ -60,13 +60,13 @@ export default function LocaleNotFound() {
         <p className="mt-4 text-[var(--text-secondary)]">{copy.description}</p>
         <div className="mt-8 flex flex-wrap justify-center gap-3">
           <Link
-            className="inline-flex min-h-12 items-center rounded-full bg-[var(--button-primary)] px-6 py-3 font-semibold text-white"
+            className="cta-control action-button--primary inline-flex min-h-12 items-center rounded-full px-6 py-3 font-semibold"
             href={`/${locale}`}
           >
             {copy.home}
           </Link>
           <Link
-            className="inline-flex min-h-12 items-center rounded-full border border-[var(--border)] px-6 py-3 font-semibold text-[var(--text-primary)]"
+            className="cta-control action-button--outline inline-flex min-h-12 items-center rounded-full border px-6 py-3 font-semibold text-[var(--text-primary)]"
             href={`/${locale}/services`}
           >
             {copy.services}

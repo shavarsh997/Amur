@@ -55,23 +55,6 @@
 .hero :global(.action-group) {
   max-width: 34rem;
 }
-.hero :global(.action-button--primary),
-.finalCta :global(.action-button--primary) {
-  background: var(--text-on-dark);
-  color: var(--brand-navy);
-}
-.hero :global(.action-button--primary):hover,
-.finalCta :global(.action-button--primary):hover {
-  background: #e5e1da;
-}
-.hero :global(.action-button--secondary) {
-  background: #11141640;
-  border-color: #8a9191;
-  color: var(--text-on-dark);
-}
-.hero :global(.action-button--secondary):hover {
-  background: var(--dark-surface);
-}
 .heroImage {
   position: absolute;
   inset: 0;

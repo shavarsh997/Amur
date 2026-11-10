@@ -1,14 +1,5 @@
-export type ButtonVariant = "primary" | "secondary" | "light";
+export type ButtonVariant = "primary" | "secondary" | "outline" | "light";
 export type ButtonSize = "default" | "compact";
-
-const variants = {
-  primary:
-    "border-transparent bg-[var(--button-primary)] text-[var(--button-text)] hover:bg-[var(--button-primary-hover)]",
-  secondary:
-    "border-[var(--border)] bg-white text-[var(--text-primary)] hover:border-[var(--border-strong)] hover:bg-[var(--surface-muted)]",
-  light:
-    "border-[var(--border)] bg-white text-[var(--text-primary)] hover:bg-[var(--surface-muted)]",
-} as const;
 
 const sizes = {
   default: "min-h-13 px-6 py-3.5",
@@ -20,5 +11,5 @@ export function buttonStyles(
   size: ButtonSize,
   className: string
 ) {
-  return `action-button action-button--${variant} inline-flex max-w-full min-w-0 items-center justify-center gap-2 rounded-control border text-center text-sm font-semibold leading-5 transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--brand-copper)] disabled:cursor-not-allowed disabled:opacity-60 ${variants[variant]} ${sizes[size]} ${className}`;
+  return `action-button action-button--${variant === "light" ? "outline" : variant} inline-flex max-w-full min-w-0 items-center justify-center gap-2 rounded-control border text-center text-sm font-semibold leading-5 ${sizes[size]} ${className}`;
 }

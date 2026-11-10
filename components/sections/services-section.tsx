@@ -1,16 +1,19 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
-import { ServiceCard } from "@/components/ui/service-card";
+import { ArchitecturalImage } from "@/components/ui/architectural-image";
+import { ContactTrigger } from "@/components/forms/contact-dialog";
 import { getActiveServices } from "@/config/services.config";
+import { getServiceMedia } from "@/config/service-media.config";
 import {
   getSeoLandingPage,
   getSeoLandingPath,
 } from "@/config/seo-landing-pages.config";
 import { ServiceGuides } from "@/components/sections/service-guides";
 import type { Dictionary, Locale } from "@/types";
+import styles from "./services-section.module.css";
 
 export function ServicesSection({
   locale,
@@ -37,42 +40,70 @@ export function ServicesSection({
             <ArrowRight aria-hidden="true" className="size-4" />
           </Link>
         </div>
-        <div className="directions-gallery">
+        <div className={styles.gallery}>
           {getActiveServices(locale)
             .filter((service) => service.category === "primary")
             .map(({ content, ...service }) => {
               const featuredApartment =
                 service.slug === "renovation" && apartment;
+              const title = featuredApartment
+                ? featuredApartment.content.title
+                : content.title;
+              const description = featuredApartment
+                ? featuredApartment.content.description
+                : content.shortDescription;
+              const href = featuredApartment
+                ? `/${locale}/${getSeoLandingPath(featuredApartment)}`
+                : `/${locale}/services/${service.slug}`;
+              const mediaSlug = featuredApartment
+                ? "apartment-renovation-yerevan"
+                : service.slug;
+              const image = getServiceMedia(mediaSlug, locale).card;
+              const primaryCta = featuredApartment
+                ? dictionary.services.learnMore
+                : content.primaryCta;
               return (
-                <ServiceCard
-                  gallery
-                  contactLabel={dictionary.nav.contacts}
-                  content={
-                    featuredApartment
-                      ? {
-                          ...content,
-                          title: featuredApartment.content.title,
-                          shortDescription:
-                            featuredApartment.content.description,
-                          primaryCta: dictionary.services.learnMore,
-                        }
-                      : content
-                  }
-                  href={
-                    featuredApartment
-                      ? `/${locale}/${getSeoLandingPath(featuredApartment)}`
-                      : undefined
-                  }
+                <article
+                  className={styles.card}
+                  data-service-card={mediaSlug}
                   key={service.slug}
-                  mediaSlug={
-                    featuredApartment
-                      ? "apartment-renovation-yerevan"
-                      : service.slug
-                  }
-                  learnMore={dictionary.services.learnMore}
-                  locale={locale}
-                  service={service}
-                />
+                >
+                  <Link className={styles.visualLink} href={href}>
+                    <div className={styles.image}>
+                      <ArchitecturalImage
+                        // Landscape originals keep the same composition at every size.
+                        image={{ ...image, mobileSrc: undefined }}
+                        sizes="(max-width: 639px) calc(100vw - 32px), (max-width: 767px) calc(100vw - 48px), (max-width: 1439px) calc(50vw - 48px), 660px"
+                      />
+                    </div>
+                    <div className={styles.heading}>
+                      <span className={styles.number} aria-hidden="true">
+                        {String(service.order).padStart(2, "0")}
+                      </span>
+                      <h3>{title}</h3>
+                    </div>
+                  </Link>
+                  <p className={styles.description}>{description}</p>
+                  <div className={styles.actions}>
+                    {service.ctaKind === "contact" ? (
+                      <ContactTrigger
+                        className={styles.action}
+                        variant="link"
+                        label={primaryCta ?? dictionary.nav.contacts}
+                      />
+                    ) : (
+                      <Link className={styles.action} href={href}>
+                        {primaryCta ?? dictionary.services.learnMore}
+                      </Link>
+                    )}
+                    <ArrowUpRight
+                      className={styles.actionArrow}
+                      size={20}
+                      strokeWidth={1.5}
+                      aria-hidden="true"
+                    />
+                  </div>
+                </article>
               );
             })}
         </div>

@@ -116,7 +116,7 @@ export function ConstructionEstimateDialog({
           </div>
           <button
             aria-label={copy.dialog.close}
-            className="grid size-10 shrink-0 place-items-center rounded-xl border border-[var(--border)] text-[var(--text-primary)] transition hover:bg-[var(--surface-muted)]"
+            className="cta-control action-button--outline grid size-10 shrink-0 place-items-center rounded-xl border border-[var(--border)] text-[var(--text-primary)] transition hover:bg-[var(--surface-muted)]"
             onClick={onClose}
             type="button"
           >

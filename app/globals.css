@@ -30,6 +30,20 @@
   --button-primary: var(--brand-navy);
   --button-primary-hover: var(--brand-navy-hover);
   --button-text: #ffffff;
+  /* CTA colors stay independent of the page and form-control palettes. */
+  --action-primary: #776048;
+  --action-primary-hover: #80664c;
+  --action-primary-active: #69533f;
+  --action-primary-border: #8f7659;
+  --action-secondary: rgb(34 40 43 / 0.94);
+  --action-secondary-hover: #30383b;
+  --action-secondary-active: #191d1f;
+  --action-secondary-border: #747d7e;
+  --action-text: #f4f2ed;
+  --action-outline-text: #202426;
+  --action-outline-border: #797e7c;
+  --action-outline-hover: rgb(17 20 22 / 0.06);
+  --action-outline-active: rgb(17 20 22 / 0.1);
   --warm-accent: var(--brand-surface-warm);
   --brand-accent: var(--brand-copper);
   --success: #2f7d4a;
@@ -218,6 +232,91 @@ summary {
 .action-button__label {
   min-width: 0;
   text-wrap: balance;
+}
+
+/* Custom CTA controls share colors/states without changing their geometry. */
+:is(.action-button, .cta-control) {
+  background: var(--action-fill);
+  border-color: var(--action-edge);
+  color: var(--action-ink);
+  transition:
+    background-color 180ms var(--motion-ease),
+    border-color 180ms var(--motion-ease),
+    color 180ms var(--motion-ease);
+}
+
+.action-button--primary {
+  --action-fill: var(--action-primary);
+  --action-fill-hover: var(--action-primary-hover);
+  --action-fill-active: var(--action-primary-active);
+  --action-edge: var(--action-primary-border);
+  --action-ink: var(--action-text);
+}
+
+.action-button--secondary {
+  --action-fill: var(--action-secondary);
+  --action-fill-hover: var(--action-secondary-hover);
+  --action-fill-active: var(--action-secondary-active);
+  --action-edge: var(--action-secondary-border);
+  --action-ink: var(--action-text);
+}
+
+.action-button--outline {
+  --action-fill: transparent;
+  --action-fill-hover: var(--action-outline-hover);
+  --action-fill-active: var(--action-outline-active);
+  --action-edge: var(--action-outline-border);
+  --action-ink: var(--action-outline-text);
+}
+
+@media (hover: hover) {
+  :is(.action-button, .cta-control):hover:not(
+      :disabled,
+      [aria-disabled="true"]
+    ) {
+    background: var(--action-fill-hover);
+    border-color: var(--action-edge);
+    color: var(--action-ink);
+  }
+}
+
+:is(.action-button, .cta-control):active:not(
+    :disabled,
+    [aria-disabled="true"]
+  ) {
+  background: var(--action-fill-active);
+  border-color: var(--action-edge);
+  color: var(--action-ink);
+}
+
+/* Two-tone focus stays visible on photography and on both surface themes. */
+:is(button, .action-button, .cta-control, .cta-text-control):focus-visible {
+  outline: 2px solid #cbb395;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 3px #111416;
+}
+
+:is(.action-button, .cta-control):is(:disabled, [aria-disabled="true"]) {
+  background: #353a3b;
+  border-color: #747d7e;
+  color: #b6bdbe;
+  cursor: not-allowed;
+  opacity: 1;
+}
+
+@media (forced-colors: active) {
+  :is(.action-button, .cta-control) {
+    border-color: ButtonText;
+    color: ButtonText;
+    background: ButtonFace;
+  }
+  :is(button, .action-button, .cta-control, .cta-text-control):focus-visible {
+    outline-color: Highlight;
+  }
+  :is(.action-button, .cta-control):is(:disabled, [aria-disabled="true"]) {
+    border-color: GrayText;
+    color: GrayText;
+  }
 }
 
 .action-button__icon {

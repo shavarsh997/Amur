@@ -697,23 +697,6 @@ p + .facts {
     [data-service-visual="engineering"],
     [data-service-visual="commercial"]
   )
-  .hero
-  :global(.action-button--primary) {
-  background: #d1c3aa;
-  color: #232a2c;
-}
-.page:is(
-    [data-service-visual="engineering"],
-    [data-service-visual="commercial"]
-  )
-  .hero
-  :global(.action-button--primary):hover {
-  background: #e5d8bf;
-}
-.page:is(
-    [data-service-visual="engineering"],
-    [data-service-visual="commercial"]
-  )
   .breadcrumbs
   a:hover {
   color: white;
@@ -870,25 +853,6 @@ p + .facts {
 }
 .page[data-service-visual="engineering"] .heroCopy {
   background-image: none;
-}
-.page:is(
-    [data-service-visual="engineering"],
-    [data-service-visual="commercial"]
-  )
-  .hero
-  :global(.action-button--primary) {
-  background: var(--text-on-dark);
-  color: var(--brand-navy);
-}
-.page:is(
-    [data-service-visual="engineering"],
-    [data-service-visual="commercial"]
-  )
-  .hero
-  :global(.action-button--secondary) {
-  background: transparent;
-  color: var(--text-on-dark);
-  border-color: #8a9191;
 }
 .page[data-service-slug="monolithic-work"] .hero {
   position: relative;
