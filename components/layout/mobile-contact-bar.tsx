@@ -9,7 +9,7 @@ export function MobileContactBar({ dictionary }: { dictionary: Dictionary }) {
   const whatsapp = getWhatsAppHref();
   return (
     <div
-      className="fixed inset-x-0 bottom-0 z-40 border-t border-[var(--border)] bg-white px-3 pt-2 pb-[max(0.5rem,env(safe-area-inset-bottom))] shadow-[0_-4px_20px_rgb(0_0_0/0.05)] sm:hidden"
+      className="fixed inset-x-0 bottom-0 z-40 border-t border-[var(--border-on-dark)] bg-[var(--dark-secondary)] px-3 pt-2 pb-[max(0.5rem,env(safe-area-inset-bottom))] text-[var(--text-on-dark)] shadow-[0_-8px_24px_rgb(0_0_0/0.16)] sm:hidden"
       data-mobile-contact-bar
     >
       <div className="mx-auto flex max-w-lg items-center gap-2">
