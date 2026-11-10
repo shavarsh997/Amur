@@ -95,7 +95,7 @@ export function MobileNav({
         aria-controls={panelId}
         aria-expanded={open}
         aria-label={open ? closeLabel : openLabel}
-        className={`cta-control action-button--outline grid size-11 place-items-center rounded-xl border transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--button-primary)] ${"border-[var(--border)] text-[var(--text-primary)] hover:bg-[var(--surface-muted)]"}`}
+        className={`navigation-toggle cta-control action-button--outline grid size-11 place-items-center rounded-xl border transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--button-primary)] ${"border-[var(--border)] text-[var(--text-primary)] hover:bg-[var(--surface-muted)]"}`}
         onClick={() => setOpen((value) => !value)}
         type="button"
       >
@@ -114,7 +114,7 @@ export function MobileNav({
           <div className="mobile-navigation__top">
             <span aria-hidden="true">SHINEX</span>
             <button
-              className="cta-control action-button--outline"
+              className="navigation-toggle cta-control action-button--outline"
               type="button"
               aria-label={closeLabel}
               onClick={() => {

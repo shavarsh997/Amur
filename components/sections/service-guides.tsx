@@ -29,7 +29,7 @@ export function ServiceGuides({
       <div className="content-grid-three mt-6 grid gap-5 md:grid-cols-3">
         {serviceGuideGroups.map((group) => (
           <div
-            className="rounded-2xl border border-[var(--border)] bg-white p-5 sm:p-6"
+            className="rounded-card border border-[var(--border)] bg-white p-5 sm:p-6"
             key={group.title.en}
           >
             <h3 className="font-semibold text-[var(--text-primary)]">

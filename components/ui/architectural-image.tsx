@@ -16,11 +16,13 @@ export function ArchitecturalImage({
   sizes,
   eager = false,
   className = "",
+  parallax,
 }: {
   image: ArchitecturalPhoto;
   sizes: string;
   eager?: boolean;
   className?: string;
+  parallax?: "vertical";
 }) {
   const shared = {
     alt: image.alt,
@@ -37,6 +39,7 @@ export function ArchitecturalImage({
   return (
     <picture
       className={`architectural-picture ${className}`}
+      data-parallax={parallax}
       style={
         {
           "--image-focus": image.focalPoint ?? "50% 50%",

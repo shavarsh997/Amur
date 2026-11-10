@@ -19,7 +19,7 @@ export function ServiceArea({ locale }: { locale: Locale }) {
   return (
     <section className="bg-white pb-section">
       <Container>
-        <div className="content-split content-panel grid gap-8 rounded-2xl bg-[var(--background-warm)] p-6 sm:p-9 lg:grid-cols-[1.1fr_0.9fr] lg:gap-14 lg:p-10">
+        <div className="content-split content-panel grid gap-8 rounded-card bg-[var(--background-warm)] p-6 sm:p-9 lg:grid-cols-[1.1fr_0.9fr] lg:gap-14 lg:p-10">
           <div className="min-w-0">
             <p className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.13em] text-[var(--text-secondary)]">
               <span

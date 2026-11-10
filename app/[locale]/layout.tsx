@@ -8,6 +8,7 @@ import { ConversionTracking } from "@/components/analytics/conversion-tracking";
 import { WebVitals } from "@/components/analytics/web-vitals";
 import { Header } from "@/components/layout/header";
 import { MobileContactBar } from "@/components/layout/mobile-contact-bar";
+import { SiteMotion } from "@/components/motion/site-motion";
 import { ContactDialog } from "@/components/forms/contact-dialog";
 import { companyConfig } from "@/config/company.config";
 import { seoConfig } from "@/config/seo.config";
@@ -106,7 +107,7 @@ export default async function LocaleLayout({
           </a>
           <Header dictionary={dictionary} locale={locale} />
           <main className="flex-1" id="main-content">
-            <div className="site-page-content">{children}</div>
+            <SiteMotion>{children}</SiteMotion>
           </main>
           <Footer dictionary={dictionary} locale={locale} />
           <MobileContactBar dictionary={dictionary} />

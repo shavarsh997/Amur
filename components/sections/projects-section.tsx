@@ -25,7 +25,7 @@ export function ProjectsSection({
         <div className="mt-8 grid gap-3 content-grid md:grid-cols-2 content-grid-three lg:grid-cols-3 lg:gap-5">
           {featuredProjects.map((project, index) => (
             <figure
-              className="group relative aspect-[4/3] overflow-hidden rounded-xl bg-[var(--surface-muted)]"
+              className="group relative aspect-[4/3] overflow-hidden rounded-card bg-[var(--surface-muted)]"
               key={project.id}
             >
               <Image

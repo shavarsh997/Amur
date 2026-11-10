@@ -1021,3 +1021,245 @@ p + .facts {
     aspect-ratio: 4/3;
   }
 }
+
+/* Inset photographs share a radius; edge-to-edge architectural heroes do not. */
+.detailPhoto,
+.processPhoto,
+.page[data-service-slug="apartment-renovation-yerevan"] .heroPhoto {
+  border-radius: var(--radius-media);
+}
+.scopeCard,
+.relatedCard,
+.requirements {
+  border-radius: var(--radius-card);
+}
+.scopeCard,
+.relatedCard {
+  border-color: transparent;
+}
+.page :global(#request-estimate) > section {
+  border-radius: var(--radius-card);
+}
+.sectionHeader {
+  margin-bottom: clamp(2rem, 4vw, 3.5rem);
+}
+.sectionDescription {
+  max-width: 38rem;
+}
+.heroPhoto {
+  border-radius: var(--radius-composition);
+}
+.detailPhoto {
+  aspect-ratio: 4 / 3;
+}
+.articleSections {
+  background: var(--brand-background);
+  padding-block: clamp(1rem, 3vw, 2.5rem);
+}
+.articleSection {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: clamp(2rem, 5vw, 5rem);
+  padding-block: clamp(2.5rem, 5vw, 4.5rem);
+}
+.articleSection + .articleSection {
+  border-top: 1px solid var(--border);
+}
+.articleHeading > span {
+  display: block;
+  margin-bottom: 1.25rem;
+  color: var(--service-accent);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 300;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+}
+.articleHeading h3 {
+  max-width: 30ch;
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
+  line-height: 1.35;
+}
+.articleCopy > p {
+  max-width: 66ch;
+  color: var(--text-secondary);
+  font-size: 0.9375rem;
+  line-height: 1.85;
+}
+.articleCopy > p + p {
+  margin-top: 1.25rem;
+}
+.articleCopy .workGrid {
+  grid-template-columns: 1fr;
+  margin-top: 1.75rem;
+}
+.articleCopy .workGrid li {
+  padding-block: 1.125rem;
+}
+.timeline {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2.5rem 4rem;
+}
+.timeline li {
+  display: grid;
+  grid-template-columns: 3.5rem minmax(0, 1fr);
+  column-gap: 1.5rem;
+  align-content: start;
+  padding-top: 1.75rem;
+}
+.timeline .stepNumber {
+  grid-row: span 2;
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+.timeline h3 {
+  font-size: 1.0625rem;
+  line-height: 1.5;
+}
+.timeline p {
+  font-size: 0.875rem;
+  max-width: 48ch;
+}
+.processGallery:has(> figure:nth-child(3):last-child) > figure {
+  grid-column: span 2;
+}
+.processPhoto > span {
+  border-radius: var(--radius-control);
+}
+/* Technical work uses a graphite process spread and a quiet quality checklist. */
+.page[data-service-visual="engineering"] .section[id="service-process"] {
+  --text-secondary: var(--text-secondary-on-dark);
+  --service-accent: var(--brand-copper-on-dark);
+  --border-strong: #ffffff38;
+  background: var(--dark-secondary);
+  color: var(--text-on-dark);
+}
+.page[data-service-visual="engineering"] .quality {
+  --text-secondary: var(--brand-text-secondary);
+  --service-accent: #65716b;
+  --border: var(--brand-border);
+  background: var(--service-tint);
+  color: var(--brand-text);
+}
+/* Small interactive movements preserve the reading position and card layout. */
+@media (prefers-reduced-motion: no-preference) {
+  .textLink,
+  .relatedCard,
+  .scopeCard {
+    transition:
+      color 220ms ease,
+      background-color 220ms ease;
+  }
+  .textLink svg,
+  .relatedCard > svg,
+  .cardArrow {
+    transition: transform 250ms var(--motion-ease);
+  }
+  @media (hover: hover) {
+    .textLink:hover svg {
+      transform: translateY(3px);
+    }
+    .relatedCard:hover > svg,
+    .scopeCard:hover .cardArrow {
+      transform: translate(3px, -3px);
+    }
+    .relatedCard:hover,
+    .scopeCard:hover {
+      border-color: transparent;
+      background: var(--brand-background);
+    }
+  }
+}
+@media (min-width: 960px) {
+  .detailPhoto {
+    position: sticky;
+    top: calc(var(--site-header-height) + 2rem);
+  }
+  .page[data-service-visual="commercial"] .detailsGrid {
+    grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+  }
+  .page[data-service-visual="commercial"] .detailPhoto {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .page[data-service-visual="commercial"] .detailsCopy {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .page[data-service-slug="house-construction"] .hero {
+    grid-template-columns: 46% 54%;
+  }
+  .page[data-service-slug="house-construction"] .heroPhoto {
+    min-height: 660px;
+  }
+  .page[data-service-slug="interior-design"] .heroPhoto {
+    margin: 2rem 2rem 2rem 0;
+    min-height: 590px;
+    border-radius: var(--radius-media);
+  }
+}
+@media (max-width: 959px) {
+  .detailPhoto {
+    aspect-ratio: 4 / 3;
+  }
+  .timeline {
+    gap: 2rem;
+  }
+  .timeline li {
+    grid-template-columns: 2.5rem minmax(0, 1fr);
+    column-gap: 1rem;
+    padding: 0 0 0 1.25rem;
+  }
+  .timeline .stepNumber {
+    font-size: 2rem;
+  }
+  .articleSection {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+  }
+  .articleHeading {
+    display: grid;
+    grid-template-columns: 2.5rem minmax(0, 1fr);
+    gap: 1rem;
+    align-items: start;
+  }
+  .articleHeading > span {
+    margin: 0;
+  }
+  .articleHeading h3 {
+    max-width: 40ch;
+  }
+  .page[data-service-slug="apartment-renovation-yerevan"] .heroPhoto {
+    border-radius: var(--radius-composition);
+  }
+  .processGallery:has(> figure:nth-child(3):last-child) > figure {
+    grid-column: auto;
+  }
+  .processGallery:has(> figure:nth-child(3):last-child) > figure:last-child {
+    grid-column: 1 / -1;
+  }
+}
+@media (max-width: 639px) {
+  .timeline {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .timeline li {
+    padding-bottom: 0.5rem;
+  }
+  .timeline h3 {
+    font-size: 1rem;
+  }
+  .heroPhoto,
+  .page[data-service-slug="monolithic-work"] .heroPhoto {
+    aspect-ratio: 4 / 3;
+  }
+}
+
+@media (min-width: 1280px) {
+  .timeline {
+    grid-template-columns: repeat(var(--process-columns), minmax(0, 1fr));
+    column-gap: 2.5rem;
+  }
+}

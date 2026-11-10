@@ -689,3 +689,70 @@ body {
   --action-outline-hover: rgb(244 242 237 / 0.08);
   --action-outline-active: rgb(244 242 237 / 0.12);
 }
+
+/* Borderless language control keeps its 44px target and shared keyboard focus. */
+.language-toggle,
+.navigation-toggle,
+.mobile-navigation__top .navigation-toggle {
+  border: 0;
+}
+.language-toggle[aria-expanded="true"] {
+  background: var(--action-outline-active);
+}
+.page-hero__image,
+.service-card-image,
+.technical-service__photo,
+.direction-card__visual {
+  border-radius: var(--radius-media);
+  overflow: hidden;
+}
+.service-catalog-card {
+  border-radius: var(--radius-card);
+  border: 0;
+  background: var(--brand-background);
+}
+@media (min-width: 1024px) {
+  .service-catalog-card:nth-child(even) .service-catalog-image {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .service-catalog-card:nth-child(even) .service-catalog-copy {
+    grid-column: 1;
+    grid-row: 1;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .technical-service__photo img,
+  .direction-card__visual img {
+    transition: transform 650ms var(--motion-ease);
+  }
+  .technical-service__link svg,
+  .home-directions svg {
+    transition: transform 250ms var(--motion-ease);
+  }
+  .site-header nav a:not(.action-button),
+  .technical-service__link {
+    text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: 0 1px;
+    transition:
+      background-size 250ms var(--motion-ease),
+      color 180ms ease;
+  }
+  @media (hover: hover) {
+    .site-header nav a:not(.action-button):hover,
+    .technical-service:hover .technical-service__link {
+      background-size: 100% 1px;
+    }
+    .technical-service:hover .technical-service__photo img,
+    .direction-card__visual:hover img {
+      transform: scale(1.025);
+    }
+    .technical-service:hover .technical-service__link svg,
+    .home-directions > a:hover svg {
+      transform: translate(3px, -3px);
+    }
+  }
+}

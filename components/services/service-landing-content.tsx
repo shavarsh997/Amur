@@ -14,6 +14,7 @@ import {
   ServiceSection,
   ServiceScope,
   ServiceDetails,
+  ServiceArticleSections,
   ServiceWorkGrid,
   ServiceProcess,
   ServiceProcessGallery,
@@ -57,6 +58,11 @@ export function ServiceLandingContent({
   const standaloneSections =
     page.slug === "apartment-renovation-yerevan" ? otherSections : [];
   const detailSections = standaloneSections.length ? [] : otherSections;
+  const separateDetails =
+    detailSections.some(
+      (section) =>
+        section.items?.length || section.paragraphs.join(" ").length > 400
+    ) || detailSections.length > 1;
   const supportsCalculator = page.slug === "apartment-interior-design-yerevan";
   const estimate = supportsCalculator ? (
     <section>
@@ -114,23 +120,25 @@ export function ServiceLandingContent({
         paragraphs={content.introduction}
         image={media.details}
       >
-        {detailSections.map((section) => (
-          <section className="mt-8" key={section.title}>
-            <h3>{section.title}</h3>
-            {section.paragraphs.map((p) => (
-              <p
-                className="mt-4 text-sm leading-7 text-[var(--text-secondary)]"
-                key={p}
-              >
-                {p}
-              </p>
-            ))}
-            {section.items?.length ? (
-              <ServiceWorkGrid items={section.items} />
-            ) : null}
-          </section>
-        ))}
+        {!separateDetails
+          ? detailSections.map((section) => (
+              <section className="mt-8" key={section.title}>
+                <h3>{section.title}</h3>
+                {section.paragraphs.map((paragraph) => (
+                  <p
+                    className="mt-4 text-sm leading-7 text-[var(--text-secondary)]"
+                    key={paragraph}
+                  >
+                    {paragraph}
+                  </p>
+                ))}
+              </section>
+            ))
+          : null}
       </ServiceDetails>
+      {separateDetails ? (
+        <ServiceArticleSections sections={detailSections} />
+      ) : null}
       {standaloneSections.map((section) => (
         <ServiceSection
           key={section.title}

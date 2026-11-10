@@ -117,7 +117,7 @@ export function ServiceSection({
       className={`${styles.section} ${tone === "warm" ? styles.warm : ""}`}
     >
       <Container>
-        <div className={styles.sectionHeader}>
+        <div className={styles.sectionHeader} data-motion="reveal">
           <div>
             {eyebrow ? <p className={styles.eyebrow}>{eyebrow}</p> : null}
             <h2>{title}</h2>
@@ -171,15 +171,17 @@ export function ServiceDetails({
   return (
     <section className={styles.details} id="service-details">
       <Container className={styles.detailsGrid}>
-        <figure className={styles.detailPhoto}>
+        <figure className={styles.detailPhoto} data-motion="image">
           <ArchitecturalImage
             image={image}
+            className="motion-photo"
+            parallax="vertical"
             sizes="(max-width: 959px) 100vw, 45vw"
           />
         </figure>
         <div className={styles.detailsCopy}>
           <p className={styles.eyebrow}>{eyebrow}</p>
-          <h2>{title}</h2>
+          <h2 data-motion="reveal">{title}</h2>
           {paragraphs.map((paragraph) => (
             <p className={styles.prose} key={paragraph}>
               {paragraph}
@@ -202,6 +204,43 @@ export function ServiceList({ items }: { items: readonly string[] }) {
         </li>
       ))}
     </ul>
+  );
+}
+
+/** Keep the existing H3s and copy, with full-width reading space for long guides. */
+export function ServiceArticleSections({
+  sections,
+}: {
+  sections: readonly {
+    title: string;
+    paragraphs: readonly string[];
+    items?: readonly string[];
+  }[];
+}) {
+  if (!sections.length) return null;
+  return (
+    <div className={styles.articleSections}>
+      <Container>
+        {sections.map((section, index) => (
+          <section className={styles.articleSection} key={section.title}>
+            <div className={styles.articleHeading} data-motion="reveal">
+              <span aria-hidden="true">
+                {String(index + 1).padStart(2, "0")}
+              </span>
+              <h3>{section.title}</h3>
+            </div>
+            <div className={styles.articleCopy}>
+              {section.paragraphs.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
+              {section.items?.length ? (
+                <ServiceWorkGrid items={section.items} />
+              ) : null}
+            </div>
+          </section>
+        ))}
+      </Container>
+    </div>
   );
 }
 
@@ -249,15 +288,16 @@ export function ServiceProcess({
   return (
     <ol
       className={styles.timeline}
+      data-motion-stagger
       style={
         {
-          "--process-columns": columns(4),
-          "--process-columns-tablet": columns(3),
+          "--process-columns": columns(3),
+          "--process-columns-tablet": columns(2),
         } as CSSProperties
       }
     >
       {steps.map((step, index) => (
-        <li key={step.title}>
+        <li key={step.title} data-motion="reveal">
           <span className={styles.stepNumber} aria-hidden="true">
             {String(index + 1).padStart(2, "0")}
           </span>
@@ -276,9 +316,9 @@ export function ServiceProcessGallery({
 }) {
   if (!images.length) return null;
   return (
-    <div className={styles.processGallery}>
+    <div className={styles.processGallery} data-motion-stagger>
       {images.map((image, index) => (
-        <figure key={image.src}>
+        <figure key={image.src} data-motion="image">
           <div className={styles.processPhoto}>
             <ArchitecturalImage
               image={image}
@@ -422,7 +462,7 @@ export function ServiceQuality({ dictionary }: { dictionary: Dictionary }) {
   return (
     <section className={styles.quality} aria-labelledby="service-quality-title">
       <Container className={styles.qualityGrid}>
-        <div>
+        <div data-motion="reveal">
           <p className={styles.eyebrow}>{dictionary.whyUs.eyebrow}</p>
           <h2 id="service-quality-title">{quality.title}</h2>
           <p className={styles.prose}>{quality.description}</p>

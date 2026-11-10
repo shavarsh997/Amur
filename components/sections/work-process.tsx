@@ -24,9 +24,11 @@ export function WorkProcess({
             inverted
             title={dictionary.process.title}
           />
-          <figure className={styles.processImage}>
+          <figure className={styles.processImage} data-motion="image">
             <ArchitecturalImage
               image={image}
+              className="motion-photo"
+              parallax="vertical"
               sizes="(max-width: 767px) 100vw, 45vw"
             />
           </figure>

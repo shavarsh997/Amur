@@ -18,10 +18,10 @@ export function ProjectCard({
   href = `/${locale}/projects/${project.slug}`,
 }: ProjectCardProps) {
   return (
-    <article className="group overflow-hidden rounded-3xl border border-zinc-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
+    <article className="group overflow-hidden rounded-card border border-zinc-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
       <Link
         aria-label={project.title}
-        className="block rounded-3xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--button-primary)]"
+        className="block rounded-card focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--button-primary)]"
         href={href}
       >
         <div className="relative aspect-[4/3] overflow-hidden bg-zinc-100">

@@ -25,9 +25,11 @@ export function WhyUs({
             eyebrow={dictionary.whyUs.eyebrow}
             title={dictionary.whyUs.title}
           />
-          <figure className={styles.whyPhoto}>
+          <figure className={styles.whyPhoto} data-motion="image">
             <ArchitecturalImage
               image={image}
+              className="motion-photo"
+              parallax="vertical"
               sizes="(max-width: 767px) 100vw, 45vw"
             />
           </figure>

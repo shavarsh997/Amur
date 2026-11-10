@@ -40,7 +40,7 @@ export function ServicesSection({
             <ArrowRight aria-hidden="true" className="size-4" />
           </Link>
         </div>
-        <div className={styles.gallery}>
+        <div className={styles.gallery} data-motion-stagger>
           {getActiveServices(locale)
             .filter((service) => service.category === "primary")
             .map(({ content, ...service }) => {
@@ -66,6 +66,7 @@ export function ServicesSection({
                 <article
                   className={styles.card}
                   data-service-card={mediaSlug}
+                  data-motion="reveal"
                   key={service.slug}
                 >
                   <Link className={styles.visualLink} href={href}>

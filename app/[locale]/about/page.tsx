@@ -81,7 +81,7 @@ export default async function AboutPage({ params }: Props) {
           <div className="mt-8 grid gap-4 content-grid-three md:grid-cols-3">
             {about.values.map((value) => (
               <article
-                className="rounded-2xl border border-[var(--border)] bg-[var(--background-soft)] p-6"
+                className="rounded-card border border-[var(--border)] bg-[var(--background-soft)] p-6"
                 key={value.title}
               >
                 <h3 className="text-xl font-semibold tracking-[-0.025em] text-[var(--text-primary)]">

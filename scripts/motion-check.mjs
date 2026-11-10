@@ -192,3 +192,127 @@ stopReveals();
 console.log(
   "Motion checks passed: batched geometry reads, cached layout, forward/reverse scroll, resize, restoration, reduced motion, hidden tabs, cleanup."
 );
+
+// Verify the reveal/parallax controller now mounted on the public pages.
+const desktop = Object.assign(new EventTarget(), { matches: true });
+browser.matchMedia = (query) =>
+  query.includes("prefers-reduced-motion") ? reducedMotion : desktop;
+const liveObservers = [];
+class LiveIntersectionObserver {
+  targets = new Set();
+  constructor(callback) {
+    this.callback = callback;
+    liveObservers.push(this);
+  }
+  observe(target) {
+    this.targets.add(target);
+  }
+  unobserve(target) {
+    this.targets.delete(target);
+  }
+  disconnect() {
+    this.targets.clear();
+  }
+}
+class MotionElement extends EventTarget {
+  dataset = {};
+  properties = new Map();
+  style = {
+    setProperty: (name, value) => this.properties.set(name, value),
+    removeProperty: (name) => this.properties.delete(name),
+  };
+  constructor(top) {
+    super();
+    this.top = top;
+  }
+  getBoundingClientRect() {
+    return { top: this.top, height: 400 };
+  }
+  contains() {
+    return false;
+  }
+  closest() {
+    return this;
+  }
+}
+globalThis.Element = MotionElement;
+globalThis.AnimationEvent = class extends Event {};
+globalThis.IntersectionObserver = LiveIntersectionObserver;
+const initialHeading = new MotionElement(100);
+const reveal = new MotionElement(1100);
+const photo = new MotionElement(1100);
+photo.dataset.parallax = "vertical";
+photo.parentElement = new MotionElement(1100);
+const revealTargets = [initialHeading, reveal];
+const liveRoot = Object.assign(new EventTarget(), {
+  contains: (element) => revealTargets.includes(element),
+  querySelectorAll: (selector) =>
+    selector === "[data-motion]"
+      ? revealTargets
+      : selector === "[data-parallax]"
+        ? [photo]
+        : revealTargets.filter(
+            (element) => element.dataset.motionState === "entered"
+          ),
+});
+const stopLive = initializeSiteMotion(liveRoot);
+assert.equal(
+  initialHeading.dataset.motionState,
+  "visible",
+  "The first screen must not animate or delay LCP"
+);
+assert.equal(reveal.dataset.motionState, undefined);
+const entrances = liveObservers.find((observer) =>
+  observer.targets.has(reveal)
+);
+assert(entrances);
+entrances.callback([{ target: reveal, isIntersecting: true }]);
+assert.equal(reveal.dataset.motionState, "entered");
+assert(
+  !entrances.targets.has(reveal),
+  "Each reveal must be observed only once"
+);
+const focusEvent = new Event("focusin");
+Object.defineProperty(focusEvent, "target", { value: reveal });
+liveRoot.dispatchEvent(focusEvent);
+assert.equal(
+  reveal.dataset.motionState,
+  "visible",
+  "Keyboard focus cancels an entrance"
+);
+const pictures = liveObservers.find((observer) =>
+  observer.targets.has(photo.parentElement)
+);
+assert(pictures);
+scroll(200);
+assert.equal(frames.size, 0, "Offscreen photos must not schedule scroll work");
+photo.parentElement.top = 300;
+pictures.callback([{ target: photo.parentElement, isIntersecting: true }]);
+scroll(210);
+scroll(220);
+assert.equal(frames.size, 1, "Scroll bursts share one animation frame");
+flush();
+assert(Math.abs(parseFloat(photo.properties.get("--photo-offset"))) <= 24);
+scroll(240);
+reducedMotion.matches = true;
+reducedMotion.dispatchEvent(new Event("change"));
+assert.equal(frames.size, 0);
+assert(
+  !photo.properties.has("--photo-offset"),
+  "Reduced motion restores the original image position"
+);
+assert(liveObservers.every((observer) => observer.targets.size === 0));
+reducedMotion.matches = false;
+reducedMotion.dispatchEvent(new Event("change"));
+assert.equal(
+  reveal.dataset.motionState,
+  "visible",
+  "Preference changes do not replay completed reveals"
+);
+stopLive();
+scroll(300);
+assert.equal(frames.size, 0, "Route cleanup removes scheduling work");
+assert(liveObservers.every((observer) => observer.targets.size === 0));
+console.log(
+  "Page motion checks passed: first-screen stability, once-only reveal, keyboard focus, offscreen idle, batched parallax, preference changes and route cleanup."
+);
