@@ -83,14 +83,7 @@ export function ServiceHero({
         </div>
       </div>
       <figure className={styles.heroPhoto}>
-        <ArchitecturalImage
-          image={image}
-          eager
-          sizes={
-            image.sizes ??
-            "(max-width: 959px) 100vw, (max-width: 1799px) 60vw, 1080px"
-          }
-        />
+        <ArchitecturalImage image={image} eager sizes="100vw" />
       </figure>
     </section>
   );
