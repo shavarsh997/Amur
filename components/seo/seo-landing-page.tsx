@@ -51,6 +51,11 @@ export function SeoLandingPage({
     .filter((landing): landing is NonNullable<typeof landing> =>
       Boolean(landing)
     );
+  const apartmentService = isPrices
+    ? relatedLandings.find(
+        (landing) => landing.slug === "apartment-renovation-yerevan"
+      )
+    : undefined;
   const breadcrumbs = [
     { label: dictionary.common.home, href: `/${locale}` },
     ...(page.kind === "service"
@@ -121,6 +126,14 @@ export function SeoLandingPage({
             actions={
               <>
                 <ContactTrigger label={content.contactLabel} />
+                {apartmentService ? (
+                  <ButtonLink
+                    href={`/${locale}/${getSeoLandingPath(apartmentService)}`}
+                    variant="secondary"
+                  >
+                    {apartmentService.content.title}
+                  </ButtonLink>
+                ) : null}
                 {showPriceGuide ? (
                   <ButtonLink href={`/${locale}/prices`} variant="secondary">
                     {dictionary.seo.calculatorPriceLink}

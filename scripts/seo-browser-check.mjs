@@ -47,6 +47,11 @@ try {
   for (const locale of ["hy", "ru", "en", "de", "fr"]) {
     await page.goto(`${base}/${locale}/prices`, { waitUntil: "networkidle" });
     assert.equal(await page.locator("h1").count(), 1);
+    const apartmentLink = page.locator(
+      `.page-hero a[href='/${locale}/services/apartment-renovation-yerevan']`
+    );
+    assert.equal(await apartmentLink.count(), 1);
+    assert(await apartmentLink.isVisible());
     assert.equal(await page.locator("#price-examples tbody tr").count(), 3);
     assert(await page.locator("[data-mobile-contact-bar]").isVisible());
     assert(
