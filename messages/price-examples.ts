@@ -1,8 +1,14 @@
 import type { Locale } from "@/types";
+import type { RenovationPriceTier } from "@/config/pricing.config";
 
 export const priceExampleCopy: Record<
   Locale,
   {
+    tiersTitle: string;
+    tiersDescription: string;
+    from: string;
+    labour: string;
+    tiers: Record<RenovationPriceTier, { name: string; description: string }>;
     title: string;
     description: string;
     area: string;
@@ -17,9 +23,31 @@ export const priceExampleCopy: Record<
   }
 > = {
   ru: {
+    tiersTitle: "Три уровня ремонта",
+    tiersDescription:
+      "Выберите ориентир по сложности отделки и желаемому результату. Все цены — за работу, без материалов. Окончательную стоимость и перечень работ согласуем после осмотра.",
+    from: "от",
+    labour: "Только работа · материалы отдельно",
+    tiers: {
+      standard: {
+        name: "Стандарт",
+        description:
+          "Базовый вариант с простой отделкой и стандартными решениями.",
+      },
+      middle: {
+        name: "Средний",
+        description:
+          "Более сложная отделка и больше индивидуальных решений в интерьере.",
+      },
+      premium: {
+        name: "Премиум",
+        description:
+          "Сложные интерьерные решения, декоративные детали и трудоёмкая отделка. Верхняя граница бюджета зависит от проекта.",
+      },
+    },
     title: "Примеры расчёта для 40, 60 и 80 м²",
     description:
-      "Примеры показывают стоимость работы при умножении площади квартиры на стартовую ставку. Материалы оплачиваются отдельно. Это предварительный ориентир: точный состав и стоимость работ определяются после осмотра.",
+      "Предварительная стоимость работы: площадь квартиры × стартовая ставка выбранного уровня. Все суммы указаны «от», без материалов. Точный состав и стоимость работ определяются после осмотра.",
     area: "Площадь квартиры",
     calculation: "Работа без материалов, от",
     unit: "м²",
@@ -33,9 +61,31 @@ export const priceExampleCopy: Record<
     next: "Получить индивидуальную смету",
   },
   hy: {
+    tiersTitle: "Վերանորոգման երեք մակարդակ",
+    tiersDescription:
+      "Ընտրեք տարբերակը՝ ըստ հարդարման բարդության և ցանկալի արդյունքի։ Բոլոր գները միայն աշխատանքի համար են՝ առանց նյութերի։ Վերջնական արժեքն ու աշխատանքների ցանկը համաձայնեցնում ենք զննումից հետո։",
+    from: "սկսած",
+    labour: "Միայն աշխատանք · նյութերն առանձին",
+    tiers: {
+      standard: {
+        name: "Ստանդարտ",
+        description:
+          "Հիմնական տարբերակ՝ պարզ հարդարմամբ և ստանդարտ լուծումներով։",
+      },
+      middle: {
+        name: "Միջին",
+        description:
+          "Ավելի բարդ հարդարում և ինտերիերի ավելի շատ անհատական լուծումներ։",
+      },
+      premium: {
+        name: "Պրեմիում",
+        description:
+          "Ինտերիերի բարդ լուծումներ, դեկորատիվ մանրամասներ և աշխատատար հարդարում։ Բյուջեի վերին սահմանը կախված է նախագծից։",
+      },
+    },
     title: "Հաշվարկի օրինակներ՝ 40, 60 և 80 մ² բնակարանների համար",
     description:
-      "Օրինակներում բնակարանի մակերեսը բազմապատկված է աշխատանքի մեկնարկային գնով։ Նյութերը վճարվում են առանձին։ Սա նախնական կողմնորոշիչ է․ աշխատանքների ճշգրիտ կազմն ու արժեքը որոշվում են զննումից հետո։",
+      "Աշխատանքի նախնական արժեքը՝ բնակարանի մակերես × ընտրված մակարդակի մեկնարկային գին։ Բոլոր գումարները մեկնարկային են՝ առանց նյութերի։ Աշխատանքների ճշգրիտ կազմն ու արժեքը որոշվում են զննումից հետո։",
     area: "Բնակարանի մակերեսը",
     calculation: "Աշխատանք՝ առանց նյութերի, սկսած",
     unit: "մ²",
@@ -49,9 +99,31 @@ export const priceExampleCopy: Record<
     next: "Ստանալ անհատական նախահաշիվ",
   },
   en: {
+    tiersTitle: "Three renovation levels",
+    tiersDescription:
+      "Choose a guide based on the complexity of the finishes and your desired result. All prices cover labour only, excluding materials. The final cost and scope are agreed after a survey.",
+    from: "from",
+    labour: "Labour only · materials separate",
+    tiers: {
+      standard: {
+        name: "Standard",
+        description:
+          "An entry-level option with simple finishes and standard solutions.",
+      },
+      middle: {
+        name: "Mid-range",
+        description:
+          "More complex finishes and more individual interior solutions.",
+      },
+      premium: {
+        name: "Premium",
+        description:
+          "Complex interior solutions, decorative details and labour-intensive finishes. The upper budget depends on the project.",
+      },
+    },
     title: "Calculation examples for 40, 60 and 80 m²",
     description:
-      "These examples multiply apartment floor area by the starting labour rate. Materials are paid for separately. They are preliminary guides; the exact scope and labour cost are determined after a survey.",
+      "Preliminary labour cost: apartment floor area × the starting rate for the chosen level. All totals are starting prices, excluding materials. The exact scope and cost are determined after a survey.",
     area: "Apartment floor area",
     calculation: "Labour excluding materials, from",
     unit: "m²",
@@ -65,9 +137,31 @@ export const priceExampleCopy: Record<
     next: "Request an individual estimate",
   },
   de: {
+    tiersTitle: "Drei Renovierungsstufen",
+    tiersDescription:
+      "Wählen Sie einen Richtwert nach der Komplexität des Ausbaus und dem gewünschten Ergebnis. Alle Preise gelten nur für die Arbeiten, ohne Materialien. Endpreis und Leistungsumfang werden nach der Besichtigung vereinbart.",
+    from: "ab",
+    labour: "Nur Arbeitskosten · Material separat",
+    tiers: {
+      standard: {
+        name: "Standard",
+        description:
+          "Die Basisvariante mit einfachen Oberflächen und Standardlösungen.",
+      },
+      middle: {
+        name: "Mittelklasse",
+        description:
+          "Aufwendigere Oberflächen und mehr individuelle Innenraumlösungen.",
+      },
+      premium: {
+        name: "Premium",
+        description:
+          "Komplexe Innenraumlösungen, dekorative Details und arbeitsintensiver Ausbau. Die Budgetobergrenze hängt vom Projekt ab.",
+      },
+    },
     title: "Rechenbeispiele für 40, 60 und 80 m²",
     description:
-      "Die Beispiele multiplizieren die Wohnungsfläche mit dem Einstiegspreis für die Arbeiten. Materialien werden separat bezahlt. Es sind vorläufige Richtwerte; der genaue Umfang und die Arbeitskosten werden nach der Besichtigung bestimmt.",
+      "Vorläufige Arbeitskosten: Wohnungsfläche × Einstiegspreis der gewählten Stufe. Alle Beträge sind Ab-Preise ohne Material. Der genaue Umfang und die Kosten werden nach der Besichtigung bestimmt.",
     area: "Wohnungsfläche",
     calculation: "Arbeitskosten ohne Material, ab",
     unit: "m²",
@@ -81,9 +175,31 @@ export const priceExampleCopy: Record<
     next: "Individuellen Kostenvoranschlag anfragen",
   },
   fr: {
+    tiersTitle: "Trois niveaux de rénovation",
+    tiersDescription:
+      "Choisissez un repère selon la complexité des finitions et le résultat souhaité. Tous les prix concernent uniquement la main-d’œuvre, hors matériaux. Le coût final et les travaux sont convenus après une visite.",
+    from: "dès",
+    labour: "Main-d’œuvre seule · matériaux séparés",
+    tiers: {
+      standard: {
+        name: "Standard",
+        description:
+          "Une formule de base avec des finitions simples et des solutions standard.",
+      },
+      middle: {
+        name: "Intermédiaire",
+        description:
+          "Des finitions plus complexes et davantage de solutions intérieures personnalisées.",
+      },
+      premium: {
+        name: "Premium",
+        description:
+          "Des solutions intérieures complexes, des détails décoratifs et des finitions exigeantes en main-d’œuvre. Le budget maximal dépend du projet.",
+      },
+    },
     title: "Exemples de calcul pour 40, 60 et 80 m²",
     description:
-      "Ces exemples multiplient la surface de l’appartement par le tarif de départ de la main-d’œuvre. Les matériaux sont payés séparément. Ce sont des repères préliminaires ; les travaux exacts et leur coût sont définis après une visite.",
+      "Coût préliminaire de la main-d’œuvre : surface de l’appartement × tarif de départ du niveau choisi. Tous les montants sont des prix de départ, hors matériaux. Les travaux exacts et leur coût sont définis après une visite.",
     area: "Surface de l’appartement",
     calculation: "Main-d’œuvre hors matériaux, dès",
     unit: "m²",

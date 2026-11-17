@@ -10,12 +10,21 @@ export type ServicePriceRange = {
   isPublic: boolean;
 };
 
+/** Owner-confirmed starting labour rates per m², excluding materials (2026-11-17). */
+export const renovationPriceTiers = [
+  { id: "standard", from: 55_000 },
+  { id: "middle", from: 70_000 },
+  { id: "premium", from: 85_000 },
+] as const;
+
+export type RenovationPriceTier = (typeof renovationPriceTiers)[number]["id"];
+
 /** Only owner-confirmed rates are public. Other services remain quote-based. */
 export const servicePriceRanges = [
   {
     serviceSlug: "renovation",
     unit: "sqm",
-    from: 55_000,
+    from: renovationPriceTiers[0].from,
     currency: "AMD",
     // Owner confirmed on 2026-10-28: labour only, materials paid separately.
     materialsIncluded: false,
