@@ -2,14 +2,14 @@ import Image from "next/image";
 
 type BrandMarkProps = {
   className?: string;
-  preload?: boolean;
+  eager?: boolean;
   alt?: string;
   variant?: "full" | "symbol";
 };
 
 export function BrandMark({
   className = "",
-  preload = false,
+  eager = false,
   alt = "SHINEX",
   variant = "full",
 }: BrandMarkProps) {
@@ -23,7 +23,7 @@ export function BrandMark({
       alt={alt}
       className={`shrink-0 object-contain ${className}`}
       height={asset.height}
-      preload={preload}
+      loading={eager ? "eager" : "lazy"}
       sizes={variant === "symbol" ? "44px" : "120px"}
       src={asset.src}
       width={asset.width}
