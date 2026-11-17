@@ -1395,7 +1395,7 @@ const coreSeoLandingPages = [
   },
   {
     slug: "prices",
-    contentUpdatedAt: "2026-10-28",
+    contentUpdatedAt: "2026-11-17",
     kind: "prices",
     image:
       "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1800&q=85",
@@ -1436,7 +1436,7 @@ const coreSeoLandingPages = [
               "Косметический ремонт: обновление покрытий с учётом состояния стен, пола и потолка.",
               "Капитальный ремонт: демонтаж, подготовка оснований и замена инженерных систем по результатам осмотра.",
               "Новостройка: проверка работ застройщика, подготовка поверхностей, разводка коммуникаций и отделка.",
-              "Полный ремонт: согласованный перечень этапов; мебель, техника и дизайн обсуждаются отдельно.",
+              "Полный ремонт: согласованный перечень этапов; мебель и техника обсуждаются отдельно, дизайн включён в средний и премиальный уровни.",
             ],
           },
           {
@@ -1456,7 +1456,7 @@ const coreSeoLandingPages = [
           {
             question: "Сколько стоит ремонт квартиры с материалами?",
             answer:
-              "Опубликованная стартовая ставка SHINEX включает только работу. Материалы оплачиваются отдельно: их стоимость зависит от количества и выбранной отделки. Для общего бюджета отдельно учитывают работы, черновые и чистовые материалы, доставку и вывоз мусора.",
+              "Стартовая ставка уровня «Стандарт» включает ремонтные работы. В среднем и премиальном уровнях также включён дизайн. Материалы оплачиваются отдельно: их стоимость зависит от количества и выбранной отделки. Для общего бюджета отдельно учитывают работы, черновые и чистовые материалы, доставку и вывоз мусора.",
           },
           {
             question: "Можно ли узнать точную цену ремонта по телефону?",
@@ -1511,7 +1511,7 @@ const coreSeoLandingPages = [
               "Cosmetic renovation: refreshing finishes according to the condition of the walls, floors and ceilings.",
               "Major renovation: demolition, surface preparation and replacement of building services where the survey identifies a need.",
               "New-build renovation: checking the developer's work, preparing surfaces, installing services and finishing.",
-              "Complete renovation: an agreed set of stages; furniture, appliances and design are discussed separately.",
+              "Complete renovation: an agreed set of stages; furniture and appliances are discussed separately; design is included in the mid-range and premium levels.",
             ],
           },
           {
@@ -1531,7 +1531,7 @@ const coreSeoLandingPages = [
           {
             question: "How much does apartment renovation with materials cost?",
             answer:
-              "The published SHINEX starting rate covers labour only. Materials are paid for separately and depend on quantities and chosen finishes. The overall budget lists labour, preparation and finishing materials, delivery and waste removal separately.",
+              "The Standard starting rate covers renovation labour. The mid-range and premium levels also include design. Materials are paid for separately and depend on quantities and chosen finishes. The overall budget lists labour, preparation and finishing materials, delivery and waste removal separately.",
           },
           {
             question: "Can I get an exact renovation price by phone?",
@@ -1587,7 +1587,7 @@ const coreSeoLandingPages = [
               "Optische Renovierung: Oberflächen erneuern, je nach Zustand von Wänden, Böden und Decken.",
               "Umfassende Sanierung: Rückbau, Untergrundvorbereitung und Austausch der Gebäudetechnik, soweit die Besichtigung dies erfordert.",
               "Neubaurenovierung: Bauträgerarbeiten prüfen, Untergründe vorbereiten, Technik installieren und Ausbau durchführen.",
-              "Komplettrenovierung: ein vereinbarter Phasenumfang; Möbel, Geräte und Planung werden separat besprochen.",
+              "Komplettrenovierung: ein vereinbarter Phasenumfang; Möbel und Geräte werden separat besprochen; die Innenraumgestaltung ist in Mittelklasse und Premium enthalten.",
             ],
           },
           {
@@ -1607,7 +1607,7 @@ const coreSeoLandingPages = [
           {
             question: "Was kostet eine Wohnungsrenovierung mit Materialien?",
             answer:
-              "Der veröffentlichte SHINEX-Einstiegspreis umfasst nur die Arbeiten. Materialien werden separat bezahlt; ihre Kosten hängen von Mengen und gewählter Ausstattung ab. Im Gesamtbudget werden Arbeiten, Vorbereitungs- und Ausbaumaterialien, Lieferung und Entsorgung getrennt aufgeführt.",
+              "Der Einstiegspreis für Standard umfasst die Renovierungsarbeiten. Mittelklasse und Premium beinhalten auch die Innenraumgestaltung. Materialien werden separat bezahlt; ihre Kosten hängen von Mengen und gewählter Ausstattung ab. Im Gesamtbudget werden Arbeiten, Vorbereitungs- und Ausbaumaterialien, Lieferung und Entsorgung getrennt aufgeführt.",
           },
           {
             question:
@@ -1663,7 +1663,7 @@ const coreSeoLandingPages = [
               "Rénovation légère : renouveler les finitions selon l’état des murs, sols et plafonds.",
               "Rénovation lourde : démolition, préparation des surfaces et remplacement des réseaux lorsque la visite en confirme le besoin.",
               "Rénovation de logement neuf : vérification des travaux du promoteur, préparation des surfaces, installation des réseaux et finitions.",
-              "Rénovation complète : un ensemble d’étapes convenues ; le mobilier, les appareils et la conception sont discutés séparément.",
+              "Rénovation complète : un ensemble d’étapes convenues ; le mobilier et les appareils sont discutés séparément ; la conception est incluse dans les niveaux Intermédiaire et Premium.",
             ],
           },
           {
@@ -1684,7 +1684,7 @@ const coreSeoLandingPages = [
             question:
               "Combien coûte une rénovation d’appartement avec matériaux ?",
             answer:
-              "Le tarif de départ publié par SHINEX comprend uniquement la main-d’œuvre. Les matériaux sont payés séparément selon les quantités et les finitions choisies. Le budget total distingue travaux, matériaux de préparation et de finition, livraison et évacuation.",
+              "Le tarif de départ Standard comprend les travaux de rénovation. Les niveaux Intermédiaire et Premium incluent aussi la conception intérieure. Les matériaux sont payés séparément selon les quantités et les finitions choisies. Le budget total distingue travaux, matériaux de préparation et de finition, livraison et évacuation.",
           },
           {
             question:
@@ -1741,7 +1741,7 @@ const coreSeoLandingPages = [
               "Կոսմետիկ վերանորոգում՝ ծածկույթների թարմացում՝ ըստ պատերի, հատակի և առաստաղի վիճակի։",
               "Կապիտալ վերանորոգում՝ ապամոնտաժում, մակերեսների նախապատրաստում և ինժեներական համակարգերի փոխարինում՝ ըստ զննման արդյունքների։",
               "Նորակառույց բնակարան՝ կառուցապատողի աշխատանքների ստուգում, մակերեսների նախապատրաստում, հաղորդակցությունների անցկացում և հարդարում։",
-              "Ամբողջական վերանորոգում՝ համաձայնեցված փուլերի ցանկով․ կահույքը, տեխնիկան և դիզայնը քննարկվում են առանձին։",
+              "Ամբողջական վերանորոգում՝ համաձայնեցված փուլերի ցանկով․ կահույքն ու տեխնիկան քննարկվում են առանձին, իսկ դիզայնը ներառված է միջին և պրեմիում մակարդակներում։",
             ],
           },
           {
@@ -1761,7 +1761,7 @@ const coreSeoLandingPages = [
           {
             question: "Որքա՞ն արժե բնակարանի վերանորոգումը նյութերով",
             answer:
-              "SHINEX-ի հրապարակված մեկնարկային գինը ներառում է միայն աշխատանքը։ Նյութերը վճարվում են առանձին․ դրանց արժեքը կախված է քանակից և ընտրված հարդարումից։ Ընդհանուր բյուջեում առանձին նշվում են աշխատանքները, նախապատրաստական ու հարդարման նյութերը, առաքումն ու աղբի տեղափոխումը։",
+              "«Ստանդարտ» մակարդակի մեկնարկային գինը ներառում է վերանորոգման աշխատանքները։ Միջին և պրեմիում մակարդակներում ներառված է նաև դիզայնը։ Նյութերը վճարվում են առանձին․ դրանց արժեքը կախված է քանակից և ընտրված հարդարումից։ Ընդհանուր բյուջեում առանձին նշվում են աշխատանքները, նախապատրաստական ու հարդարման նյութերը, առաքումն ու աղբի տեղափոխումը։",
           },
           {
             question: "Հնարավո՞ր է հեռախոսով իմանալ ճշգրիտ գինը",

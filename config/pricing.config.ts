@@ -10,7 +10,8 @@ export type ServicePriceRange = {
   isPublic: boolean;
 };
 
-/** Owner-confirmed starting labour rates per m², excluding materials (2026-11-17). */
+/** Owner-confirmed starting rates per m², excluding materials (2026-11-17).
+ * Mid-range includes standard interior design; premium includes more elaborate bespoke design. */
 export const renovationPriceTiers = [
   { id: "standard", from: 55_000 },
   { id: "middle", from: 70_000 },

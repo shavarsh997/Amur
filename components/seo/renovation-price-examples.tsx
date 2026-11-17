@@ -51,7 +51,7 @@ export function RenovationPriceExamples({ locale }: { locale: Locale }) {
                   {copy.currency}/{copy.unit}
                 </span>
               </p>
-              <p className="text-sm">{copy.labour}</p>
+              <p className="text-sm">{copy.materialsNote}</p>
               <p
                 className={
                   tier.id === "premium"
