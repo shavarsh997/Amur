@@ -531,6 +531,8 @@ export interface Dictionary {
     faqTitle: string;
     relatedPlanningTitle: string;
     calculatorPriceLink: string;
+    /** Contextual sentence on the prices page; the anchor comes from seoIntentMap. */
+    pricesServiceLink: { before: string; after: string };
     fallbackFaqs: FAQ[];
   };
   calculatorPage: {

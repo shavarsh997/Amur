@@ -935,6 +935,11 @@ const dictionary = {
     faqTitle: "Häufig gestellte Fragen",
     relatedPlanningTitle: "Möglichkeiten ansehen",
     calculatorPriceLink: "Renovierungspreise",
+    pricesServiceLink: {
+      before: "Diese Preise gelten für unsere Leistung ",
+      after:
+        "; dort beschreiben wir den Leistungsumfang, die Bauabschnitte und die Vorbereitung der Wohnung.",
+    },
     fallbackFaqs: [
       {
         question: "Wie erhalte ich eine genaue Kostenschätzung?",
