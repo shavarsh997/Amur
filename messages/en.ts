@@ -863,6 +863,10 @@ const dictionary = {
     noVisitors: "We do not receive customers at this address.",
     messengers: "Messengers",
     whatsapp: "WhatsApp",
+    whatsappMessage:
+      "Hello! I'm writing from the shinex.am website. I'd like to discuss a project.",
+    whatsappMessageWithPage:
+      "Hello! I'm writing from the shinex.am website ({path}). I'd like to discuss a project.",
     telegram: "Telegram",
     mapPlaceholder:
       "Map placeholder — the exact address will appear after contact details are replaced.",

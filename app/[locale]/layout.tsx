@@ -22,6 +22,7 @@ import {
   locales,
 } from "@/lib/i18n";
 import { getRobotsMetadata } from "@/lib/metadata";
+import { gaConfigScript } from "@/lib/analytics";
 import {
   getOrganizationJsonLd,
   getWebsiteJsonLd,
@@ -135,19 +136,7 @@ export default async function LocaleLayout({
               strategy="lazyOnload"
             />
             <Script id="google-analytics" strategy="afterInteractive">
-              {`
-                if (window.location.origin === ${JSON.stringify(CANONICAL_SITE_URL)}) {
-                window.dataLayer = window.dataLayer || [];
-                window.gtag = function(){window.dataLayer.push(arguments);};
-                window.gtag('js', new Date());
-                window.gtag('config', ${JSON.stringify(googleAnalyticsMeasurementId)}, {
-                  send_page_view: false,
-                  page_location: window.location.origin,
-                  page_referrer: ''
-                });
-                window.dispatchEvent(new Event('shinex-analytics-ready'));
-                }
-              `}
+              {gaConfigScript(googleAnalyticsMeasurementId, CANONICAL_SITE_URL)}
             </Script>
           </>
         ) : null}

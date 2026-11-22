@@ -13,8 +13,9 @@ import {
   getMailHref,
   getPhoneHref,
   getSocialLinks,
-  getWhatsAppHref,
+  hasWhatsApp,
 } from "@/lib/company";
+import { WhatsAppLink } from "@/components/forms/whatsapp-link";
 import { BrandMark } from "@/components/ui/brand-mark";
 import { Container } from "@/components/ui/container";
 import type { Dictionary, Locale } from "@/types";
@@ -28,7 +29,7 @@ type FooterProps = {
 export function Footer({ locale, dictionary }: FooterProps) {
   const prefix = `/${locale}`;
   const phoneHref = getPhoneHref();
-  const whatsappHref = getWhatsAppHref();
+  const whatsappAvailable = hasWhatsApp();
   const mailHref = getMailHref();
   const address = companyConfig.contact.address?.[locale];
   const mapHref = getGoogleMapsHref();
@@ -115,15 +116,17 @@ export function Footer({ locale, dictionary }: FooterProps) {
                   {companyConfig.contact.displayPhone}
                 </PhoneLink>
               ) : null}
-              {whatsappHref ? (
-                <a
+              {whatsappAvailable ? (
+                <WhatsAppLink
                   className="block rounded-sm hover:text-[var(--brand-copper)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--brand-copper)]"
-                  href={whatsappHref}
-                  rel="noreferrer"
-                  target="_blank"
+                  copy={{
+                    whatsappMessage: dictionary.contacts.whatsappMessage,
+                    whatsappMessageWithPage:
+                      dictionary.contacts.whatsappMessageWithPage,
+                  }}
                 >
                   WhatsApp
-                </a>
+                </WhatsAppLink>
               ) : null}
               {mailHref && companyConfig.contact.email ? (
                 <a

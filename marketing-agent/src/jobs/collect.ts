@@ -9,6 +9,7 @@ import { deltas } from "../analysis/compare.ts";
 import { cpa, negativeCandidates, wastedSpend } from "../analysis/ads.ts";
 import { cannibalization, lowCtrOpportunities, strikingDistance } from "../analysis/seo.ts";
 import { siteIssues } from "../analysis/site.ts";
+import { AI_LEADS_METRIC, AI_SESSIONS_METRIC, FUNNEL_RATE_METRIC, LEAD_EVENTS, aiSources, aiTrafficFilter, leadFunnelValues } from "../analysis/leads.ts";
 import {
   findingsFromCannibalization,
   findingsFromLowCtr,
@@ -82,6 +83,91 @@ type Ga4Row = Record<string, string | number>;
 
 export type Ga4Options = { snapshotSource: string; snapshotDate: string };
 
+type ReportFn = (body: Record<string, unknown>) => ReturnType<typeof runReport>;
+type DateRanges = Array<Range & { name: string }>;
+type LeadFunnelRows = { events: Ga4Row[]; ai: Ga4Row[] };
+
+/** Lead funnel events (by session source/medium) and AI-assistant sessions; hostName filter is added by `report`. */
+async function fetchLeadFunnel(report: ReportFn, dateRanges: DateRanges): Promise<LeadFunnelRows> {
+  const [events, ai] = await Promise.all([
+    report({
+      dateRanges,
+      dimensions: [{ name: "eventName" }, { name: "sessionSource" }, { name: "sessionMedium" }],
+      metrics: [{ name: "eventCount" }],
+      dimensionFilter: { filter: { fieldName: "eventName", inListFilter: { values: [...LEAD_EVENTS] } } },
+      limit: 10000,
+    }),
+    report({
+      dateRanges,
+      dimensions: [{ name: "sessionSource" }, { name: "sessionMedium" }],
+      metrics: [{ name: "sessions" }],
+      dimensionFilter: aiTrafficFilter(),
+      limit: 1000,
+    }),
+  ]);
+  return { events: reportRows(events), ai: reportRows(ai) };
+}
+
+const FUNNEL_ROWS: Array<[string, string]> = [
+  ...LEAD_EVENTS.map((e): [string, string] => [e, `GA4 ${e}`]),
+  ["доля form_start→generate_lead, %", FUNNEL_RATE_METRIC],
+  ["AI-ассистенты: сессии", AI_SESSIONS_METRIC],
+  ["AI-ассистенты: generate_lead", AI_LEADS_METRIC],
+];
+
+function leadFunnelSection(rows: LeadFunnelRows, curV: Record<string, number>, prevV: Record<string, number>, cur: Range, prev: Range): string {
+  const ai = aiSources(rows.events, rows.ai);
+  return (
+    `### GA4: воронка обращений (${fmtRange(cur)} vs ${fmtRange(prev)})\n\n` +
+    "Заявка = generate_lead; whatsapp_click/phone_click — микроконверсии. AI-ассистенты: sessionSource содержит " +
+    "chatgpt/perplexity/gemini/copilot/claude или sessionMedium = ai/ai-assistant.\n\n" +
+    mdTable(
+      ["Шаг", "Сейчас", "Было", "Δ"],
+      FUNNEL_ROWS.map(([label, key]) => [label, curV[key] ?? 0, prevV[key] ?? 0, pct(curV[key] ?? 0, prevV[key] ?? 0)]),
+    ) +
+    (ai.length
+      ? "\n\n" + mdTable(["AI-источник", "Medium", "Сессии", "Было", "generate_lead", "Было"], ai.slice(0, 10).map((a) => [a.source, a.medium, a.sessions, a.prevSessions, a.leads, a.prevLeads]))
+      : "\n\nСессий из AI-ассистентов нет.")
+  );
+}
+
+/** Lead funnel only (weekly report): same GA4 property and hostName filter as collectGa4. */
+export async function collectGa4Funnel(
+  cfg: AgentConfig,
+  deps: JobDeps,
+  token: () => Promise<string>,
+  cur: Range,
+  prev: Range,
+  opts: Ga4Options,
+): Promise<SourceResult> {
+  return guarded("ga4", async () => {
+    const tok = await token();
+    const pid = cfg.ga4PropertyId;
+    if (!pid) throw new NotConfiguredError("ga4PropertyId не задан в config.json (запустите discover)");
+    const cd = connectorDeps(deps, tok);
+    const hosts = cfg.ga4HostNames ?? CONFIG_DEFAULTS.ga4HostNames;
+    const report: ReportFn = (body) => runReport(pid, withHostFilter(body, hosts), cd);
+    const rows = await fetchLeadFunnel(report, [
+      { ...cur, name: "current" },
+      { ...prev, name: "previous" },
+    ]);
+    const curV = leadFunnelValues(rows.events, rows.ai, "current");
+    const prevV = leadFunnelValues(rows.events, rows.ai, "previous");
+    return {
+      detail: `property ${pid}: воронка обращений — ${curV["GA4 form_start"]} form_start, ${curV["GA4 generate_lead"]} generate_lead, AI-сессий ${curV[AI_SESSIONS_METRIC]} за ${fmtRange(cur)}`,
+      metrics: deltas(curV, prevV),
+      findings: [],
+      proposals: [],
+      sections: [leadFunnelSection(rows, curV, prevV, cur, prev)],
+      snapshot: {
+        source: opts.snapshotSource,
+        date: opts.snapshotDate,
+        data: { current: cur, previous: prev, values: { current: curV, previous: prevV }, aiSources: aiSources(rows.events, rows.ai) },
+      },
+    };
+  });
+}
+
 export async function collectGa4(
   cfg: AgentConfig,
   deps: JobDeps,
@@ -103,14 +189,9 @@ export async function collectGa4(
     // The GA4 property is shared by several sites: every report is limited to this site's hostnames.
     const hosts = cfg.ga4HostNames ?? CONFIG_DEFAULTS.ga4HostNames;
     const report = (body: Record<string, unknown>) => runReport(pid, withHostFilter(body, hosts), cd);
-    const [totals, leads, channels, landings, kev] = await Promise.all([
+    const [totals, funnel, channels, landings, kev] = await Promise.all([
       report({ dateRanges, metrics: metricsOf(["sessions", "totalUsers", "engagedSessions", "keyEvents"]) }),
-      report({
-        dateRanges,
-        dimensions: [{ name: "eventName" }],
-        metrics: metricsOf(["eventCount"]),
-        dimensionFilter: { filter: { fieldName: "eventName", stringFilter: { value: "generate_lead" } } },
-      }),
+      fetchLeadFunnel(report, dateRanges),
       report({ dateRanges, dimensions: [{ name: "sessionDefaultChannelGroup" }], metrics: metricsOf(["sessions", "keyEvents"]), limit: 100 }),
       report({
         dateRanges,
@@ -122,12 +203,12 @@ export async function collectGa4(
       keyEvents(pid, cd).catch(() => null),
     ]);
     const t = reportRows(totals);
-    const l = reportRows(leads);
     const byRange = (rows: Ga4Row[], range: string, metric: string): number =>
       rows.filter((r) => (r.dateRange ?? "current") === range).reduce((s, r) => s + num(r[metric]), 0);
     const values = (range: string): Record<string, number> => {
       const sessions = byRange(t, range, "sessions");
-      const lead = byRange(l, range, "eventCount");
+      const f = leadFunnelValues(funnel.events, funnel.ai, range);
+      const lead = f["GA4 generate_lead"] ?? 0;
       return {
         "GA4 sessions": sessions,
         "GA4 users": byRange(t, range, "totalUsers"),
@@ -135,6 +216,7 @@ export async function collectGa4(
         "GA4 key events": byRange(t, range, "keyEvents"),
         "GA4 generate_lead": lead,
         "GA4 lead rate %": sessions > 0 ? round((lead / sessions) * 100) : 0,
+        ...f,
       };
     };
     const curV = values("current");
@@ -222,6 +304,7 @@ export async function collectGa4(
     }
 
     const sections = [
+      leadFunnelSection(funnel, curV, prevV, cur, prev),
       `### GA4: каналы (${fmtRange(cur)} vs ${fmtRange(prev)})\n\n` +
         (ch.length
           ? mdTable(["Канал", "Сессии", "Было", "Δ", "Key events", "Было"], ch.slice(0, 12).map((c) => [c.key, c.s, c.ps, pct(c.s, c.ps), c.k, c.pk]))
@@ -241,7 +324,15 @@ export async function collectGa4(
       snapshot: {
         source: opts.snapshotSource,
         date: opts.snapshotDate,
-        data: { current: cur, previous: prev, values: { current: curV, previous: prevV }, channels: ch, landings: lp, keyEvents: kev },
+        data: {
+          current: cur,
+          previous: prev,
+          values: { current: curV, previous: prevV },
+          channels: ch,
+          landings: lp,
+          aiSources: aiSources(funnel.events, funnel.ai),
+          keyEvents: kev,
+        },
       },
     };
   });

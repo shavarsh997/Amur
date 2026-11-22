@@ -9,7 +9,8 @@ const {
   publicPagePaths,
   getLeadAttribution,
 } = load("lib/lead-attribution");
-const { trackEvent } = load("lib/analytics");
+const { trackEvent, gaCampaignQuery, gaReferrerOrigin, gaConfigScript } =
+  load("lib/analytics");
 const { reportWebVital } = load("lib/web-vitals");
 const { default: sitemap } = load("app/sitemap");
 assert.deepEqual(
@@ -47,6 +48,95 @@ assert.deepEqual(unsafe, {
   source: "campaign",
   medium: "campaign",
 });
+// AI assistants: referrer hosts and ChatGPT's utm_source tag.
+assert.deepEqual(inferLeadAttribution(base, "https://chatgpt.com/"), {
+  landing_page: "/ru/prices",
+  source: "chatgpt",
+  medium: "ai",
+});
+assert.deepEqual(inferLeadAttribution(base + "?utm_source=chatgpt.com", ""), {
+  landing_page: "/ru/prices",
+  source: "chatgpt",
+  medium: "ai",
+});
+for (const [referrer, source] of [
+  ["https://chat.openai.com/c/private", "chatgpt"],
+  ["https://www.perplexity.ai/search?q=private", "perplexity"],
+  ["https://gemini.google.com/app/private", "gemini"],
+  ["https://copilot.microsoft.com/", "copilot"],
+  ["https://claude.ai/chat/private", "claude"],
+])
+  assert.deepEqual(
+    [
+      inferLeadAttribution(base, referrer).source,
+      inferLeadAttribution(base, referrer).medium,
+    ],
+    [source, "ai"],
+    referrer
+  );
+assert.equal(
+  inferLeadAttribution(base, "https://chatgpt.com.attacker.test/").source,
+  "external"
+);
+assert.equal(
+  inferLeadAttribution(base + "?utm_source=perplexity&utm_medium=referral", "")
+    .medium,
+  "ai"
+);
+assert.equal(
+  inferLeadAttribution(base + "?gclid=X&utm_source=chatgpt.com", "").source,
+  "google",
+  "gclid must keep priority over AI tags"
+);
+assert.deepEqual(
+  parseLeadAttribution({
+    landing_page: "/ru/prices",
+    source: "claude",
+    medium: "ai",
+  }),
+  { landing_page: "/ru/prices", source: "claude", medium: "ai" }
+);
+
+// GA4 landing-hit sanitizers: allowlisted campaign params, referrer origin only.
+assert.equal(
+  gaCampaignQuery(
+    base +
+      "?gclid=Cj0_abc-1&email=x@y&phone=%2B374123456&utm_source=chatgpt.com&utm_medium=ai&utm_campaign=spring_2026&utm_term=private&gbraid=G1&wbraid=W1"
+  ),
+  "?gclid=Cj0_abc-1&gbraid=G1&wbraid=W1&utm_source=chatgpt.com&utm_medium=ai&utm_campaign=spring_2026"
+);
+assert.equal(
+  gaCampaignQuery(
+    base +
+      "?utm_source=x@y.test&utm_medium=%2B374123456&utm_campaign=John%20Doe"
+  ),
+  ""
+);
+assert.equal(gaCampaignQuery(base + "?email=x@y"), "");
+assert.equal(
+  gaReferrerOrigin(
+    "https://www.google.com/search?q=private",
+    "https://www.shinex.am"
+  ),
+  "https://www.google.com"
+);
+assert.equal(
+  gaReferrerOrigin(
+    "https://www.shinex.am/ru/contacts?phone=1",
+    "https://www.shinex.am"
+  ),
+  ""
+);
+assert.equal(
+  gaReferrerOrigin("https://shinex.am/hy", "https://www.shinex.am"),
+  ""
+);
+assert.equal(
+  gaReferrerOrigin("android-app://x/private", "https://www.shinex.am"),
+  ""
+);
+assert.equal(gaReferrerOrigin("", "https://www.shinex.am"), "");
+
 for (const path of [
   "/ru/private-name",
   "/ru/prices?phone=123456",
@@ -208,9 +298,83 @@ assert.equal(
   beforePreview,
   "Local/preview traffic reached production analytics"
 );
+
+// First page_view carries allowlisted campaign params and the referrer origin;
+// later events stay clean.
+window.location.origin = "https://www.shinex.am";
+window.location.pathname = "/ru/prices";
+window.location.href = base + "?gclid=Cj0abc&email=x@y&utm_source=chatgpt.com";
+document.referrer = "https://chatgpt.com/c/private-chat?q=secret";
+const beforeLanding = events.length;
+trackEvent("page_view");
+const landingHit = events.at(-1)[2];
+assert.equal(events.length, beforeLanding + 1);
+assert.equal(
+  landingHit.page_location,
+  "https://www.shinex.am/ru/prices?gclid=Cj0abc&utm_source=chatgpt.com"
+);
+assert.ok(landingHit.page_location.includes("gclid"));
+assert.ok(!landingHit.page_location.includes("email"));
+assert.ok(!landingHit.page_location.includes("x@y"));
+assert.equal(landingHit.page_referrer, "https://chatgpt.com");
+trackEvent("page_view");
+assert.equal(events.at(-1)[2].page_location, "https://www.shinex.am/ru/prices");
+assert.equal(events.at(-1)[2].page_referrer, "");
+trackEvent("phone_click");
+assert.equal(events.at(-1)[2].page_location, "https://www.shinex.am/ru/prices");
+assert.equal(events.at(-1)[2].page_referrer, "");
+
+// Inline gtag config in the layout applies the same allowlist.
+function runConfig(origin, href, referrer) {
+  const dataLayer = [];
+  const sandboxWindow = {
+    location: { origin, href },
+    dispatchEvent: () => {},
+    dataLayer,
+  };
+  new Function(
+    "window",
+    "document",
+    "Event",
+    gaConfigScript("G-TEST", "https://www.shinex.am")
+  )(sandboxWindow, { referrer }, class {});
+  return dataLayer
+    .map((args) => [...args])
+    .find((args) => args[0] === "config");
+}
+assert.deepEqual(
+  runConfig(
+    "https://www.shinex.am",
+    base + "?gclid=Cj0abc&email=x@y&wbraid=W1",
+    "https://www.bing.com/search?q=private"
+  ),
+  [
+    "config",
+    "G-TEST",
+    {
+      send_page_view: false,
+      page_location: "https://www.shinex.am?gclid=Cj0abc&wbraid=W1",
+      page_referrer: "https://www.bing.com",
+    },
+  ]
+);
+assert.deepEqual(
+  runConfig(
+    "https://www.shinex.am",
+    base + "?name=Private",
+    "https://www.shinex.am/hy"
+  )[2],
+  {
+    send_page_view: false,
+    page_location: "https://www.shinex.am",
+    page_referrer: "",
+  }
+);
+assert.equal(runConfig("http://127.0.0.1:3104", base, ""), undefined);
+
 delete globalThis.window;
 delete globalThis.document;
 assert.doesNotThrow(() => reportWebVital(vital));
 console.log(
-  "Analytics checks passed: attribution, PII filtering, blocked storage/GA, Web Vitals validation and document-path attribution."
+  "Analytics checks passed: attribution (incl. AI assistants), PII filtering, GA4 landing campaign/referrer allowlist, blocked storage/GA, Web Vitals validation and document-path attribution."
 );

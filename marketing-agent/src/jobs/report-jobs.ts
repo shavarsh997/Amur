@@ -8,7 +8,7 @@ import { saveSnapshot } from "../core/store.ts";
 import { rankOpportunities } from "../analysis/opportunities.ts";
 import type { ProposedChange } from "../analysis/types.ts";
 import { renderReport } from "../reports/render.ts";
-import { collectAds, collectGa4, collectGsc, collectPsi, collectSite, pickPages, type SourceResult } from "./collect.ts";
+import { collectAds, collectGa4, collectGa4Funnel, collectGsc, collectPsi, collectSite, pickPages, type SourceResult } from "./collect.ts";
 import { addDays, fmtRange, previousMonths, print, tokenOnce, type JobDeps, type Range } from "./context.ts";
 import { experimentsMarkdown, funnelMarkdown, listExperiments } from "./journal.ts";
 
@@ -105,7 +105,7 @@ async function seoAndSite(cfg: AgentConfig, deps: JobDeps, token: () => Promise<
   return [gsc, site, psi];
 }
 
-/** GSC 28 days (query+page) vs previous 28, opportunities, crawl of 150 pages, PSI for 3 main pages. */
+/** GSC 28 days (query+page) vs previous 28, opportunities, crawl of 150 pages, PSI for 3 main pages, GA4 lead funnel (same range). */
 export function runWeekly(opts: JobOptions, deps: JobDeps = {}): Promise<JobOutcome> {
   const d = opts.date;
   // Search Console data lags ~2-3 days.
@@ -113,7 +113,12 @@ export function runWeekly(opts: JobOptions, deps: JobDeps = {}): Promise<JobOutc
   const cur: Range = { startDate: addDays(end, -27), endDate: end };
   const prev: Range = { startDate: addDays(end, -55), endDate: addDays(end, -28) };
   return runJob("weekly", `weekly:${d}`, opts, deps, async (cfg) => {
-    const results = await seoAndSite(cfg, deps, tokenOnce(deps), cur, prev, { gsc: "gsc", date: d });
+    const token = tokenOnce(deps);
+    const [seo, funnel] = await Promise.all([
+      seoAndSite(cfg, deps, token, cur, prev, { gsc: "gsc", date: d }),
+      collectGa4Funnel(cfg, deps, token, cur, prev, { snapshotSource: "ga4-funnel", snapshotDate: d }),
+    ]);
+    const results = [...seo, funnel];
     return { title: `Еженедельный SEO-отчёт SHINEX — ${d}`, period: `${fmtRange(cur)} vs ${fmtRange(prev)}`, results };
   });
 }

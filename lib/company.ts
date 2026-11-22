@@ -1,5 +1,6 @@
 import { companyConfig } from "@/config/company.config";
 import { CANONICAL_SITE_URL, SITE_URL } from "@/lib/site-url";
+import type { Dictionary } from "@/types";
 
 function isValidExternalUrl(value: string | null): value is string {
   if (!value) return false;
@@ -30,9 +31,33 @@ export function getPhoneHref(): string | null {
     : null;
 }
 
-export function getWhatsAppHref(): string | null {
-  const phone = companyConfig.contact.whatsapp?.replace(/\D/g, "");
-  return phone ? `https://wa.me/${phone}` : null;
+function getWhatsAppPhone(): string | null {
+  return companyConfig.contact.whatsapp?.replace(/\D/g, "") || null;
+}
+
+export function hasWhatsApp(): boolean {
+  return getWhatsAppPhone() !== null;
+}
+
+/** Prefilled chat text in the page language; path is a bare pathname, no query. */
+export function getWhatsAppMessage(
+  copy: Pick<
+    Dictionary["contacts"],
+    "whatsappMessage" | "whatsappMessageWithPage"
+  >,
+  pathname?: string | null
+): string {
+  const path = pathname?.split(/[?#]/)[0];
+  return path
+    ? copy.whatsappMessageWithPage.replace("{path}", path)
+    : copy.whatsappMessage;
+}
+
+export function getWhatsAppHref(text: string): string | null {
+  const phone = getWhatsAppPhone();
+  return phone
+    ? `https://wa.me/${phone}?text=${encodeURIComponent(text)}`
+    : null;
 }
 
 export function getTelegramHref(): string | null {

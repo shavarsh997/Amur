@@ -872,6 +872,10 @@ const dictionary = {
     noVisitors: "An dieser Adresse empfangen wir keine Kunden.",
     messengers: "Messenger",
     whatsapp: "WhatsApp",
+    whatsappMessage:
+      "Guten Tag! Ich schreibe über die Website shinex.am. Ich möchte ein Projekt besprechen.",
+    whatsappMessageWithPage:
+      "Guten Tag! Ich schreibe über die Website shinex.am ({path}). Ich möchte ein Projekt besprechen.",
     telegram: "Telegram",
     mapPlaceholder:
       "Kartenplatzhalter — die genaue Adresse erscheint nach Aktualisierung der Kontaktdaten.",

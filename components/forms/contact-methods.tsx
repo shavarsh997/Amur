@@ -9,8 +9,9 @@ import {
   getMailHref,
   getPhoneHref,
   getTelegramHref,
-  getWhatsAppHref,
+  hasWhatsApp,
 } from "@/lib/company";
+import { WhatsAppLink } from "@/components/forms/whatsapp-link";
 import { trackEvent } from "@/lib/analytics";
 import type { Dictionary } from "@/types";
 
@@ -34,7 +35,7 @@ function MethodIcon({ children }: { children: ReactNode }) {
 
 export function ContactMethods({ copy, onMessageClick }: ContactMethodsProps) {
   const phoneHref = getPhoneHref();
-  const whatsappHref = getWhatsAppHref();
+  const whatsappAvailable = hasWhatsApp();
   const mailHref = getMailHref();
   const telegramHref = getTelegramHref();
 
@@ -65,20 +66,15 @@ export function ContactMethods({ copy, onMessageClick }: ContactMethodsProps) {
             </span>
           </PhoneLink>
         ) : null}
-        {whatsappHref ? (
-          <a
-            className={cardClass}
-            href={whatsappHref}
-            rel="noreferrer"
-            target="_blank"
-          >
+        {whatsappAvailable ? (
+          <WhatsAppLink className={cardClass} copy={copy}>
             <MethodIcon>
               <MessageCircle aria-hidden="true" className="size-4" />
             </MethodIcon>
             <span className="text-sm font-semibold text-[var(--text-primary)]">
               {copy.whatsapp}
             </span>
-          </a>
+          </WhatsAppLink>
         ) : null}
         {mailHref && companyConfig.contact.email ? (
           <a className={cardClass} href={mailHref}>

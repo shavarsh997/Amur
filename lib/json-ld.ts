@@ -6,7 +6,14 @@ import {
   getPhoneHref,
   getSocialLinks,
 } from "@/lib/company";
-import type { Locale } from "@/types";
+import { getServiceBySlug } from "@/config/services.config";
+import { getSeoLandingPage } from "@/config/seo-landing-pages.config";
+import de from "@/messages/de";
+import en from "@/messages/en";
+import fr from "@/messages/fr";
+import hy from "@/messages/hy";
+import ru from "@/messages/ru";
+import type { Dictionary, Locale } from "@/types";
 import { localeLanguageTags } from "@/lib/i18n";
 
 export type JsonLd = Record<string, unknown>;
@@ -18,6 +25,67 @@ export function serializeJsonLd(value: JsonLd): string {
     .replace(/&/g, "\\u0026");
 }
 
+/** Loaded synchronously so the layout and SEO checks build the same object. */
+const organizationDictionaries: Record<Locale, Dictionary> = {
+  hy,
+  ru,
+  en,
+  de,
+  fr,
+};
+
+/** Short topic names for services the site already offers; each is kept only
+ * while its page is live, so structured data cannot outlive the offer. */
+const organizationTopics = [
+  {
+    isOffered: (locale: Locale) =>
+      Boolean(getSeoLandingPage(locale, "apartment-renovation-yerevan")),
+    name: {
+      hy: "Բնակարանների վերանորոգում",
+      ru: "Ремонт квартир",
+      en: "Apartment renovation",
+      de: "Wohnungsrenovierung",
+      fr: "Rénovation d’appartements",
+    },
+  },
+  {
+    isOffered: (locale: Locale) =>
+      Boolean(getServiceBySlug(locale, "house-construction")),
+    name: {
+      hy: "Առանձնատների կառուցում",
+      ru: "Строительство частных домов",
+      en: "Private house construction",
+      de: "Hausbau",
+      fr: "Construction de maisons",
+    },
+  },
+  {
+    isOffered: (locale: Locale) =>
+      Boolean(getServiceBySlug(locale, "monolithic-work")),
+    name: {
+      hy: "Մոնոլիտ աշխատանքներ",
+      ru: "Монолитные работы",
+      en: "Reinforced concrete construction",
+      de: "Stahlbetonbau",
+      fr: "Construction en béton armé",
+    },
+  },
+  {
+    isOffered: (locale: Locale) =>
+      Boolean(getServiceBySlug(locale, "interior-design")),
+    name: {
+      hy: "Ինտերիերի դիզայն",
+      ru: "Дизайн интерьера",
+      en: "Interior design",
+      de: "Innenraumgestaltung",
+      fr: "Aménagement intérieur",
+    },
+  },
+] as const satisfies readonly {
+  isOffered: (locale: Locale) => boolean;
+  name: Record<Locale, string>;
+}[];
+
 export function getOrganizationJsonLd(
   locale: Locale = companyConfig.website.defaultLocale
 ): JsonLd {
@@ -26,14 +94,21 @@ export function getOrganizationJsonLd(
   const address = companyConfig.contact.address?.[locale];
   const geo = companyConfig.contact.geo;
   const workingHours = companyConfig.contact.workingHours;
+  const knowsAbout = organizationTopics
+    .filter(({ isOffered }) => isOffered(locale))
+    .map(({ name }) => name[locale]);
   const organization: JsonLd = {
     "@context": "https://schema.org",
     "@type": ["Organization", "LocalBusiness", "HomeAndConstructionBusiness"],
     "@id": getAbsoluteUrl("/#organization"),
     name: companyConfig.brand.name,
     alternateName: companyConfig.brand.alternateName,
+    // Construction wording keeps SHINEX apart from unrelated cleaning firms with a similar name.
+    description: organizationDictionaries[locale].metadata.manifestDescription,
     url: getAbsoluteUrl("/"),
     logo: getAbsoluteUrl(companyConfig.brand.logo),
+    knowsAbout: knowsAbout.length ? knowsAbout : undefined,
+    // Owner-confirmed renovation labour rate; null hides it when unconfirmed.
     areaServed: companyConfig.business.serviceArea.map((name) => ({
       "@type": "Place",
       name,

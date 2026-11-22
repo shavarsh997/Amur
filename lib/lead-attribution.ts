@@ -39,6 +39,11 @@ const sources = [
   "direct",
   "external",
   "campaign",
+  "chatgpt",
+  "perplexity",
+  "gemini",
+  "copilot",
+  "claude",
 ] as const;
 const mediums = [
   "organic",
@@ -48,7 +53,36 @@ const mediums = [
   "referral",
   "none",
   "campaign",
+  "ai",
 ] as const;
+type AiSource = "chatgpt" | "perplexity" | "gemini" | "copilot" | "claude";
+/** AI assistants by referrer host; ChatGPT also tags links with utm_source=chatgpt.com. */
+const aiHosts: [RegExp, AiSource][] = [
+  [/(^|\.)(chatgpt\.com|chat\.openai\.com)$/, "chatgpt"],
+  [/(^|\.)perplexity\.ai$/, "perplexity"],
+  [/^gemini\.google\.com$/, "gemini"],
+  [/^copilot\.microsoft\.com$/, "copilot"],
+  [/(^|\.)claude\.ai$/, "claude"],
+];
+const aiCampaignSources: Record<string, AiSource> = {
+  chatgpt: "chatgpt",
+  "chatgpt.com": "chatgpt",
+  "chat.openai.com": "chatgpt",
+  openai: "chatgpt",
+  perplexity: "perplexity",
+  "perplexity.ai": "perplexity",
+  "www.perplexity.ai": "perplexity",
+  gemini: "gemini",
+  "gemini.google.com": "gemini",
+  copilot: "copilot",
+  "copilot.microsoft.com": "copilot",
+  claude: "claude",
+  "claude.ai": "claude",
+};
+
+function aiSourceFromHost(host: string): AiSource | undefined {
+  return aiHosts.find(([pattern]) => pattern.test(host))?.[1];
+}
 
 export function publicPagePath(path: unknown): string | undefined {
   if (typeof path !== "string") return;
@@ -99,13 +133,23 @@ export function inferLeadAttribution(
   if (url.searchParams.has("gclid")) {
     source = "google";
     medium = "cpc";
+  } else if (
+    campaignSource &&
+    Object.hasOwn(aiCampaignSources, campaignSource)
+  ) {
+    source = aiCampaignSources[campaignSource];
+    medium = "ai";
   } else if (campaignSource || campaignMedium) {
     source = sources.find((value) => value === campaignSource) ?? "campaign";
     medium = mediums.find((value) => value === campaignMedium) ?? "campaign";
   } else if (referrer) {
     try {
       const host = new URL(referrer).hostname.toLowerCase();
-      if (![url.hostname, "shinex.am", "www.shinex.am"].includes(host)) {
+      const ai = aiSourceFromHost(host);
+      if (ai) {
+        source = ai;
+        medium = "ai";
+      } else if (![url.hostname, "shinex.am", "www.shinex.am"].includes(host)) {
         source = /(^|\.)google\.(com|am|ru|fr|de|co\.uk)$/.test(host)
           ? "google"
           : /(^|\.)bing\.com$/.test(host)

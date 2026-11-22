@@ -164,11 +164,8 @@ export function LeadForm({
             htmlFor={fieldId("objectType")}
           >
             {copy.fields.objectType}
-            <span
-              className="ml-1 text-[var(--text-secondary)]"
-              aria-hidden="true"
-            >
-              *
+            <span className="ml-2 text-xs font-normal text-zinc-500">
+              {dictionary.common.optional}
             </span>
           </label>
           <select
@@ -181,11 +178,8 @@ export function LeadForm({
             disabled={pending}
             id={fieldId("objectType")}
             name="objectType"
-            required
           >
-            <option disabled value="">
-              {copy.placeholders.objectType}
-            </option>
+            <option value="">{copy.placeholders.objectType}</option>
             {leadFormConfig.objectTypes.map((option) => (
               <option key={option.value} value={option.value}>
                 {copy.choices.objectType[option.labelKey]}
@@ -207,11 +201,8 @@ export function LeadForm({
             htmlFor={fieldId("area")}
           >
             {copy.fields.area}
-            <span
-              className="ml-1 text-[var(--text-secondary)]"
-              aria-hidden="true"
-            >
-              *
+            <span className="ml-2 text-xs font-normal text-zinc-500">
+              {dictionary.common.optional}
             </span>
           </label>
           <input
@@ -225,7 +216,6 @@ export function LeadForm({
             name="area"
             defaultValue={state.values?.area ?? ""}
             placeholder={copy.placeholders.area}
-            required
             step="any"
             type="number"
           />
@@ -243,11 +233,8 @@ export function LeadForm({
           htmlFor={fieldId("region")}
         >
           {copy.fields.region}
-          <span
-            className="ml-1 text-[var(--text-secondary)]"
-            aria-hidden="true"
-          >
-            *
+          <span className="ml-2 text-xs font-normal text-zinc-500">
+            {dictionary.common.optional}
           </span>
         </label>
         <input
@@ -261,7 +248,6 @@ export function LeadForm({
           name="region"
           defaultValue={state.values?.region ?? ""}
           placeholder={copy.placeholders.region}
-          required
           type="text"
         />
         {state.errors.region ? (
@@ -278,11 +264,8 @@ export function LeadForm({
             htmlFor={fieldId("workType")}
           >
             {copy.fields.workType}
-            <span
-              className="ml-1 text-[var(--text-secondary)]"
-              aria-hidden="true"
-            >
-              *
+            <span className="ml-2 text-xs font-normal text-zinc-500">
+              {dictionary.common.optional}
             </span>
           </label>
           <select
@@ -295,11 +278,8 @@ export function LeadForm({
             disabled={pending}
             id={fieldId("workType")}
             name="workType"
-            required
           >
-            <option disabled value="">
-              {copy.placeholders.workType}
-            </option>
+            <option value="">{copy.placeholders.workType}</option>
             {leadFormConfig.workTypes.map((option) => (
               <option key={option.value} value={option.value}>
                 {copy.choices.workType[option.labelKey]}
