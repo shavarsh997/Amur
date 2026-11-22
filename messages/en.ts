@@ -926,9 +926,9 @@ const dictionary = {
     relatedPlanningTitle: "Explore your options",
     calculatorPriceLink: "Renovation prices",
     pricesServiceLink: {
-      before: "These prices apply to our ",
-      after:
-        " service; its page describes the scope of work, the stages and how to prepare the apartment.",
+      before:
+        "The scope of work, the stages and how to prepare the apartment are described on the page “",
+      after: "”.",
     },
     fallbackFaqs: [
       {

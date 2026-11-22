@@ -936,9 +936,9 @@ const dictionary = {
     relatedPlanningTitle: "Möglichkeiten ansehen",
     calculatorPriceLink: "Renovierungspreise",
     pricesServiceLink: {
-      before: "Diese Preise gelten für unsere Leistung ",
-      after:
-        "; dort beschreiben wir den Leistungsumfang, die Bauabschnitte und die Vorbereitung der Wohnung.",
+      before:
+        "Leistungsumfang, Bauabschnitte und die Vorbereitung der Wohnung beschreiben wir auf der Seite „",
+      after: "“.",
     },
     fallbackFaqs: [
       {
