@@ -38,6 +38,15 @@ assert.equal(
   "external"
 );
 assert.equal(inferLeadAttribution(base + "?gclid=PRIVATE", "").medium, "cpc");
+for (const clickId of ["gbraid", "wbraid"])
+  assert.deepEqual(
+    inferLeadAttribution(
+      `${base}?${clickId}=PRIVATE&utm_source=chatgpt.com`,
+      ""
+    ),
+    { landing_page: "/ru/prices", source: "google", medium: "cpc" },
+    `${clickId} must map to google/cpc`
+  );
 const unsafe = inferLeadAttribution(
   base +
     "?utm_source=person@email.test&utm_medium=+374123456&utm_campaign=Name",
@@ -113,6 +122,14 @@ assert.equal(
   ""
 );
 assert.equal(gaCampaignQuery(base + "?email=x@y"), "");
+// utm values with 7+ consecutive digits look like phone numbers and are dropped.
+assert.equal(
+  gaCampaignQuery(
+    base +
+      "?utm_source=37491234567&utm_medium=call_0911234&utm_campaign=spring_2026_123456"
+  ),
+  "?utm_campaign=spring_2026_123456"
+);
 assert.equal(
   gaReferrerOrigin(
     "https://www.google.com/search?q=private",
@@ -369,6 +386,15 @@ assert.deepEqual(
     page_location: "https://www.shinex.am",
     page_referrer: "",
   }
+);
+assert.equal(
+  runConfig(
+    "https://www.shinex.am",
+    base + "?utm_source=37491234567&utm_campaign=spring_2026",
+    ""
+  )[2].page_location,
+  "https://www.shinex.am?utm_campaign=spring_2026",
+  "Inline config must drop phone-like utm values"
 );
 assert.equal(runConfig("http://127.0.0.1:3104", base, ""), undefined);
 

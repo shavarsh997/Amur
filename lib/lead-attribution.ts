@@ -130,7 +130,7 @@ export function inferLeadAttribution(
   let medium: LeadAttribution["medium"] = "none";
   const campaignSource = url.searchParams.get("utm_source")?.toLowerCase();
   const campaignMedium = url.searchParams.get("utm_medium")?.toLowerCase();
-  if (url.searchParams.has("gclid")) {
+  if (["gclid", "gbraid", "wbraid"].some((key) => url.searchParams.has(key))) {
     source = "google";
     medium = "cpc";
   } else if (

@@ -46,9 +46,17 @@ export const gaCampaignParams = [
   "utm_campaign",
 ] as const;
 /* Click IDs are opaque tokens; utm values may not contain "@", "+", spaces or
- * other characters typical for e-mails, phone numbers or names. */
+ * other characters typical for e-mails, phone numbers or names, nor a run of
+ * 7+ digits (looks like a phone number). */
 const clickIdValue = /^[A-Za-z0-9_-]{1,512}$/;
 const utmValue = /^[A-Za-z0-9._-]{1,100}$/;
+const phoneLike = /\d{7}/;
+
+function isSafeCampaignValue(key: string, value: string): boolean {
+  return key.startsWith("utm_")
+    ? utmValue.test(value) && !phoneLike.test(value)
+    : clickIdValue.test(value);
+}
 
 /** Allowlisted campaign query ("?gclid=...") or "" — every other parameter is dropped. */
 export function gaCampaignQuery(href: string): string {
@@ -57,11 +65,7 @@ export function gaCampaignQuery(href: string): string {
     const safe = new URLSearchParams();
     for (const key of gaCampaignParams) {
       const value = params.get(key);
-      if (
-        value &&
-        (key.startsWith("utm_") ? utmValue : clickIdValue).test(value)
-      )
-        safe.set(key, value);
+      if (value && isSafeCampaignValue(key, value)) safe.set(key, value);
     }
     const query = safe.toString();
     return query ? `?${query}` : "";
@@ -105,7 +109,7 @@ export function gaConfigScript(
     var safe = new URLSearchParams();
     ${JSON.stringify(gaCampaignParams)}.forEach(function (key) {
       var value = params.get(key);
-      if (value && (key.indexOf('utm_') === 0 ? ${utmValue} : ${clickIdValue}).test(value)) safe.set(key, value);
+      if (value && (key.indexOf('utm_') === 0 ? ${utmValue}.test(value) && !${phoneLike}.test(value) : ${clickIdValue}.test(value))) safe.set(key, value);
     });
     query = safe.toString() ? '?' + safe.toString() : '';
   } catch (e) {}

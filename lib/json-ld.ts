@@ -108,7 +108,6 @@ export function getOrganizationJsonLd(
     url: getAbsoluteUrl("/"),
     logo: getAbsoluteUrl(companyConfig.brand.logo),
     knowsAbout: knowsAbout.length ? knowsAbout : undefined,
-    // Owner-confirmed renovation labour rate; null hides it when unconfirmed.
     areaServed: companyConfig.business.serviceArea.map((name) => ({
       "@type": "Place",
       name,

@@ -49,7 +49,7 @@ export function getWhatsAppMessage(
 ): string {
   const path = pathname?.split(/[?#]/)[0];
   return path
-    ? copy.whatsappMessageWithPage.replace("{path}", path)
+    ? copy.whatsappMessageWithPage.replace("{path}", () => path)
     : copy.whatsappMessage;
 }
 
