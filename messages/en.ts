@@ -925,6 +925,11 @@ const dictionary = {
     faqTitle: "Frequently asked questions",
     relatedPlanningTitle: "Explore your options",
     calculatorPriceLink: "Renovation prices",
+    pricesServiceLink: {
+      before:
+        "The scope of work, the stages and how to prepare the apartment are described on the page “",
+      after: "”.",
+    },
     fallbackFaqs: [
       {
         question: "How can I get an accurate estimate?",

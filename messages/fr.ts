@@ -944,6 +944,11 @@ const dictionary = {
     faqTitle: "Questions fréquentes",
     relatedPlanningTitle: "Découvrez vos options",
     calculatorPriceLink: "Tarifs de rénovation",
+    pricesServiceLink: {
+      before: "Ces prix concernent notre service de ",
+      after:
+        " ; sa page décrit le contenu des travaux, les étapes et la préparation de l’appartement.",
+    },
     fallbackFaqs: [
       {
         question: "Comment obtenir un devis précis ?",

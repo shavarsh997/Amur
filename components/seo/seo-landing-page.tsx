@@ -18,6 +18,7 @@ import { Container } from "@/components/ui/container";
 import { FAQAccordion } from "@/components/ui/faq-accordion";
 import { PageHero } from "@/components/ui/page-hero";
 import { getActiveServices } from "@/config/services.config";
+import { seoIntentMap } from "@/config/seo-intents.config";
 import {
   getBreadcrumbJsonLd,
   getServiceJsonLd,
@@ -38,6 +39,7 @@ export function SeoLandingPage({
   const { content } = page;
   const faqs = content.faqs;
   const isPrices = page.slug === "prices";
+  const apartmentIntent = seoIntentMap["apartment-renovation"];
   const supportsCalculator = page.slug === "apartment-interior-design-yerevan";
   const showPriceGuide =
     page.kind === "service" && page.relatedLandingSlugs.includes("prices");
@@ -146,6 +148,18 @@ export function SeoLandingPage({
                   {content.introduction.map((paragraph) => (
                     <p key={paragraph}>{paragraph}</p>
                   ))}
+                  {isPrices ? (
+                    <p>
+                      {dictionary.seo.pricesServiceLink.before}
+                      <Link
+                        className="font-medium text-[var(--text-primary)] underline decoration-[var(--brand-copper)] underline-offset-4 hover:text-[var(--brand-copper)] focus-visible:outline-2 focus-visible:outline-offset-4"
+                        href={`/${locale}/${apartmentIntent.paths[locale]}`}
+                      >
+                        {apartmentIntent.primary[locale]}
+                      </Link>
+                      {dictionary.seo.pricesServiceLink.after}
+                    </p>
+                  ) : null}
                 </section>
                 {isPrices ? (
                   <>

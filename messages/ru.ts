@@ -919,7 +919,11 @@ const dictionary = {
       "Оставьте заявку с параметрами проекта и контактами. Стоимость уточняем после изучения задачи и условий объекта.",
     faqTitle: "Частые вопросы",
     relatedPlanningTitle: "Выберите задачу",
-    calculatorPriceLink: "Цены на ремонт",
+    calculatorPriceLink: "Цены на ремонт квартир",
+    pricesServiceLink: {
+      before: "Состав работ, этапы и подготовка квартиры описаны на странице «",
+      after: "».",
+    },
     fallbackFaqs: [
       {
         question: "Как получить точную смету?",
