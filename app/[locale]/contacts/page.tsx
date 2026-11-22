@@ -11,8 +11,9 @@ import {
   getMailHref,
   getPhoneHref,
   getSocialLinks,
-  getWhatsAppHref,
+  hasWhatsApp,
 } from "@/lib/company";
+import { WhatsAppLink } from "@/components/forms/whatsapp-link";
 import { getDictionary, isLocale } from "@/lib/i18n";
 import { buildMetadata } from "@/lib/metadata";
 import { getBreadcrumbJsonLd, serializeJsonLd } from "@/lib/json-ld";
@@ -38,7 +39,7 @@ export default async function ContactsPage({ params }: Props) {
   const dictionary = await getDictionary(locale);
   const copy = dictionary.contacts;
   const phoneHref = getPhoneHref();
-  const whatsappHref = getWhatsAppHref();
+  const whatsappAvailable = hasWhatsApp();
   const mailHref = getMailHref();
   const address = companyConfig.contact.address?.[locale];
   const mapHref = getGoogleMapsHref();
@@ -97,20 +98,21 @@ export default async function ContactsPage({ params }: Props) {
                 </dd>
               </div>
             ) : null}
-            {whatsappHref ? (
+            {whatsappAvailable ? (
               <div>
                 <dt className="text-sm font-semibold text-[var(--text-primary)]">
                   {copy.whatsapp}
                 </dt>
                 <dd className="mt-1">
-                  <a
+                  <WhatsAppLink
                     className="rounded-sm hover:text-[var(--text-primary)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--button-primary)]"
-                    href={whatsappHref}
-                    rel="noreferrer"
-                    target="_blank"
+                    copy={{
+                      whatsappMessage: copy.whatsappMessage,
+                      whatsappMessageWithPage: copy.whatsappMessageWithPage,
+                    }}
                   >
                     WhatsApp
-                  </a>
+                  </WhatsAppLink>
                 </dd>
               </div>
             ) : null}

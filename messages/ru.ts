@@ -858,6 +858,10 @@ const dictionary = {
     noVisitors: "По этому адресу приём клиентов не ведётся.",
     messengers: "Мессенджеры",
     whatsapp: "WhatsApp",
+    whatsappMessage:
+      "Здравствуйте! Пишу с сайта shinex.am. Хочу обсудить проект.",
+    whatsappMessageWithPage:
+      "Здравствуйте! Пишу с сайта shinex.am ({path}). Хочу обсудить проект.",
     telegram: "Telegram",
     mapPlaceholder:
       "Место для карты — точный адрес будет добавлен после замены контактных данных.",

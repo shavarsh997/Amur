@@ -881,6 +881,10 @@ const dictionary = {
     noVisitors: "Nous ne recevons pas de clients à cette adresse.",
     messengers: "Messageries",
     whatsapp: "WhatsApp",
+    whatsappMessage:
+      "Bonjour ! Je vous écris depuis le site shinex.am. Je souhaite discuter d’un projet.",
+    whatsappMessageWithPage:
+      "Bonjour ! Je vous écris depuis le site shinex.am ({path}). Je souhaite discuter d’un projet.",
     telegram: "Telegram",
     mapPlaceholder:
       "Emplacement de la carte — l’adresse exacte apparaîtra après la mise à jour des coordonnées.",

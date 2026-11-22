@@ -867,6 +867,10 @@ const dictionary = {
     noVisitors: "Այս հասցեում հաճախորդների ընդունելություն չի իրականացվում։",
     messengers: "Մեսենջերներ",
     whatsapp: "WhatsApp",
+    whatsappMessage:
+      "Բարև Ձեզ։ Գրում եմ shinex.am կայքից։ Կցանկանայի քննարկել նախագիծը։",
+    whatsappMessageWithPage:
+      "Բարև Ձեզ։ Գրում եմ shinex.am կայքից ({path})։ Կցանկանայի քննարկել նախագիծը։",
     telegram: "Telegram",
     mapPlaceholder:
       "Քարտեզի տեղապահ — ճշգրիտ հասցեն կավելացվի կապի տվյալները փոխարինելուց հետո։",

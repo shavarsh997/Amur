@@ -502,6 +502,10 @@ export interface Dictionary {
     noVisitors: string;
     messengers: string;
     whatsapp: string;
+    /** Prefilled WhatsApp text when the page path is unknown. */
+    whatsappMessage: string;
+    /** Prefilled WhatsApp text; `{path}` is replaced with the page pathname. */
+    whatsappMessageWithPage: string;
     telegram: string;
     mapPlaceholder: string;
     methodsTitle: string;
