@@ -167,7 +167,6 @@ try {
     ["name", ""],
     ["phone", "abc"],
     ["phone", "123"],
-    ["region", ""],
   ]) {
     const data = form();
     data.set(field, value);
@@ -175,13 +174,15 @@ try {
     assert.equal(result.status, "error");
     assert(result.errors[field]);
   }
-  const missingObject = await submitLeadAction(
+  const unknownObject = form(design);
+  unknownObject.set("objectType", "castle");
+  const unknownObjectResult = await submitLeadAction(
     "ru",
     initialState,
-    form(design)
+    unknownObject
   );
-  assert.equal(missingObject.status, "error");
-  assert(missingObject.errors.objectType);
+  assert.equal(unknownObjectResult.status, "error");
+  assert(unknownObjectResult.errors.objectType);
   const bot = form();
   bot.set("website", "spam.example");
   const botResult = await submitLeadAction("ru", initialState, bot);
@@ -236,6 +237,85 @@ try {
     "success"
   );
   assert(!sent.at(-1).includes("/calculator"));
+
+  // Only name and phone are required; qualification fields are optional.
+  const ruCopy = await getDictionary("ru");
+  const notify = ruCopy.leadNotification;
+  const minimal = new FormData();
+  minimal.set("name", "Minimal client");
+  minimal.set("phone", "+374 11 111111");
+  const beforeMinimal = sent.length;
+  const minimalResult = await submitLeadAction("ru", initialState, minimal);
+  assert.equal(minimalResult.status, "success");
+  assert.equal(minimalResult.delivered, true);
+  assert.deepEqual(minimalResult.errors, {});
+  assert.equal(sent.length, beforeMinimal + 1);
+  const minimalText = sent.at(-1);
+  assert(minimalText.includes(`${notify.name}: Minimal client`));
+  assert(minimalText.includes(`${notify.phone}: +374 11 111111`));
+  for (const label of [
+    notify.objectType,
+    notify.area,
+    notify.region,
+    notify.workType,
+  ])
+    assert(
+      minimalText.includes(`${label}: —`),
+      `Empty optional field must be shown as "—": ${label}`
+    );
+  assert(!minimalText.includes("undefined"));
+  assert(!minimalText.includes("null"));
+  assert(!minimalText.includes("NaN"));
+  assert(!minimalText.includes("0 м²"));
+
+  const noPhone = new FormData();
+  noPhone.set("name", "Minimal client");
+  const noPhoneResult = await submitLeadAction("ru", initialState, noPhone);
+  assert.equal(noPhoneResult.status, "error");
+  assert.equal(
+    noPhoneResult.errors.phone,
+    ruCopy.estimate.errors.phoneRequired
+  );
+  assert.deepEqual(Object.keys(noPhoneResult.errors), ["phone"]);
+
+  const noName = new FormData();
+  noName.set("phone", "+374 11 111111");
+  const noNameResult = await submitLeadAction("ru", initialState, noName);
+  assert.equal(noNameResult.status, "error");
+  assert.deepEqual(Object.keys(noNameResult.errors), ["name"]);
+
+  // A provided area must still be valid; unknown choices are still rejected.
+  for (const [field, value] of [
+    ["area", "abc"],
+    ["area", "0"],
+    ["area", "-5"],
+    ["objectType", "castle"],
+    ["workType", "teleport"],
+  ]) {
+    const data = new FormData();
+    data.set("name", "Minimal client");
+    data.set("phone", "+374 11 111111");
+    data.set(field, value);
+    const result = await submitLeadAction("ru", initialState, data);
+    assert.equal(result.status, "error", `${field}=${value} must be rejected`);
+    assert(result.errors[field], `${field}=${value} must report ${field}`);
+  }
+  assert.equal(
+    sent.length,
+    beforeMinimal + 1,
+    "Invalid minimal submissions reached Telegram"
+  );
+
+  // Calculator design request without object type is accepted with "—".
+  const designNoObject = await submitLeadAction(
+    "ru",
+    initialState,
+    form(design)
+  );
+  assert.equal(designNoObject.status, "success");
+  assert.equal(designNoObject.delivered, true);
+  assert(sent.at(-1).includes(`${notify.objectType}: —`));
+  assert(!sent.at(-1).includes("undefined"));
 
   for (const fakeFetch of [
     async () => new Response(JSON.stringify({ ok: false }), { status: 200 }),

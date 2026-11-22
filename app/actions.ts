@@ -92,7 +92,7 @@ export async function submitLeadAction(
   const phone = readString(formData, "phone", 40);
   const comment = readString(formData, "comment", 2000);
   const website = readString(formData, "website", 200);
-  const area = Number(areaValue);
+  const area = areaValue ? Number(areaValue) : null;
   const errors: LeadActionState["errors"] = {};
   const submittedFrom = publicPagePath(
     readString(formData, "submittedFrom", 120)
@@ -109,15 +109,13 @@ export async function submitLeadAction(
   // Honeypot field: bots get a neutral success response, without creating a lead.
   if (website) return { status: "success", message: copy.success, errors: {} };
 
-  if (!objectTypes.has(objectType))
+  // Only name and phone are required. Qualification fields are optional, but a
+  // provided value must still be valid (unknown choices, non-positive area).
+  if (objectType && !objectTypes.has(objectType))
     errors.objectType = copy.errors.objectTypeRequired;
-  if (!areaValue) {
-    errors.area = copy.errors.areaRequired;
-  } else if (!Number.isFinite(area) || area <= 0) {
+  if (area !== null && (!Number.isFinite(area) || area <= 0))
     errors.area = copy.errors.areaInvalid;
-  }
-  if (!region) errors.region = copy.errors.regionRequired;
-  if (!calculatorRequest && !workTypes.has(workType))
+  if (!calculatorRequest && workType && !workTypes.has(workType))
     errors.workType = copy.errors.workTypeRequired;
   if (!name) errors.name = copy.errors.nameRequired;
   if (!phone) {
@@ -138,13 +136,14 @@ export async function submitLeadAction(
   try {
     await submitLead(
       {
-        objectType: calculatorRequest
-          ? copy.choices.objectType[
-              leadFormConfig.objectTypes.find(
-                (item) => item.value === objectType
-              )!.labelKey
-            ]
-          : objectType,
+        objectType:
+          calculatorRequest && objectType
+            ? copy.choices.objectType[
+                leadFormConfig.objectTypes.find(
+                  (item) => item.value === objectType
+                )!.labelKey
+              ]
+            : objectType,
         area,
         region,
         workType: calculatorRequest

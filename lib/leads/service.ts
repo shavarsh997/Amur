@@ -3,8 +3,9 @@ import "server-only";
 import type { Dictionary } from "@/types";
 
 export type LeadInput = {
+  /** Optional qualification fields: empty string / null when not provided. */
   objectType: string;
-  area: number;
+  area: number | null;
   region: string;
   workType: string;
   options: string[];
@@ -31,6 +32,12 @@ function getRequiredEnv(
   return value;
 }
 
+const EMPTY_VALUE = "—";
+
+function orEmpty(value: string): string {
+  return value.trim() ? value : EMPTY_VALUE;
+}
+
 function formatLeadMessage(
   lead: LeadInput,
   labels: Dictionary["leadNotification"]
@@ -41,10 +48,10 @@ function formatLeadMessage(
     "",
     `${labels.name}: ${lead.name}`,
     `${labels.phone}: ${lead.phone}`,
-    `${labels.objectType}: ${lead.objectType}`,
-    `${labels.area}: ${lead.area} м²`,
-    `${labels.region}: ${lead.region}`,
-    `${labels.workType}: ${lead.workType}`,
+    `${labels.objectType}: ${orEmpty(lead.objectType)}`,
+    `${labels.area}: ${lead.area === null ? EMPTY_VALUE : `${lead.area} м²`}`,
+    `${labels.region}: ${orEmpty(lead.region)}`,
+    `${labels.workType}: ${orEmpty(lead.workType)}`,
   ];
 
   if (lead.options.length > 0) {
