@@ -21,17 +21,7 @@ export function CompanyIntroduction({
             <ArrowUpRight aria-hidden="true" size={18} />
           </Link>
         </div>
-        <div>
-          <p className={styles.statement}>{dictionary.about.intro}</p>
-          <ul className={styles.principles}>
-            {dictionary.whyUs.items.slice(0, 3).map((item, index) => (
-              <li key={item.title}>
-                <span aria-hidden="true">0{index + 1}</span>
-                {item.title}
-              </li>
-            ))}
-          </ul>
-        </div>
+        <p className={styles.statement}>{dictionary.about.intro}</p>
       </Container>
     </section>
   );

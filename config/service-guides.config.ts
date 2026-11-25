@@ -121,11 +121,11 @@ export const serviceGuideGroups: readonly {
   },
   {
     title: {
-      hy: "Առանձին աշխատանքներ",
-      ru: "Отдельные задачи",
-      en: "Specialist work",
-      de: "Facharbeiten",
-      fr: "Travaux spécialisés",
+      hy: "Աշխատանքներ վերանորոգման կազմում",
+      ru: "Работы в составе ремонта",
+      en: "Work included in renovation",
+      de: "Arbeiten im Rahmen der Renovierung",
+      fr: "Travaux inclus dans la rénovation",
     },
     links: [
       {
@@ -244,18 +244,18 @@ export const serviceGuideGroups: readonly {
       {
         path: "calculator",
         description: {
-          hy: "Շինարարության կամ դիզայնի հաշվարկի հայտ։ Վերանորոգումը քննարկվում է առանձին։",
-          ru: "Заявка на расчёт строительства или дизайна. Ремонт обсуждается отдельно.",
-          en: "Request a construction or design calculation. Renovation is discussed separately.",
-          de: "Berechnung für Bau oder Planung anfragen. Renovierungen werden gesondert besprochen.",
-          fr: "Demander un calcul de construction ou de conception. La rénovation se discute séparément.",
+          hy: "Բնակարանի վերանորոգման ակնթարթային հաշվարկ՝ ըստ մակերեսի և սակագնի․ շինարարության և դիզայնի համար՝ հաշվարկի հայտ։",
+          ru: "Мгновенный расчёт ремонта квартиры по площади и тарифу; для строительства и дизайна — заявка на расчёт.",
+          en: "Instant apartment renovation estimate by floor area and rate; for construction and design, request a calculation.",
+          de: "Sofortige Kostenberechnung der Wohnungsrenovierung nach Fläche und Tarif; für Bau und Planung eine Berechnung anfragen.",
+          fr: "Estimation instantanée de la rénovation d’appartement selon la surface et le tarif ; pour la construction et la conception, demande de calcul.",
         },
         label: {
-          hy: "Շինարարության և դիզայնի հաշվիչ",
-          ru: "Калькулятор строительства и дизайна",
-          en: "Construction and design calculator",
-          de: "Bau- und Planungsrechner",
-          fr: "Calculateur de construction et de conception",
+          hy: "Վերանորոգման և շինարարության հաշվիչ",
+          ru: "Калькулятор ремонта и строительства",
+          en: "Renovation and construction calculator",
+          de: "Renovierungs- und Baurechner",
+          fr: "Calculateur de rénovation et de construction",
         },
       },
     ],

@@ -3,6 +3,7 @@ import { SectionHeading } from "@/components/ui/section-heading";
 import { ArchitecturalImage } from "@/components/ui/architectural-image";
 import { getServiceMedia } from "@/config/service-media.config";
 import styles from "./editorial.module.css";
+import whyStyles from "./why-us.module.css";
 import { operationsConfig } from "@/config/operations.config";
 import Link from "next/link";
 import type { Dictionary, Locale } from "@/types";
@@ -25,7 +26,10 @@ export function WhyUs({
             eyebrow={dictionary.whyUs.eyebrow}
             title={dictionary.whyUs.title}
           />
-          <figure className={styles.whyPhoto} data-motion="image">
+          <figure
+            className={`${styles.whyPhoto} ${whyStyles.photo}`}
+            data-motion="image"
+          >
             <ArchitecturalImage
               image={image}
               className="motion-photo"

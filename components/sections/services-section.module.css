@@ -181,19 +181,43 @@
   }
 }
 
+/* Phones: a swipeable row (next card peeks in) instead of four stacked
+   cards keeps the home page short; links stay in the tab order. */
 @media (max-width: 767px) {
   .gallery {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 2.75rem;
+    display: flex;
+    gap: 1rem;
+    margin-inline: calc(var(--container-gutter) * -1);
+    padding-inline: var(--container-gutter);
+    scroll-padding-inline: var(--container-gutter);
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+
+  .gallery::-webkit-scrollbar {
+    display: none;
   }
 
   .card {
-    display: block;
+    display: flex;
+    flex: 0 0 84%;
+    flex-direction: column;
     grid-row: auto;
+    scroll-snap-align: start;
   }
 
   .card:nth-child(n + 3) {
     margin-top: 0;
+  }
+
+  .description {
+    flex: 1;
+  }
+
+  .actions {
+    align-self: stretch;
   }
 
   .visualLink {

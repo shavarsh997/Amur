@@ -141,7 +141,7 @@ export function CostCalculator({
         onClickCapture={startTracking}
         className={`w-full min-w-0 flex flex-col items-stretch gap-6 ${className}`}
       >
-        <div className="min-w-0 space-y-6">
+        <div className="min-w-0 space-y-4 sm:space-y-6">
           <ScenarioStep
             copy={copy}
             onSelectScenario={selectScenario}

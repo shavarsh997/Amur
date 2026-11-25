@@ -74,7 +74,7 @@ export function ServicesSection({
                       <ArchitecturalImage
                         // Landscape originals keep the same composition at every size.
                         image={{ ...image, mobileSrc: undefined }}
-                        sizes="(max-width: 639px) calc(100vw - 32px), (max-width: 767px) calc(100vw - 48px), (max-width: 1439px) calc(50vw - 48px), 660px"
+                        sizes="(max-width: 767px) 84vw, (max-width: 1439px) calc(50vw - 48px), 660px"
                       />
                     </div>
                     <div className={styles.heading}>
@@ -108,7 +108,7 @@ export function ServicesSection({
               );
             })}
         </div>
-        <ServiceGuides locale={locale} />
+        <ServiceGuides compact locale={locale} />
       </Container>
     </section>
   );

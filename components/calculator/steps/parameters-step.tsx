@@ -21,7 +21,7 @@ export function ParametersStep({
 
   return (
     <section className="layout-region rounded-card border border-[var(--border)] bg-white p-panel shadow-[var(--shadow-card)]">
-      <StepTitle number="02" {...copy.steps.parameters} />
+      <StepTitle number="01" {...copy.steps.parameters} />
       <div className="mt-6 max-w-xs">
         <NumberField
           control={control}

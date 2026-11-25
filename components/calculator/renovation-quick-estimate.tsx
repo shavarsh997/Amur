@@ -77,12 +77,8 @@ export function RenovationQuickEstimate({
 
   return (
     <section className="layout-region rounded-card border border-[var(--border)] bg-white p-panel shadow-[var(--shadow-card)]">
-      <StepTitle
-        description={quoteCopy.description}
-        number="02"
-        title={quoteCopy.title}
-      />
-      <div className="mt-6 max-w-xs">
+      <StepTitle description={quoteCopy.description} title={quoteCopy.title} />
+      <div className="mt-5 max-w-xs">
         <NumberFieldInput
           error={areaError}
           fieldId={calculatorFieldDomId("area")}

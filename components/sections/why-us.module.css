@@ -1,0 +1,7 @@
+/* Phones: the "Этапы работы" photo sits right above this section, so the
+   second large photo is dropped there to keep the home page short. */
+@media (max-width: 767px) {
+  .photo {
+    display: none;
+  }
+}

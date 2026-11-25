@@ -13,7 +13,7 @@ export function RenovationExtrasStep({
 
   return (
     <section className="layout-region rounded-card border border-[var(--border)] bg-white p-panel shadow-[var(--shadow-card)]">
-      <StepTitle number="03" {...copy.steps.renovationExtras} />
+      <StepTitle number="02" {...copy.steps.renovationExtras} />
       <div className="mt-6 grid gap-3 local-grid">
         <RenovationExtrasField copy={copy} extras={extras} />
       </div>

@@ -25,6 +25,11 @@
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
+/* Armenian has no small-caps tradition: uppercase and tracking hurt legibility. */
+.eyebrow:lang(hy) {
+  letter-spacing: normal;
+  text-transform: none;
+}
 .eyebrow span {
   width: 2rem;
   height: 1px;
@@ -347,22 +352,33 @@
     background: linear-gradient(0deg, #111416, transparent 32%);
   }
   .heroCopy {
-    padding: 1.5rem var(--container-gutter) 3rem;
+    padding: 1.25rem var(--container-gutter) 3rem;
   }
   .hero h1 {
     max-width: 18ch;
-    margin-top: 1.25rem;
-    font-size: clamp(2.2rem, 8.5vw, 3.4rem);
+    margin-top: 1rem;
+    font-size: clamp(2rem, 8vw, 3.2rem);
+    line-height: 1.06;
   }
   .hero h1:lang(hy) {
     max-width: none;
-    font-size: clamp(1.8rem, 8vw, 2.8rem);
+    font-size: clamp(1.65rem, 7.2vw, 2.6rem);
+    line-height: 1.2;
   }
-  .heroDescription {
+  /* (0,2,0) so the global ":lang(hy) p" line-height does not win here. */
+  .hero .heroDescription {
+    margin-top: 1rem;
     font-size: 0.9rem;
+    line-height: 1.65;
+  }
+  .hero :global(.action-group) {
+    margin-top: 1.25rem;
   }
   .eyebrow {
     font-size: 0.65rem;
+  }
+  .hero .eyebrow {
+    line-height: 1.4;
   }
   .continueLink {
     display: none;
@@ -418,5 +434,12 @@
   }
   .finalCta aside > span {
     font-size: 4rem;
+  }
+}
+/* Phones: a shorter photo keeps the headline and first CTA above the fixed
+   mobile contact bar (~76px incl. safe area) on a 375x812 screen. */
+@media (max-width: 639px) {
+  .heroImage {
+    aspect-ratio: 16/9;
   }
 }

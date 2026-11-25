@@ -127,6 +127,13 @@ body {
   outline-offset: 3px;
 }
 
+/* Armenian small labels (eyebrows): uppercase and wide tracking hurt
+   legibility. Unlayered, so it overrides Tailwind's layered utilities. */
+:lang(hy) .uppercase {
+  letter-spacing: normal;
+  text-transform: none;
+}
+
 ::selection {
   background: var(--warm-accent);
   color: var(--text-primary);
