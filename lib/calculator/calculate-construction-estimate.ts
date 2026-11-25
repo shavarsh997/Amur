@@ -44,7 +44,9 @@ export function calculateConstructionEstimate(
   copy: Dictionary["constructionCalculator"]
 ): ConstructionEstimate {
   if (values.calculationType === "renovation") {
-    throw new Error("Renovation estimates require contacting SHINEX.");
+    throw new Error(
+      "Renovation is quoted by calculateRenovationQuote (lib/calculator/renovation-quote)."
+    );
   }
   const area = numberValue(values.area);
   const lines: EstimateLine[] = [];

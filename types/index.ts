@@ -43,8 +43,8 @@ export interface Testimonial {
 
 export interface TeamMember {
   role: string;
+  name: string;
   description: string;
-  isPlaceholder: boolean;
 }
 
 export interface Dictionary {
@@ -72,6 +72,8 @@ export interface Dictionary {
     description: string;
     primaryAction: string;
     secondaryAction: string;
+    /** Short line under the hero buttons (response time, working hours). */
+    microcopy: string;
     trustPoints: [string, string, string, string];
   };
   services: {
@@ -143,6 +145,8 @@ export interface Dictionary {
       LocalizedText,
       LocalizedText,
       LocalizedText,
+      LocalizedText,
+      LocalizedText,
     ];
   };
   process: {
@@ -207,6 +211,7 @@ export interface Dictionary {
       phoneInvalid: string;
     };
     submit: string;
+    submitNote: string;
     submitting: string;
     success: string;
     error: string;
@@ -314,6 +319,28 @@ export interface Dictionary {
       no: string;
     };
     renovationContact: { title: string; description: string; action: string };
+    /** Instant apartment-renovation quote; {placeholders} are filled in code. */
+    renovationQuote: {
+      title: string;
+      description: string;
+      conditionLabel: string;
+      conditions: Record<"newBuilding" | "secondary", string>;
+      tierLabel: string;
+      tiers: Record<"standard" | "middle" | "premium", string>;
+      /** {rate} {currency} per m² under each tier. */
+      rate: string;
+      currency: string;
+      resultTitle: string;
+      /** {total} {currency}: labour only, materials separately. */
+      total: string;
+      empty: string;
+      timelineReference: string;
+      timelineAfterSurvey: string;
+      whatsappAction: string;
+      callbackAction: string;
+      /** {area}, {condition}, {tier}, {total}, {currency}. */
+      whatsappMessage: string;
+    };
     dialog: { eyebrow: string; title: string; close: string; open: string };
     steps: {
       scenario: { title: string; description: string };
@@ -483,9 +510,7 @@ export interface Dictionary {
     approach: string;
     team: {
       title: string;
-      description: string;
-      placeholderNotice: string;
-      members: [TeamMember, TeamMember, TeamMember];
+      members: TeamMember[];
     };
   };
   contacts: {

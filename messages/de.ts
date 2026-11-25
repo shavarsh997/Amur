@@ -23,17 +23,18 @@ const dictionary = {
     language: "Sprache",
   },
   hero: {
-    eyebrow: "Renovierungs- und Bauleistungen",
-    title: "Bau, Renovierung und Innenraumgestaltung in Armenien",
+    eyebrow: "Wohnungsrenovierung in Jerewan",
+    title: "Schlüsselfertige Wohnungsrenovierung in Jerewan – ab {price} AMD/m²",
     description:
-      "Vom Hausbau bis zur Renovierung einer Wohnung oder von Geschäftsräumen begleitet SHINEX die Planung und Umsetzung Ihres Projekts. Zunächst prüfen wir das Objekt und Ihren Bedarf, dann erstellen wir eine erste Kostenschätzung.",
-    primaryAction: "Projekt besprechen",
-    secondaryAction: "Leistungen",
+      "Eigenes Team mit über 10 Jahren Erfahrung. Der Preis wird im Vertrag festgeschrieben, Zahlung in Etappen ohne Vorauszahlung, 12 Monate Garantie.",
+    primaryAction: "Kostenloses Aufmaß morgen",
+    secondaryAction: "Kosten berechnen",
+    microcopy: "Antwort per WhatsApp in 15 Minuten · Mo–Sa 9:00–19:00",
     trustPoints: [
-      "Erste Kostenschätzung und detaillierte Kostenplanung",
-      "Bauarbeiten und Gebäudetechnik",
-      "Innenraumgestaltung und Materialauswahl",
-      "Projekte in ganz Armenien",
+      "Kostenloses Aufmaß in Jerewan",
+      "Kostenvoranschlag in 1–2 Tagen",
+      "Zahlung in Etappen ohne Vorauszahlung",
+      "12 Monate Garantie",
     ],
   },
   services: {
@@ -200,39 +201,47 @@ const dictionary = {
   },
   whyUs: {
     eyebrow: "Warum SHINEX",
-    title: "Warum Sie SHINEX Ihr Projekt anvertrauen können",
+    title: "Das Risiko tragen wir, nicht Sie",
     description:
-      "Wir besprechen Arbeitsbedingungen und Änderungen im Voraus, damit jede Phase nachvollziehbar bleibt.",
+      "Bedingungen, die nicht vom Objekt abhängen: Sie gelten für jeden Kunden gleich.",
     items: [
       {
-        title: "Arbeiten auf Vertragsbasis",
+        title: "Antwort in 15 Minuten",
         description:
-          "Umfang, Verantwortlichkeiten und Arbeitsablauf werden schriftlich festgehalten.",
+          "Schreiben Sie uns per WhatsApp: Während der Arbeitszeit antworten wir innerhalb von 15 Minuten.",
       },
       {
-        title: "Vorab abgestimmte Kostenschätzung",
+        title: "Kostenloses Aufmaß morgen",
         description:
-          "Wir legen die Arbeiten und Kosten offen und stimmen Änderungen vor ihrer Ausführung ab.",
+          "In Jerewan kommen wir am Tag nach Ihrer Anfrage zum Aufmaß. Kostenlos.",
       },
       {
-        title: "Arbeiten in klaren Phasen",
+        title: "Kostenvoranschlag in 1–2 Tagen",
         description:
-          "Wir planen die Reihenfolge der Arbeiten und kontrollieren den Fortschritt jeder Phase.",
+          "Nach dem Aufmaß senden wir einen Kostenvoranschlag Position für Position: Arbeiten, Mengen und Preise.",
       },
       {
-        title: "Qualitätskontrolle",
+        title: "Festpreis im Vertrag",
         description:
-          "Wichtige Arbeitsschritte und das Ergebnis jeder Phase werden geprüft.",
+          "Der Betrag ändert sich nur, wenn Sie den Leistungsumfang ändern, und nur schriftlich.",
       },
       {
-        title: "Änderungen vorab vereinbaren",
-        description:
-          "Müssen sich Umfang oder Lösungen während der Arbeiten ändern, stimmen wir dies zuerst mit Ihnen ab.",
+        title: "Zahlung in Etappen, ohne Vorauszahlung",
+        description: "Sie zahlen für das, was bereits erledigt ist.",
       },
       {
-        title: "In ganz Armenien tätig",
+        title: "Wöchentlicher Fotobericht",
         description:
-          "Wir übernehmen Projekte in ganz Armenien, einschließlich Eriwan, und berücksichtigen dabei Standort und Umfang.",
+          "Jede Woche schicken wir Fotos und Videos von der Baustelle.",
+      },
+      {
+        title: "Eigenes Team, 10+ Jahre",
+        description:
+          "Dieselben Handwerker vom Rückbau bis zur Endreinigung, ohne zufällige Subunternehmer.",
+      },
+      {
+        title: "12 Monate Garantie",
+        description: "Auf alle von uns ausgeführten Arbeiten.",
       },
     ],
   },
@@ -337,7 +346,9 @@ const dictionary = {
       phoneRequired: "Geben Sie Ihre Telefonnummer ein.",
       phoneInvalid: "Geben Sie eine gültige Telefonnummer ein.",
     },
-    submit: "Anfrage senden",
+    submit: "Rufen Sie mich zurück",
+    submitNote:
+      "Während der Geschäftszeiten rufen wir innerhalb von 15 Minuten zurück (Mo–Sa 9:00–19:00).",
     submitting: "Wird gesendet…",
     success:
       "Ihre Anfrage wurde gesendet. Wir melden uns bei Ihnen, um die Einzelheiten zu klären.",
@@ -465,6 +476,35 @@ const dictionary = {
         "Kontaktieren Sie SHINEX und beschreiben Sie Ihr Renovierungsvorhaben. Wir besprechen den Zustand des Objekts, die gewünschten Arbeiten und die nächsten Schritte für eine Besichtigung und Kostenschätzung.",
       action: "Renovierung besprechen",
     },
+    renovationQuote: {
+      title: "Kosten der Wohnungsrenovierung",
+      description:
+        "Geben Sie Fläche, Zustand der Wohnung und Paket an: Das Ergebnis erscheint sofort, ohne Kontaktdaten.",
+      conditionLabel: "Zustand der Wohnung",
+      conditions: {
+        newBuilding: "Neubau",
+        secondary: "Bestandswohnung",
+      },
+      tierLabel: "Paket",
+      tiers: {
+        standard: "Standard",
+        middle: "Mittelklasse",
+        premium: "Premium",
+      },
+      rate: "{rate} {currency}/m²",
+      currency: "AMD",
+      resultTitle: "Richtpreis",
+      total:
+        "ab {total} {currency} für die Arbeitsleistung (Materialien separat)",
+      empty:
+        "Geben Sie eine Wohnfläche von 10 bis 2.000 m² ein, um die Berechnung zu sehen.",
+      timelineReference: "Voraussichtliche Dauer: 1,5–2 Monate",
+      timelineAfterSurvey: "Die Dauer klären wir nach dem Aufmaß",
+      whatsappAction: "Genauen Kostenvoranschlag per WhatsApp erhalten",
+      callbackAction: "Rufen Sie mich zurück",
+      whatsappMessage:
+        "Guten Tag! Ich möchte einen genauen Kostenvoranschlag für eine Wohnungsrenovierung. Fläche: {area} m², Zustand: {condition}, Paket: {tier}. Berechnung auf der Website: ab {total} {currency} für die Arbeitsleistung.",
+    },
     dialog: {
       eyebrow: "Online-Rechner",
       title: "Kostenschätzung für Ihr Projekt",
@@ -475,7 +515,7 @@ const dictionary = {
       scenario: {
         title: "Leistung auswählen",
         description:
-          "Kontaktieren Sie uns für Renovierungen. Für Hausbau und Planung geben Sie die Projektdaten ein und senden eine Kostenanfrage.",
+          "Die Wohnungsrenovierung wird sofort berechnet. Für Hausbau und Planung geben Sie die Projektdaten ein und senden eine Kostenanfrage.",
       },
       parameters: {
         title: "Objektdaten",
@@ -521,8 +561,7 @@ const dictionary = {
     quickScenarios: {
       apartmentOrPrivateHouseRenovation: {
         title: "Wohnungsrenovierung",
-        description:
-          "Kontaktieren Sie uns, um Arbeiten und Kosten zu besprechen",
+        description: "Sofortige Berechnung nach Fläche und Paket",
       },
       houseConstruction: {
         title: "Hausbau",
@@ -748,7 +787,7 @@ const dictionary = {
       {
         question: "Kann ich einzelne Renovierungsphasen beauftragen?",
         answer:
-          "Ja. Nach Prüfung des Objekts besprechen wir die gewünschten Arbeiten und vereinbaren ihre Reihenfolge.",
+          "Wir führen ausschließlich Komplettrenovierungen durch. Einzelne Arbeiten wie Sanitär, Elektrik und Oberflächen erledigen wir im Rahmen der Komplettrenovierung, mit einem einzigen Team.",
       },
       {
         question: "Wie lange kann eine Renovierung dauern?",
@@ -802,11 +841,11 @@ const dictionary = {
     eyebrow: "Über SHINEX",
     title: "Über uns: Renovierung und Bau in Armenien",
     intro:
-      "SHINEX entwickelt Renovierungs- und Bauleistungen in Armenien mit klarer Organisation, einer ersten Einschätzung, abgestimmten Phasen und unkomplizierter Kommunikation mit Kunden.",
+      "SHINEX ist ein junges Unternehmen, aber wir sind keine Neulinge: Unsere Handwerker arbeiten seit mehr als 10 Jahren in der Renovierung. Deshalb tragen wir das Risiko: keine Vorauszahlung, ein im Vertrag festgeschriebener Preis und 12 Monate Garantie.",
     storyTitle: "So organisieren wir die Arbeiten",
     story: [
-      "Wir beginnen damit, die Projektanforderungen, die Räume und das gewünschte Ergebnis zu verstehen, statt vorgefertigte Versprechen zu geben.",
-      "Wir gestalten den Leistungsumfang so, dass Kunden die Phasen, Entscheidungspunkte und Verantwortlichkeiten aller Beteiligten nachvollziehen können.",
+      "Wir führen ausschließlich Komplettrenovierungen aus: Ein eigenes Team betreut die Wohnung vom Rückbau und der Haustechnik bis zum Endausbau und zur Reinigung.",
+      "Geleitet wird das Unternehmen von Shavarsh Papoian. Er ist persönlich für den Kostenvoranschlag, die Termine und den Kontakt mit Ihnen verantwortlich.",
     ],
     valuesTitle: "Schwerpunkte",
     values: [
@@ -831,28 +870,11 @@ const dictionary = {
       "Wir stimmen Planungsziel, tatsächliche Bedingungen vor Ort und Ausführungsfolge aufeinander ab, ohne unbegründete Lösungen hinzuzufügen.",
     team: {
       title: "Team",
-      description:
-        "Die benötigten Fachkräfte kommen entsprechend der Aufgabe und der aktuellen Projektphase hinzu.",
-      placeholderNotice:
-        "VORLÄUFIGE KARTEN — vor Veröffentlichung durch geprüfte Teamangaben ersetzen",
       members: [
         {
-          role: "Projektleitung",
-          description:
-            "Vorläufige, unbesetzte Rolle: Koordination von Arbeitsabläufen und Kommunikation.",
-          isPlaceholder: true,
-        },
-        {
-          role: "Ingenieur / technischer Spezialist",
-          description:
-            "Vorläufige, unbesetzte Rolle: technische Prüfung der Lösungen und Phasen.",
-          isPlaceholder: true,
-        },
-        {
-          role: "Architekt / Gestalter",
-          description:
-            "Vorläufige, unbesetzte Rolle: Architektur- und Planungslösungen.",
-          isPlaceholder: true,
+          role: "Leiter des Unternehmens",
+          name: "Shavarsh Papoian",
+          description: "Kostenvoranschlag, Termine und Kundenkontakt.",
         },
       ],
     },
@@ -969,22 +991,23 @@ const dictionary = {
     ],
   },
   calculatorPage: {
-    title: "Bau- und Planungskostenrechner für Armenien",
+    title: "Renovierungs-, Bau- und Planungskostenrechner für Armenien",
     description:
-      "Fordern Sie eine Kostenschätzung für Hausbau oder Innenraumplanung in Armenien an. Senden Sie Projektdaten und Kontaktdaten für eine persönliche Bewertung.",
+      "Berechnen Sie Ihre Wohnungsrenovierung online ohne Kontaktdaten: Fläche, Zustand und Paket. Für Hausbau und Innenraumplanung fordern Sie eine Kostenschätzung an.",
     intro:
-      "Geben Sie die Fläche und Parameter für Hausbau oder Innenraumplanung ein, anschließend Ihren Namen, Ihre Telefonnummer und den Standort des Objekts. SHINEX prüft die Anfrage, klärt Details und kontaktiert Sie zur Besprechung der Kosten. Es wird kein automatischer Preis angezeigt. Für Renovierungen kontaktieren Sie uns, um den Zustand, die Arbeiten und die Kostenschätzung zu besprechen.",
-    faqTitle: "Berechnungen und Kostenanfragen",
+      "Für eine Wohnungsrenovierung geben Sie Fläche, Zustand (Neubau oder Bestandswohnung) und Paket an: Der Rechner zeigt sofort einen Richtpreis für die Arbeitsleistung, Materialien werden separat bezahlt. Den genauen Kostenvoranschlag senden wir 1–2 Tage nach dem kostenlosen Aufmaß. Für Hausbau oder Innenraumplanung geben Sie die Projektdaten ein und hinterlassen Namen und Telefonnummer: SHINEX prüft die Anfrage und kontaktiert Sie zur Besprechung der Kosten.",
+    faqTitle: "Fragen zum Renovierungs-, Bau- und Planungsrechner",
     faqs: [
-      {
-        question: "Wie erfahre ich die Kosten einer Renovierung?",
-        answer:
-          "Kontaktieren Sie SHINEX auf dem für Sie passenden Weg und erzählen Sie uns von Ihrem Projekt. Wir klären die Details und vereinbaren die nächsten Schritte zur Kostenschätzung.",
-      },
       {
         question: "Was umfasst der Rechner?",
         answer:
-          "Wählen Sie Hausbau oder Innenraumplanung und geben Sie Ihre Projektdaten ein. Die Schaltfläche zur Kostenanfrage öffnet ein Kontaktformular. Senden Sie die Anfrage; SHINEX prüft sie und meldet sich bei Ihnen. Der Rechner zeigt keinen automatischen Preis an.",
+          "Für eine Wohnungsrenovierung zeigt der Rechner sofort einen Richtpreis: Fläche multipliziert mit dem Satz des Pakets Standard, Mittelklasse oder Premium, für die Arbeitsleistung, Materialien separat. Für Hausbau oder Innenraumplanung geben Sie die Parameter ein und klicken auf „Kostenschätzung anfragen“: Es öffnet sich ein Kontaktformular, und SHINEX meldet sich zur Besprechung der Kostenschätzung.",
+      },
+      {
+        question:
+          "Wie erhalte ich einen genauen Kostenvoranschlag für die Renovierung?",
+        answer:
+          "Klicken Sie unter dem Ergebnis auf „Genauen Kostenvoranschlag per WhatsApp erhalten“ oder „Rufen Sie mich zurück“. In Jerewan kommen wir am Tag nach Ihrer Anfrage zum kostenlosen Aufmaß und senden 1–2 Tage danach einen detaillierten Kostenvoranschlag. Der Preis wird im Vertrag festgelegt.",
       },
     ],
   },

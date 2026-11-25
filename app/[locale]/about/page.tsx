@@ -30,7 +30,7 @@ export default async function AboutPage({ params }: Props) {
   if (!isLocale(locale)) notFound();
   const dictionary = await getDictionary(locale);
   const { about } = dictionary;
-  const geography = dictionary.whyUs.items[5];
+  const crew = dictionary.whyUs.items[6];
 
   return (
     <>
@@ -76,6 +76,29 @@ export default async function AboutPage({ params }: Props) {
         </section>
         <section>
           <h2 className="text-3xl font-semibold tracking-[-0.04em] text-[var(--text-primary)]">
+            {about.team.title}
+          </h2>
+          <div className="mt-8 grid gap-4 content-grid-three md:grid-cols-3">
+            {about.team.members.map((member) => (
+              <article
+                className="rounded-card border border-[var(--border)] bg-[var(--background-soft)] p-6"
+                key={member.name}
+              >
+                <p className="text-sm uppercase tracking-[0.12em] text-[var(--text-muted)]">
+                  {member.role}
+                </p>
+                <h3 className="mt-2 text-xl font-semibold tracking-[-0.025em] text-[var(--text-primary)]">
+                  {member.name}
+                </h3>
+                <p className="mt-3 leading-7 text-[var(--text-secondary)]">
+                  {member.description}
+                </p>
+              </article>
+            ))}
+          </div>
+        </section>
+        <section>
+          <h2 className="text-3xl font-semibold tracking-[-0.04em] text-[var(--text-primary)]">
             {about.valuesTitle}
           </h2>
           <div className="mt-8 grid gap-4 content-grid-three md:grid-cols-3">
@@ -105,10 +128,10 @@ export default async function AboutPage({ params }: Props) {
           </div>
           <div className="content-aside border-t border-white/70 pt-6 lg:border-l lg:border-t-0 lg:pl-10 lg:pt-0">
             <h2 className="text-2xl font-semibold tracking-[-0.03em] text-[var(--text-primary)]">
-              {geography.title}
+              {crew.title}
             </h2>
             <p className="mt-4 leading-7 text-[var(--text-secondary)]">
-              {geography.description}
+              {crew.description}
             </p>
             <p className="mt-3 text-sm text-[var(--text-muted)]">
               {dictionary.footer.description}

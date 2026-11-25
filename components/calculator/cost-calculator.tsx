@@ -22,6 +22,7 @@ import { CalculatorUrlScenario } from "@/components/calculator/calculator-url-sc
 import { ConstructionExtrasStep } from "@/components/calculator/steps/construction-extras-step";
 import { ParametersStep } from "@/components/calculator/steps/parameters-step";
 import { RenovationContact } from "@/components/calculator/renovation-contact";
+import { RenovationQuickEstimate } from "@/components/calculator/renovation-quick-estimate";
 import { ScenarioStep } from "@/components/calculator/steps/scenario-step";
 import type {
   CalculatorFieldId,
@@ -72,13 +73,16 @@ export function CostCalculator({
   });
   const isConstruction = calculationType === "construction";
   const isRenovation = calculationType === "renovation";
+  const renovationObjectType = useWatch({
+    control: form.control,
+    name: "renovationObjectType",
+  });
 
   const selectedQuickScenario = config.quickScenarios.find(
     (scenario) =>
       scenario.calculationType === calculationType &&
       (scenario.renovationObjectType === undefined ||
-        scenario.renovationObjectType ===
-          form.getValues("renovationObjectType"))
+        scenario.renovationObjectType === renovationObjectType)
   )?.id;
 
   const selectScenario = (scenarioId: CalculatorScenarioId) => {
@@ -144,7 +148,9 @@ export function CostCalculator({
             selectedQuickScenario={selectedQuickScenario}
           />
 
-          {isRenovation ? (
+          {isRenovation && renovationObjectType === "apartment" ? (
+            <RenovationQuickEstimate copy={copy} locale={locale} />
+          ) : isRenovation ? (
             <RenovationContact copy={copy.renovationContact} />
           ) : (
             <>

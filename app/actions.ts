@@ -9,6 +9,7 @@ import { defaultLocale, getDictionary, isLocale } from "@/lib/i18n";
 import { submitLead, type LeadInput } from "@/lib/leads/service";
 import { parseLeadAttribution, publicPagePath } from "@/lib/lead-attribution";
 import type { Locale } from "@/types";
+import type { LeadWorkType } from "@/types/config";
 
 type LeadField = keyof Omit<LeadInput, "area" | "options"> | "area";
 
@@ -23,9 +24,12 @@ export type LeadActionState = {
 const objectTypes = new Set<string>(
   leadFormConfig.objectTypes.map(({ value }) => value)
 );
-const workTypes = new Set<string>(
-  leadFormConfig.workTypes.map(({ value }) => value)
-);
+// "separate-works" is no longer offered, but pages opened before the change may still send it.
+const legacyWorkTypes: readonly LeadWorkType[] = ["separate-works"];
+const workTypes = new Set<string>([
+  ...leadFormConfig.workTypes.map(({ value }) => value),
+  ...legacyWorkTypes,
+]);
 const calculatorOptions = new Set<string>(
   leadFormConfig.options.map(({ value }) => value)
 );

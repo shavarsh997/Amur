@@ -12,11 +12,13 @@ export const operationsConfig = {
     "handover",
   ],
   benefits: [
-    "agreement",
+    "response",
+    "measurement",
     "estimate",
-    "schedule",
-    "quality",
-    "scope",
-    "geography",
+    "fixed-price",
+    "staged-payment",
+    "weekly-report",
+    "own-crew",
+    "warranty",
   ],
 } as const;

@@ -78,7 +78,7 @@ export const companyConfig = {
   business: {
     registrationNumber: null,
     foundedYear: null,
-    warrantyText: null,
+    warrantyText: "12 months on completed work",
     serviceArea: ["Armenia", "Yerevan"],
   },
   privacy: {

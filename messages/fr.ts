@@ -23,17 +23,19 @@ const dictionary = {
     language: "Langue",
   },
   hero: {
-    eyebrow: "Services de rénovation et de construction",
-    title: "Construction, rénovation et aménagement intérieur en Arménie",
+    eyebrow: "Rénovation d’appartements à Erevan",
+    title:
+      "Rénovation d’appartements clés en main à Erevan — dès {price} AMD/m²",
     description:
-      "De la construction d’une maison à la rénovation d’un appartement ou de locaux professionnels, SHINEX vous accompagne dans la préparation et la réalisation de votre projet. Nous étudions d’abord le bien et les travaux souhaités, puis établissons une première estimation.",
-    primaryAction: "Parlons du projet",
-    secondaryAction: "Nos services",
+      "Notre propre équipe, plus de 10 ans d’expérience. Le prix est fixé dans le contrat, le paiement se fait par étapes sans acompte, avec une garantie de 12 mois.",
+    primaryAction: "Prise de mesures gratuite demain",
+    secondaryAction: "Calculer le coût",
+    microcopy: "Réponse sur WhatsApp en 15 minutes · lun–sam 9h00–19h00",
     trustPoints: [
-      "Première estimation et budget détaillé",
-      "Construction et équipements techniques du bâtiment",
-      "Aménagement intérieur et choix des matériaux",
-      "Projets dans toute l’Arménie",
+      "Prise de mesures gratuite à Erevan",
+      "Devis en 1 à 2 jours",
+      "Paiement par étapes sans acompte",
+      "Garantie de 12 mois",
     ],
   },
   services: {
@@ -208,39 +210,47 @@ const dictionary = {
   },
   whyUs: {
     eyebrow: "Pourquoi SHINEX",
-    title: "Pourquoi confier votre projet à SHINEX",
+    title: "Le risque, c’est nous qui le prenons, pas vous",
     description:
-      "Nous discutons à l’avance des modalités des travaux et des modifications pour que chaque étape reste claire.",
+      "Des conditions qui ne dépendent pas du chantier : elles sont les mêmes pour chaque client.",
     items: [
       {
-        title: "Travaux encadrés par un contrat",
+        title: "Réponse en 15 minutes",
         description:
-          "L’étendue des travaux, les responsabilités et les modalités d’exécution sont consignées.",
+          "Écrivez-nous sur WhatsApp : pendant les heures d’ouverture, nous répondons en 15 minutes.",
       },
       {
-        title: "Devis convenu à l’avance",
+        title: "Prise de mesures gratuite demain",
         description:
-          "Nous détaillons les travaux et leur coût, et convenons des modifications avant leur exécution.",
+          "À Erevan, nous venons prendre les mesures le lendemain de votre demande. Gratuitement.",
       },
       {
-        title: "Des travaux organisés par étapes",
+        title: "Devis en 1 à 2 jours",
         description:
-          "Nous planifions l’ordre des travaux et suivons l’avancement de chaque étape.",
+          "Après la prise de mesures, nous envoyons un devis ligne par ligne : travaux, quantités et prix.",
       },
       {
-        title: "Contrôle qualité",
+        title: "Prix fixé dans le contrat",
         description:
-          "Les opérations essentielles et le résultat de chaque étape sont contrôlés.",
+          "Le montant ne change que si vous modifiez le volume des travaux, et uniquement par écrit.",
       },
       {
-        title: "Des modifications validées à l’avance",
-        description:
-          "Si l’étendue des travaux ou les solutions doivent évoluer en cours de chantier, nous en convenons d’abord avec vous.",
+        title: "Paiement par étapes, sans acompte",
+        description: "Vous payez ce qui est déjà réalisé.",
       },
       {
-        title: "Interventions dans toute l’Arménie",
+        title: "Rapport photo chaque semaine",
         description:
-          "Nous prenons en charge des projets dans toute l’Arménie, notamment à Erevan, en tenant compte de la localisation du bien et des travaux prévus.",
+          "Chaque semaine, nous envoyons des photos et des vidéos du chantier.",
+      },
+      {
+        title: "Notre propre équipe, 10+ ans",
+        description:
+          "Les mêmes artisans de la démolition au nettoyage, sans sous-traitants de passage.",
+      },
+      {
+        title: "Garantie de 12 mois",
+        description: "Sur tous les travaux que nous avons réalisés.",
       },
     ],
   },
@@ -344,7 +354,9 @@ const dictionary = {
       phoneRequired: "Indiquez votre numéro de téléphone.",
       phoneInvalid: "Indiquez un numéro de téléphone valide.",
     },
-    submit: "Envoyer la demande",
+    submit: "Rappelez-moi",
+    submitNote:
+      "Nous vous rappelons sous 15 minutes pendant les heures d’ouverture (lun–sam 9h00–19h00).",
     submitting: "Envoi en cours…",
     success:
       "Votre demande a été envoyée. Nous vous contacterons pour préciser les détails.",
@@ -471,6 +483,35 @@ const dictionary = {
         "Contactez SHINEX et décrivez ce que vous souhaitez rénover. Nous discuterons de l’état du bien, des travaux souhaités et des prochaines étapes pour une visite et un devis.",
       action: "Discuter de votre rénovation",
     },
+    renovationQuote: {
+      title: "Estimation de la rénovation d’appartement",
+      description:
+        "Indiquez la surface, l’état de l’appartement et la formule : le résultat s’affiche immédiatement, sans coordonnées.",
+      conditionLabel: "État de l’appartement",
+      conditions: {
+        newBuilding: "Logement neuf",
+        secondary: "Logement ancien",
+      },
+      tierLabel: "Formule",
+      tiers: {
+        standard: "Standard",
+        middle: "Intermédiaire",
+        premium: "Premium",
+      },
+      rate: "{rate} {currency}/m²",
+      currency: "AMD",
+      resultTitle: "Prix indicatif",
+      total:
+        "à partir de {total} {currency} pour la main-d’œuvre (matériaux en sus)",
+      empty:
+        "Indiquez une surface d’appartement de 10 à 2 000 m² pour voir l’estimation.",
+      timelineReference: "Délai indicatif : 1,5 à 2 mois",
+      timelineAfterSurvey: "Nous préciserons le délai après le relevé",
+      whatsappAction: "Recevoir un devis précis sur WhatsApp",
+      callbackAction: "Rappelez-moi",
+      whatsappMessage:
+        "Bonjour ! Je souhaite un devis précis pour la rénovation d’un appartement. Surface : {area} m², état : {condition}, formule : {tier}. Estimation sur le site : à partir de {total} {currency} pour la main-d’œuvre.",
+    },
     dialog: {
       eyebrow: "Calculateur en ligne",
       title: "Demande d’estimation du projet",
@@ -481,7 +522,7 @@ const dictionary = {
       scenario: {
         title: "Choisissez un service",
         description:
-          "Contactez-nous pour une rénovation. Pour la construction de maisons et la conception, renseignez les paramètres du projet et demandez une estimation.",
+          "La rénovation d’appartement est calculée immédiatement. Pour la construction de maisons et la conception, renseignez les paramètres du projet et demandez une estimation.",
       },
       parameters: {
         title: "Caractéristiques du bien",
@@ -527,7 +568,7 @@ const dictionary = {
     quickScenarios: {
       apartmentOrPrivateHouseRenovation: {
         title: "Rénovation d’appartement",
-        description: "Contactez-nous pour discuter des travaux et du coût",
+        description: "Estimation immédiate selon la surface et la formule",
       },
       houseConstruction: {
         title: "Construction de maison",
@@ -756,7 +797,7 @@ const dictionary = {
         question:
           "Puis-je commander certaines étapes de rénovation seulement ?",
         answer:
-          "Oui. Nous discutons des travaux nécessaires et convenons de leur ordre après avoir étudié le bien.",
+          "Nous réalisons uniquement des rénovations complètes. Les travaux séparés — plomberie, électricité, finitions — sont effectués dans ce cadre, par une seule équipe.",
       },
       {
         question: "Combien de temps peut durer une rénovation ?",
@@ -811,11 +852,11 @@ const dictionary = {
     eyebrow: "À propos de SHINEX",
     title: "À propos : rénovation et construction en Arménie",
     intro:
-      "SHINEX développe ses services de rénovation et de construction en Arménie autour d’une organisation claire, d’une première évaluation, d’étapes convenues et d’échanges simples avec les clients.",
+      "SHINEX est une jeune entreprise, mais nous ne sommes pas des débutants : nos artisans travaillent dans la rénovation depuis plus de 10 ans. C’est pourquoi nous prenons le risque à notre charge : sans acompte, avec un prix fixé dans le contrat et une garantie de 12 mois.",
     storyTitle: "Comment les travaux sont organisés",
     story: [
-      "Nous commençons par comprendre les exigences du projet, l’espace et le résultat attendu, plutôt que par une promesse toute faite.",
-      "Nous définissons le périmètre pour que le client comprenne les étapes, les décisions à prendre et les responsabilités de chacun.",
+      "Nous réalisons uniquement des rénovations complètes : une seule équipe interne prend en charge l’appartement, de la démolition et des réseaux techniques jusqu’aux finitions et au nettoyage.",
+      "L’entreprise est dirigée par Shavarsh Papoian. Il est personnellement responsable du devis, des délais et du lien avec vous.",
     ],
     valuesTitle: "Nos domaines principaux",
     values: [
@@ -840,28 +881,11 @@ const dictionary = {
       "Nous mettons en cohérence l’objectif de conception, les conditions réelles du site et l’ordre de réalisation, sans ajouter de solutions non justifiées.",
     team: {
       title: "Équipe",
-      description:
-        "Les intervenants rejoignent le projet selon ses besoins et son étape en cours.",
-      placeholderNotice:
-        "FICHES TEMPORAIRES — à remplacer par des informations d’équipe vérifiées avant publication",
       members: [
         {
-          role: "Responsable de projet",
-          description:
-            "Rôle temporaire sans nom : coordination du déroulement des travaux et de la communication.",
-          isPlaceholder: true,
-        },
-        {
-          role: "Ingénieur / spécialiste technique",
-          description:
-            "Rôle temporaire sans nom : examen technique des solutions et des étapes.",
-          isPlaceholder: true,
-        },
-        {
-          role: "Architecte / concepteur",
-          description:
-            "Rôle temporaire sans nom : solutions architecturales et d’agencement.",
-          isPlaceholder: true,
+          role: "Responsable de l’entreprise",
+          name: "Shavarsh Papoian",
+          description: "Devis, délais et relation client.",
         },
       ],
     },
@@ -977,22 +1001,23 @@ const dictionary = {
     ],
   },
   calculatorPage: {
-    title: "Calculateur de coûts de construction et de conception en Arménie",
+    title: "Calculateur de rénovation, construction et conception en Arménie",
     description:
-      "Demandez une estimation de construction de maison ou de conception intérieure en Arménie. Envoyez les paramètres du projet et vos coordonnées.",
+      "Estimez la rénovation de votre appartement en ligne sans laisser vos coordonnées : surface, état et formule. Pour la construction et la conception intérieure, demandez une estimation.",
     intro:
-      "Indiquez la surface et les paramètres de construction ou de conception intérieure, puis votre nom, votre numéro de téléphone et la localisation du bien. SHINEX étudiera la demande, précisera les détails et vous contactera pour discuter du coût. Aucun prix automatique n’est affiché. Pour une rénovation, contactez-nous pour discuter de l’état du bien, des travaux et de la préparation d’un devis.",
-    faqTitle: "Calculs et demandes de prix",
+      "Pour une rénovation d’appartement, indiquez la surface, l’état (neuf ou ancien) et la formule : le calculateur affiche immédiatement un prix indicatif pour la main-d’œuvre, les matériaux étant payés séparément. Nous envoyons le devis précis 1 à 2 jours après le relevé gratuit. Pour la construction de maison ou la conception intérieure, renseignez les paramètres du projet, puis votre nom et votre téléphone : SHINEX étudiera la demande et vous contactera pour discuter du coût.",
+    faqTitle:
+      "Questions sur le calculateur de rénovation, de construction et de conception",
     faqs: [
-      {
-        question: "Comment connaître le coût d’une rénovation ?",
-        answer:
-          "Contactez SHINEX par le moyen qui vous convient et parlez-nous de votre projet. Nous préciserons les détails et conviendrons des prochaines étapes pour établir un devis.",
-      },
       {
         question: "Que couvre le calculateur ?",
         answer:
-          "Sélectionnez la construction de maison ou la conception intérieure et renseignez les paramètres. Le bouton de demande ouvre un formulaire de contact. Envoyez votre demande : SHINEX l’étudiera et vous contactera au sujet de l’estimation. Le calculateur n’affiche aucun prix automatique.",
+          "Pour une rénovation d’appartement, le calculateur affiche immédiatement un prix indicatif : la surface multipliée par le tarif de la formule Standard, Intermédiaire ou Premium, pour la main-d’œuvre, matériaux en sus. Pour la construction de maison ou la conception intérieure, renseignez les paramètres et cliquez sur « Demander une estimation » : un formulaire de contact s’ouvre et SHINEX vous contactera au sujet de l’estimation.",
+      },
+      {
+        question: "Comment obtenir un devis précis pour la rénovation ?",
+        answer:
+          "Sous le résultat, cliquez sur « Recevoir un devis précis sur WhatsApp » ou « Rappelez-moi ». À Erevan, nous venons faire un relevé gratuit le lendemain de votre demande et envoyons un devis détaillé poste par poste 1 à 2 jours après. Le prix est fixé dans le contrat.",
       },
     ],
   },

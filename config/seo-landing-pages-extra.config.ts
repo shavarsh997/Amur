@@ -1071,10 +1071,11 @@ export const extraSeoLandingPages = [
         eyebrow: "Կոսմետիկ վերանորոգում · Երևան",
         title: "Բնակարանի կոսմետիկ վերանորոգում Երևանում",
         description:
-          "Կոսմետիկ վերանորոգում Երևանում՝ բնակարանի, տան կամ առանձին սենյակի հարդարումը թարմացնելու համար՝ առանց կապիտալ փոփոխությունների։",
+          "Կոսմետիկ վերանորոգում Երևանում՝ ամբողջ բնակարանի հարդարումը թարմացնելու համար՝ առանց կապիտալ փոփոխությունների։",
+        note: "Կատարում ենք բնակարանի համալիր վերանորոգման շրջանակում։",
         seoTitle: "Բնակարանի կոսմետիկ վերանորոգում Երևանում | SHINEX",
         seoDescription:
-          "Բնակարանի կոսմետիկ վերանորոգում Երևանում՝ պատեր, առաստաղ, հատակ կամ մեկ սենյակ։ Թարմացում բնակվելուց կամ վարձակալության հանձնելուց առաջ։ SHINEX։",
+          "Բնակարանի կոսմետիկ վերանորոգում Երևանում՝ պատեր, առաստաղ և հատակ ամբողջ բնակարանում։ Թարմացում բնակվելուց կամ վարձակալության հանձնելուց առաջ։ SHINEX։",
         introduction: [
           "Կոսմետիկ վերանորոգումը հարմար է, երբ տարածքի մակերեսներն ու ինժեներական համակարգերը բավարար վիճակում են, բայց հարդարումը, գույները կամ առանձին հատվածները թարմացման կարիք ունեն։",
           "Մինչ աշխատանքը ճշտում ենք մակերեսների վիճակը, որպեսզի արտաքին թարմացումը չթաքցնի ավելի լուրջ խնդիր։",
@@ -1083,7 +1084,7 @@ export const extraSeoLandingPages = [
           {
             title: "Ի՞նչ է ներառում կոսմետիկ վերանորոգումը",
             paragraphs: [
-              "Աշխատանքների ծավալը կարող է սահմանափակվել մեկ սենյակով կամ ընդգրկել ամբողջ բնակարանը։",
+              "Կոսմետիկ վերանորոգումը կատարում ենք ամբողջ բնակարանում՝ մեկ բրիգադով և մեկ նախահաշվով։",
             ],
             items: [
               "Պատերի նախապատրաստում և ներկում",
@@ -1116,7 +1117,7 @@ export const extraSeoLandingPages = [
           {
             question: "Կարո՞ղ եք վերանորոգել մեկ սենյակ",
             answer:
-              "Այո, հնարավոր է քննարկել մեկ սենյակի կամ առանձին գոտու աշխատանքները։",
+              "Մենք կատարում ենք միայն համալիր վերանորոգում։ Հարդարումը կատարում ենք դրա շրջանակում՝ մեկ բրիգադով, ամբողջ բնակարանում։",
           },
           {
             question: "Որքա՞ն ժամանակ է տևում",
@@ -1138,10 +1139,11 @@ export const extraSeoLandingPages = [
         eyebrow: "Косметический ремонт · Ереван",
         title: "Косметический ремонт квартир в Ереване",
         description:
-          "Косметический ремонт в Ереване для обновления отделки квартиры, дома или отдельной комнаты без полного обновления инженерных систем.",
+          "Косметический ремонт квартиры в Ереване целиком: обновление отделки без полной замены инженерных систем.",
+        note: "Выполняем в составе комплексного ремонта квартиры.",
         seoTitle: "Косметический ремонт квартир в Ереване | SHINEX",
         seoDescription:
-          "Косметический ремонт квартиры в Ереване: стены, потолок, пол или отдельная комната. Обновление перед заселением или сдачей в аренду. Смета SHINEX.",
+          "Косметический ремонт квартиры в Ереване: стены, потолок и пол во всей квартире. Обновление перед заселением или сдачей в аренду. Смета SHINEX.",
         introduction: [
           "Косметический ремонт подходит, когда основания и системы в нормальном состоянии, но отделку или отдельные зоны нужно обновить.",
           "До начала уточняем состояние поверхностей, чтобы внешнее обновление не скрыло серьёзную проблему.",
@@ -1150,7 +1152,7 @@ export const extraSeoLandingPages = [
           {
             title: "Что может включать косметический ремонт",
             paragraphs: [
-              "Он может быть небольшим для одной комнаты или охватывать всю квартиру.",
+              "Косметический ремонт делаем для всей квартиры — одной бригадой и по одной смете.",
             ],
             items: [
               "Подготовка и покраска стен",
@@ -1182,7 +1184,8 @@ export const extraSeoLandingPages = [
           },
           {
             question: "Можно отремонтировать одну комнату?",
-            answer: "Да, можно обсудить одну комнату или отдельную зону.",
+            answer:
+              "Мы выполняем только комплексный ремонт. Отделку делаем в его составе — для всей квартиры, одной бригадой.",
           },
           {
             question: "Сколько это занимает?",
@@ -1204,10 +1207,11 @@ export const extraSeoLandingPages = [
         eyebrow: "Cosmetic renovation · Yerevan",
         title: "Cosmetic apartment renovation in Yerevan",
         description:
-          "Refresh the finishes in your apartment, house or a single room when the existing wiring, plumbing and surfaces are in sound condition.",
+          "Refresh the finishes throughout your apartment when the existing wiring, plumbing and surfaces are in sound condition.",
+        note: "We carry out this work as part of a complete apartment renovation.",
         seoTitle: "Cosmetic apartment renovation in Yerevan | SHINEX",
         seoDescription:
-          "Cosmetic apartment renovation in Yerevan: walls, ceilings, floors or one room. Refresh before moving in or renting out. Request a SHINEX estimate.",
+          "Cosmetic apartment renovation in Yerevan: walls, ceilings and floors across the whole apartment. Refresh before moving in or renting out. SHINEX estimate.",
         introduction: [
           "Cosmetic renovation is suitable when walls, floors, wiring and plumbing are in sound condition, but the visible finishes need updating.",
           "We check surfaces first so a visual update does not conceal a more serious issue.",
@@ -1216,7 +1220,7 @@ export const extraSeoLandingPages = [
           {
             title: "What cosmetic renovation can include",
             paragraphs: [
-              "The scope may be limited to one room or extend through the whole apartment.",
+              "We carry out cosmetic renovation across the whole apartment, with one team and one estimate.",
             ],
             items: [
               "Wall preparation and painting",
@@ -1248,7 +1252,8 @@ export const extraSeoLandingPages = [
           },
           {
             question: "Can you renovate one room?",
-            answer: "Yes. We can discuss a single room or individual area.",
+            answer:
+              "We only carry out complete renovations. Finishing work is done as part of that, across the whole apartment, by one team.",
           },
           {
             question: "How long does it take?",
@@ -1269,10 +1274,11 @@ export const extraSeoLandingPages = [
         eyebrow: "Optische Renovierung · Eriwan",
         title: "Optische Wohnungsrenovierung in Eriwan",
         description:
-          "Frischen Sie Ihre Wohnung, Ihr Haus oder einen einzelnen Raum auf, wenn Kabel, Rohre und Untergründe in gutem Zustand sind.",
+          "Frischen Sie die Oberflächen Ihrer gesamten Wohnung auf, wenn Kabel, Rohre und Untergründe in gutem Zustand sind.",
+        note: "Wir führen diese Arbeiten im Rahmen einer Komplettrenovierung der Wohnung aus.",
         seoTitle: "Optische Wohnungsrenovierung in Eriwan | SHINEX",
         seoDescription:
-          "Optische Wohnungsrenovierung in Eriwan: Wände, Decken, Böden oder ein Raum. Auffrischung vor Einzug oder Vermietung. Kostenvoranschlag von SHINEX.",
+          "Optische Wohnungsrenovierung in Eriwan: Wände, Decken und Böden der gesamten Wohnung. Auffrischung vor Einzug oder Vermietung. Kostenvoranschlag von SHINEX.",
         introduction: [
           "Eine optische Renovierung ist geeignet, wenn Wände, Böden, Kabel und Rohre intakt sind, die sichtbaren Oberflächen aber erneuert werden sollen.",
           "Wir prüfen zuerst die Untergründe, damit eine optische Auffrischung keine ernsteren Probleme verdeckt.",
@@ -1281,7 +1287,7 @@ export const extraSeoLandingPages = [
           {
             title: "Was eine optische Renovierung umfassen kann",
             paragraphs: [
-              "Der Umfang kann einen einzelnen Raum oder die gesamte Wohnung betreffen.",
+              "Die optische Renovierung führen wir für die gesamte Wohnung aus – mit einem Team und einem Kostenvoranschlag.",
             ],
             items: [
               "Wandvorbereitung und Anstrich",
@@ -1312,9 +1318,9 @@ export const extraSeoLandingPages = [
               "Probleme mit der Verkabelung prüfen wir separat und klären die nötigen Arbeiten vor dem Aufbringen neuer Oberflächen.",
           },
           {
-            question: "Können Sie einen einzelnen Raum renovieren?",
+            question: "Können Sie nur ein Zimmer renovieren?",
             answer:
-              "Ja. Wir können einen einzelnen Raum oder Bereich besprechen.",
+              "Wir führen ausschließlich Komplettrenovierungen aus. Ausbauarbeiten erledigen wir in deren Rahmen – für die gesamte Wohnung, mit einem Team.",
           },
           {
             question: "Wie lange dauert es?",
@@ -1336,10 +1342,11 @@ export const extraSeoLandingPages = [
         eyebrow: "Rénovation légère · Erevan",
         title: "Rénovation légère d’appartement à Erevan",
         description:
-          "Rafraîchissez les finitions de votre appartement, maison ou d’une seule pièce lorsque l’électricité, la plomberie et les surfaces sont en bon état.",
+          "Rafraîchissez les finitions de tout votre appartement lorsque l’électricité, la plomberie et les surfaces sont en bon état.",
+        note: "Nous réalisons ces travaux dans le cadre d’une rénovation complète de l’appartement.",
         seoTitle: "Rénovation légère d’appartement à Erevan | SHINEX",
         seoDescription:
-          "Rénovation légère d’appartement à Erevan : murs, plafonds, sols ou une pièce. Rafraîchissement avant emménagement ou location. Devis SHINEX.",
+          "Rénovation légère d’appartement à Erevan : murs, plafonds et sols de tout l’appartement. Rafraîchissement avant emménagement ou location. Devis SHINEX.",
         introduction: [
           "Une rénovation légère convient lorsque les murs, sols, câbles et canalisations sont sains, mais que les finitions visibles ont besoin d’être renouvelées.",
           "Nous vérifions d’abord les surfaces pour qu’un rafraîchissement ne masque pas un problème plus sérieux.",
@@ -1348,7 +1355,7 @@ export const extraSeoLandingPages = [
           {
             title: "Ce que peut comprendre une rénovation légère",
             paragraphs: [
-              "Les travaux peuvent concerner une seule pièce ou l’ensemble de l’appartement.",
+              "Nous réalisons la rénovation légère sur l’ensemble de l’appartement, avec une seule équipe et un seul devis.",
             ],
             items: [
               "Préparation et peinture des murs",
@@ -1379,9 +1386,9 @@ export const extraSeoLandingPages = [
               "Nous évaluons séparément les problèmes électriques et précisons les travaux nécessaires avant les nouvelles finitions.",
           },
           {
-            question: "Pouvez-vous rénover une seule pièce ?",
+            question: "Pouvez-vous rénover uniquement une pièce ?",
             answer:
-              "Oui. Nous pouvons discuter d’une pièce ou d’une zone précise.",
+              "Nous réalisons uniquement des rénovations complètes. Les finitions sont faites dans ce cadre, sur tout l’appartement, par une seule équipe.",
           },
           {
             question: "Combien de temps cela prend-il ?",
@@ -1767,6 +1774,7 @@ export const extraSeoLandingPages = [
         title: "Սանտեխնիկական աշխատանքներ Երևանում",
         description:
           "Սանտեխնիկական աշխատանքներ Երևանում բնակարանի, տան կամ բիզնես տարածքի վերանորոգման շրջանակում՝ պլանավորումից մինչև տեղադրում և ստուգում։",
+        note: "Կատարում ենք բնակարանի համալիր վերանորոգման շրջանակում։",
         seoTitle: "Սանտեխնիկական աշխատանքներ Երևանում | SHINEX",
         seoDescription:
           "Սանտեխնիկական աշխատանքներ Երևանում՝ ջրամատակարարման ու ջրահեռացման խողովակներ, խոհանոցի և սանհանգույցի սարքավորումների միացում։",
@@ -1817,7 +1825,7 @@ export const extraSeoLandingPages = [
           {
             question: "Հնարավո՞ր է պատվիրել միայն սանտեխնիկական աշխատանքներ",
             answer:
-              "Դիմելիս նշեք՝ ինչ աշխատանքներ են անհրաժեշտ և ինչ վիճակում են խողովակներն ու սարքավորումները։ Այդ տվյալներով կարող ենք քննարկել առանձին պատվերի ծավալն ու կազմակերպումը։",
+              "Մենք կատարում ենք միայն համալիր վերանորոգում։ Սանտեխնիկական աշխատանքները կատարում ենք դրա շրջանակում՝ մեկ բրիգադով։",
           },
         ],
         calculatorLabel: "Կապվել մեզ հետ",
@@ -1829,6 +1837,7 @@ export const extraSeoLandingPages = [
         title: "Сантехнические работы в Ереване",
         description:
           "Сантехнические работы в Ереване для квартиры, дома или бизнеса в рамках ремонта: от планирования до монтажа и проверки.",
+        note: "Выполняем в составе комплексного ремонта квартиры.",
         seoTitle: "Сантехнические работы в Ереване | SHINEX",
         seoDescription:
           "Сантехнические работы в Ереване: водоснабжение, канализация, точки ванной и кухни в ходе ремонта.",
@@ -1876,8 +1885,9 @@ export const extraSeoLandingPages = [
               "Возможность оценивается по существующей системе и техническим условиям.",
           },
           {
-            question: "Выполняете ли вы отдельные работы?",
-            answer: "Обсуждаем объём работ и подходящий формат организации.",
+            question: "Можно заказать только сантехнику?",
+            answer:
+              "Мы выполняем только комплексный ремонт. Сантехнику делаем в его составе, одной бригадой.",
           },
         ],
         calculatorLabel: "Обсудить ремонт",
@@ -1889,6 +1899,7 @@ export const extraSeoLandingPages = [
         title: "Plumbing work in Yerevan",
         description:
           "Plumbing work in Yerevan for apartments, houses and business spaces as part of a renovation, from planning to installation and testing.",
+        note: "We carry out this work as part of a complete apartment renovation.",
         seoTitle: "Plumbing Work in Yerevan | SHINEX",
         seoDescription:
           "Plumbing work in Yerevan: water supply and drainage pipes, kitchen and bathroom connections, installation and testing during renovation.",
@@ -1938,7 +1949,7 @@ export const extraSeoLandingPages = [
           {
             question: "Can I request plumbing work on its own?",
             answer:
-              "Tell us what work is needed and the condition of the existing pipes and fixtures. We can then discuss the scope and arrangements for a separate job.",
+              "We only carry out complete renovations. Plumbing is done as part of that, by one team.",
           },
         ],
         calculatorLabel: "Discuss your renovation",
@@ -1950,6 +1961,7 @@ export const extraSeoLandingPages = [
         title: "Sanitärarbeiten in Eriwan",
         description:
           "Sanitärarbeiten in Eriwan für Wohnungen, Häuser und Gewerberäume im Rahmen einer Renovierung, von der Planung bis zur Installation und Prüfung.",
+        note: "Wir führen diese Arbeiten im Rahmen einer Komplettrenovierung der Wohnung aus.",
         seoTitle: "Sanitärarbeiten in Eriwan | SHINEX",
         seoDescription:
           "Sanitärarbeiten in Eriwan: Wasser- und Abwasserleitungen, Küchen- und Badanschlüsse, Installation und Prüfung bei Renovierungen.",
@@ -1999,7 +2011,7 @@ export const extraSeoLandingPages = [
           {
             question: "Kann ich Sanitärarbeiten separat beauftragen?",
             answer:
-              "Beschreiben Sie die nötigen Arbeiten sowie den Zustand der vorhandenen Rohre und Ausstattung. Danach besprechen wir Umfang und Bedingungen eines Einzelauftrags.",
+              "Wir führen ausschließlich Komplettrenovierungen aus. Sanitärarbeiten erledigen wir in deren Rahmen, mit einem Team.",
           },
         ],
         calculatorLabel: "Renovierung besprechen",
@@ -2011,6 +2023,7 @@ export const extraSeoLandingPages = [
         title: "Travaux de plomberie à Erevan",
         description:
           "Travaux de plomberie à Erevan pour appartements, maisons et locaux professionnels dans le cadre d’une rénovation, de la planification à l’installation et aux essais.",
+        note: "Nous réalisons ces travaux dans le cadre d’une rénovation complète de l’appartement.",
         seoTitle: "Travaux de plomberie à Erevan | SHINEX",
         seoDescription:
           "Plomberie à Erevan : conduites d’eau et d’évacuation, raccordements de cuisine et de salle de bains, installation et essais pendant la rénovation.",
@@ -2061,7 +2074,7 @@ export const extraSeoLandingPages = [
           {
             question: "Puis-je demander uniquement des travaux de plomberie ?",
             answer:
-              "Indiquez les travaux souhaités et l’état des tuyaux et équipements existants. Nous pourrons ensuite discuter du périmètre et des modalités d’une intervention distincte.",
+              "Nous réalisons uniquement des rénovations complètes. La plomberie est faite dans ce cadre, par une seule équipe.",
           },
         ],
         calculatorLabel: "Discuter de votre rénovation",
@@ -2087,6 +2100,7 @@ export const extraSeoLandingPages = [
         title: "Էլեկտրական աշխատանքներ Երևանում",
         description:
           "Վերանորոգման կամ շինարարության ընթացքում պլանավորում ենք վարդակներն ու լուսավորությունը, անցկացնում մալուխները և պատրաստում սարքավորումների միացումները։",
+        note: "Կատարում ենք բնակարանի համալիր վերանորոգման շրջանակում։",
         seoTitle: "Էլեկտրական աշխատանքներ Երևանում | SHINEX",
         seoDescription:
           "Էլեկտրական աշխատանքներ Երևանում բնակարանի, տան և գրասենյակի համար՝ վարդակներ, լուսավորություն, սարքավորումների ու ցանցի կետերի պլանավորում։",
@@ -2149,6 +2163,7 @@ export const extraSeoLandingPages = [
         title: "Электрические работы в Ереване",
         description:
           "Электрические работы в Ереване при ремонте и строительстве: планирование точек, прокладка кабеля и подготовка для оборудования.",
+        note: "Выполняем в составе комплексного ремонта квартиры.",
         seoTitle: "Электрические работы в Ереване | SHINEX",
         seoDescription:
           "Электрические работы в Ереване для квартиры, дома и офиса: розетки, освещение, точки техники и сети.",
@@ -2209,6 +2224,7 @@ export const extraSeoLandingPages = [
         title: "Electrical work in Yerevan",
         description:
           "Electrical installation during renovation or construction: plan sockets and lighting, route cables and prepare connections for appliances.",
+        note: "We carry out this work as part of a complete apartment renovation.",
         seoTitle: "Electrical Work in Yerevan | SHINEX",
         seoDescription:
           "Electrical installation in Yerevan: sockets, lighting, wiring and appliance connections planned around your renovation or construction project.",
@@ -2270,6 +2286,7 @@ export const extraSeoLandingPages = [
         title: "Elektroarbeiten in Eriwan",
         description:
           "Elektroinstallation bei Renovierung oder Bau: Steckdosen und Beleuchtung planen, Kabel verlegen und Geräteanschlüsse vorbereiten.",
+        note: "Wir führen diese Arbeiten im Rahmen einer Komplettrenovierung der Wohnung aus.",
         seoTitle: "Elektroarbeiten in Eriwan | SHINEX",
         seoDescription:
           "Elektroinstallation in Eriwan: Steckdosen, Beleuchtung, Verkabelung und Geräteanschlüsse passend zu Ihrem Renovierungs- oder Bauprojekt.",
@@ -2331,6 +2348,7 @@ export const extraSeoLandingPages = [
         title: "Travaux électriques à Erevan",
         description:
           "Installation électrique pendant une rénovation ou une construction : prévoir les prises et éclairages, poser les câbles et préparer les raccordements des appareils.",
+        note: "Nous réalisons ces travaux dans le cadre d’une rénovation complète de l’appartement.",
         seoTitle: "Travaux électriques à Erevan | SHINEX",
         seoDescription:
           "Installation électrique à Erevan : prises, éclairage, câblage et raccordements prévus selon votre projet de rénovation ou de construction.",

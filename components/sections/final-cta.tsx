@@ -22,8 +22,8 @@ export function FinalCta({
         </div>
         <aside>
           <span aria-hidden="true">↗</span>
-          <p>{dictionary.whyUs.items[5].title}</p>
-          <p>{dictionary.whyUs.items[5].description}</p>
+          <p>{dictionary.whyUs.items[0].title}</p>
+          <p>{dictionary.whyUs.items[0].description}</p>
         </aside>
       </Container>
     </section>

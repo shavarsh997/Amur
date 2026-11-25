@@ -17,6 +17,21 @@ export function RenovationPriceExamples({ locale }: { locale: Locale }) {
     return null;
   const copy = priceExampleCopy[locale];
   const format = new Intl.NumberFormat(locale, { maximumFractionDigits: 0 });
+  const startingRate = format.format(price.from);
+  const withRate = (text: string) => text.replaceAll("{price}", startingRate);
+  const conditions = (
+    <ul className="flex flex-wrap gap-x-6 gap-y-2 text-sm font-medium text-[var(--text-primary)]">
+      {copy.conditions.map((condition) => (
+        <li key={condition} className="flex items-center gap-2">
+          <span
+            aria-hidden="true"
+            className="size-1.5 rounded-full bg-[var(--brand-copper)]"
+          />
+          {condition}
+        </li>
+      ))}
+    </ul>
+  );
   return (
     <div className="space-y-section-gap">
       <section aria-labelledby="renovation-levels-title" className="space-y-6">
@@ -64,6 +79,24 @@ export function RenovationPriceExamples({ locale }: { locale: Locale }) {
             </div>
           ))}
         </div>
+        {conditions}
+      </section>
+      <section
+        aria-labelledby="renovation-why-rate-title"
+        className="space-y-4 rounded-2xl bg-[var(--background-soft)] p-6 sm:p-8"
+      >
+        <h2
+          id="renovation-why-rate-title"
+          className="text-2xl font-semibold tracking-tight sm:text-3xl"
+        >
+          {withRate(copy.whyTitle)}
+        </h2>
+        <p className="max-w-3xl leading-7 text-[var(--text-secondary)]">
+          {withRate(copy.whyText)}
+        </p>
+        <p className="font-semibold text-[var(--text-primary)]">
+          {copy.timeline}
+        </p>
       </section>
       <section id="price-examples" className="space-y-6 scroll-mt-24">
         <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
