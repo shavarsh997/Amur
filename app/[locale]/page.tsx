@@ -7,6 +7,7 @@ import { FinalCta } from "@/components/sections/final-cta";
 import { CompanyIntroduction } from "@/components/sections/company-introduction";
 import { Hero } from "@/components/sections/hero";
 import { RenovationIncluded } from "@/components/sections/renovation-included";
+import { SpecializedServices } from "@/components/sections/specialized-services";
 import { ServicesSection } from "@/components/sections/services-section";
 import { WhyUs } from "@/components/sections/why-us";
 import { homeContent } from "@/config/home-content.config";
@@ -50,6 +51,7 @@ export default async function LocaleHome({ params }: Props) {
       <RenovationIncluded locale={locale} />
       <WorkProcess dictionary={dictionary} locale={locale} />
       <WhyUs dictionary={dictionary} locale={locale} />
+      <SpecializedServices dictionary={dictionary} locale={locale} />
       <FAQSection dictionary={dictionary} />
       <FinalCta dictionary={dictionary} locale={locale} />
     </>

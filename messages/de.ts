@@ -23,16 +23,16 @@ const dictionary = {
     language: "Sprache",
   },
   hero: {
-    eyebrow: "Wohnungsrenovierung in Jerewan",
-    title: "Schlüsselfertige Wohnungsrenovierung in Jerewan – ab {price} AMD/m²",
+    eyebrow: "Renovierungs- und Bauleistungen",
+    title: "Bau, Renovierung und Innenraumgestaltung in Armenien",
     description:
-      "Eigenes Team mit über 10 Jahren Erfahrung. Der Preis wird im Vertrag festgeschrieben, Zahlung in Etappen ohne Vorauszahlung, 12 Monate Garantie.",
-    primaryAction: "Kostenloses Aufmaß morgen",
+      "Vom Hausbau bis zur Renovierung einer Wohnung oder von Geschäftsräumen begleitet SHINEX die Planung und Umsetzung Ihres Projekts. Zunächst prüfen wir das Objekt und Ihren Bedarf, dann erstellen wir eine erste Kostenschätzung.",
+    primaryAction: "Kostenloser Vor-Ort-Termin morgen",
     secondaryAction: "Kosten berechnen",
     microcopy: "Antwort per WhatsApp in 15 Minuten · Mo–Sa 9:00–19:00",
     trustPoints: [
-      "Kostenloses Aufmaß in Jerewan",
-      "Kostenvoranschlag in 1–2 Tagen",
+      "Kostenloser Vor-Ort-Termin in Jerewan",
+      "Festpreis im Vertrag",
       "Zahlung in Etappen ohne Vorauszahlung",
       "12 Monate Garantie",
     ],
@@ -211,14 +211,14 @@ const dictionary = {
           "Schreiben Sie uns per WhatsApp: Während der Arbeitszeit antworten wir innerhalb von 15 Minuten.",
       },
       {
-        title: "Kostenloses Aufmaß morgen",
+        title: "Kostenloser Vor-Ort-Termin morgen",
         description:
-          "In Jerewan kommen wir am Tag nach Ihrer Anfrage zum Aufmaß. Kostenlos.",
+          "In Jerewan kommen wir am Tag nach Ihrer Anfrage zu Ihrem Objekt oder Grundstück. Kostenlos.",
       },
       {
-        title: "Kostenvoranschlag in 1–2 Tagen",
+        title: "Detaillierter Kostenvoranschlag",
         description:
-          "Nach dem Aufmaß senden wir einen Kostenvoranschlag Position für Position: Arbeiten, Mengen und Preise.",
+          "Vor Vertragsabschluss zeigen wir Ihnen die Liste der Arbeiten, Mengen und Preise.",
       },
       {
         title: "Festpreis im Vertrag",
@@ -237,7 +237,7 @@ const dictionary = {
       {
         title: "Eigenes Team, 10+ Jahre",
         description:
-          "Dieselben Handwerker vom Rückbau bis zur Endreinigung, ohne zufällige Subunternehmer.",
+          "Ein Team betreut das Objekt vom Start bis zur Übergabe, ohne zufällige Subunternehmer.",
       },
       {
         title: "12 Monate Garantie",
@@ -787,7 +787,7 @@ const dictionary = {
       {
         question: "Kann ich einzelne Renovierungsphasen beauftragen?",
         answer:
-          "Wir führen ausschließlich Komplettrenovierungen durch. Einzelne Arbeiten wie Sanitär, Elektrik und Oberflächen erledigen wir im Rahmen der Komplettrenovierung, mit einem einzigen Team.",
+          "Bei Wohnungsrenovierungen übernehmen wir nur Komplettprojekte: Sanitär, Elektrik und Oberflächen erledigen wir in deren Rahmen, mit einem einzigen Team. Hausbau, Monolith-, Fassaden- und Dacharbeiten können Sie auch einzeln beauftragen.",
       },
       {
         question: "Wie lange kann eine Renovierung dauern?",
@@ -841,10 +841,10 @@ const dictionary = {
     eyebrow: "Über SHINEX",
     title: "Über uns: Renovierung und Bau in Armenien",
     intro:
-      "SHINEX ist ein junges Unternehmen, aber wir sind keine Neulinge: Unsere Handwerker arbeiten seit mehr als 10 Jahren in der Renovierung. Deshalb tragen wir das Risiko: keine Vorauszahlung, ein im Vertrag festgeschriebener Preis und 12 Monate Garantie.",
+      "SHINEX ist ein Bauunternehmen in Armenien: Wir bauen Einfamilienhäuser, renovieren Wohnungen und Gewerberäume und entwickeln Innenraumgestaltungen. Das Unternehmen ist jung, aber unser Team arbeitet seit mehr als 10 Jahren im Bau und in der Renovierung. Deshalb tragen wir das Risiko: keine Vorauszahlung, ein im Vertrag festgeschriebener Preis und 12 Monate Garantie.",
     storyTitle: "So organisieren wir die Arbeiten",
     story: [
-      "Wir führen ausschließlich Komplettrenovierungen aus: Ein eigenes Team betreut die Wohnung vom Rückbau und der Haustechnik bis zum Endausbau und zur Reinigung.",
+      "Wir arbeiten an Einfamilienhäusern, Wohnungen und Gewerbeobjekten – vom Fundament und Monolithbau bis zu Fassaden, Haustechnik und Endausbau. Bei Wohnungsrenovierungen übernehmen wir nur Komplettprojekte: ein Team vom Rückbau bis zur Übergabe.",
       "Geleitet wird das Unternehmen von Shavarsh Papoian. Er ist persönlich für den Kostenvoranschlag, die Termine und den Kontakt mit Ihnen verantwortlich.",
     ],
     valuesTitle: "Schwerpunkte",

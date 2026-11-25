@@ -23,16 +23,16 @@ const dictionary = {
     language: "Language",
   },
   hero: {
-    eyebrow: "Apartment renovation in Yerevan",
-    title: "Turnkey apartment renovation in Yerevan — from AMD {price}/m²",
+    eyebrow: "Renovation and construction services",
+    title: "Construction, renovation and interior design in Armenia",
     description:
-      "Our own crew with 10+ years of experience. The price is fixed in the contract, you pay in stages with no advance payment, and the work comes with a 12-month warranty.",
-    primaryAction: "Free measurement tomorrow",
+      "From building a home to renovating an apartment or business premises, SHINEX helps plan and carry out your project. We start by reviewing the property and the work you need, then prepare an initial estimate.",
+    primaryAction: "Free site visit tomorrow",
     secondaryAction: "Calculate the cost",
     microcopy: "We reply on WhatsApp within 15 minutes · Mon–Sat 9:00–19:00",
     trustPoints: [
-      "Free measurement in Yerevan",
-      "Estimate in 1–2 days",
+      "Free site visit in Yerevan",
+      "Price fixed in the contract",
       "Staged payments, no advance",
       "12-month warranty",
     ],
@@ -215,14 +215,14 @@ const dictionary = {
           "Message us on WhatsApp: during working hours we reply within 15 minutes.",
       },
       {
-        title: "Free measurement tomorrow",
+        title: "Free site visit tomorrow",
         description:
-          "In Yerevan we come to measure the day after you contact us. Free of charge.",
+          "In Yerevan we visit your property or plot the day after you contact us. Free of charge.",
       },
       {
-        title: "Estimate in 1–2 days",
+        title: "Detailed estimate",
         description:
-          "After the measurement we send a line-by-line estimate: work items, quantities and prices.",
+          "Before the contract is signed, we show you the list of works, quantities and prices.",
       },
       {
         title: "Price fixed in the contract",
@@ -238,9 +238,9 @@ const dictionary = {
         description: "Every week we send photos and videos from the site.",
       },
       {
-        title: "Our own crew, 10+ years",
+        title: "Our own team, 10+ years",
         description:
-          "One team of tradespeople from demolition to cleanup, with no random subcontractors.",
+          "One team runs the project from start to handover, with no random subcontractors.",
       },
       {
         title: "12-month warranty",
@@ -772,7 +772,7 @@ const dictionary = {
       {
         question: "Can I order separate renovation stages?",
         answer:
-          "We only take on complete renovations. Individual works such as plumbing, electrics and finishing are done as part of a complete renovation, by one team.",
+          "For apartment renovations we only take on complete projects: plumbing, electrics and finishing are done as part of them, by one team. House construction, monolithic concrete, facade and roofing work can be ordered separately.",
       },
       {
         question: "How long can renovation take?",
@@ -826,10 +826,10 @@ const dictionary = {
     eyebrow: "About SHINEX",
     title: "About our renovation and construction company in Armenia",
     intro:
-      "SHINEX is a young company, but we are not newcomers: our tradespeople have worked in renovation for more than 10 years. That is why we take on the risk: no advance payment, a price fixed in the contract and a 12-month warranty.",
+      "SHINEX is a construction company in Armenia: we build private houses, renovate apartments and commercial premises, and design interiors. The company is young, but our team has worked in construction and renovation for more than 10 years. That is why we take on the risk: no advance payment, a price fixed in the contract and a 12-month warranty.",
     storyTitle: "How the work is organized",
     story: [
-      "We only do complete renovations: one in-house crew takes the apartment from demolition and building services to final finishes and cleanup.",
+      "We work on private houses, apartments and commercial properties — from foundations and monolithic concrete work to facades, building services and final finishes. For apartment renovations we only take on complete projects: one team from demolition to handover.",
       "The company is led by Shavarsh Papoian. He is personally responsible for the estimate, the schedule and staying in touch with you.",
     ],
     valuesTitle: "Core areas",
