@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "allow": [
+      "Bash(npm run lint)",
+      "Bash(npm run typecheck)",
+      "Bash(npm run build)",
+      "Bash(npm run seo:check)",
+      "Bash(npm run seo:check *)",
+      "Bash(npm run calculator:check)",
+      "Bash(npm run leads:check)",
+      "Bash(npm run analytics:check)",
+      "Bash(npm run seo:inventory)",
+      "Bash(npm run format:check)",
+      "Bash(npm --prefix marketing-agent run test)",
+      "Bash(npm --prefix marketing-agent run typecheck)",
+      "Bash(npm --prefix marketing-agent run cli -- *)",
+      "Bash(node --experimental-strip-types marketing-agent/src/cli.ts *)",
+      "Bash(git status *)",
+      "Bash(git diff *)",
+      "Bash(git log *)",
+      "Bash(git show *)",
+      "Bash(git branch)",
+      "Bash(git branch -a)",
+      "Bash(git branch --show-current)",
+      "Bash(git branch --list *)",
+      "Bash(git fetch *)",
+      "Bash(git switch -c marketing/*)",
+      "Bash(gh pr view *)",
+      "Bash(gh pr list *)",
+      "Bash(gh pr diff *)",
+      "Bash(gh pr checks *)",
+      "mcp__analytics-mcp",
+      "mcp__google-ads-mcp__search_search",
+      "mcp__google-ads-mcp__customers_list_accessible_customers",
+      "mcp__google-ads-mcp__metadata_get_resource_metadata",
+      "Edit(~/Library/Application Support/shinex-marketing/reports/**)"
+    ],
+    "ask": [
+      "Bash(git push origin main*)",
+      "Bash(git push * main)",
+      "Bash(git push --force*)",
+      "Bash(git push -f*)",
+      "Bash(git push)",
+      "Bash(git push * HEAD:main*)",
+      "Bash(git push * --force*)",
+      "Bash(git push * -f*)",
+      "Bash(git merge *)"
+    ],
+    "deny": [
+      "Read(./**/.env)",
+      "Read(./**/.env.*)",
+      "Read(./**/*.pem)",
+      "Read(~/.config/gcloud/**)",
+      "Read(~/.config/shinex-marketing/oauth-client.json)",
+      "Bash(security find-generic-password *)",
+      "Bash(gcloud auth print-access-token*)",
+      "Bash(gcloud auth application-default print-access-token*)",
+      "Edit(./acceptance/**)"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/block-secret-commit.sh"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -16,5 +16,11 @@
 - Конец задачи: допиши строку в docs/progress.md. Новое решение запиши в docs/decisions.md, новую ловушку в docs/known-issues.md.
 - Папка acceptance/ это условие готовности от человека. Не меняй её сам и не давай менять builder.
 
+## Проект и проверки
+- Сайт SHINEX (www.shinex.am): Next.js 16 + React 19 + Tailwind 4, языки hy/ru/en/de/fr; контент и цены в `config/`, тексты в `messages/`. Репозиторий публичный.
+- Проверки для Done when: `npm run lint`, `npm run typecheck`, `npm run build`, `npm run seo:check`, `npm run leads:check`, `npm run analytics:check`, `npm run calculator:check`; агент: `npm --prefix marketing-agent run test`.
+- `sites/` — отдельный проект со своим git, к этому сайту не относится.
+- `.claude/settings.json`: секреты закрыты deny-правилами, коммит с секретом блокирует хук `.claude/hooks/block-secret-commit.sh`. Не обходить.
+
 ## Маркетинговый агент SHINEX
 - Маркетинговые задачи (аналитика, Ads, SEO, расписание): читай `marketing-agent/CLAUDE.md`; аналитику и отчёты в репозиторий не клади — он публичный.
