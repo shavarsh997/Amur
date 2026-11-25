@@ -23,17 +23,16 @@ const dictionary = {
     language: "Langue",
   },
   hero: {
-    eyebrow: "Rénovation d’appartements à Erevan",
-    title:
-      "Rénovation d’appartements clés en main à Erevan — dès {price} AMD/m²",
+    eyebrow: "Services de rénovation et de construction",
+    title: "Construction, rénovation et aménagement intérieur en Arménie",
     description:
-      "Notre propre équipe, plus de 10 ans d’expérience. Le prix est fixé dans le contrat, le paiement se fait par étapes sans acompte, avec une garantie de 12 mois.",
-    primaryAction: "Prise de mesures gratuite demain",
+      "De la construction d’une maison à la rénovation d’un appartement ou de locaux professionnels, SHINEX vous accompagne dans la préparation et la réalisation de votre projet. Nous étudions d’abord le bien et les travaux souhaités, puis établissons une première estimation.",
+    primaryAction: "Visite gratuite demain",
     secondaryAction: "Calculer le coût",
     microcopy: "Réponse sur WhatsApp en 15 minutes · lun–sam 9h00–19h00",
     trustPoints: [
-      "Prise de mesures gratuite à Erevan",
-      "Devis en 1 à 2 jours",
+      "Visite gratuite à Erevan",
+      "Prix fixé dans le contrat",
       "Paiement par étapes sans acompte",
       "Garantie de 12 mois",
     ],
@@ -220,14 +219,14 @@ const dictionary = {
           "Écrivez-nous sur WhatsApp : pendant les heures d’ouverture, nous répondons en 15 minutes.",
       },
       {
-        title: "Prise de mesures gratuite demain",
+        title: "Visite gratuite demain",
         description:
-          "À Erevan, nous venons prendre les mesures le lendemain de votre demande. Gratuitement.",
+          "À Erevan, nous venons sur votre bien ou votre terrain le lendemain de votre demande. Gratuitement.",
       },
       {
-        title: "Devis en 1 à 2 jours",
+        title: "Devis détaillé",
         description:
-          "Après la prise de mesures, nous envoyons un devis ligne par ligne : travaux, quantités et prix.",
+          "Avant le contrat, nous vous présentons la liste des travaux, les quantités et les prix.",
       },
       {
         title: "Prix fixé dans le contrat",
@@ -246,7 +245,7 @@ const dictionary = {
       {
         title: "Notre propre équipe, 10+ ans",
         description:
-          "Les mêmes artisans de la démolition au nettoyage, sans sous-traitants de passage.",
+          "Une seule équipe mène le chantier du début à la livraison, sans sous-traitants de passage.",
       },
       {
         title: "Garantie de 12 mois",
@@ -797,7 +796,7 @@ const dictionary = {
         question:
           "Puis-je commander certaines étapes de rénovation seulement ?",
         answer:
-          "Nous réalisons uniquement des rénovations complètes. Les travaux séparés — plomberie, électricité, finitions — sont effectués dans ce cadre, par une seule équipe.",
+          "En rénovation d’appartements, nous ne prenons que des projets complets : la plomberie, l’électricité et les finitions sont réalisées dans ce cadre, par une seule équipe. La construction de maisons, les travaux de béton monolithique, de façade et de toiture peuvent être commandés séparément.",
       },
       {
         question: "Combien de temps peut durer une rénovation ?",
@@ -852,10 +851,10 @@ const dictionary = {
     eyebrow: "À propos de SHINEX",
     title: "À propos : rénovation et construction en Arménie",
     intro:
-      "SHINEX est une jeune entreprise, mais nous ne sommes pas des débutants : nos artisans travaillent dans la rénovation depuis plus de 10 ans. C’est pourquoi nous prenons le risque à notre charge : sans acompte, avec un prix fixé dans le contrat et une garantie de 12 mois.",
+      "SHINEX est une entreprise de construction en Arménie : nous construisons des maisons individuelles, rénovons des appartements et des locaux commerciaux, et concevons des aménagements intérieurs. L’entreprise est jeune, mais notre équipe travaille dans la construction et la rénovation depuis plus de 10 ans. C’est pourquoi nous prenons le risque à notre charge : sans acompte, avec un prix fixé dans le contrat et une garantie de 12 mois.",
     storyTitle: "Comment les travaux sont organisés",
     story: [
-      "Nous réalisons uniquement des rénovations complètes : une seule équipe interne prend en charge l’appartement, de la démolition et des réseaux techniques jusqu’aux finitions et au nettoyage.",
+      "Nous intervenons sur des maisons individuelles, des appartements et des locaux commerciaux — des fondations et du gros œuvre en béton jusqu’aux façades, aux réseaux techniques et aux finitions. En rénovation d’appartements, nous ne prenons que des projets complets : une seule équipe, de la démolition à la livraison.",
       "L’entreprise est dirigée par Shavarsh Papoian. Il est personnellement responsable du devis, des délais et du lien avec vous.",
     ],
     valuesTitle: "Nos domaines principaux",
