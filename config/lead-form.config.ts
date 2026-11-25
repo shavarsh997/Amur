@@ -13,7 +13,6 @@ export const leadFormConfig = {
     { value: "turnkey", labelKey: "turnkey" },
     { value: "design", labelKey: "design" },
     { value: "renovation", labelKey: "renovation" },
-    { value: "separate-works", labelKey: "separateWorks" },
   ],
   options: [
     { value: "design-documentation", labelKey: "designDocumentation" },
@@ -27,7 +26,7 @@ export const leadFormConfig = {
   }[];
   workTypes: readonly {
     value: LeadWorkType;
-    labelKey: "turnkey" | "design" | "renovation" | "separateWorks";
+    labelKey: "turnkey" | "design" | "renovation";
   }[];
   options: readonly {
     value: LeadOption;

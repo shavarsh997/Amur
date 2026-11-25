@@ -20,6 +20,11 @@ export const priceExampleCopy: Record<
     extrasTitle: string;
     extras: string;
     next: string;
+    /** "{price}" is replaced with the formatted standard-tier rate. */
+    whyTitle: string;
+    whyText: string;
+    timeline: string;
+    conditions: readonly string[];
   }
 > = {
   ru: {
@@ -59,6 +64,16 @@ export const priceExampleCopy: Record<
     extras:
       "Демонтаж старой отделки, выравнивание оснований, новая проводка и трубы, гидроизоляция и перенос точек меняют объём работ. Срок также зависит от высыхания материалов, поставок и доступа на объект. Окончательный график согласуется после осмотра и выбора материалов.",
     next: "Получить индивидуальную смету",
+    whyTitle: "Почему от {price}, а не 45 000 ֏/м²",
+    whyText:
+      "Цены 40–45 тыс. за м² обычно означают лёгкое обновление без технической части. В наши {price} входит полный ремонт: электрика, сантехника, подготовка стен и пола, чистовая отделка — одной бригадой и по одной смете.",
+    timeline: "Срок: новостройка 60 м² — 1,5–2 месяца.",
+    conditions: [
+      "Бесплатный замер",
+      "Смета за 1–2 дня",
+      "Без аванса",
+      "Гарантия 12 месяцев",
+    ],
   },
   hy: {
     tiersTitle: "Վերանորոգման երեք մակարդակ",
@@ -97,6 +112,16 @@ export const priceExampleCopy: Record<
     extras:
       "Հին հարդարման ապամոնտաժումը, մակերեսների հարթեցումը, լարերի ու խողովակների փոխարինումը, ջրամեկուսացումն ու միացումների տեղափոխումը փոխում են աշխատանքի ծավալը։ Ժամկետի վրա ազդում են նաև նյութերի չորացումը, մատակարարումն ու տարածք մուտք գործելու պայմանները։ Գրաֆիկը ճշտվում է զննումից և նյութերի ընտրությունից հետո։",
     next: "Ստանալ անհատական նախահաշիվ",
+    whyTitle: "Ինչո՞ւ {price}-ից, և ոչ թե 45 000 դրամ/մ²-ից",
+    whyText:
+      "Մ²-ի համար 40–45 հազար դրամ գինը սովորաբար նշանակում է թեթև թարմացում՝ առանց տեխնիկական մասի։ Մեր {price} դրամի մեջ ներառված է ամբողջական վերանորոգումը՝ էլեկտրամոնտաժ, սանտեխնիկա, պատերի ու հատակի նախապատրաստում, վերջնական հարդարում՝ մեկ բրիգադով և մեկ նախահաշվով։",
+    timeline: "Ժամկետը՝ 60 մ² նորակառույց բնակարան՝ 1,5–2 ամիս։",
+    conditions: [
+      "Անվճար չափագրում",
+      "Նախահաշիվ 1–2 օրում",
+      "Առանց կանխավճարի",
+      "12 ամիս երաշխիք",
+    ],
   },
   en: {
     tiersTitle: "Three renovation levels",
@@ -135,6 +160,16 @@ export const priceExampleCopy: Record<
     extras:
       "Removing old finishes, levelling surfaces, replacing wiring or pipes, waterproofing and relocating connections change the scope. Drying times, deliveries and site access also affect the schedule, which is agreed after a survey and material selection.",
     next: "Request an individual estimate",
+    whyTitle: "Why from AMD {price}, not AMD 45,000/m²",
+    whyText:
+      "Rates of AMD 40,000–45,000 per m² usually mean a light refresh without the technical work. Our AMD {price} covers a full renovation: electrics, plumbing, wall and floor preparation and final finishes — by one crew, under one estimate.",
+    timeline: "Timeline: a 60 m² new-build apartment takes 1.5–2 months.",
+    conditions: [
+      "Free measurement visit",
+      "Estimate in 1–2 days",
+      "No advance payment",
+      "12-month warranty",
+    ],
   },
   de: {
     tiersTitle: "Drei Renovierungsstufen",
@@ -173,6 +208,16 @@ export const priceExampleCopy: Record<
     extras:
       "Rückbau, das Ausgleichen von Oberflächen, neue Leitungen, Abdichtung und verlegte Anschlüsse verändern den Umfang. Trocknungszeiten, Lieferungen und Zugang beeinflussen ebenfalls den Zeitplan. Dieser wird nach Besichtigung und Materialwahl vereinbart.",
     next: "Individuellen Kostenvoranschlag anfragen",
+    whyTitle: "Warum ab {price} AMD und nicht 45.000 AMD/m²",
+    whyText:
+      "Preise von 40.000–45.000 AMD pro m² bedeuten meist eine leichte Auffrischung ohne technische Arbeiten. Unsere {price} AMD umfassen eine komplette Renovierung: Elektrik, Sanitär, Vorbereitung von Wänden und Böden sowie den Endausbau – durch ein Team und nach einem Kostenvoranschlag.",
+    timeline: "Dauer: Neubauwohnung mit 60 m² – 1,5–2 Monate.",
+    conditions: [
+      "Kostenloses Aufmaß",
+      "Kostenvoranschlag in 1–2 Tagen",
+      "Keine Anzahlung",
+      "12 Monate Garantie",
+    ],
   },
   fr: {
     tiersTitle: "Trois niveaux de rénovation",
@@ -211,5 +256,15 @@ export const priceExampleCopy: Record<
     extras:
       "La dépose, le ragréage, le remplacement des réseaux, l’étanchéité et le déplacement des raccordements modifient les travaux. Le séchage, les livraisons et l’accès influencent aussi le calendrier, établi après visite et choix des matériaux.",
     next: "Demander un devis personnalisé",
+    whyTitle: "Pourquoi dès {price} AMD et non 45 000 AMD/m²",
+    whyText:
+      "Un tarif de 40 000 à 45 000 AMD le m² correspond généralement à un simple rafraîchissement, sans partie technique. Nos {price} AMD couvrent une rénovation complète : électricité, plomberie, préparation des murs et des sols, finitions — par une seule équipe et sur un seul devis.",
+    timeline: "Délai : appartement neuf de 60 m² — 1,5 à 2 mois.",
+    conditions: [
+      "Prise de mesures gratuite",
+      "Devis sous 1 à 2 jours",
+      "Sans acompte",
+      "Garantie 12 mois",
+    ],
   },
 };

@@ -25,6 +25,8 @@ export type SeoLandingPage = {
       eyebrow: string;
       title: string;
       description: string;
+      /** Short visible note shown under the hero description. */
+      note?: string;
       seoTitle: string;
       seoDescription: string;
       introduction: readonly string[];

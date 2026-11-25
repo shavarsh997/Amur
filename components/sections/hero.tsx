@@ -7,6 +7,7 @@ import { ButtonLink } from "@/components/ui/button-link";
 import { Container } from "@/components/ui/container";
 import { homeContent } from "@/config/home-content.config";
 import { getHomeHeroMedia } from "@/config/hero-media.config";
+import { renovationPriceTiers } from "@/config/pricing.config";
 import type { Dictionary, Locale } from "@/types";
 import { ContactTrigger } from "@/components/forms/contact-dialog";
 
@@ -19,6 +20,11 @@ export function Hero({
 }) {
   const content = homeContent[locale];
   const image = getHomeHeroMedia(locale);
+  // Same formatting as the price examples, so the headline follows the config.
+  const startingPrice = new Intl.NumberFormat(locale, {
+    maximumFractionDigits: 0,
+  }).format(renovationPriceTiers[0].from);
+  const title = dictionary.hero.title.replaceAll("{price}", startingPrice);
   const destinations = [
     "apartment-renovation-yerevan",
     "house-construction",
@@ -33,19 +39,25 @@ export function Hero({
             <span aria-hidden="true" />
             {dictionary.hero.eyebrow}
           </p>
-          <h1>{dictionary.hero.title}</h1>
+          <h1>{title}</h1>
           <p className={styles.heroDescription}>
-            {dictionary.footer.description}
+            {dictionary.hero.description}
           </p>
           <div className="action-group mt-8">
             <ContactTrigger
               label={dictionary.hero.primaryAction}
               variant="primary"
             />
-            <ButtonLink href={`/${locale}/services`} variant="secondary">
+            <ButtonLink href={`/${locale}/calculator`} variant="secondary">
               {dictionary.hero.secondaryAction}
             </ButtonLink>
           </div>
+          <p className={styles.heroMicrocopy}>{dictionary.hero.microcopy}</p>
+          <ul className={styles.heroTrust}>
+            {dictionary.hero.trustPoints.map((point) => (
+              <li key={point}>{point}</li>
+            ))}
+          </ul>
         </div>
         <figure className={styles.heroImage}>
           <ArchitecturalImage image={image} eager sizes="100vw" />

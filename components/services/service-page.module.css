@@ -91,6 +91,16 @@
   font-size: clamp(0.9375rem, 1.2vw, 1.05rem);
   line-height: 1.65;
 }
+.heroNote {
+  max-width: 38rem;
+  margin-top: calc(var(--spacing) * 4);
+  padding-left: calc(var(--spacing) * 4);
+  border-left: 2px solid var(--brand-copper);
+  color: #f4f2ed;
+  font-size: clamp(0.9375rem, 1.2vw, 1.05rem);
+  font-weight: 500;
+  line-height: 1.55;
+}
 .actions {
   display: flex;
   align-items: center;

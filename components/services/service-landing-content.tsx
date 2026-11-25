@@ -90,6 +90,7 @@ export function ServiceLandingContent({
       <ServiceHero
         title={content.title}
         description={content.description}
+        note={content.note}
         breadcrumbs={breadcrumbs}
         breadcrumbsLabel={dictionary.common.breadcrumbs}
         contactLabel={content.contactLabel}

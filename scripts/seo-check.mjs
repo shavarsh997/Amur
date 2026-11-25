@@ -189,7 +189,7 @@ assert.throws(
       { ...initialValues, calculationType: "renovation", area: "60" },
       russian.constructionCalculator
     ),
-  /Renovation estimates require contacting SHINEX/
+  /calculateRenovationQuote/
 );
 for (const field of ["title", "description", "intro", "faqTitle"]) {
   assert.match(
@@ -203,16 +203,25 @@ for (const field of ["title", "description", "intro", "faqTitle"]) {
     `Calculator ${field}: missing design`
   );
 }
-assert.doesNotMatch(
-  russian.calculatorPage.title,
-  /ремонт/iu,
-  "Calculator title promises unsupported renovation calculation"
-);
-for (const field of ["description", "intro"]) {
+// Apartment renovation is quoted instantly; the page must say so, not deny it.
+for (const field of ["title", "description", "intro", "faqTitle"]) {
   assert.match(
     russian.calculatorPage[field],
-    /ремонт[\s\S]*автоматическ[\s\S]*недоступен/iu,
-    `Calculator ${field}: missing renovation limitation`
+    /ремонт/iu,
+    `Calculator ${field}: missing renovation`
+  );
+}
+for (const locale of locales) {
+  const page = (await getDictionary(locale)).calculatorPage;
+  assert.doesNotMatch(
+    [
+      page.title,
+      page.description,
+      page.intro,
+      ...page.faqs.map((faq) => faq.answer),
+    ].join(" "),
+    /недоступен|unavailable|nicht verfügbar|indisponible|հասանելի չէ/iu,
+    `${locale}: calculator page still says renovation is not calculated`
   );
 }
 

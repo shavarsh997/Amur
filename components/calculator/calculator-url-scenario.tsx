@@ -19,10 +19,10 @@ export function CalculatorUrlScenario() {
       ({ id }) => id === requestedScenario
     );
     // Only configured scenarios are accepted; a bare/invalid URL starts with
-    // construction, just like the statically rendered calculator page.
+    // the apartment renovation quote, like the statically rendered page.
     reset(
       valuesForScenario(
-        scenario?.calculationType ?? "construction",
+        scenario?.calculationType ?? "renovation",
         scenario?.id,
         getValues("area")
       )

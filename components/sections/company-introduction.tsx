@@ -22,7 +22,7 @@ export function CompanyIntroduction({
           </Link>
         </div>
         <div>
-          <p className={styles.statement}>{dictionary.hero.description}</p>
+          <p className={styles.statement}>{dictionary.about.intro}</p>
           <ul className={styles.principles}>
             {dictionary.whyUs.items.slice(0, 3).map((item, index) => (
               <li key={item.title}>

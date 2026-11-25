@@ -55,22 +55,94 @@ function checkLanguages(values) {
   scenarios++;
 }
 
+// Construction/design engine never prices renovation; renovation has its own quote.
 for (const copy of copies)
-  for (const renovationObjectType of [
-    "apartment",
-    "privateHouse",
-    "commercial",
-  ])
-    for (const area of ["", "60", "100"])
-      assert.throws(
-        () =>
-          calculate(
-            { calculationType: "renovation", renovationObjectType, area },
-            copy
-          ),
-        /Renovation estimates require contacting SHINEX/,
-        "Renovation must not produce an automatic price"
-      );
+  assert.throws(
+    () => calculate({ calculationType: "renovation", area: "60" }, copy),
+    /calculateRenovationQuote/,
+    "Renovation must not go through the construction/design engine"
+  );
+
+// Apartment renovation: instant labour-only quote, area × owner-confirmed rate.
+const { renovationPriceTiers } = load("config/pricing.config");
+const { calculateRenovationQuote, renovationQuoteText } = load(
+  "lib/calculator/renovation-quote"
+);
+const digits = (text) => text.replace(/\D/g, "");
+const standard = calculateRenovationQuote({
+  area: "60",
+  condition: "newBuilding",
+  tier: "standard",
+});
+assert.equal(
+  standard.pricePerSquareMeter,
+  renovationPriceTiers.find(({ id }) => id === "standard").from,
+  "Renovation rate must come from renovationPriceTiers"
+);
+assert.equal(standard.total, 3_600_000, "60 m² Standard must be 3 600 000");
+assert.equal(standard.timeline, "reference");
+for (const [index, locale] of locales.entries()) {
+  const quoteCopy = copies[index].renovationQuote;
+  const text = renovationQuoteText(standard, quoteCopy, locale);
+  assert(
+    digits(text.total).includes("3600000"),
+    `${locale}: 60 m² Standard does not show 3 600 000 (${text.total})`
+  );
+  assert(
+    digits(text.whatsappMessage).includes("3600000") &&
+      text.whatsappMessage.includes(quoteCopy.conditions.newBuilding) &&
+      text.whatsappMessage.includes(quoteCopy.tiers.standard) &&
+      !/[{}]/.test(text.whatsappMessage + text.total),
+    `${locale}: WhatsApp text misses quote parameters`
+  );
+  assert.equal(text.timeline, quoteCopy.timelineReference);
+  const secondary = renovationQuoteText(
+    calculateRenovationQuote({
+      area: "60",
+      condition: "secondary",
+      tier: "standard",
+    }),
+    quoteCopy,
+    locale
+  );
+  assert.equal(secondary.timeline, quoteCopy.timelineAfterSurvey);
+}
+for (const tier of renovationPriceTiers)
+  assert.equal(
+    calculateRenovationQuote({
+      area: "100",
+      condition: "secondary",
+      tier: tier.id,
+    }).total,
+    100 * tier.from
+  );
+assert.equal(
+  calculateRenovationQuote({
+    area: "60,5",
+    condition: "newBuilding",
+    tier: "standard",
+  }).total,
+  60.5 * renovationPriceTiers[0].from
+);
+assert.equal(
+  calculateRenovationQuote({
+    area: "120",
+    condition: "newBuilding",
+    tier: "standard",
+  }).timeline,
+  "afterSurvey",
+  "Only the confirmed ~60 m² new-build timeline may be shown"
+);
+for (const area of ["", "0", "5", "2001", "abc"])
+  assert.equal(
+    calculateRenovationQuote({
+      area,
+      condition: "newBuilding",
+      tier: "standard",
+    }),
+    null,
+    `Invalid renovation area accepted: ${area}`
+  );
 
 for (const constructionPackage of ["shell", "rough", "turnkey"])
   checkLanguages({
@@ -89,5 +161,5 @@ assert.equal(
 );
 assert.equal(calculate({ area: "" }).total, 0);
 console.log(
-  `Calculator checks passed: renovation requires contact; ${scenarios} construction/design scenarios with identical amounts across ${locales.length} locales (${locales.join(", ")}).`
+  `Calculator checks passed: renovation 60 m² Standard = 3 600 000 in ${locales.length} locales; ${scenarios} construction/design scenarios with identical amounts across ${locales.length} locales (${locales.join(", ")}).`
 );

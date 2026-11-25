@@ -157,6 +157,75 @@ export function LeadForm({
           />
         </div>
       ) : null}
+      <div>
+        <label
+          className="mb-2 block text-sm font-semibold"
+          htmlFor={fieldId("name")}
+        >
+          {copy.fields.name}
+          <span
+            className="ml-1 text-[var(--text-secondary)]"
+            aria-hidden="true"
+          >
+            *
+          </span>
+        </label>
+        <input
+          aria-describedby={state.errors.name ? errorId("name") : undefined}
+          aria-invalid={Boolean(state.errors.name)}
+          autoComplete="name"
+          className={fieldClass}
+          disabled={pending}
+          id={fieldId("name")}
+          maxLength={120}
+          name="name"
+          defaultValue={state.values?.name ?? ""}
+          placeholder={copy.placeholders.name}
+          required
+          type="text"
+        />
+        {state.errors.name ? (
+          <p className="mt-2 text-sm text-red-700" id={errorId("name")}>
+            {state.errors.name}
+          </p>
+        ) : null}
+      </div>
+
+      <div>
+        <label
+          className="mb-2 block text-sm font-semibold"
+          htmlFor={fieldId("phone")}
+        >
+          {copy.fields.phone}
+          <span
+            className="ml-1 text-[var(--text-secondary)]"
+            aria-hidden="true"
+          >
+            *
+          </span>
+        </label>
+        <input
+          aria-describedby={state.errors.phone ? errorId("phone") : undefined}
+          aria-invalid={Boolean(state.errors.phone)}
+          autoComplete="tel"
+          className={fieldClass}
+          disabled={pending}
+          id={fieldId("phone")}
+          inputMode="tel"
+          maxLength={40}
+          name="phone"
+          defaultValue={state.values?.phone ?? ""}
+          placeholder={copy.placeholders.phone}
+          required
+          type="tel"
+        />
+        {state.errors.phone ? (
+          <p className="mt-2 text-sm text-red-700" id={errorId("phone")}>
+            {state.errors.phone}
+          </p>
+        ) : null}
+      </div>
+
       {calculatorContext?.request.calculationType !== "construction" ? (
         <div>
           <label
@@ -294,75 +363,6 @@ export function LeadForm({
         </div>
       ) : null}
 
-      <div>
-        <label
-          className="mb-2 block text-sm font-semibold"
-          htmlFor={fieldId("name")}
-        >
-          {copy.fields.name}
-          <span
-            className="ml-1 text-[var(--text-secondary)]"
-            aria-hidden="true"
-          >
-            *
-          </span>
-        </label>
-        <input
-          aria-describedby={state.errors.name ? errorId("name") : undefined}
-          aria-invalid={Boolean(state.errors.name)}
-          autoComplete="name"
-          className={fieldClass}
-          disabled={pending}
-          id={fieldId("name")}
-          maxLength={120}
-          name="name"
-          defaultValue={state.values?.name ?? ""}
-          placeholder={copy.placeholders.name}
-          required
-          type="text"
-        />
-        {state.errors.name ? (
-          <p className="mt-2 text-sm text-red-700" id={errorId("name")}>
-            {state.errors.name}
-          </p>
-        ) : null}
-      </div>
-
-      <div>
-        <label
-          className="mb-2 block text-sm font-semibold"
-          htmlFor={fieldId("phone")}
-        >
-          {copy.fields.phone}
-          <span
-            className="ml-1 text-[var(--text-secondary)]"
-            aria-hidden="true"
-          >
-            *
-          </span>
-        </label>
-        <input
-          aria-describedby={state.errors.phone ? errorId("phone") : undefined}
-          aria-invalid={Boolean(state.errors.phone)}
-          autoComplete="tel"
-          className={fieldClass}
-          disabled={pending}
-          id={fieldId("phone")}
-          inputMode="tel"
-          maxLength={40}
-          name="phone"
-          defaultValue={state.values?.phone ?? ""}
-          placeholder={copy.placeholders.phone}
-          required
-          type="tel"
-        />
-        {state.errors.phone ? (
-          <p className="mt-2 text-sm text-red-700" id={errorId("phone")}>
-            {state.errors.phone}
-          </p>
-        ) : null}
-      </div>
-
       <div className="col-span-full">
         <label
           className="mb-2 block text-sm font-semibold"
@@ -414,6 +414,11 @@ export function LeadForm({
               ? dictionary.calculatorRequest?.submit
               : copy.submit}
         </Button>
+        {!calculatorContext ? (
+          <p className="text-sm leading-6 text-[var(--text-secondary)]">
+            {copy.submitNote}
+          </p>
+        ) : null}
         <p
           aria-live="polite"
           className={

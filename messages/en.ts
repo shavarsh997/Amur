@@ -23,17 +23,18 @@ const dictionary = {
     language: "Language",
   },
   hero: {
-    eyebrow: "Renovation and construction services",
-    title: "Construction, renovation and interior design in Armenia",
+    eyebrow: "Apartment renovation in Yerevan",
+    title: "Turnkey apartment renovation in Yerevan — from AMD {price}/m²",
     description:
-      "From building a home to renovating an apartment or business premises, SHINEX helps plan and carry out your project. We start by reviewing the property and the work you need, then prepare an initial estimate.",
-    primaryAction: "Discuss your project",
-    secondaryAction: "View services",
+      "Our own crew with 10+ years of experience. The price is fixed in the contract, you pay in stages with no advance payment, and the work comes with a 12-month warranty.",
+    primaryAction: "Free measurement tomorrow",
+    secondaryAction: "Calculate the cost",
+    microcopy: "We reply on WhatsApp within 15 minutes · Mon–Sat 9:00–19:00",
     trustPoints: [
-      "Initial estimate and detailed cost plan",
-      "Construction and building-services work",
-      "Interior design and material selection",
-      "Projects across Armenia",
+      "Free measurement in Yerevan",
+      "Estimate in 1–2 days",
+      "Staged payments, no advance",
+      "12-month warranty",
     ],
   },
   services: {
@@ -204,39 +205,46 @@ const dictionary = {
   },
   whyUs: {
     eyebrow: "Why SHINEX",
-    title: "Why trust SHINEX with your project",
+    title: "We take on the risk, not you",
     description:
-      "We discuss the work terms and changes in advance so every stage remains clear.",
+      "Terms that don't depend on the property: they are the same for every client.",
     items: [
       {
-        title: "Contract-based work",
+        title: "Reply within 15 minutes",
         description:
-          "The scope, responsibilities, and working procedure are recorded.",
+          "Message us on WhatsApp: during working hours we reply within 15 minutes.",
       },
       {
-        title: "Estimate agreed in advance",
+        title: "Free measurement tomorrow",
         description:
-          "We show the work list and cost, and agree changes before they are completed.",
+          "In Yerevan we come to measure the day after you contact us. Free of charge.",
       },
       {
-        title: "Work organised in stages",
+        title: "Estimate in 1–2 days",
         description:
-          "We plan the sequence of work and control the progress of every stage.",
+          "After the measurement we send a line-by-line estimate: work items, quantities and prices.",
       },
       {
-        title: "Quality control",
+        title: "Price fixed in the contract",
         description:
-          "Critical operations and the outcome of each stage are checked.",
+          "The amount changes only if you change the scope of work, and only in writing.",
       },
       {
-        title: "Changes agreed in advance",
-        description:
-          "If the scope or solution needs to change during work, we agree it with you first.",
+        title: "Staged payments, no advance",
+        description: "You pay for what has already been done.",
       },
       {
-        title: "Working across Armenia",
+        title: "Weekly photo report",
+        description: "Every week we send photos and videos from the site.",
+      },
+      {
+        title: "Our own crew, 10+ years",
         description:
-          "We accept projects across Armenia, including Yerevan, taking account of the property location and scope.",
+          "One team of tradespeople from demolition to cleanup, with no random subcontractors.",
+      },
+      {
+        title: "12-month warranty",
+        description: "On all work we have carried out.",
       },
     ],
   },
@@ -339,7 +347,9 @@ const dictionary = {
       phoneRequired: "Enter your phone number.",
       phoneInvalid: "Enter a valid phone number.",
     },
-    submit: "Send enquiry",
+    submit: "Call me back",
+    submitNote:
+      "We call back within 15 minutes during business hours (Mon–Sat 9:00–19:00).",
     submitting: "Sending…",
     success:
       "Your enquiry has been sent. We will contact you to clarify the details.",
@@ -458,6 +468,29 @@ const dictionary = {
         "Contact SHINEX and tell us what you would like to renovate. We will discuss the property condition, the work you need and the next steps for a site visit and estimate.",
       action: "Discuss your renovation",
     },
+    renovationQuote: {
+      title: "Apartment renovation estimate",
+      description:
+        "Enter the area, the apartment condition and the package: the result appears instantly, no contact details needed.",
+      conditionLabel: "Apartment condition",
+      conditions: {
+        newBuilding: "New build",
+        secondary: "Resale apartment",
+      },
+      tierLabel: "Package",
+      tiers: { standard: "Standard", middle: "Mid-range", premium: "Premium" },
+      rate: "{rate} {currency}/m²",
+      currency: "AMD",
+      resultTitle: "Guide price",
+      total: "from {total} {currency} for labour (materials separately)",
+      empty: "Enter an apartment area from 10 to 2,000 m² to see the estimate.",
+      timelineReference: "Estimated timeline: 1.5–2 months",
+      timelineAfterSurvey: "We will confirm the timeline after the survey",
+      whatsappAction: "Get an exact estimate on WhatsApp",
+      callbackAction: "Call me back",
+      whatsappMessage:
+        "Hello! I would like an exact estimate for an apartment renovation. Area: {area} m², condition: {condition}, package: {tier}. Website estimate: from {total} {currency} for labour.",
+    },
     dialog: {
       eyebrow: "Online calculator",
       title: "Project estimate request",
@@ -468,7 +501,7 @@ const dictionary = {
       scenario: {
         title: "Choose a service",
         description:
-          "Contact us about renovation. For house construction and design, enter the project parameters and request an estimate.",
+          "Apartment renovation is calculated instantly. For house construction and design, enter the project parameters and request an estimate.",
       },
       parameters: {
         title: "Property details",
@@ -514,7 +547,7 @@ const dictionary = {
     quickScenarios: {
       apartmentOrPrivateHouseRenovation: {
         title: "Apartment renovation",
-        description: "Contact us to discuss the work and cost",
+        description: "Instant estimate by area and package",
       },
       houseConstruction: {
         title: "House construction",
@@ -739,7 +772,7 @@ const dictionary = {
       {
         question: "Can I order separate renovation stages?",
         answer:
-          "Yes. We discuss the required work and agree a sequence after reviewing the property.",
+          "We only take on complete renovations. Individual works such as plumbing, electrics and finishing are done as part of a complete renovation, by one team.",
       },
       {
         question: "How long can renovation take?",
@@ -793,11 +826,11 @@ const dictionary = {
     eyebrow: "About SHINEX",
     title: "About our renovation and construction company in Armenia",
     intro:
-      "Learn how SHINEX plans renovation and construction in Armenia: property assessment, an agreed scope of work, project stages, and communication with the client.",
+      "SHINEX is a young company, but we are not newcomers: our tradespeople have worked in renovation for more than 10 years. That is why we take on the risk: no advance payment, a price fixed in the contract and a 12-month warranty.",
     storyTitle: "How the work is organized",
     story: [
-      "We begin by understanding the project requirements, the space, and the expected result rather than starting with a pre-made promise.",
-      "We shape the scope so the client can understand the stages, decision points, and each party's responsibilities.",
+      "We only do complete renovations: one in-house crew takes the apartment from demolition and building services to final finishes and cleanup.",
+      "The company is led by Shavarsh Papoian. He is personally responsible for the estimate, the schedule and staying in touch with you.",
     ],
     valuesTitle: "Core areas",
     values: [
@@ -822,28 +855,11 @@ const dictionary = {
       "We align the design purpose, actual site conditions, and delivery sequence without adding unsupported solutions.",
     team: {
       title: "Team",
-      description:
-        "Roles join a project according to its task and current stage.",
-      placeholderNotice:
-        "TEMPORARY CARDS — replace with verified team information before publishing",
       members: [
         {
-          role: "Project manager",
-          description:
-            "Temporary unnamed role: workflow and communication coordination.",
-          isPlaceholder: true,
-        },
-        {
-          role: "Engineer / technical specialist",
-          description:
-            "Temporary unnamed role: technical review of solutions and stages.",
-          isPlaceholder: true,
-        },
-        {
-          role: "Architect / designer",
-          description:
-            "Temporary unnamed role: architectural and planning solutions.",
-          isPlaceholder: true,
+          role: "Head of company",
+          name: "Shavarsh Papoian",
+          description: "Estimate, schedule and client communication.",
         },
       ],
     },
@@ -958,22 +974,23 @@ const dictionary = {
     ],
   },
   calculatorPage: {
-    title: "Construction and design cost calculator in Armenia",
+    title: "Renovation, construction and design cost calculator in Armenia",
     description:
-      "Request a house construction or interior design estimate in Armenia. Send your project parameters and contact details for a personal cost assessment.",
+      "Estimate your apartment renovation online without leaving contact details: area, condition and package. For house construction and interior design, request an estimate.",
     intro:
-      "Enter the area and parameters for house construction or interior design, then leave your name, phone number and property location. SHINEX will review the request, clarify the details and contact you to discuss the cost. No automatic price is displayed. For renovation, contact us to discuss the property, scope of work and preparation of an estimate.",
-    faqTitle: "Calculations and cost enquiries",
+      "For an apartment renovation, enter the area, the condition (new build or resale) and the package: the calculator instantly shows a guide price for labour, with materials paid separately. We send an exact estimate 1–2 days after the free survey. For house construction or interior design, enter the project parameters, then leave your name and phone number: SHINEX will review the request and contact you to discuss the cost.",
+    faqTitle:
+      "Questions about the renovation, construction and design calculator",
     faqs: [
-      {
-        question: "How can I find out the cost of a renovation?",
-        answer:
-          "Contact SHINEX in the way that suits you and tell us about your project. We will clarify the details and agree the next steps for preparing an estimate.",
-      },
       {
         question: "What does the calculator cover?",
         answer:
-          "Select house construction or interior design and enter your project parameters. The request button opens a contact form. Submit your details and SHINEX will review the project and contact you about the estimate. The calculator does not display an automatic price.",
+          "For an apartment renovation, the calculator instantly shows a guide price: the area multiplied by the Standard, Mid-range or Premium package rate, for labour, with materials paid separately. For house construction or interior design, enter the parameters and click “Request a cost estimate”: a contact form opens and SHINEX will contact you to discuss the estimate.",
+      },
+      {
+        question: "How do I get an exact renovation estimate?",
+        answer:
+          "Below the result, click “Get an exact estimate on WhatsApp” or “Call me back”. In Yerevan, we come for a free survey the day after you contact us and send a line-by-line estimate 1–2 days after the survey. The price is fixed in the contract.",
       },
     ],
   },

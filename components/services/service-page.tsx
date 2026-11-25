@@ -42,6 +42,7 @@ export function ServiceHero({
   breadcrumbsLabel,
   title,
   description,
+  note,
   image,
   contactLabel,
   exploreLabel,
@@ -51,6 +52,7 @@ export function ServiceHero({
   breadcrumbsLabel: string;
   title: string;
   description: string;
+  note?: string;
   image: ServicePhoto;
   contactLabel: string;
   exploreLabel: string;
@@ -66,6 +68,7 @@ export function ServiceHero({
         />
         <h1 id="service-title">{title}</h1>
         <p className={styles.heroDescription}>{description}</p>
+        {note ? <p className={styles.heroNote}>{note}</p> : null}
         <div
           className={
             secondaryAction
@@ -461,7 +464,7 @@ export function ServiceQuality({ dictionary }: { dictionary: Dictionary }) {
           <p className={styles.prose}>{quality.description}</p>
         </div>
         <ol className={styles.qualityChecks}>
-          {[0, 2, 4].map((index, position) => {
+          {[2, 4, 7].map((index, position) => {
             const item = dictionary.whyUs.items[index];
             return (
               <li key={item.title}>
@@ -501,8 +504,8 @@ export function ServiceCTA({
           <span className={styles.ctaMark} aria-hidden="true">
             ↗
           </span>
-          <h3>{dictionary.whyUs.items[5].title}</h3>
-          <p>{dictionary.whyUs.items[5].description}</p>
+          <h3>{dictionary.whyUs.items[0].title}</h3>
+          <p>{dictionary.whyUs.items[0].description}</p>
         </aside>
       </Container>
     </section>
