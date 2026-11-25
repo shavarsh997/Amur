@@ -418,10 +418,13 @@ export function getServiceMedia(slug: string, locale: Locale) {
       ...localize(media.hero, locale),
       sizes: slug === "monolithic-work" ? "100vw" : undefined,
     },
+    // Home cards must not repeat the home hero (ultra/apartment-hero).
     card: localize(
       slug === "interior-design"
         ? serviceMedia["apartment-interior-design-yerevan"].hero
-        : media.hero,
+        : slug === "apartment-renovation-yerevan"
+          ? serviceMedia["turnkey-renovation"].hero
+          : media.hero,
       locale
     ),
     details: localize(media.details, locale),

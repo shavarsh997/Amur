@@ -4,6 +4,7 @@ import { homeContent } from "@/config/home-content.config";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import type { Locale } from "@/types";
+import styles from "./renovation-included.module.css";
 
 export function RenovationIncluded({ locale }: { locale: Locale }) {
   const content = homeContent[locale].renovationIncluded;
@@ -14,16 +15,10 @@ export function RenovationIncluded({ locale }: { locale: Locale }) {
         <div className="content-split grid gap-8 lg:grid-cols-[0.7fr_1.3fr] lg:gap-14">
           <SectionHeading eyebrow={content.eyebrow} title={content.title} />
           <div>
-            <ul className="content-included content-grid grid border-t border-[var(--border)] sm:grid-cols-2">
+            <ul className={styles.list}>
               {content.items.map((item) => (
-                <li
-                  className="flex items-center gap-3 border-b border-[var(--border)] py-4 pr-4 text-sm font-medium text-[var(--text-primary)] sm:px-4 sm:odd:border-r"
-                  key={item}
-                >
-                  <Check
-                    aria-hidden="true"
-                    className="size-4 shrink-0 stroke-[1.7] text-[var(--brand-copper)]"
-                  />
+                <li className={styles.item} key={item}>
+                  <Check aria-hidden="true" className={styles.icon} />
                   {item}
                 </li>
               ))}

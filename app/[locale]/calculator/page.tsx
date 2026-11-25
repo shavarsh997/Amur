@@ -40,7 +40,7 @@ export default async function CalculatorPage({ params }: Props) {
   const apartment = getSeoLandingPage(locale, "apartment-renovation-yerevan");
 
   return (
-    <Container className="py-section">
+    <Container className="pt-6 pb-section sm:pt-section">
       <PageSchema
         locale={locale}
         pathname="calculator"
@@ -66,11 +66,11 @@ export default async function CalculatorPage({ params }: Props) {
         <h1 className="content-heading mx-auto mt-3 max-w-2xl text-3xl font-semibold tracking-[-0.05em] text-[var(--text-primary)] sm:text-5xl">
           {seo.title}
         </h1>
-        <p className="mx-auto mt-4 max-w-xl text-base leading-7 text-[var(--text-secondary)]">
+        <p className="mx-auto mt-3 max-w-xl text-sm leading-6 text-[var(--text-secondary)] sm:mt-4 sm:text-base sm:leading-7">
           {seo.description}
         </p>
       </div>
-      <section className="mx-auto mt-8 max-w-4xl">
+      <section className="mx-auto mt-5 max-w-4xl sm:mt-8">
         <CostCalculator
           copy={dictionary.constructionCalculator}
           defaultCalculationType="renovation"

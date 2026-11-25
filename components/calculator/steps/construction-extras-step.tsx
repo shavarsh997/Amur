@@ -16,7 +16,7 @@ export function ConstructionExtrasStep({
 
   return (
     <section className="layout-region rounded-card border border-[var(--border)] bg-white p-panel shadow-[var(--shadow-card)]">
-      <StepTitle number="03" {...copy.steps.constructionExtras} />
+      <StepTitle number="02" {...copy.steps.constructionExtras} />
       <div className="mt-6 grid gap-3 local-grid">
         <SwitchRow
           control={control}

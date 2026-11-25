@@ -480,7 +480,7 @@ const dictionary = {
       tierLabel: "Тариф",
       tiers: { standard: "Стандарт", middle: "Средний", premium: "Премиум" },
       rate: "{rate} {currency}/м²",
-      currency: "֏",
+      currency: "драм",
       resultTitle: "Ориентировочная стоимость",
       total: "от {total} {currency} за работу (материалы отдельно)",
       empty:
