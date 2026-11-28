@@ -2,6 +2,7 @@ import { PageSchema } from "@/components/seo/page-schema";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
+import { companyConfig } from "@/config/company.config";
 import { getServiceMedia } from "@/config/service-media.config";
 import { FinalCta } from "@/components/sections/final-cta";
 import { Container } from "@/components/ui/container";
@@ -31,6 +32,17 @@ export default async function AboutPage({ params }: Props) {
   const dictionary = await getDictionary(locale);
   const { about } = dictionary;
   const crew = dictionary.whyUs.items[6];
+  const hours = companyConfig.contact.workingHours.display[locale];
+  const factValues: Record<string, string> = {
+    phone: companyConfig.contact.displayPhone,
+    email: companyConfig.contact.email,
+    hours: hours.charAt(0).toUpperCase() + hours.slice(1),
+  };
+  const fillFact = (value: string) =>
+    value.replace(
+      /\{(phone|email|hours)\}/g,
+      (_, key: string) => factValues[key]
+    );
 
   return (
     <>
@@ -73,6 +85,32 @@ export default async function AboutPage({ params }: Props) {
               <p key={paragraph}>{paragraph}</p>
             ))}
           </div>
+        </section>
+        <section
+          aria-labelledby="about-facts"
+          className="content-split grid gap-8 lg:grid-cols-[0.7fr_1.3fr]"
+        >
+          <h2
+            className="text-3xl font-semibold tracking-[-0.04em] text-[var(--text-primary)]"
+            id="about-facts"
+          >
+            {about.facts.title}
+          </h2>
+          <dl className="divide-y divide-[var(--border)] border-y border-[var(--border)]">
+            {about.facts.items.map((fact) => (
+              <div
+                className="grid gap-1 py-4 sm:grid-cols-[11rem_1fr] sm:gap-6"
+                key={fact.label}
+              >
+                <dt className="text-sm uppercase tracking-[0.12em] text-[var(--text-muted)] sm:pt-1">
+                  {fact.label}
+                </dt>
+                <dd className="leading-7 text-[var(--text-primary)]">
+                  {fillFact(fact.value)}
+                </dd>
+              </div>
+            ))}
+          </dl>
         </section>
         <section>
           <h2 className="text-3xl font-semibold tracking-[-0.04em] text-[var(--text-primary)]">

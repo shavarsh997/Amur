@@ -13,6 +13,8 @@ export type AgentConfig = {
   gcpProject?: string;
   /** GA4 property is shared by several sites: every runReport is filtered to these hostName values. */
   ga4HostNames?: readonly string[];
+  /** Model overrides for `ai-visibility run` (defaults in connectors/ai-engines.ts). */
+  aiModels?: { openai?: string; perplexity?: string; gemini?: string };
 };
 
 export const CONFIG_DEFAULTS = {

@@ -1,3 +1,4 @@
+import { FaqSchema } from "@/components/seo/faq-schema";
 import { PageSchema } from "@/components/seo/page-schema";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
@@ -48,6 +49,7 @@ export default async function CalculatorPage({ params }: Props) {
         description={seo.description}
         type="WebPage"
       />
+      <FaqSchema locale={locale} pathname="calculator" items={faqs} />
       <script
         dangerouslySetInnerHTML={{
           __html: serializeJsonLd(

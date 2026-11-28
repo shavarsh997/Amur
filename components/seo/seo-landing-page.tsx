@@ -1,3 +1,4 @@
+import { FaqSchema } from "@/components/seo/faq-schema";
 import { ServiceLandingContent } from "@/components/services/service-landing-content";
 import { RenovationPriceExamples } from "@/components/seo/renovation-price-examples";
 import Link from "next/link";
@@ -21,6 +22,7 @@ import { getActiveServices } from "@/config/services.config";
 import { seoIntentMap } from "@/config/seo-intents.config";
 import {
   getBreadcrumbJsonLd,
+  getRenovationOfferJsonLd,
   getServiceJsonLd,
   getWebPageJsonLd,
   serializeJsonLd,
@@ -44,7 +46,28 @@ export function SeoLandingPage({
   const showPriceGuide =
     page.kind === "service" && page.relatedLandingSlugs.includes("prices");
   const calculatorHref = `/${locale}/calculator?scenario=interior-design`;
-  const schema = page.kind === "service" ? getServiceJsonLd : getWebPageJsonLd;
+  const isGuide = page.kind === "guide";
+  // Guides cover every service, so the closing block must not speak about renovation only.
+  const contactCopy = isGuide
+    ? {
+        title: dictionary.contacts.methodsTitle,
+        description: dictionary.contacts.methodsDescription,
+        action: dictionary.cta.primaryAction,
+      }
+    : dictionary.constructionCalculator.renovationContact;
+  const schemaProps = {
+    locale,
+    name: content.title,
+    description: content.seoDescription,
+    pathname: getSeoLandingPath(page),
+  };
+  const schema =
+    page.kind === "service"
+      ? getServiceJsonLd({
+          ...schemaProps,
+          offers: getRenovationOfferJsonLd(locale, page.slug),
+        })
+      : getWebPageJsonLd(schemaProps);
   const relatedServices = getActiveServices(locale).filter((service) =>
     (page.relatedServiceSlugs as readonly string[]).includes(service.slug)
   );
@@ -70,16 +93,15 @@ export function SeoLandingPage({
     <>
       <script
         dangerouslySetInnerHTML={{
-          __html: serializeJsonLd(
-            schema({
-              locale,
-              name: content.title,
-              description: content.seoDescription,
-              pathname: getSeoLandingPath(page),
-            })
-          ),
+          __html: serializeJsonLd(schema),
         }}
         type="application/ld+json"
+      />
+      {/* Both layouts below render exactly content.faqs as the visible FAQ. */}
+      <FaqSchema
+        locale={locale}
+        pathname={getSeoLandingPath(page)}
+        items={faqs}
       />
       <script
         dangerouslySetInnerHTML={{
@@ -131,6 +153,11 @@ export function SeoLandingPage({
                 {supportsCalculator ? (
                   <ButtonLink href={calculatorHref} variant="secondary">
                     {content.calculatorLabel}
+                  </ButtonLink>
+                ) : null}
+                {isGuide ? (
+                  <ButtonLink href={`/${locale}/contacts`} variant="secondary">
+                    {dictionary.footer.contacts}
                   </ButtonLink>
                 ) : null}
               </>
@@ -196,9 +223,7 @@ export function SeoLandingPage({
                 ))}
                 {!supportsCalculator ? (
                   <div id="request-estimate" className="scroll-mt-24">
-                    <RenovationContact
-                      copy={dictionary.constructionCalculator.renovationContact}
-                    />
+                    <RenovationContact copy={contactCopy} />
                   </div>
                 ) : (
                   <section className="rounded-card bg-[var(--background-warm)] p-panel">

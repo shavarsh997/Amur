@@ -65,6 +65,9 @@ const {
   getServiceJsonLd,
   getWebPageJsonLd,
   getWebsiteJsonLd,
+  getFaqPageJsonLd,
+  getRenovationOfferJsonLd,
+  renovationOfferLandingSlugs,
 } = load("lib/json-ld");
 const sitemap = load("app/sitemap").default();
 const urls = new Set(sitemap.map(({ url }) => url));
@@ -821,6 +824,58 @@ assert(
 );
 const organization = getOrganizationJsonLd();
 assert(!organization.aggregateRating, "Unverified rating");
+assert(!organization.priceRange, "Company-wide price range is not published");
+assert(
+  !organization.founder,
+  "The site names a head of company, not a founder"
+);
+const { renovationPriceTiers } = load("config/pricing.config");
+for (const locale of locales) {
+  const { knowsAbout, employee, founder } = getOrganizationJsonLd(locale);
+  assert(!founder, `Unconfirmed founder: ${locale}`);
+  const [lead] = (await getDictionary(locale)).about.team.members;
+  assert.deepEqual(
+    employee,
+    { "@type": "Person", name: "Shavarsh Papoian", jobTitle: lead.role },
+    `Organization employee must match the /about team role: ${locale}`
+  );
+  for (const slug of [
+    "commercial-construction",
+    "facade-and-roofing",
+    "design",
+  ]) {
+    const service = getActiveServices(locale).find(
+      (item) => item.slug === slug
+    );
+    assert(
+      !service || knowsAbout.includes(service.content.title),
+      `knowsAbout misses live service ${slug}/${locale}`
+    );
+  }
+  for (const page of seoLandingPages) {
+    const offer = getRenovationOfferJsonLd(locale, page.slug);
+    if (!renovationOfferLandingSlugs.includes(page.slug)) {
+      assert(!offer, `Unconfirmed price on ${page.slug}`);
+      continue;
+    }
+    assert.equal(page.kind, "service", `Offer on non-service ${page.slug}`);
+    assert.equal(offer.priceSpecification.price, renovationPriceTiers[0].from);
+    assert.equal(offer.priceSpecification.priceCurrency, "AMD");
+    assert.equal(offer.priceSpecification.unitCode, "MTK");
+  }
+  for (const slug of serviceSlugs) {
+    assert(!getRenovationOfferJsonLd(locale, slug), `Price on ${slug}`);
+  }
+  const faqs = [{ question: "Q?", answer: "A." }];
+  const faq = getFaqPageJsonLd({ locale, pathname: "calculator", items: faqs });
+  assert.equal(faq["@type"], "FAQPage");
+  assert.equal(faq.mainEntity[0].name, "Q?");
+  assert.equal(faq.mainEntity[0].acceptedAnswer.text, "A.");
+  assert.equal(
+    getFaqPageJsonLd({ locale, pathname: "calculator", items: [] }),
+    undefined
+  );
+}
 const schemaProps = {
   locale: "hy",
   name: "Test",

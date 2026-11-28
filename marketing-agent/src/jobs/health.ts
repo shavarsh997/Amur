@@ -6,11 +6,13 @@ import { listSites, searchAnalytics, type GscSite } from "../connectors/gsc.ts";
 import { ADS_BASE, DEVELOPER_TOKEN_KEY, normalizeCustomerId, searchStream } from "../connectors/ads.ts";
 import { pageSpeed, PSI_KEY_NAME } from "../connectors/psi.ts";
 import { crawlSite } from "../connectors/site.ts";
+import { AI_KEY_NAMES, isRejectedKey, probeEngine } from "../connectors/ai-engines.ts";
+import type { AiApiEngine } from "../analysis/ai-visibility.ts";
 import type { IntegrationState, IntegrationStatus } from "../analysis/types.ts";
 import { addDays, connectorDeps, secret, statusOf, tokenOnce, type JobDeps } from "./context.ts";
 import { today } from "../core/paths.ts";
 
-export const HEALTH_SOURCES = ["gcp-auth", "ga4", "gsc", "google-ads", "pagespeed", "site"] as const;
+export const HEALTH_SOURCES = ["gcp-auth", "ga4", "gsc", "google-ads", "pagespeed", "site", "ai-openai", "ai-perplexity", "ai-gemini"] as const;
 
 type Probe = { state?: IntegrationState; detail: string };
 
@@ -128,7 +130,23 @@ export async function runHealth(deps: JobDeps = {}): Promise<IntegrationStatus[]
       const detail = `${siteUrl} → HTTP ${status}${home?.error ? ` (${home.error})` : ""}; robots ${crawl.robots.status}; sitemap ${crawl.sitemapUrls.length} URL`;
       return { state: status === 200 ? "WORKING" : "FAILED", detail };
     },
+    "ai-openai": () => aiProbe("openai"),
+    "ai-perplexity": () => aiProbe("perplexity"),
+    "ai-gemini": () => aiProbe("gemini"),
   };
+
+  /** AI answer engines for `ai-visibility run`: no Keychain key → NOT CONFIGURED, no request. */
+  async function aiProbe(engine: AiApiEngine): Promise<Probe> {
+    const keyName = AI_KEY_NAMES[engine];
+    const apiKey = await secret(deps, keyName);
+    if (!apiKey) return { state: "NOT CONFIGURED", detail: `нет ключа в Keychain (сервис shinex-marketing, имя ${keyName})` };
+    try {
+      return { detail: await probeEngine(engine, { apiKey, model: cfg.aiModels?.[engine], fetch: deps.fetch, retry: deps.retry }) };
+    } catch (err) {
+      if (isRejectedKey(err)) return { state: "AUTH REQUIRED", detail: `ключ ${keyName} отклонён — обновите в Keychain` };
+      throw err;
+    }
+  }
 
   return Promise.all(HEALTH_SOURCES.map((name) => probe(name, probes[name])));
 }

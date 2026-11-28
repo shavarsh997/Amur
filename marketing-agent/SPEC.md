@@ -16,6 +16,7 @@
   - `ledger.json` — защита от повторного выполнения действий.
   - `memory/experiments.jsonl` — гипотезы/изменения/результаты: `{ id, date, area, hypothesis, change, status: "proposed"|"approved"|"applied"|"rejected"|"won"|"lost"|"inconclusive", result?, notes? }`.
   - `funnel/leads.jsonl` — воронка без персональных данных (см. ниже).
+  - `ai-visibility/results.jsonl` — проверки AI-рекомендаций: `{ date, ts, engine, promptId, lang, service, source: "api"|"manual", mentioned, rank, cited (null — неизвестно), competitors, citedDomains?, model?, answer?, citations? }`.
 - Секреты: только Google ADC (`~/.config/gcloud/application_default_credentials.json`, создаёт `gcloud auth application-default login`)
   и macOS Keychain (`security find-generic-password -s shinex-marketing -a <name> -w`). Никаких секретов в репозитории и в `config.json`.
 
@@ -35,6 +36,7 @@
 - `ga4.ts`: `accountSummaries()` (Admin API v1beta), `runReport(propertyId, body)` (Data API v1beta), `keyEvents(propertyId)`.
 - `ads.ts`: `searchStream(customerId, gaql)` через REST `googleads.googleapis.com/<version>/customers/<id>/googleAds:searchStream`; заголовок `developer-token` только если есть в Keychain (`google-ads-developer-token`), `login-customer-id` из config. Developer token необязателен: без него health/discover/daily всё равно вызывают API, а 403 `ACTION_NOT_PERMITTED` показывается как BLOCKED «GCP-проекту нужен Google Ads API Explorer access». Только чтение. Готовые GAQL: кампании (cost, clicks, conversions, budget), search terms, keywords, geo.
 - `psi.ts`: `pageSpeed(url, strategy)` — PageSpeed Insights v5 (ключ из Keychain `psi-api-key`, если есть); возвращает lab-метрики и field (CrUX) при наличии.
+- `ai-engines.ts`: `askOpenAI` (Responses API, tool `web_search`, user_location AM), `askPerplexity` (Sonar, `chat/completions`), `askGemini` (`generateContent` + `google_search` grounding, ключ в заголовке `x-goog-api-key`), `probeEngine` для health (OpenAI/Gemini — бесплатный GET модели; Perplexity — без сети: с ключом WORKING «ключ есть, не проверялся запросом»). Платные POST-запросы не повторяются (ни при таймауте, ни при 5xx). Ключи Keychain: `openai-api-key`, `perplexity-api-key`, `gemini-api-key`; модели по умолчанию в `AI_DEFAULT_MODELS`, переопределение — `config.aiModels`.
 - `site.ts`: `crawlSite(siteUrl, { limit })` — robots.txt, sitemap.xml, для каждой страницы: статус, финальный URL, title, description, h1 count, canonical, hreflang, meta robots, JSON-LD парсится ли.
 
 ### src/analysis (чистые функции, без сети)
@@ -43,6 +45,8 @@
 - `ads.ts`: `wastedSpend(searchTerms)` (расход без конверсий, нерелевантные/информационные), `negativeCandidates(...)`, `cpa(...)`.
 - `funnel.ts`: стадии `visit → lead → qualified → inspection → contract`; агрегирование и конверсия между стадиями.
 - `site.ts`: проблемы обхода (не-200, нет canonical/self-canonical mismatch, дубликаты title, отсутствие hreflang взаимности, noindex в sitemap).
+- `ai-prompts.ts`: 24 небрендовых промпта (hy/ru/en × строительство домов, ремонт квартир, дизайн интерьера, коммерческий ремонт, выбор компании); id стабильны.
+- `ai-visibility.ts`: `analyzeAnswer(text, citations)` → `{ mentioned, rank, cited, companies, competitors, citedDomains }` (SHINEX латиницей, в т.ч. с кириллической «Х», кириллицей, по-армянски; «ShinX» — не SHINEX; упоминание засчитывается, только если в том же пункте/абзаце есть shinex.am или строительн/ремонт/construction/renovation/շինարար/վերանորոգ и нет clean/клининг/մաքրում или домена shinex.<не am> — иначе это другая компания «Shinex (не SHINEX)»; компании — эвристика по пунктам списка, заголовкам, жирному, ссылкам, «кавычкам»); `summarizeAiVisibility(records, { asOf })` — последняя проверка на движок × промпт за 28 дней, доли по движку/языку, конкуренты, динамика по неделям.
 - `opportunities.ts`: `rankOpportunities(findings)` → топ-N по ожидаемому коммерческому эффекту (score = влияние × уверенность / усилие).
 
 ### src/reports
@@ -50,11 +54,14 @@
 
 ### src/cli.ts
 `node --experimental-strip-types src/cli.ts <command>`:
-- `health` — реальный read-only запрос в каждый источник, печатает таблицу `WORKING | AUTH REQUIRED | BLOCKED | FAILED | NOT CONFIGURED` и JSON (`--json`). Exit 0 всегда (статусы — данные).
+- `health` — реальный read-only запрос в каждый источник (включая `ai-openai`, `ai-perplexity`, `ai-gemini`), печатает таблицу `WORKING | AUTH REQUIRED | BLOCKED | FAILED | NOT CONFIGURED` и JSON (`--json`). Exit 0 всегда (статусы — данные).
 - `discover` — находит GA4 property, GSC site, Ads customer, доступные аккаунту, и сохраняет в config (если однозначно).
 - `daily | weekly | monthly` — собирает данные, сохраняет снимки, сравнивает с предыдущими, пишет отчёт, печатает путь.
 - `funnel add --stage <s> --channel <c> [--landing <path>] [--service <s>] [--region <r>] [--reason <text>] [--date YYYY-MM-DD]` и `funnel report`. Запрещены поля имени/телефона/email.
 - `memory add|list` — журнал экспериментов.
+- `ai-visibility run [--engine openai|perplexity|gemini] [--limit n] [--date D] [--force]` — промпты через API; без ключа — NOT CONFIGURED; уже проверенные сегодня промпты пропускаются (`--limit` — сколько новых на движок). Отклонённый ключ/квота останавливают движок.
+- `ai-visibility record --engine <e> --prompt-id <id> --mentioned yes|no [--rank n] [--cited yes|no] [--competitors "A, B"] [--date D]` — ручная проверка (chatgpt, copilot, ai-mode и API-движки).
+- `ai-visibility report [--date D]`, `ai-visibility prompts`. Weekly-отчёт содержит блок «AI-видимость» из сохранённых данных (платные API не вызывает).
 
 ## Тесты
 `node --experimental-strip-types --test 'test/*.test.ts'` — unit-тесты с подменой fetch и временным каталогом данных

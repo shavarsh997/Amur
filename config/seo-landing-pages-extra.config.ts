@@ -2408,4 +2408,414 @@ export const extraSeoLandingPages = [
       },
     },
   },
+  {
+    slug: "how-to-choose-construction-company",
+    contentUpdatedAt: "2026-11-28",
+    kind: "guide",
+    image:
+      "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1800&q=85",
+    relatedServiceSlugs: ["house-construction"],
+    relatedLandingSlugs: ["apartment-renovation-yerevan"],
+    translations: {
+      hy: {
+        eyebrow: "Ուղեցույց պատվիրատուի համար",
+        title:
+          "Ինչպես ընտրել շինարարական ընկերություն Հայաստանում․ ստուգաթերթ մինչև պայմանագիրը",
+        description:
+          "9 կետ, որոնք արժե ստուգել մինչև տան կառուցման կամ վերանորոգման պայմանագիր կնքելը․ պայմանագիր և գին, նախահաշիվ, վճարում, երաշխիք, թիմ, հաշվետվություններ, նյութեր և փաստաթղթեր։",
+        seoTitle: "Ինչպես ընտրել շինարարական ընկերություն Հայաստանում | SHINEX",
+        seoDescription:
+          "Ինչ ստուգել մինչև շինարարական ընկերության հետ պայմանագիր կնքելը․ ֆիքսված գին, մանրամասն նախահաշիվ, վճարում ըստ փուլերի, երաշխիք, սեփական թիմ և հաշվետվություններ։",
+        introduction: [
+          "Շինարարական ընկերությունն ավելի ճիշտ է ընտրել ոչ թե գովազդով կամ ամենացածր գնով, այլ նրանով, թե ինչ է այն պատրաստ գրել պայմանագրում։ Գրավոր ամրագրված պայմանները կարելի է ստուգել և պահանջել դրանց կատարումը, իսկ բանավոր խոստումները՝ ոչ։",
+          "Ստորև 9 կետից բաղկացած ստուգաթերթ է, որը հարմար է և՛ առանձնատան կառուցման, և՛ բնակարանի կամ կոմերցիոն տարածքի վերանորոգման համար։ Անցեք այն յուրաքանչյուր կապալառուի հետ մինչև պայմանագիր կնքելը և առաջին վճարումը։",
+        ],
+        sections: [
+          {
+            title: "Ստուգաթերթ․ ինչ ստուգել մինչև պայմանագիր կնքելը",
+            paragraphs: [
+              "Եթե որևէ կետի վերաբերյալ կապալառուն հստակ պատասխան չի տալիս կամ հրաժարվում է այն գրել պայմանագրում, դա լրացուցիչ հարցեր տալու կամ այլ ընկերություն դիտարկելու առիթ է։",
+            ],
+            items: [
+              "Պայմանագիր՝ աշխատանքների ծավալով և գնով։ Պայմանագրում պետք է լինեն աշխատանքների ցանկը, ընդհանուր գումարը և այն պայմանը, որի դեպքում գումարը կարող է փոխվել։ Լավ է, երբ գինը ֆիքսված է և փոխվում է միայն ծավալը փոխելու դեպքում՝ գրավոր։",
+              "Մանրամասն նախահաշիվ։ Յուրաքանչյուր աշխատանք նշված է առանձին տողով՝ ծավալով, չափման միավորով և գնով։ Նյութերը՝ առանձին կամ հստակ նշումով, թե ինչ և ինչ քանակով է ներառված։ Միայն ընդհանուր գումարով առաջարկները համեմատել հնարավոր չէ։",
+              "Վճարում ըստ փուլերի։ Յուրաքանչյուր փուլի համար վճարեք այն կատարելուց և ընդունելուց հետո, ցանկալի է՝ ստորագրված ակտով։ Մեծ կանխավճարը մինչև աշխատանքների սկիզբը ամբողջ ռիսկը տեղափոխում է ձեզ վրա։",
+              "Գրավոր երաշխիք։ Երաշխիքի ժամկետը, թե որ աշխատանքների վրա է այն տարածվում և ինչպես է ներկայացվում պահանջը, պետք է գրված լինեն պայմանագրում, ոչ թե միայն ասված հանդիպման ժամանակ։",
+              "Ով է կատարում աշխատանքները։ Ճշտեք՝ ընկերությունն ունի՞ սեփական բրիգադ, թե օբյեկտը փոխանցվում է ենթակապալառուներին։ Հարցրեք, թե կոնկրետ ով է պատասխանատու օբյեկտի համար և ում հետ եք կապ պահելու։",
+              "Պարբերական հաշվետվություններ։ Պայմանավորվեք, թե որքան հաճախ և ինչ ձևով եք տեղեկություն ստանալու աշխատանքների ընթացքի մասին՝ լուսանկարներ, տեսանյութեր, կատարված փուլի կարճ նկարագրություն։ Դա հատկապես կարևոր է, եթե չեք կարող հաճախ լինել օբյեկտում։",
+              "Նյութեր և մատակարարման ժամկետներ։ Պետք է պարզ լինի, թե ով է գնում նյութերը, երբ դրանք պետք է լինեն օբյեկտում և ինչպես է մատակարարման ուշացումն ազդում աշխատանքների ժամանակացույցի վրա։",
+              "Տան կառուցման դեպքում՝ նախագիծ և թույլտվության փաստաթղթեր։ Ճշտեք՝ կա՞ նախագիծ, ով է այն պատրաստում և ով է ձևակերպում թույլտվության փաստաթղթերը։ Առանց համաձայնեցված նախագծի շինարարություն սկսելը ռիսկային է։",
+              "Ընթացիկ օբյեկտ։ Խնդրեք ցույց տալ օբյեկտ, որտեղ ընկերությունը հիմա է աշխատում․ այնտեղ երևում է, թե ինչպես է կազմակերպված աշխատանքային տարածքը, ինչպես են ընթանում աշխատանքները և ով է դրանք ղեկավարում։",
+            ],
+          },
+          {
+            title: "Ինչպես է դա կազմակերպված SHINEX-ում",
+            paragraphs: [
+              "SHINEX-ը երիտասարդ շինարարական ընկերություն է, բայց մեր թիմը շինարարության և վերանորոգման ոլորտում աշխատում է ավելի քան 10 տարի։ Այդ պատճառով այն պայմանները, որոնք սովորաբար պետք է ճշտել, մենք ինքներս ենք գրում պայմանագրում․ դրանք նույնն են յուրաքանչյուր հաճախորդի համար։",
+            ],
+            items: [
+              "Գինն ամրագրվում է պայմանագրում։ Գումարը փոխվում է միայն այն դեպքում, երբ դուք եք փոխում աշխատանքների ծավալը, և միայն գրավոր։",
+              "Վճարում ըստ փուլերի՝ առանց կանխավճարի․ վճարում եք արդեն կատարված աշխատանքի համար։",
+              "Երաշխիք՝ 12 ամիս մեր կատարած բոլոր աշխատանքների համար։",
+              "Սեփական թիմը՝ 10+ տարվա փորձով, վարում է օբյեկտը սկզբից մինչև հանձնում, առանց պատահական կապալառուների։",
+              "Ամեն շաբաթ ուղարկում ենք օբյեկտի լուսանկարներ և տեսանյութեր։",
+              "Երևանում գալիս ենք օբյեկտ դիմելուց հաջորդ օրը։ Այցն անվճար է։",
+              "Աշխատանքային ժամերին WhatsApp-ով պատասխանում ենք 15 րոպեի ընթացքում։",
+            ],
+          },
+        ],
+        faqs: [
+          {
+            question:
+              "Ինչի՞ն նայել առաջին հերթին շինարարական ընկերություն ընտրելիս",
+            answer:
+              "Պայմանագրին․ դրանում պետք է լինեն աշխատանքների ծավալը, գինը և դրա փոփոխման պայմանը, ըստ փուլերի վճարման կարգը և երաշխիքը։ Եթե ընկերությունը պատրաստ է այդ պայմանները գրել, ստուգաթերթի մյուս կետերը ստուգելն ավելի հեշտ է։",
+          },
+          {
+            question: "Նորմա՞լ է մեծ կանխավճար տալը",
+            answer:
+              "Մեծ կանխավճարը մինչև աշխատանքների սկիզբը նշանակում է, որ ռիսկը մնում է պատվիրատուի վրա։ Ավելի ապահով է վճարել յուրաքանչյուր փուլի համար՝ այն կատարելուց և ընդունելուց հետո։ SHINEX-ում կանխավճար չկա․ վճարում եք ըստ փուլերի՝ արդեն կատարված աշխատանքների համար։",
+          },
+          {
+            question: "Ինչպե՞ս համեմատել տարբեր կապալառուների նախահաշիվները",
+            answer:
+              "Համեմատեք աշխատանքների նույն ցանկը՝ յուրաքանչյուր տողի ծավալները, չափման միավորները և գները։ Ստուգեք՝ ներառվա՞ծ են նյութերը, ապամոնտաժը, առաքումը և շինարարական աղբի դուրսբերումը։ Առանց մանրամասնության ընդհանուր գումարը ոչինչ չի ասում այն մասին, թե ինչ է ներառված։",
+          },
+          {
+            question: "Ինչպե՞ս ընտրել, եթե ընկերությունը երիտասարդ է",
+            answer:
+              "Հենվեք այն բանի վրա, ինչը կարելի է ստուգել՝ պայմանագրի պայմանները, նախահաշիվը, վճարման կարգը և երաշխիքը, ինչպես նաև օբյեկտում աշխատող մարդկանց փորձը։ SHINEX-ը երիտասարդ ընկերություն է, որի թիմն աշխատում է ավելի քան 10 տարի, ուստի աշխատում ենք առանց կանխավճարի, գինն ամրագրում ենք պայմանագրում և ամեն շաբաթ ուղարկում ենք օբյեկտի լուսանկարներ ու տեսանյութեր։",
+          },
+          {
+            question: "Ի՞նչ փաստաթղթեր են պետք առանձնատուն կառուցելու համար",
+            answer:
+              "Սովորաբար անհրաժեշտ են տան նախագիծը և շինարարության թույլտվության փաստաթղթերը։ Դրանց կազմը կախված է հողամասից և օբյեկտից, ուստի մինչև աշխատանքների սկիզբը ճշտեք, թե ով է պատրաստում նախագիծը և ով է ձևակերպում փաստաթղթերը։",
+          },
+        ],
+        calculatorLabel: "Քննարկել ձեր օբյեկտը",
+        contactLabel: "Քննարկել ձեր օբյեկտը",
+        relatedTitle: "Ծառայություններ և գներ",
+      },
+      ru: {
+        eyebrow: "Гид для заказчика",
+        title:
+          "Как выбрать строительную компанию в Армении: чек-лист перед договором",
+        description:
+          "9 пунктов, которые стоит проверить до подписания договора на строительство дома или ремонт: договор и цена, смета, оплата, гарантия, команда, отчёты, материалы и документы.",
+        seoTitle:
+          "Как выбрать строительную компанию в Армении: чек-лист | SHINEX",
+        seoDescription:
+          "Что проверить до договора со строительной компанией в Армении: фиксированная цена, подробная смета, оплата по этапам, гарантия, своя бригада, отчёты и документы.",
+        introduction: [
+          "Строительную компанию лучше выбирать не по рекламе и не по самой низкой цене, а по тому, что она готова записать в договор. Условия, зафиксированные письменно, можно проверить и потребовать их выполнения; устные обещания — нельзя.",
+          "Ниже — чек-лист из 9 пунктов. Он подходит и для строительства частного дома, и для ремонта квартиры или коммерческого помещения. Пройдите его с каждым подрядчиком до подписания договора и до первой оплаты.",
+        ],
+        sections: [
+          {
+            title: "Чек-лист: что проверить до подписания договора",
+            paragraphs: [
+              "Если по какому-то пункту подрядчик не даёт ясного ответа или отказывается записать его в договор, это повод задать дополнительные вопросы или рассмотреть другую компанию.",
+            ],
+            items: [
+              "Договор с объёмом работ и ценой. В договоре должны быть перечень работ, итоговая сумма и условие, при котором она может измениться. Хорошо, если цена фиксирована и меняется только письменно при изменении объёма.",
+              "Подробная смета. Каждая работа указана отдельной строкой с объёмом, единицей измерения и ценой. Материалы — отдельно или с понятным указанием, что и в каком количестве входит. Предложения, где есть только общая сумма, сравнить нельзя.",
+              "Оплата по этапам. Платите за каждый этап после того, как он выполнен и принят вами, лучше по подписанному акту. Большая предоплата до начала работ переносит весь риск на вас.",
+              "Письменная гарантия. Срок гарантии, на какие работы она распространяется и как подать претензию, должны быть записаны в договоре, а не только сказаны на встрече.",
+              "Кто выполняет работы. Уточните, есть ли у компании своя бригада или объект передают субподрядчикам. Спросите, кто конкретно отвечает за объект и с кем вы будете на связи.",
+              "Регулярные отчёты. Договоритесь, как часто и в каком виде вы будете получать информацию о ходе работ: фото, видео, короткое описание выполненного этапа. Это особенно важно, если вы не можете часто бывать на объекте.",
+              "Материалы и сроки поставки. Должно быть понятно, кто закупает материалы, когда они должны быть на объекте и как задержка поставки влияет на график работ.",
+              "Для строительства дома — проект и разрешительные документы. Уточните, есть ли проект, кто его готовит и кто оформляет разрешительные документы. Начинать стройку без согласованного проекта рискованно.",
+              "Текущий объект. Попросите показать объект, на котором компания работает сейчас: по нему видно, как организована площадка, как идут работы и кто ими руководит.",
+            ],
+          },
+          {
+            title: "Как это устроено в SHINEX",
+            paragraphs: [
+              "SHINEX — молодая строительная компания, но наша команда работает в строительстве и ремонте больше 10 лет. Поэтому условия, которые обычно приходится выяснять, мы сами записываем в договор — они одинаковы для каждого клиента.",
+            ],
+            items: [
+              "Цена фиксируется в договоре. Сумма меняется, только если вы меняете объём работ, и только письменно.",
+              "Оплата по этапам без аванса: вы платите за то, что уже сделано.",
+              "Гарантия 12 месяцев на все выполненные нами работы.",
+              "Своя команда с опытом 10+ лет ведёт объект от начала до сдачи, без случайных подрядчиков.",
+              "Каждую неделю присылаем фото и видео с объекта.",
+              "В Ереване приезжаем на объект на следующий день после обращения. Выезд бесплатный.",
+              "В рабочее время отвечаем в WhatsApp в течение 15 минут.",
+            ],
+          },
+        ],
+        faqs: [
+          {
+            question:
+              "На что смотреть в первую очередь при выборе строительной компании?",
+            answer:
+              "На договор: в нём должны быть объём работ, цена и условие её изменения, порядок оплаты по этапам и гарантия. Если компания готова записать эти условия письменно, остальные пункты чек-листа проверить проще.",
+          },
+          {
+            question: "Нормально ли вносить большую предоплату?",
+            answer:
+              "Большая предоплата до начала работ означает, что риск остаётся на заказчике. Безопаснее оплачивать каждый этап после его выполнения и приёмки. В SHINEX аванса нет: вы платите по этапам за уже выполненные работы.",
+          },
+          {
+            question: "Как сравнить сметы разных подрядчиков?",
+            answer:
+              "Сравнивайте одинаковый перечень работ: объёмы, единицы измерения и цены по каждой строке. Проверьте, входят ли материалы, демонтаж, доставка и вывоз строительного мусора. Итоговая сумма без расшифровки ничего не говорит о том, что в неё вошло.",
+          },
+          {
+            question: "Как выбирать, если компания молодая?",
+            answer:
+              "Опирайтесь на то, что можно проверить: условия договора, смету, порядок оплаты и гарантию, а также опыт людей, которые будут работать на объекте. SHINEX — молодая компания с командой, которая работает больше 10 лет, поэтому мы работаем без аванса, фиксируем цену в договоре и каждую неделю присылаем фото и видео с объекта.",
+          },
+          {
+            question: "Какие документы нужны для строительства частного дома?",
+            answer:
+              "Как правило, нужны проект дома и разрешительные документы на строительство. Их состав зависит от участка и объекта, поэтому до начала работ уточните, кто готовит проект и кто оформляет документы.",
+          },
+        ],
+        calculatorLabel: "Обсудить ваш объект",
+        contactLabel: "Обсудить ваш объект",
+        relatedTitle: "Услуги и цены",
+      },
+      en: {
+        eyebrow: "Client guide",
+        title:
+          "How to choose a construction company in Armenia: a pre-contract checklist",
+        description:
+          "Nine things to check before you sign a contract for building a house or a renovation: contract and price, estimate, payments, warranty, team, reports, materials and documents.",
+        seoTitle: "How to Choose a Construction Company in Armenia | SHINEX",
+        seoDescription:
+          "What to check before signing with a construction company in Armenia: fixed price, detailed estimate, staged payments, warranty, own crew, reports and permits.",
+        introduction: [
+          "Choose a construction company not by its advertising or the lowest price, but by what it is willing to put in the contract. Terms that are written down can be checked and enforced; verbal promises cannot.",
+          "Below is a nine-point checklist. It works for building a private house as well as for renovating an apartment or a commercial space. Go through it with every contractor before you sign the contract and make the first payment.",
+        ],
+        sections: [
+          {
+            title: "Checklist: what to verify before signing the contract",
+            paragraphs: [
+              "If a contractor gives no clear answer on a point or refuses to put it in the contract, that is a reason to ask more questions or to consider another company.",
+            ],
+            items: [
+              "A contract with the scope of work and the price. The contract should list the works, the total amount and the conditions under which it may change. Ideally, the price is fixed and changes only in writing when the scope changes.",
+              "A detailed estimate. Each work item is a separate line with its quantity, unit of measurement and price. Materials are listed separately or with a clear note of what is included and in what quantity. Offers that show only a total cannot be compared.",
+              "Staged payments. Pay for each stage after it is completed and you have accepted it, preferably against a signed acceptance certificate. A large prepayment before work starts shifts all the risk to you.",
+              "A written warranty. The warranty period, the works it covers and how to file a claim should be written in the contract, not only mentioned at a meeting.",
+              "Who does the work. Ask whether the company has its own crew or passes the project to subcontractors. Find out who exactly is responsible for the site and who your contact person will be.",
+              "Regular reports. Agree how often and in what form you will hear about progress: photos, videos, a short description of the completed stage. This matters most if you cannot visit the site often.",
+              "Materials and delivery times. It should be clear who buys the materials, when they must be on site and how a delivery delay affects the work schedule.",
+              "For a house: the design and permit documents. Ask whether there is a design, who prepares it and who handles the permit documents. Starting construction without an approved design is risky.",
+              "A current project. Ask to see a site the company is working on now: it shows how the site is organised, how the work is going and who is in charge.",
+            ],
+          },
+          {
+            title: "How it works at SHINEX",
+            paragraphs: [
+              "SHINEX is a young construction company, but our team has worked in construction and renovation for more than 10 years. That is why we write into the contract ourselves the terms you would otherwise have to ask about. They are the same for every client.",
+            ],
+            items: [
+              "The price is fixed in the contract. It changes only if you change the scope of work, and only in writing.",
+              "Staged payments with no advance: you pay for what has already been done.",
+              "A 12-month warranty on all work we have carried out.",
+              "Our own team with 10+ years of experience runs the project from start to handover, with no random subcontractors.",
+              "Every week we send photos and videos from the site.",
+              "In Yerevan we visit your property the day after you contact us. The visit is free.",
+              "During working hours we reply on WhatsApp within 15 minutes.",
+            ],
+          },
+        ],
+        faqs: [
+          {
+            question:
+              "What should I check first when choosing a construction company?",
+            answer:
+              "The contract: it should state the scope of work, the price and how it can change, the staged payment terms and the warranty. If a company is willing to put these terms in writing, the rest of the checklist is easier to verify.",
+          },
+          {
+            question: "Is it normal to pay a large prepayment?",
+            answer:
+              "A large prepayment before work starts leaves the risk with the client. It is safer to pay for each stage after it is completed and accepted. SHINEX takes no advance: you pay in stages for work that has already been done.",
+          },
+          {
+            question: "How do I compare estimates from different contractors?",
+            answer:
+              "Compare the same list of works: quantities, units and prices line by line. Check whether materials, demolition, delivery and removal of construction waste are included. A total without a breakdown tells you nothing about what it covers.",
+          },
+          {
+            question: "How do I choose if the company is young?",
+            answer:
+              "Rely on what you can verify: the contract terms, the estimate, the payment schedule and the warranty, as well as the experience of the people who will work on site. SHINEX is a young company whose team has more than 10 years of experience, so we work without an advance, fix the price in the contract and send photos and videos from the site every week.",
+          },
+          {
+            question: "What documents are needed to build a private house?",
+            answer:
+              "As a rule, you need a house design and permit documents for construction. What exactly is required depends on the plot and the building, so before work starts, clarify who prepares the design and who handles the documents.",
+          },
+        ],
+        calculatorLabel: "Discuss your project",
+        contactLabel: "Discuss your project",
+        relatedTitle: "Services and prices",
+      },
+      de: {
+        eyebrow: "Ratgeber für Bauherren",
+        title:
+          "So wählen Sie eine Baufirma in Armenien: Checkliste vor dem Vertrag",
+        description:
+          "Neun Punkte, die Sie vor einem Vertrag über Hausbau oder Renovierung prüfen sollten: Vertrag und Preis, Kostenvoranschlag, Zahlung, Garantie, Team, Berichte, Material und Unterlagen.",
+        seoTitle: "Baufirma in Armenien wählen: Checkliste | SHINEX",
+        seoDescription:
+          "Was Sie vor dem Vertrag mit einer Baufirma in Armenien prüfen sollten: Festpreis, detaillierter Kostenvoranschlag, Zahlung in Etappen, Garantie, eigenes Team und Berichte.",
+        introduction: [
+          "Wählen Sie eine Baufirma nicht nach Werbung oder dem niedrigsten Preis, sondern danach, was sie bereit ist, in den Vertrag zu schreiben. Schriftlich festgehaltene Bedingungen lassen sich prüfen und einfordern, mündliche Zusagen nicht.",
+          "Unten finden Sie eine Checkliste mit neun Punkten. Sie passt für den Bau eines Einfamilienhauses ebenso wie für die Renovierung einer Wohnung oder einer Gewerbefläche. Gehen Sie sie mit jedem Auftragnehmer durch, bevor Sie den Vertrag unterschreiben und die erste Zahlung leisten.",
+        ],
+        sections: [
+          {
+            title: "Checkliste: Was Sie vor der Vertragsunterzeichnung prüfen",
+            paragraphs: [
+              "Wenn ein Auftragnehmer zu einem Punkt keine klare Antwort gibt oder ihn nicht in den Vertrag aufnehmen will, ist das ein Anlass für weitere Fragen oder für den Vergleich mit einer anderen Firma.",
+            ],
+            items: [
+              "Vertrag mit Leistungsumfang und Preis. Der Vertrag sollte die Arbeiten, den Gesamtbetrag und die Bedingungen enthalten, unter denen er sich ändern kann. Am besten ist ein Festpreis, der sich nur bei geändertem Umfang und nur schriftlich ändert.",
+              "Detaillierter Kostenvoranschlag. Jede Arbeit steht in einer eigenen Zeile mit Menge, Einheit und Preis. Material ist separat aufgeführt oder klar beschrieben: was in welcher Menge enthalten ist. Angebote mit nur einer Gesamtsumme lassen sich nicht vergleichen.",
+              "Zahlung in Etappen. Zahlen Sie jede Etappe, nachdem sie ausgeführt und von Ihnen abgenommen wurde, am besten gegen ein unterschriebenes Abnahmeprotokoll. Eine hohe Vorauszahlung vor Arbeitsbeginn verlagert das ganze Risiko auf Sie.",
+              "Schriftliche Garantie. Garantiedauer, erfasste Arbeiten und der Weg zur Reklamation gehören in den Vertrag, nicht nur ins Gespräch.",
+              "Wer die Arbeiten ausführt. Fragen Sie, ob die Firma ein eigenes Team hat oder das Objekt an Subunternehmer weitergibt. Klären Sie, wer konkret für das Objekt verantwortlich ist und wer Ihr Ansprechpartner ist.",
+              "Regelmäßige Berichte. Vereinbaren Sie, wie oft und in welcher Form Sie über den Fortschritt informiert werden: Fotos, Videos, eine kurze Beschreibung der fertigen Etappe. Das ist besonders wichtig, wenn Sie nicht oft vor Ort sein können.",
+              "Material und Lieferzeiten. Es sollte klar sein, wer das Material kauft, wann es auf der Baustelle sein muss und wie sich eine Lieferverzögerung auf den Zeitplan auswirkt.",
+              "Beim Hausbau: Planung und Genehmigungsunterlagen. Fragen Sie, ob es eine Planung gibt, wer sie erstellt und wer die Genehmigungsunterlagen besorgt. Ohne abgestimmte Planung mit dem Bau zu beginnen, ist riskant.",
+              "Ein laufendes Objekt. Bitten Sie darum, eine aktuelle Baustelle der Firma zu sehen: Dort erkennen Sie, wie die Baustelle organisiert ist, wie die Arbeiten laufen und wer sie leitet.",
+            ],
+          },
+          {
+            title: "So arbeitet SHINEX",
+            paragraphs: [
+              "SHINEX ist eine junge Baufirma, aber unser Team arbeitet seit mehr als 10 Jahren im Bau und in der Renovierung. Deshalb schreiben wir die Bedingungen, nach denen Sie sonst fragen müssten, selbst in den Vertrag. Sie gelten für jeden Kunden gleich.",
+            ],
+            items: [
+              "Der Preis wird im Vertrag festgeschrieben. Er ändert sich nur, wenn Sie den Leistungsumfang ändern, und nur schriftlich.",
+              "Zahlung in Etappen ohne Vorauszahlung: Sie zahlen für das, was bereits erledigt ist.",
+              "12 Monate Garantie auf alle von uns ausgeführten Arbeiten.",
+              "Unser eigenes Team mit über 10 Jahren Erfahrung betreut das Objekt vom Start bis zur Übergabe, ohne zufällige Subunternehmer.",
+              "Jede Woche schicken wir Fotos und Videos von der Baustelle.",
+              "In Jerewan kommen wir am Tag nach Ihrer Anfrage zu Ihrem Objekt. Der Termin ist kostenlos.",
+              "Während der Arbeitszeit antworten wir per WhatsApp innerhalb von 15 Minuten.",
+            ],
+          },
+        ],
+        faqs: [
+          {
+            question:
+              "Worauf sollte ich bei der Wahl einer Baufirma zuerst achten?",
+            answer:
+              "Auf den Vertrag: Er sollte Leistungsumfang, Preis und die Bedingungen für Preisänderungen, die Zahlung in Etappen und die Garantie enthalten. Wenn eine Firma diese Bedingungen schriftlich festhält, lassen sich die übrigen Punkte der Checkliste leichter prüfen.",
+          },
+          {
+            question: "Ist eine hohe Vorauszahlung normal?",
+            answer:
+              "Eine hohe Vorauszahlung vor Arbeitsbeginn lässt das Risiko beim Auftraggeber. Sicherer ist es, jede Etappe nach Ausführung und Abnahme zu bezahlen. Bei SHINEX gibt es keine Vorauszahlung: Sie zahlen in Etappen für bereits ausgeführte Arbeiten.",
+          },
+          {
+            question:
+              "Wie vergleiche ich Kostenvoranschläge verschiedener Firmen?",
+            answer:
+              "Vergleichen Sie denselben Leistungsumfang: Mengen, Einheiten und Preise Zeile für Zeile. Prüfen Sie, ob Material, Abbruch, Lieferung und Entsorgung des Bauschutts enthalten sind. Eine Gesamtsumme ohne Aufschlüsselung sagt nichts darüber, was sie umfasst.",
+          },
+          {
+            question: "Wie wähle ich, wenn die Firma noch jung ist?",
+            answer:
+              "Verlassen Sie sich auf das, was sich prüfen lässt: Vertragsbedingungen, Kostenvoranschlag, Zahlungsplan und Garantie sowie die Erfahrung der Menschen, die auf der Baustelle arbeiten. SHINEX ist eine junge Firma mit einem Team, das seit mehr als 10 Jahren arbeitet. Deshalb arbeiten wir ohne Vorauszahlung, schreiben den Preis im Vertrag fest und schicken jede Woche Fotos und Videos von der Baustelle.",
+          },
+          {
+            question:
+              "Welche Unterlagen braucht man für den Bau eines Einfamilienhauses?",
+            answer:
+              "In der Regel braucht man eine Hausplanung und Genehmigungsunterlagen für den Bau. Was genau erforderlich ist, hängt vom Grundstück und vom Gebäude ab. Klären Sie deshalb vor Baubeginn, wer die Planung erstellt und wer sich um die Unterlagen kümmert.",
+          },
+        ],
+        calculatorLabel: "Ihr Vorhaben besprechen",
+        contactLabel: "Ihr Vorhaben besprechen",
+        relatedTitle: "Leistungen und Preise",
+      },
+      fr: {
+        eyebrow: "Guide pour le client",
+        title:
+          "Comment choisir une entreprise de construction en Arménie : check-list avant le contrat",
+        description:
+          "Neuf points à vérifier avant de signer un contrat de construction de maison ou de rénovation : contrat et prix, devis, paiement, garantie, équipe, rapports, matériaux et documents.",
+        seoTitle: "Choisir une entreprise de construction en Arménie | SHINEX",
+        seoDescription:
+          "Ce qu’il faut vérifier avant de signer avec une entreprise de construction en Arménie : prix fixe, devis détaillé, paiement par étapes, garantie, équipe propre, rapports.",
+        introduction: [
+          "Choisissez une entreprise de construction non pas sur sa publicité ou le prix le plus bas, mais sur ce qu’elle accepte d’écrire dans le contrat. Des conditions écrites peuvent être vérifiées et exigées ; des promesses orales, non.",
+          "Voici une check-list en neuf points. Elle convient aussi bien à la construction d’une maison individuelle qu’à la rénovation d’un appartement ou d’un local professionnel. Parcourez-la avec chaque entreprise avant de signer le contrat et de faire le premier paiement.",
+        ],
+        sections: [
+          {
+            title: "Check-list : ce qu’il faut vérifier avant de signer",
+            paragraphs: [
+              "Si une entreprise ne répond pas clairement sur un point ou refuse de l’inscrire dans le contrat, c’est une raison de poser d’autres questions ou d’envisager une autre entreprise.",
+            ],
+            items: [
+              "Un contrat avec le volume des travaux et le prix. Le contrat doit indiquer la liste des travaux, le montant total et les conditions dans lesquelles il peut changer. L’idéal : un prix fixe qui ne change que par écrit, en cas de modification du volume.",
+              "Un devis détaillé. Chaque travail figure sur une ligne distincte avec sa quantité, son unité et son prix. Les matériaux sont indiqués à part ou avec une mention claire de ce qui est inclus et en quelle quantité. Des offres qui n’indiquent qu’un total ne se comparent pas.",
+              "Un paiement par étapes. Payez chaque étape une fois réalisée et réceptionnée, de préférence sur procès-verbal signé. Un gros acompte avant le début des travaux vous fait porter tout le risque.",
+              "Une garantie écrite. La durée de la garantie, les travaux couverts et la manière de faire une réclamation doivent figurer dans le contrat, pas seulement être évoqués en rendez-vous.",
+              "Qui réalise les travaux. Demandez si l’entreprise a sa propre équipe ou confie le chantier à des sous-traitants. Vérifiez qui est responsable du chantier et qui sera votre interlocuteur.",
+              "Des rapports réguliers. Convenez de la fréquence et de la forme des informations sur l’avancement : photos, vidéos, courte description de l’étape terminée. C’est essentiel si vous ne pouvez pas venir souvent sur place.",
+              "Les matériaux et les délais de livraison. Il doit être clair qui achète les matériaux, quand ils doivent être sur le chantier et comment un retard de livraison affecte le planning.",
+              "Pour une maison : le projet et les documents d’autorisation. Demandez s’il existe un projet, qui le prépare et qui s’occupe des documents d’autorisation. Commencer la construction sans projet validé est risqué.",
+              "Un chantier en cours. Demandez à voir un chantier sur lequel l’entreprise travaille actuellement : on y voit comment il est organisé, comment avancent les travaux et qui les dirige.",
+            ],
+          },
+          {
+            title: "Comment cela fonctionne chez SHINEX",
+            paragraphs: [
+              "SHINEX est une jeune entreprise de construction, mais notre équipe travaille dans la construction et la rénovation depuis plus de 10 ans. C’est pourquoi nous inscrivons nous-mêmes dans le contrat les conditions qu’il faudrait sinon demander. Elles sont les mêmes pour chaque client.",
+            ],
+            items: [
+              "Le prix est fixé dans le contrat. Il ne change que si vous modifiez le volume des travaux, et uniquement par écrit.",
+              "Paiement par étapes, sans acompte : vous payez ce qui est déjà réalisé.",
+              "Garantie de 12 mois sur tous les travaux que nous avons réalisés.",
+              "Notre propre équipe, avec plus de 10 ans d’expérience, mène le chantier du début à la livraison, sans sous-traitants de passage.",
+              "Chaque semaine, nous envoyons des photos et des vidéos du chantier.",
+              "À Erevan, nous venons sur votre bien le lendemain de votre demande. La visite est gratuite.",
+              "Pendant les heures d’ouverture, nous répondons sur WhatsApp en 15 minutes.",
+            ],
+          },
+        ],
+        faqs: [
+          {
+            question:
+              "Que vérifier en premier pour choisir une entreprise de construction ?",
+            answer:
+              "Le contrat : il doit indiquer le volume des travaux, le prix et ses conditions de modification, le paiement par étapes et la garantie. Si l’entreprise accepte d’écrire ces conditions, les autres points de la check-list sont plus faciles à vérifier.",
+          },
+          {
+            question: "Est-il normal de verser un gros acompte ?",
+            answer:
+              "Un gros acompte avant le début des travaux laisse le risque au client. Il est plus sûr de payer chaque étape après sa réalisation et sa réception. Chez SHINEX, il n’y a pas d’acompte : vous payez par étapes les travaux déjà réalisés.",
+          },
+          {
+            question: "Comment comparer les devis de plusieurs entreprises ?",
+            answer:
+              "Comparez la même liste de travaux : quantités, unités et prix ligne par ligne. Vérifiez si les matériaux, la démolition, la livraison et l’évacuation des gravats sont inclus. Un total sans détail ne dit rien de ce qu’il couvre.",
+          },
+          {
+            question: "Comment choisir si l’entreprise est jeune ?",
+            answer:
+              "Appuyez-vous sur ce qui se vérifie : les conditions du contrat, le devis, le calendrier de paiement et la garantie, ainsi que l’expérience des personnes qui travailleront sur le chantier. SHINEX est une jeune entreprise dont l’équipe a plus de 10 ans d’expérience : nous travaillons donc sans acompte, fixons le prix dans le contrat et envoyons chaque semaine des photos et des vidéos du chantier.",
+          },
+          {
+            question:
+              "Quels documents faut-il pour construire une maison individuelle ?",
+            answer:
+              "En règle générale, il faut un projet de maison et des documents d’autorisation de construire. Leur contenu dépend du terrain et du bâtiment : avant le début des travaux, précisez qui prépare le projet et qui s’occupe des documents.",
+          },
+        ],
+        calculatorLabel: "Discuter de votre projet",
+        contactLabel: "Discuter de votre projet",
+        relatedTitle: "Services et prix",
+      },
+    },
+  },
 ] as const satisfies readonly SeoLandingPage[];

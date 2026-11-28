@@ -85,7 +85,7 @@ describe("cli", () => {
     await rm(tmp, { recursive: true, force: true });
   });
 
-  it("health --json: Google sources AUTH REQUIRED without ADC, site and pagespeed WORKING, exit 0", async () => {
+  it("health --json: Google sources AUTH REQUIRED without ADC, site and pagespeed WORKING, AI engines NOT CONFIGURED, exit 0", async () => {
     const { code, out } = await run(["health", "--json"]);
     assert.equal(code, 0);
     const rows = JSON.parse(out) as IntegrationStatus[];
@@ -97,8 +97,12 @@ describe("cli", () => {
       "google-ads": "AUTH REQUIRED",
       pagespeed: "WORKING",
       site: "WORKING",
+      "ai-openai": "NOT CONFIGURED",
+      "ai-perplexity": "NOT CONFIGURED",
+      "ai-gemini": "NOT CONFIGURED",
     });
     for (const r of rows) assert.ok(r.detail, `${r.name} has a reason`);
+    assert.match(rows.find((r) => r.name === "ai-openai")!.detail ?? "", /openai-api-key/);
   });
 
   it("health prints a table", async () => {
@@ -160,6 +164,18 @@ describe("cli", () => {
 
     const ledger = JSON.parse(await readFile(join(tmp, "data", "ledger.json"), "utf8")) as Record<string, unknown>;
     assert.deepEqual(Object.keys(ledger).filter((k) => k.startsWith(`daily:${date}`)), [`daily:${date}`]);
+  });
+
+  it("weekly report contains the AI visibility block from stored data (no AI API calls)", async () => {
+    const date = "2026-10-05";
+    const rec = await run(["ai-visibility", "record", "--engine", "chatgpt", "--prompt-id", "ru-apartment-1", "--mentioned", "yes", "--rank", "2", "--date", date]);
+    assert.equal(rec.code, 0, rec.out);
+    const weekly = await run(["weekly", "--date", date]);
+    assert.equal(weekly.code, 0, weekly.out);
+    const md = await readFile(join(tmp, "data", "reports", `weekly-${date}.md`), "utf8");
+    assert.match(md, /### AI-видимость/);
+    assert.match(md, /\| chatgpt \| 1 \| 100% \(1\/1\) \| 100% \(1\/1\) \| — \|/);
+    assert.ok(weekly.calls.every((u) => u.startsWith(SITE) || u.startsWith(PSI_URL)), "no AI API calls from weekly");
   });
 
   it("funnel add rejects personal data and report aggregates", async () => {

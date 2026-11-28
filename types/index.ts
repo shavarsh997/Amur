@@ -512,6 +512,14 @@ export interface Dictionary {
       title: string;
       members: TeamMember[];
     };
+    /**
+     * Quotable "field: value" facts. Values may contain `{phone}`, `{email}`
+     * and `{hours}`, filled from config/company.config.ts on the page.
+     */
+    facts: {
+      title: string;
+      items: { label: string; value: string }[];
+    };
   };
   contacts: {
     eyebrow: string;
