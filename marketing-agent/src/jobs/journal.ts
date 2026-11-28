@@ -11,7 +11,7 @@ import { assertDate, mdTable } from "./context.ts";
 export const funnelPath = (): string => join(dataDir(), "funnel", "leads.jsonl");
 export const memoryPath = (): string => join(dataDir(), "memory", "experiments.jsonl");
 
-async function readJsonl<T>(path: string): Promise<T[]> {
+export async function readJsonl<T>(path: string): Promise<T[]> {
   let text: string;
   try {
     text = await readFile(path, "utf8");
@@ -25,7 +25,7 @@ async function readJsonl<T>(path: string): Promise<T[]> {
     .map((l) => JSON.parse(l) as T);
 }
 
-async function appendJsonl(path: string, value: unknown): Promise<void> {
+export async function appendJsonl(path: string, value: unknown): Promise<void> {
   await ensureDir(dirname(path));
   await appendFile(path, JSON.stringify(value) + "\n", "utf8");
 }

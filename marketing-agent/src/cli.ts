@@ -7,6 +7,7 @@ import { assertDate, print, type JobDeps } from "./jobs/context.ts";
 import { formatHealthTable, runHealth } from "./jobs/health.ts";
 import { runDiscover } from "./jobs/discover.ts";
 import { printOutcome, runDaily, runMonthly, runWeekly } from "./jobs/report-jobs.ts";
+import { aiVisibilityMarkdown, formatAiRun, promptsMarkdown, recordAiVisibility, runAiVisibility } from "./jobs/ai-visibility.ts";
 import { addExperiment, addFunnelRecord, experimentsMarkdown, funnelMarkdown, listExperiments } from "./jobs/journal.ts";
 
 const USAGE = `SHINEX marketing agent (read-only)
@@ -22,6 +23,12 @@ Usage: node --experimental-strip-types src/cli.ts <command> [options]
   funnel report [--from D] [--to D] [--by channel|landing|service|region]
   memory add --area <a> --hypothesis <text> --change <text> [--status proposed] [--result <text>] [--notes <text>] [--date D]
   memory list [--status <s>] [--area <a>]
+  ai-visibility run [--engine openai|perplexity|gemini] [--limit n] [--date D] [--force]
+                                      non-branded prompts via APIs (keys: Keychain openai-/perplexity-/gemini-api-key)
+  ai-visibility record --engine <e> --prompt-id <id> --mentioned yes|no [--rank n] [--cited yes|no] [--competitors "A, B"] [--date D]
+                                      manual check from a browser (chatgpt, copilot, ai-mode, ...)
+  ai-visibility report [--date D]     mention share, top-3, citations by engine/language, weekly dynamics
+  ai-visibility prompts               prompt ids for manual checks
 
 Dates are YYYY-MM-DD (default: today in Asia/Yerevan). No personal data in funnel records.`;
 
@@ -126,6 +133,34 @@ export async function main(argv: string[], deps: JobDeps = {}): Promise<number> 
           return 0;
         }
         throw new Error("usage: memory add|list");
+      }
+      case "ai-visibility": {
+        if (sub === "run") {
+          only(flags, ["engine", "limit", "date", "force"]);
+          if (flags.limit !== undefined && !/^\d+$/.test(flags.limit)) throw new Error("--limit must be a positive integer");
+          const rows = await runAiVisibility(
+            { engine: flags.engine, limit: flags.limit !== undefined ? Number(flags.limit) : undefined, date: flags.date, force: Boolean(flags.force) },
+            deps,
+          );
+          print(deps, formatAiRun(rows));
+          return 0; // statuses are data
+        }
+        if (sub === "record") {
+          const r = await recordAiVisibility(flags);
+          print(deps, `Добавлено: ${r.date} ${r.engine} ${r.promptId} mentioned=${r.mentioned ? "yes" : "no"} rank=${r.rank ?? "—"} cited=${r.cited === null ? "—" : r.cited ? "yes" : "no"}`);
+          return 0;
+        }
+        if (sub === "report") {
+          only(flags, ["date"]);
+          print(deps, await aiVisibilityMarkdown({ asOf: flags.date ? assertDate(flags.date) : undefined }));
+          return 0;
+        }
+        if (sub === "prompts") {
+          only(flags, []);
+          print(deps, promptsMarkdown());
+          return 0;
+        }
+        throw new Error("usage: ai-visibility run|record|report|prompts");
       }
       default:
         print(deps, `unknown command: ${command}\n\n${USAGE}`);

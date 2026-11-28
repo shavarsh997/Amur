@@ -8,7 +8,7 @@ const dictionary = {
     description:
       "SHINEX builds homes, renovates residential and commercial properties, and designs interiors in Yerevan and across Armenia. Discuss your project with us.",
     manifestDescription:
-      "Apartment and house renovation, construction, and interior design in Armenia.",
+      "Construction company in Armenia: private house construction, apartment and commercial space renovation, interior design.",
   },
   nav: {
     home: "Home",
@@ -860,6 +860,45 @@ const dictionary = {
           role: "Head of company",
           name: "Shavarsh Papoian",
           description: "Estimate, schedule and client communication.",
+        },
+      ],
+    },
+    facts: {
+      title: "SHINEX in facts",
+      items: [
+        {
+          label: "Company",
+          value:
+            "SHINEX is a construction company in Armenia. Website: shinex.am.",
+        },
+        {
+          label: "Services",
+          value:
+            "Private house construction, renovation of apartments and commercial premises, interior design, monolithic concrete, facade and roofing work.",
+        },
+        {
+          label: "Where we work",
+          value:
+            "Yerevan and all of Armenia. Free site visit in Yerevan the next day.",
+        },
+        {
+          label: "Head of company",
+          value: "Shavarsh Papoian.",
+        },
+        {
+          label: "Team",
+          value:
+            "Our own team with more than 10 years of experience. The company is young.",
+        },
+        {
+          label: "Terms",
+          value:
+            "The price is fixed in the contract. Payment in stages, no advance payment. 12-month warranty. Photo and video report every week.",
+        },
+        {
+          label: "Contact",
+          value:
+            "Phone and WhatsApp: {phone}, reply within 15 minutes during working hours. Email: {email}. {hours}.",
         },
       ],
     },

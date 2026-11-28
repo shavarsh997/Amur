@@ -7,6 +7,8 @@ import {
   getSocialLinks,
 } from "@/lib/company";
 import { getServiceBySlug } from "@/config/services.config";
+import { getPublicServicePrice } from "@/config/pricing.config";
+import { getRenovationStartingPrice } from "@/lib/pricing";
 import { getSeoLandingPage } from "@/config/seo-landing-pages.config";
 import de from "@/messages/de";
 import en from "@/messages/en";
@@ -81,10 +83,45 @@ const organizationTopics = [
       fr: "Aménagement intérieur",
     },
   },
+  {
+    isOffered: (locale: Locale) =>
+      Boolean(getServiceBySlug(locale, "commercial-construction")),
+    name: {
+      hy: "Առևտրային տարածքների վերանորոգում",
+      ru: "Ремонт коммерческих помещений",
+      en: "Commercial space renovation",
+      de: "Renovierung von Gewerberäumen",
+      fr: "Rénovation de locaux professionnels",
+    },
+  },
+  {
+    isOffered: (locale: Locale) =>
+      Boolean(getServiceBySlug(locale, "facade-and-roofing")),
+    name: {
+      hy: "Ճակատային և տանիքային աշխատանքներ",
+      ru: "Фасадные и кровельные работы",
+      en: "Facade and roofing work",
+      de: "Fassaden- und Dacharbeiten",
+      fr: "Travaux de façade et de toiture",
+    },
+  },
+  {
+    isOffered: (locale: Locale) => Boolean(getServiceBySlug(locale, "design")),
+    name: {
+      hy: "Ճարտարապետական նախագծում",
+      ru: "Архитектурное проектирование",
+      en: "Architectural design",
+      de: "Architekturplanung",
+      fr: "Conception architecturale",
+    },
+  },
 ] as const satisfies readonly {
   isOffered: (locale: Locale) => boolean;
   name: Record<Locale, string>;
 }[];
+
+/** Same Latin name as on /about; the site calls him head of company, not founder. */
+const organizationLeadName = "Shavarsh Papoian";
 
 export function getOrganizationJsonLd(
   locale: Locale = companyConfig.website.defaultLocale
@@ -97,6 +134,7 @@ export function getOrganizationJsonLd(
   const knowsAbout = organizationTopics
     .filter(({ isOffered }) => isOffered(locale))
     .map(({ name }) => name[locale]);
+  const leadRole = organizationDictionaries[locale].about.team.members[0]?.role;
   const organization: JsonLd = {
     "@context": "https://schema.org",
     "@type": ["Organization", "LocalBusiness", "HomeAndConstructionBusiness"],
@@ -107,6 +145,10 @@ export function getOrganizationJsonLd(
     description: organizationDictionaries[locale].metadata.manifestDescription,
     url: getAbsoluteUrl("/"),
     logo: getAbsoluteUrl(companyConfig.brand.logo),
+    // Only the head of company is named publicly on /about; jobTitle reuses that role label.
+    employee: leadRole
+      ? { "@type": "Person", name: organizationLeadName, jobTitle: leadRole }
+      : undefined,
     knowsAbout: knowsAbout.length ? knowsAbout : undefined,
     areaServed: companyConfig.business.serviceArea.map((name) => ({
       "@type": "Place",
@@ -186,11 +228,13 @@ export function getServiceJsonLd({
   name,
   description,
   pathname,
+  offers,
 }: {
   locale: Locale;
   name: string;
   description: string;
   pathname: string;
+  offers?: JsonLd;
 }): JsonLd {
   const url = getAbsoluteUrl(`/${locale}/${pathname.replace(/^\//, "")}`);
   return {
@@ -213,6 +257,79 @@ export function getServiceJsonLd({
       name,
     })),
     provider: { "@id": getAbsoluteUrl("/#organization") },
+    ...(offers ? { offers } : {}),
+  };
+}
+
+/** Apartment renovation landings that publish the confirmed labour rate.
+ * Construction and design stay quote-based, so they never get an offer. */
+export const renovationOfferLandingSlugs = [
+  "apartment-renovation-yerevan",
+  "new-build-renovation",
+  "turnkey-renovation",
+  "capital-renovation-yerevan",
+] as const;
+
+const renovationOfferDescriptions: Record<Locale, (price: string) => string> = {
+  hy: (price) => `Աշխատանք՝ ${price} (նյութերը՝ առանձին)`,
+  ru: (price) => `Работы ${price}, материалы отдельно`,
+  en: (price) => `Labour ${price}, materials separately`,
+  de: (price) => `Arbeitsleistung ${price}, Materialien separat`,
+  fr: (price) => `Main-d’œuvre ${price}, matériaux en sus`,
+};
+
+/** Starting rate per m² from the confirmed standard tier; labour only. */
+export function getRenovationOfferJsonLd(
+  locale: Locale,
+  slug: string
+): JsonLd | undefined {
+  if (!(renovationOfferLandingSlugs as readonly string[]).includes(slug)) {
+    return undefined;
+  }
+  const price = getPublicServicePrice("renovation");
+  const label = getRenovationStartingPrice(locale);
+  if (price?.from === undefined || !label) return undefined;
+  const description = renovationOfferDescriptions[locale](label);
+  return {
+    "@type": "Offer",
+    priceCurrency: price.currency,
+    description,
+    priceSpecification: {
+      "@type": "UnitPriceSpecification",
+      price: price.from,
+      minPrice: price.from,
+      priceCurrency: price.currency,
+      unitCode: "MTK",
+      unitText: "m²",
+      description,
+    },
+  };
+}
+
+/** FAQPage built from the exact question/answer list rendered on the page. */
+export function getFaqPageJsonLd({
+  locale,
+  pathname,
+  items,
+}: {
+  locale: Locale;
+  pathname: string;
+  items: readonly { question: string; answer: string }[];
+}): JsonLd | undefined {
+  if (!items.length) return undefined;
+  const path = pathname.replace(/^\/|\/$/g, "");
+  const url = getAbsoluteUrl(`/${locale}${path ? `/${path}` : ""}`);
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": `${url}#faq`,
+    url,
+    inLanguage: localeLanguageTags[locale],
+    mainEntity: items.map(({ question, answer }) => ({
+      "@type": "Question",
+      name: question,
+      acceptedAnswer: { "@type": "Answer", text: answer },
+    })),
   };
 }
 

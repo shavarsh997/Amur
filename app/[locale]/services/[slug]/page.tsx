@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import { BaseServicePage } from "@/components/services/base-service-page";
+import { FaqSchema } from "@/components/seo/faq-schema";
 import { SeoLandingPage } from "@/components/seo/seo-landing-page";
 import { getActiveServices, getServiceBySlug } from "@/config/services.config";
 import {
@@ -100,6 +101,12 @@ export default async function ServiceDetailPage({ params }: Props) {
             ])
           ),
         }}
+      />
+      {/* BaseServicePage renders service.content.faq as the visible FAQ. */}
+      <FaqSchema
+        locale={locale}
+        pathname={`services/${service.slug}`}
+        items={service.content.faq}
       />
       <BaseServicePage
         service={service}

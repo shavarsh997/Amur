@@ -13,6 +13,7 @@ node --experimental-strip-types marketing-agent/src/cli.ts weekly        # GSC +
 node --experimental-strip-types marketing-agent/src/cli.ts monthly       # месяц + воронка + план
 node --experimental-strip-types marketing-agent/src/cli.ts funnel add --stage qualified --channel google-ads --service apartment-renovation
 node --experimental-strip-types marketing-agent/src/cli.ts memory list   # журнал гипотез/экспериментов
+node --experimental-strip-types marketing-agent/src/cli.ts ai-visibility run|record|report|prompts  # AI-рекомендации: 24 небрендовых промпта (API-ключи в Keychain; ChatGPT/Copilot/AI Mode — record вручную)
 ```
 Повторный запуск задания за ту же дату пропускается (защита от повторов); `--force` — перезапуск.
 

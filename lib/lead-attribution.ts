@@ -10,6 +10,7 @@ export const publicPagePaths = [
   "privacy",
   "prices",
   "renovation-estimate-yerevan",
+  "how-to-choose-construction-company",
   "services/renovation",
   "services/house-construction",
   "services/interior-design",

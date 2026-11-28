@@ -11,6 +11,7 @@ import { renderReport } from "../reports/render.ts";
 import { collectAds, collectGa4, collectGa4Funnel, collectGsc, collectPsi, collectSite, pickPages, type SourceResult } from "./collect.ts";
 import { addDays, fmtRange, previousMonths, print, tokenOnce, type JobDeps, type Range } from "./context.ts";
 import { experimentsMarkdown, funnelMarkdown, listExperiments } from "./journal.ts";
+import { aiVisibilityMarkdown } from "./ai-visibility.ts";
 
 export type JobName = "daily" | "weekly" | "monthly";
 
@@ -105,7 +106,7 @@ async function seoAndSite(cfg: AgentConfig, deps: JobDeps, token: () => Promise<
   return [gsc, site, psi];
 }
 
-/** GSC 28 days (query+page) vs previous 28, opportunities, crawl of 150 pages, PSI for 3 main pages, GA4 lead funnel (same range). */
+/** GSC 28 days (query+page) vs previous 28, opportunities, crawl of 150 pages, PSI for 3 main pages, GA4 lead funnel (same range), stored AI visibility. */
 export function runWeekly(opts: JobOptions, deps: JobDeps = {}): Promise<JobOutcome> {
   const d = opts.date;
   // Search Console data lags ~2-3 days.
@@ -119,7 +120,9 @@ export function runWeekly(opts: JobOptions, deps: JobDeps = {}): Promise<JobOutc
       collectGa4Funnel(cfg, deps, token, cur, prev, { snapshotSource: "ga4-funnel", snapshotDate: d }),
     ]);
     const results = [...seo, funnel];
-    return { title: `Еженедельный SEO-отчёт SHINEX — ${d}`, period: `${fmtRange(cur)} vs ${fmtRange(prev)}`, results };
+    // Stored results only: weekly never calls the paid AI APIs (run them with `ai-visibility run`).
+    const extraSections = [`### AI-видимость: рекомендуют ли SHINEX ассистенты\n\n${await aiVisibilityMarkdown({ asOf: d })}`];
+    return { title: `Еженедельный SEO-отчёт SHINEX — ${d}`, period: `${fmtRange(cur)} vs ${fmtRange(prev)}`, results, extraSections };
   });
 }
 

@@ -8,7 +8,7 @@ const dictionary = {
     description:
       "SHINEX construit des maisons, rénove des logements et des locaux professionnels et conçoit des intérieurs à Erevan et dans toute l’Arménie. Parlons de votre projet.",
     manifestDescription:
-      "Rénovation d’appartements et de maisons, construction et aménagement intérieur en Arménie.",
+      "Entreprise de construction en Arménie : construction de maisons individuelles, rénovation d’appartements et de locaux professionnels, aménagement intérieur.",
   },
   nav: {
     home: "Accueil",
@@ -885,6 +885,45 @@ const dictionary = {
           role: "Responsable de l’entreprise",
           name: "Shavarsh Papoian",
           description: "Devis, délais et relation client.",
+        },
+      ],
+    },
+    facts: {
+      title: "SHINEX en faits",
+      items: [
+        {
+          label: "Entreprise",
+          value:
+            "SHINEX est une entreprise de construction en Arménie. Site : shinex.am.",
+        },
+        {
+          label: "Activités",
+          value:
+            "Construction de maisons individuelles, rénovation d’appartements et de locaux commerciaux, design d’intérieur, travaux de béton monolithique, de façade et de toiture.",
+        },
+        {
+          label: "Zone d’intervention",
+          value:
+            "Erevan et toute l’Arménie. Visite gratuite à Erevan dès le lendemain.",
+        },
+        {
+          label: "Dirigeant",
+          value: "Shavarsh Papoian.",
+        },
+        {
+          label: "Équipe",
+          value:
+            "Notre propre équipe, avec plus de 10 ans d’expérience. L’entreprise est jeune.",
+        },
+        {
+          label: "Conditions",
+          value:
+            "Prix fixé dans le contrat. Paiement par étapes, sans acompte. Garantie de 12 mois. Rapport photo et vidéo chaque semaine.",
+        },
+        {
+          label: "Contact",
+          value:
+            "Téléphone et WhatsApp : {phone}, réponse en 15 minutes pendant les heures d’ouverture. E-mail : {email}. {hours}.",
         },
       ],
     },

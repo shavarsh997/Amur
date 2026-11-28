@@ -14,7 +14,8 @@ export type SeoLandingPage = {
   slug: string;
   /** Date of the last substantial content edit, never the build date. */
   contentUpdatedAt?: string;
-  kind: "service" | "prices";
+  /** "guide": informational page at /[locale]/[slug] with WebPage schema, no Service or offer. */
+  kind: "service" | "prices" | "guide";
   image: string;
   relatedServiceSlugs: readonly string[];
   /** Links between distinct commercial intents; never use this for keyword variants. */

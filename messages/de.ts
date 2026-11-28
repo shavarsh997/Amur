@@ -8,7 +8,7 @@ const dictionary = {
     description:
       "SHINEX baut Häuser, renoviert Wohn- und Gewerbeimmobilien und gestaltet Innenräume in Eriwan und ganz Armenien. Besprechen Sie Ihr Projekt mit uns.",
     manifestDescription:
-      "Wohnungs- und Hausrenovierung, Bau und Innenraumgestaltung in Armenien.",
+      "Bauunternehmen in Armenien: Bau von Einfamilienhäusern, Renovierung von Wohnungen und Gewerberäumen, Innenraumgestaltung.",
   },
   nav: {
     home: "Startseite",
@@ -875,6 +875,45 @@ const dictionary = {
           role: "Leiter des Unternehmens",
           name: "Shavarsh Papoian",
           description: "Kostenvoranschlag, Termine und Kundenkontakt.",
+        },
+      ],
+    },
+    facts: {
+      title: "SHINEX in Fakten",
+      items: [
+        {
+          label: "Unternehmen",
+          value:
+            "SHINEX ist ein Bauunternehmen in Armenien. Website: shinex.am.",
+        },
+        {
+          label: "Leistungen",
+          value:
+            "Bau von Einfamilienhäusern, Renovierung von Wohnungen und Gewerberäumen, Innenraumgestaltung, Monolith-, Fassaden- und Dacharbeiten.",
+        },
+        {
+          label: "Einsatzgebiet",
+          value:
+            "Jerewan und ganz Armenien. Kostenloser Vor-Ort-Termin in Jerewan am nächsten Tag.",
+        },
+        {
+          label: "Leitung",
+          value: "Shavarsh Papoian.",
+        },
+        {
+          label: "Team",
+          value:
+            "Eigenes Team mit mehr als 10 Jahren Erfahrung. Das Unternehmen ist jung.",
+        },
+        {
+          label: "Konditionen",
+          value:
+            "Der Preis wird im Vertrag festgeschrieben. Zahlung in Etappen, ohne Vorauszahlung. 12 Monate Garantie. Foto- und Videobericht jede Woche.",
+        },
+        {
+          label: "Kontakt",
+          value:
+            "Telefon und WhatsApp: {phone}, Antwort in 15 Minuten während der Geschäftszeiten. E-Mail: {email}. {hours}.",
         },
       ],
     },
